@@ -1,6 +1,6 @@
 <Type Name="DockPanel" FullName="System.Windows.Controls.DockPanel">
   <TypeSignature Language="C#" Value="public class DockPanel : System.Windows.Controls.Panel" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DockPanel extends System.Windows.Controls.Panel" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DockPanel extends System.Windows.Controls.Panel" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DockPanel" />
   <TypeSignature Language="VB.NET" Value="Public Class DockPanel&#xA;Inherits Panel" />
   <TypeSignature Language="F#" Value="type DockPanel = class&#xA;    inherit Panel" />
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
@@ -26,22 +28,21 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Windows.Controls.DockPanel> contains a collection of <xref:System.Windows.UIElement> objects, which are in the <xref:System.Windows.Controls.Panel.Children%2A> property.
+ A <xref:System.Windows.Controls.DockPanel> contains a collection of <xref:System.Windows.UIElement> objects, which are in the <xref:System.Windows.Controls.Panel.Children> property.
 
- The <xref:System.Windows.Controls.DockPanel.SetDock%2A> method changes the position of an element relative to other elements within the same container. Alignment properties, such as <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, change the position of an element relative to its parent element.
+ The <xref:System.Windows.Controls.DockPanel.SetDock*> method changes the position of an element relative to other elements within the same container. Alignment properties, such as <xref:System.Windows.FrameworkElement.HorizontalAlignment*>, change the position of an element relative to its parent element.
 
- If you set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property to `true`, which is the default setting, the last child element of a <xref:System.Windows.Controls.DockPanel> always fills the remaining space, regardless of any other dock value that you set on the last child element. To dock a child element in another direction, you must set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property to `false` and must also specify an explicit dock direction for the last child element.
+ If you set the <xref:System.Windows.Controls.DockPanel.LastChildFill> property to `true`, which is the default setting, the last child element of a <xref:System.Windows.Controls.DockPanel> always fills the remaining space, regardless of any other dock value that you set on the last child element. To dock a child element in another direction, you must set the <xref:System.Windows.Controls.DockPanel.LastChildFill> property to `false` and must also specify an explicit dock direction for the last child element.
 
- Panel elements do not receive focus by default. To compel a panel element to receive focus, set the <xref:System.Windows.UIElement.Focusable%2A> property to `true`.
+ Panel elements do not receive focus by default. To compel a panel element to receive focus, set the <xref:System.Windows.UIElement.Focusable> property to `true`.
 
  > [!NOTE]
- > The position of child elements of a <xref:System.Windows.Controls.DockPanel> on the screen is determined by the <xref:System.Windows.Controls.DockPanel.Dock%2A> property of the respective child elements *and* the relative order of those child elements under the <xref:System.Windows.Controls.DockPanel>. Therefore, a set of child elements with the same Dock property values can be positioned differently on the screen depending on the order of these children under the <xref:System.Windows.Controls.DockPanel>. Child ordering effects positioning because the <xref:System.Windows.Controls.DockPanel> iterates through its child elements in order, setting the position of each element depending on remaining space.
+ > The position of child elements of a <xref:System.Windows.Controls.DockPanel> on the screen is determined by the <xref:System.Windows.Controls.DockPanel.Dock> property of the respective child elements *and* the relative order of those child elements under the <xref:System.Windows.Controls.DockPanel>. Therefore, a set of child elements with the same Dock property values can be positioned differently on the screen depending on the order of these children under the <xref:System.Windows.Controls.DockPanel>. Child ordering effects positioning because the <xref:System.Windows.Controls.DockPanel> iterates through its child elements in order, setting the position of each element depending on remaining space.
 
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Controls.Dock" />
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747326(v=vs.90)">Change Dock Properties Programmatically</related>
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160053">WPF Controls Gallery Sample</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Getting%20Started/ControlsAndLayout">WPF Controls Gallery Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -60,6 +61,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -90,6 +93,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -120,6 +125,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Gets or sets a value that indicates the position of a child element within a parent <see cref="T:System.Windows.Controls.DockPanel" />.</summary>
@@ -127,10 +134,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If you set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property to `true`, which is the default setting, the last child element of a <xref:System.Windows.Controls.DockPanel> always fills the remaining space, regardless of any other dock value that you set on the last child element. To.dock a child element in another direction, you must set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property to `false` and must also specify an explicit dock direction on the last child element.
+ If you set the <xref:System.Windows.Controls.DockPanel.LastChildFill> property to `true`, which is the default setting, the last child element of a <xref:System.Windows.Controls.DockPanel> always fills the remaining space, regardless of any other dock value that you set on the last child element. To.dock a child element in another direction, you must set the <xref:System.Windows.Controls.DockPanel.LastChildFill> property to `false` and must also specify an explicit dock direction on the last child element.
 
  > [!NOTE]
- > The position of child elements of a <xref:System.Windows.Controls.DockPanel> on the screen is determined by the <xref:System.Windows.Controls.DockPanel.Dock%2A> property of the respective child elements *and* the relative order of those child elements under the <xref:System.Windows.Controls.DockPanel>. Therefore, a set of child elements with the same Dock property values can be positioned differently on the screen depending on the order of these children under the <xref:System.Windows.Controls.DockPanel>. Child ordering effects positioning because the <xref:System.Windows.Controls.DockPanel> iterates through its child elements in order, setting the position of each element depending on remaining space.
+ > The position of child elements of a <xref:System.Windows.Controls.DockPanel> on the screen is determined by the <xref:System.Windows.Controls.DockPanel.Dock> property of the respective child elements *and* the relative order of those child elements under the <xref:System.Windows.Controls.DockPanel>. Therefore, a set of child elements with the same Dock property values can be positioned differently on the screen depending on the order of these children under the <xref:System.Windows.Controls.DockPanel>. Child ordering effects positioning because the <xref:System.Windows.Controls.DockPanel> iterates through its child elements in order, setting the position of each element depending on remaining space.
 
 <a name="dependencyPropertyInfo_Dock"></a>
 ## Dependency Property Information
@@ -143,7 +150,7 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.DockPanel.Dock%2A> attached property by using Extensible Application Markup Language (XAML).
+ The following example shows how to set the <xref:System.Windows.Controls.DockPanel.Dock*> attached property by using Extensible Application Markup Language (XAML).
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/DockPanel/Dock/DockPanel_Ovw_Sample.cs" id="Snippet1":::
@@ -173,6 +180,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -200,6 +209,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -239,6 +250,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -251,7 +264,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If you set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property to `true`, which is the default setting, the last child element of a <xref:System.Windows.Controls.DockPanel> always fills the remaining space, regardless of any other dock value that you set on the last child element. To dock a child element in another direction, you must set the <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> property to `false` and must also specify an explicit dock direction on the last child element.
+ If you set the <xref:System.Windows.Controls.DockPanel.LastChildFill> property to `true`, which is the default setting, the last child element of a <xref:System.Windows.Controls.DockPanel> always fills the remaining space, regardless of any other dock value that you set on the last child element. To dock a child element in another direction, you must set the <xref:System.Windows.Controls.DockPanel.LastChildFill> property to `false` and must also specify an explicit dock direction on the last child element.
 
 <a name="dependencyPropertyInfo_LastChildFill"></a>
 ## Dependency Property Information
@@ -259,7 +272,7 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.DockPanel.LastChildFillProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange*>|
 
  ]]></format>
         </remarks>
@@ -282,6 +295,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -309,6 +324,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -324,7 +341,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Windows.Controls.DockPanel> determines its size by analyzing the sizing properties and <xref:System.Windows.Controls.DockPanel.Dock%2A> property value of its child elements. A child element can occupy all the space on the side where it is docked. Child elements that are docked to the `Left` or `Right` are granted all the vertical space for their entire width. Child elements that are docked to the `Top` or `Bottom` are granted all the horizontal space for their entire height.
+ A <xref:System.Windows.Controls.DockPanel> determines its size by analyzing the sizing properties and <xref:System.Windows.Controls.DockPanel.Dock> property value of its child elements. A child element can occupy all the space on the side where it is docked. Child elements that are docked to the `Left` or `Right` are granted all the vertical space for their entire width. Child elements that are docked to the `Top` or `Bottom` are granted all the horizontal space for their entire height.
 
  ]]></format>
         </remarks>
@@ -347,6 +364,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -363,7 +382,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.DockPanel.SetDock%2A> method changes the position of a child element relative to other child elements within the same container. Alignment properties, such as <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, change the position of a child element relative to its parent element.
+ The <xref:System.Windows.Controls.DockPanel.SetDock*> method changes the position of a child element relative to other child elements within the same container. Alignment properties, such as <xref:System.Windows.FrameworkElement.HorizontalAlignment*>, change the position of a child element relative to its parent element.
 
  ]]></format>
         </remarks>

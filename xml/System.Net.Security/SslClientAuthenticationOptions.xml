@@ -14,12 +14,16 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Security" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Security" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Security" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Security" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Security" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -31,7 +35,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -39,13 +43,13 @@
   <Docs>
     <summary>Represents a client authentication property bag for the <see cref="T:System.Net.Security.SslStream" />.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property bag is used as argument for <xref:System.Net.Security.SslStream.AuthenticateAsClientAsync%2A> and, in .NET 5 and later versions, for <xref:System.Net.Security.SslStream.AuthenticateAsClient%2A>.
- 
- The <xref:System.Net.Http.SocketsHttpHandler> uses this property bag in the <xref: System.Net.Http.SocketsHttpHandler.SslOptions%2A> property.
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property bag is used as argument for <xref:System.Net.Security.SslStream.AuthenticateAsClientAsync*> and, in .NET 5 and later versions, for <xref:System.Net.Security.SslStream.AuthenticateAsClient*>.
+
+ The <xref:System.Net.Http.SocketsHttpHandler> uses this property bag in the <xref: System.Net.Http.SocketsHttpHandler.SslOptions> property.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -66,6 +70,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -94,6 +100,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -109,6 +117,76 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AllowRsaPkcs1Padding">
+      <MemberSignature Language="C#" Value="public bool AllowRsaPkcs1Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowRsaPkcs1Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.AllowRsaPkcs1Padding" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowRsaPkcs1Padding As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllowRsaPkcs1Padding : bool with get, set" Usage="System.Net.Security.SslClientAuthenticationOptions.AllowRsaPkcs1Padding" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowRsaPkcs1Padding { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0">
+          <AttributeName Language="C#">[set: System.Runtime.Versioning.SupportedOSPlatform("linux")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.Versioning.SupportedOSPlatform("linux")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0">
+          <AttributeName Language="C#">[set: System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that indicates whether the the rsa_pkcs1_* family of TLS signature algorithms is enabled for use in the TLS handshake.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRsaPssPadding">
+      <MemberSignature Language="C#" Value="public bool AllowRsaPssPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowRsaPssPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.AllowRsaPssPadding" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowRsaPssPadding As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllowRsaPssPadding : bool with get, set" Usage="System.Net.Security.SslClientAuthenticationOptions.AllowRsaPssPadding" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowRsaPssPadding { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0">
+          <AttributeName Language="C#">[set: System.Runtime.Versioning.SupportedOSPlatform("linux")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.Versioning.SupportedOSPlatform("linux")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0">
+          <AttributeName Language="C#">[set: System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
+          <AttributeName Language="F#">[&lt;set: System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that indicates whether the the rsa_pss_* family of TLS signature algorithms is enabled for use in the TLS handshake.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AllowTlsResume">
       <MemberSignature Language="C#" Value="public bool AllowTlsResume { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance bool AllowTlsResume" />
@@ -121,6 +199,8 @@
         <AssemblyName>System.Net.Security</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -137,7 +217,7 @@
       </Docs>
     </Member>
     <Member MemberName="ApplicationProtocols">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Net.Security.SslApplicationProtocol&gt;? ApplicationProtocols { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Net.Security.SslApplicationProtocol&gt;? ApplicationProtocols { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;valuetype System.Net.Security.SslApplicationProtocol&gt; ApplicationProtocols" />
       <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.ApplicationProtocols" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationProtocols As List(Of SslApplicationProtocol)" />
@@ -154,6 +234,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -181,6 +263,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -192,14 +276,14 @@
         <summary>Gets or sets an optional customized policy for remote certificate validation.</summary>
         <value>To be added.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
+          <format type="text/markdown"><![CDATA[
 
 ## Remarks
 
-When the value of this property is not `null`:
+When this property isn't `null`, certain properties on `SslClientAuthenticationOptions` are superseded by corresponding properties on the provided <xref:System.Security.Cryptography.X509Certificates.X509ChainPolicy>:
 
-- The value of the <xref:System.Net.Security.SslClientAuthenticationOptions.CertificateRevocationCheckMode> property is ignored.
-- Any <xref:System.Net.Security.SslCertificateTrust> associated with the <xref:System.Net.Security.SslClientAuthenticationOptions.ClientCertificateContext> is ignored.
+- <xref:System.Net.Security.SslClientAuthenticationOptions.CertificateRevocationCheckMode> is superseded by <xref:System.Security.Cryptography.X509Certificates.X509ChainPolicy.RevocationMode>.
+- Any <xref:System.Net.Security.SslCertificateTrust> associated with <xref:System.Net.Security.SslClientAuthenticationOptions.ClientCertificateContext> is superseded by <xref:System.Security.Cryptography.X509Certificates.X509ChainPolicy.TrustMode> and <xref:System.Security.Cryptography.X509Certificates.X509ChainPolicy.CustomTrustStore>.
 ]]></format>
         </remarks>
       </Docs>
@@ -221,6 +305,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -233,13 +319,13 @@ When the value of this property is not `null`:
         <summary>Gets or sets the certificate revocation mode for certificate validation.</summary>
         <value>One of the values in <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationMode" />. The default is <see langword="NoCheck" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
  When using certificates, the system validates that the client certificate is not revoked by checking that the client certificate is not in the revoked certificate list. This validation can be performed by checking online or against a cached revocation list. You can turn off revocation checking by setting this property to <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode.NoCheck>.
-  
+
  For more information, see [Working with Certificates](/dotnet/framework/wcf/feature-details/working-with-certificates).
-    
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -247,7 +333,7 @@ When the value of this property is not `null`:
       </Docs>
     </Member>
     <Member MemberName="CipherSuitesPolicy">
-      <MemberSignature Language="C#" Value="public System.Net.Security.CipherSuitesPolicy? CipherSuitesPolicy { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Net.Security.CipherSuitesPolicy? CipherSuitesPolicy { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Security.CipherSuitesPolicy CipherSuitesPolicy" />
       <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.CipherSuitesPolicy" />
       <MemberSignature Language="VB.NET" Value="Public Property CipherSuitesPolicy As CipherSuitesPolicy" />
@@ -264,6 +350,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -289,6 +377,8 @@ When the value of this property is not `null`:
         <AssemblyName>System.Net.Security</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -303,7 +393,7 @@ When the value of this property is not `null`:
       </Docs>
     </Member>
     <Member MemberName="ClientCertificates">
-      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509CertificateCollection? ClientCertificates { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509CertificateCollection? ClientCertificates { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates" />
       <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.ClientCertificates" />
       <MemberSignature Language="VB.NET" Value="Public Property ClientCertificates As X509CertificateCollection" />
@@ -320,6 +410,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -332,12 +424,12 @@ When the value of this property is not `null`:
         <summary>A collection of certificates to be considered for the client's authentication to the server.</summary>
         <value>To be added.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 
- <xref:System.Net.Security.LocalCertificateSelectionCallback> can be used to select a specific certificate to offer to the server. 
- 
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+ <xref:System.Net.Security.LocalCertificateSelectionCallback> can be used to select a specific certificate to offer to the server.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -359,6 +451,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -390,6 +484,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -405,7 +501,7 @@ When the value of this property is not `null`:
       </Docs>
     </Member>
     <Member MemberName="LocalCertificateSelectionCallback">
-      <MemberSignature Language="C#" Value="public System.Net.Security.LocalCertificateSelectionCallback? LocalCertificateSelectionCallback { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Net.Security.LocalCertificateSelectionCallback? LocalCertificateSelectionCallback { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Security.LocalCertificateSelectionCallback LocalCertificateSelectionCallback" />
       <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.LocalCertificateSelectionCallback" />
       <MemberSignature Language="VB.NET" Value="Public Property LocalCertificateSelectionCallback As LocalCertificateSelectionCallback" />
@@ -422,6 +518,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -437,7 +535,7 @@ When the value of this property is not `null`:
       </Docs>
     </Member>
     <Member MemberName="RemoteCertificateValidationCallback">
-      <MemberSignature Language="C#" Value="public System.Net.Security.RemoteCertificateValidationCallback? RemoteCertificateValidationCallback { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Net.Security.RemoteCertificateValidationCallback? RemoteCertificateValidationCallback { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Security.RemoteCertificateValidationCallback RemoteCertificateValidationCallback" />
       <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.RemoteCertificateValidationCallback" />
       <MemberSignature Language="VB.NET" Value="Public Property RemoteCertificateValidationCallback As RemoteCertificateValidationCallback" />
@@ -454,6 +552,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -469,7 +569,7 @@ When the value of this property is not `null`:
       </Docs>
     </Member>
     <Member MemberName="TargetHost">
-      <MemberSignature Language="C#" Value="public string? TargetHost { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string? TargetHost { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string TargetHost" />
       <MemberSignature Language="DocId" Value="P:System.Net.Security.SslClientAuthenticationOptions.TargetHost" />
       <MemberSignature Language="VB.NET" Value="Public Property TargetHost As String" />
@@ -486,6 +586,8 @@ When the value of this property is not `null`:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>

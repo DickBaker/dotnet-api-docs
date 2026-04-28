@@ -20,6 +20,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -35,12 +37,13 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="mscorlib" FromVersion="4.0.0.0" To="System.Runtime.InteropServices" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="8.0.0.0" FrameworkAlternate="net-8.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="9.0.0.0" FrameworkAlternate="net-9.0" />
-    <TypeForwarding From="System.Runtime.InteropServices" FromVersion="4.1.1.0" To="mscorlib" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Attribute</BaseTypeName>
@@ -59,24 +62,20 @@
   <Docs>
     <summary>Specifies the COM dispatch identifier (DISPID) of a method, field, or property.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can apply this attribute to methods, fields, or properties.  
-  
- This attribute contains the DISPID for the method, field, or property it describes. Unique DISPIDs are typically assigned by the common language runtime, but you can use this attribute to assign a specific DISPID to a method. When importing a type library, this attribute is applied to all methods with assigned DISPIDs. This ensures that any managed implementation of the same method retains the same DISPID if exposed to COM.  
-  
- See [DISPID Constants](https://msdn.microsoft.com/library/windows/desktop/ms221242\(v=vs.85\).aspx) for a list of commonly used DISPID values.  
-  
-   
-  
-## Examples  
- The following example demonstrates how explicit DISPIDs can be assigned to members of a class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can apply this attribute to methods, fields, or properties.
+
+ This attribute contains the DISPID for the method, field, or property it describes. Unique DISPIDs are typically assigned by the common language runtime, but you can use this attribute to assign a specific DISPID to a method. When importing a type library, this attribute is applied to all methods with assigned DISPIDs. This ensures that any managed implementation of the same method retains the same DISPID if exposed to COM.
+
+## Examples
+ The following example demonstrates how explicit DISPIDs can be assigned to members of a class.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_Classic/classic DispIdAttribute Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.InteropServices/DispIdAttribute/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_Classic/classic DispIdAttribute Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Runtime.InteropServices/DispIdAttribute/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -104,6 +103,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -149,6 +150,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>

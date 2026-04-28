@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.TriggerBase</BaseTypeName>
@@ -35,16 +37,16 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Trigger> objects have the <xref:System.Windows.Trigger.Setters%2A>, <xref:System.Windows.TriggerBase.EnterActions%2A>, and <xref:System.Windows.TriggerBase.ExitActions%2A> properties that apply changes or actions based on the state of certain properties, while <xref:System.Windows.EventTrigger> objects start a set of <xref:System.Windows.EventTrigger.Actions%2A> when a specified routed event occurs. For example, you may want to use an <xref:System.Windows.EventTrigger> to start a set of animations when the mouse pointer is over a certain user interface (UI) control. Unlike <xref:System.Windows.Trigger>, <xref:System.Windows.EventTrigger> has no concept of termination of state, so the action will not be undone once the condition that raised the event is no longer true.
+ <xref:System.Windows.Trigger> objects have the <xref:System.Windows.Trigger.Setters*>, <xref:System.Windows.TriggerBase.EnterActions*>, and <xref:System.Windows.TriggerBase.ExitActions*> properties that apply changes or actions based on the state of certain properties, while <xref:System.Windows.EventTrigger> objects start a set of <xref:System.Windows.EventTrigger.Actions*> when a specified routed event occurs. For example, you may want to use an <xref:System.Windows.EventTrigger> to start a set of animations when the mouse pointer is over a certain user interface (UI) control. Unlike <xref:System.Windows.Trigger>, <xref:System.Windows.EventTrigger> has no concept of termination of state, so the action will not be undone once the condition that raised the event is no longer true.
 
- Note that when using an <xref:System.Windows.EventTrigger>, you need to choose events that do not interfere with the inherent behavior of your control. Controls such as <xref:System.Windows.Controls.Button> or <xref:System.Windows.Controls.TextBox> perform specific actions on user input events such as mouse clicks and keyboard events. For example, if you are styling a button and try to set the <xref:System.Windows.Input.Mouse.MouseDown> event as the <xref:System.Windows.EventTrigger.RoutedEvent%2A> of an <xref:System.Windows.EventTrigger>, the <xref:System.Windows.EventTrigger> never gets applied because the event first gets handled by the button. Instead, you can use the <xref:System.Windows.Input.Mouse.PreviewMouseDown> event or a different event.
+ Note that when using an <xref:System.Windows.EventTrigger>, you need to choose events that do not interfere with the inherent behavior of your control. Controls such as <xref:System.Windows.Controls.Button> or <xref:System.Windows.Controls.TextBox> perform specific actions on user input events such as mouse clicks and keyboard events. For example, if you are styling a button and try to set the <xref:System.Windows.Input.Mouse.MouseDown> event as the <xref:System.Windows.EventTrigger.RoutedEvent*> of an <xref:System.Windows.EventTrigger>, the <xref:System.Windows.EventTrigger> never gets applied because the event first gets handled by the button. Instead, you can use the <xref:System.Windows.Input.Mouse.PreviewMouseDown> event or a different event.
 
- When using data binding, if you are using the <xref:System.Windows.Data.Binding.TargetUpdated> event, you must set the <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> value of your <xref:System.Windows.Data.Binding> object to `true` for the event to be raised.
+ When using data binding, if you are using the <xref:System.Windows.Data.Binding.TargetUpdated> event, you must set the <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated*> value of your <xref:System.Windows.Data.Binding> object to `true` for the event to be raised.
 
  Adding a <xref:System.Windows.TriggerAction> child to an <xref:System.Windows.EventTrigger> object implicitly adds it to the <xref:System.Windows.TriggerActionCollection> for the <xref:System.Windows.EventTrigger> object.
 
 ## Examples
- This example shows how to use event triggers in a style to animate the <xref:System.Windows.UIElement.MouseEnter> and <xref:System.Windows.UIElement.MouseLeave> events of a <xref:System.Windows.FrameworkElement>. In this example, the <xref:System.Windows.Style> has the <xref:System.Windows.Style.TargetType%2A> set to <xref:System.Windows.Shapes.Rectangle>. Therefore, there is no need to qualify the `MouseEnter` and `MouseLeave` event names with the class name.
+ This example shows how to use event triggers in a style to animate the <xref:System.Windows.UIElement.MouseEnter> and <xref:System.Windows.UIElement.MouseLeave> events of a <xref:System.Windows.FrameworkElement>. In this example, the <xref:System.Windows.Style> has the <xref:System.Windows.Style.TargetType*> set to <xref:System.Windows.Shapes.Rectangle>. Therefore, there is no need to qualify the `MouseEnter` and `MouseLeave` event names with the class name.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/EventTrigger/Overview/Default.xaml" id="Snippeteventtriggersnippet":::
 
@@ -78,6 +80,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -108,6 +112,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
@@ -135,15 +141,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -161,12 +165,12 @@
  Adding a <xref:System.Windows.TriggerAction> child to an <xref:System.Windows.EventTrigger> object implicitly adds it to the <xref:System.Windows.TriggerActionCollection> for the <xref:System.Windows.EventTrigger> object.
 
 > [!NOTE]
->  This property can only be set in Extensible Application Markup Language (XAML) via the collection syntax shown, or by accessing the collection object and using its various methods such as Add. The property to access the collection object itself is read-only, the collection itself is read-write.
+> This property can only be set in Extensible Application Markup Language (XAML) via the collection syntax shown, or by accessing the collection object and using its various methods such as Add. The property to access the collection object itself is read-only, the collection itself is read-write.
 
 <a name="xamlPropertyElementUsage_Actions"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   <object.Actions>
     OneOrMoreTriggerActions
@@ -207,6 +211,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -237,6 +243,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -267,6 +275,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -288,12 +298,12 @@
 
  If the template or style that contains this <xref:System.Windows.EventTrigger> does not have the `TargetType` property specified, then you need to quality the event name with the class name using the `ClassName.EventName` syntax.
 
- <xref:System.Windows.EventTrigger> objects cannot handle events that have already been <xref:System.Windows.RoutedEventArgs.Handled%2A>. Controls such as <xref:System.Windows.Controls.Button> or <xref:System.Windows.Controls.TextBox> perform specific actions on user input events such as mouse clicks and keyboard events. For example, if you are styling a button and try to set the <xref:System.Windows.Input.Mouse.MouseDown> event as the <xref:System.Windows.EventTrigger.RoutedEvent%2A> of an <xref:System.Windows.EventTrigger>, the <xref:System.Windows.EventTrigger> never gets applied because the event first gets handled by the button. Instead, you can use the <xref:System.Windows.Input.Mouse.PreviewMouseDown> event or a different event.
+ <xref:System.Windows.EventTrigger> objects cannot handle events that have already been <xref:System.Windows.RoutedEventArgs.Handled*>. Controls such as <xref:System.Windows.Controls.Button> or <xref:System.Windows.Controls.TextBox> perform specific actions on user input events such as mouse clicks and keyboard events. For example, if you are styling a button and try to set the <xref:System.Windows.Input.Mouse.MouseDown> event as the <xref:System.Windows.EventTrigger.RoutedEvent*> of an <xref:System.Windows.EventTrigger>, the <xref:System.Windows.EventTrigger> never gets applied because the event first gets handled by the button. Instead, you can use the <xref:System.Windows.Input.Mouse.PreviewMouseDown> event or a different event.
 
- When using data binding, if you are using the <xref:System.Windows.Data.Binding.TargetUpdated> event, you must set the <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> value of your <xref:System.Windows.Data.Binding> object to true for the event to be raised.
+ When using data binding, if you are using the <xref:System.Windows.Data.Binding.TargetUpdated> event, you must set the <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated*> value of your <xref:System.Windows.Data.Binding> object to true for the event to be raised.
 
 ## Examples
- This example shows how to use event triggers in a style to animate the <xref:System.Windows.UIElement.MouseEnter> and <xref:System.Windows.UIElement.MouseLeave> events of a <xref:System.Windows.FrameworkElement>. In this example, the <xref:System.Windows.Style> has the <xref:System.Windows.Style.TargetType%2A> set to <xref:System.Windows.Shapes.Rectangle>. Therefore, there is no need to qualify the `MouseEnter` and `MouseLeave` event names with the class name.
+ This example shows how to use event triggers in a style to animate the <xref:System.Windows.UIElement.MouseEnter> and <xref:System.Windows.UIElement.MouseLeave> events of a <xref:System.Windows.FrameworkElement>. In this example, the <xref:System.Windows.Style> has the <xref:System.Windows.Style.TargetType*> set to <xref:System.Windows.Shapes.Rectangle>. Therefore, there is no need to qualify the `MouseEnter` and `MouseLeave` event names with the class name.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/EventTrigger/Overview/Default.xaml" id="Snippeteventtriggersnippet":::
 
@@ -319,6 +329,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -353,6 +365,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -374,7 +388,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can set this property to the name of any element within the scope of where the trigger collection (the collection that this <xref:System.Windows.EventTrigger> is part of) is applied. This is typically a named element that is within the template that contains this <xref:System.Windows.EventTrigger>. If you are setting the <xref:System.Windows.FrameworkElement.Triggers%2A> property on an element directly, then it is a named element within the scope of that parent element.
+ You can set this property to the name of any element within the scope of where the trigger collection (the collection that this <xref:System.Windows.EventTrigger> is part of) is applied. This is typically a named element that is within the template that contains this <xref:System.Windows.EventTrigger>. If you are setting the <xref:System.Windows.FrameworkElement.Triggers> property on an element directly, then it is a named element within the scope of that parent element.
 
  You can name an object using the [x:Name Directive](/dotnet/framework/xaml-services/x-name-directive) syntax.
 
@@ -403,6 +417,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -449,6 +465,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

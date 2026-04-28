@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class WindowsFormsHost&#xA;Inherits HwndHost&#xA;Implements IKeyboardInputSink" />
   <TypeSignature Language="F#" Value="type WindowsFormsHost = class&#xA;    inherit HwndHost&#xA;    interface IKeyboardInputSink" />
   <TypeSignature Language="C++ CLI" Value="public ref class WindowsFormsHost : System::Windows::Interop::HwndHost, System::Windows::Interop::IKeyboardInputSink" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsFormsHost extends System.Windows.Interop.HwndHost implements class System.Windows.Interop.IKeyboardInputSink" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsFormsHost extends System.Windows.Interop.HwndHost implements class System.Windows.Interop.IKeyboardInputSink" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>WindowsFormsIntegration</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Interop.HwndHost</BaseTypeName>
@@ -49,16 +51,16 @@
  To host a WPF element in a Windows Forms control or form, use the <xref:System.Windows.Forms.Integration.ElementHost> control.
 
 > [!NOTE]
->  WindowsFormsIntegration.dll is installed with the Windows Presentation Foundation (WPF) assemblies. The default location for the assembly is %programfiles%\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll.
+> WindowsFormsIntegration.dll is installed with the Windows Presentation Foundation (WPF) assemblies. The default location for the assembly is %programfiles%\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll.
 
- To host a Windows Forms control in a WPF element, you must assign the Windows Forms control to the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> property.
+ To host a Windows Forms control in a WPF element, you must assign the Windows Forms control to the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child> property.
 
- Use the <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> property to assign custom mappings between a <xref:System.Windows.Forms.Integration.WindowsFormsHost> element and its hosted Windows Forms control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ Use the <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap> property to assign custom mappings between a <xref:System.Windows.Forms.Integration.WindowsFormsHost> element and its hosted Windows Forms control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlObjectElementUsage_WindowsFormsHost"></a>
 ## XAML Object Element Usage
 
-```
+```xaml
 <WindowsFormsHost.../>
 ```
 
@@ -89,6 +91,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -114,6 +118,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -146,6 +152,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Brush</ReturnType>
@@ -157,15 +165,15 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=nameWithType> properties of the hosted control.
+ This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.BackColor*?displayProperty=nameWithType> and <xref:System.Windows.Forms.Control.BackgroundImage*?displayProperty=nameWithType> properties of the hosted control.
 
- For more information on mapping the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Background%2A> property, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ For more information on mapping the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Background> property, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlAttributeUsage_Background"></a>
 ## XAML Attribute Usage
 
-```
-<object Background="Brush"/>
+```xaml
+<object Background="Brush"/>
 ```
 
 <a name="xamlValues_Background"></a>
@@ -179,7 +187,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender*>|
 
  ]]></format>
         </remarks>
@@ -203,6 +211,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -230,6 +240,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.InteropServices.HandleRef</ReturnType>
@@ -263,6 +275,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Control</ReturnType>
@@ -274,11 +288,11 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Only one child control can be hosted, but <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> can have any number of children.
+ Only one child control can be hosted, but <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child*> can have any number of children.
 
  The child control cannot be a top-level form.
 
- If <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> is a <xref:System.Windows.Forms.Form>, the form's <xref:System.Windows.Forms.Form.ControlBox%2A> property is set to `false`.
+ If <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child*> is a <xref:System.Windows.Forms.Form>, the form's <xref:System.Windows.Forms.Form.ControlBox> property is set to `false`.
 
 <a name="xamlTextUsage_Child"></a>
 ## XAML Text Usage
@@ -299,10 +313,10 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> property to add the hosted control to the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element. For more information, see [Walkthrough: Hosting an ActiveX Control in WPF](/dotnet/desktop/wpf/advanced/walkthrough-hosting-an-activex-control-in-wpf).
+ The following code example demonstrates how to use the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child> property to add the hosted control to the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element. For more information, see [Walkthrough: Hosting an ActiveX Control in WPF](/dotnet/desktop/wpf/advanced/walkthrough-hosting-an-activex-control-in-wpf).
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms.Integration/WindowsFormsHost/Child/window1.xaml.cs" id="Snippet11":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb" id="Snippet11":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms.Integration/WindowsFormsHost/Child/window1.xaml.vb" id="Snippet11":::
 
  ]]></format>
         </remarks>
@@ -314,7 +328,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
       <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt; ChildChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.Integration.ChildChangedEventArgs&gt; ChildChanged" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.WindowsFormsHost.ChildChanged" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event ChildChanged As EventHandler(Of ChildChangedEventArgs) " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ChildChanged As EventHandler(Of ChildChangedEventArgs) " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.ChildChanged : EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt; " Usage="member this.ChildChanged : System.EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Windows::Forms::Integration::ChildChangedEventArgs ^&gt; ^ ChildChanged;" />
       <MemberSignature Language="VB.NET" Value="Public Event ChildChanged As EventHandler(Of ChildChangedEventArgs) " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -328,6 +342,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt;</ReturnType>
@@ -342,8 +358,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 <a name="xamlAttributeUsage_ChildChanged"></a>
 ## XAML Attribute Usage
 
-```
-<object ChildChanged="eventHandler"/>
+```xaml
+<object ChildChanged="eventHandler"/>
 ```
 
  ]]></format>
@@ -368,6 +384,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -400,6 +418,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -415,7 +435,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Calling the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Dispose%2A> method disposes the base <xref:System.Windows.Interop.HwndHost> and the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> control.
+ Calling the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Dispose*> method disposes the base <xref:System.Windows.Interop.HwndHost> and the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child*> control.
 
  ]]></format>
         </remarks>
@@ -438,6 +458,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -449,7 +471,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Call the <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> method to forward all keyboard messages when a <xref:System.Windows.Forms.Form?displayProperty=nameWithType> is opened modelessly. The <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> method installs a message filter that is required for modeless forms to function correctly when opened by WPF. You need to call this method only once for a particular <xref:System.Windows.Forms.Integration.WindowsFormsHost> instance.
+ Call the <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop*> method to forward all keyboard messages when a <xref:System.Windows.Forms.Form?displayProperty=nameWithType> is opened modelessly. The <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop*> method installs a message filter that is required for modeless forms to function correctly when opened by WPF. You need to call this method only once for a particular <xref:System.Windows.Forms.Integration.WindowsFormsHost> instance.
 
  ]]></format>
         </remarks>
@@ -473,6 +495,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.FontFamily</ReturnType>
@@ -486,13 +510,13 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 ## Remarks
  This property setting affects only those controls whose template uses the property as a parameter. It has no effect on other controls.
 
- This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlAttributeUsage_FontFamily"></a>
 ## XAML Attribute Usage
 
-```
-<object FontFamily="fontFamily"/>
+```xaml
+<object FontFamily="fontFamily"/>
 ```
 
 <a name="xamlValues_FontFamily"></a>
@@ -506,7 +530,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
  ]]></format>
         </remarks>
@@ -531,6 +555,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -559,6 +585,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -570,13 +598,13 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlAttributeUsage_FontSize"></a>
 ## XAML Attribute Usage
 
-```
-<object FontSize="double"/>
+```xaml
+<object FontSize="double"/>
 ```
 
 <a name="xamlValues_FontSize"></a>
@@ -590,7 +618,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
  ]]></format>
         </remarks>
@@ -614,6 +642,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -641,6 +671,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontStyle</ReturnType>
@@ -652,13 +684,13 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlAttributeUsage_FontStyle"></a>
 ## XAML Attribute Usage
 
-```
-<object FontStyle="fontStyle"/>
+```xaml
+<object FontStyle="fontStyle"/>
 ```
 
 <a name="xamlValues_FontStyle"></a>
@@ -672,7 +704,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
  ]]></format>
         </remarks>
@@ -697,6 +729,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -724,6 +758,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontWeight</ReturnType>
@@ -735,13 +771,13 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.Font?displayProperty=nameWithType> property of the hosted control. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlAttributeUsage_FontWeight"></a>
 ## XAML Attribute Usage
 
-```
-<object FontWeight="fontWeight"/>
+```xaml
+<object FontWeight="fontWeight"/>
 ```
 
 <a name="xamlValues_FontWeight"></a>
@@ -755,7 +791,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
  ]]></format>
         </remarks>
@@ -780,6 +816,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -807,6 +845,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Brush</ReturnType>
@@ -818,13 +858,13 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.ForeColor%2A?displayProperty=nameWithType> property of the hosted control. For more information on mapping the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Foreground%2A> property, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ This dependency property is identified by the <xref:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty> field. By default, this property is mapped to update the <xref:System.Windows.Forms.Control.ForeColor?displayProperty=nameWithType> property of the hosted control. For more information on mapping the <xref:System.Windows.Forms.Integration.WindowsFormsHost.Foreground> property, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
 <a name="xamlAttributeUsage_Foreground"></a>
 ## XAML Attribute Usage
 
-```
-<object Foreground="Brush"/>
+```xaml
+<object Foreground="Brush"/>
 ```
 
 <a name="xamlValues_Foreground"></a>
@@ -838,7 +878,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender*>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
  ]]></format>
         </remarks>
@@ -863,6 +903,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -890,6 +932,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -914,8 +958,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 <a name="xamlAttributeUsage_LayoutError"></a>
 ## XAML Attribute Usage
 
-```
-<object LayoutError="eventHandler"/>
+```xaml
+<object LayoutError="eventHandler"/>
 ```
 
  ]]></format>
@@ -940,6 +984,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -979,6 +1025,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -1007,6 +1055,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1021,7 +1071,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Calling the <xref:System.Windows.Forms.Integration.WindowsFormsHost.OnPropertyChanged%2A> method may be necessary when a property of an ancestor element has changed, but the local value of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element has not changed. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
+ Calling the <xref:System.Windows.Forms.Integration.WindowsFormsHost.OnPropertyChanged*> method may be necessary when a property of an ancestor element has changed, but the local value of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element has not changed. For more information, see [Windows Forms and WPF Property Mapping](/dotnet/framework/wpf/advanced/windows-forms-and-wpf-property-mapping).
 
  ]]></format>
         </remarks>
@@ -1045,6 +1095,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1070,8 +1122,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 <a name="xamlAttributeUsage_Padding"></a>
 ## XAML Attribute Usage
 
-```
-<object Padding="Thickness"/>
+```xaml
+<object Padding="Thickness"/>
 ```
 
 <a name="xamlValues_Padding"></a>
@@ -1085,7 +1137,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 | Item             | Value                                                    |
 |------------------|----------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Forms.Integration.WindowsFormsHost.PaddingProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure*>|
 
  ]]></format>
         </remarks>
@@ -1109,6 +1161,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1135,6 +1189,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1157,10 +1213,10 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 
 
 ## Examples
- The following code example shows how to add a mapping for the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property to a <xref:System.Windows.Forms.Integration.WindowsFormsHost> control.
+ The following code example shows how to add a mapping for the <xref:System.Windows.FrameworkElement.FlowDirection> property to a <xref:System.Windows.Forms.Integration.WindowsFormsHost> control.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms.Integration/PropertyMap/Overview/Window1.xaml.cs" id="Snippet12":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb" id="Snippet12":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms.Integration/PropertyMap/Overview/Window1.xaml.vb" id="Snippet12":::
 
  ]]></format>
         </remarks>
@@ -1184,6 +1240,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Vector</ReturnType>
@@ -1201,7 +1259,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 ## Remarks
  Windows Forms controls do not support scaling in the same way as WPF elements. For example, scaling a Windows Forms control from a factor of 1 to a factor of 0.5 and back to a factor of 1 does not, in general, recover the original size of the control. For more information, see [Layout Considerations for the WindowsFormsHost Element](/dotnet/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element).
 
- Override the <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> method to provide custom scaling behavior for the hosted Windows Forms control.
+ Override the <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild*> method to provide custom scaling behavior for the hosted Windows Forms control.
 
  ]]></format>
         </remarks>
@@ -1224,6 +1282,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1252,8 +1312,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
 <a name="xamlAttributeUsage_TabIndex"></a>
 ## XAML Attribute Usage
 
-```
-<object TabIndex="int"/>
+```xaml
+<object TabIndex="int"/>
 ```
 
 <a name="dependencyPropertyInfo_TabIndex"></a>
@@ -1286,6 +1346,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1316,6 +1378,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1332,7 +1396,7 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When a <xref:System.Windows.Forms.Integration.WindowsFormsHost> element receives a TAB command from the <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A> method, the first eligible control in <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> receives focus.
+ When a <xref:System.Windows.Forms.Integration.WindowsFormsHost> element receives a TAB command from the <xref:System.Windows.Interop.IKeyboardInputSink.TabInto*> method, the first eligible control in <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child*> receives focus.
 
  The first control is specified by the `request` parameter. When `request` is <xref:System.Windows.Input.FocusNavigationDirection.Next>, the behavior is similar to pressing the TAB key. When `request` is <xref:System.Windows.Input.FocusNavigationDirection.Previous>, the behavior is similar to pressing SHIFT+TAB.
 
@@ -1358,6 +1422,8 @@ The following code example demonstrates how to use a <xref:System.Windows.Forms.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>

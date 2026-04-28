@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -29,6 +31,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.NetworkInformation" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.NetworkInformation" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.NetworkInformation" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.NetworkInformation" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.NetworkInformation" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -40,7 +44,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -53,14 +57,13 @@
 ## Remarks
  The MAC address, or physical address, is a hardware address that uniquely identifies each node, such as a computer or printer, on a network.
 
- Instances of this class are returned by the <xref:System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress%2A?displayProperty=nameWithType> method.
+ Instances of this class are returned by the <xref:System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress*?displayProperty=nameWithType> method.
 
 
 
 ## Examples
  The following code example displays the physical addresses of all interfaces on the local computer.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet2":::
 
  ]]></format>
@@ -86,6 +89,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -108,16 +113,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- In common scenarios, applications do not need to call this constructor; instances of this class are returned by the <xref:System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress%2A> method.
+ In common scenarios, applications do not need to call this constructor; instances of this class are returned by the <xref:System.Net.NetworkInformation.NetworkInterface.GetPhysicalAddress*> method.
 
- Note that you can also use the <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> method to create a new instance of <xref:System.Net.NetworkInformation.PhysicalAddress>.
+ Note that you can also use the <xref:System.Net.NetworkInformation.PhysicalAddress.Parse*> method to create a new instance of <xref:System.Net.NetworkInformation.PhysicalAddress>.
 
 
 
 ## Examples
  The following code example creates a new <xref:System.Net.NetworkInformation.PhysicalAddress> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet4":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet4":::
 
  ]]></format>
@@ -125,7 +129,7 @@
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public override bool Equals (object? comparand);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? comparand);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (comparand As Object) As Boolean" />
@@ -144,6 +148,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -162,7 +168,7 @@
       <Parameters>
         <Parameter Name="comparand" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -180,7 +186,6 @@
 ## Examples
  The following code example compares two <xref:System.Net.NetworkInformation.PhysicalAddress> instances.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet3":::
 
  ]]></format>
@@ -206,6 +211,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -231,7 +238,6 @@
 ## Examples
  The following code example calls this method to retrieve the address of a <xref:System.Net.NetworkInformation.PhysicalAddress> and formats the address for display.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet2":::
 
  ]]></format>
@@ -257,6 +263,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -298,6 +306,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -319,14 +329,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> method returns <xref:System.Net.NetworkInformation.PhysicalAddress.None> if you specify `null` address.
+ The <xref:System.Net.NetworkInformation.PhysicalAddress.Parse*> method returns <xref:System.Net.NetworkInformation.PhysicalAddress.None> if you specify `null` address.
 
 
 
 ## Examples
  The following code example demonstrates using this field to test the result of parsing an address.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet5":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet5":::
 
  ]]></format>
@@ -348,15 +357,23 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.NetworkInformation.PhysicalAddress</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="address" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="address" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="address">A span containing the address that will be used to initialize the <see cref="T:System.Net.NetworkInformation.PhysicalAddress" /> instance returned by this method.</param>
@@ -380,12 +397,12 @@
 
  `f0-e1-d2-c3-b4-a5`
 
- Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes%2A> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
+ Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes*> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
 
 
 
 ## Examples
- The following code example creates a <xref:System.Net.NetworkInformation.PhysicalAddress> instance by calling the <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> method.
+ The following code example creates a <xref:System.Net.NetworkInformation.PhysicalAddress> instance by calling the <xref:System.Net.NetworkInformation.PhysicalAddress.Parse*> method.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet6":::
 
@@ -396,7 +413,7 @@
       </Docs>
     </Member>
     <Member MemberName="Parse">
-      <MemberSignature Language="C#" Value="public static System.Net.NetworkInformation.PhysicalAddress Parse (string? address);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static System.Net.NetworkInformation.PhysicalAddress Parse (string? address);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.NetworkInformation.PhysicalAddress Parse(string address) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.PhysicalAddress.Parse(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Parse (address As String) As PhysicalAddress" />
@@ -415,6 +432,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -433,7 +452,7 @@
       <Parameters>
         <Parameter Name="address" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -448,7 +467,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The `address` parameter must contain a string that can only consist of numbers and letters as hexadecimal digits. In .NET Framework and .NET Core 3.1 and earlier, the letters must be uppercase.
+ The `address` parameter must contain a string that can only consist of numbers and letters as hexadecimal digits. In .NET Framework, the letters must be uppercase.
  Some examples of string formats that are acceptable are as follows:
 
  `001122334455`
@@ -463,16 +482,15 @@
 
  `f0-e1-d2-c3-b4-a5` (.NET 5 and later versions only)
 
-In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1-d2-c3-b4-a5` will fail to parse and throw an exception.
+In .NET Framework, an address that contains `f0-e1-d2-c3-b4-a5` will fail to parse and throw an exception.
 
- Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes%2A> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
+ Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes*> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
 
 
 
 ## Examples
- The following code example creates a <xref:System.Net.NetworkInformation.PhysicalAddress> instance by calling the <xref:System.Net.NetworkInformation.PhysicalAddress.Parse%2A> method.
+ The following code example creates a <xref:System.Net.NetworkInformation.PhysicalAddress> instance by calling the <xref:System.Net.NetworkInformation.PhysicalAddress.Parse*> method.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet5":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet5":::
 
  ]]></format>
@@ -500,6 +518,8 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -525,7 +545,6 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
 ## Examples
  The following code example demonstrates displaying the address in a <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLPhysicalAddress/CPP/NCLPhysicalAddress.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.NetworkInformation/PhysicalAddress/Overview/physaddresstester.cs" id="Snippet3":::
 
  ]]></format>
@@ -547,6 +566,8 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -555,14 +576,14 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="address" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="value" Type="System.Net.NetworkInformation.PhysicalAddress" RefType="out" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
+        <Parameter Name="address" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="value" Type="System.Net.NetworkInformation.PhysicalAddress" RefType="out" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -593,7 +614,7 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
 
  `f0-e1-d2-c3-b4-a5`
 
- Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes%2A> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
+ Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes*> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
 
  ]]></format>
         </remarks>
@@ -614,6 +635,8 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -622,8 +645,8 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="address" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="value" Type="System.Net.NetworkInformation.PhysicalAddress" RefType="out" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
+        <Parameter Name="address" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="value" Type="System.Net.NetworkInformation.PhysicalAddress" RefType="out" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
@@ -656,7 +679,7 @@ In .NET Framework and .NET Core 3.1 and earlier, an address that contains `f0-e1
 
  `f0-e1-d2-c3-b4-a5`
 
- Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes%2A> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
+ Use the <xref:System.Net.NetworkInformation.PhysicalAddress.GetAddressBytes*> method to retrieve the address from an existing <xref:System.Net.NetworkInformation.PhysicalAddress> instance.
 
  ]]></format>
         </remarks>

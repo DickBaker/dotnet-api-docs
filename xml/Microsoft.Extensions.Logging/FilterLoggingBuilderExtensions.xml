@@ -17,13 +17,17 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -45,7 +49,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -56,12 +60,16 @@
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
-        <param name="levelFilter">The filter to be added.</param>
+        <param name="levelFilter">The filter to be added. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -74,7 +82,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -83,7 +91,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="categoryLevelFilter" Type="System.Func&lt;System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -92,12 +100,16 @@
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
-        <param name="categoryLevelFilter">The filter to be added.</param>
+        <param name="categoryLevelFilter">The filter to be added. The filter function receives the logger category name and the log level, and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message and receives two parameters:
+            <list type="bullet"><item><description>The logger category name (e.g., "MyNamespace.MyClass").</description></item><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -110,7 +122,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -119,7 +131,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="filter" Type="System.Func&lt;System.String,System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -128,12 +140,16 @@
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
-        <param name="filter">The filter to be added.</param>
+        <param name="filter">The filter to be added. The filter function receives the provider type full name, the logger category name, and the log level, and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message and receives three parameters:
+            <list type="bullet"><item><description>The full type name of the <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> (e.g., "Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider").</description></item><item><description>The logger category name (e.g., "MyNamespace.MyClass").</description></item><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -146,7 +162,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -157,12 +173,16 @@
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
-        <param name="levelFilter">The filter function to apply.</param>
+        <param name="levelFilter">The filter function to apply. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -175,7 +195,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -184,7 +204,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="categoryLevelFilter" Type="System.Func&lt;System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -193,12 +213,16 @@
       </Parameters>
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
-        <param name="categoryLevelFilter">The filter function to apply.</param>
+        <param name="categoryLevelFilter">The filter function to apply. The filter function receives the logger category name and the log level, and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message and receives two parameters:
+            <list type="bullet"><item><description>The logger category name (e.g., "MyNamespace.MyClass").</description></item><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -211,7 +235,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -220,7 +244,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="filter" Type="System.Func&lt;System.String,System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -228,13 +252,17 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
-        <param name="filter">The filter function to apply.</param>
+        <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
+        <param name="filter">The filter function to apply. The filter function receives the provider type full name, the logger category name, and the log level, and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
-        <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
+        <remarks>
+            The filter function is called for each log message and receives three parameters:
+            <list type="bullet"><item><description>The full type name of the <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> (e.g., "Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider").</description></item><item><description>The logger category name (e.g., "MyNamespace.MyClass").</description></item><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -247,7 +275,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -256,7 +284,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -285,7 +313,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -294,7 +322,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -305,12 +333,16 @@
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
         <param name="category">The category to filter.</param>
-        <param name="levelFilter">The filter function to apply.</param>
+        <param name="levelFilter">The filter function to apply. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified category and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter">
@@ -323,7 +355,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -332,7 +364,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -361,7 +393,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -370,7 +402,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -381,12 +413,16 @@
       <Docs>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
         <param name="category">The category to filter.</param>
-        <param name="levelFilter">The filter function to apply.</param>
+        <param name="levelFilter">The filter function to apply. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter to the factory.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified category and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter&lt;T&gt;">
@@ -399,7 +435,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -407,7 +443,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -424,12 +460,16 @@
       <Docs>
         <typeparam name="T">The <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> which this filter will be added for.</typeparam>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
-        <param name="levelFilter">The filter to be added.</param>
+        <param name="levelFilter">The filter to be added. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter for the given <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified provider and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter&lt;T&gt;">
@@ -442,7 +482,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -450,7 +490,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -464,7 +504,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="categoryLevelFilter" Type="System.Func&lt;System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -474,12 +514,16 @@
       <Docs>
         <typeparam name="T">The <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> which this filter will be added for.</typeparam>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
-        <param name="categoryLevelFilter">The filter to be added.</param>
+        <param name="categoryLevelFilter">The filter to be added. The filter function receives the logger category name and the log level, and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter for the given <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified provider and receives two parameters:
+            <list type="bullet"><item><description>The logger category name (e.g., "MyNamespace.MyClass").</description></item><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter&lt;T&gt;">
@@ -492,7 +536,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -500,7 +544,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -517,12 +561,16 @@
       <Docs>
         <typeparam name="T">The <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> which this filter will be added for.</typeparam>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
-        <param name="levelFilter">The filter function to apply.</param>
+        <param name="levelFilter">The filter function to apply. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter for the given <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified provider and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter&lt;T&gt;">
@@ -535,7 +583,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -543,7 +591,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -557,7 +605,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="categoryLevelFilter" Type="System.Func&lt;System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -567,12 +615,16 @@
       <Docs>
         <typeparam name="T">The <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> which this filter will be added for.</typeparam>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
-        <param name="categoryLevelFilter">The filter function to apply.</param>
+        <param name="categoryLevelFilter">The filter function to apply. The filter function receives the logger category name and the log level, and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter for the given <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified provider and receives two parameters:
+            <list type="bullet"><item><description>The logger category name (e.g., "MyNamespace.MyClass").</description></item><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter&lt;T&gt;">
@@ -585,7 +637,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -593,7 +645,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -607,7 +659,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -637,7 +689,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILoggingBuilder</ReturnType>
@@ -645,7 +697,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -659,7 +711,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.ILoggingBuilder" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -671,12 +723,16 @@
         <typeparam name="T">The <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> which this filter will be added for.</typeparam>
         <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
         <param name="category">The category to filter.</param>
-        <param name="levelFilter">The filter function to apply.</param>
+        <param name="levelFilter">The filter function to apply. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter for the given <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />.
             </summary>
         <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The filter function is called for each log message from the specified provider and category and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFilter&lt;T&gt;">
@@ -689,7 +745,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -697,7 +753,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -711,7 +767,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -741,7 +797,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.LoggerFilterOptions</ReturnType>
@@ -749,7 +805,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
@@ -763,7 +819,7 @@
         <Parameter Name="builder" Type="Microsoft.Extensions.Logging.LoggerFilterOptions" RefType="this" />
         <Parameter Name="category" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -773,14 +829,18 @@
       </Parameters>
       <Docs>
         <typeparam name="T">The <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> which this filter will be added for.</typeparam>
-        <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> to add the filter to.</param>
+        <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> to add the filter to.</param>
         <param name="category">The category to filter.</param>
-        <param name="levelFilter">The filter function to apply.</param>
+        <param name="levelFilter">The filter function to apply. The filter function receives the log level and returns <see langword="true" /> to log the message or <see langword="false" /> to filter it out.</param>
         <summary>
             Adds a log filter for the given <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" />.
             </summary>
-        <returns>The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" /> so that additional calls can be chained.</returns>
-        <remarks>To be added.</remarks>
+        <returns>The <see cref="T:Microsoft.Extensions.Logging.LoggerFilterOptions" /> so that additional calls can be chained.</returns>
+        <remarks>
+            The filter function is called for each log message from the specified provider and category and receives one parameter:
+            <list type="bullet"><item><description>The <see cref="T:Microsoft.Extensions.Logging.LogLevel" /> of the log message.</description></item></list>
+            Return <see langword="true" /> to allow the message to be logged, or <see langword="false" /> to filter it out.
+            </remarks>
       </Docs>
     </Member>
   </Members>

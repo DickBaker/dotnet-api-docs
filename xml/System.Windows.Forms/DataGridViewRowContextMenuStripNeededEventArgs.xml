@@ -14,13 +14,15 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.EventArgs</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -31,15 +33,15 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event occurs only when the <xref:System.Windows.Forms.DataGridView> control <xref:System.Windows.Forms.DataGridView.DataSource%2A> property is set or its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is `true`. Handling the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event is useful when you want to display a shortcut menu determined by a row's current state or the values it contains.
+ The <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event occurs only when the <xref:System.Windows.Forms.DataGridView> control <xref:System.Windows.Forms.DataGridView.DataSource> property is set or its <xref:System.Windows.Forms.DataGridView.VirtualMode> property is `true`. Handling the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event is useful when you want to display a shortcut menu determined by a row's current state or the values it contains.
 
  When you handle the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event, the shortcut menu that you specify in the handler is shown whenever the user right-clicks a row unless the <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> event overrides the shortcut menu for the specific cell that was clicked.
 
- The <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event also occurs whenever the value of the <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A?displayProperty=nameWithType> property is retrieved, either programmatically or when the user right-clicks a row.
+ The <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event also occurs whenever the value of the <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip?displayProperty=nameWithType> property is retrieved, either programmatically or when the user right-clicks a row.
 
- You can use the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex%2A> property to determine the state of a row or the values it contains, and use this information to change or modify the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.ContextMenuStrip%2A> property. This property is initialized with the value of the row <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> property, which the event value overrides.
+ You can use the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex> property to determine the state of a row or the values it contains, and use this information to change or modify the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.ContextMenuStrip> property. This property is initialized with the value of the row <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip> property, which the event value overrides.
 
- Handle the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event when working with large amounts of data to avoid the performance penalties of setting the row <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> value for multiple rows. For more information, see [Best Practices for Scaling the Windows Forms DataGridView Control](/dotnet/desktop/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control).
+ Handle the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event when working with large amounts of data to avoid the performance penalties of setting the row <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip*> value for multiple rows. For more information, see [Best Practices for Scaling the Windows Forms DataGridView Control](/dotnet/desktop/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control).
 
  For more information about how to handle events, see [Handling and Raising Events](/dotnet/standard/events/).
 
@@ -49,7 +51,7 @@
  The following code example handles the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event to provide a <xref:System.Windows.Forms.ContextMenuStrip> based on the title of the employee. In this example, there are two shortcut menus, one for managers and one for all other employees.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/DataGridView/CellToolTipTextNeeded/Form1.cs" id="Snippet00":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/VB/Form1.vb" id="Snippet00":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/DataGridView/CellToolTipTextNeeded/Form1.vb" id="Snippet00":::
 
  ]]></format>
     </remarks>
@@ -81,6 +83,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rowIndex" Type="System.Int32" />
@@ -92,7 +96,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This constructor uses the `rowIndex` parameter value to initialize the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex%2A> property.
+ This constructor uses the `rowIndex` parameter value to initialize the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex> property.
 
  ]]></format>
         </remarks>
@@ -112,7 +116,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property ContextMenuStrip As ContextMenuStrip" />
       <MemberSignature Language="F#" Value="member this.ContextMenuStrip : System.Windows.Forms.ContextMenuStrip with get, set" Usage="System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.ContextMenuStrip" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::ContextMenuStrip ^ ContextMenuStrip { System::Windows::Forms::ContextMenuStrip ^ get(); void set(System::Windows::Forms::ContextMenuStrip ^ value); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip? ContextMenuStrip { get; set; }" FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip? ContextMenuStrip { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -123,6 +127,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -144,7 +150,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property initially contains the value of the <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A?displayProperty=nameWithType> property if it has been set for a row.
+ This property initially contains the value of the <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip?displayProperty=nameWithType> property if it has been set for a row.
 
 
 
@@ -152,7 +158,7 @@
  The following code example handles the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event to provide a <xref:System.Windows.Forms.ContextMenuStrip> based on the title of the employee. In this example, there are two shortcut menus, one for managers and one for all other employees. This example is part of a larger example available in the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs> class overview.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/DataGridView/CellToolTipTextNeeded/Form1.cs" id="Snippet10":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/VB/Form1.vb" id="Snippet10":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/DataGridView/CellToolTipTextNeeded/Form1.vb" id="Snippet10":::
 
  ]]></format>
         </remarks>
@@ -179,6 +185,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -204,7 +212,7 @@
  The following code example handles the <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> event to provide a <xref:System.Windows.Forms.ContextMenuStrip> based on the title of the employee. In this example, there are two shortcut menus, one for managers and one for all other employees. This example is part of a larger example available in the <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs> class overview.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/DataGridView/CellToolTipTextNeeded/Form1.cs" id="Snippet10":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/VB/Form1.vb" id="Snippet10":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/DataGridView/CellToolTipTextNeeded/Form1.vb" id="Snippet10":::
 
  ]]></format>
         </remarks>

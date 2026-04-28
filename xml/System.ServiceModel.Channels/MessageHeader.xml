@@ -27,6 +27,8 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -34,6 +36,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.ServiceModel.Channels.MessageHeaderInfo</BaseTypeName>
@@ -42,26 +46,26 @@
   <Docs>
     <summary>Represents the content of a SOAP header.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A message header contains optional metadata that describe a message encapsulated by the <xref:System.ServiceModel.Channels.Message> class.  
-  
- A <xref:System.ServiceModel.Channels.Message> can have zero or more headers that are used as an extension mechanism to pass information in messages that are application-specific. You can use <xref:System.ServiceModel.Channels.Message.Headers%2A> to add message headers to a message by calling the <xref:System.ServiceModel.Channels.MessageHeaders.Add%2A> method.  
-  
- Windows Communication Foundation (WCF) provides a number of predefined message headers, as shown in the following table.  
-  
-|Header Name|Description|  
-|-----------------|-----------------|  
-|To|Contains the role that the message is targeting.|  
-|Action|Provides a description of how the message should be processed.|  
-|FaultTo|Contains the address of the node to which faults should be sent.|  
-|From|Contains the address of the node that sent the message.|  
-|Request|Indicates whether the message is a request.|  
-|MessageID|Contains the unique ID of the message.|  
-|RelatesTo|Contains the IDs of messages that are related to this message.|  
-|ReplyTo|Contains the address of the node to which a reply should be sent for a request.|  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A message header contains optional metadata that describe a message encapsulated by the <xref:System.ServiceModel.Channels.Message> class.
+
+ A <xref:System.ServiceModel.Channels.Message> can have zero or more headers that are used as an extension mechanism to pass information in messages that are application-specific. You can use <xref:System.ServiceModel.Channels.Message.Headers> to add message headers to a message by calling the <xref:System.ServiceModel.Channels.MessageHeaders.Add*> method.
+
+ Windows Communication Foundation (WCF) provides a number of predefined message headers, as shown in the following table.
+
+|Header Name|Description|
+|-----------------|-----------------|
+|To|Contains the role that the message is targeting.|
+|Action|Provides a description of how the message should be processed.|
+|FaultTo|Contains the address of the node to which faults should be sent.|
+|From|Contains the address of the node that sent the message.|
+|Request|Indicates whether the message is a request.|
+|MessageID|Contains the unique ID of the message.|
+|RelatesTo|Contains the IDs of messages that are related to this message.|
+|ReplyTo|Contains the address of the node to which a reply should be sent for a request.|
+
  ]]></format>
     </remarks>
   </Docs>
@@ -84,7 +88,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -121,7 +125,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -134,11 +138,11 @@
         <summary>Gets or sets the targeted recipient of the message header.</summary>
         <value>The targeted recipient of the message header. The default is an empty string ("").</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If this property is empty, the header is interpreted as targeted for the ultimate recipient of the message.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If this property is empty, the header is interpreted as targeted for the ultimate recipient of the message.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -172,7 +176,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -220,7 +224,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -270,7 +274,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -320,7 +324,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -372,7 +376,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -424,7 +428,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -472,7 +476,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -526,7 +530,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -576,7 +580,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -615,7 +619,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -629,11 +633,11 @@
         <value>
           <see langword="true" /> if this message header contains reference parameters of an endpoint reference; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A reference parameter corresponds to the `<ReferenceParameters>` element described in the [WS-Addressing specification](https://www.w3.org/Submission/ws-addressing/).  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A reference parameter corresponds to the `<ReferenceParameters>` element described in the [WS-Addressing specification](https://www.w3.org/Submission/ws-addressing/).
+
  ]]></format>
         </remarks>
       </Docs>
@@ -657,7 +661,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -671,11 +675,11 @@
         <value>
           <see langword="true" /> if the header must be understood; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If this property is `true` and the message receiver cannot interpret the message header, the message is not processed and an exception is thrown. If this property is `false`, the receiver can ignore the message header and continue processing.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If this property is `true` and the message receiver cannot interpret the message header, the message is not processed and an exception is thrown. If this property is `false`, the receiver can ignore the message header and continue processing.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -699,7 +703,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -738,7 +742,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -777,7 +781,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -791,11 +795,11 @@
         <value>
           <see langword="true" /> if the header should be relayed; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- According to SOAP 1.1 spec, this value is always `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ According to SOAP 1.1 spec, this value is always `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -819,7 +823,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -864,7 +868,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -903,7 +907,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -942,7 +946,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -981,7 +985,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1020,7 +1024,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>

@@ -50,18 +50,16 @@
 
  Channels are used by the .NET Framework remoting infrastructure to transport remote calls. When a client makes a call to a remote object, the call is serialized into a message that is sent by a client channel and received by a server channel. It is then deserialized and processed. Any returned values are transmitted by the server channel and received by the client channel.
 
- A <xref:System.Runtime.Remoting.Channels.Http.HttpChannel> object has associated configuration properties that can be set at run time either in a configuration file (by invoking the static <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> method) or programmatically (by passing a <xref:System.Collections.IDictionary> collection to the <xref:System.Runtime.Remoting.Channels.Http.HttpChannel.%23ctor%2A> constructor). For a list of these configuration properties, see [Channel and Formatter Configuration Properties](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)).
-
-
+ A <xref:System.Runtime.Remoting.Channels.Http.HttpChannel> object has associated configuration properties that can be set at run time either in a configuration file (by invoking the static <xref:System.Runtime.Remoting.RemotingConfiguration.Configure*?displayProperty=nameWithType> method) or programmatically (by passing a <xref:System.Collections.IDictionary> collection to the <xref:System.Runtime.Remoting.Channels.Http.HttpChannel.%23ctor*> constructor).
 
 ## Examples
  The following code example shows how to use a <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> to set up a remoting server and its client. The example contains three parts:
 
--   A server
+- A server
 
--   A client
+- A client
 
--   A remote object used by the server and the client
+- A remote object used by the server and the client
 
  The following code example shows a server.
 
@@ -80,7 +78,6 @@
 
  ]]></format>
     </remarks>
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)">Channel and Formatter Configuration Properties</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -176,14 +173,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- For more information about channel configuration properties, see [Channel and Formatter Configuration Properties](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)).
 
  Channel sinks provide a plug-in point that allows access to the underlying messages flowing through the channel as well as the stream used by the transport mechanism to send messages to a remote object. Channel sinks are also responsible for transporting messages between the client and the server. Channel sinks are linked together in a chain, and all channel messages flow through this chain of sinks before the message is finally serialized and transported. If you do not require sink functionality, set the `clientSinkProvider` and `serverSinkProvider` parameters to `null`.
 
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">A configuration property was incorrectly formatted.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)">Channel and Formatter Configuration Properties</related>
       </Docs>
     </Member>
     <Member MemberName="AddHookChannelUri">
@@ -253,7 +248,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The current property is used when <xref:System.Runtime.Remoting.RemotingServices.Marshal%2A> is called and a <xref:System.Runtime.Remoting.ObjRef> is created.
+ The current property is used when <xref:System.Runtime.Remoting.RemotingServices.Marshal*> is called and a <xref:System.Runtime.Remoting.ObjRef> is created.
 
  ]]></format>
         </remarks>
@@ -288,7 +283,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Every registered channel has a unique name. The name is used to retrieve a specific channel when calling <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel%2A>.
+ Every registered channel has a unique name. The name is used to retrieve a specific channel when calling <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel*>.
 
  ]]></format>
         </remarks>
@@ -432,12 +427,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Runtime.Remoting.Channels.Http.HttpChannel.CreateMessageSink%2A> method returns a channel message sink that delivers messages to either the specified URL or the channel data object. If the `uri` parameter is `null`, `remoteChannelData` is used as a target for the sink. Either the `url` or `remoteChannelData` parameters can be `null`, but not both.
+ The <xref:System.Runtime.Remoting.Channels.Http.HttpChannel.CreateMessageSink*> method returns a channel message sink that delivers messages to either the specified URL or the channel data object. If the `uri` parameter is `null`, `remoteChannelData` is used as a target for the sink. Either the `url` or `remoteChannelData` parameters can be `null`, but not both.
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.CreateMessageSink%2A> method. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.CreateMessageSink*> method. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpClientChannel/CPP/client.cpp" id="Snippet11":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Http/HttpChannel/Overview/client.cs" id="Snippet11":::
@@ -477,7 +472,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method is used by <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject%2A>.
+ This method is used by <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject*>.
 
  ]]></format>
         </remarks>
@@ -511,7 +506,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property need not be set explicitly, as it is sufficient to set the ensureSecurity parameter of <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%28System.String%2CSystem.Boolean%29>.
+ This property need not be set explicitly, as it is sufficient to set the ensureSecurity parameter of <xref:System.Runtime.Remoting.RemotingConfiguration.Configure(System.String,System.Boolean)>.
 
  ]]></format>
         </remarks>
@@ -545,7 +540,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Item%2A> property. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Item*> property. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpClientChannel/CPP/client.cpp" id="Snippet12":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Http/HttpChannel/Overview/client.cs" id="Snippet12":::
@@ -578,19 +573,16 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Channel properties are used to configure the channel at run time. For a list of possible channel properties and an example, see [Channel and Formatter Configuration Properties](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)).
-
-
+ Channel properties are used to configure the channel at runtime.
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Keys%2A> property. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Keys> property. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpClientChannel/CPP/client.cpp" id="Snippet12":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Http/HttpChannel/Overview/client.cs" id="Snippet12":::
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)">Channel and Formatter Configuration Properties</related>
       </Docs>
     </Member>
     <Member MemberName="Parse">
@@ -626,7 +618,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Parse%2A> method. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Parse*> method. This code example is part of a larger example provided for the <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel> class.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Http.HttpClientChannel/CPP/client.cpp" id="Snippet13":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Http/HttpChannel/Overview/client.cs" id="Snippet13":::
@@ -660,13 +652,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Channels properties are used to configure the channel at run time. The `Properties` property returns channel properties of the underlying <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> and <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel>. For a list of possible channel properties and an example, see [Channel and Formatter Configuration Properties](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)).
+ Channels properties are used to configure the channel at run time. The `Properties` property returns channel properties of the underlying <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> and <xref:System.Runtime.Remoting.Channels.Http.HttpClientChannel>.
 
  ]]></format>
         </remarks>
         <altmember cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />
         <altmember cref="N:System.Runtime.Remoting.Channels.Http" />
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)">Channel and Formatter Configuration Properties</related>
       </Docs>
     </Member>
     <Member MemberName="StartListening">

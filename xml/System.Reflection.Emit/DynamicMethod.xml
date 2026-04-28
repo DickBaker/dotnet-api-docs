@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -28,6 +30,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Reflection.Emit.Lightweight" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Reflection.Emit.Lightweight" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Reflection.Emit.Lightweight" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Reflection.Emit.Lightweight" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Reflection.Emit.Lightweight" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -39,7 +43,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -53,11 +57,10 @@
     <remarks>For more information about this API, see <see href="/dotnet/fundamentals/runtime-libraries/system-reflection-emit-dynamicmethod">Supplemental API remarks for DynamicMethod</see>.</remarks>
     <example>
       <format type="text/markdown"><![CDATA[
-The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method.
+The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method.
 
-:::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet1":::
 :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet1":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet1":::
+:::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet1":::
       ]]></format>
     </example>
     <related type="Article" href="/dotnet/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods">How to: Define and Execute Dynamic Methods</related>
@@ -76,13 +79,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </MemberGroup>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, returnType As Type, parameterTypes As Type())" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * Type * Type[] -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, returnType, parameterTypes)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -95,6 +98,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -107,7 +112,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -120,7 +125,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -128,7 +133,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -146,7 +151,7 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Remarks
  The dynamic method that is created by this constructor is associated with an anonymous assembly instead of an existing type or module. The anonymous assembly exists only to provide a sandbox environment for dynamic methods, that is, to isolate them from other code. This environment makes it safe for the dynamic method to be emitted and executed by partially trusted code.
 
- This constructor specifies that just-in-time (JIT) visibility checks will be enforced for the Microsoft intermediate language (MSIL) of the dynamic method. That is, the code in the dynamic method has access to public methods of public classes. Exceptions are thrown if the method tries to access types or members that are `private`, `protected`, or `internal` (`Friend` in Visual Basic). To create a dynamic method that has restricted ability to skip JIT visibility checks, use the <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> constructor.
+ This constructor specifies that just-in-time (JIT) visibility checks will be enforced for the Microsoft intermediate language (MSIL) of the dynamic method. That is, the code in the dynamic method has access to public methods of public classes. Exceptions are thrown if the method tries to access types or members that are `private`, `protected`, or `internal` (`Friend` in Visual Basic). To create a dynamic method that has restricted ability to skip JIT visibility checks, use the <xref:System.Reflection.Emit.DynamicMethod.%23ctor(System.String,System.Type,System.Type[],System.Boolean)> constructor.
 
  When an anonymously hosted dynamic method is constructed, the call stack of the emitting assembly is included. When the method is invoked, the permissions of the emitting assembly are used instead of the permissions of the actual caller. Thus, the dynamic method cannot execute at a higher level of privilege than that of the assembly that emitted it, even if it is passed to and executed by an assembly that has a higher trust level.
 
@@ -168,13 +173,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, bool restrictedSkipVisibility);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, bool restrictedSkipVisibility);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, bool restrictedSkipVisibility) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, returnType As Type, parameterTypes As Type(), restrictedSkipVisibility As Boolean)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * Type * Type[] * bool -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, returnType, parameterTypes, restrictedSkipVisibility)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, bool restrictedSkipVisibility);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, bool restrictedSkipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, bool restrictedSkipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -187,6 +192,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -199,7 +206,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -212,7 +219,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -220,7 +227,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -245,12 +252,12 @@ The following code example creates a dynamic method that takes two parameters. T
 
  Specify `true` for `restrictedSkipVisibility` if your dynamic method has to access types or members that are `private`, `protected`, or `internal`. This gives the dynamic method restricted access to these members. That is, the members can be accessed only if the following conditions are met:
 
--   The target members belong to an assembly that has a level of trust equal to or lower than the call stack that emits the dynamic method.
+- The target members belong to an assembly that has a level of trust equal to or lower than the call stack that emits the dynamic method.
 
--   The call stack that emits the dynamic method is granted <xref:System.Security.Permissions.ReflectionPermission> with the <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flag. This is always true when the code is executed with full trust. For partially trusted code, it is true only if the host explicitly grants the permission.
+- The call stack that emits the dynamic method is granted <xref:System.Security.Permissions.ReflectionPermission> with the <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> flag. This is always true when the code is executed with full trust. For partially trusted code, it is true only if the host explicitly grants the permission.
 
     > [!IMPORTANT]
-    >  If the permission has not been granted, a security exception is thrown when <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> is called or when the dynamic method is invoked, not when this constructor is called. No special permissions are required to emit the dynamic method.
+    >  If the permission has not been granted, a security exception is thrown when <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> is called or when the dynamic method is invoked, not when this constructor is called. No special permissions are required to emit the dynamic method.
 
  For example, a dynamic method that is created with `restrictedSkipVisibility` set to `true` can access a private member of any assembly on the call stack if the call stack has been granted restricted member access. If the dynamic method is created with partially trusted code on the call stack, it cannot access a private member of a type in a .NET Framework assembly, because such assemblies are fully trusted.
 
@@ -276,13 +283,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, System.Reflection.Module m);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, System.Reflection.Module m);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Reflection.Module m) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, returnType As Type, parameterTypes As Type(), m As Module)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * Type * Type[] * System.Reflection.Module -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, returnType, parameterTypes, m)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, System::Reflection::Module ^ m);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, System.Reflection.Module m);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, System.Reflection.Module m);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -295,6 +302,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -307,7 +316,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -320,7 +329,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -328,7 +337,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -354,11 +363,10 @@ The following code example creates a dynamic method that takes two parameters. T
  >  For backward compatibility, this constructor demands <xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> flag if the following conditions are both true: `m` is a module other than the calling module, and the demand for <xref:System.Security.Permissions.ReflectionPermission> with the <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flag has failed. If the demand for <xref:System.Security.Permissions.SecurityPermission> succeeds, the operation is allowed.
 
 ## Examples
- The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke%28System.Object%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%29> method.
+ The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)> method.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/cpp/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/.ctor/source1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/.ctor/source1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -380,13 +388,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, Type owner);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, Type owner);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Type owner) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, returnType As Type, parameterTypes As Type(), owner As Type)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * Type * Type[] * Type -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, returnType, parameterTypes, owner)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, Type ^ owner);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, Type owner);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, Type owner);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -399,6 +407,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -411,7 +421,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -424,7 +434,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -432,7 +442,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -467,15 +477,15 @@ The following code example creates a dynamic method that takes two parameters. T
 > [!NOTE]
 >  In general, changing the internal fields of classes is not good object-oriented coding practice.
 
- The example code creates an instance of `Example` and then creates two delegates. The first is of type `UseLikeStatic`, which has the same parameters as the dynamic method. The second is of type `UseLikeInstance`, which lacks the first parameter (of type `Example`). This delegate is created using the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> method overload; the second parameter of that method overload is an instance of `Example`, in this case the instance just created, which is bound to the newly created delegate. Whenever that delegate is invoked, the dynamic method acts on the bound instance of `Example`.
+ The example code creates an instance of `Example` and then creates two delegates. The first is of type `UseLikeStatic`, which has the same parameters as the dynamic method. The second is of type `UseLikeInstance`, which lacks the first parameter (of type `Example`). This delegate is created using the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)> method overload; the second parameter of that method overload is an instance of `Example`, in this case the instance just created, which is bound to the newly created delegate. Whenever that delegate is invoked, the dynamic method acts on the bound instance of `Example`.
 
 > [!NOTE]
->  This is an example of the relaxed rules for delegate binding introduced in the .NET Framework 2.0, along with new overloads of the <xref:System.Delegate.CreateDelegate%2A?displayProperty=nameWithType> method. For more information, see the <xref:System.Delegate> class.
+> This is an example of the relaxed rules for delegate binding introduced in .NET Framework 2.0, along with new overloads of the <xref:System.Delegate.CreateDelegate*?displayProperty=nameWithType> method. For more information, see the <xref:System.Delegate> class.
 
  The `UseLikeStatic` delegate is invoked, passing in the instance of `Example` that is bound to the `UseLikeInstance` delegate. Then the `UseLikeInstance` delegate is invoked, so that both delegates act on the same instance of `Example`. The changes in the values of the internal field are displayed after each call. Finally, a `UseLikeInstance` delegate is bound to an instance of `DerivedFromExample`, and the delegate calls are repeated.
 
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/.ctor/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ClosedOver/vb/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/.ctor/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -497,13 +507,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Reflection.Module m, bool skipVisibility) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, returnType As Type, parameterTypes As Type(), m As Module, skipVisibility As Boolean)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * Type * Type[] * System.Reflection.Module * bool -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, returnType, parameterTypes, m, skipVisibility)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, System::Reflection::Module ^ m, bool skipVisibility);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -516,6 +526,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -528,7 +540,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -541,7 +553,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -549,7 +561,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -597,13 +609,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type? returnType, Type[]? parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Type owner, bool skipVisibility) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, returnType As Type, parameterTypes As Type(), owner As Type, skipVisibility As Boolean)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * Type * Type[] * Type * bool -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, returnType, parameterTypes, owner, skipVisibility)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, Type ^ owner, bool skipVisibility);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -616,6 +628,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -628,7 +642,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -641,7 +655,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -649,7 +663,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -697,13 +711,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type? returnType, Type[]? parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type? returnType, Type[]? parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Reflection.MethodAttributes attributes, valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType, class System.Type[] parameterTypes, class System.Reflection.Module m, bool skipVisibility) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Reflection.Module,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, attributes As MethodAttributes, callingConvention As CallingConventions, returnType As Type, parameterTypes As Type(), m As Module, skipVisibility As Boolean)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * System.Reflection.MethodAttributes * System.Reflection.CallingConventions * Type * Type[] * System.Reflection.Module * bool -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, attributes, callingConvention, returnType, parameterTypes, m, skipVisibility)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, System::Reflection::MethodAttributes attributes, System::Reflection::CallingConventions callingConvention, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, System::Reflection::Module ^ m, bool skipVisibility);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] parameterTypes, System.Reflection.Module m, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -716,6 +730,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -728,7 +744,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -743,7 +759,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -751,7 +767,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -809,13 +825,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type? returnType, Type[]? parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type? returnType, Type[]? parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Reflection.MethodAttributes attributes, valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType, class System.Type[] parameterTypes, class System.Type owner, bool skipVisibility) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Type,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, attributes As MethodAttributes, callingConvention As CallingConventions, returnType As Type, parameterTypes As Type(), owner As Type, skipVisibility As Boolean)" />
       <MemberSignature Language="F#" Value="new System.Reflection.Emit.DynamicMethod : string * System.Reflection.MethodAttributes * System.Reflection.CallingConventions * Type * Type[] * Type * bool -&gt; System.Reflection.Emit.DynamicMethod" Usage="new System.Reflection.Emit.DynamicMethod (name, attributes, callingConvention, returnType, parameterTypes, owner, skipVisibility)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DynamicMethod(System::String ^ name, System::Reflection::MethodAttributes attributes, System::Reflection::CallingConventions callingConvention, Type ^ returnType, cli::array &lt;Type ^&gt; ^ parameterTypes, Type ^ owner, bool skipVisibility);" />
-      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -828,6 +844,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -840,7 +858,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("Creating a DynamicMethod requires dynamic code.")&gt;]</AttributeName>
         </Attribute>
@@ -855,7 +873,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
         <Parameter Name="returnType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -863,7 +881,7 @@ The following code example creates a dynamic method that takes two parameters. T
         </Parameter>
         <Parameter Name="parameterTypes" Type="System.Type[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -939,6 +957,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -967,9 +987,8 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example displays the method attributes of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet21":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet21":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet21":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet21":::
 
  ]]></format>
         </remarks>
@@ -994,6 +1013,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1022,9 +1043,8 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example displays the calling convention of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet22":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet22":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet22":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet22":::
 
  ]]></format>
         </remarks>
@@ -1041,12 +1061,12 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </MemberGroup>
     <Member MemberName="CreateDelegate">
-      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate CreateDelegate(class System.Type delegateType) cil managed" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate CreateDelegate(class System.Type delegateType) cil managed" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type)" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function CreateDelegate (delegateType As Type) As Delegate" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-      <MemberSignature Language="F#" Value="override this.CreateDelegate : Type -&gt; Delegate" Usage="dynamicMethod.CreateDelegate delegateType" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Delegate ^ CreateDelegate(Type ^ delegateType);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function CreateDelegate (delegateType As Type) As Delegate" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+      <MemberSignature Language="F#" Value="override this.CreateDelegate : Type -&gt; Delegate" Usage="dynamicMethod.CreateDelegate delegateType" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Delegate ^ CreateDelegate(Type ^ delegateType);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberSignature Language="C#" Value="public Delegate CreateDelegate (Type delegateType);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Delegate CreateDelegate(class System.Type delegateType) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateDelegate (delegateType As Type) As Delegate" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
@@ -1064,6 +1084,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1099,18 +1121,17 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> method or the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method completes the dynamic method. Any further attempt to alter the dynamic method, such as modifying parameter definitions or emitting more Microsoft intermediate language (MSIL), is ignored; no exception is thrown.
+ Calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> method or the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method completes the dynamic method. Any further attempt to alter the dynamic method, such as modifying parameter definitions or emitting more Microsoft intermediate language (MSIL), is ignored; no exception is thrown.
 
- To create a method body for a dynamic method when you have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo%2A> method to obtain a <xref:System.Reflection.Emit.DynamicILInfo> object. If you do not have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetILGenerator%2A> method to obtain an <xref:System.Reflection.Emit.ILGenerator> object that can be used to generate the method body.
+ To create a method body for a dynamic method when you have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo*> method to obtain a <xref:System.Reflection.Emit.DynamicILInfo> object. If you do not have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetILGenerator*> method to obtain an <xref:System.Reflection.Emit.ILGenerator> object that can be used to generate the method body.
 
 
 
 ## Examples
- The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method.
+ The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/cpp/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/.ctor/source1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/.ctor/source1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1121,13 +1142,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName="CreateDelegate">
-      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType, object? target);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate CreateDelegate(class System.Type delegateType, object target) cil managed" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType, object? target);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate CreateDelegate(class System.Type delegateType, object target) cil managed" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function CreateDelegate (delegateType As Type, target As Object) As Delegate" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-      <MemberSignature Language="F#" Value="override this.CreateDelegate : Type * obj -&gt; Delegate" Usage="dynamicMethod.CreateDelegate (delegateType, target)" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Delegate ^ CreateDelegate(Type ^ delegateType, System::Object ^ target);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType, object target);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function CreateDelegate (delegateType As Type, target As Object) As Delegate" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+      <MemberSignature Language="F#" Value="override this.CreateDelegate : Type * obj -&gt; Delegate" Usage="dynamicMethod.CreateDelegate (delegateType, target)" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override Delegate ^ CreateDelegate(Type ^ delegateType, System::Object ^ target);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType, object target);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberSignature Language="C#" Value="public Delegate CreateDelegate (Type delegateType, object target);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Delegate CreateDelegate(class System.Type delegateType, object target) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateDelegate (delegateType As Type, target As Object) As Delegate" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0" />
@@ -1145,6 +1166,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1173,7 +1196,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <Parameter Name="delegateType" Type="System.Type" />
         <Parameter Name="target" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1193,9 +1216,9 @@ The following code example creates a dynamic method that takes two parameters. T
 
  This method overload requires `target` to be of the same type as the first parameter of the dynamic method, or to be assignable to that type (for example, a derived class).  The signature of `delegateType` has all the parameters of the dynamic method except the first. For example, if the dynamic method has the parameters <xref:System.String>, <xref:System.Int32>, and <xref:System.Byte>, then `delegateType` has the parameters <xref:System.Int32> and <xref:System.Byte>; `target` is of type <xref:System.String>.
 
- Calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> method or the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method completes the dynamic method. Any further attempt to alter the dynamic method, such as modifying parameter definitions or emitting more Microsoft intermediate language (MSIL), is ignored; no exception is thrown.
+ Calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> method or the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method completes the dynamic method. Any further attempt to alter the dynamic method, such as modifying parameter definitions or emitting more Microsoft intermediate language (MSIL), is ignored; no exception is thrown.
 
- To create a method body for a dynamic method when you have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo%2A> method to obtain a <xref:System.Reflection.Emit.DynamicILInfo> object. If you do not have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetILGenerator%2A> method to obtain an <xref:System.Reflection.Emit.ILGenerator> object that can be used to generate the method body.
+ To create a method body for a dynamic method when you have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo*> method to obtain a <xref:System.Reflection.Emit.DynamicILInfo> object. If you do not have your own MSIL generator, call the <xref:System.Reflection.Emit.DynamicMethod.GetILGenerator*> method to obtain an <xref:System.Reflection.Emit.ILGenerator> object that can be used to generate the method body.
 
 
 
@@ -1209,15 +1232,15 @@ The following code example creates a dynamic method that takes two parameters. T
 > [!NOTE]
 >  In general, changing the internal fields of classes is not good object-oriented coding practice.
 
- The example code creates an instance of `Example` and then creates two delegates. The first is of type `UseLikeStatic`, which has the same parameters as the dynamic method. The second is of type `UseLikeInstance`, which lacks the first parameter (of type `Example`). This delegate is created using the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> method overload; the second parameter of that method overload is an instance of `Example`, in this case the instance just created, which is bound to the newly created delegate. Whenever that delegate is invoked, the dynamic method acts on the bound instance of `Example`.
+ The example code creates an instance of `Example` and then creates two delegates. The first is of type `UseLikeStatic`, which has the same parameters as the dynamic method. The second is of type `UseLikeInstance`, which lacks the first parameter (of type `Example`). This delegate is created using the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)> method overload; the second parameter of that method overload is an instance of `Example`, in this case the instance just created, which is bound to the newly created delegate. Whenever that delegate is invoked, the dynamic method acts on the bound instance of `Example`.
 
 > [!NOTE]
->  This is an example of the relaxed rules for delegate binding introduced in the .NET Framework 2.0, along with new overloads of the <xref:System.Delegate.CreateDelegate%2A?displayProperty=nameWithType> method. For more information, see the <xref:System.Delegate> class.
+> This is an example of the relaxed rules for delegate binding introduced in .NET Framework 2.0, along with new overloads of the <xref:System.Delegate.CreateDelegate*?displayProperty=nameWithType> method. For more information, see the <xref:System.Delegate> class.
 
  The `UseLikeStatic` delegate is invoked, passing in the instance of `Example` that is bound to the `UseLikeInstance` delegate. Then the `UseLikeInstance` delegate is invoked, so that both delegates act on the same instance of `Example`. The changes in the values of the internal field are displayed after each call. Finally, a `UseLikeInstance` delegate is bound to an instance of `DerivedFromExample`, and the delegate calls are repeated.
 
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/.ctor/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ClosedOver/vb/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/.ctor/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1231,13 +1254,13 @@ The following code example creates a dynamic method that takes two parameters. T
       </Docs>
     </Member>
     <Member MemberName="DeclaringType">
-      <MemberSignature Language="C#" Value="public override Type? DeclaringType { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public override Type? DeclaringType { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
       <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.DeclaringType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property DeclaringType As Type" />
       <MemberSignature Language="F#" Value="member this.DeclaringType : Type" Usage="System.Reflection.Emit.DynamicMethod.DeclaringType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Type ^ DeclaringType { Type ^ get(); };" />
-      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
@@ -1250,6 +1273,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1262,7 +1287,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1284,22 +1309,21 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example displays the declaring type of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet23":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet23":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet23":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet23":::
 
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="DefineParameter">
-      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder? DefineParameter (int position, System.Reflection.ParameterAttributes attributes, string? parameterName);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder? DefineParameter (int position, System.Reflection.ParameterAttributes attributes, string? parameterName);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ParameterBuilder DefineParameter(int32 position, valuetype System.Reflection.ParameterAttributes attributes, string parameterName) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.DefineParameter(System.Int32,System.Reflection.ParameterAttributes,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function DefineParameter (position As Integer, attributes As ParameterAttributes, parameterName As String) As ParameterBuilder" />
       <MemberSignature Language="F#" Value="member this.DefineParameter : int * System.Reflection.ParameterAttributes * string -&gt; System.Reflection.Emit.ParameterBuilder" Usage="dynamicMethod.DefineParameter (position, attributes, parameterName)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Reflection::Emit::ParameterBuilder ^ DefineParameter(int position, System::Reflection::ParameterAttributes attributes, System::String ^ parameterName);" />
-      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder DefineParameter (int position, System.Reflection.ParameterAttributes attributes, string parameterName);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder DefineParameter (int position, System.Reflection.ParameterAttributes attributes, string parameterName);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1309,7 +1333,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>5.0.0.0</AssemblyVersion>
@@ -1317,6 +1340,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1326,9 +1351,9 @@ The following code example creates a dynamic method that takes two parameters. T
         <ReturnType>System.Reflection.Emit.ParameterBuilder</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="position" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="parameterName" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+        <Parameter Name="position" Type="System.Int32" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="parameterName" Type="System.String" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="position">The position of the parameter in the parameter list. Parameters are indexed beginning with the number 1 for the first parameter.</param>
@@ -1340,18 +1365,17 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If `position` is 0, the <xref:System.Reflection.Emit.DynamicMethod.DefineParameter%2A> method refers to the return value. Setting parameter information has no effect on the return value.
+ If `position` is 0, the <xref:System.Reflection.Emit.DynamicMethod.DefineParameter*> method refers to the return value. Setting parameter information has no effect on the return value.
 
- If the dynamic method has already been completed, by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> or <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method, the <xref:System.Reflection.Emit.DynamicMethod.DefineParameter%2A> method has no effect. No exception is thrown.
+ If the dynamic method has already been completed, by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> or <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method, the <xref:System.Reflection.Emit.DynamicMethod.DefineParameter*> method has no effect. No exception is thrown.
 
 
 
 ## Examples
  The following code example shows how to define parameter information for a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet33":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet33":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet33":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet33":::
 
  ]]></format>
         </remarks>
@@ -1382,7 +1406,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1391,6 +1414,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1439,7 +1464,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1448,6 +1472,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1457,7 +1483,7 @@ The following code example creates a dynamic method that takes two parameters. T
         <ReturnType>System.Object[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="inherit" Type="System.Boolean" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+        <Parameter Name="inherit" Type="System.Boolean" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="inherit">
@@ -1471,7 +1497,7 @@ The following code example creates a dynamic method that takes two parameters. T
  For dynamic methods, specifying `true` for `inherit` has no effect, because the method is not declared in a type.
 
 > [!NOTE]
->  Custom attributes are not currently supported on dynamic methods. The only attribute returned is <xref:System.Runtime.CompilerServices.MethodImplAttribute>; you can get the method implementation flags more easily using the <xref:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags%2A> method.
+>  Custom attributes are not currently supported on dynamic methods. The only attribute returned is <xref:System.Runtime.CompilerServices.MethodImplAttribute>; you can get the method implementation flags more easily using the <xref:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags*> method.
 
  ]]></format>
         </remarks>
@@ -1494,7 +1520,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1503,6 +1528,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1512,8 +1539,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <ReturnType>System.Object[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeType" Type="System.Type" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="inherit" Type="System.Boolean" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+        <Parameter Name="attributeType" Type="System.Type" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="inherit" Type="System.Boolean" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="attributeType">A <see cref="T:System.Type" /> representing the type of custom attribute to return.</param>
@@ -1528,7 +1555,7 @@ The following code example creates a dynamic method that takes two parameters. T
  For dynamic methods, specifying `true` for `inherit` has no effect, because the method is not declared in a type.
 
 > [!NOTE]
->  Custom attributes are not currently supported on dynamic methods. The only attribute returned is <xref:System.Runtime.CompilerServices.MethodImplAttribute>; you can get the method implementation flags more easily using the <xref:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags%2A> method.
+>  Custom attributes are not currently supported on dynamic methods. The only attribute returned is <xref:System.Runtime.CompilerServices.MethodImplAttribute>; you can get the method implementation flags more easily using the <xref:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags*> method.
 
  ]]></format>
         </remarks>
@@ -1560,6 +1587,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1618,6 +1647,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1640,7 +1671,7 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- After a dynamic method has been completed, by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> or <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method, any further attempt to add MSIL is ignored. No exception is thrown.
+ After a dynamic method has been completed, by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> or <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method, any further attempt to add MSIL is ignored. No exception is thrown.
 
 > [!NOTE]
 >  There are restrictions on unverifiable code in dynamic methods, even in some full-trust scenarios. See the "Verification" section in Remarks for <xref:System.Reflection.Emit.DynamicMethod>.
@@ -1648,11 +1679,10 @@ The following code example creates a dynamic method that takes two parameters. T
 
 
 ## Examples
- The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method.
+ The following code example creates a dynamic method that takes two parameters. The example emits a simple function body that prints the first parameter to the console, and the example uses the second parameter as the return value of the method. The example completes the method by creating a delegate, invokes the delegate with different parameters, and finally invokes the dynamic method using the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/cpp/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/.ctor/source1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/.ctor/source1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1678,6 +1708,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1709,7 +1741,7 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- After a dynamic method has been completed, by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> or <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method, any further attempt to add MSIL is ignored. No exception is thrown.
+ After a dynamic method has been completed, by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> or <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method, any further attempt to add MSIL is ignored. No exception is thrown.
 
 > [!NOTE]
 >  There are restrictions on unverifiable code in dynamic methods, even in some full-trust scenarios. See the "Verification" section in Remarks for <xref:System.Reflection.Emit.DynamicMethod>.
@@ -1719,9 +1751,8 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example demonstrates this method overload. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -1744,7 +1775,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1753,6 +1783,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1794,6 +1826,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1816,16 +1850,15 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Reflection.ParameterInfo> objects returned by this method are for information only. Use the <xref:System.Reflection.Emit.DynamicMethod.DefineParameter%2A> method to set or change the characteristics of the parameters.
+ The <xref:System.Reflection.ParameterInfo> objects returned by this method are for information only. Use the <xref:System.Reflection.Emit.DynamicMethod.DefineParameter*> method to set or change the characteristics of the parameters.
 
 
 
 ## Examples
  The following code example displays the parameters of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet34":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet34":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet34":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet34":::
 
  ]]></format>
         </remarks>
@@ -1851,6 +1884,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1878,24 +1913,23 @@ The following code example creates a dynamic method that takes two parameters. T
 
 
 ## Examples
- The following code example displays the <xref:System.Reflection.Emit.DynamicMethod.InitLocals%2A> property of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
+ The following code example displays the <xref:System.Reflection.Emit.DynamicMethod.InitLocals> property of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet24":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet24":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet24":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet24":::
 
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Invoke">
-      <MemberSignature Language="C#" Value="public override object? Invoke (object? obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder? binder, object?[]? parameters, System.Globalization.CultureInfo? culture);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public override object? Invoke (object? obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder? binder, object?[]? parameters, System.Globalization.CultureInfo? culture);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(object obj, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Invoke (obj As Object, invokeAttr As BindingFlags, binder As Binder, parameters As Object(), culture As CultureInfo) As Object" />
       <MemberSignature Language="F#" Value="override this.Invoke : obj * System.Reflection.BindingFlags * System.Reflection.Binder * obj[] * System.Globalization.CultureInfo -&gt; obj" Usage="dynamicMethod.Invoke (obj, invokeAttr, binder, parameters, culture)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ Invoke(System::Object ^ obj, System::Reflection::BindingFlags invokeAttr, System::Reflection::Binder ^ binder, cli::array &lt;System::Object ^&gt; ^ parameters, System::Globalization::CultureInfo ^ culture);" />
-      <MemberSignature Language="C#" Value="public override object Invoke (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override object Invoke (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1905,7 +1939,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1914,6 +1947,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1929,11 +1964,11 @@ The following code example creates a dynamic method that takes two parameters. T
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="obj" Type="System.Object" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="binder" Type="System.Reflection.Binder" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="parameters" Type="System.Object[]" Index="3" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="culture" Type="System.Globalization.CultureInfo" Index="4" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+        <Parameter Name="obj" Type="System.Object" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="parameters" Type="System.Object[]" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" Index="4" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="obj">This parameter is ignored for dynamic methods, because they are static. Specify <see langword="null" />.</param>
@@ -1949,30 +1984,24 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Remarks
  In addition to the listed exceptions, the calling code should be prepared to catch any exceptions thrown by the dynamic method.
 
- Executing a dynamic method with a delegate created by the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> method is more efficient than executing it with the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method.
+ Executing a dynamic method with a delegate created by the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> method is more efficient than executing it with the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method.
 
- Calling the <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> method or the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> method completes the dynamic method. Any further attempt to alter the dynamic method, such as modifying parameter definitions or emitting more Microsoft intermediate language (MSIL), is ignored; no exception is thrown.
+ Calling the <xref:System.Reflection.Emit.DynamicMethod.Invoke*> method or the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate*> method completes the dynamic method. Any further attempt to alter the dynamic method, such as modifying parameter definitions or emitting more Microsoft intermediate language (MSIL), is ignored; no exception is thrown.
 
- All dynamic methods are static, so the `obj` parameter is always ignored. To treat a dynamic method as if it were an instance method, use the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> overload that takes an object instance.
+ All dynamic methods are static, so the `obj` parameter is always ignored. To treat a dynamic method as if it were an instance method, use the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)> overload that takes an object instance.
 
  If the dynamic method has no parameters, the value of `parameters` should be `null`. Otherwise the number, type, and order of elements in the parameters array should be identical to the number, type, and order of parameters of the dynamic method.
 
 > [!NOTE]
->  This method overload is called by the <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Object%5B%5D%29> method overload inherited from the <xref:System.Reflection.MethodBase> class, so the preceding remarks apply to both overloads.
+>  This method overload is called by the <xref:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])> method overload inherited from the <xref:System.Reflection.MethodBase> class, so the preceding remarks apply to both overloads.
 
  This method does not demand permissions directly, but invoking the dynamic method can result in security demands, depending on the method. For example, no demands are made for anonymously hosted dynamic methods that are created with the `restrictedSkipVisibility` parameter set to `false`. On the other hand, if you create a method with `restrictedSkipVisibility` set to `true` so it can access a hidden member of a target assembly, the method will cause a demand for the permissions of the target assembly plus <xref:System.Security.Permissions.ReflectionPermission> with the <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> flag.
-
-> [!NOTE]
->  Prior to .NET Framework 2.0, this method required <xref:System.Security.Permissions.ReflectionPermission> with the <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess> flag.
-
-
 
 ## Examples
  The following code example invokes a dynamic method with exact binding, using the US-English culture. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet4":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet4":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -2007,7 +2036,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -2016,6 +2044,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2025,8 +2055,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="attributeType" Type="System.Type" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
-        <Parameter Name="inherit" Type="System.Boolean" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+        <Parameter Name="attributeType" Type="System.Type" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
+        <Parameter Name="inherit" Type="System.Boolean" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="attributeType">A <see cref="T:System.Type" /> representing the type of custom attribute to search for.</param>
@@ -2070,6 +2100,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2091,7 +2123,7 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical%2A>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical%2A>, and <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent%2A> properties report the transparency level of the dynamic method as determined by the common language runtime (CLR). The combinations of these properties are shown in the following table:
+ The <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical*>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical*>, and <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent*> properties report the transparency level of the dynamic method as determined by the common language runtime (CLR). The combinations of these properties are shown in the following table:
 
 |Security level|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
@@ -2103,9 +2135,9 @@ The following code example creates a dynamic method that takes two parameters. T
 
  The transparency of a dynamic method depends on the module it is associated with. If the dynamic method is associated with a type rather than a module, its transparency depends on the module that contains the type. Dynamic methods do not have security annotations, so they are assigned the default transparency for the associated module.
 
--   Anonymously hosted dynamic methods are always transparent, because the system-provided module that contains them is transparent.
+- Anonymously hosted dynamic methods are always transparent, because the system-provided module that contains them is transparent.
 
--   The transparency of a dynamic method that is associated with a trusted assembly (that is, a strong-named assembly that is installed in the global assembly cache) is described in the following table.
+- The transparency of a dynamic method that is associated with a trusted assembly (that is, a strong-named assembly that is installed in the global assembly cache) is described in the following table.
 
     |Assembly annotation|Level 1 transparency|Level 2 transparency|
     |-------------------------|--------------------------|--------------------------|
@@ -2119,7 +2151,7 @@ The following code example creates a dynamic method that takes two parameters. T
     > [!NOTE]
     >  Associating a dynamic method with a module in a trusted level 1 assembly that is security-agnostic, such as System.dll, does not permit elevation of trust. If the grant set of the code that calls the dynamic method does not include the grant set of System.dll (that is, full trust), <xref:System.Security.SecurityException> is thrown when the dynamic method is called.
 
--   The transparency of a dynamic method that is associated with a partially trusted assembly depends on how the assembly is loaded. If the assembly is loaded with partial trust (for example, into a sandboxed application domain), the runtime ignores the security annotations of the assembly. The assembly and all its types and members, including dynamic methods, are treated as transparent. The runtime pays attention to security annotations only if the partial-trust assembly is loaded with full trust (for example, into the default application domain of a desktop application). In that case, the runtime assigns the dynamic method the default transparency for methods according to the assembly's annotations.
+- The transparency of a dynamic method that is associated with a partially trusted assembly depends on how the assembly is loaded. If the assembly is loaded with partial trust (for example, into a sandboxed application domain), the runtime ignores the security annotations of the assembly. The assembly and all its types and members, including dynamic methods, are treated as transparent. The runtime pays attention to security annotations only if the partial-trust assembly is loaded with full trust (for example, into the default application domain of a desktop application). In that case, the runtime assigns the dynamic method the default transparency for methods according to the assembly's annotations.
 
  For more information about reflection emit and transparency, see [Security Issues in Reflection Emit](/dotnet/framework/reflection-and-codedom/security-issues-in-reflection-emit). For information about transparency, see [Security Changes](/dotnet/framework/security/security-changes).
 
@@ -2156,6 +2188,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2177,7 +2211,7 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical%2A>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical%2A>, and <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent%2A> properties report the transparency level of the dynamic method as determined by the common language runtime (CLR). The combinations of these properties are shown in the following table:
+ The <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical*>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical*>, and <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent*> properties report the transparency level of the dynamic method as determined by the common language runtime (CLR). The combinations of these properties are shown in the following table:
 
 |Security level|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
@@ -2189,9 +2223,9 @@ The following code example creates a dynamic method that takes two parameters. T
 
  The transparency of a dynamic method depends on the module it is associated with. If the dynamic method is associated with a type rather than a module, its transparency depends on the module that contains the type. Dynamic methods do not have security annotations, so they are assigned the default transparency for the associated module.
 
--   Anonymously hosted dynamic methods are always transparent, because the system-provided module that contains them is transparent.
+- Anonymously hosted dynamic methods are always transparent, because the system-provided module that contains them is transparent.
 
--   The transparency of a dynamic method that is associated with a trusted assembly (that is, a strong-named assembly that is installed in the global assembly cache) is described in the following table.
+- The transparency of a dynamic method that is associated with a trusted assembly (that is, a strong-named assembly that is installed in the global assembly cache) is described in the following table.
 
     |Assembly annotation|Level 1 transparency|Level 2 transparency|
     |-------------------------|--------------------------|--------------------------|
@@ -2205,7 +2239,7 @@ The following code example creates a dynamic method that takes two parameters. T
     > [!NOTE]
     >  Associating a dynamic method with a module in a trusted level 1 assembly that is security-agnostic, such as System.dll, does not permit elevation of trust. If the grant set of the code that calls the dynamic method does not include the grant set of System.dll (that is, full trust), <xref:System.Security.SecurityException> is thrown when the dynamic method is called.
 
--   The transparency of a dynamic method that is associated with a partially trusted assembly depends on how the assembly is loaded. If the assembly is loaded with partial trust (for example, into a sandboxed application domain), the runtime ignores the security annotations of the assembly. The assembly and all its types and members, including dynamic methods, are treated as transparent. The runtime pays attention to security annotations only if the partial-trust assembly is loaded with full trust (for example, into the default application domain of a desktop application). In that case, the runtime assigns the dynamic method the default transparency for methods according to the assembly's annotations.
+- The transparency of a dynamic method that is associated with a partially trusted assembly depends on how the assembly is loaded. If the assembly is loaded with partial trust (for example, into a sandboxed application domain), the runtime ignores the security annotations of the assembly. The assembly and all its types and members, including dynamic methods, are treated as transparent. The runtime pays attention to security annotations only if the partial-trust assembly is loaded with full trust (for example, into the default application domain of a desktop application). In that case, the runtime assigns the dynamic method the default transparency for methods according to the assembly's annotations.
 
  For more information about reflection emit and transparency, see [Security Issues in Reflection Emit](/dotnet/framework/reflection-and-codedom/security-issues-in-reflection-emit). For information about transparency, see [Security Changes](/dotnet/framework/security/security-changes).
 
@@ -2242,6 +2276,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2263,7 +2299,7 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical%2A>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical%2A>, and <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent%2A> properties report the transparency level of the dynamic method as determined by the common language runtime (CLR). The combinations of these properties are shown in the following table:
+ The <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical*>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical*>, and <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent*> properties report the transparency level of the dynamic method as determined by the common language runtime (CLR). The combinations of these properties are shown in the following table:
 
 |Security level|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
@@ -2275,9 +2311,9 @@ The following code example creates a dynamic method that takes two parameters. T
 
  The transparency of a dynamic method depends on the module it is associated with. If the dynamic method is associated with a type rather than a module, its transparency depends on the module that contains the type. Dynamic methods do not have security annotations, so they are assigned the default transparency for the associated module.
 
--   Anonymously hosted dynamic methods are always transparent, because the system-provided module that contains them is transparent.
+- Anonymously hosted dynamic methods are always transparent, because the system-provided module that contains them is transparent.
 
--   The transparency of a dynamic method that is associated with a trusted assembly (that is, a strong-named assembly that is installed in the global assembly cache) is described in the following table.
+- The transparency of a dynamic method that is associated with a trusted assembly (that is, a strong-named assembly that is installed in the global assembly cache) is described in the following table.
 
     |Assembly annotation|Level 1 transparency|Level 2 transparency|
     |-------------------------|--------------------------|--------------------------|
@@ -2291,7 +2327,7 @@ The following code example creates a dynamic method that takes two parameters. T
     > [!NOTE]
     >  Associating a dynamic method with a module in a trusted level 1 assembly that is security-agnostic, such as System.dll, does not permit elevation of trust. If the grant set of the code that calls the dynamic method does not include the grant set of System.dll (that is, full trust), <xref:System.Security.SecurityException> is thrown when the dynamic method is called.
 
--   The transparency of a dynamic method that is associated with a partially trusted assembly depends on how the assembly is loaded. If the assembly is loaded with partial trust (for example, into a sandboxed application domain), the runtime ignores the security annotations of the assembly. The assembly and all its types and members, including dynamic methods, are treated as transparent. The runtime pays attention to security annotations only if the partial-trust assembly is loaded with full trust (for example, into the default application domain of a desktop application). In that case, the runtime assigns the dynamic method the default transparency for methods according to the assembly's annotations.
+- The transparency of a dynamic method that is associated with a partially trusted assembly depends on how the assembly is loaded. If the assembly is loaded with partial trust (for example, into a sandboxed application domain), the runtime ignores the security annotations of the assembly. The assembly and all its types and members, including dynamic methods, are treated as transparent. The runtime pays attention to security annotations only if the partial-trust assembly is loaded with full trust (for example, into the default application domain of a desktop application). In that case, the runtime assigns the dynamic method the default transparency for methods according to the assembly's annotations.
 
  For more information about reflection emit and transparency, see [Security Issues in Reflection Emit](/dotnet/framework/reflection-and-codedom/security-issues-in-reflection-emit). For information about transparency, see [Security Changes](/dotnet/framework/security/security-changes).
 
@@ -2323,7 +2359,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -2332,6 +2367,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2397,6 +2434,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2411,16 +2450,13 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If a module was specified when the dynamic method was created, this property returns that module. If a type was specified as the owner when the dynamic method was created, this property returns the module which contains that type.
-
-
+ If a module was specified when the dynamic method was created, this property returns that module. If a type was specified as the owner when the dynamic method was created, this property returns the module that contains that type.
 
 ## Examples
- The following code example displays the <xref:System.Reflection.Emit.DynamicMethod.Module%2A> property of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
+ The following code example displays the <xref:System.Reflection.Emit.DynamicMethod.Module> property of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet26":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet26":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet26":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet26":::
 
  ]]></format>
         </remarks>
@@ -2445,6 +2481,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2475,22 +2513,21 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example displays the name of a dynamic method. This code example is part of a larger example provided for  the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet27":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet27":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet27":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet27":::
 
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ReflectedType">
-      <MemberSignature Language="C#" Value="public override Type? ReflectedType { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public override Type? ReflectedType { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
       <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.ReflectedType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReflectedType As Type" />
       <MemberSignature Language="F#" Value="member this.ReflectedType : Type" Usage="System.Reflection.Emit.DynamicMethod.ReflectedType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Type ^ ReflectedType { Type ^ get(); };" />
-      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2500,7 +2537,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -2509,13 +2545,15 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -2537,9 +2575,8 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example displays the reflected type of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet28":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet28":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet28":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet28":::
 
  ]]></format>
         </remarks>
@@ -2564,6 +2601,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2610,6 +2649,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2638,9 +2679,8 @@ The following code example creates a dynamic method that takes two parameters. T
 ## Examples
  The following code example displays the return type of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet30":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet30":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet30":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet30":::
 
  ]]></format>
         </remarks>
@@ -2662,7 +2702,6 @@ The following code example creates a dynamic method that takes two parameters. T
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -2671,6 +2710,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -2686,16 +2727,15 @@ The following code example creates a dynamic method that takes two parameters. T
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Custom attributes are not supported on the return type of a dynamic method, so the array of custom attributes returned by the <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A> method is always empty.
+ Custom attributes are not supported on the return type of a dynamic method, so the array of custom attributes returned by the <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes*> method is always empty.
 
 
 
 ## Examples
  The following code example shows how to display the custom attributes of the return type of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet31":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet31":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet31":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet31":::
 
  ]]></format>
         </remarks>
@@ -2721,6 +2761,8 @@ The following code example creates a dynamic method that takes two parameters. T
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2748,11 +2790,10 @@ The following code example creates a dynamic method that takes two parameters. T
 
 
 ## Examples
- The following code example displays the <xref:System.Reflection.Emit.DynamicMethod.ToString%2A> method of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
+ The following code example displays the <xref:System.Reflection.Emit.DynamicMethod.ToString*> method of a dynamic method. This code example is part of a larger example provided for the <xref:System.Reflection.Emit.DynamicMethod> class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp" id="Snippet32":::
  :::code language="csharp" source="~/snippets/csharp/System.Reflection.Emit/DynamicMethod/Overview/source.cs" id="Snippet32":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb" id="Snippet32":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Reflection.Emit/DynamicMethod/Overview/source.vb" id="Snippet32":::
 
  ]]></format>
         </remarks>

@@ -17,6 +17,8 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -26,21 +28,24 @@
     <AssemblyName>System.ServiceModel.Security</AssemblyName>
   </AssemblyInfo>
   <TypeForwardingChain>
-    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.IdentityModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.IdentityModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="netstandard-2.0-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
-    <Interface>
+    <Interface FrameworkAlternate="netstandard-2.0-pp">
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.IdentityModel.Claims.Claim&gt;</InterfaceName>
     </Interface>
-    <Interface>
+    <Interface FrameworkAlternate="netstandard-2.0-pp">
       <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+    <Attribute FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.6.2-pp;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp">
       <AttributeName Language="C#">[System.Runtime.Serialization.DataContract(Namespace="http://schemas.xmlsoap.org/ws/2005/05/identity")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.Serialization.DataContract(Namespace="http://schemas.xmlsoap.org/ws/2005/05/identity")&gt;]</AttributeName>
     </Attribute>
@@ -48,19 +53,19 @@
   <Docs>
     <summary>Represents the collection of claims that are associated with an entity.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- After the <xref:System.IdentityModel.Claims.ClaimSet> class has been created, it cannot be changed.  
-  
- Examining the content of a <xref:System.IdentityModel.Claims.ClaimSet> for particular types of claims is a common task when using claim-based authorization. To examine a <xref:System.IdentityModel.Claims.ClaimSet> for the presence of particular claims, use the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A> method. The method provides better performance than iterating directly over the <xref:System.IdentityModel.Claims.ClaimSet>.  
-  
-   
-  
-## Examples  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ After the <xref:System.IdentityModel.Claims.ClaimSet> class has been created, it cannot be changed.
+
+ Examining the content of a <xref:System.IdentityModel.Claims.ClaimSet> for particular types of claims is a common task when using claim-based authorization. To examine a <xref:System.IdentityModel.Claims.ClaimSet> for the presence of particular claims, use the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims*> method. The method provides better performance than iterating directly over the <xref:System.IdentityModel.Claims.ClaimSet>.
+
+
+
+## Examples
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/c_claimset/cs/service.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/c_claimset/vb/myauthorizationpolicy.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/c_claimset/vb/myauthorizationpolicy.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -80,7 +85,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -93,11 +98,11 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.IdentityModel.Claims.ClaimSet" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Reserved for future use.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Reserved for future use.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -127,7 +132,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -148,11 +153,11 @@
         <returns>
           <see langword="true" /> if the specified claim is contained in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />; otherwise <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To find the specified claim, call the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To find the specified claim, call the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims(System.String,System.String)> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -173,7 +178,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -196,11 +201,11 @@
         <returns>
           <see langword="true" /> if the specified claim is contained in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />; otherwise <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To find the specified claim, call the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To find the specified claim, call the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims(System.String,System.String)> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -221,7 +226,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -237,11 +242,11 @@
         <summary>When overridden in a derived class, gets the number of claims in this claim set.</summary>
         <value>The number of claims in this <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To get an individual claim, use the <xref:System.IdentityModel.Claims.ClaimSet.Item%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To get an individual claim, use the <xref:System.IdentityModel.Claims.ClaimSet.Item*> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -262,7 +267,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -284,17 +289,17 @@
         <summary>When overridden in a derived class, searches for a <see cref="T:System.IdentityModel.Claims.Claim" /> object that matches the specified claim type and rights in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</summary>
         <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1" /> of type <see cref="T:System.IdentityModel.Claims.Claim" /> that enables you to enumerate the claims that matches the specified criteria.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To determine if this <xref:System.IdentityModel.Claims.ClaimSet> contains the claim without returning the claim, call the <xref:System.IdentityModel.Claims.ClaimSet.ContainsClaim%2A> method.  
-  
-   
-  
-## Examples  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To determine if this <xref:System.IdentityModel.Claims.ClaimSet> contains the claim without returning the claim, call the <xref:System.IdentityModel.Claims.ClaimSet.ContainsClaim*> method.
+
+
+
+## Examples
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/c_claimset/cs/service.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/c_claimset/vb/myauthorizationpolicy.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/c_claimset/vb/myauthorizationpolicy.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -318,7 +323,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -335,13 +340,13 @@
         <summary>When overridden in a derived class, gets a <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to enumerate the <see cref="T:System.IdentityModel.Claims.Claim" /> object in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</summary>
         <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to enumerate the <see cref="T:System.IdentityModel.Claims.Claim" /> object in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `foreach` statement of the C# language (`for each` in Visual Basic) hides the complexity of the enumerators. Therefore, using `foreach` is recommended, instead of directly manipulating the enumerator.  
-  
- Enumerators can be used to read the data in the collection, but they cannot be used to modify the underlying collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `foreach` statement of the C# language (`for each` in Visual Basic) hides the complexity of the enumerators. Therefore, using `foreach` is recommended, instead of directly manipulating the enumerator.
+
+ Enumerators can be used to read the data in the collection, but they cannot be used to modify the underlying collection.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -362,7 +367,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -378,11 +383,11 @@
         <summary>When overridden in a derived class, gets the entity that issued this <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</summary>
         <value>The <see cref="T:System.IdentityModel.Claims.ClaimSet" /> object that issued this <see cref="T:System.IdentityModel.Claims.ClaimSet" /> object.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The issuer of the claim set that is returned by the <xref:System.IdentityModel.Claims.ClaimSet.System%2A> property is the <xref:System.IdentityModel.Claims.DefaultClaimSet>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The issuer of the claim set that is returned by the <xref:System.IdentityModel.Claims.ClaimSet.System> property is the <xref:System.IdentityModel.Claims.DefaultClaimSet>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -403,7 +408,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -441,7 +446,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -457,13 +462,13 @@
         <summary>Gets a <see cref="T:System.IdentityModel.Claims.ClaimSet" /> object that represents an application trusted issuer.</summary>
         <value>The system <see cref="T:System.IdentityModel.Claims.ClaimSet" /> object.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This type of <xref:System.IdentityModel.Claims.ClaimSet> object is typically used as the value of the <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> property for a <xref:System.IdentityModel.Claims.ClaimSet> that is issued by the current application.  
-  
- For example, after an application authenticates a username and password, it creates a <xref:System.IdentityModel.Claims.ClaimSet> that represents the user with the <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> property set to <xref:System.IdentityModel.Claims.ClaimSet.System%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This type of <xref:System.IdentityModel.Claims.ClaimSet> object is typically used as the value of the <xref:System.IdentityModel.Claims.ClaimSet.Issuer> property for a <xref:System.IdentityModel.Claims.ClaimSet> that is issued by the current application.
+
+ For example, after an application authenticates a username and password, it creates a <xref:System.IdentityModel.Claims.ClaimSet> that represents the user with the <xref:System.IdentityModel.Claims.ClaimSet.Issuer> property set to <xref:System.IdentityModel.Claims.ClaimSet.System>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -487,7 +492,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -504,13 +509,13 @@
         <summary>Gets an <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to enumerate the <see cref="T:System.IdentityModel.Claims.Claim" /> object in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</summary>
         <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can be used to enumerate the <see cref="T:System.IdentityModel.Claims.Claim" /> object in the <see cref="T:System.IdentityModel.Claims.ClaimSet" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `foreach` statement of the C# language (`for each` in Visual Basic) hides the complexity of the enumerators. Therefore, using `foreach` is recommended, instead of directly manipulating the enumerator.  
-  
- Enumerators can be used to read the data in the collection, but they cannot be used to modify the underlying collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `foreach` statement of the C# language (`for each` in Visual Basic) hides the complexity of the enumerators. Therefore, using `foreach` is recommended, instead of directly manipulating the enumerator.
+
+ Enumerators can be used to read the data in the collection, but they cannot be used to modify the underlying collection.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -545,11 +550,11 @@
         <summary>Gets a set of claims that contains Windows security identifiers.</summary>
         <value>A <see cref="T:System.IdentityModel.Claims.ClaimSet" /> that contains at least one claim of type <see cref="P:System.IdentityModel.Claims.ClaimTypes.Sid" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This type of <xref:System.IdentityModel.Claims.ClaimSet> object is typically used as the value of the <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> property for a <xref:System.IdentityModel.Claims.ClaimSet> that is issued by the Windows. For example, after an application authenticates a username and password using Windows authentication, it creates the <xref:System.IdentityModel.Claims.ClaimSet> with the <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> property set to <xref:System.IdentityModel.Claims.ClaimSet.Windows%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This type of <xref:System.IdentityModel.Claims.ClaimSet> object is typically used as the value of the <xref:System.IdentityModel.Claims.ClaimSet.Issuer> property for a <xref:System.IdentityModel.Claims.ClaimSet> that is issued by the Windows. For example, after an application authenticates a username and password using Windows authentication, it creates the <xref:System.IdentityModel.Claims.ClaimSet> with the <xref:System.IdentityModel.Claims.ClaimSet.Issuer> property set to <xref:System.IdentityModel.Claims.ClaimSet.Windows>.
+
  ]]></format>
         </remarks>
       </Docs>

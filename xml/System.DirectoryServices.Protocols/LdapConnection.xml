@@ -1,6 +1,6 @@
 <Type Name="LdapConnection" FullName="System.DirectoryServices.Protocols.LdapConnection">
   <TypeSignature Language="C#" Value="public class LdapConnection : System.DirectoryServices.Protocols.DirectoryConnection, IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LdapConnection extends System.DirectoryServices.Protocols.DirectoryConnection implements class System.IDisposable" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LdapConnection extends System.DirectoryServices.Protocols.DirectoryConnection implements class System.IDisposable" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
   <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.LdapConnection" />
   <TypeSignature Language="VB.NET" Value="Public Class LdapConnection&#xA;Inherits DirectoryConnection&#xA;Implements IDisposable" />
   <TypeSignature Language="F#" Value="type LdapConnection = class&#xA;    inherit DirectoryConnection&#xA;    interface IDisposable" />
@@ -13,6 +13,11 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.DirectoryServices.Protocols.DirectoryConnection</BaseTypeName>
@@ -28,7 +33,7 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> property on the <xref:System.DirectoryServices.Protocols.LdapConnection> object and <xref:System.DirectoryServices.Protocols.LdapSessionOptions.QueryClientCertificate%2A> property on the <xref:System.DirectoryServices.Protocols.LdapSessionOptions> object are both set, the certificate specified in the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> property is ignored.
+ If the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates> property on the <xref:System.DirectoryServices.Protocols.LdapConnection> object and <xref:System.DirectoryServices.Protocols.LdapSessionOptions.QueryClientCertificate> property on the <xref:System.DirectoryServices.Protocols.LdapSessionOptions> object are both set, the certificate specified in the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates> property is ignored.
 
  ]]></format>
     </remarks>
@@ -56,7 +61,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
@@ -80,13 +85,13 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="server" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="server">A string specifying the server  which can be a domain name, LDAP server name or dotted strings representing the IP address of the LDAP server. Optionally, this parameter may also include a port number, separated from the right end of the string by a colon (:).</param>
+        <param name="server">A string specifying the server, which can be a domain name, LDAP server name, or dotted strings representing the IP address of the LDAP server. Optionally, this parameter can also include a port number, separated from the right end of the string by a colon (:).</param>
         <summary>The <see cref="M:System.DirectoryServices.Protocols.LdapConnection.#ctor(System.String)" /> constructor creates an instance of the <see cref="T:System.DirectoryServices.Protocols.LdapConnection" /> class using the specified server.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.DirectoryServices.Protocols.LdapException">Failed to create a connection block or to open a connection to server.</exception>
@@ -104,7 +109,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
@@ -130,7 +135,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="identifier" Type="System.DirectoryServices.Protocols.LdapDirectoryIdentifier" />
@@ -162,7 +167,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -193,7 +198,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.Protocols.AuthType</ReturnType>
@@ -218,7 +223,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -251,7 +256,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IAsyncResult</ReturnType>
@@ -289,7 +294,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IAsyncResult</ReturnType>
@@ -338,7 +343,7 @@
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -372,7 +377,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -401,7 +406,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.NetworkCredential</ReturnType>
@@ -436,7 +441,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -459,7 +464,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -486,7 +491,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
@@ -520,7 +525,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -543,7 +548,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.Protocols.PartialResultsCollection</ReturnType>
@@ -586,7 +591,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
@@ -617,7 +622,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
@@ -650,7 +655,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.Protocols.LdapSessionOptions</ReturnType>
@@ -662,7 +667,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> property on the <xref:System.DirectoryServices.Protocols.LdapConnection> object and <xref:System.DirectoryServices.Protocols.LdapSessionOptions.QueryClientCertificate%2A> property on the <xref:System.DirectoryServices.Protocols.LdapSessionOptions> object are both set, the certificate specified in the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates%2A> property is ignored.
+ If the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates> property on the <xref:System.DirectoryServices.Protocols.LdapConnection> object and <xref:System.DirectoryServices.Protocols.LdapSessionOptions.QueryClientCertificate> property on the <xref:System.DirectoryServices.Protocols.LdapSessionOptions> object are both set, the certificate specified in the <xref:System.DirectoryServices.Protocols.DirectoryConnection.ClientCertificates> property is ignored.
 
  ]]></format>
         </remarks>
@@ -680,7 +685,7 @@ If a connection was created using `ldap_connect`, and if no binding function is 
         <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>

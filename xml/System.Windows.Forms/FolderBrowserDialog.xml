@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
@@ -37,11 +39,11 @@
       <AttributeName Language="C#">[System.ComponentModel.Designer("System.Windows.Forms.Design.FolderBrowserDialogDesigner, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Designer("System.Windows.Forms.Design.FolderBrowserDialogDesigner, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.ComponentModel.Designer("System.Windows.Forms.Design.FolderBrowserDialogDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Designer("System.Windows.Forms.Design.FolderBrowserDialogDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -55,9 +57,9 @@
 
 This class provides a way to prompt the user to browse, create, and eventually select a folder. Use this class when you only want to allow the user to select folders, not files. Browsing of the folders is done through a tree control. In .NET Core 3.1 and later versions, this class uses the modernized file system browser window. Only folders from the file system can be selected; virtual folders cannot.
 
- Typically, after creating a new <xref:System.Windows.Forms.FolderBrowserDialog>, you set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> to the location from which to start browsing. Optionally, you can set the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> to an absolute path of a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> that will initially be selected. You can also optionally set the <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> property to provide additional instructions to the user. Finally, call the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box to the user. When the dialog box is closed and the dialog box result from <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> is <xref:System.Windows.Forms.DialogResult.OK?displayProperty=nameWithType>, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> will be a string containing the path to the selected folder.
+ Typically, after creating a new <xref:System.Windows.Forms.FolderBrowserDialog>, you set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> to the location from which to start browsing. Optionally, you can set the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> to an absolute path of a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> that will initially be selected. You can also optionally set the <xref:System.Windows.Forms.FolderBrowserDialog.Description> property to provide additional instructions to the user. Finally, call the <xref:System.Windows.Forms.CommonDialog.ShowDialog*> method to display the dialog box to the user. When the dialog box is closed and the dialog box result from <xref:System.Windows.Forms.CommonDialog.ShowDialog*> is <xref:System.Windows.Forms.DialogResult.OK?displayProperty=nameWithType>, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> will be a string containing the path to the selected folder.
 
- You can use the <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> property to control if the user is able to create new folders with the **New Folder** button.
+ You can use the <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton> property to control if the user is able to create new folders with the **New Folder** button.
 
  <xref:System.Windows.Forms.FolderBrowserDialog> is a modal dialog box; therefore, when shown, it blocks the rest of the application until the user has chosen a folder. When a dialog box is displayed modally, no input (keyboard or mouse click) can occur except to objects on the dialog box. The program must hide or close the dialog box (usually in response to some user action) before input to the calling program can occur.
 
@@ -66,7 +68,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/FolderBrowserDialog/Overview/form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/FolderBrowserDialog/Overview/form1.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -92,6 +94,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -102,9 +106,9 @@ This class provides a way to prompt the user to browse, create, and eventually s
 ## Remarks
  The parameterless constructor initializes properties to their default values.
 
- When a new <xref:System.Windows.Forms.FolderBrowserDialog> is created, the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> property is set to <xref:System.Environment.SpecialFolder.Desktop?displayProperty=nameWithType>, the <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> property is set to an empty string (""), the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is set to an empty string, and the <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A> property is set to `true`.
+ When a new <xref:System.Windows.Forms.FolderBrowserDialog> is created, the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder> property is set to <xref:System.Environment.SpecialFolder.Desktop?displayProperty=nameWithType>, the <xref:System.Windows.Forms.FolderBrowserDialog.Description> property is set to an empty string (""), the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath> property is set to an empty string, and the <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton> property is set to `true`.
 
- Typically, after creating a new <xref:System.Windows.Forms.FolderBrowserDialog>, you set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> to the location from which to start browsing. Optionally, you can set the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> to the path of a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> that will initially be selected. You can also optionally set the <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> property to provide additional instructions to the user. Finally, call the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box to the user. When the dialog box is closed and the dialog result from <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> is <xref:System.Windows.Forms.DialogResult.OK?displayProperty=nameWithType>, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> will be a string containing the path to the selected folder.
+ Typically, after creating a new <xref:System.Windows.Forms.FolderBrowserDialog>, you set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> to the location from which to start browsing. Optionally, you can set the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> to the path of a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> that will initially be selected. You can also optionally set the <xref:System.Windows.Forms.FolderBrowserDialog.Description> property to provide additional instructions to the user. Finally, call the <xref:System.Windows.Forms.CommonDialog.ShowDialog*> method to display the dialog box to the user. When the dialog box is closed and the dialog result from <xref:System.Windows.Forms.CommonDialog.ShowDialog*> is <xref:System.Windows.Forms.DialogResult.OK?displayProperty=nameWithType>, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> will be a string containing the path to the selected folder.
 
  <xref:System.Windows.Forms.FolderBrowserDialog> is a modal dialog box; therefore, when shown, it blocks the rest of the application until the user has chosen a folder. When a dialog box is displayed modally, no input (keyboard or mouse click) can occur except to objects on the dialog box. The program must hide or close the dialog box (usually in response to some user action) before input to the calling program can occur.
 
@@ -115,7 +119,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/FolderBrowserDialog/Overview/form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/FolderBrowserDialog/Overview/form1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -134,9 +138,11 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(true)&gt;]</AttributeName>
         </Attribute>
@@ -166,9 +172,11 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(true)&gt;]</AttributeName>
         </Attribute>
@@ -197,23 +205,21 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Localizable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Localizable(false)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -248,6 +254,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -277,7 +285,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> property can be used to specify additional information to the user, like instructions.
+ The <xref:System.Windows.Forms.FolderBrowserDialog.Description> property can be used to specify additional information to the user, like instructions.
 
 
 
@@ -286,7 +294,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/FolderBrowserDialog/Overview/form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/FolderBrowserDialog/Overview/form1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -299,7 +307,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
       <MemberSignature Language="VB.NET" Value="Public Custom Event HelpRequest As EventHandler " />
       <MemberSignature Language="F#" Value="member this.HelpRequest : EventHandler " Usage="member this.HelpRequest : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ HelpRequest;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? HelpRequest;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? HelpRequest;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -311,6 +319,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -321,7 +331,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -348,13 +358,15 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue("")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue("")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.InitialDirectoryEditor, System.Windows.Forms.Design, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.InitialDirectoryEditor, System.Windows.Forms.Design, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
         </Attribute>
@@ -379,9 +391,11 @@ This class provides a way to prompt the user to browse, create, and eventually s
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(false)&gt;]</AttributeName>
         </Attribute>
@@ -395,8 +409,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <see langword="true" /> if the dialog box allows multiple folders to be selected together or concurrently; otherwise, <see langword="false" />. The default value is <see langword="false" />.
         </value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-            Use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPaths%2A> property to access the full list of selected folders.  
+          <format type="text/markdown"><![CDATA[
+            Use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPaths> property to access the full list of selected folders.
             ]]></format>
         </remarks>
       </Docs>
@@ -414,9 +428,11 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(false)&gt;]</AttributeName>
         </Attribute>
@@ -449,23 +465,25 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MemberNotNull("_descriptionText")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MemberNotNull("_descriptionText")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MemberNotNull("_selectedPaths")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MemberNotNull("_selectedPaths")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MemberNotNull("_initialDirectory")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MemberNotNull("_initialDirectory")&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MemberNotNull("_selectedPath")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MemberNotNull("_selectedPath")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MemberNotNull("_initialDirectory")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MemberNotNull("_initialDirectory")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.MemberNotNull("_selectedPaths")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.MemberNotNull("_selectedPaths")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -478,7 +496,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Resets the <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton%2A>, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> and <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> properties to their default values. For a list of default values, see the <xref:System.Windows.Forms.FolderBrowserDialog.%23ctor%2A> constructor.
+ Resets the <xref:System.Windows.Forms.FolderBrowserDialog.Description*>, <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton*>, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> and <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> properties to their default values. For a list of default values, see the <xref:System.Windows.Forms.FolderBrowserDialog.%23ctor*> constructor.
 
  ]]></format>
         </remarks>
@@ -502,6 +520,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -516,7 +536,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <AttributeName Language="C#">[System.ComponentModel.Localizable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Localizable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.SpecialFolderEnumConverter))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.SpecialFolderEnumConverter))&gt;]</AttributeName>
         </Attribute>
@@ -535,7 +555,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Only the specified folder and any subfolders that are beneath it will appear in the dialog box and be selectable. The <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property, along with <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, determines what the selected folder will be when the dialog box is displayed, as long as <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> is an absolute path that is a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> (or more accurately, points to a subfolder of the shell namespace represented by <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>).
+ Only the specified folder and any subfolders that are beneath it will appear in the dialog box and be selectable. The <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath> property, along with <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*>, determines what the selected folder will be when the dialog box is displayed, as long as <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> is an absolute path that is a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> (or more accurately, points to a subfolder of the shell namespace represented by <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*>).
 
 
 
@@ -544,7 +564,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/FolderBrowserDialog/Overview/form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/FolderBrowserDialog/Overview/form1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -558,11 +578,11 @@ This class provides a way to prompt the user to browse, create, and eventually s
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function RunDialog (hWndOwner As IntPtr) As Boolean" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0" />
       <MemberSignature Language="F#" Value="override this.RunDialog : nativeint -&gt; bool" Usage="folderBrowserDialog.RunDialog hWndOwner" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool RunDialog(IntPtr hWndOwner);" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0" />
-      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hwndOwner);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hwndOwner) cil managed" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RunDialog (hwndOwner As IntPtr) As Boolean" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="override this.RunDialog : nativeint -&gt; bool" Usage="folderBrowserDialog.RunDialog hwndOwner" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool RunDialog(IntPtr hwndOwner);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hwndOwner);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hwndOwner) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RunDialog (hwndOwner As IntPtr) As Boolean" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.RunDialog : nativeint -&gt; bool" Usage="folderBrowserDialog.RunDialog hwndOwner" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool RunDialog(IntPtr hwndOwner);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -574,13 +594,15 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="hWndOwner" Type="System.IntPtr" Index="0" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0" />
-        <Parameter Name="hwndOwner" Type="System.IntPtr" Index="0" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="hwndOwner" Type="System.IntPtr" Index="0" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="hWndOwner">A handle to the window that owns the folder browser dialog.</param>
@@ -609,6 +631,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -631,7 +655,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.SelectedPathEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.SelectedPathEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.SelectedPathEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.SelectedPathEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
         </Attribute>
@@ -646,9 +670,9 @@ This class provides a way to prompt the user to browse, create, and eventually s
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is set before showing the dialog box, the folder with this path will be the selected folder, as long as <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> is set to an absolute path that is a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> (or more accurately, points to a subfolder of the shell namespace represented by <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>).
+ If the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath> property is set before showing the dialog box, the folder with this path will be the selected folder, as long as <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath*> is set to an absolute path that is a subfolder of <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*> (or more accurately, points to a subfolder of the shell namespace represented by <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder*>).
 
- If the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> returns <xref:System.Windows.Forms.DialogResult.OK>, meaning the user clicked the **OK** button, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property will return a string containing the path to the selected folder. If <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> returns <xref:System.Windows.Forms.DialogResult.Cancel>, meaning the user canceled out of the dialog box, this property will have the same value that it had prior to displaying the dialog box. If the user selects a folder that does not have a physical path (for example, My Computer), the **OK** button on the dialog box will be disabled.
+ If the <xref:System.Windows.Forms.CommonDialog.ShowDialog*> returns <xref:System.Windows.Forms.DialogResult.OK>, meaning the user clicked the **OK** button, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath> property will return a string containing the path to the selected folder. If <xref:System.Windows.Forms.CommonDialog.ShowDialog*> returns <xref:System.Windows.Forms.DialogResult.Cancel>, meaning the user canceled out of the dialog box, this property will have the same value that it had prior to displaying the dialog box. If the user selects a folder that does not have a physical path (for example, My Computer), the **OK** button on the dialog box will be disabled.
 
 
 
@@ -657,7 +681,7 @@ This class provides a way to prompt the user to browse, create, and eventually s
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/FolderBrowserDialog/Overview/form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/FolderBrowserDialog/Overview/form1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -675,13 +699,15 @@ This class provides a way to prompt the user to browse, create, and eventually s
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
@@ -708,9 +734,11 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(false)&gt;]</AttributeName>
         </Attribute>
@@ -742,6 +770,8 @@ This class provides a way to prompt the user to browse, create, and eventually s
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -784,7 +814,7 @@ When <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton> is `tru
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/CPP/form1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/FolderBrowserDialog/Overview/form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FolderBrowserDialog/VB/form1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/FolderBrowserDialog/Overview/form1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -803,9 +833,11 @@ When <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton> is `tru
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(true)&gt;]</AttributeName>
         </Attribute>
@@ -835,23 +867,25 @@ When <xref:System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton> is `tru
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(true)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(false)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+          <AttributeName Language="C#">[System.ComponentModel.Localizable(true)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.Localizable(true)&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1">
           <AttributeName Language="C#">[System.ComponentModel.Description("FolderBrowserDialogUseDescriptionForTitle")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Description("FolderBrowserDialogUseDescriptionForTitle")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
-          <AttributeName Language="C#">[System.ComponentModel.Localizable(true)]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.Localizable(true)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

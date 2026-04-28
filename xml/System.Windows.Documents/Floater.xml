@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class Floater&#xA;Inherits AnchoredBlock" />
   <TypeSignature Language="F#" Value="type Floater = class&#xA;    inherit AnchoredBlock" />
   <TypeSignature Language="C++ CLI" Value="public ref class Floater : System::Windows::Documents::AnchoredBlock" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Floater extends System.Windows.Documents.AnchoredBlock" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Floater extends System.Windows.Documents.AnchoredBlock" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Documents.AnchoredBlock</BaseTypeName>
@@ -26,23 +28,23 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Documents.Figure> or <xref:System.Windows.Documents.Floater> elements are often used to highlight or accentuate portions of content, to host supporting images or other content within the main content flow, or to inject loosely related content such as advertisements. A floater can contain objects that inherit from the Block class. For more information, see [TextElement Content Model Overview](/dotnet/framework/wpf/advanced/textelement-content-model-overview)
+ <xref:System.Windows.Documents.Figure> or <xref:System.Windows.Documents.Floater> elements are often used to highlight or accentuate portions of content, to host supporting images or other content within the main content flow, or to inject loosely related content such as advertisements. A floater can contain objects that inherit from the Block class. For more information, see [TextElement Content Model Overview](/dotnet/desktop/wpf/advanced/textelement-content-model-overview)
 
  <xref:System.Windows.Documents.Figure> and <xref:System.Windows.Documents.Floater> differ in several ways and are used for different scenarios.
 
  **Figure:**
 
--   Can be positioned: You can set its horizontal and vertical anchors to dock it relative to the page, content, column or paragraph. You can also use its <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> and <xref:System.Windows.Documents.Figure.VerticalOffset%2A> properties to specify arbitrary offsets.
+- Can be positioned: You can set its horizontal and vertical anchors to dock it relative to the page, content, column or paragraph. You can also use its <xref:System.Windows.Documents.Figure.HorizontalOffset*> and <xref:System.Windows.Documents.Figure.VerticalOffset*> properties to specify arbitrary offsets.
 
--   Is sizable to more than one column: You can set <xref:System.Windows.Documents.Figure> height and width to multiples of page, content or column height or width. Note that in the case of page and content, multiples greater than 1 are not allowed. For example, you can set the width of a <xref:System.Windows.Documents.Figure> to be "0.5 page" or "0.25 content" or "2 Column". You can also set height and width to absolute pixel values.
+- Is sizable to more than one column: You can set <xref:System.Windows.Documents.Figure> height and width to multiples of page, content or column height or width. Note that in the case of page and content, multiples greater than 1 are not allowed. For example, you can set the width of a <xref:System.Windows.Documents.Figure> to be "0.5 page" or "0.25 content" or "2 Column". You can also set height and width to absolute pixel values.
 
--   Does not paginate: If the content inside a <xref:System.Windows.Documents.Figure> does not fit inside the <xref:System.Windows.Documents.Figure>, it will render whatever content does fit and the remaining content is lost
+- Does not paginate: If the content inside a <xref:System.Windows.Documents.Figure> does not fit inside the <xref:System.Windows.Documents.Figure>, it will render whatever content does fit and the remaining content is lost
 
  **Floater:**
 
--   Cannot be positioned and will render wherever space can be made available for it. You cannot set the offset or anchor a <xref:System.Windows.Documents.Floater>.
+- Cannot be positioned and will render wherever space can be made available for it. You cannot set the offset or anchor a <xref:System.Windows.Documents.Floater>.
 
--   Cannot be sized to more than one column: By default, <xref:System.Windows.Documents.Floater> sizes at one column. It has a <xref:System.Windows.Documents.Floater.Width%2A> property that can be set to an absolute pixel value, but if this value is greater than one column width it is ignored and the floater is sized at one column. You can size it to less than one column by setting the correct pixel width, but sizing is not column-relative, so "0.5Column" is not a valid expression for <xref:System.Windows.Documents.Floater> width. <xref:System.Windows.Documents.Floater> has no height property and it's height cannot be set, it's height depends on the content
+- Cannot be sized to more than one column: By default, <xref:System.Windows.Documents.Floater> sizes at one column. It has a <xref:System.Windows.Documents.Floater.Width> property that can be set to an absolute pixel value, but if this value is greater than one column width it is ignored and the floater is sized at one column. You can size it to less than one column by setting the correct pixel width, but sizing is not column-relative, so "0.5Column" is not a valid expression for <xref:System.Windows.Documents.Floater> width. <xref:System.Windows.Documents.Floater> has no height property and it's height cannot be set, it's height depends on the content
 
 -   <xref:System.Windows.Documents.Floater> paginates: If its content at its specified width extends to more than 1 column height, floater breaks and paginates to the next column, the next page, etc.
 
@@ -89,6 +91,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -119,6 +123,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -139,7 +145,7 @@
  The following example demonstrates how to use this constructor.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/FigureHorizontalAnchor/Overview/Window1.xaml.cs" id="Snippet_floaterconst1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb" id="Snippet_floaterconst1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/FigureHorizontalAnchor/Overview/window1.xaml.vb" id="Snippet_floaterconst1":::
 
  ]]></format>
         </remarks>
@@ -162,6 +168,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -184,7 +192,7 @@
  The following example demonstrates how to use this constructor.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/FigureHorizontalAnchor/Overview/Window1.xaml.cs" id="Snippet_floaterconst2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb" id="Snippet_floaterconst2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/FigureHorizontalAnchor/Overview/window1.xaml.vb" id="Snippet_floaterconst2":::
 
  ]]></format>
         </remarks>
@@ -207,6 +215,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.HorizontalAlignment</ReturnType>
@@ -225,7 +235,7 @@
 | Item                              | Value                                                  |
 |--------------------------|-----------------------------------------|
 |Identifier field|<xref:System.Windows.Documents.Floater.HorizontalAlignmentProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange*>|
 
 
 
@@ -235,7 +245,7 @@
  :::code language="xaml" source="~/snippets/csharp/System.Windows/FigureHorizontalAnchor/Overview/Window1.xaml" id="Snippet_floaterpropsxaml":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/FigureHorizontalAnchor/Overview/Window1.xaml.cs" id="Snippet_floaterprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb" id="Snippet_floaterprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/FigureHorizontalAnchor/Overview/window1.xaml.vb" id="Snippet_floaterprops":::
 
  ]]></format>
         </remarks>
@@ -258,6 +268,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -284,6 +296,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -305,12 +319,12 @@
 <a name="xamlAttributeUsage_Width"></a>
 ## XAML Attribute Usage
 
-```
-<object Width="double"/>
+```xaml
+<object Width="double"/>
 - or -
-<object Width="qualifiedDouble"/>
+<object Width="qualifiedDouble"/>
 - or -
-<object Width="Auto"/>
+<object Width="Auto"/>
 ```
 
 <a name="xamlValues_Width"></a>
@@ -340,17 +354,17 @@
 | Item                              | Value                                                  |
 |--------------------------|-----------------------------------------|
 |Identifier field|<xref:System.Windows.Documents.Floater.WidthProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Documents.Floater.Width%2A> attribute of a <xref:System.Windows.Documents.Floater> element.
+ The following example shows how to set the <xref:System.Windows.Documents.Floater.Width*> attribute of a <xref:System.Windows.Documents.Floater> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/FigureHorizontalAnchor/Overview/Window1.xaml" id="Snippet_floaterpropsxaml":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/FigureHorizontalAnchor/Overview/Window1.xaml.cs" id="Snippet_floaterprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb" id="Snippet_floaterprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/FigureHorizontalAnchor/Overview/window1.xaml.vb" id="Snippet_floaterprops":::
 
  ]]></format>
         </remarks>
@@ -373,6 +387,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

@@ -1,6 +1,6 @@
 <Type Name="CodeRegionDirective" FullName="System.CodeDom.CodeRegionDirective">
   <TypeSignature Language="C#" Value="public class CodeRegionDirective : System.CodeDom.CodeDirective" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeRegionDirective extends System.CodeDom.CodeDirective" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeRegionDirective extends System.CodeDom.CodeDirective" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeRegionDirective" />
   <TypeSignature Language="VB.NET" Value="Public Class CodeRegionDirective&#xA;Inherits CodeDirective" />
   <TypeSignature Language="F#" Value="type CodeRegionDirective = class&#xA;    inherit CodeDirective" />
@@ -21,7 +21,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.CodeDom" FromVersion="11.0.0.0" To="System" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.CodeDom.CodeDirective</BaseTypeName>
   </Base>
@@ -43,22 +48,22 @@
   <Docs>
     <summary>Specifies the name and mode for a code region.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.CodeDom.CodeRegionDirective.RegionMode%2A> property specifies whether an instance represents the start or end of the region.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.CodeDom.CodeRegionDirective.RegionMode> property specifies whether an instance represents the start or end of the region.
+
 > [!NOTE]
->  Not all compilers support code region directives. To prevent compiler errors, code providers normally do not include code region directives in the provider output for compilers that do not support them.  
-  
-   
-  
-## Examples  
- The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective> in the creation of a graph that is used to produce code that is also compiled.  
-  
+>  Not all compilers support code region directives. To prevent compiler errors, code providers normally do not include code region directives in the provider output for compilers that do not support them.
+
+
+
+## Examples
+ The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective> in the creation of a graph that is used to produce code that is also compiled.
+
  :::code language="csharp" source="~/snippets/csharp/System.CodeDom/CodeChecksumPragma/Overview/codedirective.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.CodeDom/CodeChecksumPragma/Overview/codedirective.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -93,6 +98,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -104,11 +111,11 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.CodeDom.CodeRegionDirective" /> class with default values.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If you use this constructor, you should also set the <xref:System.CodeDom.CodeRegionDirective.RegionMode%2A> and <xref:System.CodeDom.CodeRegionDirective.RegionText%2A> properties.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If you use this constructor, you should also set the <xref:System.CodeDom.CodeRegionDirective.RegionMode*> and <xref:System.CodeDom.CodeRegionDirective.RegionText*> properties.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -135,6 +142,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="regionMode" Type="System.CodeDom.CodeRegionMode" />
@@ -145,14 +154,14 @@
         <param name="regionText">The name for the region.</param>
         <summary>Initializes a new instance of the <see cref="T:System.CodeDom.CodeRegionDirective" /> class, specifying its mode and name.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective.%23ctor%28System.CodeDom.CodeRegionMode%2CSystem.String%29> constructor. This code example is part of a larger example provided for the <xref:System.CodeDom.CodeRegionDirective> class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective.%23ctor(System.CodeDom.CodeRegionMode,System.String)> constructor. This code example is part of a larger example provided for the <xref:System.CodeDom.CodeRegionDirective> class.
+
  :::code language="csharp" source="~/snippets/csharp/System.CodeDom/CodeChecksumPragma/Overview/codedirective.cs" id="Snippet9":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb" id="Snippet9":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.CodeDom/CodeChecksumPragma/Overview/codedirective.vb" id="Snippet9":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -179,6 +188,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -197,14 +208,14 @@
         <summary>Gets or sets the mode for the region directive.</summary>
         <value>One of the <see cref="T:System.CodeDom.CodeRegionMode" /> values. The default is <see cref="F:System.CodeDom.CodeRegionMode.None" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective.RegionMode%2A> property. This example is part of a larger example provided for the <xref:System.CodeDom.CodeRegionDirective> class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective.RegionMode> property. This example is part of a larger example provided for the <xref:System.CodeDom.CodeRegionDirective> class.
+
  :::code language="csharp" source="~/snippets/csharp/System.CodeDom/CodeChecksumPragma/Overview/codedirective.cs" id="Snippet11":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb" id="Snippet11":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.CodeDom/CodeChecksumPragma/Overview/codedirective.vb" id="Snippet11":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -231,6 +242,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -245,14 +258,14 @@
         <summary>Gets or sets the name of the region.</summary>
         <value>The name of the region.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective.RegionText%2A> property. This example is part of a larger example provided for the <xref:System.CodeDom.CodeRegionDirective> class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows the use of the <xref:System.CodeDom.CodeRegionDirective.RegionText> property. This example is part of a larger example provided for the <xref:System.CodeDom.CodeRegionDirective> class.
+
  :::code language="csharp" source="~/snippets/csharp/System.CodeDom/CodeChecksumPragma/Overview/codedirective.cs" id="Snippet12":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb" id="Snippet12":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.CodeDom/CodeChecksumPragma/Overview/codedirective.vb" id="Snippet12":::
+
  ]]></format>
         </remarks>
       </Docs>

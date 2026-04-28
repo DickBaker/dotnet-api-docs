@@ -19,7 +19,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Diagnostics.PerformanceCounter" FromVersion="11.0.0.0" To="System.Core" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -27,13 +32,13 @@
   <Docs>
     <summary>Contains the raw data for a counter.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet.Item%2A?displayProperty=nameWithType> property returns an instance of this class.  
-  
- This class provides thread-safe methods for reading and writing counter data.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet.Item*?displayProperty=nameWithType> property returns an instance of this class.
+
+ This class provides thread-safe methods for reading and writing counter data.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -59,6 +64,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -73,15 +80,15 @@
       <Docs>
         <summary>Decrements the counter value by 1.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method safely decrements the counter value for multi-threaded applications.  
-  
- To decrement the counter value by a specific value, call the <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> method and set the `value` parameter to a negative number.  
-  
- To set the counter value, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method safely decrements the counter value for multi-threaded applications.
+
+ To decrement the counter value by a specific value, call the <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy*> method and set the `value` parameter to a negative number.
+
+ To set the counter value, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -107,6 +114,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -121,15 +130,15 @@
       <Docs>
         <summary>Increments the counter value by 1.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method safely increments the counter value for multi-threaded applications.  
-  
- To set the counter value, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> property.  
-  
- To increment the counter value by a specific value, call the <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method safely increments the counter value for multi-threaded applications.
+
+ To set the counter value, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value> property.
+
+ To increment the counter value by a specific value, call the <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -155,6 +164,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -166,21 +177,21 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="value" Type="System.Int64" Index="0" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="value" Type="System.Int64" Index="0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.6.2-pp;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="value">The amount by which to increment the counter value. The increment value can be positive or negative.</param>
         <summary>Increments the counter value by the specified amount.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method safely increments the counter value for multi-threaded applications.  
-  
- To set the counter value, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> property.  
-  
- To increment the counter value by 1, call the <xref:System.Diagnostics.PerformanceData.CounterData.Increment%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method safely increments the counter value for multi-threaded applications.
+
+ To set the counter value, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value> property.
+
+ To increment the counter value by 1, call the <xref:System.Diagnostics.PerformanceData.CounterData.Increment*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -206,6 +217,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -224,11 +237,11 @@
         <summary>Gets or sets the raw counter data.</summary>
         <value>The raw counter data.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property is not thread safe and is appropriate only for single-threaded access. For multi-threaded access to the counter data, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property is not thread safe and is appropriate only for single-threaded access. For multi-threaded access to the counter data, use the <xref:System.Diagnostics.PerformanceData.CounterData.Value> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -255,6 +268,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -273,20 +288,20 @@
         <summary>Gets or sets the counter data.</summary>
         <value>The counter data.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property provides safe access to the counter data for multi-threaded applications. If performance is of primary concern, use the <xref:System.Diagnostics.PerformanceData.CounterData.RawValue%2A> property; however, the <xref:System.Diagnostics.PerformanceData.CounterData.RawValue%2A> property is not thread safe.  
-  
- Note that the <xref:System.Diagnostics.PerformanceData.CounterData.Value%2A> property is not thread safe in .NET Framework 3.5.  
-  
- To increment the counter value, consider using the <xref:System.Diagnostics.PerformanceData.CounterData.Increment%2A> or <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy%2A> method.  
-  
-   
-  
-## Examples  
- For an example, see <xref:System.Diagnostics.PerformanceData>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property provides safe access to the counter data for multi-threaded applications. If performance is of primary concern, use the <xref:System.Diagnostics.PerformanceData.CounterData.RawValue> property; however, the <xref:System.Diagnostics.PerformanceData.CounterData.RawValue> property is not thread safe.
+
+ Note that the <xref:System.Diagnostics.PerformanceData.CounterData.Value> property is not thread safe in .NET Framework 3.5.
+
+ To increment the counter value, consider using the <xref:System.Diagnostics.PerformanceData.CounterData.Increment*> or <xref:System.Diagnostics.PerformanceData.CounterData.IncrementBy*> method.
+
+
+
+## Examples
+ For an example, see <xref:System.Diagnostics.PerformanceData>.
+
  ]]></format>
         </remarks>
       </Docs>

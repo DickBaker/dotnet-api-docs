@@ -27,6 +27,8 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -34,6 +36,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -42,13 +46,13 @@
   <Docs>
     <summary>The WS-Addressing version associated with a SOAP message or understood by an endpoint.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- There are currently two version of WS-Addressing: WS-Addressing August 2004 and WS-Addressing 1.0. These versions can be retrieved using the <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004%2A> and <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> properties, respectively. There is also an addressing version available that is not associated with WS-Addressing, which is retrieved using the <xref:System.ServiceModel.Channels.AddressingVersion.None%2A> property. This value indicates that no version of WS-Addressing is used. This is primarily for transports that do not pass SOAP envelopes on the wire and therefore have no use for WS-Addressing.  
-  
- The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> property.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ There are currently two version of WS-Addressing: WS-Addressing August 2004 and WS-Addressing 1.0. These versions can be retrieved using the <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004> and <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10> properties, respectively. There is also an addressing version available that is not associated with WS-Addressing, which is retrieved using the <xref:System.ServiceModel.Channels.AddressingVersion.None> property. This value indicates that no version of WS-Addressing is used. This is primarily for transports that do not pass SOAP envelopes on the wire and therefore have no use for WS-Addressing.
+
+ The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope> property.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -72,7 +76,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -91,11 +95,11 @@
         <summary>Gets the addressing version that is not associated with WS-Addressing version.</summary>
         <value>The <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> that is not associated WS-Addressing version.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -119,7 +123,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -154,7 +158,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -173,11 +177,11 @@
         <summary>Gets an identifier for the address version associated with WS-Addressing 1.0.</summary>
         <value>A singleton instance that identifies the <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> that is associated with WS-Addressing 1.0.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -198,7 +202,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -217,11 +221,11 @@
         <summary>Gets the version of WS-Addressing that is associated with WS-Addressing August 2004.</summary>
         <value>A singleton instance that identifies the <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> that is associated with WS-Addressing August 2004.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The addressing version is part of the message version: specifically <xref:System.ServiceModel.Channels.AddressingVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Addressing> property. The <xref:System.ServiceModel.Channels.MessageVersion> also contains the SOAP envelope version in addition to the addressing version information. The <xref:System.ServiceModel.EnvelopeVersion> provides the return type for the <xref:System.ServiceModel.Channels.MessageVersion.Envelope> property.
+
  ]]></format>
         </remarks>
       </Docs>

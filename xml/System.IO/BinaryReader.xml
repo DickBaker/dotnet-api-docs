@@ -36,9 +36,17 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="mscorlib" FromVersion="4.0.0.0" To="System.IO" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.IO" FromVersion="10.0.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Runtime.Extensions" FromVersion="10.0.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.IO" FromVersion="11.0.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Runtime.Extensions" FromVersion="11.0.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.IO" FromVersion="5.0.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.Runtime.Extensions" FromVersion="5.0.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
@@ -57,7 +65,6 @@
     <TypeForwarding From="System.IO" FromVersion="4.2.0.0" To="System.Runtime.Extensions" ToVersion="4.2.0.0" FrameworkAlternate="netcore-2.0" />
     <TypeForwarding From="System.IO" FromVersion="4.2.1.0" To="System.Runtime.Extensions" ToVersion="4.2.1.0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0" />
     <TypeForwarding From="System.IO" FromVersion="4.2.2.0" To="System.Runtime.Extensions" ToVersion="4.2.2.0" FrameworkAlternate="netcore-3.1" />
-    <TypeForwarding From="System.IO" FromVersion="4.1.1.0" To="mscorlib" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -68,7 +75,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -83,12 +90,12 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.BinaryReader> class provides methods that simplify reading primitive data types from a stream. For example, you can use the <xref:System.IO.BinaryReader.ReadBoolean%2A> method to read the next byte as a Boolean value and advance the current position in the stream by one byte. The class includes read methods that support different data types.
+ The <xref:System.IO.BinaryReader> class provides methods that simplify reading primitive data types from a stream. For example, you can use the <xref:System.IO.BinaryReader.ReadBoolean*> method to read the next byte as a Boolean value and advance the current position in the stream by one byte. The class includes read methods that support different data types.
 
  When you create a new instance of the <xref:System.IO.BinaryReader> class, you provide the stream to read from, and optionally specify the type of encoding and whether to leave the stream open after disposing the <xref:System.IO.BinaryReader> object. If you do not specify an encoding type, UTF-8 is used.
 
 > [!IMPORTANT]
->  This type implements the <xref:System.IDisposable> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <xref:System.IDisposable.Dispose%2A> method in a `try`/`catch` block. To dispose of it indirectly, use a language construct such as `using` (in C#) or `Using` (in Visual Basic). For more information, see the "Using an Object that Implements IDisposable" section in the <xref:System.IDisposable> interface topic.
+>  This type implements the <xref:System.IDisposable> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <xref:System.IDisposable.Dispose*> method in a `try`/`catch` block. To dispose of it indirectly, use a language construct such as `using` (in C#) or `Using` (in Visual Basic). For more information, see the "Using an Object that Implements IDisposable" section in the <xref:System.IDisposable> interface topic.
 
 
 
@@ -97,7 +104,7 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -157,6 +164,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
@@ -183,7 +192,7 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -233,6 +242,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="input" Type="System.IO.Stream" />
@@ -295,11 +306,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="input" Type="System.IO.Stream" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="encoding" Type="System.Text.Encoding" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="leaveOpen" Type="System.Boolean" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="input" Type="System.IO.Stream" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="input">The input stream.</param>
@@ -355,6 +368,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Stream</ReturnType>
@@ -377,10 +392,9 @@
 ## Examples
  The following code example shows how to read and write `Double` data to memory by using the `BinaryReader` and <xref:System.IO.BinaryWriter> classes on top of the <xref:System.IO.MemoryStream> class. `MemoryStream` only reads and writes `Byte` data.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CPP/rwdouble.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/BaseStream/rwdouble.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/BaseStream/rwdouble.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/VB/rwdouble.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/BaseStream/rwdouble.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -425,6 +439,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -436,9 +452,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This implementation of `Close` calls the <xref:System.IO.BinaryReader.Dispose%2A> method passing a `true` value.
+ This implementation of `Close` calls the <xref:System.IO.BinaryReader.Dispose*> method passing a `true` value.
 
- Flushing the stream will not flush its underlying encoder unless you explicitly call <xref:System.IO.Stream.Flush%2A> or `Close`. Setting <xref:System.IO.StreamWriter.AutoFlush%2A> to `true` means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.
+ Flushing the stream will not flush its underlying encoder unless you explicitly call <xref:System.IO.Stream.Flush*> or `Close`. Setting <xref:System.IO.StreamWriter.AutoFlush*> to `true` means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.
 
  ]]></format>
         </remarks>
@@ -498,6 +514,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -565,6 +583,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -580,7 +600,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method is called by `Dispose` and <xref:System.Object.Finalize%2A>. By default, this method specifies the `disposing` parameter as `true`. `Finalize` specifies the `disposing` parameter as `false`.
+ This method is called by `Dispose` and <xref:System.Object.Finalize*>. By default, this method specifies the `disposing` parameter as `true`. `Finalize` specifies the `disposing` parameter as `false`.
 
  When the `disposing` parameter is `true`, this method releases all resources held by any managed objects that this <xref:System.IO.BinaryReader> references. This method invokes the `Dispose` method of each referenced object.
 
@@ -636,6 +656,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -650,7 +672,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The internal buffer size is the larger value between 16 and the value returned by <xref:System.Text.Encoding.GetMaxByteCount%2A> for the specified encoding.
+ The internal buffer size is the larger value between 16 and the value returned by <xref:System.Text.Encoding.GetMaxByteCount*> for the specified encoding.
 
  For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/common-i-o-tasks).
 
@@ -703,6 +725,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -715,7 +739,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If surrogate characters can be expected in the stream use the <xref:System.IO.BinaryReader.ReadChars%2A> method, then set the stream back to the original position.
+ If surrogate characters can be expected in the stream use the <xref:System.IO.BinaryReader.ReadChars*> method, then set the stream back to the original position.
 
  For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/common-i-o-tasks).
 
@@ -778,6 +802,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -799,10 +825,9 @@
 ## Examples
  The following example shows how to read and write data using memory as a backing store. This example displays a list of invalid file path characters to the console. Although the code tries to display a list of all invalid file path characters, not all of the characters are within the displayable set of characters. Because the list of invalid characters can vary based on the system, output for this code may also vary.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar2/CPP/rwreadchar.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Read/rwreadchar.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Read/rwreadchar.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar2/VB/rwreadchar.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Read/rwreadchar.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -844,12 +869,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8-pp;netframework-4.8.1-pp" />
+        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8-pp;netframework-4.8.1-pp;net-10.0;netframework-4.6.2-pp;net-11.0" />
       </Parameters>
       <Docs>
         <param name="buffer">A region of memory. When this method returns, the contents of this region are replaced by the bytes read from the current source.</param>
@@ -890,12 +917,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="buffer" Type="System.Span&lt;System.Char&gt;" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8-pp;netframework-4.8.1-pp" />
+        <Parameter Name="buffer" Type="System.Span&lt;System.Char&gt;" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8-pp;netframework-4.8.1-pp;net-10.0;netframework-4.6.2-pp;net-11.0" />
       </Parameters>
       <Docs>
         <param name="buffer">A span of characters. When this method returns, the contents of this region are replaced by the characters read from the current source.</param>
@@ -945,6 +974,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -975,13 +1006,13 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Read/rwreadbytes.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Read/rwreadbytes.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes2/VB/rwreadbytes.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Read/rwreadbytes.vb" id="Snippet1":::
 
- This example reads the contents of a file and displays each byte's numeric value in 16-column format. The end of the file that is being read is detected when the <xref:System.IO.BinaryReader.Read%2A> method returns zero bytes.
+ This example reads the contents of a file and displays each byte's numeric value in 16-column format. The end of the file that is being read is detected when the <xref:System.IO.BinaryReader.Read*> method returns zero bytes.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source5.cs" id="Snippet6":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source5.fs" id="Snippet6":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source5.vb" id="Snippet6":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source5.vb" id="Snippet6":::
 
  ]]></format>
         </remarks>
@@ -1040,6 +1071,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2">
@@ -1074,10 +1107,9 @@
 ## Examples
  The following example shows how to read and write data using memory as a backing store. This example displays a list of invalid file path characters to the console. Although the code tries to display a list of all invalid file path characters, not all of the characters are within the displayable set of characters. Because the list of invalid characters can vary based on the system, output for this code may also vary.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/CPP/rwreadchars.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Read/rwreadchars.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Read/rwreadchars.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars2/VB/rwreadchars.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Read/rwreadchars.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1098,16 +1130,16 @@
       </Docs>
     </Member>
     <Member MemberName="Read7BitEncodedInt">
-      <MemberSignature Language="C#" Value="protected internal int Read7BitEncodedInt ();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance int32 Read7BitEncodedInt() cil managed" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected internal int Read7BitEncodedInt ();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance int32 Read7BitEncodedInt() cil managed" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.Read7BitEncodedInt" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read7BitEncodedInt () As Integer" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read7BitEncodedInt () As Integer" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="F#" Value="member this.Read7BitEncodedInt : unit -&gt; int" Usage="binaryReader.Read7BitEncodedInt " />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; int Read7BitEncodedInt();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-      <MemberSignature Language="C#" Value="public int Read7BitEncodedInt ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Read7BitEncodedInt() cil managed" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-      <MemberSignature Language="VB.NET" Value="Public Function Read7BitEncodedInt () As Integer" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; int Read7BitEncodedInt();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; int Read7BitEncodedInt();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public int Read7BitEncodedInt ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Read7BitEncodedInt() cil managed" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Function Read7BitEncodedInt () As Integer" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int Read7BitEncodedInt();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="C#" Value="protected int Read7BitEncodedInt ();" FrameworkAlternate="netframework-1.1" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 Read7BitEncodedInt() cil managed" FrameworkAlternate="netframework-1.1" />
       <MemberSignature Language="VB.NET" Value="Protected Function Read7BitEncodedInt () As Integer" FrameworkAlternate="netframework-1.1" />
@@ -1144,6 +1176,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1158,7 +1192,7 @@
 ## Remarks
  <xref:System.IO.BinaryReader> does not restore the file position after an unsuccessful read.
 
- If the integer will fit in seven bits, the integer takes only one byte of space. The integer is expected to have been written through <xref:System.IO.BinaryWriter.Write7BitEncodedInt%2A?displayProperty=nameWithType>.
+ If the integer will fit in seven bits, the integer takes only one byte of space. The integer is expected to have been written through <xref:System.IO.BinaryWriter.Write7BitEncodedInt*?displayProperty=nameWithType>.
 
  For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/common-i-o-tasks).
 
@@ -1188,6 +1222,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO</AssemblyName>
@@ -1250,6 +1286,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
@@ -1280,7 +1318,7 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1331,6 +1369,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -1347,11 +1387,11 @@
 
  Because of data formatting conflicts, using this method with the following encodings is not recommended:
 
--   UTF-7
+- UTF-7
 
--   ISO-2022-JP
+- ISO-2022-JP
 
--   ISCII
+- ISCII
 
  For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/common-i-o-tasks).
 
@@ -1360,10 +1400,9 @@
 ## Examples
  The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/CPP/rwbyte.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/ReadByte/rwbyte.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/ReadByte/rwbyte.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWByte/VB/rwbyte.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/ReadByte/rwbyte.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1414,6 +1453,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1444,16 +1485,15 @@
 ## Examples
  The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/CPP/rwbytes.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/ReadBytes/rwbytes.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/ReadBytes/rwbytes.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWBytes1/VB/rwbytes.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/ReadBytes/rwbytes.vb" id="Snippet1":::
 
- This example reads the contents of a file and displays it to the console as dump text. The end of the file that is being read is detected when the length of the <xref:System.Byte> array returned from <xref:System.IO.BinaryReader.ReadBytes%2A> is zero.
+ This example reads the contents of a file and displays it to the console as dump text. The end of the file that is being read is detected when the length of the <xref:System.Byte> array returned from <xref:System.IO.BinaryReader.ReadBytes*> is zero.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source5.cs" id="Snippet6":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source5.fs" id="Snippet6":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source5.vb" id="Snippet6":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source5.vb" id="Snippet6":::
 
  ]]></format>
         </remarks>
@@ -1506,6 +1546,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Char</ReturnType>
@@ -1518,15 +1560,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.IO.BinaryReader.ReadChar%2A> method attempts to read a surrogate character in the stream an exception will be raised and the position in the stream will advance. The position is restored to the original location before <xref:System.IO.BinaryReader.ReadChar%2A> was called if the stream is seekable; however, if the stream is unseekable, the position will not be corrected. If surrogate characters can be expected in the stream, use the <xref:System.IO.BinaryReader.ReadChars%2A> method instead.
+ If the <xref:System.IO.BinaryReader.ReadChar*> method attempts to read a surrogate character in the stream an exception will be raised and the position in the stream will advance. The position is restored to the original location before <xref:System.IO.BinaryReader.ReadChar*> was called if the stream is seekable; however, if the stream is unseekable, the position will not be corrected. If surrogate characters can be expected in the stream, use the <xref:System.IO.BinaryReader.ReadChars*> method instead.
 
  Because of data formatting conflicts, using this method with the following encodings is not recommended:
 
--   UTF-7
+- UTF-7
 
--   ISO-2022-JP
+- ISO-2022-JP
 
--   ISCII
+- ISCII
 
  For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/common-i-o-tasks).
 
@@ -1535,10 +1577,9 @@
 ## Examples
  The following code example shows how to read and write data using memory as a backing store.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/CPP/rwchar.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/ReadChar/rwchar.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/ReadChar/rwchar.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChar1/VB/rwchar.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/ReadChar/rwchar.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1591,6 +1632,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2">
@@ -1614,17 +1657,16 @@
 ## Remarks
  <xref:System.IO.BinaryReader> does not restore the file position after an unsuccessful read operation.
 
- When reading from network streams, in some rare cases, the <xref:System.IO.BinaryReader.ReadChars%2A> method might read an extra character from the stream if the <xref:System.IO.BinaryReader> was constructed with Unicode encoding. If this occurs, you can use the <xref:System.IO.BinaryReader.ReadBytes%2A> method to read a fixed-length byte array, and then pass that array to the <xref:System.IO.BinaryReader.ReadChars%2A> method.
+ When reading from network streams, in some rare cases, the <xref:System.IO.BinaryReader.ReadChars*> method might read an extra character from the stream if the <xref:System.IO.BinaryReader> was constructed with Unicode encoding. If this occurs, you can use the <xref:System.IO.BinaryReader.ReadBytes*> method to read a fixed-length byte array, and then pass that array to the <xref:System.IO.BinaryReader.ReadChars*> method.
 
 
 
 ## Examples
  The following code example shows how to read and write data using memory as a backing store.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/CPP/rwchars.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/ReadChars/rwchars.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/ReadChars/rwchars.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWChars1/VB/rwchars.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/ReadChars/rwchars.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1678,6 +1720,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Decimal</ReturnType>
@@ -1743,6 +1787,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2">
@@ -1772,10 +1818,9 @@
 ## Examples
  The following code example shows how to read and write `Double` data to memory by using the `BinaryReader` and <xref:System.IO.BinaryWriter> classes on top of the <xref:System.IO.MemoryStream> class. `MemoryStream` only reads and writes `Byte` data.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/CPP/rwdouble.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/BaseStream/rwdouble.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/BaseStream/rwdouble.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter.RWDouble/VB/rwdouble.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/BaseStream/rwdouble.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1785,6 +1830,46 @@
         <related type="Article" href="/dotnet/standard/io/">File and Stream I/O</related>
         <related type="Article" href="/dotnet/standard/io/how-to-read-text-from-a-file">How to: Read Text from a File</related>
         <related type="Article" href="/dotnet/standard/io/how-to-write-text-to-a-file">How to: Write Text to a File</related>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadExactly">
+      <MemberSignature Language="C#" Value="public virtual void ReadExactly (Span&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadExactly(valuetype System.Span`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.BinaryReader.ReadExactly(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ReadExactly (buffer As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member ReadExactly : Span&lt;byte&gt; -&gt; unit&#xA;override this.ReadExactly : Span&lt;byte&gt; -&gt; unit" Usage="binaryReader.ReadExactly buffer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ReadExactly(Span&lt;System::Byte&gt; buffer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A region of memory. When this method returns, the contents of this region are replaced by the bytes read from the current stream.</param>
+        <summary>Reads bytes from the current stream and advances the position within the stream until the <paramref name="buffer" /> is filled.</summary>
+        <remarks>When <paramref name="buffer" /> is empty, this read operation will be completed without waiting for available data in the stream.</remarks>
+        <exception cref="T:System.ObjectDisposedException">The stream is closed.</exception>
+        <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        <exception cref="T:System.IO.EndOfStreamException">The end of the stream is reached before filling the <paramref name="buffer" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="ReadHalf">
@@ -1801,6 +1886,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO</AssemblyName>
@@ -1880,6 +1967,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
@@ -1953,6 +2042,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1978,7 +2069,7 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2029,6 +2120,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -2096,6 +2189,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2171,6 +2266,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.0;netstandard-1.1;netstandard-1.2">
@@ -2202,7 +2299,7 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2253,6 +2350,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2282,7 +2381,7 @@
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/BinaryReader/Overview/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/BinaryReader/Overview/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/BinaryReader/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2333,6 +2432,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2406,6 +2507,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2479,6 +2582,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2551,7 +2656,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
-Calling <xref:System.IO.BinaryReader.Dispose%2A> allows the resources used by the <xref:System.IO.BinaryReader> to be reallocated for other purposes. For more information about <xref:System.IO.BinaryReader.Dispose%2A>, see [Cleaning Up Unmanaged Resources](/dotnet/standard/garbage-collection/unmanaged).
+Calling <xref:System.IO.BinaryReader.Dispose*> allows the resources used by the <xref:System.IO.BinaryReader> to be reallocated for other purposes. For more information about <xref:System.IO.BinaryReader.Dispose*>, see [Cleaning Up Unmanaged Resources](/dotnet/standard/garbage-collection/unmanaged).
 
 ]]></format>
         </remarks>

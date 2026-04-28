@@ -26,8 +26,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.HttpListener" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.HttpListener" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.HttpListener" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.HttpListener" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.HttpListener" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -39,7 +43,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -50,11 +54,11 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When a client makes a request to a Uniform Resource Identifier (URI) handled by an <xref:System.Net.HttpListener> object, the <xref:System.Net.HttpListener> provides a <xref:System.Net.HttpListenerContext> object that contains information about the sender, the request, and the response that is sent to the client. The <xref:System.Net.HttpListenerContext.Request%2A?displayProperty=nameWithType> property returns the <xref:System.Net.HttpListenerRequest> object that describes the request.
+ When a client makes a request to a Uniform Resource Identifier (URI) handled by an <xref:System.Net.HttpListener> object, the <xref:System.Net.HttpListener> provides a <xref:System.Net.HttpListenerContext> object that contains information about the sender, the request, and the response that is sent to the client. The <xref:System.Net.HttpListenerContext.Request?displayProperty=nameWithType> property returns the <xref:System.Net.HttpListenerRequest> object that describes the request.
 
- The <xref:System.Net.HttpListenerRequest> object contains information about the request, such as the request <xref:System.Net.HttpListenerRequest.HttpMethod%2A> string, <xref:System.Net.HttpListenerRequest.UserAgent%2A> string, and request body data (see the <xref:System.Net.HttpListenerRequest.InputStream%2A> property).
+ The <xref:System.Net.HttpListenerRequest> object contains information about the request, such as the request <xref:System.Net.HttpListenerRequest.HttpMethod*> string, <xref:System.Net.HttpListenerRequest.UserAgent*> string, and request body data (see the <xref:System.Net.HttpListenerRequest.InputStream> property).
 
- To reply to the request, you must get the associated response using the <xref:System.Net.HttpListenerContext.Response%2A> property.
+ To reply to the request, you must get the associated response using the <xref:System.Net.HttpListenerContext.Response> property.
 
 
 
@@ -62,7 +66,7 @@
  The following code example demonstrates how to receive and respond to a <xref:System.Net.HttpListenerRequest>.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet2":::
 
  ]]></format>
     </remarks>
@@ -72,7 +76,7 @@
   </Docs>
   <Members>
     <Member MemberName="AcceptTypes">
-      <MemberSignature Language="C#" Value="public string[]? AcceptTypes { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string[]? AcceptTypes { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] AcceptTypes" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.AcceptTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AcceptTypes As String()" />
@@ -101,9 +105,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -128,7 +134,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -138,7 +144,7 @@
       </Docs>
     </Member>
     <Member MemberName="BeginGetClientCertificate">
-      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetClientCertificate (AsyncCallback? requestCallback, object? state);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetClientCertificate (AsyncCallback? requestCallback, object? state);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetClientCertificate(class System.AsyncCallback requestCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.BeginGetClientCertificate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginGetClientCertificate (requestCallback As AsyncCallback, state As Object) As IAsyncResult" />
@@ -167,9 +173,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IAsyncResult</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="requestCallback" Type="System.AsyncCallback" />
@@ -212,6 +226,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -231,7 +247,7 @@
  The following code example checks this property to determine whether the request includes a valid client certificate.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/AuthenticationSchemes/Overview/sample.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/AuthenticationSchemes/Overview/sample.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -274,6 +290,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Text.Encoding</ReturnType>
@@ -285,15 +303,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An <xref:System.Text.Encoding> object can be used to convert byte sequences into character sets (code pages) and characters into byte sequences. This property uses the charset value from the `Content-Type` header to determine the encoding. If that information is not available, this property returns <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>.
+ An <xref:System.Text.Encoding> object can be used to convert byte sequences into character sets (code pages) and characters into byte sequences. This property uses the charset value from the `Content-Type` header to determine the encoding. If that information is not available, this property returns <xref:System.Text.Encoding.Default*?displayProperty=nameWithType>.
 
 
 
 ## Examples
- The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.ContentEncoding%2A> property.
+ The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.ContentEncoding> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet16":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet16":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet16":::
 
  ]]></format>
         </remarks>
@@ -331,6 +349,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -349,10 +369,10 @@
 
 
 ## Examples
- The following code example uses the <xref:System.Net.HttpListenerRequest.ContentLength64%2A> property while processing body data.
+ The following code example uses the <xref:System.Net.HttpListenerRequest.ContentLength64> property while processing body data.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet16":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet16":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet16":::
 
  ]]></format>
         </remarks>
@@ -362,7 +382,7 @@
       </Docs>
     </Member>
     <Member MemberName="ContentType">
-      <MemberSignature Language="C#" Value="public string? ContentType { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string? ContentType { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ContentType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentType As String" />
@@ -391,9 +411,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -416,7 +438,7 @@
 
  For a complete list of request headers, see the <xref:System.Net.HttpRequestHeader> enumeration and RFC 2616, available at [https://www.rfc-editor.org](https://www.rfc-editor.org/).
 
- The <xref:System.Net.HttpListenerRequest.ContentType%2A> is null when there is no `Content-Type` header in the request.
+ The <xref:System.Net.HttpListenerRequest.ContentType*> is null when there is no `Content-Type` header in the request.
 
 
 
@@ -424,7 +446,7 @@
  The following code example demonstrates how to use this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet16":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet16":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet16":::
 
  ]]></format>
         </remarks>
@@ -462,6 +484,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.CookieCollection</ReturnType>
@@ -481,7 +505,7 @@
  The following code example displays the values of cookies sent with the request.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet18":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet18":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet18":::
 
  ]]></format>
         </remarks>
@@ -491,7 +515,7 @@
       </Docs>
     </Member>
     <Member MemberName="EndGetClientCertificate">
-      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2? EndGetClientCertificate (IAsyncResult asyncResult);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2? EndGetClientCertificate (IAsyncResult asyncResult);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.X509Certificates.X509Certificate2 EndGetClientCertificate(class System.IAsyncResult asyncResult) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.EndGetClientCertificate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndGetClientCertificate (asyncResult As IAsyncResult) As X509Certificate2" />
@@ -520,9 +544,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="asyncResult" Type="System.IAsyncResult" />
@@ -540,7 +572,7 @@
       </Docs>
     </Member>
     <Member MemberName="GetClientCertificate">
-      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2? GetClientCertificate ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2? GetClientCertificate ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.X509Certificates.X509Certificate2 GetClientCertificate() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.GetClientCertificate" />
       <MemberSignature Language="VB.NET" Value="Public Function GetClientCertificate () As X509Certificate2" />
@@ -569,6 +601,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
@@ -590,7 +624,7 @@
       </Docs>
     </Member>
     <Member MemberName="GetClientCertificateAsync">
-      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2?&gt; GetClientCertificateAsync ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2?&gt; GetClientCertificateAsync ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Security.Cryptography.X509Certificates.X509Certificate2&gt; GetClientCertificateAsync() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerRequest.GetClientCertificateAsync" />
       <MemberSignature Language="VB.NET" Value="Public Function GetClientCertificateAsync () As Task(Of X509Certificate2)" />
@@ -618,9 +652,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Security.Cryptography.X509Certificates.X509Certificate2&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters />
       <Docs>
@@ -630,7 +672,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This operation will not block. The returned <xref:System.Threading.Tasks.Task%601> object will complete when the certificate has been retrieved.
+ This operation will not block. The returned <xref:System.Threading.Tasks.Task`1> object will complete when the certificate has been retrieved.
 
  If a call to this method to retrieve the client's X.509 v.3 certificate is in progress, then another call to this method cannot be made.
 
@@ -670,6 +712,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -690,7 +734,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet16":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet16":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet16":::
 
  ]]></format>
         </remarks>
@@ -728,6 +772,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
@@ -749,7 +795,7 @@
  The following code example displays all the information in a given <xref:System.Net.WebHeaderCollection> object.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet21":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet21":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet21":::
 
  ]]></format>
         </remarks>
@@ -787,6 +833,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -806,7 +854,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -844,6 +892,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Stream</ReturnType>
@@ -858,7 +908,7 @@
  If the client transmits data (for example, using the HTTP `POST` method), the stream returned by this method contains that data.
 
 > [!NOTE]
->  Closing the request does not close the stream returned by this property. When you no longer need the stream, you should close it by calling the <xref:System.IO.Stream.Close%2A> method.
+> Closing the request does not close the stream returned by this property. When you no longer need the stream, you should close it by calling the <xref:System.IO.Stream.Close*> method.
 
 
 
@@ -866,7 +916,7 @@
  The following code example demonstrates using this property to read the data sent with a request.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet16":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet16":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet16":::
 
  ]]></format>
         </remarks>
@@ -907,6 +957,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -919,17 +971,17 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Your application requests client authentication using the <xref:System.Net.HttpListener.AuthenticationSchemes%2A> or <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> property.
+ Your application requests client authentication using the <xref:System.Net.HttpListener.AuthenticationSchemes*> or <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate> property.
 
  Your application does not receive an <xref:System.Net.HttpListenerContext> for requests from clients that are not successfully authenticated.
 
 
 
 ## Examples
- The following code example displays the value of the <xref:System.Net.HttpListenerRequest.IsAuthenticated%2A> property.
+ The following code example displays the value of the <xref:System.Net.HttpListenerRequest.IsAuthenticated> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -967,6 +1019,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="net-5.0">
@@ -990,10 +1044,10 @@
 
 
 ## Examples
- The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.IsLocal%2A> property.
+ The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.IsLocal> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -1031,6 +1085,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1048,10 +1104,10 @@
 
 
 ## Examples
- The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.IsSecureConnection%2A> property.
+ The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.IsSecureConnection> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -1088,6 +1144,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1129,6 +1187,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1149,7 +1209,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -1187,6 +1247,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="net-5.0">
@@ -1212,7 +1274,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -1250,6 +1312,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1275,7 +1339,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -1313,6 +1377,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
@@ -1324,16 +1390,16 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- In a URL, the query information is separated from the path information by a question mark (?). Name/value pairs are separated by an equals sign (=). To access the query data as a single string, get the <xref:System.Uri.Query%2A> property value from the <xref:System.Uri> object returned by <xref:System.Net.HttpListenerRequest.Url%2A>.
+ In a URL, the query information is separated from the path information by a question mark (?). Name/value pairs are separated by an equals sign (=). To access the query data as a single string, get the <xref:System.Uri.Query> property value from the <xref:System.Uri> object returned by <xref:System.Net.HttpListenerRequest.Url*>.
 
 > [!NOTE]
 > Queries without an equals sign (for example, `http://www.contoso.com/query.htm?Name`) are added to the `null` key in the <xref:System.Collections.Specialized.NameValueCollection>.
 
 ## Examples
- The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.QueryString%2A> property.
+ The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.QueryString> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -1343,7 +1409,7 @@
       </Docs>
     </Member>
     <Member MemberName="RawUrl">
-      <MemberSignature Language="C#" Value="public string? RawUrl { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string? RawUrl { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string RawUrl" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.RawUrl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RawUrl As String" />
@@ -1372,9 +1438,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1395,15 +1463,15 @@
 ## Remarks
  The raw URL is defined as the part of the URL following the domain information. In the URL string `http://www.contoso.com/articles/recent.aspx`, the raw URL is `/articles/recent.aspx`. The raw URL includes the query string, if present.
 
- To obtain the host and port information, use the <xref:System.Net.HttpListenerRequest.RemoteEndPoint%2A> property.
+ To obtain the host and port information, use the <xref:System.Net.HttpListenerRequest.RemoteEndPoint> property.
 
 
 
 ## Examples
- The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.RawUrl%2A> property.
+ The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.RawUrl> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet11":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet11":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet11":::
 
  ]]></format>
         </remarks>
@@ -1441,6 +1509,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="net-5.0">
@@ -1461,7 +1531,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet17":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet17":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet17":::
 
  ]]></format>
         </remarks>
@@ -1499,6 +1569,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
@@ -1510,7 +1582,7 @@
       </Docs>
     </Member>
     <Member MemberName="ServiceName">
-      <MemberSignature Language="C#" Value="public string? ServiceName { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string? ServiceName { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string ServiceName" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.ServiceName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServiceName As String" />
@@ -1539,9 +1611,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1560,7 +1634,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An application could use the <xref:System.Net.HttpListenerRequest.ServiceName%2A> property to perform custom Service Provide Name (SPN) validation.
+ An application could use the <xref:System.Net.HttpListenerRequest.ServiceName> property to perform custom Service Provide Name (SPN) validation.
 
  ]]></format>
         </remarks>
@@ -1603,6 +1677,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.TransportContext</ReturnType>
@@ -1614,11 +1690,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.TransportContext> property can be used to retrieve the channel binding token (CBT) for an <xref:System.Net.HttpListenerRequest> which was sent using HTTPS.
+ The <xref:System.Net.TransportContext> property can be used to retrieve the channel binding token (CBT) for an <xref:System.Net.HttpListenerRequest> that was sent using HTTPS.
 
- An application could use the <xref:System.Net.TransportContext> property to perform custom authentication using calls to the native Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) function.
+ An application could use the <xref:System.Net.TransportContext> property to perform custom authentication using calls to the native Win32 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) function.
 
- If an application attempts to retrieve the channel binding token (CBT) from this <xref:System.Net.HttpListenerRequest.TransportContext%2A> property using the <xref:System.Net.TransportContext.GetChannelBinding%2A> method and the <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind> is not <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, then the <xref:System.Net.HttpListenerRequest> will throw <xref:System.NotSupportedException>. The <xref:System.Net.HttpListenerRequest> overrides the <xref:System.Net.TransportContext.GetChannelBinding%2A> method with an internal implementation.
+ If an application attempts to retrieve the channel binding token (CBT) from this <xref:System.Net.HttpListenerRequest.TransportContext> property using the <xref:System.Net.TransportContext.GetChannelBinding*> method and the <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind> is not <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, then the <xref:System.Net.HttpListenerRequest> will throw <xref:System.NotSupportedException>. The <xref:System.Net.HttpListenerRequest> overrides the <xref:System.Net.TransportContext.GetChannelBinding*> method with an internal implementation.
 
  ]]></format>
         </remarks>
@@ -1633,7 +1709,7 @@
       </Docs>
     </Member>
     <Member MemberName="Url">
-      <MemberSignature Language="C#" Value="public Uri? Url { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public Uri? Url { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.Url" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Url As Uri" />
@@ -1662,9 +1738,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1683,19 +1761,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.HttpListenerRequest.Url%2A> property allows you to obtain all the information available from a <xref:System.Uri> object. If you need to know only the raw text of the URI request, consider using the <xref:System.Net.HttpListenerRequest.RawUrl%2A> property instead.
+ The <xref:System.Net.HttpListenerRequest.Url> property allows you to obtain all the information available from a <xref:System.Uri> object. If you need to know only the raw text of the URI request, consider using the <xref:System.Net.HttpListenerRequest.RawUrl> property instead.
 
- The <xref:System.Net.HttpListenerRequest.Url%2A> property is null if the <xref:System.Uri> from the client could not be parsed.
+ The <xref:System.Net.HttpListenerRequest.Url> property is null if the <xref:System.Uri> from the client could not be parsed.
 
- The <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> property indicates if <xref:System.Net.HttpListener> uses the raw unescaped URI instead of the converted URI where any percent-encoded values are converted and other normalization steps are taken.
+ The <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl> property indicates if <xref:System.Net.HttpListener> uses the raw unescaped URI instead of the converted URI where any percent-encoded values are converted and other normalization steps are taken.
 
- When a <xref:System.Net.HttpListener> instance receives a request through the `http.sys` service, it creates an instance of the URI string provided by `http.sys`, and exposes it as the <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> property.
+ When a <xref:System.Net.HttpListener> instance receives a request through the `http.sys` service, it creates an instance of the URI string provided by `http.sys`, and exposes it as the <xref:System.Net.HttpListenerRequest.Url?displayProperty=nameWithType> property.
 
  The `http.sys` service exposes two request URI strings:
 
--   Raw URI
+- Raw URI
 
--   Converted URI
+- Converted URI
 
  The raw URI is the <xref:System.Uri?displayProperty=nameWithType> provided in the request line of a HTTP request:
 
@@ -1709,13 +1787,13 @@
 
  `http://www.contoso.com/path/`
 
- The `http.sys` service combines the <xref:System.Uri.Host%2A?displayProperty=nameWithType> property value and the string in the request line to create a converted URI. In addition, `http.sys` and the <xref:System.Uri?displayProperty=nameWithType> class also do the following:
+ The `http.sys` service combines the <xref:System.Uri.Host?displayProperty=nameWithType> property value and the string in the request line to create a converted URI. In addition, `http.sys` and the <xref:System.Uri?displayProperty=nameWithType> class also do the following:
 
--   Un-escapes all percent encoded values.
+- Un-escapes all percent encoded values.
 
--   Converts percent-encoded non-ASCII characters into a UTF-16 character representation. Note that UTF-8 and ANSI/DBCS characters are supported as well as Unicode characters (Unicode encoding using the %uXXXX format).
+- Converts percent-encoded non-ASCII characters into a UTF-16 character representation. Note that UTF-8 and ANSI/DBCS characters are supported as well as Unicode characters (Unicode encoding using the %uXXXX format).
 
--   Executes other normalization steps, like path compression.
+- Executes other normalization steps, like path compression.
 
  Since the request doesn't contain any information about the encoding used for percent-encoded values, it may not be possible to determine the correct encoding just by parsing the percent-encoded values.
 
@@ -1726,7 +1804,7 @@
 |EnableNonUTF8|1|If zero, `http.sys` accepts only UTF-8-encoded URLs.<br /><br /> If non-zero, `http.sys` also accepts ANSI-encoded or DBCS-encoded URLs in requests.|
 |FavorUTF8|1|If non-zero, `http.sys` always tries to decode a URL as UTF-8 first; if that conversion fails and EnableNonUTF8 is non-zero, Http.sys then tries to decode it as ANSI or DBCS.<br /><br /> If zero (and EnableNonUTF8 is non-zero), `http.sys` tries to decode it as ANSI or DBCS; if that is not successful, it tries a UTF-8 conversion.|
 
- When <xref:System.Net.HttpListener> receives a request, it uses the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.
+ When <xref:System.Net.HttpListener> receives a request, it uses the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url> property.
 
  There is a need for supporting characters besides characters and numbers in URIs. An example is the following URI, which is used to retrieve customer information for customer number "1/3812":
 
@@ -1746,15 +1824,15 @@
 
  This is not the intent of the sender of the request.
 
- If the <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> property is set to false, then when the <xref:System.Net.HttpListener> receives a request, it uses the raw URI instead of the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url%2A> property.
+ If the <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl> property is set to false, then when the <xref:System.Net.HttpListener> receives a request, it uses the raw URI instead of the converted URI from `http.sys` as input to the <xref:System.Net.HttpListenerRequest.Url> property.
 
 
 
 ## Examples
- The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.Url%2A> property.
+ The following code example demonstrates using the <xref:System.Net.HttpListenerRequest.Url> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -1767,7 +1845,7 @@
       </Docs>
     </Member>
     <Member MemberName="UrlReferrer">
-      <MemberSignature Language="C#" Value="public Uri? UrlReferrer { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public Uri? UrlReferrer { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UrlReferrer" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UrlReferrer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UrlReferrer As Uri" />
@@ -1796,9 +1874,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1815,11 +1895,11 @@
 ## Remarks
  If a client has followed a hyperlink to the requested URI, its request might contain a `Referrer` header that identifies the URI of the resource that contained the hyperlink.
 
- Clients can falsify or choose not to present a <xref:System.Net.HttpRequestHeader.Referer> header. Therefore, while the <xref:System.Net.HttpListenerRequest.UrlReferrer%2A> property can be useful for identifying basic trends in Web traffic; you should not use it as part of an authorization scheme to control access to data.
+ Clients can falsify or choose not to present a <xref:System.Net.HttpRequestHeader.Referer> header. Therefore, while the <xref:System.Net.HttpListenerRequest.UrlReferrer> property can be useful for identifying basic trends in Web traffic; you should not use it as part of an authorization scheme to control access to data.
 
  For a complete list of request headers, see the <xref:System.Net.HttpRequestHeader> enumeration.
 
- The <xref:System.Net.HttpListenerRequest.UrlReferrer%2A> is null when there is no `Referrer` header in the request or when the `Referrer` header is present in the request but does not parse to a valid <xref:System.Uri>.
+ The <xref:System.Net.HttpListenerRequest.UrlReferrer*> is null when there is no `Referrer` header in the request or when the `Referrer` header is present in the request but does not parse to a valid <xref:System.Uri>.
 
 
 
@@ -1827,7 +1907,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -1837,13 +1917,13 @@
       </Docs>
     </Member>
     <Member MemberName="UserAgent">
-      <MemberSignature Language="C#" Value="public string UserAgent { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public string? UserAgent { get; }" FrameworkAlternate="net-10.0;net-11.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UserAgent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAgent As String" />
       <MemberSignature Language="F#" Value="member this.UserAgent : string" Usage="System.Net.HttpListenerRequest.UserAgent" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAgent { System::String ^ get(); };" />
-      <MemberSignature Language="C#" Value="public string? UserAgent { get; }" FrameworkAlternate="net-9.0" />
+      <MemberSignature Language="C#" Value="public string UserAgent { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1866,9 +1946,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1891,7 +1973,7 @@
 
  For a complete list of request headers, see the <xref:System.Net.HttpRequestHeader> enumeration.
 
- The <xref:System.Net.HttpListenerRequest.UserAgent%2A> is null when there is no `User-Agent` header in the request.
+ The <xref:System.Net.HttpListenerRequest.UserAgent*> is null when there is no `User-Agent` header in the request.
 
 
 
@@ -1899,7 +1981,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -1937,6 +2019,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="net-5.0">
@@ -1954,7 +2038,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The information returned by this property is also available in the <xref:System.Net.HttpListenerRequest.LocalEndPoint%2A> property value.
+ The information returned by this property is also available in the <xref:System.Net.HttpListenerRequest.LocalEndPoint> property value.
 
 
 
@@ -1962,7 +2046,7 @@
  The following code example displays the value of this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -2000,6 +2084,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2029,7 +2115,7 @@
  The following code example demonstrates using this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -2039,7 +2125,7 @@
       </Docs>
     </Member>
     <Member MemberName="UserLanguages">
-      <MemberSignature Language="C#" Value="public string[]? UserLanguages { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string[]? UserLanguages { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string[] UserLanguages" />
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerRequest.UserLanguages" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserLanguages As String()" />
@@ -2068,9 +2154,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -2095,7 +2183,7 @@
  The following code example displays the languages from the request's `Accept-Language` header.
 
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpListener/Overview/test.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/Net_Listener_Basic/VB/test.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpListener/Overview/test.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>

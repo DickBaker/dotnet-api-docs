@@ -32,8 +32,14 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Security.Cryptography.Algorithms" FromVersion="10.0.0.0" To="System.Security.Cryptography" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Security.Cryptography.Algorithms" FromVersion="11.0.0.0" To="System.Security.Cryptography" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography.Algorithms" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography.Algorithms" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -48,13 +54,13 @@
   </Base>
   <Interfaces />
   <Attributes>
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
     <Attribute FrameworkAlternate="net-5.0;net-6.0">
       <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
     <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(true)]</AttributeName>
@@ -64,20 +70,20 @@
   <Docs>
     <summary>Computes a Hash-based Message Authentication Code (HMAC) by using the <see cref="T:System.Security.Cryptography.MD5" /> hash function.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Security.Cryptography.HMACMD5> is a type of keyed hash algorithm that is constructed from the Message Digest Algorithm 5 (MD5) hash function and used as a Hash-based Message Authentication Code (HMAC). The HMAC process mixes a secret key with the message data, hashes the result with the hash function, mixes that hash value with the secret key again, and then applies the hash function a second time. The output hash is 128 bits in length.  
-  
- An HMAC can be used to determine whether a message sent over an insecure channel has been tampered with, provided that the sender and receiver share a secret key. The sender computes the hash value for the original data and sends both the original data and hash value as a single message. The receiver recalculates the hash value on the received message and checks that the computed HMAC matches the transmitted HMAC.  
-  
- Any change to the data or the hash value results in a mismatch, because knowledge of the secret key is required to change the message and reproduce the correct hash value. Therefore, if the original and computed hash values match, the message is authenticated.  
-  
- MD5 is a cryptographic hash algorithm developed at RSA Laboratories. <xref:System.Security.Cryptography.HMACMD5> accepts keys of any size, and produces a hash sequence that is 128 bits in length.  
-  
- Due to collision problems with MD5, Microsoft recommends SHA256.  
-  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Security.Cryptography.HMACMD5> is a type of keyed hash algorithm that is constructed from the Message Digest Algorithm 5 (MD5) hash function and used as a Hash-based Message Authentication Code (HMAC). The HMAC process mixes a secret key with the message data, hashes the result with the hash function, mixes that hash value with the secret key again, and then applies the hash function a second time. The output hash is 128 bits in length.
+
+ An HMAC can be used to determine whether a message sent over an insecure channel has been tampered with, provided that the sender and receiver share a secret key. The sender computes the hash value for the original data and sends both the original data and hash value as a single message. The receiver recalculates the hash value on the received message and checks that the computed HMAC matches the transmitted HMAC.
+
+ Any change to the data or the hash value results in a mismatch, because knowledge of the secret key is required to change the message and reproduce the correct hash value. Therefore, if the original and computed hash values match, the message is authenticated.
+
+ MD5 is a cryptographic hash algorithm developed at RSA Laboratories. <xref:System.Security.Cryptography.HMACMD5> accepts keys of any size, and produces a hash sequence that is 128 bits in length.
+
+ Due to collision problems with MD5, Microsoft recommends SHA-256.
+
+
  ]]></format>
     </remarks>
     <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
@@ -129,9 +135,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -140,15 +148,15 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HMACMD5" /> class by using a randomly generated key.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Security.Cryptography.HMACMD5> is a type of keyed hash algorithm that is constructed from the MD5 hash function and used as a Hash-based Message Authentication Code (HMAC). The HMAC process mixes a secret key with the message data, hashes the result with the hash function, mixes that hash value with the secret key again, and then applies the hash function a second time. The output hash is 128 bits in length.  
-  
- This constructor uses a 64-byte, randomly generated key. 
+          <format type="text/markdown"><![CDATA[
 
- Due to collision problems with MD5, Microsoft recommends SHA256. 
-  
+## Remarks
+ <xref:System.Security.Cryptography.HMACMD5> is a type of keyed hash algorithm that is constructed from the MD5 hash function and used as a Hash-based Message Authentication Code (HMAC). The HMAC process mixes a secret key with the message data, hashes the result with the hash function, mixes that hash value with the secret key again, and then applies the hash function a second time. The output hash is 128 bits in length.
+
+ This constructor uses a 64-byte, randomly generated key.
+
+ Due to collision problems with MD5, Microsoft recommends SHA-256.
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
@@ -189,9 +197,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -203,18 +213,18 @@
         <param name="key">The secret key for HMAC computation. The key can be any length, but if it is more than 64 bytes long it will be hashed (using MD5) to derive a 16-byte key. Therefore, the recommended size of the secret key is 64 bytes.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.HMACMD5" /> class by using the specified key.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Security.Cryptography.HMACMD5> is a type of keyed hash algorithm that is constructed from the MD5 hash function and used as a Hash-based Message Authentication Code (HMAC). The HMAC process mixes a secret key with the message data, hashes the result with the hash function, mixes that hash value with the secret key again, and then applies the hash function a second time. The output hash is 128 bits in length.  
-  
- This constructor uses a key you provide to create the <xref:System.Security.Cryptography.HMACMD5> object.  
-  
- Due to collision problems with MD5, Microsoft recommends SHA256.  
-  
-## Examples  
- For an example of how to use this constructor, see the <xref:System.Security.Cryptography.HMACMD5> class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Security.Cryptography.HMACMD5> is a type of keyed hash algorithm that is constructed from the MD5 hash function and used as a Hash-based Message Authentication Code (HMAC). The HMAC process mixes a secret key with the message data, hashes the result with the hash function, mixes that hash value with the secret key again, and then applies the hash function a second time. The output hash is 128 bits in length.
+
+ This constructor uses a key you provide to create the <xref:System.Security.Cryptography.HMACMD5> object.
+
+ Due to collision problems with MD5, Microsoft recommends SHA-256.
+
+## Examples
+ For an example of how to use this constructor, see the <xref:System.Security.Cryptography.HMACMD5> class.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="key" /> parameter is <see langword="null" />.</exception>
@@ -249,12 +259,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="disposing">
@@ -287,12 +299,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="source">The input to compute the HMAC for.</param>
@@ -328,14 +342,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="rgb" Type="System.Byte[]" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
-        <Parameter Name="ib" Type="System.Int32" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
-        <Parameter Name="cb" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
+        <Parameter Name="rgb" Type="System.Byte[]" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
+        <Parameter Name="ib" Type="System.Int32" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
+        <Parameter Name="cb" Type="System.Int32" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="rgb">The input to compute the HMAC for.</param>
@@ -358,19 +374,18 @@
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>netstandard</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -379,8 +394,8 @@
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.Byte[]" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Byte[]" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -405,18 +420,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -425,8 +439,8 @@
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -453,18 +467,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -473,15 +486,15 @@
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -508,29 +521,34 @@
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>netstandard</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -553,18 +571,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -573,16 +590,16 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -615,19 +632,18 @@
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>netstandard</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -636,9 +652,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -662,29 +678,34 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Byte[]&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -713,36 +734,41 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Byte[]&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="key" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -771,18 +797,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -791,17 +816,17 @@
         <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="key" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="destination" Type="System.Memory&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Memory&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -855,6 +880,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -911,15 +938,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -943,15 +969,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -990,6 +1015,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1028,6 +1055,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -1051,19 +1080,18 @@
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
-        <AssemblyName>mscorlib</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>netstandard</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
         </Attribute>
@@ -1072,10 +1100,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="3" FrameworkAlternate="net-6.0;net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="key">The HMAC key.</param>
@@ -1112,20 +1140,290 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1" />
-        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1" />
+        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="destination">The buffer to receive the HMAC value.</param>
-        <param name="bytesWritten">When this method returns, the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
+        <param name="bytesWritten">When this method returns, contains the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
         <summary>Attempts to finalize the HMAC computation after the last data is processed by the HMAC algorithm.</summary>
         <returns>
           <see langword="true" /> if <paramref name="destination" /> is long enough to receive the HMAC value; otherwise, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public static bool Verify (byte[] key, byte[] source, byte[] hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Verify(unsigned int8[] key, unsigned int8[] source, unsigned int8[] hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACMD5.Verify(System.Byte[],System.Byte[],System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Verify (key As Byte(), source As Byte(), hash As Byte()) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Verify : byte[] * byte[] * byte[] -&gt; bool" Usage="System.Security.Cryptography.HMACMD5.Verify (key, source, hash)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Verify(cli::array &lt;System::Byte&gt; ^ key, cli::array &lt;System::Byte&gt; ^ source, cli::array &lt;System::Byte&gt; ^ hash);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-11.0" />
+        <Parameter Name="source" Type="System.Byte[]" Index="1" FrameworkAlternate="net-11.0" />
+        <Parameter Name="hash" Type="System.Byte[]" Index="2" FrameworkAlternate="net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="source">To be added.</param>
+        <param name="hash">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public static bool Verify (byte[] key, System.IO.Stream source, byte[] hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Verify(unsigned int8[] key, class System.IO.Stream source, unsigned int8[] hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACMD5.Verify(System.Byte[],System.IO.Stream,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Verify (key As Byte(), source As Stream, hash As Byte()) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Verify : byte[] * System.IO.Stream * byte[] -&gt; bool" Usage="System.Security.Cryptography.HMACMD5.Verify (key, source, hash)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Verify(cli::array &lt;System::Byte&gt; ^ key, System::IO::Stream ^ source, cli::array &lt;System::Byte&gt; ^ hash);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-11.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-11.0" />
+        <Parameter Name="hash" Type="System.Byte[]" Index="2" FrameworkAlternate="net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="source">To be added.</param>
+        <param name="hash">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public static bool Verify (ReadOnlySpan&lt;byte&gt; key, System.IO.Stream source, ReadOnlySpan&lt;byte&gt; hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Verify(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; key, class System.IO.Stream source, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACMD5.Verify(System.ReadOnlySpan{System.Byte},System.IO.Stream,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Verify (key As ReadOnlySpan(Of Byte), source As Stream, hash As ReadOnlySpan(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Verify : ReadOnlySpan&lt;byte&gt; * System.IO.Stream * ReadOnlySpan&lt;byte&gt; -&gt; bool" Usage="System.Security.Cryptography.HMACMD5.Verify (key, source, hash)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Verify(ReadOnlySpan&lt;System::Byte&gt; key, System::IO::Stream ^ source, ReadOnlySpan&lt;System::Byte&gt; hash);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-11.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-11.0">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="hash" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="source">To be added.</param>
+        <param name="hash">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public static bool Verify (ReadOnlySpan&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; source, ReadOnlySpan&lt;byte&gt; hash);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Verify(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; key, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; source, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; hash) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACMD5.Verify(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Verify (key As ReadOnlySpan(Of Byte), source As ReadOnlySpan(Of Byte), hash As ReadOnlySpan(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Verify : ReadOnlySpan&lt;byte&gt; * ReadOnlySpan&lt;byte&gt; * ReadOnlySpan&lt;byte&gt; -&gt; bool" Usage="System.Security.Cryptography.HMACMD5.Verify (key, source, hash)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Verify(ReadOnlySpan&lt;System::Byte&gt; key, ReadOnlySpan&lt;System::Byte&gt; source, ReadOnlySpan&lt;System::Byte&gt; hash);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-11.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-11.0" />
+        <Parameter Name="hash" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="source">To be added.</param>
+        <param name="hash">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ValueTask&lt;bool&gt; VerifyAsync (byte[] key, System.IO.Stream source, byte[] hash, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ValueTask`1&lt;bool&gt; VerifyAsync(unsigned int8[] key, class System.IO.Stream source, unsigned int8[] hash, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACMD5.VerifyAsync(System.Byte[],System.IO.Stream,System.Byte[],System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function VerifyAsync (key As Byte(), source As Stream, hash As Byte(), Optional cancellationToken As CancellationToken = Nothing) As ValueTask(Of Boolean)" />
+      <MemberSignature Language="F#" Value="static member VerifyAsync : byte[] * System.IO.Stream * byte[] * System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;bool&gt;" Usage="System.Security.Cryptography.HMACMD5.VerifyAsync (key, source, hash, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Boolean&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" Index="0" FrameworkAlternate="net-11.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-11.0" />
+        <Parameter Name="hash" Type="System.Byte[]" Index="2" FrameworkAlternate="net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="source">To be added.</param>
+        <param name="hash">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.ValueTask&lt;bool&gt; VerifyAsync (ReadOnlyMemory&lt;byte&gt; key, System.IO.Stream source, ReadOnlyMemory&lt;byte&gt; hash, System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.Tasks.ValueTask`1&lt;bool&gt; VerifyAsync(valuetype System.ReadOnlyMemory`1&lt;unsigned int8&gt; key, class System.IO.Stream source, valuetype System.ReadOnlyMemory`1&lt;unsigned int8&gt; hash, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HMACMD5.VerifyAsync(System.ReadOnlyMemory{System.Byte},System.IO.Stream,System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function VerifyAsync (key As ReadOnlyMemory(Of Byte), source As Stream, hash As ReadOnlyMemory(Of Byte), Optional cancellationToken As CancellationToken = Nothing) As ValueTask(Of Boolean)" />
+      <MemberSignature Language="F#" Value="static member VerifyAsync : ReadOnlyMemory&lt;byte&gt; * System.IO.Stream * ReadOnlyMemory&lt;byte&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;bool&gt;" Usage="System.Security.Cryptography.HMACMD5.VerifyAsync (key, source, hash, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-11.0" />
+        <Parameter Name="source" Type="System.IO.Stream" Index="1" FrameworkAlternate="net-11.0">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="hash" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="3" FrameworkAlternate="net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="source">To be added.</param>
+        <param name="hash">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

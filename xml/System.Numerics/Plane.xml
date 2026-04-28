@@ -19,6 +19,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Numerics</AssemblyName>
@@ -31,6 +33,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Numerics.Vectors" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Numerics.Vectors" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Numerics.Vectors" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Numerics.Vectors" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Numerics.Vectors" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -49,12 +53,12 @@
   <Docs>
     <summary>Represents a plane in three-dimensional space.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- 
- [!INCLUDE[vectors-are-rows-paragraph](~/includes/system-numerics-vectors-are-rows.md)]  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+ [!INCLUDE[vectors-are-rows-paragraph](~/includes/system-numerics-vectors-are-rows.md)]
+
  ]]></format>
     </remarks>
   </Docs>
@@ -91,6 +95,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -132,6 +138,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -175,6 +183,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -201,6 +211,110 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Plane Create (System.Numerics.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Plane Create(valuetype System.Numerics.Vector4 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.Create(System.Numerics.Vector4)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (value As Vector4) As Plane" />
+      <MemberSignature Language="F#" Value="static member Create : System.Numerics.Vector4 -&gt; System.Numerics.Plane" Usage="System.Numerics.Plane.Create value" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Numerics::Plane Create(System::Numerics::Vector4 value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Plane</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Numerics.Vector4" Index="0" FrameworkAlternate="net-10.0;net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="value">A vector whose first three elements describe the normal vector, and whose <see cref="F:System.Numerics.Vector4.W" /> defines the distance along that normal from the origin.</param>
+        <summary>Creates a <see cref="T:System.Numerics.Plane" /> from a specified four-dimensional vector.</summary>
+        <returns>To be added.</returns>
+        <remarks>A <see cref="T:System.Numerics.Plane" /> created using <paramref name="value" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Plane Create (System.Numerics.Vector3 normal, float d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Plane Create(valuetype System.Numerics.Vector3 normal, float32 d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.Create(System.Numerics.Vector3,System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (normal As Vector3, d As Single) As Plane" />
+      <MemberSignature Language="F#" Value="static member Create : System.Numerics.Vector3 * single -&gt; System.Numerics.Plane" Usage="System.Numerics.Plane.Create (normal, d)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Numerics::Plane Create(System::Numerics::Vector3 normal, float d);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Plane</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normal" Type="System.Numerics.Vector3" Index="0" FrameworkAlternate="net-10.0;net-11.0" />
+        <Parameter Name="d" Type="System.Single" Index="1" FrameworkAlternate="net-10.0;net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="normal">The plane's normal vector.</param>
+        <param name="d">The plane's distance from the origin along its normal vector.</param>
+        <summary>Creates a <see cref="T:System.Numerics.Plane" /> from a specified normal and the distance along the normal from the origin.</summary>
+        <returns>A <see cref="T:System.Numerics.Plane" /> created from a specified normal and the distance along the normal from the origin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Numerics.Plane Create (float x, float y, float z, float d);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Plane Create(float32 x, float32 y, float32 z, float32 d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.Create(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (x As Single, y As Single, z As Single, d As Single) As Plane" />
+      <MemberSignature Language="F#" Value="static member Create : single * single * single * single -&gt; System.Numerics.Plane" Usage="System.Numerics.Plane.Create (x, y, z, d)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Numerics::Plane Create(float x, float y, float z, float d);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics.Vectors</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Numerics</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Plane</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" Index="0" FrameworkAlternate="net-10.0;net-11.0" />
+        <Parameter Name="y" Type="System.Single" Index="1" FrameworkAlternate="net-10.0;net-11.0" />
+        <Parameter Name="z" Type="System.Single" Index="2" FrameworkAlternate="net-10.0;net-11.0" />
+        <Parameter Name="d" Type="System.Single" Index="3" FrameworkAlternate="net-10.0;net-11.0" />
+      </Parameters>
+      <Docs>
+        <param name="x">The X component of the normal.</param>
+        <param name="y">The Y component of the normal.</param>
+        <param name="z">The Z component of the normal.</param>
+        <param name="d">The distance of the plane along its normal from the origin.</param>
+        <summary>Creates a <see cref="T:System.Numerics.Plane" /> from the X, Y, and Z components of its normal, and its distance from the origin on that normal.</summary>
+        <returns>A <see cref="T:System.Numerics.Plane" /> created from the X, Y, and Z components of its normal, and its distance from the origin on that normal.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CreateFromVertices">
       <MemberSignature Language="C#" Value="public static System.Numerics.Plane CreateFromVertices (System.Numerics.Vector3 point1, System.Numerics.Vector3 point2, System.Numerics.Vector3 point3);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Numerics.Plane CreateFromVertices(valuetype System.Numerics.Vector3 point1, valuetype System.Numerics.Vector3 point2, valuetype System.Numerics.Vector3 point3) cil managed" />
@@ -222,6 +336,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -271,6 +387,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -311,6 +429,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -358,6 +478,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -405,6 +527,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -443,13 +567,13 @@
       </Docs>
     </MemberGroup>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Plane other);" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public bool Equals (System.Numerics.Plane other);" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Numerics.Plane other) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.Equals(System.Numerics.Plane)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As Plane) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : System.Numerics.Plane -&gt; bool" Usage="plane.Equals other" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Numerics::Plane other);" />
-      <MemberSignature Language="C#" Value="public readonly bool Equals (System.Numerics.Plane other);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public readonly bool Equals (System.Numerics.Plane other);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -467,6 +591,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -479,7 +605,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
         </Attribute>
@@ -496,23 +622,23 @@
         <returns>
           <see langword="true" /> if the two planes are equal; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Two <xref:System.Numerics.Plane> objects are equal if their <xref:System.Numerics.Plane.Normal> and <xref:System.Numerics.Plane.D> fields are equal.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Two <xref:System.Numerics.Plane> objects are equal if their <xref:System.Numerics.Plane.Normal> and <xref:System.Numerics.Plane.D> fields are equal.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="plane.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C#" Value="public override readonly bool Equals (object? obj);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public override readonly bool Equals (object? obj);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="C#" Value="public override readonly bool Equals (object obj);" FrameworkAlternate="netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -528,6 +654,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -540,7 +668,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
         </Attribute>
@@ -551,7 +679,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -564,23 +692,23 @@
         <returns>
           <see langword="true" /> if the current instance and <paramref name="obj" /> are equal; otherwise, <see langword="false" />. If <paramref name="obj" /> is <see langword="null" />, the method returns <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The current instance and `obj` are equal if `obj` is a <xref:System.Numerics.Plane> object and their <xref:System.Numerics.Plane.Normal> and <xref:System.Numerics.Plane.D> fields are equal.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The current instance and `obj` are equal if `obj` is a <xref:System.Numerics.Plane> object and their <xref:System.Numerics.Plane.Normal> and <xref:System.Numerics.Plane.D> fields are equal.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetHashCode">
-      <MemberSignature Language="C#" Value="public override int GetHashCode ();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="plane.GetHashCode " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
-      <MemberSignature Language="C#" Value="public override readonly int GetHashCode ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override readonly int GetHashCode ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Numerics.Vectors</AssemblyName>
@@ -595,6 +723,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -607,7 +737,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
         </Attribute>
@@ -643,6 +773,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -683,6 +815,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -728,6 +862,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -753,13 +889,13 @@
         <returns>
           <see langword="true" /> if <paramref name="value1" /> and <paramref name="value2" /> are equal; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Two <xref:System.Numerics.Plane> objects are equal if their <xref:System.Numerics.Plane.Normal> and <xref:System.Numerics.Plane.D> fields are equal.  
-  
- The <xref:System.Numerics.Plane.op_Equality%2A> method defines the operation of the equality operator for <xref:System.Numerics.Plane> objects.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Two <xref:System.Numerics.Plane> objects are equal if their <xref:System.Numerics.Plane.Normal> and <xref:System.Numerics.Plane.D> fields are equal.
+
+ The <xref:System.Numerics.Plane.op_Equality*> method defines the operation of the equality operator for <xref:System.Numerics.Plane> objects.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -785,6 +921,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -810,23 +948,23 @@
         <returns>
           <see langword="true" /> if <paramref name="value1" /> and <paramref name="value2" /> are not equal; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Numerics.Plane.op_Inequality%2A> method defines the operation of the inequality operator for <xref:System.Numerics.Plane> objects.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Numerics.Plane.op_Inequality*> method defines the operation of the inequality operator for <xref:System.Numerics.Plane> objects.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ToString">
-      <MemberSignature Language="C#" Value="public override string ToString ();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public override string ToString ();" FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Numerics.Plane.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="plane.ToString " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
-      <MemberSignature Language="C#" Value="public override readonly string ToString ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override readonly string ToString ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Numerics.Vectors</AssemblyName>
@@ -841,6 +979,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -853,7 +993,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netstandard-2.1">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
         </Attribute>
@@ -866,11 +1006,11 @@
         <summary>Returns the string representation of this plane object.</summary>
         <returns>A string that represents this <see cref="T:System.Numerics.Plane" /> object.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The string representation of a <xref:System.Numerics.Plane> object use the formatting conventions of the current culture to format the numeric values in the returned string. For example, a <xref:System.Numerics.Plane> object whose string representation is formatted by using the conventions of the en-US culture might appear as `{Normal:<1.1, 2.2, 3.3> D:4.4}`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The string representation of a <xref:System.Numerics.Plane> object use the formatting conventions of the current culture to format the numeric values in the returned string. For example, a <xref:System.Numerics.Plane> object whose string representation is formatted by using the conventions of the en-US culture might appear as `{Normal:<1.1, 2.2, 3.3> D:4.4}`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -907,6 +1047,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -931,11 +1073,11 @@
         <summary>Transforms a normalized plane by a 4x4 matrix.</summary>
         <returns>The transformed plane.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `plane` must already be normalized so that its <xref:System.Numerics.Plane.Normal> vector is of unit length before this method is called.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `plane` must already be normalized so that its <xref:System.Numerics.Plane.Normal> vector is of unit length before this method is called.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -961,6 +1103,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Numerics</AssemblyName>
@@ -985,11 +1129,11 @@
         <summary>Transforms a normalized plane by a Quaternion rotation.</summary>
         <returns>A new plane that results from applying the Quaternion rotation.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `plane` must already be normalized so that its <xref:System.Numerics.Plane.Normal> vector is of unit length before this method is called.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `plane` must already be normalized so that its <xref:System.Numerics.Plane.Normal> vector is of unit length before this method is called.
+
  ]]></format>
         </remarks>
       </Docs>

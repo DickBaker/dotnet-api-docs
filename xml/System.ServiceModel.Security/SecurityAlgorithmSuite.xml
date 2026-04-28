@@ -26,20 +26,26 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
-    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="netstandard-2.0-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.6.2-pp;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp">
       <AttributeName Language="C#">[System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.SecurityAlgorithmSuiteConverter))]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.SecurityAlgorithmSuiteConverter))&gt;]</AttributeName>
     </Attribute>
@@ -47,13 +53,13 @@
   <Docs>
     <summary>Specifies properties of algorithms. This is an <see langword="abstract" /> class.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Instances of this class are used to specify the cryptographic characteristics of the algorithms used when securing messages.  
-  
- This class is used by derived classes to instantiate security algorithm suites, and contains properties that describe the security algorithms. For example, the `wsBasicHttp` binding uses an internal derived class to specify the properties of its security algorithms.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Instances of this class are used to specify the cryptographic characteristics of the algorithms used when securing messages.
+
+ This class is used by derived classes to instantiate security algorithm suites, and contains properties that describe the security algorithms. For example, the `wsBasicHttp` binding uses an internal derived class to specify the properties of its security algorithms.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -79,7 +85,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -95,11 +101,11 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The instances of this class consist of static properties and read-only properties, so the constructor does not initialize any properties.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The instances of this class consist of static properties and read-only properties, so the constructor does not initialize any properties.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -130,11 +136,11 @@
         <summary>Gets the Basic128 algorithm suite.</summary>
         <value>The 128-bit Basic <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, AES-128 is used as the encryption algorithm.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, AES-128 is used as the encryption algorithm.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -165,11 +171,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm and 128-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm and 128-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -200,11 +206,11 @@
         <summary>Gets an algorithm suite that uses SHA256 for the signature digest and 128-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses SHA256 for the signature digest and 128-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -235,11 +241,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 128-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 128-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -270,11 +276,11 @@
         <summary>Gets an algorithm suite that uses 192-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses 192-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, AES-192 is used as the encryption algorithm.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, AES-192 is used as the encryption algorithm.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -305,11 +311,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm and 192-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm and 192-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -340,11 +346,11 @@
         <summary>Gets an algorithm suite which uses SHA256 for the signature digest and 192-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite which uses SHA256 for the signature digest and 192-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -375,11 +381,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 192-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 192-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -406,7 +412,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -419,19 +425,19 @@
         <summary>Gets an algorithm suite that uses 256-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses 256-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, AES-256 is used for the encryption algorithm.  
-  
-   
-  
-## Examples  
- The following code shows how to set <xref:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite%2A> to this property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, AES-256 is used for the encryption algorithm.
+
+
+
+## Examples
+ The following code shows how to set <xref:System.ServiceModel.MessageSecurityOverHttp.AlgorithmSuite> to this property.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs" id="Snippet8":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb" id="Snippet8":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb" id="Snippet8":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -462,11 +468,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm and 256-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm and 256-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -493,7 +499,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -506,11 +512,11 @@
         <summary>Gets an algorithm suite that uses SHA256 for the signature digest and 256-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses SHA256 for the signature digest and 256-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -541,11 +547,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 256-bit Basic as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 256-bit Basic as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -572,7 +578,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -591,11 +597,11 @@
         <summary>Gets the default algorithm suite.</summary>
         <value>The default <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> is <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />, which specifies 256-bit Advanced Encryption Standard (AES) as the symmetric encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides the properties specifying default values as well as the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides the properties specifying default values as well as the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -622,7 +628,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -635,11 +641,11 @@
         <summary>Gets the default asymmetric key wrap algorithm as a string.</summary>
         <value>The default asymmetric key wrap algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -666,7 +672,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -679,11 +685,11 @@
         <summary>Gets the default asymmetric signature algorithm as a string.</summary>
         <value>The default asymmetric signature algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -710,7 +716,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -723,11 +729,11 @@
         <summary>Gets the default canonicalization algorithm as a string.</summary>
         <value>The default canonicalization algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When overridden, provides a string value that will be used for comparison in the method <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When overridden, provides a string value that will be used for comparison in the method <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported*>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -754,7 +760,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -767,11 +773,11 @@
         <summary>Gets the default digest algorithm as a string.</summary>
         <value>The default digest algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -798,7 +804,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -811,11 +817,11 @@
         <summary>Gets the default encryption algorithm as a string.</summary>
         <value>The default encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When overridden, provides a string value that will be used for comparison in the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -842,7 +848,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -855,11 +861,11 @@
         <summary>Gets the default encryption key derivation length as an <see cref="T:System.Int32" /> value.</summary>
         <value>The default encryption key derivation length.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The returned value will vary depending on the subclass that implements it. For `Basic256` encryption, it returns 256.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The returned value will vary depending on the subclass that implements it. For `Basic256` encryption, it returns 256.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -886,7 +892,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -899,11 +905,11 @@
         <summary>Gets the default signature key derivation length as an <see cref="T:System.Int32" /> value.</summary>
         <value>The default signature key derivation length.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The returned value will vary depending on the subclass that implements it. For `Basic256` encryption, it returns 192.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The returned value will vary depending on the subclass that implements it. For `Basic256` encryption, it returns 192.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -930,7 +936,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -943,11 +949,11 @@
         <summary>Gets the default symmetric key length as an <see cref="T:System.Int32" /> value.</summary>
         <value>The default symmetric key length.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The returned value will vary depending on the subclass that implements it. For `Basic256` encryption, it returns 256.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The returned value will vary depending on the subclass that implements it. For `Basic256` encryption, it returns 256.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -974,7 +980,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1011,7 +1017,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1046,7 +1052,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1064,22 +1070,22 @@
         <returns>
           <see langword="true" /> if the key length is supported by the asymmetric algorithm; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Typical key lengths are 128, 192, and 256 bits.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Typical key lengths are 128, 192, and 256 bits.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsAsymmetricKeyWrapAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsAsymmetricKeyWrapAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricKeyWrapAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsAsymmetricKeyWrapAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsAsymmetricKeyWrapAlgorithmSupported : string -&gt; bool&#xA;override this.IsAsymmetricKeyWrapAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsAsymmetricKeyWrapAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsAsymmetricKeyWrapAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricKeyWrapAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsAsymmetricKeyWrapAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsAsymmetricKeyWrapAlgorithmSupported : string -&gt; bool&#xA;override this.IsAsymmetricKeyWrapAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsAsymmetricKeyWrapAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1099,10 +1105,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm to check.</param>
@@ -1110,22 +1116,22 @@
         <returns>
           <see langword="true" /> if the asymmetric key wrap algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm>.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsAsymmetricSignatureAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsAsymmetricSignatureAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricSignatureAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsAsymmetricSignatureAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsAsymmetricSignatureAlgorithmSupported : string -&gt; bool&#xA;override this.IsAsymmetricSignatureAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsAsymmetricSignatureAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsAsymmetricSignatureAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAsymmetricSignatureAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsAsymmetricSignatureAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsAsymmetricSignatureAlgorithmSupported : string -&gt; bool&#xA;override this.IsAsymmetricSignatureAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsAsymmetricSignatureAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1145,10 +1151,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1156,22 +1162,22 @@
         <returns>
           <see langword="true" /> if the asymmetric signature algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricSignatureAlgorithm%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultAsymmetricSignatureAlgorithm>.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsCanonicalizationAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsCanonicalizationAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsCanonicalizationAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsCanonicalizationAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsCanonicalizationAlgorithmSupported : string -&gt; bool&#xA;override this.IsCanonicalizationAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsCanonicalizationAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsCanonicalizationAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsCanonicalizationAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsCanonicalizationAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsCanonicalizationAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsCanonicalizationAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsCanonicalizationAlgorithmSupported : string -&gt; bool&#xA;override this.IsCanonicalizationAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsCanonicalizationAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsCanonicalizationAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1191,10 +1197,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1202,22 +1208,22 @@
         <returns>
           <see langword="true" /> if the canonicalization algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultCanonicalizationAlgorithm%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultCanonicalizationAlgorithm>.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsDigestAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsDigestAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDigestAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsDigestAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsDigestAlgorithmSupported : string -&gt; bool&#xA;override this.IsDigestAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsDigestAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsDigestAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsDigestAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDigestAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsDigestAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsDigestAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsDigestAlgorithmSupported : string -&gt; bool&#xA;override this.IsDigestAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsDigestAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsDigestAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1237,10 +1243,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1248,22 +1254,22 @@
         <returns>
           <see langword="true" /> if the digest algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultDigestAlgorithm%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultDigestAlgorithm>.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsEncryptionAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsEncryptionAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEncryptionAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsEncryptionAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsEncryptionAlgorithmSupported : string -&gt; bool&#xA;override this.IsEncryptionAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsEncryptionAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsEncryptionAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsEncryptionAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEncryptionAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsEncryptionAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsEncryptionAlgorithmSupported : string -&gt; bool&#xA;override this.IsEncryptionAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsEncryptionAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsEncryptionAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1283,10 +1289,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1294,22 +1300,22 @@
         <returns>
           <see langword="true" /> if the encryption algorithm is supported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionAlgorithm%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ `algorithm` gets compared to the string returned from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite.DefaultEncryptionAlgorithm>.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsEncryptionKeyDerivationAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsEncryptionKeyDerivationAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEncryptionKeyDerivationAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsEncryptionKeyDerivationAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsEncryptionKeyDerivationAlgorithmSupported : string -&gt; bool&#xA;override this.IsEncryptionKeyDerivationAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsEncryptionKeyDerivationAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsEncryptionKeyDerivationAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEncryptionKeyDerivationAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsEncryptionKeyDerivationAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsEncryptionKeyDerivationAlgorithmSupported : string -&gt; bool&#xA;override this.IsEncryptionKeyDerivationAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsEncryptionKeyDerivationAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1329,10 +1335,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1343,12 +1349,12 @@
       </Docs>
     </Member>
     <Member MemberName="IsSignatureKeyDerivationAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsSignatureKeyDerivationAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSignatureKeyDerivationAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSignatureKeyDerivationAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsSignatureKeyDerivationAlgorithmSupported : string -&gt; bool&#xA;override this.IsSignatureKeyDerivationAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSignatureKeyDerivationAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsSignatureKeyDerivationAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSignatureKeyDerivationAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSignatureKeyDerivationAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsSignatureKeyDerivationAlgorithmSupported : string -&gt; bool&#xA;override this.IsSignatureKeyDerivationAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSignatureKeyDerivationAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1368,10 +1374,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1401,7 +1407,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1419,22 +1425,22 @@
         <returns>
           <see langword="true" /> if the symmetric key length is supported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `length` is compared to a range of values depending on the subclass. For example, in the `TripleDES` subclass, this method verifies that `length` is between 192 and 256, inclusive.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `length` is compared to a range of values depending on the subclass. For example, in the `TripleDES` subclass, this method verifies that `length` is between 192 and 256, inclusive.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSymmetricKeyWrapAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsSymmetricKeyWrapAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricKeyWrapAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSymmetricKeyWrapAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsSymmetricKeyWrapAlgorithmSupported : string -&gt; bool&#xA;override this.IsSymmetricKeyWrapAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSymmetricKeyWrapAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsSymmetricKeyWrapAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricKeyWrapAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSymmetricKeyWrapAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsSymmetricKeyWrapAlgorithmSupported : string -&gt; bool&#xA;override this.IsSymmetricKeyWrapAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSymmetricKeyWrapAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1454,10 +1460,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1468,12 +1474,12 @@
       </Docs>
     </Member>
     <Member MemberName="IsSymmetricSignatureAlgorithmSupported">
-      <MemberSignature Language="C#" Value="public virtual bool IsSymmetricSignatureAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricSignatureAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSymmetricSignatureAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="abstract member IsSymmetricSignatureAlgorithmSupported : string -&gt; bool&#xA;override this.IsSymmetricSignatureAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSymmetricSignatureAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public virtual bool IsSymmetricSignatureAlgorithmSupported (string algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSymmetricSignatureAlgorithmSupported(string algorithm) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.SecurityAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSymmetricSignatureAlgorithmSupported (algorithm As String) As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="abstract member IsSymmetricSignatureAlgorithmSupported : string -&gt; bool&#xA;override this.IsSymmetricSignatureAlgorithmSupported : string -&gt; bool" Usage="securityAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported algorithm" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSymmetricSignatureAlgorithmSupported(System::String ^ algorithm);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1493,10 +1499,10 @@
         <AssemblyVersion>4.10.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="algorithm" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="algorithm">The algorithm name to check.</param>
@@ -1527,7 +1533,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1540,11 +1546,11 @@
         <summary>Gets the Triple Data Encryption Standard (DES) algorithm suite.</summary>
         <value>The Triple DES <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1575,11 +1581,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm and 192-bit Triple Data Encryption Standard (DES) as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm and 192-bit Triple Data Encryption Standard (DES) as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1610,11 +1616,11 @@
         <summary>Gets an algorithm suite that uses SHA256 for the signature digest and 192-bit Triple Data Encryption Standard (DES) as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses SHA256 for the signature digest and 192-bit Triple Data Encryption Standard (DES) as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1645,11 +1651,11 @@
         <summary>Gets an algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 192-bit Triple Data Encryption Standard (DES) as the message encryption algorithm.</summary>
         <value>An algorithm suite that uses RSA15 as the key wrap algorithm, SHA256 for the signature digest, and 192-bit Triple Data Encryption Standard (DES) as the message encryption algorithm.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> returned is actually an internal subclass that overrides some of the properties specifying default values as well as some of the methods.
+
  ]]></format>
         </remarks>
       </Docs>

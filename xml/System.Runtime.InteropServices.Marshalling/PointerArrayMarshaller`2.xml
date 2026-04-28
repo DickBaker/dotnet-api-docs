@@ -10,33 +10,35 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IsUnmanaged]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsUnmanaged&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Constraints>
         <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
         <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
         <BaseTypeName>System.ValueType</BaseTypeName>
       </Constraints>
-      <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IsUnmanaged]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsUnmanaged&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
     </TypeParameter>
     <TypeParameter Name="TUnmanagedElement">
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IsUnmanaged]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsUnmanaged&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Constraints>
         <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
         <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
         <BaseTypeName>System.ValueType</BaseTypeName>
       </Constraints>
-      <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
-          <AttributeName Language="C#">[System.Runtime.CompilerServices.IsUnmanaged]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsUnmanaged&gt;]</AttributeName>
-        </Attribute>
-      </Attributes>
     </TypeParameter>
   </TypeParameters>
   <Base>
@@ -80,9 +82,23 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>T*[]</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="unmanaged" Type="TUnmanagedElement*" />
@@ -108,6 +124,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TUnmanagedElement*</ReturnType>
@@ -115,7 +133,7 @@
       <Parameters>
         <Parameter Name="managed" Type="T*[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })&gt;]</AttributeName>
             </Attribute>
@@ -143,7 +161,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -168,6 +194,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Span&lt;System.IntPtr&gt;</ReturnType>
@@ -175,7 +203,7 @@
       <Parameters>
         <Parameter Name="managed" Type="T*[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })&gt;]</AttributeName>
             </Attribute>
@@ -201,6 +229,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.IntPtr&gt;</ReturnType>
@@ -208,7 +238,7 @@
       <Parameters>
         <Parameter Name="managed" Type="T*[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 0, 0 })&gt;]</AttributeName>
             </Attribute>
@@ -234,7 +264,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Span&lt;TUnmanagedElement&gt;</ReturnType>
       </ReturnValue>
@@ -262,7 +300,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;TUnmanagedElement&gt;</ReturnType>
       </ReturnValue>

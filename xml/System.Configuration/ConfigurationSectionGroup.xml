@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -48,7 +53,7 @@
 </configSections>
 ```
 
- The configuration system loads settings from configuration files into <xref:System.Configuration.ConfigurationSectionGroup> objects. You can use the <xref:System.Configuration.ConfigurationSectionGroup.Sections%2A> and <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups%2A> properties to access the sections and section groups that are contained in a <xref:System.Configuration.ConfigurationSectionGroup> object.
+ The configuration system loads settings from configuration files into <xref:System.Configuration.ConfigurationSectionGroup> objects. You can use the <xref:System.Configuration.ConfigurationSectionGroup.Sections*> and <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups*> properties to access the sections and section groups that are contained in a <xref:System.Configuration.ConfigurationSectionGroup> object.
 
  For more information about how to access information from configuration files, see the <xref:System.Configuration.ConfigurationManager> class.
 
@@ -57,7 +62,7 @@
 ## Examples
  The following example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup> class to retrieve configuration settings. The example is a console application that reads configuration settings and writes information about each configuration section group and the sections in it to the console.
 
- The `Main` method loads the configuration settings into a <xref:System.Configuration.Configuration> object, retrieves the <xref:System.Configuration.Configuration.SectionGroups%2A> collection from the <xref:System.Configuration.Configuration> object, and then calls the `ShowSectionGroupCollectionInfo` method to display the section property values.
+ The `Main` method loads the configuration settings into a <xref:System.Configuration.Configuration> object, retrieves the <xref:System.Configuration.Configuration.SectionGroups*> collection from the <xref:System.Configuration.Configuration> object, and then calls the `ShowSectionGroupCollectionInfo` method to display the section property values.
 
  The `ShowSectionGroupCollectionInfo` method iterates through the section groups and calls the `ShowSectionGroupInfo` method for each one.
 
@@ -96,6 +101,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -134,6 +141,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -145,12 +154,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> method can force a <xref:System.Configuration.ConfigurationSectionGroup> object to be written to a configuration file, even if it is not required because it is already declared in a parent file.
+ The <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration*> method can force a <xref:System.Configuration.ConfigurationSectionGroup> object to be written to a configuration file, even if it is not required because it is already declared in a parent file.
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> method.
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration*> method.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs" id="Snippet12":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb" id="Snippet12":::
@@ -184,6 +193,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -199,16 +210,16 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> method forces this <xref:System.Configuration.ConfigurationSectionGroup> declaration to be written to the file if `force` is `true`. If `force` is `false`, this action might be ignored if the <xref:System.Configuration.ConfigurationSectionGroup> object is required by the system.
+ The <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration*> method forces this <xref:System.Configuration.ConfigurationSectionGroup> declaration to be written to the file if `force` is `true`. If `force` is `false`, this action might be ignored if the <xref:System.Configuration.ConfigurationSectionGroup> object is required by the system.
 
- The <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> method can force a <xref:System.Configuration.ConfigurationSectionGroup> object to be written to a configuration file, even if it is not required because it is already declared in a parent file. Also, it can remove a group from a configuration file if the group is not required.
+ The <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration*> method can force a <xref:System.Configuration.ConfigurationSectionGroup> object to be written to a configuration file, even if it is not required because it is already declared in a parent file. Also, it can remove a group from a configuration file if the group is not required.
 
- You might want to use the <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> method to make a configuration file more portable from one computer to another, without worrying about whether the group declaration already exists.
+ You might want to use the <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration*> method to make a configuration file more portable from one computer to another, without worrying about whether the group declaration already exists.
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> method.
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration*> method.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs" id="Snippet13":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb" id="Snippet13":::
@@ -247,6 +258,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -293,6 +306,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -305,9 +320,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the section group is declared in the configuration file, the <xref:System.Configuration.ConfigurationSectionGroup.IsDeclared%2A> property returns `true`.
+ If the section group is declared in the configuration file, the <xref:System.Configuration.ConfigurationSectionGroup.IsDeclared> property returns `true`.
 
- The <xref:System.Configuration.ConfigurationSectionGroup.IsDeclared%2A> property returns `false` if this section is inherited from Machine.config or a parent configuration file.
+ The <xref:System.Configuration.ConfigurationSectionGroup.IsDeclared> property returns `false` if this section is inherited from Machine.config or a parent configuration file.
 
 
 
@@ -346,6 +361,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -357,7 +374,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Configuration.ConfigurationSectionGroup.Name%2A> property value is the name of the section group that does not contain the parent section groups.
+ The <xref:System.Configuration.ConfigurationSectionGroup.Name> property value is the name of the section group that does not contain the parent section groups.
 
 
 
@@ -396,6 +413,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -407,7 +426,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Configuration.ConfigurationSectionGroup.SectionGroupName%2A> property value is the full path name of the section group, including the parent section groups.
+ The <xref:System.Configuration.ConfigurationSectionGroup.SectionGroupName> property value is the full path name of the section group, including the parent section groups.
 
 
 
@@ -446,6 +465,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationSectionGroupCollection</ReturnType>
@@ -457,7 +478,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to access the <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups%2A> property. This is part of a larger example provided in the overview for the <xref:System.Configuration.ConfigurationSectionGroup> class.
+ The following code example shows how to access the <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups> property. This is part of a larger example provided in the overview for the <xref:System.Configuration.ConfigurationSectionGroup> class.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs" id="Snippet8":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb" id="Snippet8":::
@@ -491,6 +512,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationSectionCollection</ReturnType>
@@ -502,7 +525,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to access the <xref:System.Configuration.ConfigurationSectionGroup.Sections%2A> property. This is part of a larger example provided in the overview for the <xref:System.Configuration.ConfigurationSectionGroup> class.
+ The following code example shows how to access the <xref:System.Configuration.ConfigurationSectionGroup.Sections> property. This is part of a larger example provided in the overview for the <xref:System.Configuration.ConfigurationSectionGroup> class.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs" id="Snippet7":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb" id="Snippet7":::
@@ -515,16 +538,16 @@
       </Docs>
     </Member>
     <Member MemberName="ShouldSerializeSectionGroupInTargetVersion">
-      <MemberSignature Language="C#" Value="protected internal virtual bool ShouldSerializeSectionGroupInTargetVersion (System.Runtime.Versioning.FrameworkName targetFramework);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeSectionGroupInTargetVersion(class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="protected internal virtual bool ShouldSerializeSectionGroupInTargetVersion (System.Runtime.Versioning.FrameworkName targetFramework);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeSectionGroupInTargetVersion(class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroup.ShouldSerializeSectionGroupInTargetVersion(System.Runtime.Versioning.FrameworkName)" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function ShouldSerializeSectionGroupInTargetVersion (targetFramework As FrameworkName) As Boolean" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function ShouldSerializeSectionGroupInTargetVersion (targetFramework As FrameworkName) As Boolean" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
       <MemberSignature Language="F#" Value="abstract member ShouldSerializeSectionGroupInTargetVersion : System.Runtime.Versioning.FrameworkName -&gt; bool&#xA;override this.ShouldSerializeSectionGroupInTargetVersion : System.Runtime.Versioning.FrameworkName -&gt; bool" Usage="configurationSectionGroup.ShouldSerializeSectionGroupInTargetVersion targetFramework" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual bool ShouldSerializeSectionGroupInTargetVersion(System::Runtime::Versioning::FrameworkName ^ targetFramework);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeSectionGroupInTargetVersion (System.Runtime.Versioning.FrameworkName targetFramework);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeSectionGroupInTargetVersion(class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ShouldSerializeSectionGroupInTargetVersion (targetFramework As FrameworkName) As Boolean" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool ShouldSerializeSectionGroupInTargetVersion(System::Runtime::Versioning::FrameworkName ^ targetFramework);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual bool ShouldSerializeSectionGroupInTargetVersion(System::Runtime::Versioning::FrameworkName ^ targetFramework);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeSectionGroupInTargetVersion (System.Runtime.Versioning.FrameworkName targetFramework);" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeSectionGroupInTargetVersion(class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ShouldSerializeSectionGroupInTargetVersion (targetFramework As FrameworkName) As Boolean" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool ShouldSerializeSectionGroupInTargetVersion(System::Runtime::Versioning::FrameworkName ^ targetFramework);" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -539,12 +562,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetFramework" Type="System.Runtime.Versioning.FrameworkName" Index="0" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="targetFramework" Type="System.Runtime.Versioning.FrameworkName" Index="0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.6.2-pp;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="targetFramework">The target version of the .NET Framework.</param>
@@ -561,7 +586,6 @@
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/bb398791(v=vs.100)">.NET Framework Targeting for Web Projects</related>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -586,6 +610,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -597,12 +623,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If this instance of the <xref:System.Configuration.ConfigurationSectionGroup> class is a derived type, the <xref:System.Configuration.ConfigurationSectionGroup.Type%2A> property will return the name of the derived type that extends the <xref:System.Configuration.ConfigurationSectionGroup> class.
+ If this instance of the <xref:System.Configuration.ConfigurationSectionGroup> class is a derived type, the <xref:System.Configuration.ConfigurationSectionGroup.Type> property will return the name of the derived type that extends the <xref:System.Configuration.ConfigurationSectionGroup> class.
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup.Type%2A> property. This is part of a larger example provided in the overview for the <xref:System.Configuration.ConfigurationSectionGroup> class.
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroup.Type> property. This is part of a larger example provided in the overview for the <xref:System.Configuration.ConfigurationSectionGroup> class.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs" id="Snippet4":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb" id="Snippet4":::

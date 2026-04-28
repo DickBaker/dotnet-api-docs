@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.FrameworkTemplate</BaseTypeName>
@@ -37,9 +39,9 @@
 ## Remarks
  The <xref:System.Windows.Controls.ControlTemplate> allows you to specify the visual structure of a control. The control author can define the default <xref:System.Windows.Controls.ControlTemplate> and the application author can override the <xref:System.Windows.Controls.ControlTemplate> to reconstruct the visual structure of the control.
 
- Control templating is one of the many features offered by the WPF styling and templating model. The styling and templating model provides you with such great flexibility that in many cases you do not need to write your own controls. If you are an application author that wants to change the visualization of your control or to replace the <xref:System.Windows.Controls.ControlTemplate> of an existing control, see the [Styling and Templating](/dotnet/framework/wpf/controls/styling-and-templating) topic for examples and an in-depth discussion.
+ Control templating is one of the many features offered by the WPF styling and templating model. The styling and templating model provides you with such great flexibility that in many cases you do not need to write your own controls. If you are an application author that wants to change the visualization of your control or to replace the <xref:System.Windows.Controls.ControlTemplate> of an existing control, see the [Styling and Templating](/dotnet/desktop/wpf/controls/styles-templates-overview) topic for examples and an in-depth discussion.
 
- If you are writing your own control, see "Create a Custom Control" in the [Control Authoring Overview](/dotnet/framework/wpf/controls/control-authoring-overview).
+ If you are writing your own control, see "Create a Custom Control" in the [Control Authoring Overview](/dotnet/desktop/wpf/controls/control-authoring-overview).
 
  A <xref:System.Windows.Controls.ControlTemplate> is intended to be a self-contained unit of implementation detail that is invisible to outside users and objects, including styles. The only way to manipulate the content of the control template is from within the same control template.
 
@@ -76,7 +78,7 @@
 
  ![Button ControlTemplate sample](~/add/media/stylingintro-buttoncontroltemplate.png "Button ControlTemplate sample")
 
- When you set the <xref:System.Windows.Controls.Control.Template%2A> property of a <xref:System.Windows.Controls.Control> to a new <xref:System.Windows.Controls.ControlTemplate> as in the above example, you are replacing the entire template. What the <xref:System.Windows.Controls.Button> looks like when it is in focus or pressed is all part of the default appearance of the button that you are replacing. Therefore, depending on your needs, you may want to put in your definition what your button should look like when it is pressed, and so on, as in the following example:
+ When you set the <xref:System.Windows.Controls.Control.Template> property of a <xref:System.Windows.Controls.Control> to a new <xref:System.Windows.Controls.ControlTemplate> as in the above example, you are replacing the entire template. What the <xref:System.Windows.Controls.Button> looks like when it is in focus or pressed is all part of the default appearance of the button that you are replacing. Therefore, depending on your needs, you may want to put in your definition what your button should look like when it is pressed, and so on, as in the following example:
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TemplateBindingExtension/Overview/button.xaml" id="Snippet1":::
 
@@ -117,6 +119,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -147,6 +151,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="targetType" Type="System.Type" />
@@ -174,6 +180,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -199,21 +207,21 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If you have a standalone <xref:System.Windows.Controls.ControlTemplate> in the resources section with the <xref:System.Windows.Controls.ControlTemplate.TargetType%2A> property set to a type, the <xref:System.Windows.Controls.ControlTemplate> does not get applied to that type automatically. Instead, you need to specify an `x:Key` and apply the template explicitly.
+ If you have a standalone <xref:System.Windows.Controls.ControlTemplate> in the resources section with the <xref:System.Windows.Controls.ControlTemplate.TargetType> property set to a type, the <xref:System.Windows.Controls.ControlTemplate> does not get applied to that type automatically. Instead, you need to specify an `x:Key` and apply the template explicitly.
 
- Also note that the <xref:System.Windows.Controls.ControlTemplate.TargetType%2A> property is required on a <xref:System.Windows.Controls.ControlTemplate> if the template definition contains a <xref:System.Windows.Controls.ContentPresenter>.
+ Also note that the <xref:System.Windows.Controls.ControlTemplate.TargetType> property is required on a <xref:System.Windows.Controls.ControlTemplate> if the template definition contains a <xref:System.Windows.Controls.ContentPresenter>.
 
 <a name="xamlAttributeUsage_TargetType"></a>
 ## XAML Attribute Usage
 
-```
+```xaml
 <object  TargetType="typeName"/>
 ```
 
 <a name="xamlValues_TargetType"></a>
 ## XAML Values
  *typeName*
- The type name of the class. To refer to the <xref:System.Type> name of the class, use the [Markup Extensions and WPF XAML](/dotnet/framework/wpf/advanced/markup-extensions-and-wpf-xaml).
+ The type name of the class. To refer to the <xref:System.Type> name of the class, use the [Markup Extensions and WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
 
 
@@ -251,9 +259,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)&gt;]</AttributeName>
         </Attribute>
@@ -261,13 +271,9 @@
           <AttributeName Language="C#">[System.Windows.Markup.DependsOn("VisualTree")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Windows.Markup.DependsOn("VisualTree")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Windows.Markup.DependsOn("Template")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Windows.Markup.DependsOn("Template")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -284,7 +290,7 @@
 <a name="xamlPropertyElementUsage_Triggers"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   <object.Triggers>
     oneOrMoreTriggers
@@ -332,6 +338,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

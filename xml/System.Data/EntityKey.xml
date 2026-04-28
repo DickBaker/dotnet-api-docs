@@ -40,10 +40,6 @@
 ## Remarks
  The <xref:System.Data.EntityKey> objects are immutable; that is, after they are constructed they cannot be modified.
 
- For more information, see [Working with Entity Keys](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/dd283139(v=vs.100)).
-
-
-
 ## Examples
  These examples show you how to create and use an <xref:System.Data.EntityKey>.
 
@@ -239,7 +235,7 @@
 ## Remarks
  The <xref:System.Data.EntityKey> class contains a copy of the values that make up the logical key that is specified for this type of entity.
 
- The members of the <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> each have a property name and a value in a <xref:System.Collections.Generic.KeyValuePair%602>, where the key is the property name and the value is the actual value of that property on the object.
+ The members of the <xref:System.Collections.ObjectModel.ReadOnlyCollection`1> each have a property name and a value in a <xref:System.Collections.Generic.KeyValuePair`2>, where the key is the property name and the value is the actual value of that property on the object.
 
  ]]></format>
         </remarks>
@@ -347,9 +343,9 @@
 ## Remarks
  Temporary keys have different comparison semantics than permanent keys:
 
--   Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
+- Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
 
--   Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
+- Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
 
  In addition, temporary keys have no <xref:System.Data.Metadata.Edm.EntitySet> or key values, but permanent keys do.
 
@@ -387,9 +383,9 @@
 ## Remarks
  Temporary keys have different comparison semantics than permanent keys:
 
--   Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
+- Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
 
--   Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their <xref:System.Data.Metadata.Edm.EntitySet> objects are the same and their key values are equal.
+- Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their <xref:System.Data.Metadata.Edm.EntitySet> objects are the same and their key values are equal.
 
  In addition, temporary keys have no <xref:System.Data.Metadata.Edm.EntitySet> or key values, but permanent keys do.
 
@@ -478,20 +474,20 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When a new entity is created, the Entity Framework defines temporary key and sets the <xref:System.Data.EntityKey.IsTemporary%2A> property to `true`. When you call the <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> method, the Entity Framework assigns a permanent key and sets the <xref:System.Data.EntityKey.IsTemporary%2A> property to `false`.
+ When a new entity is created, the Entity Framework defines temporary key and sets the <xref:System.Data.EntityKey.IsTemporary> property to `true`. When you call the <xref:System.Data.Objects.ObjectContext.SaveChanges*> method, the Entity Framework assigns a permanent key and sets the <xref:System.Data.EntityKey.IsTemporary> property to `false`.
 
 > [!NOTE]
 >  Temporary keys are constructed automatically by the framework; they cannot be constructed directly by a user.
 
  Temporary keys have different comparison semantics than permanent keys:
 
--   Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
+- Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
 
--   Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
+- Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
 
  In addition, temporary keys have no <xref:System.Data.Metadata.Edm.EntitySet> or key values, but permanent keys do.
 
- When the <xref:System.Data.Objects.ObjectStateEntry.AcceptChanges%2A> method is called on an entity's <xref:System.Data.Objects.ObjectStateEntry> and the entity transitions from the <xref:System.Data.EntityState.Added> state to <xref:System.Data.EntityState.Unchanged> state, the Entity Framework automatically computes a new permanent key for the entity and synchronizes all temporary key references.
+ When the <xref:System.Data.Objects.ObjectStateEntry.AcceptChanges*> method is called on an entity's <xref:System.Data.Objects.ObjectStateEntry> and the entity transitions from the <xref:System.Data.EntityState.Added> state to <xref:System.Data.EntityState.Unchanged> state, the Entity Framework automatically computes a new permanent key for the entity and synchronizes all temporary key references.
 
  ]]></format>
         </remarks>
@@ -565,7 +561,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Data.EntityKey.OnDeserialized%2A> is used by Object Services when deserializing an <xref:System.Data.EntityKey>. For more information, see [Serializing Objects](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).
+ <xref:System.Data.EntityKey.OnDeserialized*> is used by Object Services when deserializing an <xref:System.Data.EntityKey>.
 
  ]]></format>
         </remarks>
@@ -611,7 +607,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Data.EntityKey.OnDeserializing%2A> is used by Object Services when deserializing an <xref:System.Data.EntityKey>. For more information, see [Serializing Objects](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).
+ <xref:System.Data.EntityKey.OnDeserializing*> is used by Object Services when deserializing an <xref:System.Data.EntityKey>.
 
  ]]></format>
         </remarks>
@@ -649,13 +645,13 @@
 ## Remarks
  Temporary keys have different comparison semantics than permanent keys:
 
--   Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
+- Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
 
--   Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
+- Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
 
  In addition, temporary keys have no <xref:System.Data.Metadata.Edm.EntitySet> or key values, but permanent keys do.
 
- The equivalent method for this operator is <xref:System.Data.EntityKey.Equals%28System.Data.EntityKey%29?displayProperty=nameWithType>.]]></format>
+ The equivalent method for this operator is <xref:System.Data.EntityKey.Equals(System.Data.EntityKey)?displayProperty=nameWithType>.]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -691,13 +687,13 @@
 ## Remarks
  Temporary keys have different comparison semantics than permanent keys:
 
--   Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
+- Temporary keys use reference equality. That is, two references to the exact same temporary <xref:System.Data.EntityKey> instance are equal but no other <xref:System.Data.EntityKey> instances are equal.
 
--   Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
+- Permanent keys determine equality based on the values of the contained key properties and the <xref:System.Data.Metadata.Edm.EntitySet>. That is, you can have two separate <xref:System.Data.EntityKey> instances that are equal if their entity sets are the same and their key values are equal.
 
  In addition, temporary keys have no <xref:System.Data.Metadata.Edm.EntitySet> or key values, but regular keys do.
 
- The equivalent method for this operator is <xref:System.Data.EntityKey.Equals%28System.Data.EntityKey%29?displayProperty=nameWithType>.]]></format>
+ The equivalent method for this operator is <xref:System.Data.EntityKey.Equals(System.Data.EntityKey)?displayProperty=nameWithType>.]]></format>
         </remarks>
       </Docs>
     </Member>

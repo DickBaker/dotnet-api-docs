@@ -11,6 +11,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,6 +51,8 @@ This timer is intended to be used only by a single consumer at a time: only one 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="period" Type="System.TimeSpan" />
@@ -73,10 +77,12 @@ This timer is intended to be used only by a single consumer at a time: only one 
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="period" Type="System.TimeSpan" Index="0" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="timeProvider" Type="System.TimeProvider" Index="1" FrameworkAlternate="net-8.0;net-9.0" />
+        <Parameter Name="period" Type="System.TimeSpan" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0" />
+        <Parameter Name="timeProvider" Type="System.TimeProvider" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="period">The period between ticks.</param>
@@ -106,6 +112,8 @@ This timer is intended to be used only by a single consumer at a time: only one 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -137,6 +145,8 @@ This timer is intended to be used only by a single consumer at a time: only one 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -159,6 +169,8 @@ This timer is intended to be used only by a single consumer at a time: only one 
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -166,7 +178,7 @@ This timer is intended to be used only by a single consumer at a time: only one 
       <Docs>
         <summary>Gets or sets the period between ticks.</summary>
         <value>To be added.</value>
-        <remarks>All prior ticks of the timer, including any that may be waiting to be consumed by <see cref="M:System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)" />, are unaffected by changes to <see cref="P:System.Threading.PeriodicTimer.Period" />. Setting <see cref="P:System.Threading.PeriodicTimer.Period" /> affects only and all subsequent times at which the timer will tick.</remarks>
+        <remarks>All prior ticks of the timer, including any that might be waiting to be consumed by <see cref="M:System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)" />, are unaffected by changes to <see cref="P:System.Threading.PeriodicTimer.Period" />. Setting <see cref="P:System.Threading.PeriodicTimer.Period" /> affects only the current period and all subsequent times at which the timer will tick.</remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="value" /> must be <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" /> or represent a number of milliseconds equal to or larger than 1 and smaller than <see cref="F:System.UInt32.MaxValue" />.</exception>
       </Docs>
@@ -184,6 +196,8 @@ This timer is intended to be used only by a single consumer at a time: only one 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Boolean&gt;</ReturnType>
@@ -194,13 +208,16 @@ This timer is intended to be used only by a single consumer at a time: only one 
       <Docs>
         <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> for cancelling the asynchronous wait. If cancellation is requested, it affects only the single wait operation; the underlying timer continues firing.</param>
         <summary>Waits for the next tick of the timer, or for the timer to be stopped.</summary>
-        <returns>A task that will be completed due to the timer firing, <see cref="M:System.Threading.PeriodicTimer.Dispose" /> being called to stop the timer, or cancellation being requested.</returns>
+        <returns>A <see cref="T:System.Threading.Tasks.ValueTask`1" /> that will be completed due to the timer firing, <see cref="M:System.Threading.PeriodicTimer.Dispose" /> being called to stop the timer, or cancellation being requested.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
 
+The result of the returned <xref:System.Threading.Tasks.ValueTask`1> is `true` when it's completed due to the timer firing, and `false` when the timer is disposed. The returned <xref:System.Threading.Tasks.ValueTask`1> enters the Canceled state when cancellation is requested. If the <xref:System.Threading.CancellationToken> was already canceled when <xref:System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)> was called, the returned <xref:System.Threading.Tasks.ValueTask`1> is created in the Canceled state.
+
 The <xref:System.Threading.PeriodicTimer> behaves like an auto-reset event, in that multiple ticks are coalesced into a single tick if they occur between calls to <xref:System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)>. Similarly, a call to <xref:System.Threading.PeriodicTimer.Dispose> will void any tick not yet consumed. <xref:System.Threading.PeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)> may only be used by one consumer at a time, and may be used concurrently with a single call to <xref:System.Threading.PeriodicTimer.Dispose>.
+
 
           ]]></format>
         </remarks>

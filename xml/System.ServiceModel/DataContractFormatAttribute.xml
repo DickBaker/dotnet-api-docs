@@ -27,6 +27,8 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -34,6 +36,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Attribute</BaseTypeName>
@@ -48,24 +52,24 @@
   <Docs>
     <summary>Instructs the Windows Communication Foundation (WCF) infrastructure to use the <see cref="T:System.Runtime.Serialization.DataContractSerializer" />.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This attribute is similar to the <xref:System.ServiceModel.XmlSerializerFormatAttribute> attribute. Both attributes can be applied to either a method or a class.  
-  
- A method can have either of the two attributes applied, but not both. Any operation that has neither applied will use the attribute applied to the containing class. If the containing class does not have either attribute applied, the <xref:System.Runtime.Serialization.DataContractSerializer> is used.  
-  
- Applying the attribute also causes a <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> to be created at run time. The behavior allows customization at run time of the serializer behavior.  
-  
-   
-  
-## Examples  
- The following example applies the <xref:System.ServiceModel.DataContractFormatAttribute> and sets the <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> property to <xref:System.ServiceModel.OperationFormatStyle.Rpc>. The RPC style is described in the Web Service Description Language specification (WSDL).  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This attribute is similar to the <xref:System.ServiceModel.XmlSerializerFormatAttribute> attribute. Both attributes can be applied to either a method or a class.
+
+ A method can have either of the two attributes applied, but not both. Any operation that has neither applied will use the attribute applied to the containing class. If the containing class does not have either attribute applied, the <xref:System.Runtime.Serialization.DataContractSerializer> is used.
+
+ Applying the attribute also causes a <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> to be created at run time. The behavior allows customization at run time of the serializer behavior.
+
+
+
+## Examples
+ The following example applies the <xref:System.ServiceModel.DataContractFormatAttribute> and sets the <xref:System.ServiceModel.DataContractFormatAttribute.Style> property to <xref:System.ServiceModel.OperationFormatStyle.Rpc>. The RPC style is described in the Web Service Description Language specification (WSDL).
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/datacontractformatattribute/cs/source.cs" id="Snippet1":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/datacontractformatattribute/vb/source.vb" id="Snippet1":::
- :::code language="vb" source="~/snippets/csharp/VS_Snippets_CFX/datacontractformatattribute/cs/vb/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/csharp/VS_Snippets_CFX/datacontractformatattribute/cs/vb/source.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.ServiceModel.XmlSerializerFormatAttribute" />
@@ -91,7 +95,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -128,7 +132,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>

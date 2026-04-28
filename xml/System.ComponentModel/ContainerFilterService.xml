@@ -26,8 +26,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -41,11 +45,11 @@
   <Docs>
     <summary>Provides a base class for the container filter service.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ComponentModel.Container> and <xref:System.ComponentModel.NestedContainer> classes call the <xref:System.ComponentModel.ContainerFilterService.FilterComponents%2A> method each time they need to construct a component collection for return to a caller. <xref:System.ComponentModel.ContainerFilterService.FilterComponents%2A> may return an updated collection of components. This enables an external service to modify the view of components that are returned from a container.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ComponentModel.Container> and <xref:System.ComponentModel.NestedContainer> classes call the <xref:System.ComponentModel.ContainerFilterService.FilterComponents*> method each time they need to construct a component collection for return to a caller. <xref:System.ComponentModel.ContainerFilterService.FilterComponents*> may return an updated collection of components. This enables an external service to modify the view of components that are returned from a container.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -78,6 +82,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -120,6 +126,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.ComponentCollection</ReturnType>
@@ -132,11 +140,11 @@
         <summary>Filters the component collection.</summary>
         <returns>A <see cref="T:System.ComponentModel.ComponentCollection" /> that represents a modified collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ComponentModel.ContainerFilterService.FilterComponents%2A> method filters the component collection by optionally returning a new, modified collection. The default implementation returns the input collection, thereby performing no filtering.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ComponentModel.ContainerFilterService.FilterComponents*> method filters the component collection by optionally returning a new, modified collection. The default implementation returns the input collection, thereby performing no filtering.
+
  ]]></format>
         </remarks>
       </Docs>

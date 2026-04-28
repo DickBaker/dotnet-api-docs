@@ -22,12 +22,6 @@
     <BaseTypeName>System.IO.Stream</BaseTypeName>
   </Base>
   <Interfaces />
-  <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp">
-      <AttributeName Language="C#">[System.Obsolete("Use the Microsoft.Data.SqlClient package instead.")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Obsolete("Use the Microsoft.Data.SqlClient package instead.")&gt;]</AttributeName>
-    </Attribute>
-  </Attributes>
   <Docs>
     <summary>Exposes SQL Server data that is stored with the FILESTREAM column attribute as a sequence of bytes.</summary>
     <remarks>
@@ -44,8 +38,6 @@
  The <xref:System.Data.SqlTypes.SqlFileStream> class is derived from the <xref:System.IO.Stream> class, which represents an abstraction of a sequence of bytes from some arbitrary data source such as a file or a block of memory. You can read from a FILESTREAM by transferring data from a stream into a data structure such as an array of bytes. You can write to a FILESTREAM by transferring the data from a data structure into a stream. You can also seek within the stream, which allows you to query and modify data at the current position within the stream.
 
  For conceptual documentation and code examples, see [FILESTREAM Data](/dotnet/framework/data/adonet/sql/filestream-data).
-
- For documentation about setting up and configuring FILESTREAM data on SQL Server,  see [Designing and Implementing FILESTREAM Storage](https://go.microsoft.com/fwlink/?LinkId=121499) in SQL Server 2008 Books Online.
 
  ]]></format>
     </remarks>
@@ -111,7 +103,7 @@
 
  When using <see langword="FileAccess.Write" />, <see langword="SqlFileStream" /> points to a zero byte file. Existing data will be overwritten when the object is closed and the transaction is committed.
 
- When using <see langword="FileAccess.ReadWrite" />, the <see langword="SqlFileStream" /> points to a file which has all the existing data in it. The handle is positioned at the beginning of the file. You can use one of the <see langword="System.IO" /><see langword="Seek" /> methods to move the handle position within the file to write or append new data.</param>
+ When using <see langword="FileAccess.ReadWrite" />, the <see langword="SqlFileStream" /> points to a file that has all the existing data in it. The handle is positioned at the beginning of the file. You can use one of the <see langword="System.IO" /><see langword="Seek" /> methods to move the handle position within the file to write or append new data.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Data.SqlTypes.SqlFileStream" /> class.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[
@@ -175,7 +167,7 @@
 
  When using <see langword="FileAccess.Write" />, <see langword="SqlFileStream" /> points to a zero byte file. Existing data will be overwritten when the object is closed and the transaction is committed.
 
- When using <see langword="FileAccess.ReadWrite" />, the <see langword="SqlFileStream" /> points to a file which has all the existing data in it. The handle is positioned at the beginning of the file. You can use one of the <see langword="System.IO" /><see langword="Seek" /> methods to move the handle position within the file to write or append new data.</param>
+ When using <see langword="FileAccess.ReadWrite" />, the <see langword="SqlFileStream" /> points to a file that has all the existing data in it. The handle is positioned at the beginning of the file. You can use one of the <see langword="System.IO" /><see langword="Seek" /> methods to move the handle position within the file to write or append new data.</param>
         <param name="options">Specifies the option to use while opening the file. Supported <see cref="T:System.IO.FileOptions" /> values are <see cref="F:System.IO.FileOptions.Asynchronous" />, <see cref="F:System.IO.FileOptions.WriteThrough" />, <see cref="F:System.IO.FileOptions.SequentialScan" />, and <see cref="F:System.IO.FileOptions.RandomAccess" />.</param>
         <param name="allocationSize">The allocation size to use while creating a file. If set to 0, the default value is used.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Data.SqlTypes.SqlFileStream" /> class.</summary>
@@ -227,11 +219,11 @@
         <ReturnType>System.IAsyncResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="buffer" Type="System.Byte[]" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="offset" Type="System.Int32" Index="1" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="callback" Type="System.AsyncCallback" Index="3" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="state" Type="System.Object" Index="4" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
       </Parameters>
       <Docs>
         <param name="buffer">The buffer to read the data into.</param>
@@ -245,7 +237,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead%2A> property to determine whether the current instance supports reading.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead> property to determine whether the current instance supports reading.
 
  ]]></format>
         </remarks>
@@ -274,11 +266,11 @@
         <ReturnType>System.IAsyncResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="buffer" Type="System.Byte[]" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="offset" Type="System.Int32" Index="1" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="callback" Type="System.AsyncCallback" Index="3" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="state" Type="System.Object" Index="4" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
       </Parameters>
       <Docs>
         <param name="buffer">The buffer to write data from.</param>
@@ -292,7 +284,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanWrite%2A> property to determine whether the current instance supports writing.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanWrite> property to determine whether the current instance supports writing.
 
  ]]></format>
         </remarks>
@@ -374,7 +366,7 @@
         <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute>
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
         </Attribute>
@@ -438,7 +430,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
         <param name="disposing">
@@ -446,7 +438,7 @@
         <summary>Releases the unmanaged resources used and optionally releases the managed resources.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[
-This method calls <xref:Stream.Dispose%2A>.
+This method calls <xref:Stream.Dispose*>.
           ]]></format>
         </remarks>
       </Docs>
@@ -472,7 +464,7 @@ This method calls <xref:Stream.Dispose%2A>.
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="asyncResult" Type="System.IAsyncResult" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
       </Parameters>
       <Docs>
         <param name="asyncResult">The reference to the pending asynchronous request to finish.</param>
@@ -504,7 +496,7 @@ This method calls <xref:Stream.Dispose%2A>.
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="asyncResult" Type="System.IAsyncResult" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
       </Parameters>
       <Docs>
         <param name="asyncResult">A reference to the outstanding asynchronous I/O request.</param>
@@ -650,12 +642,11 @@ This method calls <xref:Stream.Dispose%2A>.
     </Member>
     <Member MemberName="Read">
       <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read(unsigned int8[] buffer, int32 offset, int32 count) cil managed" FrameworkAlternate="net-6.0-pp;net-8.0-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.SqlTypes.SqlFileStream.Read(System.Byte[],System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Read (buffer As Byte(), offset As Integer, count As Integer) As Integer" />
       <MemberSignature Language="F#" Value="override this.Read : byte[] * int * int -&gt; int" Usage="sqlFileStream.Read (buffer, offset, count)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int Read(cli::array &lt;System::Byte&gt; ^ buffer, int offset, int count);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] buffer, int32 offset, int32 count) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -684,7 +675,7 @@ This method calls <xref:Stream.Dispose%2A>.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead%2A> property to determine whether the current instance supports writing.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead> property to determine whether the current instance supports writing.
 
  ]]></format>
         </remarks>
@@ -720,7 +711,7 @@ This method calls <xref:Stream.Dispose%2A>.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead%2A> property to determine whether the current instance supports reading.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead> property to determine whether the current instance supports reading.
 
  ]]></format>
         </remarks>
@@ -746,7 +737,7 @@ This method calls <xref:Stream.Dispose%2A>.
         <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute>
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
         </Attribute>
@@ -824,7 +815,7 @@ This method calls <xref:Stream.Dispose%2A>.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead%2A> property to determine whether the current instance supports reading.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanRead> property to determine whether the current instance supports reading.
 
  ]]></format>
         </remarks>
@@ -893,7 +884,7 @@ This method calls <xref:Stream.Dispose%2A>.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanWrite%2A> property to determine whether the current instance supports writing.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanWrite> property to determine whether the current instance supports writing.
 
  ]]></format>
         </remarks>
@@ -922,7 +913,7 @@ This method calls <xref:Stream.Dispose%2A>.
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="value" Type="System.Byte" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="value" Type="System.Byte" />
       </Parameters>
       <Docs>
         <param name="value">The byte to write to the stream.</param>
@@ -931,7 +922,7 @@ This method calls <xref:Stream.Dispose%2A>.
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Data.SqlTypes.SqlFileStream.CanWrite%2A> property to determine whether the current instance supports writing.
+ Use the <xref:System.Data.SqlTypes.SqlFileStream.CanWrite> property to determine whether the current instance supports writing.
 
  ]]></format>
         </remarks>
@@ -957,7 +948,7 @@ This method calls <xref:Stream.Dispose%2A>.
         <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
+        <Attribute>
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
         </Attribute>

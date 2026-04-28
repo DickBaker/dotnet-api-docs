@@ -1,6 +1,6 @@
 <Type Name="DirectoryInfo" FullName="System.IO.DirectoryInfo">
   <TypeSignature Language="C#" Value="public sealed class DirectoryInfo : System.IO.FileSystemInfo" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectoryInfo extends System.IO.FileSystemInfo" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectoryInfo extends System.IO.FileSystemInfo" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.IO.DirectoryInfo" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DirectoryInfo&#xA;Inherits FileSystemInfo" />
   <TypeSignature Language="F#" Value="type DirectoryInfo = class&#xA;    inherit FileSystemInfo" />
@@ -34,8 +34,14 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.IO.FileSystem" FromVersion="10.0.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.IO.FileSystem" FromVersion="11.0.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.IO.FileSystem" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="System.IO.FileSystem" FromVersion="6.0.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -51,7 +57,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -96,16 +102,15 @@
 ## Examples
  The following example demonstrates some of the main members of the `DirectoryInfo` class.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/DirInfo Class Example/CPP/dirinfo class example.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Overview/dirinfo class example.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Overview/dirinfo class example.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirInfo Class Example/VB/dirinfo class example.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Overview/dirinfo class example.vb" id="Snippet1":::
 
  The following example demonstrates how to copy a directory and its contents.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Overview/copydir.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Overview/copydir.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/IO.DirectoryInfo-CopyDir/vb/CopyDir.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Overview/CopyDir.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -155,6 +160,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -184,10 +191,9 @@
 ## Examples
  The following example uses this constructor to create the specified directory and subdirectory, and demonstrates that a directory that contains subdirectories cannot be deleted.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/DirInfo Ctor/CPP/dirinfo ctor.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/.ctor/dirinfo ctor.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/.ctor/dirinfo ctor.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirInfo Ctor/VB/dirinfo ctor.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/.ctor/dirinfo ctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -247,6 +253,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -266,10 +274,9 @@
 ## Examples
  The following example checks whether a specified directory exists, creates the directory if it does not exist, and deletes the directory.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/DirInfo Create/CPP/dirinfo create.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Create/dirinfo create.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Create/dirinfo create.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirInfo Create/VB/dirinfo create.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Create/dirinfo create.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -352,7 +359,6 @@ namespace ConsoleApp
  ]]></format>
         </remarks>
         <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
-        <exception cref="T:System.ArgumentException">.NET Framework and .NET Core versions older than 2.1: <paramref name="path" /> is a zero-length string, contains only white space, or contains one or more invalid characters. You can query for invalid characters by using the <see cref="M:System.IO.Path.GetInvalidPathChars" /> method.</exception>
         <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. </exception>
         <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid, such as being on an unmapped drive.</exception>
         <exception cref="T:System.NotSupportedException">Creating a directory with only the colon (:) character was attempted.</exception>
@@ -403,6 +409,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -431,10 +439,9 @@ namespace ConsoleApp
 ## Examples
  The following example demonstrates creating a subdirectory. In this example, the created directories are removed once created. Therefore, to test this sample, comment out the delete lines in the code.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/directoryinfocreatesub/CPP/directoryinfocreatesub.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/CreateSubdirectory/directoryinfocreatesub.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/CreateSubdirectory/directoryinfocreatesub.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfocreatesub/VB/directoryinfocreatesub.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/CreateSubdirectory/directoryinfocreatesub.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -576,6 +583,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -600,10 +609,9 @@ namespace ConsoleApp
 ## Examples
  The following example throws an exception if you attempt to delete a directory that is not empty.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/DirInfo Delete1/CPP/dirinfo delete1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Delete/dirinfo delete1.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Delete/dirinfo delete1.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirInfo Delete1/VB/dirinfo delete1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Delete/dirinfo delete1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -659,6 +667,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -689,10 +699,9 @@ namespace ConsoleApp
 ## Examples
  The following example demonstrates deleting a directory. Because the directory is removed, first comment out the `Delete` line to test that the directory exists. Then uncomment the same line of code to test that the directory was removed successfully.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/directoryinfodelete/CPP/directoryinfodelete.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Delete/directoryinfodelete.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Delete/directoryinfodelete.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfodelete/VB/directoryinfodelete.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Delete/directoryinfodelete.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -760,6 +769,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -778,42 +789,42 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> and <xref:System.IO.DirectoryInfo.GetDirectories%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateDirectories*> and <xref:System.IO.DirectoryInfo.GetDirectories*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories*>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetDirectories%2A>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetDirectories*>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on  the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on  the collection will start a new enumeration.
 
 
 
 ## Examples
- The following example enumerates the subdirectories under the C:\Program Files directory and uses a LINQ query to return the names of all directories that were created before 2009 by checking the value of the <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A> property.
+ The following example enumerates the subdirectories under the C:\Program Files directory and uses a LINQ query to return the names of all directories that were created before 2009 by checking the value of the <xref:System.IO.FileSystemInfo.CreationTimeUtc> property.
 
- If you only need the names of the subdirectories, use the static <xref:System.IO.Directory> class for better performance. For an example, see the <xref:System.IO.Directory.EnumerateDirectories%28System.String%29> method.
+ If you only need the names of the subdirectories, use the static <xref:System.IO.Directory> class for better performance. For an example, see the <xref:System.IO.Directory.EnumerateDirectories(System.String)> method.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/EnumerateDirectories/program.cs":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/EnumerateDirectories/program.fs":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/EnumerateDirectories/module1.vb":::
 
  ]]></format>
         </remarks>
@@ -854,6 +865,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -865,7 +878,7 @@ namespace ConsoleApp
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -884,31 +897,31 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> and <xref:System.IO.DirectoryInfo.GetDirectories%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateDirectories*> and <xref:System.IO.DirectoryInfo.GetDirectories*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories*>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetDirectories%2A>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetDirectories*>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on  the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on  the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -945,13 +958,15 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -971,31 +986,31 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> and <xref:System.IO.DirectoryInfo.GetDirectories%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateDirectories*> and <xref:System.IO.DirectoryInfo.GetDirectories*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories*>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetDirectories%2A>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetDirectories*>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on  the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on  the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -1038,6 +1053,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1049,8 +1066,8 @@ namespace ConsoleApp
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.DirectoryInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1070,40 +1087,40 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> and <xref:System.IO.DirectoryInfo.GetDirectories%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateDirectories*> and <xref:System.IO.DirectoryInfo.GetDirectories*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateDirectories*>, you can start enumerating the collection of <xref:System.IO.DirectoryInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetDirectories%2A>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetDirectories*>, you must wait for the whole array of <xref:System.IO.DirectoryInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateDirectories*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on  the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on  the collection will start a new enumeration.
 
 
 
 ## Examples
- The following example uses this method and the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> method to enumerate the files and directories within the start directory and display the name and size of any files over 10 MB.
+ The following example uses this method and the <xref:System.IO.DirectoryInfo.EnumerateFiles*> method to enumerate the files and directories within the start directory and display the name and size of any files over 10 MB.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/EnumerateDirectories/program1.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/EnumerateDirectories/program1.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/EnumerateDirectories/program.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1158,6 +1175,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1176,50 +1195,50 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
 
 
 ## Examples
- The following example enumerates the files under a specified directory and uses a LINQ query to return the names of all files that were created before 2009 by checking the value of the <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A> property.
+ The following example enumerates the files under a specified directory and uses a LINQ query to return the names of all files that were created before 2009 by checking the value of the <xref:System.IO.FileSystemInfo.CreationTimeUtc> property.
 
- If you only need the names of the files, use the static <xref:System.IO.Directory> class for better performance. For an example, see the <xref:System.IO.Directory.EnumerateFiles%28System.String%29?displayProperty=nameWithType> method.
+ If you only need the names of the files, use the static <xref:System.IO.Directory> class for better performance. For an example, see the <xref:System.IO.Directory.EnumerateFiles(System.String)?displayProperty=nameWithType> method.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/EnumerateFiles/program.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/EnumerateFiles/program.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/EnumerateFiles/module1.vb" id="Snippet1":::
 
  The following example shows how to enumerate files in a directory by using different search options. The example assumes a directory that has files named log1.txt, log2.txt, test1.txt, test2.txt, test3.txt, and a subdirectory that has a file named SubFile.txt.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/EnumerateFiles/program2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/EnumerateFiles/program2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/EnumerateFiles/module2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -1260,6 +1279,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1271,7 +1292,7 @@ namespace ConsoleApp
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of files.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1290,33 +1311,33 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
 
 
@@ -1325,7 +1346,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/EnumerateFiles/program2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/EnumerateFiles/program2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/EnumerateFiles/module2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -1362,13 +1383,15 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1388,33 +1411,33 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -1457,6 +1480,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1468,8 +1493,8 @@ namespace ConsoleApp
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of files.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1489,33 +1514,33 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
 
 
@@ -1524,7 +1549,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/EnumerateFiles/program2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/EnumerateFiles/program2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumfiles/vb/module2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/EnumerateFiles/module2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -1579,6 +1604,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1597,31 +1624,31 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos*>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -1663,6 +1690,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1674,7 +1703,7 @@ namespace ConsoleApp
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1693,31 +1722,31 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos*>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -1755,13 +1784,15 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1781,31 +1812,31 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos*>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -1848,6 +1879,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1859,8 +1892,8 @@ namespace ConsoleApp
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.FileSystemInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -1880,31 +1913,31 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> and <xref:System.IO.DirectoryInfo.GetFileSystemInfos*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*>, you can start enumerating the collection of <xref:System.IO.FileSystemInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFileSystemInfos*>, you must wait for the whole array of <xref:System.IO.FileSystemInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos*> can be more efficient.
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
- The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method on the collection will start a new enumeration.
+ The returned collection is not cached; each call to the <xref:System.Collections.Generic.IEnumerable`1.GetEnumerator*> method on the collection will start a new enumeration.
 
  ]]></format>
         </remarks>
@@ -1952,6 +1985,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -1970,17 +2005,16 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.DirectoryInfo.Exists%2A> property returns `false` if any error occurs while trying to determine if the specified file exists. This can occur in situations that raise exceptions such as passing a file name with invalid characters or too many characters, a failing or missing disk, or if the caller does not have permission to read the file.
+ The <xref:System.IO.DirectoryInfo.Exists> property returns `false` if any error occurs while trying to determine if the specified file exists. This can occur in situations that raise exceptions such as passing a file name with invalid characters or too many characters, a failing or missing disk, or if the caller does not have permission to read the file.
 
 
 
 ## Examples
  The following example demonstrates a use of the `Exists` property in the context of copying a source directory to a target directory.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/DirectoryInfo Usage Example/CPP/copydirectory.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Exists/copydirectory.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Exists/copydirectory.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirectoryInfo Usage Example/VB/copydirectory.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Exists/copydirectory.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2037,7 +2071,7 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use <xref:System.IO.DirectoryInfo.GetAccessControl%2A> methods to retrieve the access control list (ACL) entries for the current file.
+ Use <xref:System.IO.DirectoryInfo.GetAccessControl*> methods to retrieve the access control list (ACL) entries for the current file.
 
  For more information, see [How to: Add or Remove Access Control List Entries](/dotnet/standard/io/how-to-add-or-remove-access-control-list-entries).
 
@@ -2078,17 +2112,16 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Calling this method overload is equivalent to calling the <xref:System.IO.Directory.GetAccessControl%2A> method overload and specifying the access control sections <xref:System.Security.AccessControl.AccessControlSections.Access?displayProperty=nameWithType> &#124; <xref:System.Security.AccessControl.AccessControlSections.Owner?displayProperty=nameWithType> &#124; <xref:System.Security.AccessControl.AccessControlSections.Group?displayProperty=nameWithType> (<xref:System.Security.AccessControl.AccessControlSections.Access?displayProperty=nameWithType> `Or` <xref:System.Security.AccessControl.AccessControlSections.Owner?displayProperty=nameWithType> `Or` <xref:System.Security.AccessControl.AccessControlSections.Group?displayProperty=nameWithType> in Visual Basic).
+ Calling this method overload is equivalent to calling the <xref:System.IO.Directory.GetAccessControl*> method overload and specifying the access control sections <xref:System.Security.AccessControl.AccessControlSections.Access?displayProperty=nameWithType> &#124; <xref:System.Security.AccessControl.AccessControlSections.Owner?displayProperty=nameWithType> &#124; <xref:System.Security.AccessControl.AccessControlSections.Group?displayProperty=nameWithType> (<xref:System.Security.AccessControl.AccessControlSections.Access?displayProperty=nameWithType> `Or` <xref:System.Security.AccessControl.AccessControlSections.Owner?displayProperty=nameWithType> `Or` <xref:System.Security.AccessControl.AccessControlSections.Group?displayProperty=nameWithType> in Visual Basic).
 
  An ACL describes individuals and groups who have, or don't have, rights to specific actions on the given file or directory. For more information, see [How to: Add or Remove Access Control List Entries](/dotnet/standard/io/how-to-add-or-remove-access-control-list-entries).
 
 ## Examples
- The following example uses the <xref:System.IO.DirectoryInfo.GetAccessControl%2A> and <xref:System.IO.DirectoryInfo.SetAccessControl%2A> methods to add and then remove an access control list (ACL) entry from a directory.
+ The following example uses the <xref:System.IO.DirectoryInfo.GetAccessControl*> and <xref:System.IO.DirectoryInfo.SetAccessControl*> methods to add and then remove an access control list (ACL) entry from a directory.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetAccessControl/sample.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetAccessControl/sample.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/VB/sample.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetAccessControl/sample.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2141,7 +2174,7 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IO.DirectoryInfo.GetAccessControl%2A> method to retrieve the access control list (ACL) entries for the current file.
+ Use the <xref:System.IO.DirectoryInfo.GetAccessControl*> method to retrieve the access control list (ACL) entries for the current file.
 
  An ACL describes individuals and groups who have, or don't have, rights to specific actions on the given file or directory. For more information, see [How to: Add or Remove Access Control List Entries](/dotnet/standard/io/how-to-add-or-remove-access-control-list-entries).
 
@@ -2198,6 +2231,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2220,29 +2255,28 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
 
 
 ## Examples
  The following example retrieves all the directories in the root directory and displays the directory names.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/directoryinfogetdirectories/CPP/directoryinfogetdirectories.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetDirectories/directoryinfogetdirectories.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetDirectories/directoryinfogetdirectories.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetdirectories/VB/directoryinfogetdirectories.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetDirectories/directoryinfogetdirectories.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2289,6 +2323,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2321,27 +2357,26 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
 ## Examples
  The following example counts the directories in a path that contain the specified letter.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/DirInfo GetDirs2/CPP/dirinfo getdirs2.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetDirectories/dirinfo getdirs2.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetDirectories/dirinfo getdirs2.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirInfo GetDirs2/VB/dirinfo getdirs2.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetDirectories/dirinfo getdirs2.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -2382,13 +2417,15 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.DirectoryInfo[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -2410,19 +2447,19 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
  ]]></format>
         </remarks>
@@ -2467,6 +2504,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2478,8 +2517,8 @@ namespace ConsoleApp
         <ReturnType>System.IO.DirectoryInfo[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -2503,29 +2542,28 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.DirectoryInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
 
 
 ## Examples
  The following example lists all of the directories and files that begin with the letter "c" in "c:\\".
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/cpp/searchoption.cpp" id="Snippet00":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetDirectories/searchoption.cs" id="Snippet00":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetDirectories/searchoption.fs" id="Snippet00":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DirectoryInfo_SearchOptions/vb/searchoption.vb" id="Snippet00":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetDirectories/searchoption.vb" id="Snippet00":::
 
  ]]></format>
         </remarks>
@@ -2586,6 +2624,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2604,35 +2644,35 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  If there are no files in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
- The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort%2A> method if a specific sort order is required.
+ The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort*> method if a specific sort order is required.
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
 
 
@@ -2641,7 +2681,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetfiles/VB/directoryinfogetfiles2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -2686,6 +2726,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2716,13 +2758,13 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  If there are no files in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
@@ -2733,7 +2775,7 @@ namespace ConsoleApp
 |*|Zero or more characters.|
 |?|Exactly zero or one character.|
 
- The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort%2A> method if a specific sort order is required.
+ The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort*> method if a specific sort order is required.
 
  Wildcards are permitted. For example, the `searchPattern` string "*.txt" searches for all file names having an extension of "txt". The `searchPattern` string "s\*" searches for all file names beginning with the letter "s". If there are no files, or no files that match the `searchPattern` string in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
@@ -2745,21 +2787,21 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
 
 
@@ -2768,7 +2810,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetfiles/VB/directoryinfogetfiles2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -2809,13 +2851,15 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileInfo[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -2835,13 +2879,13 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  If there are no files in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
@@ -2852,7 +2896,7 @@ namespace ConsoleApp
 |*|Zero or more characters.|
 |?|Exactly zero or one character.|
 
- The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort%2A> method if a specific sort order is required.
+ The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort*> method if a specific sort order is required.
 
  Wildcards are permitted. For example, the `searchPattern` string "*.txt" searches for all file names having an extension of "txt". The `searchPattern` string "s\*" searches for all file names beginning with the letter "s". If there are no files, or no files that match the `searchPattern` string in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
@@ -2864,21 +2908,21 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
--   <xref:System.IO.FileInfo.Length%2A>
+-   <xref:System.IO.FileInfo.Length*>
 
  ]]></format>
         </remarks>
@@ -2923,6 +2967,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2934,8 +2980,8 @@ namespace ConsoleApp
         <ReturnType>System.IO.FileInfo[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of files.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -2946,13 +2992,13 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> and <xref:System.IO.DirectoryInfo.GetFiles%2A> methods differ as follows:
+ The <xref:System.IO.DirectoryInfo.EnumerateFiles*> and <xref:System.IO.DirectoryInfo.GetFiles*> methods differ as follows:
 
--   When you use <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
+- When you use <xref:System.IO.DirectoryInfo.EnumerateFiles*>, you can start enumerating the collection of <xref:System.IO.FileInfo> objects before the whole collection is returned.
 
--   When you use <xref:System.IO.DirectoryInfo.GetFiles%2A>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
+- When you use <xref:System.IO.DirectoryInfo.GetFiles*>, you must wait for the whole array of <xref:System.IO.FileInfo> objects to be returned before you can access the array.
 
- Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> can be more efficient.
+ Therefore, when you are working with many files and directories, <xref:System.IO.DirectoryInfo.EnumerateFiles*> can be more efficient.
 
  If there are no files in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
@@ -2963,7 +3009,7 @@ namespace ConsoleApp
 |\* (asterisk)|Zero or more characters.|
 |? (question mark)|Exactly zero or one character.|
 
- The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort%2A> method if a specific sort order is required.
+ The order of the returned file names is not guaranteed; use the <xref:System.Array.Sort*> method if a specific sort order is required.
 
  Wildcards are permitted. For example, the `searchPattern` string "*.txt" searches for all file names having an extension of "txt". The `searchPattern` string "s\*" searches for all file names beginning with the letter "s". If there are no files, or no files that match the `searchPattern` string in the <xref:System.IO.DirectoryInfo>, this method returns an empty array.
 
@@ -2985,21 +3031,21 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.FileInfo> properties:
 
-1.  <xref:System.IO.FileSystemInfo.Attributes%2A>
+1.  <xref:System.IO.FileSystemInfo.Attributes*>
 
-2.  <xref:System.IO.FileSystemInfo.CreationTime%2A>
+2.  <xref:System.IO.FileSystemInfo.CreationTime*>
 
-3.  <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+3.  <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
-4.  <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+4.  <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
-5.  <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+5.  <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
-6.  <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+6.  <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
-7.  <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+7.  <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
-8.  <xref:System.IO.FileInfo.Length%2A>
+8.  <xref:System.IO.FileInfo.Length*>
 
 
 
@@ -3008,7 +3054,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfogetfiles/VB/directoryinfogetfiles2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetFiles/directoryinfogetfiles2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -3069,6 +3115,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -3089,23 +3137,23 @@ namespace ConsoleApp
 ## Remarks
  If there are no files or directories in the <xref:System.IO.DirectoryInfo>, this method returns an empty array. This method is not recursive.
 
- For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
+ For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
 
 
@@ -3114,7 +3162,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetFileSystemInfos/fsizesort.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetFileSystemInfos/fsizesort.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/FSizeSort/VB/fsizesort.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetFileSystemInfos/fsizesort.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -3161,6 +3209,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -3193,7 +3243,7 @@ namespace ConsoleApp
 
  This method is not recursive.
 
- For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
+ For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
 
  Wild cards are permitted. For example, the `searchPattern` string "\*t" searches for all directory names in `path` ending with the letter "t". The `searchPattern` string "s\*" searches for all directory names in `path` beginning with the letter "s".
 
@@ -3201,19 +3251,19 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
 
 
@@ -3222,7 +3272,7 @@ namespace ConsoleApp
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetFileSystemInfos/dirinfo getfilesysinfos2.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetFileSystemInfos/dirinfo getfilesysinfos2.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/DirInfo GetFileSysInfos2/VB/dirinfo getfilesysinfos2.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetFileSystemInfos/dirinfo getfilesysinfos2.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -3265,13 +3315,15 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileSystemInfo[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="enumerationOptions" Type="System.IO.EnumerationOptions" Index="1" FrameworkAlternate="netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -3293,7 +3345,7 @@ namespace ConsoleApp
 
  This method is not recursive.
 
- For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
+ For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
 
  Wild cards are permitted. For example, the `searchPattern` string "\*t" searches for all directory names in `path` ending with the letter "t". The `searchPattern` string "s\*" searches for all directory names in `path` beginning with the letter "s".
 
@@ -3301,19 +3353,19 @@ namespace ConsoleApp
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
  ]]></format>
         </remarks>
@@ -3357,6 +3409,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -3368,8 +3422,8 @@ namespace ConsoleApp
         <ReturnType>System.IO.FileSystemInfo[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchPattern" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="searchOption" Type="System.IO.SearchOption" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="searchPattern">The search string to match against the names of directories and files.  This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
@@ -3389,23 +3443,23 @@ namespace ConsoleApp
 
  Characters other than the wildcard are literal characters. For example, the string "\*t" searches for all names in  ending with the letter "t". ". The `searchPattern` string "s\*" searches for all names in `path` beginning with the letter "s".
 
- For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes%2A?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
+ For subdirectories, the <xref:System.IO.FileSystemInfo> objects returned by this method can be cast to the derived class <xref:System.IO.DirectoryInfo>. Use the <xref:System.IO.FileAttributes> value returned by the <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> property to determine whether the <xref:System.IO.FileSystemInfo> represents a file or a directory.
 
  This method pre-populates the values of the following <xref:System.IO.FileSystemInfo> properties:
 
--   <xref:System.IO.FileSystemInfo.Attributes%2A>
+-   <xref:System.IO.FileSystemInfo.Attributes*>
 
--   <xref:System.IO.FileSystemInfo.CreationTime%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTime*>
 
--   <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.CreationTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTime*>
 
--   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastAccessTimeUtc*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTime%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTime*>
 
--   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A>
+-   <xref:System.IO.FileSystemInfo.LastWriteTimeUtc*>
 
  ]]></format>
         </remarks>
@@ -3454,6 +3508,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -3485,10 +3541,9 @@ namespace ConsoleApp
 ## Examples
  The following example demonstrates moving a directory.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/directoryinfomoveto/CPP/directoryinfomoveto.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/MoveTo/directoryinfomoveto.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/MoveTo/directoryinfomoveto.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfomoveto/VB/directoryinfomoveto.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/MoveTo/directoryinfomoveto.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -3551,6 +3606,8 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -3562,9 +3619,9 @@ namespace ConsoleApp
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This <xref:System.IO.DirectoryInfo.Name%2A> property returns only the name of the directory, such as "Bin". To get the full path, such as "c:\public\Bin", use the <xref:System.IO.FileSystemInfo.FullName%2A> property.
+ This <xref:System.IO.DirectoryInfo.Name> property returns only the name of the directory, such as "Bin". To get the full path, such as "c:\public\Bin", use the <xref:System.IO.FileSystemInfo.FullName> property.
 
- The <xref:System.IO.DirectoryInfo.Name%2A> property of a <xref:System.IO.DirectoryInfo> requires no permission (beyond the read permission to the directory necessary to construct the <xref:System.IO.DirectoryInfo.Exists%2A>) but can give out the directory name. If it is necessary to hand out a <xref:System.IO.DirectoryInfo> to a protected directory with a cryptographically secure name, create a dummy directory for the untrusted code's use.
+ The <xref:System.IO.DirectoryInfo.Name> property of a <xref:System.IO.DirectoryInfo> requires no permission (beyond the read permission to the directory necessary to construct the <xref:System.IO.DirectoryInfo.Exists*>) but can give out the directory name. If it is necessary to hand out a <xref:System.IO.DirectoryInfo> to a protected directory with a cryptographically secure name, create a dummy directory for the untrusted code's use.
 
  For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/common-i-o-tasks).
 
@@ -3573,10 +3630,9 @@ namespace ConsoleApp
 ## Examples
  The following example displays the name of the current `DirectoryInfo` instance only.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_Classic/classic DirectoryInfo.Name Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Name/source.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Name/source.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_Classic/classic DirectoryInfo.Name Example/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Name/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -3593,7 +3649,7 @@ namespace ConsoleApp
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As DirectoryInfo" />
       <MemberSignature Language="F#" Value="member this.Parent : System.IO.DirectoryInfo" Usage="System.IO.DirectoryInfo.Parent" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::IO::DirectoryInfo ^ Parent { System::IO::DirectoryInfo ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo? Parent { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo? Parent { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem</AssemblyName>
@@ -3622,9 +3678,11 @@ namespace ConsoleApp
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -3660,10 +3718,9 @@ For a list of common I/O tasks, see [Common I/O Tasks](/dotnet/standard/io/commo
 
 The following example refers to the parent directory of a specified directory.
 
-:::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/directoryinfoparent/CPP/directoryinfoparent.cpp" id="Snippet1":::
 :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Parent/directoryinfoparent.cs" id="Snippet1":::
 :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Parent/directoryinfoparent.fs" id="Snippet1":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinfoparent/VB/directoryinfoparent.vb" id="Snippet1":::
+:::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Parent/directoryinfoparent.vb" id="Snippet1":::
 
           ]]></format>
         </remarks>
@@ -3708,6 +3765,8 @@ The following example refers to the parent directory of a specified directory.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -3729,7 +3788,7 @@ The following example refers to the parent directory of a specified directory.
 
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/Root/directoryinforoot2.cs" id="Snippet2":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/Root/directoryinforoot2.fs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/directoryinforoot/VB/directoryinforoot2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/Root/directoryinforoot2.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -3782,34 +3841,33 @@ The following example refers to the parent directory of a specified directory.
 ## Remarks
  An access control list (ACL) describes individuals and groups who have, or don't have, rights to specific actions on the given file or directory. For more information, see [How to: Add or Remove Access Control List Entries](/dotnet/standard/io/how-to-add-or-remove-access-control-list-entries).
 
- The <xref:System.IO.DirectoryInfo.SetAccessControl%2A> method applies ACL entries to a file that represents the noninherited ACL list.
+ The <xref:System.IO.DirectoryInfo.SetAccessControl*> method applies ACL entries to a file that represents the noninherited ACL list.
 
 > [!CAUTION]
->  The ACL specified for `directorySecurity` replaces the existing ACL for the directory. To add permissions for a new user, use the <xref:System.IO.DirectoryInfo.GetAccessControl%2A> method to obtain the existing ACL, and modify it.
+>  The ACL specified for `directorySecurity` replaces the existing ACL for the directory. To add permissions for a new user, use the <xref:System.IO.DirectoryInfo.GetAccessControl*> method to obtain the existing ACL, and modify it.
 
- The <xref:System.IO.DirectoryInfo.SetAccessControl%2A> method persists only <xref:System.Security.AccessControl.DirectorySecurity> objects that have been modified after object creation.  If a <xref:System.Security.AccessControl.DirectorySecurity> object has not been modified, it will not be persisted to a file.  Therefore, it is not possible to retrieve a <xref:System.Security.AccessControl.DirectorySecurity> object from one file and reapply the same object to another file.
+ The <xref:System.IO.DirectoryInfo.SetAccessControl*> method persists only <xref:System.Security.AccessControl.DirectorySecurity> objects that have been modified after object creation.  If a <xref:System.Security.AccessControl.DirectorySecurity> object has not been modified, it will not be persisted to a file.  Therefore, it is not possible to retrieve a <xref:System.Security.AccessControl.DirectorySecurity> object from one file and reapply the same object to another file.
 
  To copy ACL information from one file to another:
 
-1.  Use the <xref:System.IO.DirectoryInfo.GetAccessControl%2A> method to retrieve the <xref:System.Security.AccessControl.DirectorySecurity> object from the source file.
+1.  Use the <xref:System.IO.DirectoryInfo.GetAccessControl*> method to retrieve the <xref:System.Security.AccessControl.DirectorySecurity> object from the source file.
 
 2.  Create a new <xref:System.Security.AccessControl.DirectorySecurity> object for the destination file.
 
-3.  Use the <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorBinaryForm%2A> or <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm%2A> method of the source <xref:System.Security.AccessControl.DirectorySecurity> object to retrieve the ACL information.
+3.  Use the <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorBinaryForm*> or <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm*> method of the source <xref:System.Security.AccessControl.DirectorySecurity> object to retrieve the ACL information.
 
-4.  Use the <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorBinaryForm%2A> or <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm%2A> method to copy the information retrieved in step 3 to the destination <xref:System.Security.AccessControl.DirectorySecurity> object.
+4.  Use the <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorBinaryForm*> or <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm*> method to copy the information retrieved in step 3 to the destination <xref:System.Security.AccessControl.DirectorySecurity> object.
 
-5.  Set the destination <xref:System.Security.AccessControl.DirectorySecurity> object to the destination file using the <xref:System.IO.DirectoryInfo.SetAccessControl%2A> method.
+5.  Set the destination <xref:System.Security.AccessControl.DirectorySecurity> object to the destination file using the <xref:System.IO.DirectoryInfo.SetAccessControl*> method.
 
 
 
 ## Examples
- The following example uses the <xref:System.IO.DirectoryInfo.GetAccessControl%2A> and <xref:System.IO.DirectoryInfo.SetAccessControl%2A> methods to add and then remove an access control list (ACL) entry from a directory.
+ The following example uses the <xref:System.IO.DirectoryInfo.GetAccessControl*> and <xref:System.IO.DirectoryInfo.SetAccessControl*> methods to add and then remove an access control list (ACL) entry from a directory.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/cpp/sample.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.IO/DirectoryInfo/GetAccessControl/sample.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/DirectoryInfo/GetAccessControl/sample.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/IO.DiretoryInfo.GetAccessControl-SetAccessControl/VB/sample.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/DirectoryInfo/GetAccessControl/sample.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -3866,7 +3924,7 @@ The following example refers to the parent directory of a specified directory.
 ## Remarks
 
 > [!IMPORTANT]
-> The string returned by the <xref:System.IO.DirectoryInfo.ToString%2A> method represents the path that was passed to the <xref:System.IO.DirectoryInfo> constructor. Instead of calling the `ToString` method, you should retrieve the value of either of the following properties, depending on your intent:
+> The string returned by the <xref:System.IO.DirectoryInfo.ToString*> method represents the path that was passed to the <xref:System.IO.DirectoryInfo> constructor. Instead of calling the `ToString` method, you should retrieve the value of either of the following properties, depending on your intent:
 > - <xref:System.IO.DirectoryInfo.Name>, to get the name of the directory, without any parent path information.
 > - <xref:System.IO.DirectoryInfo.FullName>, to get the fully qualified path of the directory.
 

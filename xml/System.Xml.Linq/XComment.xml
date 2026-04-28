@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Xml.Linq</AssemblyName>
@@ -31,6 +33,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.Xml.Linq" FromVersion="4.0.0.0" To="System.Xml.XDocument" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.XDocument" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.XDocument" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.XDocument" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.XDocument" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.XDocument" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -42,7 +46,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -50,11 +54,11 @@
   <Docs>
     <summary>Represents an XML comment.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can add an XML comment as a child node of an element. You can also add an XML comment to an <xref:System.Xml.Linq.XDocument> as a sibling of the root element node.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can add an XML comment as a child node of an element. You can also add an XML comment to an <xref:System.Xml.Linq.XDocument> as a sibling of the root element node.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Xml.Linq.XElement" />
@@ -93,6 +97,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml.Linq</AssemblyName>
@@ -112,33 +118,33 @@
         <param name="value">A string that contains the contents of the new <see cref="T:System.Xml.Linq.XComment" /> object.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Xml.Linq.XComment" /> class with the specified string content.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example creates an element that contains a comment as a child node.  
-  
-```csharp  
-XElement root = new XElement("Root",  
-    new XComment("This is a comment")  
-);  
-Console.WriteLine(root);  
-```  
-  
-```vb  
-Dim root As XElement = <Root>  
-                           <!--This is a comment-->  
-                       </Root>  
-Console.WriteLine(root)  
-```  
-  
- This example produces the following output:  
-  
-```xml  
-<Root>  
-  <!--This is a comment-->  
-</Root>  
-```  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example creates an element that contains a comment as a child node.
+
+```csharp
+XElement root = new XElement("Root",
+    new XComment("This is a comment")
+);
+Console.WriteLine(root);
+```
+
+```vb
+Dim root As XElement = <Root>
+                           <!--This is a comment-->
+                       </Root>
+Console.WriteLine(root)
+```
+
+ This example produces the following output:
+
+```xml
+<Root>
+  <!--This is a comment-->
+</Root>
+```
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="value" /> parameter is <see langword="null" />.</exception>
@@ -165,6 +171,8 @@ Console.WriteLine(root)
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml.Linq</AssemblyName>
@@ -184,11 +192,11 @@ Console.WriteLine(root)
         <param name="other">The <see cref="T:System.Xml.Linq.XComment" /> node to copy from.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Xml.Linq.XComment" /> class from an existing comment node.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor is primarily used internally to make a deep copy of an XML tree.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor is primarily used internally to make a deep copy of an XML tree.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="other" /> parameter is <see langword="null" />.</exception>
@@ -215,6 +223,8 @@ Console.WriteLine(root)
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml.Linq</AssemblyName>
@@ -234,34 +244,34 @@ Console.WriteLine(root)
         <summary>Gets the node type for this node.</summary>
         <value>The node type. For <see cref="T:System.Xml.Linq.XComment" /> objects, this value is <see cref="F:System.Xml.XmlNodeType.Comment" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Because all classes that derive from <xref:System.Xml.Linq.XObject> contain a <xref:System.Xml.Linq.XObject.NodeType%2A> property, you can write code that operates on collections of concrete subclass of <xref:System.Xml.Linq.XObject>. Your code can then test for the node type of each node in the collection.  
-  
-   
-  
-## Examples  
- The following example creates a comment node and prints its node type.  
-  
-```csharp  
-XComment com = new XComment("This is a comment");  
-XNode node = com;  
-Console.WriteLine(node.NodeType);  
-```  
-  
-```vb  
-Dim com As XComment = New XComment("This is a comment")  
-Dim node As XNode = com  
-Console.WriteLine(node.NodeType.ToString())  
-```  
-  
- This example produces the following output:  
-  
-```  
-Comment  
-```  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Because all classes that derive from <xref:System.Xml.Linq.XObject> contain a <xref:System.Xml.Linq.XObject.NodeType> property, you can write code that operates on collections of concrete subclass of <xref:System.Xml.Linq.XObject>. Your code can then test for the node type of each node in the collection.
+
+
+
+## Examples
+ The following example creates a comment node and prints its node type.
+
+```csharp
+XComment com = new XComment("This is a comment");
+XNode node = com;
+Console.WriteLine(node.NodeType);
+```
+
+```vb
+Dim com As XComment = New XComment("This is a comment")
+Dim node As XNode = com
+Console.WriteLine(node.NodeType.ToString())
+```
+
+ This example produces the following output:
+
+```
+Comment
+```
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Xml.XmlNodeType" />
@@ -288,6 +298,8 @@ Comment
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml.Linq</AssemblyName>
@@ -313,34 +325,34 @@ Comment
         <summary>Gets or sets the string value of this comment.</summary>
         <value>A <see cref="T:System.String" /> that contains the string value of this comment.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Unlike <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute>, you cannot retrieve the contents of a comment by casting it to a string. Instead, you must use this property to retrieve the contents.  
-  
- Setting this property will raise the <xref:System.Xml.Linq.XObject.Changed> and the <xref:System.Xml.Linq.XObject.Changing> events.  
-  
-   
-  
-## Examples  
- The following example creates a comment node. It then retrieves the contents of the comment node.  
-  
-```csharp  
-XComment com = new XComment("This is a comment");  
-Console.WriteLine(com.Value);  
-```  
-  
-```vb  
-Dim com As XComment = New XComment("This is a comment")  
-Console.WriteLine(com.Value)  
-```  
-  
- This example produces the following output:  
-  
-```  
-This is a comment  
-```  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Unlike <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute>, you cannot retrieve the contents of a comment by casting it to a string. Instead, you must use this property to retrieve the contents.
+
+ Setting this property will raise the <xref:System.Xml.Linq.XObject.Changed> and the <xref:System.Xml.Linq.XObject.Changing> events.
+
+
+
+## Examples
+ The following example creates a comment node. It then retrieves the contents of the comment node.
+
+```csharp
+XComment com = new XComment("This is a comment");
+Console.WriteLine(com.Value);
+```
+
+```vb
+Dim com As XComment = New XComment("This is a comment")
+Console.WriteLine(com.Value)
+```
+
+ This example produces the following output:
+
+```
+This is a comment
+```
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="value" /> is <see langword="null" />.</exception>
@@ -368,6 +380,8 @@ This is a comment
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml.Linq</AssemblyName>
@@ -390,11 +404,11 @@ This is a comment
         <param name="writer">An <see cref="T:System.Xml.XmlWriter" /> into which this method will write.</param>
         <summary>Write this comment to an <see cref="T:System.Xml.XmlWriter" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is primarily used internally by the methods that write an XML tree to an <xref:System.Xml.XmlWriter>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is primarily used internally by the methods that write an XML tree to an <xref:System.Xml.XmlWriter>.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Xml.Linq.XComment.Value" />
@@ -420,6 +434,8 @@ This is a comment
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -432,8 +448,8 @@ This is a comment
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="writer" Type="System.Xml.XmlWriter" Index="0" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" Index="0" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netstandard-2.1;netcore-3.1;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="writer">The writer to write this <see cref="T:System.Xml.Linq.XComment" /> to.</param>

@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -31,6 +33,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System" FromVersion="4.0.0.0" To="System.Collections" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Collections" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Collections" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Collections" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Collections" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Collections" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -40,7 +44,7 @@
   <TypeParameters>
     <TypeParameter Name="T">
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -52,7 +56,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -68,16 +72,15 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Each element of the <xref:System.Collections.Generic.LinkedList%601> collection is a <xref:System.Collections.Generic.LinkedListNode%601>.  The <xref:System.Collections.Generic.LinkedListNode%601> contains a value, a reference to the <xref:System.Collections.Generic.LinkedList%601> that it belongs to, a reference to the next node, and a reference to the previous node.
+ Each element of the <xref:System.Collections.Generic.LinkedList`1> collection is a <xref:System.Collections.Generic.LinkedListNode`1>.  The <xref:System.Collections.Generic.LinkedListNode`1> contains a value, a reference to the <xref:System.Collections.Generic.LinkedList`1> that it belongs to, a reference to the next node, and a reference to the previous node.
 
 
 
 ## Examples
- The following code example creates a <xref:System.Collections.Generic.LinkedListNode%601>, adds it to a <xref:System.Collections.Generic.LinkedList%601>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList%601> changes.
+ The following code example creates a <xref:System.Collections.Generic.LinkedListNode`1>, adds it to a <xref:System.Collections.Generic.LinkedList`1>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList`1> changes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -103,6 +106,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -131,16 +136,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Collections.Generic.LinkedListNode%601.List%2A>, <xref:System.Collections.Generic.LinkedListNode%601.Next%2A>, and <xref:System.Collections.Generic.LinkedListNode%601.Previous%2A> properties are set to `null`.
+ The <xref:System.Collections.Generic.LinkedListNode`1.List*>, <xref:System.Collections.Generic.LinkedListNode`1.Next*>, and <xref:System.Collections.Generic.LinkedListNode`1.Previous*> properties are set to `null`.
 
 
 
 ## Examples
- The following code example creates a <xref:System.Collections.Generic.LinkedListNode%601>, adds it to a <xref:System.Collections.Generic.LinkedList%601>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList%601> changes.
+ The following code example creates a <xref:System.Collections.Generic.LinkedListNode`1>, adds it to a <xref:System.Collections.Generic.LinkedList`1>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList`1> changes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -153,7 +157,7 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property List As LinkedList(Of T)" />
       <MemberSignature Language="F#" Value="member this.List : System.Collections.Generic.LinkedList&lt;'T&gt;" Usage="System.Collections.Generic.LinkedListNode&lt;'T&gt;.List" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::LinkedList&lt;T&gt; ^ List { System::Collections::Generic::LinkedList&lt;T&gt; ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;T&gt;? List { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;T&gt;? List { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections</AssemblyName>
@@ -167,6 +171,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -180,7 +186,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -199,11 +205,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example creates a <xref:System.Collections.Generic.LinkedListNode%601>, adds it to a <xref:System.Collections.Generic.LinkedList%601>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList%601> changes.
+ The following code example creates a <xref:System.Collections.Generic.LinkedListNode`1>, adds it to a <xref:System.Collections.Generic.LinkedList`1>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList`1> changes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -216,7 +221,7 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Next As LinkedListNode(Of T)" />
       <MemberSignature Language="F#" Value="member this.Next : System.Collections.Generic.LinkedListNode&lt;'T&gt;" Usage="System.Collections.Generic.LinkedListNode&lt;'T&gt;.Next" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::LinkedListNode&lt;T&gt; ^ Next { System::Collections::Generic::LinkedListNode&lt;T&gt; ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt;? Next { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt;? Next { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections</AssemblyName>
@@ -230,6 +235,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -243,7 +250,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -258,11 +265,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example creates a <xref:System.Collections.Generic.LinkedListNode%601>, adds it to a <xref:System.Collections.Generic.LinkedList%601>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList%601> changes.
+ The following code example creates a <xref:System.Collections.Generic.LinkedListNode`1>, adds it to a <xref:System.Collections.Generic.LinkedList`1>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList`1> changes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -275,7 +281,7 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Previous As LinkedListNode(Of T)" />
       <MemberSignature Language="F#" Value="member this.Previous : System.Collections.Generic.LinkedListNode&lt;'T&gt;" Usage="System.Collections.Generic.LinkedListNode&lt;'T&gt;.Previous" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::LinkedListNode&lt;T&gt; ^ Previous { System::Collections::Generic::LinkedListNode&lt;T&gt; ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt;? Previous { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt;? Previous { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections</AssemblyName>
@@ -289,6 +295,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -302,7 +310,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -317,11 +325,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example creates a <xref:System.Collections.Generic.LinkedListNode%601>, adds it to a <xref:System.Collections.Generic.LinkedList%601>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList%601> changes.
+ The following code example creates a <xref:System.Collections.Generic.LinkedListNode`1>, adds it to a <xref:System.Collections.Generic.LinkedList`1>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList`1> changes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -347,6 +354,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -379,16 +388,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property is set in the <xref:System.Collections.Generic.LinkedListNode%601.%23ctor%2A>.
+ This property is set in the <xref:System.Collections.Generic.LinkedListNode`1.%23ctor*>.
 
 
 
 ## Examples
- The following code example creates a <xref:System.Collections.Generic.LinkedListNode%601>, adds it to a <xref:System.Collections.Generic.LinkedList%601>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList%601> changes.
+ The following code example creates a <xref:System.Collections.Generic.LinkedListNode`1>, adds it to a <xref:System.Collections.Generic.LinkedList`1>, and tracks the values of its properties as the <xref:System.Collections.Generic.LinkedList`1> changes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Collections.Generic/LinkedListNodeT/Overview/llnctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -409,6 +417,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>

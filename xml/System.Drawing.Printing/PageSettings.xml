@@ -1,6 +1,6 @@
 <Type Name="PageSettings" FullName="System.Drawing.Printing.PageSettings">
   <TypeSignature Language="C#" Value="public class PageSettings : ICloneable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageSettings extends System.Object implements class System.ICloneable" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-1.1;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PageSettings extends System.Object implements class System.ICloneable" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-1.1;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PageSettings" />
   <TypeSignature Language="VB.NET" Value="Public Class PageSettings&#xA;Implements ICloneable" />
   <TypeSignature Language="F#" Value="type PageSettings = class&#xA;    interface ICloneable" />
@@ -23,7 +23,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Drawing.Common" FromVersion="11.0.0.0" To="System.Drawing" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -33,7 +38,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -52,7 +57,7 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Drawing.Printing.PageSettings> class is used to specify settings that modify the way a page will be printed. Typically, you set default settings for all pages to be printed through the <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A?displayProperty=nameWithType> property. To specify settings on a page-by-page basis, handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> or <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings?displayProperty=nameWithType> event and modify the <xref:System.Drawing.Printing.PageSettings> argument included in the <xref:System.Drawing.Printing.PrintPageEventArgs> or <xref:System.Drawing.Printing.QueryPageSettingsEventArgs>, respectively.
+ The <xref:System.Drawing.Printing.PageSettings> class is used to specify settings that modify the way a page will be printed. Typically, you set default settings for all pages to be printed through the <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings?displayProperty=nameWithType> property. To specify settings on a page-by-page basis, handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> or <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings?displayProperty=nameWithType> event and modify the <xref:System.Drawing.Printing.PageSettings> argument included in the <xref:System.Drawing.Printing.PrintPageEventArgs> or <xref:System.Drawing.Printing.QueryPageSettingsEventArgs>, respectively.
 
  For more information about handling <xref:System.Drawing.Printing.PrintDocument> events, see the <xref:System.Drawing.Printing.PrintDocument> class overview. For more information about printing, see the <xref:System.Drawing.Printing> namespace overview.
 
@@ -62,7 +67,7 @@
  The following example demonstrates handling the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event and checking the <xref:System.Drawing.Printing.PageSettings> argument of <xref:System.Drawing.Printing.PrintPageEventArgs>. To use this code, add a <xref:System.Drawing.Printing.PrintDocument> component named `PrintDocument1` to a Windows Form and associate its <xref:System.Drawing.Printing.PrintDocument.PrintPage> event with the `printDocument1_PrintPage` method in the example.
 
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Overview/Form1.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/VB/form1.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Overview/form1.vb" id="Snippet3":::
 
  ]]></format>
     </remarks>
@@ -101,6 +106,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -111,7 +118,7 @@
 ## Remarks
  The parameterless constructor initializes all fields to their default values.
 
- Typically, you do not create an instance of <xref:System.Drawing.Printing.PageSettings>, but instead use the <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A?displayProperty=nameWithType> to set settings for all pages.
+ Typically, you do not create an instance of <xref:System.Drawing.Printing.PageSettings>, but instead use the <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings*?displayProperty=nameWithType> to set settings for all pages.
 
  ]]></format>
         </remarks>
@@ -140,6 +147,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="printerSettings" Type="System.Drawing.Printing.PrinterSettings" />
@@ -151,7 +160,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Drawing.Printing.PageSettings.%23ctor%2A> constructor is similar to initializing a new instance of <xref:System.Drawing.Printing.PageSettings> and setting the <xref:System.Drawing.Printing.PageSettings.PrinterSettings%2A> property.
+ The <xref:System.Drawing.Printing.PageSettings.%23ctor*> constructor is similar to initializing a new instance of <xref:System.Drawing.Printing.PageSettings> and setting the <xref:System.Drawing.Printing.PageSettings.PrinterSettings> property.
 
  ]]></format>
         </remarks>
@@ -180,6 +189,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Rectangle</ReturnType>
@@ -191,7 +202,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Drawing.Printing.PageSettings.Bounds%2A> property along with the <xref:System.Drawing.Printing.PageSettings.Margins%2A> property to calculate the printing area for the page.
+ Use the <xref:System.Drawing.Printing.PageSettings.Bounds> property along with the <xref:System.Drawing.Printing.PageSettings.Margins> property to calculate the printing area for the page.
 
  ]]></format>
         </remarks>
@@ -226,6 +237,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -260,6 +273,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -272,7 +287,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can use the <xref:System.Drawing.Printing.PrinterSettings.SupportsColor%2A?displayProperty=nameWithType> property to determine if the printer supports color printing. If the printer supports color, but you do not want to print in color, set the <xref:System.Drawing.Printing.PageSettings.Color%2A> property to `false`. The default will be `true`.
+ You can use the <xref:System.Drawing.Printing.PrinterSettings.SupportsColor?displayProperty=nameWithType> property to determine if the printer supports color printing. If the printer supports color, but you do not want to print in color, set the <xref:System.Drawing.Printing.PageSettings.Color> property to `false`. The default will be `true`.
 
 
 
@@ -283,7 +298,7 @@
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet6":::
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet6":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet6":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet6":::
 
  ]]></format>
         </remarks>
@@ -314,6 +329,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -328,9 +345,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Call the <xref:System.Drawing.Printing.PageSettings.CopyToHdevmode%2A> method to copy relevant information to a `DEVMODE` structure from a <xref:System.Drawing.Printing.PageSettings>. This method is useful when you want to make unmanaged Win32 calls that require a `DEVMODE`.
+ Call the <xref:System.Drawing.Printing.PageSettings.CopyToHdevmode*> method to copy relevant information to a `DEVMODE` structure from a <xref:System.Drawing.Printing.PageSettings>. This method is useful when you want to make unmanaged Win32 calls that require a `DEVMODE`.
 
- To copy information from a `DEVMODE` structure to the <xref:System.Drawing.Printing.PageSettings>, call <xref:System.Drawing.Printing.PageSettings.SetHdevmode%2A>.
+ To copy information from a `DEVMODE` structure to the <xref:System.Drawing.Printing.PageSettings>, call <xref:System.Drawing.Printing.PageSettings.SetHdevmode*>.
 
  ]]></format>
         </remarks>
@@ -360,6 +377,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
@@ -399,6 +418,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
@@ -439,6 +460,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -451,24 +474,24 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can use the <xref:System.Drawing.Printing.PrinterSettings.LandscapeAngle%2A?displayProperty=nameWithType> property to determine the angle, in degrees, that the portrait orientation is rotated to produce the landscape orientation.
+ You can use the <xref:System.Drawing.Printing.PrinterSettings.LandscapeAngle?displayProperty=nameWithType> property to determine the angle, in degrees, that the portrait orientation is rotated to produce the landscape orientation.
 
 
 
 ## Examples
- The following code example sets a document's default page orientation to landscape through the <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A?displayProperty=nameWithType> property, and prints the document. The example has three prerequisites:
+ The following code example sets a document's default page orientation to landscape through the <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings?displayProperty=nameWithType> property, and prints the document. The example has three prerequisites:
 
--   A variable named `filePath` has been set to the path of the file to print.
+- A variable named `filePath` has been set to the path of the file to print.
 
--   A method named `pd_PrintPage`, which handles the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, has been defined.
+- A method named `pd_PrintPage`, which handles the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, has been defined.
 
--   A variable named `printer` has been set to the printer's name.
+- A variable named `printer` has been set to the printer's name.
 
  Use the <xref:System.Drawing>, <xref:System.Drawing.Printing>, and <xref:System.IO> namespaces for this example.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic PageSettings Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Landscape/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic PageSettings Example/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Landscape/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -501,6 +524,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -522,24 +547,24 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When handling the <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> event, you can use this property along with the <xref:System.Drawing.Printing.PageSettings.Bounds%2A> property to calculate the printing area for the page.
+ When handling the <xref:System.Drawing.Printing.PrintDocument.PrintPage?displayProperty=nameWithType> event, you can use this property along with the <xref:System.Drawing.Printing.PageSettings.Bounds> property to calculate the printing area for the page.
 
 
 
 ## Examples
  The following code example sets the default page settings for a document to margins to 1 inch on each side. The example has three prerequisites:
 
--   A variable named `filePath` has been set to the path of the file to print.
+- A variable named `filePath` has been set to the path of the file to print.
 
--   A method named `pd_PrintPage`, which handles the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, has been defined.
+- A method named `pd_PrintPage`, which handles the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, has been defined.
 
--   A variable named `printer` has been set to the printer's name.
+- A variable named `printer` has been set to the printer's name.
 
  Use the <xref:System.Drawing>, <xref:System.Drawing.Printing>, and <xref:System.IO> namespaces for this example.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic PageSettings.Margins Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Margins/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic PageSettings.Margins Example/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Margins/source.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -570,6 +595,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -587,29 +614,29 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Drawing.Printing.PaperSize> represents the size of the paper through the <xref:System.Drawing.Printing.PaperSize.Kind%2A?displayProperty=nameWithType> property, which contains one of the <xref:System.Drawing.Printing.PaperKind> values.
+ A <xref:System.Drawing.Printing.PaperSize> represents the size of the paper through the <xref:System.Drawing.Printing.PaperSize.Kind?displayProperty=nameWithType> property, which contains one of the <xref:System.Drawing.Printing.PaperKind> values.
 
- Set the <xref:System.Drawing.Printing.PageSettings.PaperSize%2A> property for the page to a valid <xref:System.Drawing.Printing.PaperSize>, available through the <xref:System.Drawing.Printing.PrinterSettings.PaperSizes%2A?displayProperty=nameWithType> collection.
+ Set the <xref:System.Drawing.Printing.PageSettings.PaperSize> property for the page to a valid <xref:System.Drawing.Printing.PaperSize>, available through the <xref:System.Drawing.Printing.PrinterSettings.PaperSizes*?displayProperty=nameWithType> collection.
 
- For information about how you can specify a custom paper size, see the <xref:System.Drawing.Printing.PaperSize.%23ctor%2A> constructor.
+ For information about how you can specify a custom paper size, see the <xref:System.Drawing.Printing.PaperSize.%23ctor*> constructor.
 
 
 
 ## Examples
- The following code example sets three properties for the document's default page, including the paper size based upon the size selected in the `comboPaperSize` combo box, and then prints the document using the <xref:System.Drawing.Printing.PrintDocument.Print%2A> method. The example requires that a <xref:System.Drawing.Printing.PrintDocument> variable named `printDoc` exists and that the specific combo boxes exist.
+ The following code example sets three properties for the document's default page, including the paper size based upon the size selected in the `comboPaperSize` combo box, and then prints the document using the <xref:System.Drawing.Printing.PrintDocument.Print*> method. The example requires that a <xref:System.Drawing.Printing.PrintDocument> variable named `printDoc` exists and that the specific combo boxes exist.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet1":::
 :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet2":::
 :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet2":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet2":::
+:::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet2":::
 :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet3":::
 :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet3":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet3":::
+:::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet3":::
 :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet4":::
 :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet4":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet4":::
+:::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -643,6 +670,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -660,27 +689,27 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Drawing.Printing.PaperSource> represents the source of the paper through the <xref:System.Drawing.Printing.PaperSource.Kind%2A?displayProperty=nameWithType> property, which contains one of the <xref:System.Drawing.Printing.PaperSourceKind> values.
+ A <xref:System.Drawing.Printing.PaperSource> represents the source of the paper through the <xref:System.Drawing.Printing.PaperSource.Kind?displayProperty=nameWithType> property, which contains one of the <xref:System.Drawing.Printing.PaperSourceKind> values.
 
- Set the <xref:System.Drawing.Printing.PageSettings.PaperSource%2A> property for the page to a valid <xref:System.Drawing.Printing.PaperSource>, available through the <xref:System.Drawing.Printing.PrinterSettings.PaperSources%2A?displayProperty=nameWithType> collection.
+ Set the <xref:System.Drawing.Printing.PageSettings.PaperSource> property for the page to a valid <xref:System.Drawing.Printing.PaperSource>, available through the <xref:System.Drawing.Printing.PrinterSettings.PaperSources*?displayProperty=nameWithType> collection.
 
 
 
 ## Examples
- The following code example sets three properties for the document's default page, including the paper source based upon the source selected in the `comboPaperSource` combo box, and then prints the document using the <xref:System.Drawing.Printing.PrintDocument.Print%2A> method. The example requires that a <xref:System.Drawing.Printing.PrintDocument> variable named `printDoc` exists and that the specific combo boxes exist.
+ The following code example sets three properties for the document's default page, including the paper source based upon the source selected in the `comboPaperSource` combo box, and then prints the document using the <xref:System.Drawing.Printing.PrintDocument.Print*> method. The example requires that a <xref:System.Drawing.Printing.PrintDocument> variable named `printDoc` exists and that the specific combo boxes exist.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet1":::
 :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet2":::
 :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet2":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet2":::
+:::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet2":::
 :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet3":::
 :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet3":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet3":::
+:::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet3":::
 :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet4":::
 :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet4":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet4":::
+:::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -713,6 +742,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.RectangleF</ReturnType>
@@ -724,7 +755,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Drawing.Printing.PageSettings.PrintableArea%2A> property returns the correct value, whether the page orientation is landscape or portrait.
+ The <xref:System.Drawing.Printing.PageSettings.PrintableArea> property returns the correct value, whether the page orientation is landscape or portrait.
 
  You can use this property to print outside the margins of the page, but within the printable area.
 
@@ -755,6 +786,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -772,18 +805,18 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Drawing.Printing.PrinterResolution> represents the printer resolution of through the <xref:System.Drawing.Printing.PrinterResolution.Kind%2A?displayProperty=nameWithType> property, which contains one of the <xref:System.Drawing.Printing.PrinterResolutionKind> values.
+ A <xref:System.Drawing.Printing.PrinterResolution> represents the printer resolution of through the <xref:System.Drawing.Printing.PrinterResolution.Kind?displayProperty=nameWithType> property, which contains one of the <xref:System.Drawing.Printing.PrinterResolutionKind> values.
 
- Set the <xref:System.Drawing.Printing.PageSettings.PrinterResolution%2A> property for the page to a valid <xref:System.Drawing.Printing.PrinterResolution>, available through the <xref:System.Drawing.Printing.PrinterSettings.PrinterResolutions%2A?displayProperty=nameWithType> collection.
+ Set the <xref:System.Drawing.Printing.PageSettings.PrinterResolution> property for the page to a valid <xref:System.Drawing.Printing.PrinterResolution>, available through the <xref:System.Drawing.Printing.PrinterSettings.PrinterResolutions*?displayProperty=nameWithType> collection.
 
 
 
 ## Examples
- The following code example sets three properties for the document's default page, including the printer's resolution based upon the resolution selected in the `comboPrintResolution` combo box, and then prints the document using the <xref:System.Drawing.Printing.PrintDocument.Print%2A> method. The example requires that a <xref:System.Drawing.Printing.PrintDocument> variable named `printDoc` exists and that the specific combo boxes exist.
+ The following code example sets three properties for the document's default page, including the printer's resolution based upon the resolution selected in the `comboPrintResolution` combo box, and then prints the document using the <xref:System.Drawing.Printing.PrintDocument.Print*> method. The example requires that a <xref:System.Drawing.Printing.PrintDocument> variable named `printDoc` exists and that the specific combo boxes exist.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/CPP/source.cpp" id="Snippet4":::
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Color/source.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/PaperSource and PaperSize Example with Resolution/VB/source.vb" id="Snippet4":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Color/source.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -817,6 +850,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -864,6 +899,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -880,7 +917,7 @@
 ## Remarks
  Use this method to copy relevant information in a `DEVMODE` structure to the <xref:System.Drawing.Printing.PageSettings>.
 
- To copy information from the <xref:System.Drawing.Printing.PageSettings> to a `DEVMODE`, call <xref:System.Drawing.Printing.PageSettings.CopyToHdevmode%2A>.
+ To copy information from the <xref:System.Drawing.Printing.PageSettings> to a `DEVMODE`, call <xref:System.Drawing.Printing.PageSettings.CopyToHdevmode*>.
 
  ]]></format>
         </remarks>
@@ -912,6 +949,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

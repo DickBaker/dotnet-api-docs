@@ -12,11 +12,16 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="T">
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -28,7 +33,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -37,31 +42,31 @@
     <typeparam name="T">The type of the export.</typeparam>
     <summary>A factory that creates new instances of a part that provides the specified export.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When you refer indirectly to a part by using a <xref:System.Lazy%601> object, the <xref:System.Lazy%601.Value%2A> property always returns a reference to the same object. In some circumstances, you might want each reference to result in the creation of a new object. <xref:System.ComponentModel.Composition.ExportFactory%601> is designed for those scenarios.  
-  
- <xref:System.ComponentModel.Composition.ExportFactory%601> can be used in a similar fashion to <xref:System.Lazy%601> when creating attributed parts. That is, an import contract that is defined on <xref:System.ComponentModel.Composition.ExportFactory%601> with a generic parameter of `T` will match an export that is defined on `T`. For example, the follow export and import match:  
-  
-```csharp  
-[Export]  
-public String myData = "Example Data.";  
-  
-[Import]  
-public ExportFactory<String> theData { get; set; }  
-```  
-  
-```vb  
-<Export()>  
-Public myData As String = "Example Data."  
-  
-<Import()>  
-Public Property theData As ExportFactory(Of String)  
-```  
-  
- The <xref:System.ComponentModel.Composition.ExportFactory%601.CreateExport%2A?displayProperty=nameWithType> method returns an <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> object, which has two pieces. The <xref:System.ComponentModel.Composition.ExportLifetimeContext%601.Value%2A?displayProperty=nameWithType> property provides access to the created part. Calling the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601.Dispose%2A> method of the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> object cleans up the created part and all of its dependencies, thereby allowing the part's lifetime to be managed without reference to the container that created it.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When you refer indirectly to a part by using a <xref:System.Lazy`1> object, the <xref:System.Lazy`1.Value> property always returns a reference to the same object. In some circumstances, you might want each reference to result in the creation of a new object. <xref:System.ComponentModel.Composition.ExportFactory`1> is designed for those scenarios.
+
+ <xref:System.ComponentModel.Composition.ExportFactory`1> can be used in a similar fashion to <xref:System.Lazy`1> when creating attributed parts. That is, an import contract that is defined on <xref:System.ComponentModel.Composition.ExportFactory`1> with a generic parameter of `T` will match an export that is defined on `T`. For example, the follow export and import match:
+
+```csharp
+[Export]
+public String myData = "Example Data.";
+
+[Import]
+public ExportFactory<String> theData { get; set; }
+```
+
+```vb
+<Export()>
+Public myData As String = "Example Data."
+
+<Import()>
+Public Property theData As ExportFactory(Of String)
+```
+
+ The <xref:System.ComponentModel.Composition.ExportFactory`1.CreateExport*?displayProperty=nameWithType> method returns an <xref:System.ComponentModel.Composition.ExportLifetimeContext`1> object, which has two pieces. The <xref:System.ComponentModel.Composition.ExportLifetimeContext`1.Value?displayProperty=nameWithType> property provides access to the created part. Calling the <xref:System.ComponentModel.Composition.ExportLifetimeContext`1.Dispose*> method of the <xref:System.ComponentModel.Composition.ExportLifetimeContext`1> object cleans up the created part and all of its dependencies, thereby allowing the part's lifetime to be managed without reference to the container that created it.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -77,7 +82,7 @@ Public Property theData As ExportFactory(Of String)
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="exportLifetimeContextCreator" Type="System.Func&lt;System.Tuple&lt;T,System.Action&gt;&gt;" />
@@ -99,7 +104,7 @@ Public Property theData As ExportFactory(Of String)
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.Composition.ExportLifetimeContext&lt;T&gt;</ReturnType>

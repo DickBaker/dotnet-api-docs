@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Attribute</BaseTypeName>
   </Base>
@@ -34,15 +39,15 @@
   <Docs>
     <summary>Indicates that an application settings property has a special significance. This class cannot be inherited.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Certain application settings properties have a special significance that alters the way in which their associated settings provider should process them. The <xref:System.Configuration.SpecialSettingAttribute> is used to identify such properties. This class uses the <xref:System.Configuration.SpecialSetting?displayProperty=nameWithType> enumeration to indicate what special category the property belongs to.  
-  
- <xref:System.Configuration.SpecialSettingAttribute> can only be applied to the settings class or to the individual settings property.  
-  
- For an example of how a settings provider deals with the <xref:System.Configuration.SpecialSettingAttribute>, see the <xref:System.Configuration.LocalFileSettingsProvider.GetPropertyValues%2A> method of the <xref:System.Configuration.LocalFileSettingsProvider> class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Certain application settings properties have a special significance that alters the way in which their associated settings provider should process them. The <xref:System.Configuration.SpecialSettingAttribute> is used to identify such properties. This class uses the <xref:System.Configuration.SpecialSetting?displayProperty=nameWithType> enumeration to indicate what special category the property belongs to.
+
+ <xref:System.Configuration.SpecialSettingAttribute> can only be applied to the settings class or to the individual settings property.
+
+ For an example of how a settings provider deals with the <xref:System.Configuration.SpecialSettingAttribute>, see the <xref:System.Configuration.LocalFileSettingsProvider.GetPropertyValues*> method of the <xref:System.Configuration.LocalFileSettingsProvider> class.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Configuration.SettingsProvider" />
@@ -71,6 +76,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -111,6 +118,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -125,11 +134,11 @@
         <summary>Gets the value describing the special setting category of the application settings property.</summary>
         <value>A <see cref="T:System.Configuration.SpecialSetting" /> enumeration value defining the category of the application settings property.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.SpecialSettingAttribute.SpecialSetting%2A> property is set in the <xref:System.Configuration.SpecialSettingAttribute.%23ctor%2A> constructor of this class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.SpecialSettingAttribute.SpecialSetting> property is set in the <xref:System.Configuration.SpecialSettingAttribute.%23ctor*> constructor of this class.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.SpecialSetting" />

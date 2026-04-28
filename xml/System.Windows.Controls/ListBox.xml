@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class ListBox&#xA;Inherits Selector" />
   <TypeSignature Language="F#" Value="type ListBox = class&#xA;    inherit Selector" />
   <TypeSignature Language="C++ CLI" Value="public ref class ListBox : System::Windows::Controls::Primitives::Selector" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListBox extends System.Windows.Controls.Primitives.Selector" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListBox extends System.Windows.Controls.Primitives.Selector" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.Primitives.Selector</BaseTypeName>
@@ -38,9 +40,9 @@
 ## Remarks
  <xref:System.Windows.Controls.ListBox> is an <xref:System.Windows.Controls.ItemsControl>, which means it can contain a collection of objects of any type (such as string, image, or panel). For more information, see the <xref:System.Windows.Controls.ItemsControl> class.
 
- More than one item in a <xref:System.Windows.Controls.ListBox> is visible, unlike the <xref:System.Windows.Controls.ComboBox>, which has only the selected item visible unless the <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A> property is `true`.  The <xref:System.Windows.Controls.ListBox.SelectionMode%2A> property determines whether more than one item in the <xref:System.Windows.Controls.ListBox> is selectable at a time.
+ More than one item in a <xref:System.Windows.Controls.ListBox> is visible, unlike the <xref:System.Windows.Controls.ComboBox>, which has only the selected item visible unless the <xref:System.Windows.Controls.ComboBox.IsDropDownOpen> property is `true`.  The <xref:System.Windows.Controls.ListBox.SelectionMode> property determines whether more than one item in the <xref:System.Windows.Controls.ListBox> is selectable at a time.
 
- The <xref:System.Windows.Controls.ListBox.SelectionMode%2A> property determines how many items a user can select at one time. You can set the property to <xref:System.Windows.Controls.SelectionMode.Single> (the default), <xref:System.Windows.Controls.SelectionMode.Multiple>, or <xref:System.Windows.Controls.SelectionMode.Extended>. The following table described the behavior of these enumeration values.
+ The <xref:System.Windows.Controls.ListBox.SelectionMode> property determines how many items a user can select at one time. You can set the property to <xref:System.Windows.Controls.SelectionMode.Single> (the default), <xref:System.Windows.Controls.SelectionMode.Multiple>, or <xref:System.Windows.Controls.SelectionMode.Extended>. The following table described the behavior of these enumeration values.
 
 |Value|Description|
 |-----------|-----------------|
@@ -48,12 +50,12 @@
 |<xref:System.Windows.Controls.SelectionMode.Multiple>|The user can select multiple items without holding down a modifier key.|
 |<xref:System.Windows.Controls.SelectionMode.Extended>|The user can select multiple consecutive items while holding down the SHIFT key or non-consecutive items by holding down the CTRL key and clicking the items.|
 
- <xref:System.Windows.Controls.ListBox> controls are often used with data binding.  For more information, see [Data Binding Overview](/dotnet/framework/wpf/data/data-binding-overview).
+ <xref:System.Windows.Controls.ListBox> controls are often used with data binding.  For more information, see [Data Binding Overview](/dotnet/desktop/wpf/data/).
 
- Displaying a large number of items may cause performance issues.  See [Optimizing Performance: Controls](/dotnet/framework/wpf/advanced/optimizing-performance-controls) for more information.
+ Displaying a large number of items may cause performance issues.  See [Optimizing Performance: Controls](/dotnet/desktop/wpf/advanced/optimizing-performance-controls) for more information.
 
 ## Customizing the ListBox Control
- To apply the same property settings to multiple <xref:System.Windows.Controls.ListBox> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](/dotnet/framework/wpf/controls/customizing-the-appearance-of-an-existing-control).  To see the parts and states that are specific to the <xref:System.Windows.Controls.ListBox>, see [ListBox Styles and Templates](/dotnet/framework/wpf/controls/listbox-styles-and-templates).
+ To apply the same property settings to multiple <xref:System.Windows.Controls.ListBox> controls, use the <xref:System.Windows.FrameworkElement.Style> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [How to create a template for a control](/dotnet/desktop/wpf/controls/how-to-create-apply-template).  To see the parts and states that are specific to the <xref:System.Windows.Controls.ListBox>, see [ListBox Styles and Templates](/dotnet/desktop/wpf/controls/listbox).
 
  Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.
 
@@ -65,11 +67,11 @@
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/ListBox/Overview/Pane1.xaml" id="Snippet1":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/ListBox/Overview/Pane1.xaml.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/ListBox/Overview/Pane1.xaml.vb" id="Snippet2":::
 
  ]]></format>
     </remarks>
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160053">WPF Controls Gallery Sample</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Getting%20Started/ControlsAndLayout">WPF Controls Gallery Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -88,6 +90,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -111,6 +115,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -138,6 +144,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyObject</ReturnType>
@@ -166,6 +174,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -178,7 +188,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the control has a <xref:System.Windows.Controls.ScrollViewer> in its style and has a custom keyboard scrolling behavior, <xref:System.Windows.Controls.ListBox.HandlesScrolling%2A> should return `true`.
+ If the control has a <xref:System.Windows.Controls.ScrollViewer> in its style and has a custom keyboard scrolling behavior, <xref:System.Windows.Controls.ListBox.HandlesScrolling*> should return `true`.
 
  ]]></format>
         </remarks>
@@ -201,6 +211,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -233,6 +245,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -261,6 +275,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -291,6 +307,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -321,6 +339,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -351,6 +371,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -381,6 +403,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -420,6 +444,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -438,10 +464,10 @@
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.ListBox.ScrollIntoView%2A> method to scroll an item in the list box into the viewport.
+ The following example shows how to use the <xref:System.Windows.Controls.ListBox.ScrollIntoView*> method to scroll an item in the list box into the viewport.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/ListBox/ScrollIntoView/Window1.xaml.cs" id="Snippetlistboxscrollintoview":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb" id="Snippetlistboxscrollintoview":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/ListBox/ScrollIntoView/window1.xaml.vb" id="Snippetlistboxscrollintoview":::
 
  ]]></format>
         </remarks>
@@ -464,6 +490,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -475,10 +503,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.ListBox.SelectAll%2A> method to select and highlight all the items in a list box.
+ The following example shows how to use the <xref:System.Windows.Controls.ListBox.SelectAll*> method to select and highlight all the items in a list box.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/ListBox/ScrollIntoView/Window1.xaml.cs" id="Snippetlistboxselectall":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb" id="Snippetlistboxselectall":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/ListBox/ScrollIntoView/window1.xaml.vb" id="Snippetlistboxselectall":::
 
  ]]></format>
         </remarks>
@@ -502,6 +530,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -512,13 +542,9 @@
           <AttributeName Language="C#">[System.ComponentModel.Category("Appearance")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Category("Appearance")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -531,7 +557,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property is meant to be used when <xref:System.Windows.Controls.ListBox.SelectionMode%2A> does not equal <xref:System.Windows.Controls.SelectionMode.Single>. If the selection mode is <xref:System.Windows.Controls.SelectionMode.Single> the correct property to use is <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.
+ This property is meant to be used when <xref:System.Windows.Controls.ListBox.SelectionMode*> does not equal <xref:System.Windows.Controls.SelectionMode.Single>. If the selection mode is <xref:System.Windows.Controls.SelectionMode.Single> the correct property to use is <xref:System.Windows.Controls.Primitives.Selector.SelectedItem*>.
 
 <a name="dependencyPropertyInfo_SelectedItems"></a>
 ## Dependency Property Information
@@ -544,10 +570,10 @@
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.ListBox.SelectedItems%2A> property to determine whether a list box has any selected items.
+ The following example shows how to use the <xref:System.Windows.Controls.ListBox.SelectedItems> property to determine whether a list box has any selected items.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/ListBox/ScrollIntoView/Window1.xaml.cs" id="Snippetlistboxselecteditems":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb" id="Snippetlistboxselecteditems":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/ListBox/ScrollIntoView/window1.xaml.vb" id="Snippetlistboxselecteditems":::
 
  ]]></format>
         </remarks>
@@ -571,6 +597,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -597,6 +625,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.SelectionMode</ReturnType>
@@ -620,7 +650,7 @@
 
 
 ## Examples
- The following example sets the <xref:System.Windows.Controls.ListBox.SelectionMode%2A> property to <xref:System.Windows.Controls.SelectionMode.Multiple>.
+ The following example sets the <xref:System.Windows.Controls.ListBox.SelectionMode> property to <xref:System.Windows.Controls.SelectionMode.Multiple>.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/ListBox/Overview/Pane1.xaml" id="Snippet4":::
 
@@ -645,6 +675,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -671,6 +703,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -703,6 +737,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -714,10 +750,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.ListBox.UnselectAll%2A> method to unselect all the items in a list box.
+ The following example shows how to use the <xref:System.Windows.Controls.ListBox.UnselectAll*> method to unselect all the items in a list box.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/ListBox/ScrollIntoView/Window1.xaml.cs" id="Snippetlistboxunselectall":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListBox_snip/visualbasic/window1.xaml.vb" id="Snippetlistboxunselectall":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/ListBox/ScrollIntoView/window1.xaml.vb" id="Snippetlistboxunselectall":::
 
  ]]></format>
         </remarks>

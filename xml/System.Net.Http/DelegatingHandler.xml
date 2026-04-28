@@ -18,6 +18,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
@@ -25,6 +27,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -36,7 +40,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -44,13 +48,13 @@
   <Docs>
     <summary>A type for HTTP handlers that delegate the processing of HTTP response messages to another handler, called the inner handler.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- An application should provide an inner handler either in the constructor or through the <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> property before calling <xref:System.Net.Http.DelegatingHandler.SendAsync%2A>; otherwise, an <xref:System.InvalidOperationException> will be thrown.
-  
- Note that <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> property may be a delegating handler as well. This approach allows the creation of handler stacks to process the HTTP response messages.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ An application should provide an inner handler either in the constructor or through the <xref:System.Net.Http.DelegatingHandler.InnerHandler> property before calling <xref:System.Net.Http.DelegatingHandler.SendAsync*>; otherwise, an <xref:System.InvalidOperationException> will be thrown.
+
+ Note that <xref:System.Net.Http.DelegatingHandler.InnerHandler> property may be a delegating handler as well. This approach allows the creation of handler stacks to process the HTTP response messages.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -87,6 +91,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -97,11 +103,11 @@
       <Docs>
         <summary>Creates a new instance of the <see cref="T:System.Net.Http.DelegatingHandler" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The inner handle can be set using the <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The inner handle can be set using the <xref:System.Net.Http.DelegatingHandler.InnerHandler*>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -127,6 +133,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -163,6 +171,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -189,7 +199,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property InnerHandler As HttpMessageHandler" />
       <MemberSignature Language="F#" Value="member this.InnerHandler : System.Net.Http.HttpMessageHandler with get, set" Usage="System.Net.Http.DelegatingHandler.InnerHandler" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Http::HttpMessageHandler ^ InnerHandler { System::Net::Http::HttpMessageHandler ^ get(); void set(System::Net::Http::HttpMessageHandler ^ value); };" />
-      <MemberSignature Language="C#" Value="public System.Net.Http.HttpMessageHandler? InnerHandler { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Net.Http.HttpMessageHandler? InnerHandler { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -204,6 +214,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -211,7 +223,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -223,13 +235,13 @@
         <summary>Gets or sets the inner handler which processes the HTTP response messages.</summary>
         <value>The inner handler for HTTP response messages.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> property can only be set before the class is used (the <xref:System.Net.Http.DelegatingHandler.SendAsync%2A> method is called).  
-  
- Note that <xref:System.Net.Http.DelegatingHandler.InnerHandler%2A> property may be a delegating handler too, although this is uncommon. This approach allows the creation of handler stacks for the HTTP response messages.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This <xref:System.Net.Http.DelegatingHandler.InnerHandler> property can only be set before the class is used (the <xref:System.Net.Http.DelegatingHandler.SendAsync*> method is called).
+
+ Note that <xref:System.Net.Http.DelegatingHandler.InnerHandler> property may be a delegating handler too, although this is uncommon. This approach allows the creation of handler stacks for the HTTP response messages.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -249,6 +261,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -257,8 +271,8 @@
         <ReturnType>System.Net.Http.HttpResponseMessage</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <param name="request">The HTTP request message to send to the server.</param>
@@ -266,12 +280,12 @@
         <summary>Sends an HTTP request to the inner handler to send to the server.</summary>
         <returns>An HTTP response message.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
+          <format type="text/markdown"><![CDATA[
+
 ## Remarks
-  
- The <xref:System.Net.Http.DelegatingHandler.Send%2A> method is mainly used by the system and not by applications. When this method is called, it calls the <xref:System.Net.Http.DelegatingHandler.Send%2A> method on the inner handler.  
-  
+
+ The <xref:System.Net.Http.DelegatingHandler.Send*> method is mainly used by the system and not by applications. When this method is called, it calls the <xref:System.Net.Http.DelegatingHandler.Send*> method on the inner handler.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
@@ -298,6 +312,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -317,13 +333,13 @@
         <summary>Sends an HTTP request to the inner handler to send to the server as an asynchronous operation.</summary>
         <returns>The task object representing the asynchronous operation.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This operation does not block. This overridable implementation of <xref:System.Net.Http.HttpClientHandler.SendAsync%2A> method forwards the HTTP request to the inner handler to send to the server as an asynchronous operation.  
-  
- The <xref:System.Net.Http.DelegatingHandler.SendAsync%2A> method is mainly used by the system and not by applications. When this method is called, it calls the <xref:System.Net.Http.DelegatingHandler.SendAsync%2A> method on the inner handler.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This operation does not block. This overridable implementation of <xref:System.Net.Http.HttpClientHandler.SendAsync*> method forwards the HTTP request to the inner handler to send to the server as an asynchronous operation.
+
+ The <xref:System.Net.Http.DelegatingHandler.SendAsync*> method is mainly used by the system and not by applications. When this method is called, it calls the <xref:System.Net.Http.DelegatingHandler.SendAsync*> method on the inner handler.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="request" /> was <see langword="null" />.</exception>

@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -39,11 +41,11 @@
       <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.ImageCollectionEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.ImageCollectionEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.ImageCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.ImageCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -51,20 +53,20 @@
   <Docs>
     <summary>Encapsulates the collection of <see cref="T:System.Drawing.Image" /> objects in an <see cref="T:System.Windows.Forms.ImageList" />.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This is used to manage the images in the <xref:System.Windows.Forms.ImageList> programmatically, providing methods to add and remove image objects.  
-  
-   
-  
-## Examples  
- The following code example shows how to select, remove, and display images, from the <xref:System.Windows.Forms.ImageList.Images%2A> property of the <xref:System.Windows.Forms.ImageList> class, which is an <xref:System.Windows.Forms.ImageList.ImageCollection> type.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This is used to manage the images in the <xref:System.Windows.Forms.ImageList> programmatically, providing methods to add and remove image objects.
+
+
+
+## Examples
+ The following code example shows how to select, remove, and display images, from the <xref:System.Windows.Forms.ImageList.Images> property of the <xref:System.Windows.Forms.ImageList> class, which is an <xref:System.Windows.Forms.ImageList.ImageCollection> type.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic ImageList Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/ImageList+ImageCollection/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic ImageList Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/ImageList+ImageCollection/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -96,6 +98,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -107,27 +111,27 @@
         <param name="value">An <see cref="T:System.Drawing.Icon" /> to add to the list.</param>
         <summary>Adds the specified icon to the <see cref="T:System.Windows.Forms.ImageList" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Drawing.Icon> is converted to a <xref:System.Drawing.Bitmap> before it is added to the list.  
-  
-   
-  
-## Examples  
- The following code example demonstrates constructing an <xref:System.Windows.Forms.ImageList.%23ctor%2A>, adding images to the <xref:System.Windows.Forms.ImageList.Images%2A> property, setting the <xref:System.Windows.Forms.ImageList.ImageSize%2A> property, and using the <xref:System.Windows.Forms.ImageList.Draw%2A> method. To run this example, place it in a form that contains a button named `Button1`. The example assumes the existence of FeatherTexture.bmp and Gone Fishing.bmp at c:\Windows\\. Change the example accordingly if the bitmaps do not exist on your system or exist at another location.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Drawing.Icon> is converted to a <xref:System.Drawing.Bitmap> before it is added to the list.
+
+
+
+## Examples
+ The following code example demonstrates constructing an <xref:System.Windows.Forms.ImageList.%23ctor*>, adding images to the <xref:System.Windows.Forms.ImageList.Images> property, setting the <xref:System.Windows.Forms.ImageList.ImageSize> property, and using the <xref:System.Windows.Forms.ImageList.Draw*> method. To run this example, place it in a form that contains a button named `Button1`. The example assumes the existence of FeatherTexture.bmp and Gone Fishing.bmp at c:\Windows\\. Change the example accordingly if the bitmaps do not exist on your system or exist at another location.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpProviderAndImageListExample/CPP/form1.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HelpProvider/SetHelpNavigator/form1.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpProviderAndImageListExample/VB/form1.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HelpProvider/SetHelpNavigator/form1.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="value" /> is <see langword="null" />  
-  
- -or-  
-  
+          <paramref name="value" /> is <see langword="null" />
+
+ -or-
+
  value is not an <see cref="T:System.Drawing.Icon" />.</exception>
       </Docs>
     </Member>
@@ -149,6 +153,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -182,6 +188,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -217,24 +225,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="icon" Type="System.Drawing.Icon" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="icon" Type="System.Drawing.Icon" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the icon.</param>
         <param name="icon">The <see cref="T:System.Drawing.Icon" /> to add to the collection.</param>
         <summary>Adds an icon with the specified key to the end of the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. An image key is not case-sensitive.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. An image key is not case-sensitive.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -258,24 +268,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="image" Type="System.Drawing.Image" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="image" Type="System.Drawing.Image" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the image.</param>
         <param name="image">The <see cref="T:System.Drawing.Image" /> to add to the collection.</param>
         <summary>Adds an image with the specified key to the end of the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. An image key is not case-sensitive.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. An image key is not case-sensitive.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -289,9 +301,9 @@
       <MemberSignature Language="VB.NET" Value="Public Sub AddRange (images As Image())" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0" />
       <MemberSignature Language="F#" Value="member this.AddRange : System.Drawing.Image[] -&gt; unit" Usage="imageCollection.AddRange images" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddRange(cli::array &lt;System::Drawing::Image ^&gt; ^ images);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0" />
-      <MemberSignature Language="C#" Value="public void AddRange (params System.Drawing.Image[] images);" FrameworkAlternate="windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Public Sub AddRange (ParamArray images As Image())" FrameworkAlternate="windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddRange(... cli::array &lt;System::Drawing::Image ^&gt; ^ images);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public void AddRange (params System.Drawing.Image[] images);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddRange (ParamArray images As Image())" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddRange(... cli::array &lt;System::Drawing::Image ^&gt; ^ images);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -302,14 +314,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="images" Type="System.Drawing.Image[]" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Parameter Name="images" Type="System.Drawing.Image[]" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
               <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
@@ -320,11 +334,11 @@
         <param name="images">The array of <see cref="T:System.Drawing.Image" /> objects to add to the collection.</param>
         <summary>Adds an array of images to the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use <xref:System.Windows.Forms.ImageList.ImageCollection> to add several images to the collection. To add a single item, use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use <xref:System.Windows.Forms.ImageList.ImageCollection> to add several images to the collection. To add a single item, use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add*> methods.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -349,6 +363,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -361,36 +377,36 @@
         <summary>Adds an image strip for the specified image to the <see cref="T:System.Windows.Forms.ImageList" />.</summary>
         <returns>The index of the newly added image, or -1 if the image cannot be added.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The number of images to add is inferred from the width of the given image.  
-  
- A strip is a single image that is treated as multiple images arranged side-by-side.  
-  
-   
-  
-## Examples  
- The following example demonstrates how to use <xref:System.Windows.Forms.ImageList.ImageCollection.AddStrip%2A>. To run this example, paste the following code into a Windows Form that contains an <xref:System.Windows.Forms.ImageList> named `imageList1` and a button and call the `AddStripToCollection` method in this example when handling the button's <xref:System.Windows.Forms.Control.Click> event.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The number of images to add is inferred from the width of the given image.
+
+ A strip is a single image that is treated as multiple images arranged side-by-side.
+
+
+
+## Examples
+ The following example demonstrates how to use <xref:System.Windows.Forms.ImageList.ImageCollection.AddStrip*>. To run this example, paste the following code into a Windows Form that contains an <xref:System.Windows.Forms.ImageList> named `imageList1` and a button and call the `AddStripToCollection` method in this example when handling the button's <xref:System.Windows.Forms.Control.Click> event.
+
  :::code language="csharp" source="~/snippets/csharp/System.Drawing.Printing/PageSettings/Overview/Form1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/VB/form1.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Drawing.Printing/PageSettings/Overview/form1.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">The image being added is <see langword="null" />.  
-  
- -or-  
-  
+        <exception cref="T:System.ArgumentException">The image being added is <see langword="null" />.
+
+ -or-
+
  The image being added is not a <see cref="T:System.Drawing.Bitmap" />.</exception>
-        <exception cref="T:System.InvalidOperationException">The image cannot be added.  
-  
- -or-  
-  
- The width of image strip being added is 0, or the width is not equal to the existing image width.  
-  
- -or-  
-  
+        <exception cref="T:System.InvalidOperationException">The image cannot be added.
+
+ -or-
+
+ The width of image strip being added is 0, or the width is not equal to the existing image width.
+
+ -or-
+
  The image strip height is not equal to existing image height.</exception>
       </Docs>
     </Member>
@@ -415,6 +431,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -444,9 +462,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -463,11 +483,11 @@
         <returns>
           <see langword="true" /> if the image is found in the list; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This implementation of the <xref:System.Windows.Forms.ImageList.ImageCollection.Contains%2A> method throws a <xref:System.NotSupportedException> exception.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This implementation of the <xref:System.Windows.Forms.ImageList.ImageCollection.Contains*> method throws a <xref:System.NotSupportedException> exception.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">This method is not supported.</exception>
@@ -491,12 +511,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The key of the image to search for.</param>
@@ -504,11 +526,11 @@
         <returns>
           <see langword="true" /> to indicate an image with the specified key is contained in the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of an image corresponds to its key. The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.ImageList.ImageCollection.ContainsKey%2A> method returns `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of an image corresponds to its key. The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.ImageList.ImageCollection.ContainsKey*> method returns `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -534,6 +556,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -548,11 +572,11 @@
         <summary>Gets the number of images currently in the list.</summary>
         <value>The number of images in the list. The default is 0.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Counting the images forces the <xref:System.Windows.Forms.ImageList.Handle%2A> to be created.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Counting the images forces the <xref:System.Windows.Forms.ImageList.Handle*> to be created.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.ImageList.HandleCreated" />
@@ -576,6 +600,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -585,11 +611,11 @@
         <value>
           <see langword="true" /> if there are no images in the list; otherwise, <see langword="false" />. The default is <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can check this property without forcing the creation of a <xref:System.Windows.Forms.ImageList.Handle%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can check this property without forcing the creation of a <xref:System.Windows.Forms.ImageList.Handle*>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -615,6 +641,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -644,9 +672,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -662,11 +692,11 @@
         <summary>Not supported. The <see cref="M:System.Collections.IList.IndexOf(System.Object)" /> method returns the index of a specified object in the list.</summary>
         <returns>The index of the image in the list.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This implementation of <xref:System.Windows.Forms.ImageList.ImageCollection.IndexOf%2A> throws a <xref:System.NotSupportedException> exception.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This implementation of <xref:System.Windows.Forms.ImageList.ImageCollection.IndexOf*> throws a <xref:System.NotSupportedException> exception.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">This method is not supported.</exception>
@@ -689,25 +719,27 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The key of the image to retrieve the index for.</param>
         <summary>Determines the index of the first occurrence of an image with the specified key in the collection.</summary>
         <returns>The zero-based index of the first occurrence of an image with the specified key in the collection, if found; otherwise, -1.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If <xref:System.Windows.Forms.ImageList.ImageCollection.IndexOfKey%2A> is called successively, the last returned index will be checked for a key match first, and if there is no match, the search starts at the beginning of the collection.  
-  
- The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.ImageList.ImageCollection.IndexOfKey%2A> method returns -1.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If <xref:System.Windows.Forms.ImageList.ImageCollection.IndexOfKey*> is called successively, the last returned index will be checked for a key match first, and if there is no match, the search starts at the beginning of the collection.
+
+ The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.ImageList.ImageCollection.IndexOfKey*> method returns -1.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -733,6 +765,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -771,19 +805,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -797,11 +829,11 @@
         <summary>Gets or sets an <see cref="T:System.Drawing.Image" /> at the specified index within the collection.</summary>
         <value>The image in the list specified by <paramref name="index" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The returned bitmap is a copy of the original image and should be disposed of using the <xref:System.Drawing.Image.Dispose%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The returned bitmap is a copy of the original image and should be disposed of using the <xref:System.Drawing.Image.Dispose*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">The index is less than 0 or greater than or equal to <see cref="P:System.Windows.Forms.ImageList.ImageCollection.Count" />.</exception>
@@ -818,7 +850,7 @@
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(key As String) As Image" />
       <MemberSignature Language="F#" Value="member this.Item(string) : System.Drawing.Image" Usage="System.Windows.Forms.ImageList.ImageCollection.Item" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Image ^ default[System::String ^] { System::Drawing::Image ^ get(System::String ^ key); };" />
-      <MemberSignature Language="C#" Value="public System.Drawing.Image? this[string key] { get; }" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Drawing.Image? this[string key] { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -829,9 +861,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -840,20 +874,20 @@
         <ReturnType>System.Drawing.Image</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the image to retrieve from the collection.</param>
         <summary>Gets an <see cref="T:System.Drawing.Image" /> with the specified key from the collection.</summary>
         <value>The <see cref="T:System.Drawing.Image" /> with the specified key.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. The key comparison is not case-sensitive.  
-  
- If an image with the specified key is not found, the value of the <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> property is `null`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. The key comparison is not case-sensitive.
+
+ If an image with the specified key is not found, the value of the <xref:System.Windows.Forms.ImageList.ImageCollection.Item*> property is `null`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -875,6 +909,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
@@ -883,13 +919,13 @@
         <summary>Gets the collection of keys associated with the images in the <see cref="T:System.Windows.Forms.ImageList.ImageCollection" />.</summary>
         <value>A <see cref="T:System.Collections.Specialized.StringCollection" /> containing the names of the images in the <see cref="T:System.Windows.Forms.ImageList.ImageCollection" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of an image corresponds to its key, and an image key is not case-sensitive.  
-  
- If none of the images contained in the <xref:System.Windows.Forms.ImageList.ImageCollection> have keys, <xref:System.Windows.Forms.ImageList.ImageCollection.Keys%2A> returns an empty <xref:System.Collections.Specialized.StringCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of an image corresponds to its key, and an image key is not case-sensitive.
+
+ If none of the images contained in the <xref:System.Windows.Forms.ImageList.ImageCollection> have keys, <xref:System.Windows.Forms.ImageList.ImageCollection.Keys*> returns an empty <xref:System.Collections.Specialized.StringCollection>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -912,9 +948,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
@@ -929,11 +967,11 @@
         <param name="image">The <see cref="T:System.Drawing.Image" /> to remove from the list.</param>
         <summary>Not supported. The <see cref="M:System.Collections.IList.Remove(System.Object)" /> method removes a specified object from the list.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This implementation of <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> throws a <xref:System.NotSupportedException> exception.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This implementation of <xref:System.Windows.Forms.ImageList.ImageCollection.Remove*> throws a <xref:System.NotSupportedException> exception.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">This method is not supported.</exception>
@@ -962,6 +1000,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -974,10 +1014,10 @@
         <summary>Removes an image from the list.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException">The image cannot be removed.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">The index value was less than 0.  
-  
- -or-  
-  
+        <exception cref="T:System.ArgumentOutOfRangeException">The index value was less than 0.
+
+ -or-
+
  The index value is greater than or equal to the <see cref="P:System.Windows.Forms.ImageList.ImageCollection.Count" /> of images.</exception>
         <altmember cref="M:System.Windows.Forms.ImageList.ImageCollection.Clear" />
         <altmember cref="M:System.Windows.Forms.ImageList.ImageCollection.Remove(System.Drawing.Image)" />
@@ -1000,22 +1040,24 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The key of the image to remove from the collection.</param>
         <summary>Removes the image with the specified key from the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The key comparison is not case-sensitive. The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The key comparison is not case-sensitive. The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1037,24 +1079,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The zero-based index of an image in the collection.</param>
         <param name="name">The name of the image to be set as the image key.</param>
         <summary>Sets the key for an image in the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. An image key is not case-sensitive.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of an image corresponds to its key in the <xref:System.Windows.Forms.ImageList.ImageCollection>. An image key is not case-sensitive.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.IndexOutOfRangeException">The specified index is less than 0 or greater than or equal to <see cref="P:System.Windows.Forms.ImageList.ImageCollection.Count" />.</exception>
@@ -1081,6 +1125,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1099,10 +1145,10 @@
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="index" /> is less than 0.</exception>
         <exception cref="T:System.ArgumentException">
-          <paramref name="dest" /> is multidimensional.  
-  
- -or-  
-  
+          <paramref name="dest" /> is multidimensional.
+
+ -or-
+
  The number of elements in the <see cref="T:System.Windows.Forms.ComboBox.ObjectCollection" /> is greater than the available space from <paramref name="index" /> to the end of the destination array.</exception>
         <exception cref="T:System.InvalidCastException">The type of the <see cref="T:System.Windows.Forms.ComboBox.ObjectCollection" /> cannot be cast automatically to the type of the destination array.</exception>
       </Docs>
@@ -1127,6 +1173,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1166,6 +1214,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -1191,7 +1241,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function Add (value As Object) As Integer Implements IList.Add" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Add : obj -&gt; int&#xA;override this.System.Collections.IList.Add : obj -&gt; int" Usage="imageCollection.System.Collections.IList.Add value" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.Add(System::Object ^ value) = System::Collections::IList::Add;" />
-      <MemberSignature Language="C#" Value="int IList.Add (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="int IList.Add (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Add(System.Object)</InterfaceMember>
@@ -1206,6 +1256,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1231,12 +1283,12 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function Contains (image As Object) As Boolean Implements IList.Contains" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Contains : obj -&gt; bool&#xA;override this.System.Collections.IList.Contains : obj -&gt; bool" Usage="imageCollection.System.Collections.IList.Contains image" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberSignature Language="C++ CLI" Value=" virtual bool System.Collections.IList.Contains(System::Object ^ image) = System::Collections::IList::Contains;" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="bool IList.Contains (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Function Contains (value As Object) As Boolean Implements IList.Contains" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Contains : obj -&gt; bool&#xA;override this.System.Collections.IList.Contains : obj -&gt; bool" Usage="imageCollection.System.Collections.IList.Contains value" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value=" virtual bool System.Collections.IList.Contains(System::Object ^ value) = System::Collections::IList::Contains;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="C#" Value="bool IList.Contains (object value);" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Function Contains (value As Object) As Boolean Implements IList.Contains" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Contains : obj -&gt; bool&#xA;override this.System.Collections.IList.Contains : obj -&gt; bool" Usage="imageCollection.System.Collections.IList.Contains value" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value=" virtual bool System.Collections.IList.Contains(System::Object ^ value) = System::Collections::IList::Contains;" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C#" Value="bool IList.Contains (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Contains(System.Object)</InterfaceMember>
@@ -1251,13 +1303,15 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="image" Type="System.Object" Index="0" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
-        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="image">The image to locate in the <see cref="T:System.Windows.Forms.ImageList.ImageCollection" />.</param>
@@ -1277,12 +1331,12 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function IndexOf (image As Object) As Integer Implements IList.IndexOf" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.IndexOf : obj -&gt; int&#xA;override this.System.Collections.IList.IndexOf : obj -&gt; int" Usage="imageCollection.System.Collections.IList.IndexOf image" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.IndexOf(System::Object ^ image) = System::Collections::IList::IndexOf;" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Function IndexOf (value As Object) As Integer Implements IList.IndexOf" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="abstract member System.Collections.IList.IndexOf : obj -&gt; int&#xA;override this.System.Collections.IList.IndexOf : obj -&gt; int" Usage="imageCollection.System.Collections.IList.IndexOf value" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.IndexOf(System::Object ^ value) = System::Collections::IList::IndexOf;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Function IndexOf (value As Object) As Integer Implements IList.IndexOf" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="abstract member System.Collections.IList.IndexOf : obj -&gt; int&#xA;override this.System.Collections.IList.IndexOf : obj -&gt; int" Usage="imageCollection.System.Collections.IList.IndexOf value" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.IndexOf(System::Object ^ value) = System::Collections::IList::IndexOf;" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C#" Value="int IList.IndexOf (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.IndexOf(System.Object)</InterfaceMember>
@@ -1297,13 +1351,15 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="image" Type="System.Object" Index="0" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
-        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="image">The image to find in the list.</param>
@@ -1322,7 +1378,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Sub Insert (index As Integer, value As Object) Implements IList.Insert" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Insert : int * obj -&gt; unit&#xA;override this.System.Collections.IList.Insert : int * obj -&gt; unit" Usage="imageCollection.System.Collections.IList.Insert (index, value)" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Insert(int index, System::Object ^ value) = System::Collections::IList::Insert;" />
-      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Insert(System.Int32,System.Object)</InterfaceMember>
@@ -1337,6 +1393,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1350,11 +1408,11 @@ This member is an explicit interface member implementation. It can be used only 
         <param name="value">The object to insert into the collection.</param>
         <summary>Implements the <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" /> method. Throws a <see cref="T:System.NotSupportedException" /> in all cases.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To add an item to the <xref:System.Windows.Forms.ImageList.ImageCollection>, use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To add an item to the <xref:System.Windows.Forms.ImageList.ImageCollection>, use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add*> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">In all cases.</exception>
@@ -1380,6 +1438,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1406,7 +1466,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
       <MemberSignature Language="F#" Value="member this.System.Collections.IList.Item(int) : obj with get, set" Usage="System.Collections.IList.Item" />
       <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IList::Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
-      <MemberSignature Language="C#" Value="object? System.Collections.IList.Item[int index] { get; set; }" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="object? System.Collections.IList.Item[int index] { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
@@ -1420,13 +1480,15 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1435,7 +1497,7 @@ This member is an explicit interface member implementation. It can be used only 
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The zero-based index of the image to get or set.</param>
@@ -1454,12 +1516,12 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Sub Remove (image As Object) Implements IList.Remove" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Remove : obj -&gt; unit&#xA;override this.System.Collections.IList.Remove : obj -&gt; unit" Usage="imageCollection.System.Collections.IList.Remove image" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Remove(System::Object ^ image) = System::Collections::IList::Remove;" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="void IList.Remove (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Sub Remove (value As Object) Implements IList.Remove" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Remove : obj -&gt; unit&#xA;override this.System.Collections.IList.Remove : obj -&gt; unit" Usage="imageCollection.System.Collections.IList.Remove value" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Remove(System::Object ^ value) = System::Collections::IList::Remove;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="C#" Value="void IList.Remove (object value);" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Sub Remove (value As Object) Implements IList.Remove" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Remove : obj -&gt; unit&#xA;override this.System.Collections.IList.Remove : obj -&gt; unit" Usage="imageCollection.System.Collections.IList.Remove value" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Remove(System::Object ^ value) = System::Collections::IList::Remove;" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C#" Value="void IList.Remove (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Remove(System.Object)</InterfaceMember>
@@ -1474,24 +1536,26 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="image" Type="System.Object" Index="0" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
-        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="image">The object to add to the <see cref="T:System.Windows.Forms.ImageList.ImageCollection" />.</param>
         <param name="value">The object to remove from the <see cref="T:System.Collections.IList" />.</param>
         <summary>Implements the <see cref="M:System.Collections.IList.Remove(System.Object)" />. Throws a <see cref="T:System.NotSupportedException" /> in all cases.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot change the <xref:System.Windows.Forms.ImageList.ImageCollection> class directly. To remove an item from the <xref:System.Windows.Forms.ImageList.ImageCollection>, use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveAt%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot change the <xref:System.Windows.Forms.ImageList.ImageCollection> class directly. To remove an item from the <xref:System.Windows.Forms.ImageList.ImageCollection>, use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveAt*> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">In all cases.</exception>

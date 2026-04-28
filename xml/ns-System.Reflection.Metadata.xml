@@ -2,16 +2,20 @@
   <Docs>
     <summary>Provides low-level functionality for reading assembly metadata according to ECMA-335. This namespace is designed to be used by compilers and other tools that need to read assembly metadata.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
+      <format type="text/markdown"><![CDATA[
 
-## Remarks  
- This namespace contains the following core classes:  
-  
--   The <xref:System.Reflection.Metadata.MetadataReader> class, which is used to read an assembly.
-  
+## Remarks
+
+> [!CAUTION]
+> The metadata-reading types in this namespace, such as <xref:System.Reflection.Metadata.MetadataReader> and <xref:System.Reflection.Metadata.MetadataReaderProvider>, aren't designed to handle untrusted input. Malformed or malicious PE files, metadata, or PDB inputs can cause unexpected behavior, including out-of-bounds memory access, crashes, or hangs. Only use these APIs with trusted metadata, PE files, and PDB inputs. The <xref:System.Reflection.Metadata.TypeName> and <xref:System.Reflection.Metadata.AssemblyNameInfo> types are safe for use with untrusted input.
+
+ This namespace contains the following core classes:
+
+- The <xref:System.Reflection.Metadata.MetadataReader> class, which is used to read an assembly.
+
  ]]></format>
     </remarks>
-    <altmember cref="N:System.Reflection.Metadata.Ecma335" />    
-    <altmember cref="N:System.Reflection.PortableExecutable" />    
+    <altmember cref="N:System.Reflection.Metadata.Ecma335" />
+    <altmember cref="N:System.Reflection.PortableExecutable" />
     </Docs>
 </Namespace>

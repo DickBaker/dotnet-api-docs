@@ -12,12 +12,21 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
     <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{_semanticKey.DebugSummary}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{_semanticKey.DebugSummary}")&gt;]</AttributeName>
@@ -33,7 +42,7 @@
 
  Using <xref:System.Speech.Recognition.SemanticResultKey> objects, you tag <xref:System.Speech.Recognition.SemanticResultValue> instances contained in <xref:System.Speech.Recognition.GrammarBuilder> objects and strings so that the values may readily be accessed from <xref:System.Speech.Recognition.SemanticValue> instances on recognition.
 
- You can use <xref:System.Speech.Recognition.SemanticResultValue> and <xref:System.Speech.Recognition.SemanticResultKey> objects, in conjunction with <xref:System.Speech.Recognition.GrammarBuilder> and <xref:System.Speech.Recognition.Choices> objects, to define the semantic structure for a speech recognition grammar. To access the semantic information in a recognition result, obtain an instance of <xref:System.Speech.Recognition.SemanticValue> through the <xref:System.Speech.Recognition.RecognizedPhrase.Semantics%2A> property on <xref:System.Speech.Recognition.RecognizedPhrase>.
+ You can use <xref:System.Speech.Recognition.SemanticResultValue> and <xref:System.Speech.Recognition.SemanticResultKey> objects, in conjunction with <xref:System.Speech.Recognition.GrammarBuilder> and <xref:System.Speech.Recognition.Choices> objects, to define the semantic structure for a speech recognition grammar. To access the semantic information in a recognition result, obtain an instance of <xref:System.Speech.Recognition.SemanticValue> through the <xref:System.Speech.Recognition.RecognizedPhrase.Semantics> property on <xref:System.Speech.Recognition.RecognizedPhrase>.
 
 
 ## Examples
@@ -89,7 +98,6 @@ private void pwdGrammar()
     </remarks>
     <altmember cref="T:System.Speech.Recognition.SemanticValue" />
     <altmember cref="T:System.Speech.Recognition.SemanticResultValue" />
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361587(v%3doffice.14)">Using a SemanticResultKey to Extract a SemanticResultValue</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -107,7 +115,7 @@ private void pwdGrammar()
 
  The grammar components can be specified either as an array of <xref:System.Speech.Recognition.GrammarBuilder> objects, or as an array of <xref:System.String> instances.
 
- If the grammar components are used in recognition, you can access the returned <xref:System.Speech.Recognition.SemanticValue> using the text tag provided to the constructor of <xref:System.Speech.Recognition.SemanticResultKey> as a semantic key. The <xref:System.Speech.Recognition.SemanticValue.Value%2A> property of the <xref:System.Speech.Recognition.SemanticValue> instance will be determined by the grammar components used in the definition of <xref:System.Speech.Recognition.SemanticResultKey>.
+ If the grammar components are used in recognition, you can access the returned <xref:System.Speech.Recognition.SemanticValue> using the text tag provided to the constructor of <xref:System.Speech.Recognition.SemanticResultKey> as a semantic key. The <xref:System.Speech.Recognition.SemanticValue.Value> property of the <xref:System.Speech.Recognition.SemanticValue> instance will be determined by the grammar components used in the definition of <xref:System.Speech.Recognition.SemanticResultKey>.
 
  ]]></format>
         </remarks>
@@ -125,7 +133,7 @@ private void pwdGrammar()
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="semanticResultKey" Type="System.String" />
@@ -146,7 +154,7 @@ private void pwdGrammar()
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Because of implicit conversions, the `builders` argument supports <xref:System.Speech.Recognition.SemanticResultValue>, <xref:System.Speech.Recognition.SemanticResultKey>, <xref:System.Speech.Recognition.Choices>, and <xref:System.String> objects as well. For more information on implicit conversions, see <xref:System.Speech.Recognition.GrammarBuilder.op_Implicit%2A>.
+ Because of implicit conversions, the `builders` argument supports <xref:System.Speech.Recognition.SemanticResultValue>, <xref:System.Speech.Recognition.SemanticResultKey>, <xref:System.Speech.Recognition.Choices>, and <xref:System.String> objects as well. For more information on implicit conversions, see <xref:System.Speech.Recognition.GrammarBuilder.op_Implicit*>.
 
  When performing a recognition operation, the <xref:System.Speech.Recognition.GrammarBuilder> objects provided in the `builders` argument are treated as sequential. For example, if the following <xref:System.Speech.Recognition.SemanticResultValue> is used to construct a <xref:System.Speech.Recognition.Grammar>, input to the recognition engine must contain the words "the quick brown fox" in sequence to be recognized.
 
@@ -159,13 +167,13 @@ SemanticResultKey stringTest=new SemanticResultKey(
     new GrammarBuilder("fox")});
 ```
 
- The `semanticResultKey` argument contains the tag used to access the <xref:System.Speech.Recognition.SemanticValue> which might be returned.
+ The `semanticResultKey` argument contains the tag used to access the <xref:System.Speech.Recognition.SemanticValue> that might be returned.
 
- The <xref:System.Speech.Recognition.SemanticValue.Value%2A> of the <xref:System.Speech.Recognition.SemanticValue> is determined by the <xref:System.Speech.Recognition.GrammarBuilder> instances provided by the `builders` parameter.
+ The <xref:System.Speech.Recognition.SemanticValue.Value*> of the <xref:System.Speech.Recognition.SemanticValue> is determined by the <xref:System.Speech.Recognition.GrammarBuilder> instances provided by the `builders` parameter.
 
  If the <xref:System.Speech.Recognition.GrammarBuilder> objects contain no defining instances of <xref:System.Speech.Recognition.SemanticResultValue>, the value of the <xref:System.Speech.Recognition.SemanticValue> is `null`.
 
- If the <xref:System.Speech.Recognition.GrammarBuilder> objects provided in the `builders` parameter provide an untagged (not associated with a <xref:System.Speech.Recognition.SemanticResultKey> object) <xref:System.Speech.Recognition.SemanticResultValue> instance that is used by the recognition logic, that instance of <xref:System.Speech.Recognition.SemanticResultValue> will define the <xref:System.Speech.Recognition.SemanticValue.Value%2A> property of the <xref:System.Speech.Recognition.SemanticValue> that is produced.
+ If the <xref:System.Speech.Recognition.GrammarBuilder> objects provided in the `builders` parameter provide an untagged (not associated with a <xref:System.Speech.Recognition.SemanticResultKey> object) <xref:System.Speech.Recognition.SemanticResultValue> instance that is used by the recognition logic, that instance of <xref:System.Speech.Recognition.SemanticResultValue> will define the <xref:System.Speech.Recognition.SemanticValue.Value> property of the <xref:System.Speech.Recognition.SemanticValue> that is produced.
 
  There should be one, and only one, untagged <xref:System.Speech.Recognition.SemanticResultValue> instance in the <xref:System.Speech.Recognition.GrammarBuilder> objects specified by the `builders` parameter. If multiple instances of untagged <xref:System.Speech.Recognition.SemanticResultValue> are associated with the <xref:System.Speech.Recognition.SemanticResultKey>, each will attempt to the set the value of the <xref:System.Speech.Recognition.SemanticValue> produced in the recognition result. This is not permitted, and the recognizer will generate an exception when it attempts to use a <xref:System.Speech.Recognition.Grammar> created using such a <xref:System.Speech.Recognition.SemanticResultKey> instance.
 
@@ -241,7 +249,7 @@ private void pwdGrammar()
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="semanticResultKey" Type="System.String" />
@@ -273,16 +281,16 @@ SemanticResultKey stringTest=new SemanticResultKey("stringTest",
                                                "fox"});
 ```
 
- The `semanticResultKey` argument determines the key used to access the <xref:System.Speech.Recognition.SemanticValue> which might be returned.
+ The `semanticResultKey` argument determines the key used to access the <xref:System.Speech.Recognition.SemanticValue> that might be returned.
 
- If you construct a <xref:System.Speech.Recognition.Grammar> using a <xref:System.Speech.Recognition.GrammarBuilder> object that contains a semantic key with an array of string objects,  the <xref:System.Speech.Recognition.SemanticValue.Value%2A> of the <xref:System.Speech.Recognition.SemanticValue> produced by a recognition operation  will be the string used in recognition. In the preceding example, this means that <xref:System.Speech.Recognition.SemanticValue.Value%2A> would be "the quick brown fox".
+ If you construct a <xref:System.Speech.Recognition.Grammar> using a <xref:System.Speech.Recognition.GrammarBuilder> object that contains a semantic key with an array of string objects,  the <xref:System.Speech.Recognition.SemanticValue.Value*> of the <xref:System.Speech.Recognition.SemanticValue> produced by a recognition operation  will be the string used in recognition. In the preceding example, this means that <xref:System.Speech.Recognition.SemanticValue.Value*> would be "the quick brown fox".
 
 
 
 ## Examples
  The following example creates a <xref:System.Speech.Recognition.Grammar> from a <xref:System.Speech.Recognition.GrammarBuilder> object that uses a <xref:System.Speech.Recognition.SemanticResultKey>, which is defined by an array of <xref:System.String> objects.
 
- A recognition engine using the <xref:System.Speech.Recognition.Grammar> created will recognize the phrase "color red green blue zero". The semantics of the <xref:System.Speech.Recognition.RecognizedPhrase> returned by recognition will contain a <xref:System.Speech.Recognition.SemanticValue> with a <xref:System.Speech.Recognition.SemanticValue.Value%2A> of "red green blue". You can access the <xref:System.Speech.Recognition.SemanticValue> using the "code" tag.
+ A recognition engine using the <xref:System.Speech.Recognition.Grammar> created will recognize the phrase "color red green blue zero". The semantics of the <xref:System.Speech.Recognition.RecognizedPhrase> returned by recognition will contain a <xref:System.Speech.Recognition.SemanticValue> with a <xref:System.Speech.Recognition.SemanticValue.Value*> of "red green blue". You can access the <xref:System.Speech.Recognition.SemanticValue> using the "code" tag.
 
  Because of the `SemanticResultValue("zero", 5)` appended to the <xref:System.Speech.Recognition.GrammarBuilder>, the root <xref:System.Speech.Recognition.SemanticValue> object in the <xref:System.Speech.Recognition.RecognizedPhrase> will have a value of 5.
 
@@ -316,7 +324,7 @@ private void keyTest()
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Speech.Recognition.GrammarBuilder</ReturnType>
@@ -329,19 +337,18 @@ private void keyTest()
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The use of <xref:System.Speech.Recognition.SemanticResultValue.ToGrammarBuilder%2A> is equivalent to using the <xref:System.Speech.Recognition.GrammarBuilder> constructor which takes <xref:System.Speech.Recognition.SemanticResultKey> as an argument (<xref:System.Speech.Recognition.GrammarBuilder.%23ctor%28System.Speech.Recognition.SemanticResultKey%29>).
+ The use of <xref:System.Speech.Recognition.SemanticResultValue.ToGrammarBuilder*> is equivalent to using the <xref:System.Speech.Recognition.GrammarBuilder> constructor which takes <xref:System.Speech.Recognition.SemanticResultKey> as an argument (<xref:System.Speech.Recognition.GrammarBuilder.%23ctor(System.Speech.Recognition.SemanticResultKey)>).
 
 
 
 ## Examples
  The following example creates a <xref:System.Speech.Recognition.Grammar> object that supports commands to change the background color.
 
- A <xref:System.Speech.Recognition.Choices> object (`colorChoice`) containing the list of options for background colors is filled using the <xref:System.Speech.Recognition.Choices.Add%28System.Speech.Recognition.GrammarBuilder%5B%5D%29> method with <xref:System.Speech.Recognition.GrammarBuilder> instances. The <xref:System.Speech.Recognition.GrammarBuilder> instances are obtained through the <xref:System.Speech.Recognition.SemanticResultKey.ToGrammarBuilder> method on the <xref:System.Speech.Recognition.SemanticResultValue> objects created from color strings.
+ A <xref:System.Speech.Recognition.Choices> object (`colorChoice`) containing the list of options for background colors is filled using the <xref:System.Speech.Recognition.Choices.Add(System.Speech.Recognition.GrammarBuilder[])> method with <xref:System.Speech.Recognition.GrammarBuilder> instances. The <xref:System.Speech.Recognition.GrammarBuilder> instances are obtained through the <xref:System.Speech.Recognition.SemanticResultKey.ToGrammarBuilder> method on the <xref:System.Speech.Recognition.SemanticResultValue> objects created from color strings.
 
  A <xref:System.Speech.Recognition.GrammarBuilder> is then obtained by calling <xref:System.Speech.Recognition.SemanticResultKey.ToGrammarBuilder> on a <xref:System.Speech.Recognition.SemanticResultKey> instance, which will be used to key the semantic choices in `colorChoice`.
 
 ```csharp
-
 private Grammar CreateGrammarBuilderRGBSemantics()
 {
 
@@ -372,7 +379,6 @@ private Grammar CreateGrammarBuilderRGBSemantics()
 
   return grammar;
 }
-
 ```
 
  ]]></format>

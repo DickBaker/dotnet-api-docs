@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
   </Base>
@@ -28,50 +33,50 @@
   <Docs>
     <summary>The base class for the configuration converter types.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.ConfigurationConverterBase> is the base class for the converter configuration types. These are types that convert strings, found in the configuration file, to and from the related strongly typed properties.  
-  
-   
-  
-## Examples  
- The following code examples show how to derive from the <xref:System.Configuration.ConfigurationConverterBase> class to create a custom <xref:System.TimeSpan> converter type. Also, the examples show how to use this type in a custom section.  
-  
- The following code example shows how to create a custom <xref:System.TimeSpan> converter type from the <xref:System.Configuration.ConfigurationConverterBase> class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.ConfigurationConverterBase> is the base class for the converter configuration types. These are types that convert strings, found in the configuration file, to and from the related strongly typed properties.
+
+
+
+## Examples
+ The following code examples show how to derive from the <xref:System.Configuration.ConfigurationConverterBase> class to create a custom <xref:System.TimeSpan> converter type. Also, the examples show how to use this type in a custom section.
+
+ The following code example shows how to create a custom <xref:System.TimeSpan> converter type from the <xref:System.Configuration.ConfigurationConverterBase> class.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/CS/TimeSpanMinutesConverter.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb" id="Snippet1":::  
-  
- The following code example shows how to define a custom section that uses the previous custom <xref:System.TimeSpan> converter.  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb" id="Snippet1":::
+
+ The following code example shows how to define a custom section that uses the previous custom <xref:System.TimeSpan> converter.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/CS/ConfigurationConvertersCustomSection.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/VB/ConfigurationConvertersCustomSection.vb" id="Snippet1":::  
-  
- The following code example shows how to create and modify a configuration file using the previous custom section.  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConvertersCustomSection/VB/ConfigurationConvertersCustomSection.vb" id="Snippet1":::
+
+ The following code example shows how to create and modify a configuration file using the previous custom section.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationConverterBase/CS/ConfigurationConverterBase.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConverterBase/VB/ConfigurationConverterBase.vb" id="Snippet1":::  
-  
- The following is a configuration excerpt as used by the previous example.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <configSections>  
-    <section name="CustomSection"   
-      type="Samples.AspNet.CustomSection,   
-      ConfigurationConverters,   
-      Version=1.0.0.0, Culture=neutral,   
-      PublicKeyToken=null"   
-      allowDefinition="Everywhere"   
-      allowExeDefinition="MachineToApplication"   
-      restartOnExternalChanges="true" />  
-  </configSections>  
-  <CustomSection fileName="default.txt" maxIdleTime="90" />  
-</configuration>  
-```  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationConverterBase/VB/ConfigurationConverterBase.vb" id="Snippet1":::
+
+ The following is a configuration excerpt as used by the previous example.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="CustomSection"
+      type="Samples.AspNet.CustomSection,
+      ConfigurationConverters,
+      Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null"
+      allowDefinition="Everywhere"
+      allowExeDefinition="MachineToApplication"
+      restartOnExternalChanges="true" />
+  </configSections>
+  <CustomSection fileName="default.txt" maxIdleTime="90" />
+</configuration>
+```
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Configuration.CommaDelimitedStringCollectionConverter" />
@@ -107,16 +112,18 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Configuration.ConfigurationConverterBase" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Because you normally use the converter types provided by the system, the only time you need the <xref:System.Configuration.ConfigurationConverterBase.%23ctor%2A> constructor is when you must create your own conversion type.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Because you normally use the converter types provided by the system, the only time you need the <xref:System.Configuration.ConfigurationConverterBase.%23ctor*> constructor is when you must create your own conversion type.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -126,9 +133,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationConverterBase.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertFrom (ctx As ITypeDescriptorContext, type As Type) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.CanConvertFrom : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool" Usage="configurationConverterBase.CanConvertFrom (ctx, type)" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.CanConvertFrom : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool" Usage="configurationConverterBase.CanConvertFrom (ctx, type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool CanConvertFrom(System::ComponentModel::ITypeDescriptorContext ^ ctx, Type ^ type);" />
-      <MemberSignature Language="F#" Value="abstract member CanConvertFrom : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool&#xA;override this.CanConvertFrom : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool" Usage="configurationConverterBase.CanConvertFrom (ctx, type)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -144,6 +150,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -159,19 +167,19 @@
         <returns>
           <see langword="true" /> if the conversion is allowed; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom%2A> method determines whether a conversion can be performed on strongly typed properties to obtain value strings used in the configuration file.  
-  
-   
-  
-## Examples  
- The following example code shows how to override the <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom%2A> method to create a custom <xref:System.TimeSpan> converter type. Also, the example shows how to use this type in a custom section.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom*> method determines whether a conversion can be performed on strongly typed properties to obtain value strings used in the configuration file.
+
+
+
+## Examples
+ The following example code shows how to override the <xref:System.Configuration.ConfigurationConverterBase.CanConvertFrom*> method to create a custom <xref:System.TimeSpan> converter type. Also, the example shows how to use this type in a custom section.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/CS/TimeSpanMinutesConverter.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb" id="Snippet3":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -181,9 +189,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationConverterBase.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function CanConvertTo (ctx As ITypeDescriptorContext, type As Type) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.CanConvertTo : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool" Usage="configurationConverterBase.CanConvertTo (ctx, type)" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.CanConvertTo : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool" Usage="configurationConverterBase.CanConvertTo (ctx, type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool CanConvertTo(System::ComponentModel::ITypeDescriptorContext ^ ctx, Type ^ type);" />
-      <MemberSignature Language="F#" Value="abstract member CanConvertTo : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool&#xA;override this.CanConvertTo : System.ComponentModel.ITypeDescriptorContext * Type -&gt; bool" Usage="configurationConverterBase.CanConvertTo (ctx, type)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -199,6 +206,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -214,19 +223,19 @@
         <returns>
           <see langword="true" /> if the conversion is allowed; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.ConfigurationConverterBase.CanConvertTo%2A> method determines whether the strings contained in the configuration file can be converted to the related strongly typed properties.  
-  
-   
-  
-## Examples  
- The following example code shows how to override the <xref:System.Configuration.ConfigurationConverterBase.CanConvertTo%2A> method to create a custom <xref:System.TimeSpan> converter type. Also, the example shows how to use this type in a custom section.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.ConfigurationConverterBase.CanConvertTo*> method determines whether the strings contained in the configuration file can be converted to the related strongly typed properties.
+
+
+
+## Examples
+ The following example code shows how to override the <xref:System.Configuration.ConfigurationConverterBase.CanConvertTo*> method to create a custom <xref:System.TimeSpan> converter type. Also, the example shows how to use this type in a custom section.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/CS/TimeSpanMinutesConverter.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.TimeSpanMinutesConverter/VB/TimeSpanMinutesConverter.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
       </Docs>

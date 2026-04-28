@@ -16,6 +16,11 @@
     <AssemblyVersion>8.0.0.1</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,7 +40,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.MetadataLoadContext</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -53,12 +58,12 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Reflection.MetadataLoadContext</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Reflection.Assembly</ReturnType>
         <Attributes>
-          <Attribute FrameworkAlternate="net-8.0-pp">
+          <Attribute FrameworkAlternate="net-10.0-pp">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
           </Attribute>
@@ -78,7 +83,7 @@
 
 ## Remarks
 
-Binding an assembly name to an assembly occurs when <xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyName%2A> is called or when a type from one assembly has a dependency on another assembly. The handler that overrides `Resolve` should use <xref:System.Reflection.MetadataLoadContext.LoadFromStream%2A?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyPath%2A?displayProperty=nameWithType> or <xref:System.Reflection.MetadataLoadContext.LoadFromByteArray%2A?displayProperty=nameWithType> to load the requested assembly and return it.
+Binding an assembly name to an assembly occurs when <xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyName*> is called or when a type from one assembly has a dependency on another assembly. The handler that overrides `Resolve` should use <xref:System.Reflection.MetadataLoadContext.LoadFromStream*?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyPath*?displayProperty=nameWithType> or <xref:System.Reflection.MetadataLoadContext.LoadFromByteArray*?displayProperty=nameWithType> to load the requested assembly and return it.
 
 To indicate the failure to find an assembly, the handler should return `null` rather than throwing an exception. Returning `null` commits the failure so that future attempts to load that name will fail without re-invoking the handler.
 

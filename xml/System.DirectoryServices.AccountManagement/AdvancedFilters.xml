@@ -13,23 +13,23 @@
     <AssemblyVersion>8.0.0.1</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>This class provides writable access to certain attributes so that users can modify read-only properties of the "dummy" principal object that is passed to a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearcher" /> object when using <see href="https://msdn.microsoft.com/library/84ac40bb-04c4-4d0b-adaf-0ddb9253599e">Query By Example</see>.</summary>
+    <summary>This class provides writable access to certain attributes so that users can modify read-only properties of the "dummy" principal object that is passed to a <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearcher" /> object when using Query By Example.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.DirectoryServices.AccountManagement.AdvancedFilters> class is accessed from a <xref:System.DirectoryServices.AccountManagement.UserPrincipal> object through the <xref:System.DirectoryServices.AccountManagement.UserPrincipal.AdvancedSearchFilter%2A> property, and is effectually treated like a property of the <xref:System.DirectoryServices.AccountManagement.UserPrincipal> object, and isn't intended to be used on its own.
-
-
-
-## Examples
- See the [Query By Example](https://msdn.microsoft.com/library/84ac40bb-04c4-4d0b-adaf-0ddb9253599e) topic for example code.
+ The <xref:System.DirectoryServices.AccountManagement.AdvancedFilters> class is accessed from a <xref:System.DirectoryServices.AccountManagement.UserPrincipal> object through the <xref:System.DirectoryServices.AccountManagement.UserPrincipal.AdvancedSearchFilter> property, and is effectually treated like a property of the <xref:System.DirectoryServices.AccountManagement.UserPrincipal> object, and isn't intended to be used on its own.
 
  ]]></format>
     </remarks>
@@ -48,7 +48,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -66,7 +66,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Applications should access <xref:System.DirectoryServices.AccountManagement.AdvancedFilters> through the <xref:System.DirectoryServices.AccountManagement.UserPrincipal.AdvancedSearchFilter%2A> property of the user object.
+ Applications should access <xref:System.DirectoryServices.AccountManagement.AdvancedFilters> through the <xref:System.DirectoryServices.AccountManagement.UserPrincipal.AdvancedSearchFilter> property of the user object.
 
  ]]></format>
         </remarks>
@@ -85,7 +85,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -102,14 +102,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
 
 
 ## Examples
 
 ```csharp
-
 // Create the principal context for the usr object.
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, "fabrikam.com", "CN=Users,DC=fabrikam,DC=com", "administrator", "SecurelyStoredPassword");
 
@@ -149,7 +148,7 @@ foreach (UserPrincipal u in results)
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -166,14 +165,13 @@ foreach (UserPrincipal u in results)
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
 
 
 ## Examples
 
 ```csharp
-
 // Create the principal context for the usr object.
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, "fabrikam.com", "CN=Users,DC=fabrikam,DC=com", "administrator", "SecurelyStoredPassword");
 
@@ -213,7 +211,7 @@ foreach (UserPrincipal u in results)
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -243,7 +241,6 @@ foreach (UserPrincipal u in results)
  In an extended class, you might implement an advanced search filter for `LogonCount`:
 
 ```csharp
-
 public class InetOrgPersonSearchFilter : AdvancedFilters
 {
 	public InetOrgPersonSearchFilter(Principal p) : base(p) { }
@@ -272,7 +269,7 @@ public class InetOrgPersonSearchFilter : AdvancedFilters
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -291,7 +288,6 @@ public class InetOrgPersonSearchFilter : AdvancedFilters
 ## Examples
 
 ```csharp
-
 // Create the principal context for the usr object.
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, "fabrikam.com", "CN=Users,DC=fabrikam,DC=com", "administrator", "SecurelyStoredPassword");
 
@@ -329,7 +325,7 @@ foreach (UserPrincipal u in results)
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -346,14 +342,13 @@ foreach (UserPrincipal u in results)
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
 
 
 ## Examples
 
 ```csharp
-
 // Create the principal context for the usr object.
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, "fabrikam.com", "CN=Users,DC=fabrikam,DC=com", "administrator", "SecurelyStoredPassword");
 
@@ -393,7 +388,7 @@ foreach (UserPrincipal u in results)
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -410,14 +405,13 @@ foreach (UserPrincipal u in results)
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
 
 
 ## Examples
 
 ```csharp
-
 // Create the principal context for the usr object.
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, "fabrikam.com", "CN=Users,DC=fabrikam,DC=com", "administrator", "SecurelyStoredPassword");
 
@@ -455,7 +449,7 @@ foreach (UserPrincipal u in results)
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -472,14 +466,13 @@ foreach (UserPrincipal u in results)
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
 
 
 ## Examples
 
 ```csharp
-
 // Create the principal context for the usr object.
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain, "fabrikam.com", "CN=Users,DC=fabrikam,DC=com", "administrator", "SecurelyStoredPassword");
 

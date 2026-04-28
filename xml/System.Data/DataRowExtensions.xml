@@ -19,12 +19,18 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Data.DataSetExtensions" FromVersion="10.0.0.0" To="System.Data.Common" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Data.DataSetExtensions" FromVersion="11.0.0.0" To="System.Data.Common" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.Data.DataSetExtensions" FromVersion="4.0.0.0" To="System.Data.Common" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -43,7 +49,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -54,7 +60,7 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> API has been extended with two new methods of the <xref:System.Data.DataRow> class, <xref:System.Data.DataRowExtensions.Field%2A> and <xref:System.Data.DataRowExtensions.SetField%2A>. You can use these to form Language-Integrated Query (LINQ) expressions and method queries against <xref:System.Data.DataTable> objects. They are the recommended methods to use for accessing column values within Language-Integrated Query (LINQ) expressions and method queries. For more information, see [Generic Field and SetField Methods](/dotnet/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset).
+ The <xref:System.Data.DataSet> API has been extended with two new methods of the <xref:System.Data.DataRow> class, <xref:System.Data.DataRowExtensions.Field*> and <xref:System.Data.DataRowExtensions.SetField*>. You can use these to form Language-Integrated Query (LINQ) expressions and method queries against <xref:System.Data.DataTable> objects. They are the recommended methods to use for accessing column values within Language-Integrated Query (LINQ) expressions and method queries. For more information, see [Generic Field and SetField Methods](/dotnet/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset).
 
  ]]></format>
     </remarks>
@@ -70,13 +76,13 @@
       </Docs>
     </MemberGroup>
     <Member MemberName="Field&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, class System.Data.DataColumn column) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, column As DataColumn) As T" />
       <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * System.Data.DataColumn -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, column)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::Data::DataColumn ^ column);" />
-      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -92,6 +98,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -99,11 +107,17 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -124,11 +138,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> and <xref:System.Data.DataTable> do not support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> and <xref:System.Data.DataTable> do not support nullable types. The <xref:System.Data.DataRowExtensions.Field*> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
 
- If the value of the specified <xref:System.Data.DataColumn> is <xref:System.DBNull.Value?displayProperty=nameWithType> and `T` is a reference type or nullable type, the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
+ If the value of the specified <xref:System.Data.DataColumn> is <xref:System.DBNull.Value?displayProperty=nameWithType> and `T` is a reference type or nullable type, the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field*> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
- The <xref:System.Data.DataRowExtensions.Field%2A> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field%2A> method. The column value should then be converted to another type.
+ The <xref:System.Data.DataRowExtensions.Field*> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field*> method. The column value should then be converted to another type.
 
  ]]></format>
         </remarks>
@@ -138,13 +152,13 @@
       </Docs>
     </Member>
     <Member MemberName="Field&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, int32 columnIndex) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnIndex As Integer) As T" />
       <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * int -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnIndex)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, int columnIndex);" />
-      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -160,6 +174,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -174,7 +190,7 @@
       <Parameters>
         <Parameter Name="row" Type="System.Data.DataRow" RefType="this">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -192,11 +208,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field*> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
 
- If the value of the specified <xref:System.Data.DataColumn> is **null** and `T` is a reference type or nullable type, then the return type will be **null**.  The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
+ If the value of the specified <xref:System.Data.DataColumn> is **null** and `T` is a reference type or nullable type, then the return type will be **null**.  The <xref:System.Data.DataRowExtensions.Field*> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
- The <xref:System.Data.DataRowExtensions.Field%2A> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field%2A> method. The column value should then be converted to another type.
+ The <xref:System.Data.DataRowExtensions.Field*> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field*> method. The column value should then be converted to another type.
 
  ]]></format>
         </remarks>
@@ -206,13 +222,13 @@
       </Docs>
     </Member>
     <Member MemberName="Field&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, string columnName);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, string columnName);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, string columnName) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnName As String) As T" />
       <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * string -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnName)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::String ^ columnName);" />
-      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, string columnName);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, string columnName);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -228,6 +244,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -235,11 +253,17 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -260,11 +284,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class. A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> and <xref:System.Data.DataTable> do not support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types. If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class. A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> and <xref:System.Data.DataTable> do not support nullable types. The <xref:System.Data.DataRowExtensions.Field*> method provides support for accessing columns as nullable types. If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
 
- If the value of the specified <xref:System.Data.DataColumn> is **null** and `T` is a reference type or nullable type, the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
+ If the value of the specified <xref:System.Data.DataColumn> is **null** and `T` is a reference type or nullable type, the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field*> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
- The <xref:System.Data.DataRowExtensions.Field%2A> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field%2A> method. The column value should then be converted to another type.
+ The <xref:System.Data.DataRowExtensions.Field*> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field*> method. The column value should then be converted to another type.
 
  ]]></format>
         </remarks>
@@ -274,13 +298,13 @@
       </Docs>
     </Member>
     <Member MemberName="Field&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, System.Data.DataRowVersion version);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, System.Data.DataRowVersion version);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, class System.Data.DataColumn column, valuetype System.Data.DataRowVersion version) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, column As DataColumn, version As DataRowVersion) As T" />
       <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * System.Data.DataColumn * System.Data.DataRowVersion -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, column, version)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::Data::DataColumn ^ column, System::Data::DataRowVersion version);" />
-      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, System.Data.DataRowVersion version);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, System.Data.DataRowVersion version);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -296,6 +320,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -303,11 +329,17 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -330,11 +362,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field*> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
 
- If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
+ If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field*> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
- The <xref:System.Data.DataRowExtensions.Field%2A> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field%2A> method. The column value should then be converted to another type.
+ The <xref:System.Data.DataRowExtensions.Field*> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field*> method. The column value should then be converted to another type.
 
  ]]></format>
         </remarks>
@@ -344,13 +376,13 @@
       </Docs>
     </Member>
     <Member MemberName="Field&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex, System.Data.DataRowVersion version);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex, System.Data.DataRowVersion version);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, int32 columnIndex, valuetype System.Data.DataRowVersion version) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnIndex As Integer, version As DataRowVersion) As T" />
       <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * int * System.Data.DataRowVersion -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnIndex, version)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, int columnIndex, System::Data::DataRowVersion version);" />
-      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex, System.Data.DataRowVersion version);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, int columnIndex, System.Data.DataRowVersion version);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -366,6 +398,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -380,7 +414,7 @@
       <Parameters>
         <Parameter Name="row" Type="System.Data.DataRow" RefType="this">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -400,11 +434,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field*> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
 
- If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
+ If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field*> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
- The <xref:System.Data.DataRowExtensions.Field%2A> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field%2A> method. The column value should then be converted to another type.
+ The <xref:System.Data.DataRowExtensions.Field*> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field*> method. The column value should then be converted to another type.
 
  ]]></format>
         </remarks>
@@ -414,13 +448,13 @@
       </Docs>
     </Member>
     <Member MemberName="Field&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, string columnName, System.Data.DataRowVersion version);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static T? Field&lt;T&gt; (this System.Data.DataRow row, string columnName, System.Data.DataRowVersion version);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Field&lt;T&gt;(class System.Data.DataRow row, string columnName, valuetype System.Data.DataRowVersion version) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String,System.Data.DataRowVersion)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnName As String, version As DataRowVersion) As T" />
       <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * string * System.Data.DataRowVersion -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnName, version)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::String ^ columnName, System::Data::DataRowVersion version);" />
-      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, string columnName, System.Data.DataRowVersion version);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static T Field&lt;T&gt; (this System.Data.DataRow row, string columnName, System.Data.DataRowVersion version);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -436,6 +470,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -443,11 +479,17 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -470,11 +512,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A Language-Integrated Query (LINQ) expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field*> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value?displayProperty=nameWithType>, the returned nullable type will have a value of **null**.
 
- If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
+ If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field*> method will not return <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
- The <xref:System.Data.DataRowExtensions.Field%2A> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field%2A> method. The column value should then be converted to another type.
+ The <xref:System.Data.DataRowExtensions.Field*> method does not perform type conversions. If type conversion is required, you should first obtain the column value by using the <xref:System.Data.DataRowExtensions.Field*> method. The column value should then be converted to another type.
 
  ]]></format>
         </remarks>
@@ -493,13 +535,13 @@
       </Docs>
     </MemberGroup>
     <Member MemberName="SetField&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, T? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, T? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetField&lt;T&gt;(class System.Data.DataRow row, class System.Data.DataColumn column, !!T value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetField(Of T) (row As DataRow, column As DataColumn, value As T)" />
       <MemberSignature Language="F#" Value="static member SetField : System.Data.DataRow * System.Data.DataColumn * 'T -&gt; unit" Usage="System.Data.DataRowExtensions.SetField (row, column, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetField(System::Data::DataRow ^ row, System::Data::DataColumn ^ column, T value);" />
-      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, T value);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, System.Data.DataColumn column, T value);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -515,6 +557,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -526,7 +570,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -538,7 +582,7 @@
         <Parameter Name="column" Type="System.Data.DataColumn" />
         <Parameter Name="value" Type="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -555,11 +599,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If `value` is **null**, the <xref:System.Data.DataRowExtensions.SetField%2A> method converts the **null** value to <xref:System.DBNull.Value?displayProperty=nameWithType> in the underlying <xref:System.Data.DataColumn>.
+ If `value` is **null**, the <xref:System.Data.DataRowExtensions.SetField*> method converts the **null** value to <xref:System.DBNull.Value?displayProperty=nameWithType> in the underlying <xref:System.Data.DataColumn>.
 
- The <xref:System.Data.DataRowExtensions.SetField%2A> method does not perform any type conversions. This does not mean, however, that a type conversion will not occur. The <xref:System.Data.DataRowExtensions.SetField%2A> method exposes the ADO.NET 2.0 behavior of the <xref:System.Data.DataRow> class. A type conversion could be performed by the <xref:System.Data.DataRow> object and the converted value would then be saved to the row.
+ The <xref:System.Data.DataRowExtensions.SetField*> method does not perform any type conversions. This does not mean, however, that a type conversion will not occur. The <xref:System.Data.DataRowExtensions.SetField*> method exposes the ADO.NET 2.0 behavior of the <xref:System.Data.DataRow> class. A type conversion could be performed by the <xref:System.Data.DataRow> object and the converted value would then be saved to the row.
 
- Exceptions can be passed up through the <xref:System.Data.DataRowExtensions.SetField%2A> method from the underlying <xref:System.Data.DataRow> object.
+ Exceptions can be passed up through the <xref:System.Data.DataRowExtensions.SetField*> method from the underlying <xref:System.Data.DataRow> object.
 
  ]]></format>
         </remarks>
@@ -570,13 +614,13 @@
       </Docs>
     </Member>
     <Member MemberName="SetField&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, int columnIndex, T? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, int columnIndex, T? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetField&lt;T&gt;(class System.Data.DataRow row, int32 columnIndex, !!T value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetField(Of T) (row As DataRow, columnIndex As Integer, value As T)" />
       <MemberSignature Language="F#" Value="static member SetField : System.Data.DataRow * int * 'T -&gt; unit" Usage="System.Data.DataRowExtensions.SetField (row, columnIndex, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetField(System::Data::DataRow ^ row, int columnIndex, T value);" />
-      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, int columnIndex, T value);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, int columnIndex, T value);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -592,6 +636,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -606,7 +652,7 @@
       <Parameters>
         <Parameter Name="row" Type="System.Data.DataRow" RefType="this">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -625,11 +671,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If `value` is **null**, the <xref:System.Data.DataRowExtensions.SetField%2A> method converts the **null** value to <xref:System.DBNull.Value?displayProperty=nameWithType> in the underlying <xref:System.Data.DataColumn>.
+ If `value` is **null**, the <xref:System.Data.DataRowExtensions.SetField*> method converts the **null** value to <xref:System.DBNull.Value?displayProperty=nameWithType> in the underlying <xref:System.Data.DataColumn>.
 
- The <xref:System.Data.DataRowExtensions.SetField%2A> method does not perform any type conversions. This does not mean, however, that a type conversion will not occur. The <xref:System.Data.DataRowExtensions.SetField%2A> method exposes the ADO.NET 2.0 behavior of the <xref:System.Data.DataRow> class. A type conversion could be performed by the <xref:System.Data.DataRow> object and the converted value would then be saved to the row.
+ The <xref:System.Data.DataRowExtensions.SetField*> method does not perform any type conversions. This does not mean, however, that a type conversion will not occur. The <xref:System.Data.DataRowExtensions.SetField*> method exposes the ADO.NET 2.0 behavior of the <xref:System.Data.DataRow> class. A type conversion could be performed by the <xref:System.Data.DataRow> object and the converted value would then be saved to the row.
 
- Exceptions can be passed up through the <xref:System.Data.DataRowExtensions.SetField%2A> method from the underlying <xref:System.Data.DataRow> object.
+ Exceptions can be passed up through the <xref:System.Data.DataRowExtensions.SetField*> method from the underlying <xref:System.Data.DataRow> object.
 
  ]]></format>
         </remarks>
@@ -639,13 +685,13 @@
       </Docs>
     </Member>
     <Member MemberName="SetField&lt;T&gt;">
-      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, string columnName, T? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, string columnName, T? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetField&lt;T&gt;(class System.Data.DataRow row, string columnName, !!T value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetField(Of T) (row As DataRow, columnName As String, value As T)" />
       <MemberSignature Language="F#" Value="static member SetField : System.Data.DataRow * string * 'T -&gt; unit" Usage="System.Data.DataRowExtensions.SetField (row, columnName, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetField(System::Data::DataRow ^ row, System::String ^ columnName, T value);" />
-      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, string columnName, T value);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static void SetField&lt;T&gt; (this System.Data.DataRow row, string columnName, T value);" FrameworkAlternate="netcore-3.0;netcore-3.1;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
@@ -661,6 +707,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -672,7 +720,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -684,7 +732,7 @@
         <Parameter Name="columnName" Type="System.String" />
         <Parameter Name="value" Type="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -701,11 +749,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If `value` is **null**, the <xref:System.Data.DataRowExtensions.SetField%2A> method converts the **null** value to <xref:System.DBNull.Value?displayProperty=nameWithType> in the underlying <xref:System.Data.DataColumn>.
+ If `value` is **null**, the <xref:System.Data.DataRowExtensions.SetField*> method converts the **null** value to <xref:System.DBNull.Value?displayProperty=nameWithType> in the underlying <xref:System.Data.DataColumn>.
 
- The <xref:System.Data.DataRowExtensions.SetField%2A> method does not perform any type conversions. This does not mean, however, that a type conversion will not occur. The <xref:System.Data.DataRowExtensions.SetField%2A> method exposes the ADO.NET 2.0 behavior of the <xref:System.Data.DataRow> class. A type conversion could be performed by the <xref:System.Data.DataRow> object and the converted value would then be saved to the row.
+ The <xref:System.Data.DataRowExtensions.SetField*> method does not perform any type conversions. This does not mean, however, that a type conversion will not occur. The <xref:System.Data.DataRowExtensions.SetField*> method exposes the ADO.NET 2.0 behavior of the <xref:System.Data.DataRow> class. A type conversion could be performed by the <xref:System.Data.DataRow> object and the converted value would then be saved to the row.
 
- Exceptions can be passed up through the <xref:System.Data.DataRowExtensions.SetField%2A> method from the underlying <xref:System.Data.DataRow> object.
+ Exceptions can be passed up through the <xref:System.Data.DataRowExtensions.SetField*> method from the underlying <xref:System.Data.DataRow> object.
 
  ]]></format>
         </remarks>

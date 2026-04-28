@@ -27,8 +27,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -41,26 +45,26 @@
   <Docs>
     <summary>Indicates the action that occurs when a <see cref="T:System.Data.ForeignKeyConstraint" /> is enforced.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Data.Rule> values are set to the <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> and the <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> properties of a <xref:System.Data.ForeignKeyConstraint> object found in a <xref:System.Data.DataTable> object's <xref:System.Data.ConstraintCollection>.  
-  
- The <xref:System.Data.Rule> values determine the action that occurs when a value in a column is either deleted or updated. Of the two, deleting a value is the more critical and demanding of attention when setting a rule.  
-  
- In the case where a value is deleted, `Cascade` specifies that all rows containing that value are also deleted. `SetNull` specifies that values in all child columns are set to null values. `SetDefault` specifies that all child columns be set to the default value for the column. `None` specifies that no action will occur, but exceptions are generated.  
-  
- In the case where a value is updated, `Cascade` specifies that all child columns are likewise updated with the new value. `SetNull` specifies that all child columns be set to null values. `SetDefault` specifies that all child column values be set to the default value. `None` specifies that no action be taken, but exceptions are generated.  
-  
- Constraints on a <xref:System.Data.DataSet> are not enforced unless the <xref:System.Data.DataSet.EnforceConstraints%2A> property is `true`.  
-  
- When the <xref:System.Data.DataTable.AcceptChanges%2A> method is called, the <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> further determines what action occurs.  
-  
-   
-  
-## Examples  
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData ForeignKeyConstraint Example/VB/source.vb" id="Snippet1":::  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Data.Rule> values are set to the <xref:System.Data.ForeignKeyConstraint.UpdateRule*> and the <xref:System.Data.ForeignKeyConstraint.DeleteRule*> properties of a <xref:System.Data.ForeignKeyConstraint> object found in a <xref:System.Data.DataTable> object's <xref:System.Data.ConstraintCollection>.
+
+ The <xref:System.Data.Rule> values determine the action that occurs when a value in a column is either deleted or updated. Of the two, deleting a value is the more critical and demanding of attention when setting a rule.
+
+ In the case where a value is deleted, `Cascade` specifies that all rows containing that value are also deleted. `SetNull` specifies that values in all child columns are set to null values. `SetDefault` specifies that all child columns be set to the default value for the column. `None` specifies that no action will occur, but exceptions are generated.
+
+ In the case where a value is updated, `Cascade` specifies that all child columns are likewise updated with the new value. `SetNull` specifies that all child columns be set to null values. `SetDefault` specifies that all child column values be set to the default value. `None` specifies that no action be taken, but exceptions are generated.
+
+ Constraints on a <xref:System.Data.DataSet> are not enforced unless the <xref:System.Data.DataSet.EnforceConstraints> property is `true`.
+
+ When the <xref:System.Data.DataTable.AcceptChanges*> method is called, the <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule*> further determines what action occurs.
+
+
+
+## Examples
+ :::code language="vb" source="~/snippets/visualbasic/System.Data/ForeignKeyConstraint/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <altmember cref="P:System.Data.DataTable.Constraints" />
@@ -97,6 +101,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Data.Rule</ReturnType>
@@ -136,6 +142,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Data.Rule</ReturnType>
@@ -175,6 +183,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Data.Rule</ReturnType>
@@ -214,6 +224,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Data.Rule</ReturnType>

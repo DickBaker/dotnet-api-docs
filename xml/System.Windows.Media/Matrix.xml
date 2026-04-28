@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Structure Matrix&#xA;Implements IFormattable" />
   <TypeSignature Language="F#" Value="type Matrix = struct&#xA;    interface IFormattable" />
   <TypeSignature Language="C++ CLI" Value="public value class Matrix : IFormattable" />
-  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Matrix extends System.ValueType implements class System.IFormattable" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Matrix extends System.ValueType implements class System.IFormattable" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>WindowsBase</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -50,25 +52,25 @@
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|
-|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|
-|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|
+|<xref:System.Windows.Media.Matrix.M11*>|<xref:System.Windows.Media.Matrix.M12*>|0|
+|<xref:System.Windows.Media.Matrix.M21*>|<xref:System.Windows.Media.Matrix.M22*>|0|
+|<xref:System.Windows.Media.Matrix.OffsetX*>|<xref:System.Windows.Media.Matrix.OffsetY*>|1|
 
- The members in the last row, <xref:System.Windows.Media.Matrix.OffsetX%2A> and <xref:System.Windows.Media.Matrix.OffsetY%2A>, represent translation values.
+ The members in the last row, <xref:System.Windows.Media.Matrix.OffsetX*> and <xref:System.Windows.Media.Matrix.OffsetY*>, represent translation values.
 
  In methods and properties, the transformation matrix is usually specified as a vector with only six members, as follows:
 
- (<xref:System.Windows.Media.Matrix.M11%2A>, <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.M22%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, <xref:System.Windows.Media.Matrix.OffsetY%2A>)
+ (<xref:System.Windows.Media.Matrix.M11*>, <xref:System.Windows.Media.Matrix.M12*>, <xref:System.Windows.Media.Matrix.M21*>, <xref:System.Windows.Media.Matrix.M22*>, <xref:System.Windows.Media.Matrix.OffsetX*>, <xref:System.Windows.Media.Matrix.OffsetY*>)
 
  Although you can use a <xref:System.Windows.Media.Matrix> structure directly to translate individual points, or with a <xref:System.Windows.Media.MatrixTransform> to transform objects, WPF also provides a set of classes that enable you to transform objects without working directly with matrices: <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, <xref:System.Windows.Media.SkewTransform>, and <xref:System.Windows.Media.TranslateTransform>.
 
 <a name="xamlAttributeUsage_Matrix"></a>
 ## XAML Attribute Usage
 
-```
-<object property="m11, m12, m21, m22, offsetX, offsetY"/>
+```xaml
+<object property="m11, m12, m21, m22, offsetX, offsetY"/>
 - or -
-<object property="Identity"/>
+<object property="Identity"/>
 ```
 
 <a name="xamlValues_Matrix"></a>
@@ -76,36 +78,35 @@
  *m11*
  <xref:System.Double?displayProperty=nameWithType>
 
- The value in the first row and first column of this <xref:System.Windows.Media.Matrix>. For more information, see the <xref:System.Windows.Media.Matrix.M11%2A> property.
+ The value in the first row and first column of this <xref:System.Windows.Media.Matrix>. For more information, see the <xref:System.Windows.Media.Matrix.M11> property.
 
  *m12*
  <xref:System.Double?displayProperty=nameWithType>
 
- The value in the first row and second column. For more information, see the <xref:System.Windows.Media.Matrix.M12%2A> property.
+ The value in the first row and second column. For more information, see the <xref:System.Windows.Media.Matrix.M12> property.
 
  *m21*
  <xref:System.Double?displayProperty=nameWithType>
 
- The value in the second row and first column. For more information, see the <xref:System.Windows.Media.Matrix.M21%2A> property.
+ The value in the second row and first column. For more information, see the <xref:System.Windows.Media.Matrix.M21> property.
 
  *m22*
  <xref:System.Double?displayProperty=nameWithType>
 
- The value in the second row and second column. For more information, see the <xref:System.Windows.Media.Matrix.M22%2A> property.
+ The value in the second row and second column. For more information, see the <xref:System.Windows.Media.Matrix.M22> property.
 
  *offsetX*
  <xref:System.Double?displayProperty=nameWithType>
 
- The value in the third row and first column. For more information, see the <xref:System.Windows.Media.Matrix.OffsetX%2A> property.
+ The value in the third row and first column. For more information, see the <xref:System.Windows.Media.Matrix.OffsetX> property.
 
  *offsetY*
  <xref:System.Double?displayProperty=nameWithType>
 
- The value in the third row and second column. For more information, see the <xref:System.Windows.Media.Matrix.OffsetY%2A> property.
+ The value in the third row and second column. For more information, see the <xref:System.Windows.Media.Matrix.OffsetY> property.
 
  ]]></format>
     </remarks>
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=159044">Matrix Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -125,6 +126,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="m11" Type="System.Double" />
@@ -162,6 +165,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -209,6 +214,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -241,7 +248,7 @@
 ## Remarks
 
 > [!NOTE]
->  A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
+> A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
 
 
 
@@ -271,6 +278,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -289,7 +298,7 @@
 ## Remarks
 
 > [!NOTE]
->  A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
+> A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
 
 
 
@@ -320,6 +329,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -338,7 +349,7 @@
 ## Remarks
 
 > [!NOTE]
->  A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
+> A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
 
 
 
@@ -369,6 +380,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -389,7 +402,7 @@
 ## Remarks
 
 > [!NOTE]
->  A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
+> A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
 
  ]]></format>
         </remarks>
@@ -413,6 +426,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -441,6 +456,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -478,6 +495,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -495,7 +514,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An identity matrix has a value of 1 in coefficients [1,1],[2,2],[3,3] and a value of 0 in the rest of the coefficients. This correlates to setting <xref:System.Windows.Media.Matrix.M11%2A> and <xref:System.Windows.Media.Matrix.M22%2A> to 1 and <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, and <xref:System.Windows.Media.Matrix.OffsetY%2A> to 0. In an affine matrix, which is the implementation that Windows Presentation Foundation (WPF) uses for the <xref:System.Windows.Media.Matrix> structure, coefficients [3,1],[3,2],[3.3] are implied to always have the values 0,0,1 respectively.
+ An identity matrix has a value of 1 in coefficients [1,1],[2,2],[3,3] and a value of 0 in the rest of the coefficients. This correlates to setting <xref:System.Windows.Media.Matrix.M11*> and <xref:System.Windows.Media.Matrix.M22*> to 1 and <xref:System.Windows.Media.Matrix.M12*>, <xref:System.Windows.Media.Matrix.M21*>, <xref:System.Windows.Media.Matrix.OffsetX*>, and <xref:System.Windows.Media.Matrix.OffsetY*> to 0. In an affine matrix, which is the implementation that Windows Presentation Foundation (WPF) uses for the <xref:System.Windows.Media.Matrix> structure, coefficients [3,1],[3,2],[3.3] are implied to always have the values 0,0,1 respectively.
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
@@ -503,10 +522,10 @@
 | 0        | 1        | 0        |
 | 0        | 0        | 1        |
 
- For an identity matrix, the <xref:System.Windows.Media.Matrix.ToString%2A> method returns the string "Identity" instead of the coefficients of the <xref:System.Windows.Media.Matrix>.
+ For an identity matrix, the <xref:System.Windows.Media.Matrix.ToString*> method returns the string "Identity" instead of the coefficients of the <xref:System.Windows.Media.Matrix>.
 
 ## Examples
- The following example shows how to retrieve the <xref:System.Windows.Media.Matrix.Identity%2A> matrix.
+ The following example shows how to retrieve the <xref:System.Windows.Media.Matrix.Identity*> matrix.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Media/Matrix/Append/MatrixExample.cs" id="Snippetmatrixidentityexample_csharp":::
 
@@ -533,6 +552,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -570,6 +591,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -582,7 +605,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An identity matrix has a value of 1 in coefficients [1,1],[2,2],[3,3] and a value of 0 in the rest of the coefficients. This correlates to setting <xref:System.Windows.Media.Matrix.M11%2A> and <xref:System.Windows.Media.Matrix.M22%2A> to 1 and <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, and <xref:System.Windows.Media.Matrix.OffsetY%2A> to 0. In an affine matrix, which is the implementation that Windows Presentation Foundation (WPF) uses for the <xref:System.Windows.Media.Matrix> structure, coefficients [3,1],[3,2],[3.3] are implied to always have the values 0,0,1 respectively.
+ An identity matrix has a value of 1 in coefficients [1,1],[2,2],[3,3] and a value of 0 in the rest of the coefficients. This correlates to setting <xref:System.Windows.Media.Matrix.M11*> and <xref:System.Windows.Media.Matrix.M22*> to 1 and <xref:System.Windows.Media.Matrix.M12*>, <xref:System.Windows.Media.Matrix.M21*>, <xref:System.Windows.Media.Matrix.OffsetX*>, and <xref:System.Windows.Media.Matrix.OffsetY*> to 0. In an affine matrix, which is the implementation that Windows Presentation Foundation (WPF) uses for the <xref:System.Windows.Media.Matrix> structure, coefficients [3,1],[3,2],[3.3] are implied to always have the values 0,0,1 respectively.
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
@@ -590,7 +613,7 @@
 | 0        | 1        | 0        |
 | 0        | 0        | 1        |
 
- For an identity matrix, the <xref:System.Windows.Media.Matrix.ToString%2A> method returns the string "Identity", instead of the coefficients of the <xref:System.Windows.Media.Matrix>.
+ For an identity matrix, the <xref:System.Windows.Media.Matrix.ToString*> method returns the string "Identity", instead of the coefficients of the <xref:System.Windows.Media.Matrix>.
 
  ]]></format>
         </remarks>
@@ -615,6 +638,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -651,6 +676,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -666,9 +693,9 @@
 
 | Column 1                                      | Column 2                                      | Column 3 |
 |-----------------------------------------------|-----------------------------------------------|----------|
-| <xref:System.Windows.Media.Matrix.M11%2A>     | <xref:System.Windows.Media.Matrix.M12%2A>     | 0        |
-| <xref:System.Windows.Media.Matrix.M21%2A>     | <xref:System.Windows.Media.Matrix.M22%2A>     | 0        |
-| <xref:System.Windows.Media.Matrix.OffsetX%2A> | <xref:System.Windows.Media.Matrix.OffsetY%2A> | 1        |
+| <xref:System.Windows.Media.Matrix.M11*>     | <xref:System.Windows.Media.Matrix.M12*>     | 0        |
+| <xref:System.Windows.Media.Matrix.M21*>     | <xref:System.Windows.Media.Matrix.M22*>     | 0        |
+| <xref:System.Windows.Media.Matrix.OffsetX*> | <xref:System.Windows.Media.Matrix.OffsetY*> | 1        |
 
 ## Examples
  The following example shows how to multiply two <xref:System.Windows.Media.Matrix> structures and how to assign values to a <xref:System.Windows.Media.Matrix> when it is declared, and after the structure is declared.
@@ -696,6 +723,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -711,9 +740,9 @@
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|
-|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|
-|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|
+|<xref:System.Windows.Media.Matrix.M11*>|<xref:System.Windows.Media.Matrix.M12*>|0|
+|<xref:System.Windows.Media.Matrix.M21*>|<xref:System.Windows.Media.Matrix.M22*>|0|
+|<xref:System.Windows.Media.Matrix.OffsetX*>|<xref:System.Windows.Media.Matrix.OffsetY*>|1|
 
 ## Examples
  The following example shows how to multiply two <xref:System.Windows.Media.Matrix> structures and how to assign values to a <xref:System.Windows.Media.Matrix> when it is declared, and after the structure is declared.
@@ -741,6 +770,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -756,9 +787,9 @@
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|
-|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|
-|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|
+|<xref:System.Windows.Media.Matrix.M11*>|<xref:System.Windows.Media.Matrix.M12*>|0|
+|<xref:System.Windows.Media.Matrix.M21*>|<xref:System.Windows.Media.Matrix.M22*>|0|
+|<xref:System.Windows.Media.Matrix.OffsetX*>|<xref:System.Windows.Media.Matrix.OffsetY*>|1|
 
 ## Examples
  The following example shows how to multiply two <xref:System.Windows.Media.Matrix> structures and how to assign values to a <xref:System.Windows.Media.Matrix> when it is declared, and after the structure is declared.
@@ -786,6 +817,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Matrix</ReturnType>
@@ -836,6 +869,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -847,15 +882,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Media.Matrix.OffsetX%2A> property is so named because it specifies the amount to translate the coordinate space along the x-axis.
+ The <xref:System.Windows.Media.Matrix.OffsetX> property is so named because it specifies the amount to translate the coordinate space along the x-axis.
 
  The following table shows the layout of a <xref:System.Windows.Media.Matrix>.
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|
-|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|
-|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|
+|<xref:System.Windows.Media.Matrix.M11*>|<xref:System.Windows.Media.Matrix.M12*>|0|
+|<xref:System.Windows.Media.Matrix.M21*>|<xref:System.Windows.Media.Matrix.M22*>|0|
+|<xref:System.Windows.Media.Matrix.OffsetX*>|<xref:System.Windows.Media.Matrix.OffsetY*>|1|
 
  ]]></format>
         </remarks>
@@ -878,6 +913,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -889,15 +926,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Media.Matrix.OffsetY%2A> property is so named because it specifies the amount to translate the coordinate space along the y-axis.
+ The <xref:System.Windows.Media.Matrix.OffsetY> property is so named because it specifies the amount to translate the coordinate space along the y-axis.
 
  The following table shows the layout of a <xref:System.Windows.Media.Matrix>.
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
-|<xref:System.Windows.Media.Matrix.M11%2A>|<xref:System.Windows.Media.Matrix.M12%2A>|0|
-|<xref:System.Windows.Media.Matrix.M21%2A>|<xref:System.Windows.Media.Matrix.M22%2A>|0|
-|<xref:System.Windows.Media.Matrix.OffsetX%2A>|<xref:System.Windows.Media.Matrix.OffsetY%2A>|1|
+|<xref:System.Windows.Media.Matrix.M11*>|<xref:System.Windows.Media.Matrix.M12*>|0|
+|<xref:System.Windows.Media.Matrix.M21*>|<xref:System.Windows.Media.Matrix.M22*>|0|
+|<xref:System.Windows.Media.Matrix.OffsetX*>|<xref:System.Windows.Media.Matrix.OffsetY*>|1|
 
  ]]></format>
         </remarks>
@@ -920,6 +957,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -940,7 +979,7 @@
 ## Remarks
 
 > [!NOTE]
->  A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
+> A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
 
 
 
@@ -971,6 +1010,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -991,7 +1032,7 @@
 ## Remarks
 
 > [!NOTE]
->  A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
+> A <xref:System.Windows.Media.Matrix> stores its values as doubles. Because the value of a <xref:System.Double> can lose precision when arithmetic operations are performed on it, a comparison between two <xref:System.Double> structures that are logically equal might fail.
 
 
 
@@ -1021,6 +1062,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Matrix</ReturnType>
@@ -1071,6 +1114,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Matrix</ReturnType>
@@ -1111,6 +1156,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1160,6 +1207,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1202,6 +1251,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1245,6 +1296,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1293,6 +1346,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1340,6 +1395,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1384,6 +1441,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1429,6 +1488,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1479,6 +1540,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1528,6 +1591,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1539,7 +1604,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An identity matrix has a value of 1 in coefficients [1,1],[2,2],[3,3] and a value of 0 in the rest of the coefficients. This correlates to setting <xref:System.Windows.Media.Matrix.M11%2A> and <xref:System.Windows.Media.Matrix.M22%2A> to 1 and <xref:System.Windows.Media.Matrix.M12%2A>, <xref:System.Windows.Media.Matrix.M21%2A>, <xref:System.Windows.Media.Matrix.OffsetX%2A>, and <xref:System.Windows.Media.Matrix.OffsetY%2A> to 0. In an affine matrix, which is the implementation that Windows Presentation Foundation (WPF) uses for the <xref:System.Windows.Media.Matrix> structure, coefficients [3,1],[3,2],[3.3] are implied to always have the values 0,0,1 respectively.
+ An identity matrix has a value of 1 in coefficients [1,1],[2,2],[3,3] and a value of 0 in the rest of the coefficients. This correlates to setting <xref:System.Windows.Media.Matrix.M11*> and <xref:System.Windows.Media.Matrix.M22*> to 1 and <xref:System.Windows.Media.Matrix.M12*>, <xref:System.Windows.Media.Matrix.M21*>, <xref:System.Windows.Media.Matrix.OffsetX*>, and <xref:System.Windows.Media.Matrix.OffsetY*> to 0. In an affine matrix, which is the implementation that Windows Presentation Foundation (WPF) uses for the <xref:System.Windows.Media.Matrix> structure, coefficients [3,1],[3,2],[3.3] are implied to always have the values 0,0,1 respectively.
 
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
@@ -1547,7 +1612,7 @@
 | 0        | 1        | 0        |
 | 0        | 0        | 1        |
 
- For an identity matrix, the <xref:System.Windows.Media.Matrix.ToString%2A> method returns the string "Identity", instead of the coefficients of the <xref:System.Windows.Media.Matrix>.
+ For an identity matrix, the <xref:System.Windows.Media.Matrix.ToString*> method returns the string "Identity", instead of the coefficients of the <xref:System.Windows.Media.Matrix>.
 
 ## Examples
  The following example shows how to turn a <xref:System.Windows.Media.Matrix> structure into an identity matrix.
@@ -1577,6 +1642,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1619,6 +1686,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1669,6 +1738,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1734,6 +1805,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1752,7 +1825,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If this <xref:System.Windows.Media.Matrix> is an <xref:System.Windows.Media.Matrix.Identity%2A> matrix, the string "Identity" is returned.
+ If this <xref:System.Windows.Media.Matrix> is an <xref:System.Windows.Media.Matrix.Identity*> matrix, the string "Identity" is returned.
 
  ]]></format>
         </remarks>
@@ -1775,6 +1848,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1838,6 +1913,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Point</ReturnType>
@@ -1878,6 +1955,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1917,6 +1996,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Vector</ReturnType>
@@ -1957,6 +2038,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1996,6 +2079,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2038,6 +2123,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

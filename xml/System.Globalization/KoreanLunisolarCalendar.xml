@@ -1,6 +1,6 @@
 <Type Name="KoreanLunisolarCalendar" FullName="System.Globalization.KoreanLunisolarCalendar">
   <TypeSignature Language="C#" Value="public class KoreanLunisolarCalendar : System.Globalization.EastAsianLunisolarCalendar" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KoreanLunisolarCalendar extends System.Globalization.EastAsianLunisolarCalendar" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KoreanLunisolarCalendar extends System.Globalization.EastAsianLunisolarCalendar" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Globalization.KoreanLunisolarCalendar" />
   <TypeSignature Language="VB.NET" Value="Public Class KoreanLunisolarCalendar&#xA;Inherits EastAsianLunisolarCalendar" />
   <TypeSignature Language="F#" Value="type KoreanLunisolarCalendar = class&#xA;    inherit EastAsianLunisolarCalendar" />
@@ -32,8 +32,14 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Globalization.Calendars" FromVersion="10.0.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Globalization.Calendars" FromVersion="11.0.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.Globalization.Calendars" FromVersion="5.0.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -53,7 +59,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -65,22 +71,22 @@
   <Docs>
     <summary>Represents time in divisions, such as months, days, and years. Years are calculated using the Gregorian calendar, while days and months are calculated using the lunisolar calendar.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Globalization.KoreanLunisolarCalendar> class is derived from the <xref:System.Globalization.EastAsianLunisolarCalendar> class, which represents the lunisolar calendar. The <xref:System.Globalization.EastAsianLunisolarCalendar> class supports the sexagenary year cycle (which repeats every 60 years) in addition to solar years and lunar months. Each solar year in the calendar is associated with a Sexagenary Year, a Celestial Stem, and a Terrestrial Branch, and these calendars can have leap months after any month of the year.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Globalization.KoreanLunisolarCalendar> class is derived from the <xref:System.Globalization.EastAsianLunisolarCalendar> class, which represents the lunisolar calendar. The <xref:System.Globalization.EastAsianLunisolarCalendar> class supports the sexagenary year cycle (which repeats every 60 years) in addition to solar years and lunar months. Each solar year in the calendar is associated with a Sexagenary Year, a Celestial Stem, and a Terrestrial Branch, and these calendars can have leap months after any month of the year.
+
 > [!NOTE]
->  For information about using the <xref:System.Globalization.KoreanLunisolarCalendar> class and the other calendar classes in the .NET Framework, see [Working with Calendars](/dotnet/standard/datetime/working-with-calendars).  
-  
- The <xref:System.Globalization.KoreanLunisolarCalendar> class calculates years using the Gregorian calendar, and days and months using the <xref:System.Globalization.EastAsianLunisolarCalendar> class.  
-  
- A leap month can occur after any month in a year. For example, the <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%28System.DateTime%29?displayProperty=nameWithType> method returns a number between 1 and 13 that indicates the month associated with a specified date. If there is a leap month between the eighth and ninth months of the year, the <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> method returns 8 for the eighth month, 9 for the leap eighth month, and 10 for the ninth month.  
-  
- Currently, the <xref:System.Globalization.KoreanLunisolarCalendar> is not used by any of the cultures supported by the <xref:System.Globalization.CultureInfo> class. Therefore, this class can be used only to calculate dates in the Korean lunisolar calendar.  
-  
- Each <xref:System.Globalization.CultureInfo> supports a set of calendars. The <xref:System.Globalization.CultureInfo.Calendar%2A> property returns the default calendar for the culture, and the <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> property returns an array containing all the calendars supported by the culture. To change the calendar used by a <xref:System.Globalization.CultureInfo>, the application should set the <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> property of <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> to a new <xref:System.Globalization.Calendar>.  
-  
+>  For information about using the <xref:System.Globalization.KoreanLunisolarCalendar> class and the other calendar classes in the .NET Framework, see [Working with Calendars](/dotnet/standard/datetime/working-with-calendars).
+
+ The <xref:System.Globalization.KoreanLunisolarCalendar> class calculates years using the Gregorian calendar, and days and months using the <xref:System.Globalization.EastAsianLunisolarCalendar> class.
+
+ A leap month can occur after any month in a year. For example, the <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth(System.DateTime)?displayProperty=nameWithType> method returns a number between 1 and 13 that indicates the month associated with a specified date. If there is a leap month between the eighth and ninth months of the year, the <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth*> method returns 8 for the eighth month, 9 for the leap eighth month, and 10 for the ninth month.
+
+ Currently, the <xref:System.Globalization.KoreanLunisolarCalendar> is not used by any of the cultures supported by the <xref:System.Globalization.CultureInfo> class. Therefore, this class can be used only to calculate dates in the Korean lunisolar calendar.
+
+ Each <xref:System.Globalization.CultureInfo> supports a set of calendars. The <xref:System.Globalization.CultureInfo.Calendar> property returns the default calendar for the culture, and the <xref:System.Globalization.CultureInfo.OptionalCalendars> property returns an array containing all the calendars supported by the culture. To change the calendar used by a <xref:System.Globalization.CultureInfo>, the application should set the <xref:System.Globalization.DateTimeFormatInfo.Calendar> property of <xref:System.Globalization.CultureInfo.DateTimeFormat*?displayProperty=nameWithType> to a new <xref:System.Globalization.Calendar>.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Globalization.KoreanCalendar" />
@@ -120,6 +126,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -155,6 +163,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -166,11 +176,11 @@
         <summary>Gets the number of days in the year that precedes the year specified by the <see cref="P:System.Globalization.KoreanLunisolarCalendar.MinSupportedDateTime" /> property.</summary>
         <value>The number of days in the year that precedes the year specified by <see cref="P:System.Globalization.KoreanLunisolarCalendar.MinSupportedDateTime" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property returns a constant value of 384.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property returns a constant value of 384.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -209,6 +219,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32[]</ReturnType>
@@ -253,6 +265,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -298,6 +312,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -309,13 +325,13 @@
       <Docs>
         <summary>Specifies the Gregorian era that corresponds to the current <see cref="T:System.Globalization.KoreanLunisolarCalendar" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The value of this field is 1.  
-  
- The <xref:System.Globalization.KoreanLunisolarCalendar> class recognizes only the current era.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The value of this field is 1.
+
+ The <xref:System.Globalization.KoreanLunisolarCalendar> class recognizes only the current era.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -354,6 +370,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -398,6 +416,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTime</ReturnType>
@@ -406,7 +426,7 @@
         <summary>Gets the minimum date and time supported by the <see cref="T:System.Globalization.KoreanLunisolarCalendar" /> class.</summary>
         <value>The earliest date and time supported by the <see cref="T:System.Globalization.KoreanLunisolarCalendar" /> class.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
+          <format type="text/markdown"><![CDATA[
 
 In .NET Framework, the earliest supported date and time supported is equivalent to the first moment of February 14, 918 C.E. in the Gregorian calendar. In .NET Core, it is equivalent to the first moment of February 19, 918 C.E.
 

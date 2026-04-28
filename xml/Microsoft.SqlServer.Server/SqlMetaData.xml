@@ -30,12 +30,6 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
-  <Attributes>
-    <Attribute FrameworkAlternate="net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp">
-      <AttributeName Language="C#">[System.Obsolete("Use the Microsoft.SqlServer.Server package instead.")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Obsolete("Use the Microsoft.SqlServer.Server package instead.")&gt;]</AttributeName>
-    </Attribute>
-  </Attributes>
   <Docs>
     <summary>Specifies and retrieves metadata information from parameters and columns of <see cref="T:Microsoft.SqlServer.Server.SqlDataRecord" /> objects. This class cannot be inherited.</summary>
     <remarks>
@@ -45,7 +39,7 @@
  The following example shows the creation of several <xref:Microsoft.SqlServer.Server.SqlMetaData> objects, which describe the column metadata of a record, and the creation of a <xref:Microsoft.SqlServer.Server.SqlDataRecord>. The column values of the <xref:Microsoft.SqlServer.Server.SqlDataRecord> are set and the <xref:Microsoft.SqlServer.Server.SqlDataRecord> is sent to the calling program using the <xref:Microsoft.SqlServer.Server.SqlContext> class.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/CS/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/VB/source.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/Microsoft.SqlServer.Server/SqlMetaData/Overview/source.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -71,7 +65,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -97,7 +90,7 @@
 ## Remarks
  Only the following are allowed to be passed to the constructor as `dbType`: `Bit`, `BigInt`, `DateTime`, `Decimal`, `Float`, `Int`, `Money`, `Numeric`, `SmallDateTime`, `SmallInt`, `SmallMoney`, `TimeStamp`, `TinyInt`, `UniqueIdentifier`, `Xml`.
 
- The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> properties are set to `null`):
+ The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type*> properties are set to `null`):
 
 |SqlDbType|Maximum length|Precision|Scale|Locale|Compare options|
 |---------------|--------------------|---------------|-----------|------------|---------------------|
@@ -123,7 +116,7 @@
  The following example creates a new <xref:Microsoft.SqlServer.Server.SqlMetaData> object by specifying the column name and a column data type of <xref:System.Data.SqlDbType>.`Int`.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/CS/source.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/VB/source.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/Microsoft.SqlServer.Server/SqlMetaData/Overview/source.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -142,7 +135,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -170,11 +162,11 @@
 ## Remarks
  Only the following are allowed to be passed to the constructor as `dbType`: `Binary`, `Char`, `Image`, `NChar`, `Ntext`, `NVarChar`, `Text`, `VarBinary`, `VarChar`.
 
- Only a `maxLength` specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, or -1 is allowed for a `dbType` of `Text`, `NText`, or `Image`.
+ Only a `maxLength` specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max*>, or -1 is allowed for a `dbType` of `Text`, `NText`, or `Image`.
 
- For a `dbType` of `Varchar`, `Nvarchar`, or `VarBinary`, a length specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, or -1, declares the metadata as varchar(max), nvarchar(max), or nvarbinary(max), respectively.
+ For a `dbType` of `Varchar`, `Nvarchar`, or `VarBinary`, a length specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max*>, or -1, declares the metadata as varchar(max), nvarchar(max), or nvarbinary(max), respectively.
 
- The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> properties are set to `null`):
+ The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type*> properties are set to `null`):
 
 | SqlDbType | Precision | Scale | Locale    | Compare options                         |
 |-----------|-----------|-------|-----------|-----------------------------------------|
@@ -192,7 +184,7 @@
  The following example creates a new <xref:Microsoft.SqlServer.Server.SqlMetaData> object by specifying the column name, a column data type of <xref:System.Data.SqlDbType>`.NVarChar`, and a maximum length of 12 characters.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/CS/source.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMetaData Samples/VB/source.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/Microsoft.SqlServer.Server/SqlMetaData/Overview/source.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -218,9 +210,9 @@
         <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="dbType" Type="System.Data.SqlDbType" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="userDefinedType" Type="System.Type" Index="2" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" Index="1" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="userDefinedType" Type="System.Type" Index="2" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
       </Parameters>
       <Docs>
         <param name="name">The name of the column.</param>
@@ -233,7 +225,7 @@
 ## Remarks
  Only the following `SqlDbType` is allowed to be passed to the constructor as `dbType`: `UDT`.
 
- The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> properties are set to `null`):
+ The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type*> properties are set to `null`):
 
 |SqlDbType|Maximum length|Precision|Scale|Locale|Compare options|
 |---------------|--------------------|---------------|-----------|------------|---------------------|
@@ -256,7 +248,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -286,7 +277,7 @@
 ## Remarks
  Only the following `SqlDbType` is allowed to be passed to the constructor as `dbType`: `Decimal`.
 
- The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> properties are set to `null`):
+ The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type*> properties are set to `null`):
 
 |SqlDbType|Maximum length|Precision|Scale|Locale|Compare options|
 |---------------|--------------------|---------------|-----------|------------|---------------------|
@@ -316,10 +307,10 @@
         <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="dbType" Type="System.Data.SqlDbType" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="userDefinedType" Type="System.Type" Index="2" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="serverTypeName" Type="System.String" Index="3" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" Index="1" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="userDefinedType" Type="System.Type" Index="2" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="serverTypeName" Type="System.String" Index="3" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
       </Parameters>
       <Docs>
         <param name="name">The name of the column.</param>
@@ -341,7 +332,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -373,11 +363,11 @@
 ## Remarks
  Only the following are allowed to be passed to the constructor as `dbType`: `Char`, `NChar`, `Ntext`, `NVarChar`, `Text`, `VarChar`.
 
- Only a `maxLength` specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, or -1, is allowed for a `dbType` of `Text` or `NText`.
+ Only a `maxLength` specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max*>, or -1, is allowed for a `dbType` of `Text` or `NText`.
 
- For a `dbType` of `Varchar` or `Nvarchar`, a length specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max%2A>, or -1, declares the metadata as varchar(max) and nvarchar(max), respectively.
+ For a `dbType` of `Varchar` or `Nvarchar`, a length specification of <xref:Microsoft.SqlServer.Server.SqlMetaData.Max*>, or -1, declares the metadata as varchar(max) and nvarchar(max), respectively.
 
- The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> properties are set to `null`):
+ The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type*> properties are set to `null`):
 
 |SqlDbType|Precision|Scale|
 |---------------|---------------|-----------|
@@ -405,7 +395,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -460,7 +449,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -509,7 +497,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -560,7 +547,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -613,7 +599,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -651,7 +636,7 @@
 ## Remarks
  Only the following are allowed to be passed to the constructor as `dbType`: `BigInt`, `Bit`, `BitInt`, `DateTime`, `Decimal`, `Float`, `Image`, `Int`, `Money`, `Ntext`, `Numeric`, `Real`, `SmallDateTime`, `SmallInt`, `SmallMoney`, `Text`, `TimeStamp`, `TinyInt`, `UniqueIdentifier`, `Variant`, `Xml`.
 
- The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type%2A> properties are set to `null`):
+ The following are the default values assigned to `dbType`, depending on the `SqlDbType` (the <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*>, <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*>, and <xref:Microsoft.SqlServer.Server.SqlMetaData.Type*> properties are set to `null`):
 
 |SqlDbType|Maximum length|Precision|Scale|Locale|Compare options|
 |---------------|--------------------|---------------|-----------|------------|---------------------|
@@ -701,14 +686,14 @@
         <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="dbType" Type="System.Data.SqlDbType" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="userDefinedType" Type="System.Type" Index="2" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="serverTypeName" Type="System.String" Index="3" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="useServerDefault" Type="System.Boolean" Index="4" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="isUniqueKey" Type="System.Boolean" Index="5" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" Index="6" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
-        <Parameter Name="sortOrdinal" Type="System.Int32" Index="7" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="dbType" Type="System.Data.SqlDbType" Index="1" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="userDefinedType" Type="System.Type" Index="2" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="serverTypeName" Type="System.String" Index="3" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="useServerDefault" Type="System.Boolean" Index="4" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="isUniqueKey" Type="System.Boolean" Index="5" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="columnSortOrder" Type="System.Data.SqlClient.SortOrder" Index="6" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
+        <Parameter Name="sortOrdinal" Type="System.Int32" Index="7" FrameworkAlternate="net-10.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
       </Parameters>
       <Docs>
         <param name="name">The name of the column.</param>
@@ -741,7 +726,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -796,7 +780,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -851,7 +834,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -921,7 +903,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -959,7 +940,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -997,7 +977,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1035,7 +1014,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1073,7 +1051,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1111,7 +1088,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1149,7 +1125,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1187,7 +1162,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1225,7 +1199,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1263,7 +1236,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1301,7 +1273,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1339,7 +1310,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1377,7 +1347,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1415,7 +1384,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1453,7 +1421,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1491,7 +1458,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1529,7 +1495,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1567,7 +1532,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1605,7 +1569,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1643,7 +1606,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1681,7 +1643,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1719,7 +1680,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1757,7 +1717,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1795,7 +1754,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1833,7 +1791,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1871,7 +1828,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1909,7 +1865,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1947,7 +1902,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -1985,7 +1939,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2023,7 +1976,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2061,7 +2013,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2099,7 +2050,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2137,7 +2087,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2175,7 +2124,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2240,7 +2188,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2279,7 +2226,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2322,7 +2268,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2363,7 +2308,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2402,7 +2346,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2445,7 +2388,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2478,7 +2420,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2517,7 +2458,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2556,7 +2496,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2597,7 +2536,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2640,7 +2578,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2697,7 +2634,7 @@
 ## Remarks
  The default value is `null`.
 
- Returns `null` if <xref:Microsoft.SqlServer.Server.SqlMetaData.SqlDbType%2A> is not a UDT type. `Null` may also returned for valid UDT result sets where the assembly is not available to the application.
+ Returns `null` if <xref:Microsoft.SqlServer.Server.SqlMetaData.SqlDbType*> is not a UDT type. `Null` may also returned for valid UDT result sets where the assembly is not available to the application.
 
  ]]></format>
         </remarks>
@@ -2714,7 +2651,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2753,7 +2689,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2794,7 +2729,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2818,7 +2752,7 @@
 ## Remarks
  The default value is `null`.
 
- This property may be `null` if the collection is defined within the current database. It is also `null` if there is no schema collection, in which case <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A> and <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A> are also null.
+ This property may be `null` if the collection is defined within the current database. It is also `null` if there is no schema collection, in which case <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*> and <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*> are also null.
 
  ]]></format>
         </remarks>
@@ -2835,7 +2769,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2859,7 +2792,7 @@
 ## Remarks
  The default value is `null`.
 
- This value is `null` if there is no associated schema collection. If the value is `null`, then <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A> and <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema%2A> are also `null`.
+ This value is `null` if there is no associated schema collection. If the value is `null`, then <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*> and <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionOwningSchema*> are also `null`.
 
  ]]></format>
         </remarks>
@@ -2876,7 +2809,6 @@
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.6.1.6</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
@@ -2900,7 +2832,7 @@
 ## Remarks
  The default value is `null`.
 
- This value may be `null` if the collection is defined within the current database and default schema. It is also null if there is no schema collection, in which case <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase%2A> and <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName%2A> are also `null`.
+ This value may be `null` if the collection is defined within the current database and default schema. It is also null if there is no schema collection, in which case <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionDatabase*> and <xref:Microsoft.SqlServer.Server.SqlMetaData.XmlSchemaCollectionName*> are also `null`.
 
  ]]></format>
         </remarks>

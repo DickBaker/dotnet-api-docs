@@ -12,6 +12,11 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Attribute</BaseTypeName>
@@ -22,7 +27,7 @@
       <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.Property, AllowMultiple=false, Inherited=false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.Property, AllowMultiple=false, Inherited=false)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -30,21 +35,21 @@
   <Docs>
     <summary>Specifies that a property, field, or parameter value should be provided by the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.object.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- In the Attributed Programming Model, the <xref:System.ComponentModel.Composition.ImportAttribute> is used to declare the imports, or dependencies, of a given part. It can decorate a property, a field, or a method. During composition, a part's imports will be filled by the <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> object to which that part belongs, by using the exports provided to that <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> object.  
-  
- Whether an import matches a given export is determined primarily by comparing the contract name and the contract type. Ordinarily, you do not have to specify either of these when using the import attribute in code, and they will be automatically inferred from the type of the decorated member. If the import must match an export of a different type (for example, a subclass of the type of the decorated member, or an interface implemented by that member), then the contract type must be explicitly specified. The contract name can also be explicitly specified, for example to distinguish between multiple contracts with the same type, but it is usually better to do this through metadata. For more information about metadata, see <xref:System.ComponentModel.Composition.PartMetadataAttribute>.  
-  
-   
-  
-## Examples  
- The following example shows three classes with members decorated with the <xref:System.ComponentModel.Composition.ImportAttribute>, and three exports that match them.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ In the Attributed Programming Model, the <xref:System.ComponentModel.Composition.ImportAttribute> is used to declare the imports, or dependencies, of a given part. It can decorate a property, a field, or a method. During composition, a part's imports will be filled by the <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> object to which that part belongs, by using the exports provided to that <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> object.
+
+ Whether an import matches a given export is determined primarily by comparing the contract name and the contract type. Ordinarily, you do not have to specify either of these when using the import attribute in code, and they will be automatically inferred from the type of the decorated member. If the import must match an export of a different type (for example, a subclass of the type of the decorated member, or an interface implemented by that member), then the contract type must be explicitly specified. The contract name can also be explicitly specified, for example to distinguish between multiple contracts with the same type, but it is usually better to do this through metadata. For more information about metadata, see <xref:System.ComponentModel.Composition.PartMetadataAttribute>.
+
+
+
+## Examples
+ The following example shows three classes with members decorated with the <xref:System.ComponentModel.Composition.ImportAttribute>, and three exports that match them.
+
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel.Composition/ExportAttribute/program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/importandexport/vb/module1.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Misc/importandexport/vb/module1.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.ComponentModel.Composition.ExportAttribute" />
@@ -71,7 +76,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -83,19 +88,19 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> class, importing the export with the default contract name.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> method on the property, field, or parameter type that this is marked with this attribute.  
-  
- The contract name is compared by using the <xref:System.StringComparer.Ordinal%2A> property to perform a case-sensitive, non-linguistic comparison.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName*> method on the property, field, or parameter type that this is marked with this attribute.
+
+ The contract name is compared by using the <xref:System.StringComparer.Ordinal> property to perform a case-sensitive, non-linguistic comparison.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ImportAttribute (string? contractName);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public ImportAttribute (string? contractName);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (contractName As String)" />
@@ -106,7 +111,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -121,19 +126,19 @@
         <param name="contractName">The contract name of the export to import, or <see langword="null" /> or an empty string ("") to use the default contract name.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> class, importing the export with the specified contract name.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> method on the property, field, or parameter type that is marked with this attribute.  
-  
- The contract name is compared by using the <xref:System.StringComparer.Ordinal%2A> property to perform a case-sensitive, non-linguistic comparison.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName*> method on the property, field, or parameter type that is marked with this attribute.
+
+ The contract name is compared by using the <xref:System.StringComparer.Ordinal> property to perform a case-sensitive, non-linguistic comparison.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ImportAttribute (Type? contractType);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public ImportAttribute (Type? contractType);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type contractType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (contractType As Type)" />
@@ -144,7 +149,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -159,21 +164,21 @@
         <param name="contractType">The type to derive the contract name of the export from, or <see langword="null" /> to use the default contract name.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.Composition.ImportAttribute" /> class, importing the export with the contract name derived from the specified type.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> method on `contractType`.  
-  
- The default contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> method on the property, field, or parameter type that is marked with this attribute.  
-  
- The contract name is compared by using the <xref:System.StringComparer.Ordinal%2A> property to perform a case-sensitive, non-linguistic comparison.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName*> method on `contractType`.
+
+ The default contract name is the result of calling the <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName*> method on the property, field, or parameter type that is marked with this attribute.
+
+ The contract name is compared by using the <xref:System.StringComparer.Ordinal> property to perform a case-sensitive, non-linguistic comparison.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ImportAttribute (string? contractName, Type? contractType);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public ImportAttribute (string? contractName, Type? contractType);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Type contractType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ImportAttribute.#ctor(System.String,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (contractName As String, contractType As Type)" />
@@ -184,7 +189,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="contractName" Type="System.String" />
@@ -208,7 +213,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -228,11 +233,11 @@
         <value>
           <see langword="true" /> if the property, field, or parameter will be set to its type's default value when there is no export with the <see cref="P:System.ComponentModel.Composition.ImportAttribute.ContractName" /> in the <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />; otherwise, <see langword="false" />. The default is <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default value of the type of a property, field, or parameter is `null` for reference types and zero for numeric value types. For other value types, the default value will be each field of the value type initialized to zero if the field is a value type, or `null` if the field is a reference type.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default value of the type of a property, field, or parameter is `null` for reference types and zero for numeric value types. For other value types, the default value will be each field of the value type initialized to zero if the field is a value type, or `null` if the field is a reference type.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -248,7 +253,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -271,7 +276,7 @@
       </Docs>
     </Member>
     <Member MemberName="ContractName">
-      <MemberSignature Language="C#" Value="public string? ContractName { get; }" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public string? ContractName { get; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.ContractName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContractName As String" />
@@ -282,7 +287,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -300,7 +305,7 @@
       </Docs>
     </Member>
     <Member MemberName="ContractType">
-      <MemberSignature Language="C#" Value="public Type? ContractType { get; }" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public Type? ContractType { get; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContractType" />
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ImportAttribute.ContractType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContractType As Type" />
@@ -311,7 +316,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -339,7 +344,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -356,12 +361,12 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a value that indicates that the importer requires a specific <see cref="T:System.ComponentModel.Composition.CreationPolicy" /> for the exports used to satisfy this import.</summary>
-        <value>One of the following values:  
-  
- <see cref="F:System.ComponentModel.Composition.CreationPolicy.Any" />, if the importer does not require a specific <see cref="T:System.ComponentModel.Composition.CreationPolicy" />. This is the default.  
-  
- <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" /> to require that all used exports be shared by all parts in the container.  
-  
+        <value>One of the following values:
+
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.Any" />, if the importer does not require a specific <see cref="T:System.ComponentModel.Composition.CreationPolicy" />. This is the default.
+
+ <see cref="F:System.ComponentModel.Composition.CreationPolicy.Shared" /> to require that all used exports be shared by all parts in the container.
+
  <see cref="F:System.ComponentModel.Composition.CreationPolicy.NonShared" /> to require that all used exports be non-shared in a container. In this case, each part receives their own instance.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -377,7 +382,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.Composition.ImportSource</ReturnType>

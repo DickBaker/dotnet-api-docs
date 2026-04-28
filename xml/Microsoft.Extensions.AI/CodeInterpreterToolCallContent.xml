@@ -1,0 +1,94 @@
+<Type Name="CodeInterpreterToolCallContent" FullName="Microsoft.Extensions.AI.CodeInterpreterToolCallContent">
+  <TypeSignature Language="C#" Value="public sealed class CodeInterpreterToolCallContent : Microsoft.Extensions.AI.ToolCallContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CodeInterpreterToolCallContent extends Microsoft.Extensions.AI.ToolCallContent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Extensions.AI.CodeInterpreterToolCallContent" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CodeInterpreterToolCallContent&#xA;Inherits ToolCallContent" />
+  <TypeSignature Language="F#" Value="type CodeInterpreterToolCallContent = class&#xA;    inherit ToolCallContent" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CodeInterpreterToolCallContent sealed : Microsoft::Extensions::AI::ToolCallContent" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.1.0.0</AssemblyVersion>
+    <AssemblyVersion>10.2.0.0</AssemblyVersion>
+    <AssemblyVersion>10.3.0.0</AssemblyVersion>
+    <AssemblyVersion>10.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Extensions.AI.ToolCallContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+      <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.Experimental("MEAI001", UrlFormat="https://aka.ms/dotnet-extensions-warnings/{0}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.Experimental("MEAI001", UrlFormat="https://aka.ms/dotnet-extensions-warnings/{0}")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a code interpreter tool call invocation by a hosted service.
+            </summary>
+    <remarks>
+            This content type represents when a hosted AI service invokes a code interpreter tool.
+            It is informational only and represents the call itself, not the result.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeInterpreterToolCallContent (string callId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string callId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.AI.CodeInterpreterToolCallContent.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (callId As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Extensions.AI.CodeInterpreterToolCallContent : string -&gt; Microsoft.Extensions.AI.CodeInterpreterToolCallContent" Usage="new Microsoft.Extensions.AI.CodeInterpreterToolCallContent callId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CodeInterpreterToolCallContent(System::String ^ callId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="callId">The tool call ID.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.CodeInterpreterToolCallContent" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inputs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Extensions.AI.AIContent&gt;? Inputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Extensions.AI.AIContent&gt; Inputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Extensions.AI.CodeInterpreterToolCallContent.Inputs" />
+      <MemberSignature Language="VB.NET" Value="Public Property Inputs As IList(Of AIContent)" />
+      <MemberSignature Language="F#" Value="member this.Inputs : System.Collections.Generic.IList&lt;Microsoft.Extensions.AI.AIContent&gt; with get, set" Usage="Microsoft.Extensions.AI.CodeInterpreterToolCallContent.Inputs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IList&lt;Microsoft::Extensions::AI::AIContent ^&gt; ^ Inputs { System::Collections::Generic::IList&lt;Microsoft::Extensions::AI::AIContent ^&gt; ^ get(); void set(System::Collections::Generic::IList&lt;Microsoft::Extensions::AI::AIContent ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Extensions.AI.AIContent&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the inputs to the code interpreter tool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Inputs can include various types of content such as <see cref="T:Microsoft.Extensions.AI.HostedFileContent" /> for files,
+            <see cref="T:Microsoft.Extensions.AI.DataContent" /> for binary data, or other <see cref="T:Microsoft.Extensions.AI.AIContent" /> types as supported
+            by the service. Typically <see cref="P:Microsoft.Extensions.AI.CodeInterpreterToolCallContent.Inputs" /> includes a <see cref="T:Microsoft.Extensions.AI.DataContent" /> with a "text/x-python"
+            media type representing the code for execution by the code interpreter tool.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

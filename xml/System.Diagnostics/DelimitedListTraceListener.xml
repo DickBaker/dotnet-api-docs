@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -29,6 +31,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.TextWriterTraceListener" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.TextWriterTraceListener" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.TextWriterTraceListener" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.TextWriterTraceListener" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.TextWriterTraceListener" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -40,7 +44,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -48,43 +52,43 @@
   <Docs>
     <summary>Directs tracing or debugging output to a text writer, such as a stream writer, or to a stream, such as a file stream.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The trace output is in a delimited text format that uses the delimiter specified by the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property. The delimiter is used to terminate each field in a line of output. For example, to display the trace output in a Microsoft Excel spreadsheet, you might specify a comma (",") as a delimiter and create a comma-separated value (CSV) file.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The trace output is in a delimited text format that uses the delimiter specified by the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property. The delimiter is used to terminate each field in a line of output. For example, to display the trace output in a Microsoft Excel spreadsheet, you might specify a comma (",") as a delimiter and create a comma-separated value (CSV) file.
+
 > [!IMPORTANT]
-> This type implements the <xref:System.IDisposable> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <xref:System.IDisposable.Dispose%2A> method in a`try`/`catch` block. To dispose of it indirectly, use a language construct such as `using` (in C#) or `Using` (in Visual Basic). For more information, see the "Using an Object that Implements IDisposable" section in the <xref:System.IDisposable> interface topic.  
+> This type implements the <xref:System.IDisposable> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <xref:System.IDisposable.Dispose*> method in a`try`/`catch` block. To dispose of it indirectly, use a language construct such as `using` (in C#) or `Using` (in Visual Basic). For more information, see the "Using an Object that Implements IDisposable" section in the <xref:System.IDisposable> interface topic.
 
 You can create a <xref:System.Diagnostics.DelimitedListTraceListener> in your code. Alternatively, in .NET Framework apps only, you can enable or disable a <xref:System.Diagnostics.DelimitedListTraceListener> through the application configuration file and then use the configured <xref:System.Diagnostics.DelimitedListTraceListener> in your application.
-  
+
 > [!NOTE]
->  The <xref:System.Diagnostics.DelimitedListTraceListener> delimits only text that is emitted by using the methods that have names starting with the word `Trace`, such as <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent%2A?displayProperty=nameWithType> or <xref:System.Diagnostics.Trace.TraceWarning%2A?displayProperty=nameWithType>. Trace data that is emitted by using the <xref:System.Diagnostics.Debug.Write%2A?displayProperty=nameWithType> and <xref:System.Diagnostics.TextWriterTraceListener.WriteLine%2A?displayProperty=nameWithType> methods is not delimited.  
-  
-To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Framework app, edit the configuration file that corresponds to the name of your application. In this file, you can add a listener, set the properties for a listener, or remove a listener. The configuration file should be formatted as shown in the following example:  
-  
-```xml  
-<configuration>  
-  <system.diagnostics>  
-    <trace autoflush="false" indentsize="4">  
-      <listeners>  
-        <add name="delimitedListener"   
-          type="System.Diagnostics.DelimitedListTraceListener"   
-          delimiter=","   
-          initializeData="delimitedOutput.csv"   
-          traceOutputOptions="ProcessId, DateTime" />  
-      </listeners>  
-    </trace>  
-  </system.diagnostics>  
-</configuration>  
-```  
-  
+>  The <xref:System.Diagnostics.DelimitedListTraceListener> delimits only text that is emitted by using the methods that have names starting with the word `Trace`, such as <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent*?displayProperty=nameWithType> or <xref:System.Diagnostics.Trace.TraceWarning*?displayProperty=nameWithType>. Trace data that is emitted by using the <xref:System.Diagnostics.Debug.Write*?displayProperty=nameWithType> and <xref:System.Diagnostics.TextWriterTraceListener.WriteLine*?displayProperty=nameWithType> methods is not delimited.
+
+To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Framework app, edit the configuration file that corresponds to the name of your application. In this file, you can add a listener, set the properties for a listener, or remove a listener. The configuration file should be formatted as shown in the following example:
+
+```xml
+<configuration>
+  <system.diagnostics>
+    <trace autoflush="false" indentsize="4">
+      <listeners>
+        <add name="delimitedListener"
+          type="System.Diagnostics.DelimitedListTraceListener"
+          delimiter=","
+          initializeData="delimitedOutput.csv"
+          traceOutputOptions="ProcessId, DateTime" />
+      </listeners>
+    </trace>
+  </system.diagnostics>
+</configuration>
+```
+
 > [!NOTE]
->  If you try to write to a file that is in use or unavailable, the file name is automatically prefixed by a GUID.  
-  
+>  If you try to write to a file that is in use or unavailable, the file name is automatically prefixed by a GUID.
+
 > [!NOTE]
->  Listeners are intended to be used by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace information. Listener methods, except for constructors, should not be called directly from application code.  
-  
+>  Listeners are intended to be used by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace information. Listener methods, except for constructors, should not be called directly from application code.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -118,6 +122,8 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -137,11 +143,11 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <param name="stream">The <see cref="T:System.IO.Stream" /> to receive the output.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> class that writes to the specified output stream.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes the <xref:System.Diagnostics.TraceListener.Name%2A> property to an empty string ("").  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes the <xref:System.Diagnostics.TraceListener.Name> property to an empty string ("").
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -167,6 +173,8 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -186,11 +194,11 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <param name="writer">The <see cref="T:System.IO.TextWriter" /> to receive the output.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> class that writes to the specified text writer.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes the <xref:System.Diagnostics.TraceListener.Name%2A> property to an empty string ("").  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes the <xref:System.Diagnostics.TraceListener.Name> property to an empty string ("").
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -198,7 +206,7 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (string? fileName);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (string? fileName);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String)" />
@@ -227,19 +235,21 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="fileName">The name of the file to receive the output.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> class that writes to the specified file.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes the <xref:System.Diagnostics.TraceListener.Name%2A> property to an empty string ("").  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes the <xref:System.Diagnostics.TraceListener.Name> property to an empty string ("").
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -247,7 +257,7 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.Stream stream, string? name);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.Stream stream, string? name);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.IO.Stream,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (stream As Stream, name As String)" />
@@ -266,6 +276,8 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -282,7 +294,7 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <Parameter Name="stream" Type="System.IO.Stream" />
         <Parameter Name="name" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -294,15 +306,15 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <param name="name">The name of the new instance of the trace listener.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> class that writes to the specified output stream and has the specified name.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes the <xref:System.Diagnostics.TraceListener.Name%2A> property to the value of the `name` parameter, or to an empty string ("") if the `name` parameter is `null`.  The <xref:System.Diagnostics.TraceListener.Name%2A> property can be used as an index into the `Listeners` collection to programmatically change the properties for the listener. For example, the following code sets the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property for the instance of <xref:System.Diagnostics.DelimitedListTraceListener> that has the name "delimListener":  
-  
-```csharp  
-((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"  
-```  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes the <xref:System.Diagnostics.TraceListener.Name> property to the value of the `name` parameter, or to an empty string ("") if the `name` parameter is `null`.  The <xref:System.Diagnostics.TraceListener.Name> property can be used as an index into the `Listeners` collection to programmatically change the properties for the listener. For example, the following code sets the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property for the instance of <xref:System.Diagnostics.DelimitedListTraceListener> that has the name "delimListener":
+
+```csharp
+((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"
+```
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -310,7 +322,7 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.TextWriter writer, string? name);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (System.IO.TextWriter writer, string? name);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.IO.TextWriter,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (writer As TextWriter, name As String)" />
@@ -329,6 +341,8 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -345,7 +359,7 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <Parameter Name="writer" Type="System.IO.TextWriter" />
         <Parameter Name="name" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -357,15 +371,15 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <param name="name">The name of the new instance of the trace listener.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> class that writes to the specified text writer and has the specified name.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes the <xref:System.Diagnostics.TraceListener.Name%2A> property to the value of the `name` parameter, or to an empty string ("") if the `name` parameter is `null`. The <xref:System.Diagnostics.TraceListener.Name%2A> property can be used as an index into the `Listeners` collection to programmatically change the properties for the listener. For example the following code sets the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property for the instance of <xref:System.Diagnostics.DelimitedListTraceListener> that has the name "delimListener":  
-  
-```csharp  
-((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"  
-```  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes the <xref:System.Diagnostics.TraceListener.Name> property to the value of the `name` parameter, or to an empty string ("") if the `name` parameter is `null`. The <xref:System.Diagnostics.TraceListener.Name> property can be used as an index into the `Listeners` collection to programmatically change the properties for the listener. For example the following code sets the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property for the instance of <xref:System.Diagnostics.DelimitedListTraceListener> that has the name "delimListener":
+
+```csharp
+((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"
+```
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -373,7 +387,7 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (string? fileName, string? name);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public DelimitedListTraceListener (string? fileName, string? name);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String, name As String)" />
@@ -402,30 +416,32 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="fileName" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="fileName">The name of the file to receive the output.</param>
         <param name="name">The name of the new instance of the trace listener.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.DelimitedListTraceListener" /> class that writes to the specified file and has the specified name.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes a new instance of the <xref:System.IO.StreamWriter> class for the specified file on the specified path, using <xref:System.Text.Encoding.UTF8%2A> encoding. If the file exists, it is appended to. If the file does not exist, a new file is created.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes a new instance of the <xref:System.IO.StreamWriter> class for the specified file on the specified path, using <xref:System.Text.Encoding.UTF8*> encoding. If the file exists, it is appended to. If the file does not exist, a new file is created.
+
 > [!NOTE]
->  To reduce the chance of an exception, any character that might invalidate the output is replaced with a "?" character.  
-  
- The <xref:System.Diagnostics.TraceListener.Name%2A> property is set to the value of the `name` parameter, or to an empty string ("") if the `name` parameter is `null`. The <xref:System.Diagnostics.TraceListener.Name%2A> property can be used as an index into the `Listeners` collection to programmatically change the properties for the listener. For example, the following code sets the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property for the instance of <xref:System.Diagnostics.DelimitedListTraceListener> that has the name "delimListener":  
-  
-```csharp  
-((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"  
-```  
-  
+>  To reduce the chance of an exception, any character that might invalidate the output is replaced with a "?" character.
+
+ The <xref:System.Diagnostics.TraceListener.Name> property is set to the value of the `name` parameter, or to an empty string ("") if the `name` parameter is `null`. The <xref:System.Diagnostics.TraceListener.Name> property can be used as an index into the `Listeners` collection to programmatically change the properties for the listener. For example, the following code sets the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property for the instance of <xref:System.Diagnostics.DelimitedListTraceListener> that has the name "delimListener":
+
+```csharp
+((DelimitedListTraceListener)Trace.Listeners["delimListener"]).Delimiter = ":"
+```
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -451,6 +467,8 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -470,32 +488,32 @@ To configure a <xref:System.Diagnostics.DelimitedListTraceListener> in a .NET Fr
         <summary>Gets or sets the delimiter for the delimited list.</summary>
         <value>The delimiter for the delimited list.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
 
 The default delimiter is ";" (semicolon).
 
-The following configuration file example shows how to set the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property using the `delimiter` attribute in a configuration file for a .NET Framework app:  
-  
-```xml  
-<configuration>  
-  <system.diagnostics>  
-    <trace autoflush="false" indentsize="4">  
-      <listeners>  
-        <add name="delimitedListener"   
-          type="System.Diagnostics.DelimitedListTraceListener"   
-          delimiter=":"   
-          initializeData="delimitedOutput.txt"   
-          traceOutputOptions="ProcessId, DateTime" />  
-        <remove name="Default" />  
-      </listeners>  
-    </trace>  
-  </system.diagnostics>  
-</configuration>  
-  
-```  
-  
+The following configuration file example shows how to set the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property using the `delimiter` attribute in a configuration file for a .NET Framework app:
+
+```xml
+<configuration>
+  <system.diagnostics>
+    <trace autoflush="false" indentsize="4">
+      <listeners>
+        <add name="delimitedListener"
+          type="System.Diagnostics.DelimitedListTraceListener"
+          delimiter=":"
+          initializeData="delimitedOutput.txt"
+          traceOutputOptions="ProcessId, DateTime" />
+        <remove name="Default" />
+      </listeners>
+    </trace>
+  </system.diagnostics>
+</configuration>
+
+```
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -505,12 +523,12 @@ The following configuration file example shows how to set the <xref:System.Diagn
       </Docs>
     </Member>
     <Member MemberName="GetSupportedAttributes">
-      <MemberSignature Language="C#" Value="protected override string[] GetSupportedAttributes ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected override string[] GetSupportedAttributes ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.GetSupportedAttributes" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetSupportedAttributes () As String()" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetSupportedAttributes () As String()" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="F#" Value="override this.GetSupportedAttributes : unit -&gt; string[]" Usage="delimitedListTraceListener.GetSupportedAttributes " />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override cli::array &lt;System::String ^&gt; ^ GetSupportedAttributes();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override cli::array &lt;System::String ^&gt; ^ GetSupportedAttributes();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="C#" Value="protected internal override string[] GetSupportedAttributes ();" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function GetSupportedAttributes () As String()" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -537,6 +555,8 @@ The following configuration file example shows how to set the <xref:System.Diagn
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String[]</ReturnType>
@@ -546,30 +566,30 @@ The following configuration file example shows how to set the <xref:System.Diagn
         <summary>Returns the custom configuration file attribute supported by the delimited trace listener.</summary>
         <returns>A string array that contains the single value "delimiter".</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A custom attribute is an attribute that is not inherited from the base class that can be used to set a property for the class. The custom attribute for <xref:System.Diagnostics.DelimitedListTraceListener> is used to set the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property.
+          <format type="text/markdown"><![CDATA[
 
-The following .NET Framework application configuration file example shows the use of the `delimiter` attribute to set the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property:  
-  
-```xml  
-<configuration>  
-  <system.diagnostics>  
-    <trace autoflush="false" indentsize="4">  
-      <listeners>  
-        <add name="delimitedListener"   
-          type="System.Diagnostics.DelimitedListTraceListener"   
-          delimiter=":"   
-          initializeData="delimitedOutput.txt"   
-          traceOutputOptions="ProcessId, DateTime" />  
-        <remove name="Default" />  
-      </listeners>  
-    </trace>  
-  </system.diagnostics>  
-</configuration>  
-```  
-  
+## Remarks
+ A custom attribute is an attribute that is not inherited from the base class that can be used to set a property for the class. The custom attribute for <xref:System.Diagnostics.DelimitedListTraceListener> is used to set the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property.
+
+The following .NET Framework application configuration file example shows the use of the `delimiter` attribute to set the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter> property:
+
+```xml
+<configuration>
+  <system.diagnostics>
+    <trace autoflush="false" indentsize="4">
+      <listeners>
+        <add name="delimitedListener"
+          type="System.Diagnostics.DelimitedListTraceListener"
+          delimiter=":"
+          initializeData="delimitedOutput.txt"
+          traceOutputOptions="ProcessId, DateTime" />
+        <remove name="Default" />
+      </listeners>
+    </trace>
+  </system.diagnostics>
+</configuration>
+```
+
  ]]></format>
         </remarks>
       </Docs>
@@ -585,7 +605,7 @@ The following .NET Framework application configuration file example shows the us
       </Docs>
     </MemberGroup>
     <Member MemberName="TraceData">
-      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object? data);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object? data);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceData (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, data As Object)" />
@@ -604,6 +624,8 @@ The following .NET Framework application configuration file example shows the us
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -623,7 +645,7 @@ The following .NET Framework application configuration file example shows the us
         <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
         <Parameter Name="source" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -641,20 +663,20 @@ The following .NET Framework application configuration file example shows the us
         <param name="data">A data object to write to the output file or stream.</param>
         <summary>Writes trace information, a data object, and event information to the output file or stream.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The values of the `source`, `eventType`, and `id` parameters are written as a header. The data object is converted to a string using the `ToString` method of the object. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The values of the `source`, `eventType`, and `id` parameters are written as a header. The data object is converted to a string using the `ToString` method of the object. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions> property.
+
 > [!IMPORTANT]
->  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceData%2A> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.  
-  
+>  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceData*> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="TraceData">
-      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object?[]? data);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object?[]? data);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceData (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, ParamArray data As Object())" />
@@ -673,6 +695,8 @@ The following .NET Framework application configuration file example shows the us
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -692,7 +716,7 @@ The following .NET Framework application configuration file example shows the us
         <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
         <Parameter Name="source" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -717,14 +741,14 @@ The following .NET Framework application configuration file example shows the us
         <param name="data">An array of data objects to write to the output file or stream.</param>
         <summary>Writes trace information, an array of data objects, and event information to the output file or stream.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The values of the `source`, `eventType`, and `id` parameters are written as a header. The data objects are converted to strings using the `ToString` method of each object. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The values of the `source`, `eventType`, and `id` parameters are written as a header. The data objects are converted to strings using the `ToString` method of each object. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions> property.
+
 > [!IMPORTANT]
->  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceData%2A> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.  
-  
+>  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceData*> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -740,7 +764,7 @@ The following .NET Framework application configuration file example shows the us
       </Docs>
     </MemberGroup>
     <Member MemberName="TraceEvent">
-      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string? message);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string? message);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceEvent (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, message As String)" />
@@ -759,6 +783,8 @@ The following .NET Framework application configuration file example shows the us
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -778,7 +804,7 @@ The following .NET Framework application configuration file example shows the us
         <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
         <Parameter Name="source" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -796,26 +822,26 @@ The following .NET Framework application configuration file example shows the us
         <param name="message">The trace message to write to the output file or stream.</param>
         <summary>Writes trace information, a message, and event information to the output file or stream.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The values of the `source`, `eventType`, and `id` parameters are written as a header, followed by the `message` data. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The values of the `source`, `eventType`, and `id` parameters are written as a header, followed by the `message` data. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions> property.
+
 > [!IMPORTANT]
->  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent%2A> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.  
-  
+>  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent*> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="TraceEvent">
-      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object?[]? args);" FrameworkAlternate="net-5.0" />
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string? format, params object?[]? args);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.DelimitedListTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceEvent (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, format As String, ParamArray args As Object())" />
       <MemberSignature Language="F#" Value="override this.TraceEvent : System.Diagnostics.TraceEventCache * string * System.Diagnostics.TraceEventType * int * string * obj[] -&gt; unit" Usage="delimitedListTraceListener.TraceEvent (eventCache, source, eventType, id, format, args)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void TraceEvent(System::Diagnostics::TraceEventCache ^ eventCache, System::String ^ source, System::Diagnostics::TraceEventType eventType, int id, System::String ^ format, ... cli::array &lt;System::Object ^&gt; ^ args);" />
-      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string? format, params object?[]? args);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache? eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object?[]? args);" FrameworkAlternate="net-5.0" />
       <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -829,6 +855,8 @@ The following .NET Framework application configuration file example shows the us
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -848,7 +876,7 @@ The following .NET Framework application configuration file example shows the us
         <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
         <Parameter Name="source" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -858,7 +886,7 @@ The following .NET Framework application configuration file example shows the us
         <Parameter Name="id" Type="System.Int32" />
         <Parameter Name="format" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.StringSyntax("CompositeFormat")&gt;]</AttributeName>
             </Attribute>
@@ -882,14 +910,14 @@ The following .NET Framework application configuration file example shows the us
         <param name="args">An array containing zero or more objects to format.</param>
         <summary>Writes trace information, a formatted array of objects, and event information to the output file or stream.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The values of the `source`, `eventType`, and `id` parameters are written as a header. The `args` object array is converted to a string using the <xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> method, passing the `format` string and `args` array to format the string as the message portion of the trace. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The values of the `source`, `eventType`, and `id` parameters are written as a header. The `args` object array is converted to a string using the <xref:System.String.Format(System.String,System.Object[])?displayProperty=nameWithType> method, passing the `format` string and `args` array to format the string as the message portion of the trace. The `eventCache` data is written as a footer whose content depends on the value of the <xref:System.Diagnostics.TraceListener.TraceOutputOptions> property.
+
 > [!IMPORTANT]
->  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent%2A> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.  
-  
+>  The <xref:System.Diagnostics.DelimitedListTraceListener.TraceEvent*> method is not intended to be called by application code. It is called by methods of the <xref:System.Diagnostics.Debug>, <xref:System.Diagnostics.Trace>, and <xref:System.Diagnostics.TraceSource> classes to write trace data.
+
  ]]></format>
         </remarks>
       </Docs>

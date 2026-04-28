@@ -1,6 +1,6 @@
 <Type Name="Formatter" FullName="System.Runtime.Serialization.Formatter">
   <TypeSignature Language="C#" Value="public abstract class Formatter : System.Runtime.Serialization.IFormatter" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Formatter extends System.Object implements class System.Runtime.Serialization.IFormatter" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Formatter extends System.Object implements class System.Runtime.Serialization.IFormatter" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatter" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class Formatter&#xA;Implements IFormatter" />
   <TypeSignature Language="F#" Value="type Formatter = class&#xA;    interface IFormatter" />
@@ -29,13 +29,15 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="8.1.0.0" FrameworkAlternate="net-10.0;net-11.0;net-9.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="8.0.0.0" FrameworkAlternate="net-8.0" />
-    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="8.1.0.0" FrameworkAlternate="net-9.0" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -50,11 +52,11 @@
       <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Obsolete("BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.", DiagnosticId="SYSLIB0011", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.", DiagnosticId="SYSLIB0011", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -70,60 +72,60 @@
   <Docs>
     <summary>Provides base functionality for the common language runtime serialization formatters.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Runtime.Serialization.Formatter> is the `abstract` base class for all runtime serialization formatters, and provides some helper methods for implementing the <xref:System.Runtime.Serialization.IFormatter> interface. The <xref:System.Runtime.Serialization.Formatter> also manages queuing objects for serialization and generating IDs on a per-object basis.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Runtime.Serialization.Formatter> is the `abstract` base class for all runtime serialization formatters, and provides some helper methods for implementing the <xref:System.Runtime.Serialization.IFormatter> interface. The <xref:System.Runtime.Serialization.Formatter> also manages queuing objects for serialization and generating IDs on a per-object basis.
+
  ]]></format>
     </remarks>
     <block subset="none" type="overrides">
-      <para>When you inherit from <see cref="T:System.Runtime.Serialization.Formatter" />, you must override the following members:  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteArray(System.Object,System.String,System.Type)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteBoolean(System.Boolean,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteByte(System.Byte,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteChar(System.Char,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteDateTime(System.DateTime,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteDecimal(System.Decimal,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteDouble(System.Double,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt16(System.Int16,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt32(System.Int32,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt64(System.Int64,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteObjectRef(System.Object,System.String,System.Type)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteSByte(System.SByte,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteSingle(System.Single,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteTimeSpan(System.TimeSpan,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt16(System.UInt16,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt32(System.UInt32,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt64(System.UInt64,System.String)" />  
-  
--   <see cref="M:System.Runtime.Serialization.Formatter.WriteValueType(System.Object,System.String,System.Type)" />  
-  
--   <see cref="P:System.Runtime.Serialization.Formatter.SurrogateSelector" />  
-  
--   <see cref="P:System.Runtime.Serialization.Formatter.Binder" />  
-  
+      <para>When you inherit from <see cref="T:System.Runtime.Serialization.Formatter" />, you must override the following members:
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteArray(System.Object,System.String,System.Type)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteBoolean(System.Boolean,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteByte(System.Byte,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteChar(System.Char,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteDateTime(System.DateTime,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteDecimal(System.Decimal,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteDouble(System.Double,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt16(System.Int16,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt32(System.Int32,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteInt64(System.Int64,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteObjectRef(System.Object,System.String,System.Type)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteSByte(System.SByte,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteSingle(System.Single,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteTimeSpan(System.TimeSpan,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt16(System.UInt16,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt32(System.UInt32,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteUInt64(System.UInt64,System.String)" />
+
+-   <see cref="M:System.Runtime.Serialization.Formatter.WriteValueType(System.Object,System.String,System.Type)" />
+
+-   <see cref="P:System.Runtime.Serialization.Formatter.SurrogateSelector" />
+
+-   <see cref="P:System.Runtime.Serialization.Formatter.Binder" />
+
 -   <see cref="P:System.Runtime.Serialization.Formatter.Context" /></para>
     </block>
     <altmember cref="T:System.Runtime.Serialization.ObjectIDGenerator" />
@@ -159,24 +161,24 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Runtime.Serialization.Formatter" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Creates a <xref:System.Collections.Queue> for objects to serialize and a <xref:System.Runtime.Serialization.ObjectIDGenerator> to generate IDs for them.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Creates a <xref:System.Collections.Queue> for objects to serialize and a <xref:System.Runtime.Serialization.ObjectIDGenerator> to generate IDs for them.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Runtime.Serialization.ObjectIDGenerator" />
       </Docs>
     </Member>
     <Member MemberName="Binder">
-      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.SerializationBinder? Binder { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.SerializationBinder? Binder { get; set; }" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.SerializationBinder Binder" />
       <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatter.Binder" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property Binder As SerializationBinder" />
@@ -209,10 +211,10 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -224,11 +226,11 @@
         <summary>When overridden in a derived class, gets or sets the <see cref="T:System.Runtime.Serialization.SerializationBinder" /> used with the current formatter.</summary>
         <value>The <see cref="T:System.Runtime.Serialization.SerializationBinder" /> used with the current formatter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Runtime.Serialization.SerializationBinder> performs lookups for types from the type names passed during deserialization. If no <xref:System.Runtime.Serialization.SerializationBinder> is set, a default is used.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Runtime.Serialization.SerializationBinder> performs lookups for types from the type names passed during deserialization. If no <xref:System.Runtime.Serialization.SerializationBinder> is set, a default is used.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -269,7 +271,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.Serialization.StreamingContext</ReturnType>
@@ -278,11 +280,11 @@
         <summary>When overridden in a derived class, gets or sets the <see cref="T:System.Runtime.Serialization.StreamingContext" /> used for the current serialization.</summary>
         <value>The <see cref="T:System.Runtime.Serialization.StreamingContext" /> used for the current serialization.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Runtime.Serialization.StreamingContext> is an indication of either the source of the bits being deserialized or the destination of the bits being serialized. It has no impact on default serialization, but is passed as an argument to <xref:System.Runtime.Serialization.ISerializable> and <xref:System.Runtime.Serialization.ISerializationSurrogate>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Runtime.Serialization.StreamingContext> is an indication of either the source of the bits being deserialized or the destination of the bits being serialized. It has no impact on default serialization, but is passed as an argument to <xref:System.Runtime.Serialization.ISerializable> and <xref:System.Runtime.Serialization.ISerializationSurrogate>.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -323,9 +325,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("BinaryFormatter serialization uses dynamic code generation, the type of objects being processed cannot be statically discovered.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("BinaryFormatter serialization uses dynamic code generation, the type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0">
           <AttributeName Language="C#">[System.Obsolete("BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.", DiagnosticId="SYSLIB0011", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.", DiagnosticId="SYSLIB0011", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
@@ -333,14 +343,6 @@
         <Attribute FrameworkAlternate="net-6.0;net-7.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the Type of objects being processed cannot be statically discovered.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the Type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresDynamicCode("BinaryFormatter serialization uses dynamic code generation, the type of objects being processed cannot be statically discovered.")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresDynamicCode("BinaryFormatter serialization uses dynamic code generation, the type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -361,7 +363,7 @@
       </Docs>
     </Member>
     <Member MemberName="GetNext">
-      <MemberSignature Language="C#" Value="protected virtual object? GetNext (out long objID);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="protected virtual object? GetNext (out long objID);" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetNext([out] int64&amp; objID) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.GetNext(System.Int64@)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetNext (ByRef objID As Long) As Object" />
@@ -391,7 +393,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -404,11 +406,11 @@
         <summary>Returns the next object to serialize, from the formatter's internal work queue.</summary>
         <returns>The next object to serialize.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Objects are returned in a first in first out order based on how they were passed to <xref:System.Runtime.Serialization.Formatter.Schedule%2A>. The ID of the object is put into the `objID` parameter and the object is returned from the function.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Objects are returned in a first in first out order based on how they were passed to <xref:System.Runtime.Serialization.Formatter.Schedule*>. The ID of the object is put into the `objID` parameter and the object is returned from the function.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.Runtime.Serialization.SerializationException">The next object retrieved from the work queue did not have an assigned ID.</exception>
@@ -424,8 +426,8 @@
       <MemberSignature Language="C++ CLI" Value="protected: System::Runtime::Serialization::ObjectIDGenerator ^ m_idGenerator;" />
       <MemberType>Field</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="net-8.0-pp;net-9.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresDynamicCodeMessage</InterfaceMember>
-        <InterfaceMember FrameworkAlternate="net-8.0-pp;net-9.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresUnreferencedCodeMessage</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="net-10.0-pp;net-11.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresDynamicCodeMessage</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="net-10.0-pp;net-11.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresUnreferencedCodeMessage</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -449,7 +451,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.Serialization.ObjectIDGenerator</ReturnType>
@@ -457,11 +459,11 @@
       <Docs>
         <summary>Contains the <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" /> used with the current formatter.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Runtime.Serialization.ObjectIDGenerator> maintains a list of the objects that have been identified and the IDs that they were given.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Runtime.Serialization.ObjectIDGenerator> maintains a list of the objects that have been identified and the IDs that they were given.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -475,8 +477,8 @@
       <MemberSignature Language="C++ CLI" Value="protected: System::Collections::Queue ^ m_objectQueue;" />
       <MemberType>Field</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="net-8.0-pp;net-9.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresDynamicCodeMessage</InterfaceMember>
-        <InterfaceMember FrameworkAlternate="net-8.0-pp;net-9.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresUnreferencedCodeMessage</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="net-10.0-pp;net-11.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresDynamicCodeMessage</InterfaceMember>
+        <InterfaceMember FrameworkAlternate="net-10.0-pp;net-11.0-pp">F:System.Runtime.Serialization.IFormatter.RequiresUnreferencedCodeMessage</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -500,7 +502,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Queue</ReturnType>
@@ -508,18 +510,18 @@
       <Docs>
         <summary>Contains a <see cref="T:System.Collections.Queue" /> of the objects left to serialize.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Objects scheduled for serialization with the <xref:System.Runtime.Serialization.Formatter.Schedule%2A> method are pushed on the queue.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Objects scheduled for serialization with the <xref:System.Runtime.Serialization.Formatter.Schedule*> method are pushed on the queue.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Collections.Queue" />
       </Docs>
     </Member>
     <Member MemberName="Schedule">
-      <MemberSignature Language="C#" Value="protected virtual long Schedule (object? obj);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="protected virtual long Schedule (object? obj);" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int64 Schedule(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.Schedule(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function Schedule (obj As Object) As Long" />
@@ -549,7 +551,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -562,11 +564,11 @@
         <summary>Schedules an object for later serialization.</summary>
         <returns>The object ID assigned to the object.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Runtime.Serialization.Formatter.Schedule%2A> obtains an ID for the object and puts it on the queue for later serialization if this is a new object ID. The schedule is a work queue of objects to serialize, and is held inside the formatter. If the object is already on the work queue, it will not be added a second time, but an exception will not be thrown either.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Runtime.Serialization.Formatter.Schedule*> obtains an ID for the object and puts it on the queue for later serialization if this is a new object ID. The schedule is a work queue of objects to serialize, and is held inside the formatter. If the object is already on the work queue, it will not be added a second time, but an exception will not be thrown either.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Runtime.Serialization.ObjectIDGenerator" />
@@ -605,9 +607,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0">
           <AttributeName Language="C#">[System.Obsolete("BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.", DiagnosticId="SYSLIB0011", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("BinaryFormatter serialization is obsolete and should not be used. See https://aka.ms/binaryformatter for more information.", DiagnosticId="SYSLIB0011", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
@@ -615,10 +621,6 @@
         <Attribute FrameworkAlternate="net-6.0;net-7.0">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the Type of objects being processed cannot be statically discovered.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the Type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
-          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("BinaryFormatter serialization is not trim compatible because the type of objects being processed cannot be statically discovered.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -640,7 +642,7 @@
       </Docs>
     </Member>
     <Member MemberName="SurrogateSelector">
-      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.ISurrogateSelector? SurrogateSelector { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="public abstract System.Runtime.Serialization.ISurrogateSelector? SurrogateSelector { get; set; }" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ISurrogateSelector SurrogateSelector" />
       <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatter.SurrogateSelector" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property SurrogateSelector As ISurrogateSelector" />
@@ -673,10 +675,10 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -688,13 +690,13 @@
         <summary>When overridden in a derived class, gets or sets the <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> used with the current formatter.</summary>
         <value>The <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> used with the current formatter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use the <xref:System.Runtime.Serialization.SurrogateSelector> to look up implementations of <xref:System.Runtime.Serialization.ISerializationSurrogate> that control the serialization of a particular type.  
-  
- If an object type has a matching surrogate, then serialization and deserialization are handed off to the surrogate even if the type implements the <xref:System.Runtime.Serialization.ISerializable> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use the <xref:System.Runtime.Serialization.SurrogateSelector> to look up implementations of <xref:System.Runtime.Serialization.ISerializationSurrogate> that control the serialization of a particular type.
+
+ If an object type has a matching surrogate, then serialization and deserialization are handed off to the surrogate even if the type implements the <xref:System.Runtime.Serialization.ISerializable> interface.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -732,7 +734,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -783,7 +785,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -832,7 +834,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -881,7 +883,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -930,7 +932,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -980,7 +982,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1030,7 +1032,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1079,7 +1081,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1128,7 +1130,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1177,7 +1179,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1197,7 +1199,7 @@
       </Docs>
     </Member>
     <Member MemberName="WriteMember">
-      <MemberSignature Language="C#" Value="protected virtual void WriteMember (string memberName, object? data);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="protected virtual void WriteMember (string memberName, object? data);" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteMember(string memberName, object data) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteMember(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub WriteMember (memberName As String, data As Object)" />
@@ -1227,7 +1229,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1236,7 +1238,7 @@
         <Parameter Name="memberName" Type="System.String" />
         <Parameter Name="data" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1248,17 +1250,17 @@
         <param name="data">The object to write to the stream attached to the formatter.</param>
         <summary>Inspects the type of data received, and calls the appropriate <see langword="Write" /> method to perform the write to the stream already attached to the formatter.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To use this method properly, all the `Write` methods (<xref:System.Runtime.Serialization.Formatter.WriteArray%2A> method, <xref:System.Runtime.Serialization.Formatter.WriteBoolean%2A> method, <xref:System.Runtime.Serialization.Formatter.WriteByte%2A> method, and so on) should have the appropriate functionality.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To use this method properly, all the `Write` methods (<xref:System.Runtime.Serialization.Formatter.WriteArray*> method, <xref:System.Runtime.Serialization.Formatter.WriteBoolean*> method, <xref:System.Runtime.Serialization.Formatter.WriteByte*> method, and so on) should have the appropriate functionality.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="WriteObjectRef">
-      <MemberSignature Language="C#" Value="protected abstract void WriteObjectRef (object? obj, string name, Type memberType);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="protected abstract void WriteObjectRef (object? obj, string name, Type memberType);" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteObjectRef(object obj, string name, class System.Type memberType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatter.WriteObjectRef(System.Object,System.String,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub WriteObjectRef (obj As Object, name As String, memberType As Type)" />
@@ -1288,7 +1290,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1296,7 +1298,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1311,11 +1313,11 @@
         <param name="memberType">The type of object the reference points to.</param>
         <summary>When overridden in a derived class, writes an object reference to the stream already attached to the formatter.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Schedules the object with the graph walker to handle the work.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Schedules the object with the graph walker to handle the work.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1353,7 +1355,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1408,7 +1410,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1457,7 +1459,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1507,7 +1509,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1562,7 +1564,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1617,7 +1619,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1672,7 +1674,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

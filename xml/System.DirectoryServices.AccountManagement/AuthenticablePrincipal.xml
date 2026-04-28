@@ -13,6 +13,11 @@
     <AssemblyVersion>8.0.0.1</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.DirectoryServices.AccountManagement.Principal</BaseTypeName>
@@ -44,7 +49,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Custom extension classes that derive from this class can call this constructor from the derived class constructor to initialize the base class. For more information, see the [Principal Extensions](https://learn.microsoft.com/previous-versions/bb384372(v=vs.90)) overview topic.
+ Custom extension classes that derive from this class can call this constructor from the derived class constructor to initialize the base class.
 
  ]]></format>
         </remarks>
@@ -62,7 +67,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
@@ -74,7 +79,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Custom extension classes that derive from this class can call this constructor from the derived class constructor to initialize the base class. For more information, see the [Principal Extensions](https://learn.microsoft.com/previous-versions/bb384372(v=vs.90)) overview topic.
+ Custom extension classes that derive from this class can call this constructor from the derived class constructor to initialize the base class.
 
  ]]></format>
         </remarks>
@@ -92,7 +97,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
@@ -110,7 +115,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Custom extension classes that derive from this class can call this constructor from the derived class constructor to initialize the base class. For more information, see the [Principal Extensions](https://learn.microsoft.com/previous-versions/bb384372(v=vs.90)) overview topic.
+ Custom extension classes that derive from this class can call this constructor from the derived class constructor to initialize the base class.
 
  ]]></format>
         </remarks>
@@ -128,7 +133,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -140,9 +145,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime%2A> method on the return object.
+ As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime*> method on the return object.
 
- When you set the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.AccountExpirationDate%2A>, the time will default to UTC.  If you want to write in local time, then specify the <xref:System.DateTime.Kind%2A> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local>.
+ When you set the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.AccountExpirationDate*>, the time will default to UTC.  If you want to write in local time, then specify the <xref:System.DateTime.Kind> property of your <xref:System.DateTime> object as <xref:System.DateTimeKind.Local>.
 
  ]]></format>
         </remarks>
@@ -161,7 +166,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -173,11 +178,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The account lockout time is system dependent, and cannot be set by the Account Management API. To unlock the account, use the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.UnlockAccount%2A> method.
+ The account lockout time is system dependent, and cannot be set by the Account Management API. To unlock the account, use the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.UnlockAccount*> method.
 
- It is possible that an account may not be locked out when the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.AccountLockoutTime%2A> returns a non-null value. Applications should use the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.IsAccountLockedOut%2A> method to determine whether the account is locked out.
+ It is possible that an account may not be locked out when the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.AccountLockoutTime*> returns a non-null value. Applications should use the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.IsAccountLockedOut*> method to determine whether the account is locked out.
 
- As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime%2A> method on the return object.
+ As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime*> method on the return object.
 
  ]]></format>
         </remarks>
@@ -196,7 +201,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -208,18 +213,10 @@
         <ReturnType>System.DirectoryServices.AccountManagement.AdvancedFilters</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns an <see cref="T:System.DirectoryServices.AccountManagement.AdvancedFilters" /> object for use with <see href="https://msdn.microsoft.com/library/84ac40bb-04c4-4d0b-adaf-0ddb9253599e">Query By Example</see> to set read-only properties before passing the object to the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearcher" />.</summary>
+        <summary>Returns an <see cref="T:System.DirectoryServices.AccountManagement.AdvancedFilters" /> object for use with Query By Example to set read-only properties before passing the object to the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearcher" />.</summary>
         <value>An object to use to set read-only properties before passing it to the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalSearcher" />.</value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[
-
-## Remarks
- See the [Query By Example](https://msdn.microsoft.com/library/84ac40bb-04c4-4d0b-adaf-0ddb9253599e) documentation for examples.
-
- ]]></format>
-        </remarks>
+        <remarks>To be added.</remarks>
         <altmember cref="T:System.DirectoryServices.AccountManagement.AdvancedFilters" />
-        <related type="Article" href="https://msdn.microsoft.com/library/84ac40bb-04c4-4d0b-adaf-0ddb9253599e">Query By Example</related>
       </Docs>
     </Member>
     <Member MemberName="AllowReversiblePasswordEncryption">
@@ -234,7 +231,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -259,7 +256,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -283,7 +280,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
@@ -307,7 +304,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -345,7 +342,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -370,7 +367,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
@@ -403,7 +400,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -434,7 +431,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -460,7 +457,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC.  If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local>.
+ The time will default to UTC.  If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local>.
 
  ]]></format>
         </remarks>
@@ -478,7 +475,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;T&gt;</ReturnType>
@@ -502,7 +499,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -520,7 +517,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -546,7 +543,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -564,7 +561,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;T&gt;</ReturnType>
@@ -588,7 +585,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -606,7 +603,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -632,7 +629,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC.  If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC.  If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -650,7 +647,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;T&gt;</ReturnType>
@@ -674,7 +671,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -692,7 +689,7 @@
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -718,7 +715,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
 
 
@@ -727,7 +724,7 @@
 
  A search is performed for all authenticable principals under the container "DC=adamApp1,DC=fabrikam,DC=com" that have not logged on to this ADAM instance for the last 45 days. The principals returned by the search are then deleted.
 
-```
+```csharp
 PrincipalContext ctx = new PrincipalContext(
                                       ContextType.ApplicationDirectory,
                                       "adamHost1.fabrikam.com:5000",
@@ -746,7 +743,6 @@ foreach (Principal p in oldPrincipals)
 
 oldPrincipals.Dispose();
 ctx.Dispose();
-
 ```
 
  ]]></format>
@@ -765,7 +761,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;T&gt;</ReturnType>
@@ -789,7 +785,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -807,7 +803,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -833,7 +829,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -851,7 +847,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;T&gt;</ReturnType>
@@ -875,7 +871,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind%2A> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
+ The time will default to UTC. If you want to specify the time in local time, then specify the <xref:System.DateTime.Kind> property of the `time` object as <xref:System.DateTimeKind.Local?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -893,7 +889,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -917,7 +913,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -941,7 +937,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -955,7 +951,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- It is possible that an account may not be locked out when the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.AccountLockoutTime%2A> returns a non-null value. This method computes the correct store-specific lockout value to determine whether the account is locked out.
+ It is possible that an account may not be locked out when the <xref:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.AccountLockoutTime*> returns a non-null value. This method computes the correct store-specific lockout value to determine whether the account is locked out.
 
  ]]></format>
         </remarks>
@@ -973,7 +969,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -985,7 +981,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime%2A> method on the return object.
+ As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime*> method on the return object.
 
  ]]></format>
         </remarks>
@@ -1004,7 +1000,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -1016,7 +1012,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime%2A> method on the return object.
+ As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime*> method on the return object.
 
  ]]></format>
         </remarks>
@@ -1035,7 +1031,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
@@ -1047,7 +1043,7 @@ ctx.Dispose();
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime%2A> method on the return object.
+ As with all <xref:System.DateTime> properties in <xref:System.DirectoryServices.AccountManagement>, the time returned is in UTC form.  To convert it to local time, call the <xref:System.DateTime.ToLocalTime*> method on the return object.
 
  ]]></format>
         </remarks>
@@ -1066,7 +1062,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1091,7 +1087,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1116,7 +1112,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -1140,7 +1136,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DirectoryServices.AccountManagement.PrincipalValueCollection&lt;System.String&gt;</ReturnType>
@@ -1164,7 +1160,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1188,7 +1184,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1212,7 +1208,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1239,7 +1235,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1264,7 +1260,7 @@ ctx.Dispose();
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1278,9 +1274,9 @@ ctx.Dispose();
 ## Examples
  The following example code connects to the LDAP domain "fabrikam.com" with the username (administrator) and password (SecretPwd123) initialized in the <xref:System.DirectoryServices.AccountManagement.PrincipalContext> constructor.
 
- A search is performed to find the user with name "John Smith" under the container specified in the <xref:System.DirectoryServices.AccountManagement.PrincipalContext> constructor: "CN=Users,DC=fabrikam,DC=com."  If the user is found, a check is performed to determine whether this user's account has been locked out. If the account has been locked out, the code example unlocks the account.
+ A search is performed to find the user with name "John Smith" under the container specified in the <xref:System.DirectoryServices.AccountManagement.PrincipalContext> constructor: "CN=Users,DC=fabrikam,DC=com." If the user is found, a check is performed to determine whether this user's account has been locked out. If the account has been locked out, the code example unlocks the account.
 
-```
+```csharp
 PrincipalContext ctx = new PrincipalContext(ContextType.Domain,
                                          "fabrikam.com",
                                          "CN=Users,DC=fabrikam,DC=com",
@@ -1320,7 +1316,7 @@ An exception occurred when saving the changes to the store.</exception>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
         <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

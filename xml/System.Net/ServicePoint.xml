@@ -30,8 +30,14 @@
   <AssemblyInfo>
     <AssemblyName>System.Net.Requests</AssemblyName>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Requests" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Net.ServicePoint" FromVersion="10.0.0.0" To="System.Net.Requests" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Requests" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Net.ServicePoint" FromVersion="11.0.0.0" To="System.Net.Requests" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.ServicePoint" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.ServicePoint" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.ServicePoint" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -44,7 +50,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -60,22 +66,21 @@
 
  The <xref:System.Net.ServicePoint> class handles connections to an Internet resource based on the host information passed in the resource's Uniform Resource Identifier (URI). The initial connection to the resource determines the information that the <xref:System.Net.ServicePoint> object maintains, which is then shared by all subsequent requests to that resource.
 
- <xref:System.Net.ServicePoint> objects are managed by the <xref:System.Net.ServicePointManager> class and are created, if necessary, by the <xref:System.Net.ServicePointManager.FindServicePoint%2A?displayProperty=nameWithType> method. <xref:System.Net.ServicePoint> objects are never created directly but are always created and managed by the <xref:System.Net.ServicePointManager> class. The maximum number of <xref:System.Net.ServicePoint> objects that can be created is set by the <xref:System.Net.ServicePointManager.MaxServicePoints?displayProperty=nameWithType> property.
+ <xref:System.Net.ServicePoint> objects are managed by the <xref:System.Net.ServicePointManager> class and are created, if necessary, by the <xref:System.Net.ServicePointManager.FindServicePoint*?displayProperty=nameWithType> method. <xref:System.Net.ServicePoint> objects are never created directly but are always created and managed by the <xref:System.Net.ServicePointManager> class. The maximum number of <xref:System.Net.ServicePoint> objects that can be created is set by the <xref:System.Net.ServicePointManager.MaxServicePoints?displayProperty=nameWithType> property.
 
  Each <xref:System.Net.ServicePoint> object maintains its connection to an Internet resource until it has been idle longer than the time specified in the <xref:System.Net.ServicePoint.MaxIdleTime> property. When a <xref:System.Net.ServicePoint> exceeds the <xref:System.Net.ServicePoint.MaxIdleTime> value, it can be recycled to another connection. The default value of <xref:System.Net.ServicePoint.MaxIdleTime> is set by the <xref:System.Net.ServicePointManager.MaxServicePointIdleTime?displayProperty=nameWithType> property.
 
  When the <xref:System.Net.ServicePoint.ConnectionLeaseTimeout> property is set to a value other than -1, and after the specified time elapses, an active <xref:System.Net.ServicePoint> connection is closed after it services the next request. This is useful for applications that do not require active connections that are opened indefinitely, as they are by default.
 
 > [!NOTE]
->  In high load conditions, some applications may run out of free threads in the ThreadPool, which may lead to poor system performance (such as high and variable transaction times).
+> In high load conditions, some applications may run out of free threads in the ThreadPool, which may lead to poor system performance (such as high and variable transaction times).
 
 
 ## Examples
  The following code example creates a <xref:System.Net.ServicePoint> object that connects to the URI `www.contoso.com`.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -114,6 +119,8 @@
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -127,9 +134,8 @@
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -137,7 +143,7 @@
       </Docs>
     </Member>
     <Member MemberName="BindIPEndPointDelegate">
-      <MemberSignature Language="C#" Value="public System.Net.BindIPEndPoint? BindIPEndPointDelegate { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Net.BindIPEndPoint? BindIPEndPointDelegate { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Net.BindIPEndPoint BindIPEndPointDelegate" />
       <MemberSignature Language="DocId" Value="P:System.Net.ServicePoint.BindIPEndPointDelegate" />
       <MemberSignature Language="VB.NET" Value="Public Property BindIPEndPointDelegate As BindIPEndPoint" />
@@ -169,9 +175,11 @@
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -196,14 +204,14 @@
  Some load balancing techniques require a client to use a specific local IP address and port number, rather than <xref:System.Net.IPAddress.Any?displayProperty=nameWithType> (or <xref:System.Net.IPAddress.IPv6Any?displayProperty=nameWithType> for Internet Protocol Version 6) and an ephemeral port. Your <xref:System.Net.ServicePoint.BindIPEndPointDelegate> can satisfy this requirement.
 
 > [!NOTE]
->  Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to bind the underlying socket to the endpoint from this delegate.
+> Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to bind the underlying socket to the endpoint from this delegate.
 
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Certificate">
-      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate? Certificate { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate? Certificate { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate Certificate" />
       <MemberSignature Language="DocId" Value="P:System.Net.ServicePoint.Certificate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Certificate As X509Certificate" />
@@ -236,9 +244,11 @@
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -259,21 +269,20 @@
 Although a <xref:System.Net.ServicePoint> object can make multiple connections to an Internet resource, it can maintain only one certificate.
 
 > [!NOTE]
->  Since .NET 9, returns the remote certificate retrieved via <xref:System.Net.Security.SslClientAuthenticationOptions.RemoteCertificateValidationCallback> on <xref:System.Net.Http.SocketsHttpHandler.SslOptions?displayProperty=nameWithType>.
+> Since .NET 9, returns the remote certificate retrieved via <xref:System.Net.Security.SslClientAuthenticationOptions.RemoteCertificateValidationCallback> on <xref:System.Net.Http.SocketsHttpHandler.SslOptions?displayProperty=nameWithType>.
 
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet5":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet5":::
 
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClientCertificate">
-      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate? ClientCertificate { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate? ClientCertificate { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate ClientCertificate" />
       <MemberSignature Language="DocId" Value="P:System.Net.ServicePoint.ClientCertificate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClientCertificate As X509Certificate" />
@@ -306,9 +315,11 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -324,14 +335,13 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
 ## Remarks
 
 > [!NOTE]
->  This property is only implemented on .NET Framework.
+> This property is only implemented on .NET Framework.
 
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet5":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet5":::
 
  ]]></format>
         </remarks>
@@ -369,12 +379,14 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="connectionGroupName" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="connectionGroupName" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="connectionGroupName">The name of the connection group that contains the connections to close and remove from this service point.</param>
@@ -425,6 +437,8 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -455,15 +469,14 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
 
 
 > [!NOTE]
->  Since .NET 9, this property maps to <xref:System.Net.Http.SocketsHttpHandler.PooledConnectionLifetime?displayProperty=nameWithType>. However, handlers are not being reused between requests so it doesn't have any meaningful impact.
+> Since .NET 9, this property maps to <xref:System.Net.Http.SocketsHttpHandler.PooledConnectionLifetime?displayProperty=nameWithType>. However, handlers are not being reused between requests so it doesn't have any meaningful impact.
 
 
 ## Examples
  The following code example sets the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLServicePoint/CPP/nclservicepoint.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/ServicePoint/ConnectionLeaseTimeout/nclservicepoint.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLServicePoint/VB/nclservicepoint.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/ServicePoint/ConnectionLeaseTimeout/nclservicepoint.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -506,6 +519,8 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -522,16 +537,17 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
 
  The <xref:System.Net.ServicePoint.ConnectionLimit> property sets the maximum number of connections that the <xref:System.Net.ServicePoint> object can make to an Internet resource. The value of the <xref:System.Net.ServicePoint.ConnectionLimit> property is set to the value of the <xref:System.Net.ServicePointManager.DefaultConnectionLimit?displayProperty=nameWithType> property when the <xref:System.Net.ServicePoint> object is created; subsequent changes to <xref:System.Net.ServicePointManager.DefaultConnectionLimit> have no effect on existing <xref:System.Net.ServicePoint> objects.
 
+ The connection limit doesn't apply to proxied connections or proxy tunnels.
+
 > [!NOTE]
->  Since .NET 9, this property maps to <xref:System.Net.Http.SocketsHttpHandler.MaxConnectionsPerServer?displayProperty=nameWithType>. However, handlers are not being reused between requests so it doesn't have any meaningful impact.
+> Since .NET 9, this property maps to <xref:System.Net.Http.SocketsHttpHandler.MaxConnectionsPerServer?displayProperty=nameWithType>. However, handlers are not being reused between requests so it doesn't have any meaningful impact.
 
 
 ## Examples
  The following code example uses the <xref:System.Net.ServicePoint.ConnectionLimit> property to check the maximum number of connections that the <xref:System.Net.ServicePoint> object can make to the specified Uniform Resource Identifier (URI).
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet4":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet4":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -572,6 +588,8 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -592,16 +610,15 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
 
 [!INCLUDE [obsolete-notice](~/includes/web-request-obsolete.md)]
 
- If the <xref:System.Net.ServicePoint> object was constructed by calling a <xref:System.Net.ServicePointManager.FindServicePoint%2A> overload with a <xref:System.Uri> argument, then the <xref:System.Net.ServicePoint.ConnectionName> property represents the <xref:System.Uri.Scheme> property of the <xref:System.Uri> object used.
+ If the <xref:System.Net.ServicePoint> object was constructed by calling a <xref:System.Net.ServicePointManager.FindServicePoint*> overload with a <xref:System.Uri> argument, then the <xref:System.Net.ServicePoint.ConnectionName> property represents the <xref:System.Uri.Scheme> property of the <xref:System.Uri> object used.
 
  If the <xref:System.Net.ServicePoint> object was constructed from a network host and port, the <xref:System.Net.ServicePoint.ConnectionName> property contains a string that represents the host and the network port. If the <xref:System.Net.ServicePoint.ConnectionName> property is set when constructed from a host and port, only <xref:System.Net.WebRequest> objects with the same <xref:System.Net.WebRequest.ConnectionGroupName> value can use this <xref:System.Net.ServicePoint> object.
 
 
 
 ## Examples
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet4":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet4":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -641,6 +658,8 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -658,14 +677,13 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
  The <xref:System.Net.ServicePoint.CurrentConnections> property contains the number of open Internet connections associated with this <xref:System.Net.ServicePoint> object. The value of <xref:System.Net.ServicePoint.CurrentConnections> cannot exceed that of <xref:System.Net.ServicePoint.ConnectionLimit>.
 
 > [!NOTE]
->  This property is only implemented on .NET Framework.
+> This property is only implemented on .NET Framework.
 
 ## Examples
  The following code example uses the <xref:System.Net.ServicePoint.CurrentConnections> property to determine the number of open Internet connections associated with this <xref:System.Net.ServicePoint> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -704,6 +722,8 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -740,14 +760,13 @@ Although a <xref:System.Net.ServicePoint> object can make multiple connections t
  The Expect 100-Continue behavior is fully described in IETF RFC 2616 Section 10.1.1.
 
 > [!NOTE]
->  Since .NET 9, this property sets <xref:System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue?displayProperty=nameWithType> on the <xref:System.Net.Http.HttpRequestMessage.Headers?displayProperty=nameWithType>.
+> Since .NET 9, this property sets <xref:System.Net.Http.Headers.HttpRequestHeaders.ExpectContinue?displayProperty=nameWithType> on the <xref:System.Net.Http.HttpRequestMessage.Headers?displayProperty=nameWithType>.
 
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet9":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet9":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet9":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet9":::
 
  ]]></format>
         </remarks>
@@ -827,6 +846,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -853,9 +874,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
 ## Examples
  The following code example uses the <xref:System.Net.ServicePoint.IdleSince> property to set and retrieve the date and time that the <xref:System.Net.ServicePoint> object was last connected to a host.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -894,6 +914,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -915,14 +937,13 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
  When the <xref:System.Net.ServicePoint.MaxIdleTime> for a connection associated with a <xref:System.Net.ServicePoint> is exceeded, the connection remains open until the application tries to use the connection. At that time, the Framework closes the connection and creates a new connection to the remote host.
 
 > [!NOTE]
->  Since .NET 9, this property maps to <xref:System.Net.Http.SocketsHttpHandler.PooledConnectionIdleTimeout?displayProperty=nameWithType>. However, handlers are not being reused between requests so it doesn't have any meaningful impact.
+> Since .NET 9, this property maps to <xref:System.Net.Http.SocketsHttpHandler.PooledConnectionIdleTimeout?displayProperty=nameWithType>. However, handlers are not being reused between requests so it doesn't have any meaningful impact.
 
 ## Examples
  The following code example uses the <xref:System.Net.ServicePoint.MaxIdleTime> property to set and retrieve the <xref:System.Net.ServicePoint> idle time.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -963,6 +984,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Version</ReturnType>
@@ -980,14 +1003,13 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
  The HTTP protocol versions are HTTP/1.0 and HTTP/1.1.
 
 > [!NOTE]
->  Since .NET 9, this property returns <xref:System.Net.HttpWebRequest.ProtocolVersion?displayProperty=nameWithType>.
+> Since .NET 9, this property returns <xref:System.Net.HttpWebRequest.ProtocolVersion?displayProperty=nameWithType>.
 
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet5":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet5":::
 
  ]]></format>
         </remarks>
@@ -1025,6 +1047,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1048,14 +1072,13 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
  For additional information, see <xref:System.Net.Sockets.Socket.ReceiveBufferSize>.
 
 > [!NOTE]
->  Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to set <xref:System.Net.Sockets.Socket.ReceiveBufferSize?displayProperty=nameWithType> to the value of this property.
+> Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to set <xref:System.Net.Sockets.Socket.ReceiveBufferSize?displayProperty=nameWithType> to the value of this property.
 
 ## Examples
  The following code example sets the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLServicePoint/CPP/nclservicepoint.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/ServicePoint/ConnectionLeaseTimeout/nclservicepoint.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLServicePoint/VB/nclservicepoint.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/ServicePoint/ConnectionLeaseTimeout/nclservicepoint.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1094,14 +1117,16 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="enabled" Type="System.Boolean" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="keepAliveTime" Type="System.Int32" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="keepAliveInterval" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="enabled" Type="System.Boolean" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="keepAliveTime" Type="System.Int32" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="keepAliveInterval" Type="System.Int32" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="enabled">If set to true, then the TCP keep-alive option on a TCP connection will be enabled using the specified <paramref name="keepAliveTime" /> and <paramref name="keepAliveInterval" /> values.
@@ -1129,8 +1154,10 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
 
  If a TCP connection is dropped as the result of keep-alives, a <xref:System.Net.Sockets.SocketError> of <xref:System.Net.Sockets.SocketError.NetworkReset> is returned to any calls in progress on the socket, and any subsequent calls will fail with a <xref:System.Net.Sockets.SocketError> of <xref:System.Net.Sockets.SocketError.NotConnected>.
 
+ This method is not thread-safe. Any new connection created at the same time might see partially changed values for the TCP keep-alive.
+
 > [!NOTE]
->  Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to set TCP keep alive options on the underlying socket to the values provided to this method.
+> Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to set TCP keep alive options on the underlying socket to the values provided to this method.
 
  ]]></format>
         </remarks>
@@ -1170,6 +1197,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1190,14 +1219,13 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
  Pipelining is described in detail in IETF RFC 2616 section 8.1.2.2.
 
 > [!NOTE]
->  This property is only implemented on .NET Framework.
+> This property is only implemented on .NET Framework.
 
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet5":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet5":::
 
  ]]></format>
         </remarks>
@@ -1236,6 +1264,8 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
       <AssemblyInfo>
         <AssemblyName>System.Net.Requests</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1268,14 +1298,13 @@ The `GetHashCode` method returns a hash code of this instance. This value can be
  The Nagle algorithm is fully described in IETF RFC 896.
 
 > [!NOTE]
->  Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to set <xref:System.Net.Sockets.Socket.NoDelay?displayProperty=nameWithType> to the opposite value than this property.
+> Since .NET 9, <xref:System.Net.HttpWebRequest> uses <xref:System.Net.Http.SocketsHttpHandler.ConnectCallback?displayProperty=nameWithType> to set <xref:System.Net.Sockets.Socket.NoDelay?displayProperty=nameWithType> to the opposite value than this property.
 
 ## Examples
  The following code example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.ServicePoint/CPP/servicepoint.cpp" id="Snippet9":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/HttpWebRequest/ServicePoint/servicepoint.cs" id="Snippet9":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.ServicePoint/VB/servicepoint.vb" id="Snippet9":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/HttpWebRequest/ServicePoint/servicepoint.vb" id="Snippet9":::
 
  ]]></format>
         </remarks>

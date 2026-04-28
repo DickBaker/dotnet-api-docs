@@ -27,6 +27,8 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -34,6 +36,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -42,19 +46,19 @@
   <Docs>
     <summary>Represents the writer of the message body.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A message consists of headers and a body. The headers are buffered and the body is streamed. Because the body is streamed, the user cannot pass the actual content of the body to a message. Instead the user must pass a class that knows how to write the body when asked to do so. This is done by passing a class derived from <xref:System.ServiceModel.Channels.BodyWriter> to the <xref:System.ServiceModel.Channels.Message>. A message calls the class derived from <xref:System.ServiceModel.Channels.BodyWriter> whenever it requires the body to be written using an <xref:System.Xml.XmlWriter>.  
-  
-   
-  
-## Examples  
- The following example shows how to derive a class from <xref:System.ServiceModel.Channels.BodyWriter>. This override takes in an array of strings and writes them to a <xref:System.Xml.XmlDictionaryWriter>.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A message consists of headers and a body. The headers are buffered and the body is streamed. Because the body is streamed, the user cannot pass the actual content of the body to a message. Instead the user must pass a class that knows how to write the body when asked to do so. This is done by passing a class derived from <xref:System.ServiceModel.Channels.BodyWriter> to the <xref:System.ServiceModel.Channels.Message>. A message calls the class derived from <xref:System.ServiceModel.Channels.BodyWriter> whenever it requires the body to be written using an <xref:System.Xml.XmlWriter>.
+
+
+
+## Examples
+ The following example shows how to derive a class from <xref:System.ServiceModel.Channels.BodyWriter>. This override takes in an array of strings and writes them to a <xref:System.Xml.XmlDictionaryWriter>.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -78,7 +82,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -92,11 +96,11 @@
           <see langword="true" /> if the body writer can be called multiple times; otherwise <see langword="false" />.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.BodyWriter" /> class that explicitly indicates whether to buffer.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If `isBuffered` is `false` then the message calls the write method once and buffers the contents.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If `isBuffered` is `false` then the message calls the write method once and buffers the contents.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -125,9 +129,9 @@
         <ReturnType>System.IAsyncResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
-        <Parameter Name="callback" Type="System.AsyncCallback" Index="1" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
-        <Parameter Name="state" Type="System.Object" Index="2" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="callback" Type="System.AsyncCallback" Index="1" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="state" Type="System.Object" Index="2" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="writer">The writer.</param>
@@ -157,7 +161,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -174,19 +178,19 @@
         <summary>Creates a buffered copy of the body.</summary>
         <returns>A <see cref="T:System.ServiceModel.Channels.BodyWriter" /> that contains a copy of this object.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered%2A> is `true` then the <xref:System.ServiceModel.Channels.BodyWriter> object is returned. If <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered%2A> is `false` then the contents of the <xref:System.ServiceModel.Channels.BodyWriter> up to `maxBufferSize` is returned. This also calls <xref:System.ServiceModel.Channels.BodyWriter.OnCreateBufferedCopy%28System.Int32%29> as an extensibility point.  
-  
-   
-  
-## Examples  
- The following sample shows how to create a buffered copy of an existing <xref:System.ServiceModel.Channels.BodyWriter> instance.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered> is `true` then the <xref:System.ServiceModel.Channels.BodyWriter> object is returned. If <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered> is `false` then the contents of the <xref:System.ServiceModel.Channels.BodyWriter> up to `maxBufferSize` is returned. This also calls <xref:System.ServiceModel.Channels.BodyWriter.OnCreateBufferedCopy(System.Int32)> as an extensibility point.
+
+
+
+## Examples
+ The following sample shows how to create a buffered copy of an existing <xref:System.ServiceModel.Channels.BodyWriter> instance.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/snippets.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/snippets.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/snippets.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="maxBufferSize" /> is less than zero.</exception>
@@ -217,7 +221,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="result" Type="System.IAsyncResult" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
+        <Parameter Name="result" Type="System.IAsyncResult" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="result">The result of the operation.</param>
@@ -244,7 +248,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -264,11 +268,11 @@
         <value>
           <see langword="true" /> if the body writer can be called multiple times; otherwise <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If `isBuffered` is `false` then the message calls the write method once and buffers the contents.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If `isBuffered` is `false` then the message calls the write method once and buffers the contents.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -297,9 +301,9 @@
         <ReturnType>System.IAsyncResult</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
-        <Parameter Name="callback" Type="System.AsyncCallback" Index="1" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
-        <Parameter Name="state" Type="System.Object" Index="2" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="callback" Type="System.AsyncCallback" Index="1" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="state" Type="System.Object" Index="2" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="writer">The writer.</param>
@@ -329,7 +333,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -346,13 +350,13 @@
         <summary>Provides an extensibility point when the body contents are written.</summary>
         <returns>The <see cref="T:System.ServiceModel.Channels.BodyWriter" /> with the specified maximum buffer size.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A class derived from <xref:System.ServiceModel.Channels.BodyWriter> can override this method to create a buffered copy of the <xref:System.ServiceModel.Channels.BodyWriter>. But the default implementation of <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> calls <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>, so overriding just <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> should be easier and work for most scenarios.  
-  
- Note that the <xref:System.ServiceModel.Channels.BodyWriter> returned must be buffered, that is <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered%2A> must be `true`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A class derived from <xref:System.ServiceModel.Channels.BodyWriter> can override this method to create a buffered copy of the <xref:System.ServiceModel.Channels.BodyWriter>. But the default implementation of <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents(System.Xml.XmlDictionaryWriter)> calls <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)>, so overriding just <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)> should be easier and work for most scenarios.
+
+ Note that the <xref:System.ServiceModel.Channels.BodyWriter> returned must be buffered, that is <xref:System.ServiceModel.Channels.BodyWriter.IsBuffered> must be `true`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -381,7 +385,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="result" Type="System.IAsyncResult" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0" />
+        <Parameter Name="result" Type="System.IAsyncResult" Index="0" FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;dotnet-plat-ext-6.0;dotnet-plat-ext-7.0;dotnet-plat-ext-8.0;dotnet-plat-ext-9.0;net-8.0;netstandard-2.0;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="result">The result of the operation.</param>
@@ -408,7 +412,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -424,19 +428,19 @@
         <param name="writer">The <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write out the message body.</param>
         <summary>When implemented, provides an extensibility point when the body contents are written.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method must be implemented by classes derived from <xref:System.ServiceModel.Channels.BodyWriter>. This is the key method that writes the body. If the <xref:System.ServiceModel.Channels.BodyWriter> is buffered then this method is called only once.  
-  
-   
-  
-## Examples  
- The following example illustrates an override of the <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method must be implemented by classes derived from <xref:System.ServiceModel.Channels.BodyWriter>. This is the key method that writes the body. If the <xref:System.ServiceModel.Channels.BodyWriter> is buffered then this method is called only once.
+
+
+
+## Examples
+ The following example illustrates an override of the <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/program.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb" id="Snippet3":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -460,7 +464,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -476,19 +480,19 @@
         <param name="writer">The <see cref="T:System.Xml.XmlDictionaryWriter" /> used to write out the message body.</param>
         <summary>Writes out the contents of the message body.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default implementation of <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> calls <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29>, so overriding <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> provides the best point of extension.  
-  
-   
-  
-## Examples  
- The following sample shows how to call the <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default implementation of <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents(System.Xml.XmlDictionaryWriter)> calls <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)>, so overriding <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)> provides the best point of extension.
+
+
+
+## Examples
+ The following sample shows how to call the <xref:System.ServiceModel.Channels.BodyWriter.WriteBodyContents(System.Xml.XmlDictionaryWriter)> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/s_uebodywriter/cs/program.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb" id="Snippet4":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/s_uebodywriter/vb/module1.vb" id="Snippet4":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">

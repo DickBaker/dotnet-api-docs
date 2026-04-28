@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Interface ICollectionViewLiveShaping" />
   <TypeSignature Language="F#" Value="type ICollectionViewLiveShaping = interface" />
   <TypeSignature Language="C++ CLI" Value="public interface class ICollectionViewLiveShaping" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICollectionViewLiveShaping" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit ICollectionViewLiveShaping" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>WindowsBase</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -14,21 +14,23 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
     <summary>Defines properties that enables sorting, grouping, and filtering on a <see cref="T:System.Windows.Data.CollectionView" /> in real time.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When live sorting, grouping, or filtering is enabled, a <xref:System.Windows.Data.CollectionView> will rearrange the position of data in the <xref:System.Windows.Data.CollectionView> when the data is modified.  For example, suppose that an application uses a <xref:System.Windows.Controls.DataGrid> to list stocks in a stock market and the stocks are sorted by stock value.  If live sorting is enabled on the stocks' <xref:System.Windows.Data.CollectionView>, a stock's position in the <xref:System.Windows.Controls.DataGrid> moves when the value of the stock becomes greater or less than another stock's value.  
-  
- The <xref:System.Windows.Data.ListCollectionView>, <xref:System.Windows.Data.BindingListCollectionView>, and <xref:System.Windows.Controls.ItemCollection> classes implement the <xref:System.ComponentModel.ICollectionViewLiveShaping> interface. The <xref:System.Windows.Data.CollectionViewSource> class also implements the properties defined by <xref:System.ComponentModel.ICollectionViewLiveShaping> to enable setting the properties in XAML.  
-  
-## Notes for Inheritors  
- Implement this interface on your custom <xref:System.Windows.Data.CollectionView> to support sorting, grouping, and filtering data in real time. Your <xref:System.Windows.Data.CollectionView> can implement the sorting, grouping, and filtering operations itself, or you can delegate one or more of them to another object, such as the underlying collection. If you delegate the shaping operations, the <xref:System.Windows.Data.CollectionView> might not have control over whether live shaping is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the appropriate **CanChange*** properties to `false`.  If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live shaping, it can set the appropriate `IsLive`* properties to the known value.  Otherwise, the <xref:System.Windows.Data.CollectionView> should set the `IsLive`* properties to `null`.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When live sorting, grouping, or filtering is enabled, a <xref:System.Windows.Data.CollectionView> will rearrange the position of data in the <xref:System.Windows.Data.CollectionView> when the data is modified.  For example, suppose that an application uses a <xref:System.Windows.Controls.DataGrid> to list stocks in a stock market and the stocks are sorted by stock value.  If live sorting is enabled on the stocks' <xref:System.Windows.Data.CollectionView>, a stock's position in the <xref:System.Windows.Controls.DataGrid> moves when the value of the stock becomes greater or less than another stock's value.
+
+ The <xref:System.Windows.Data.ListCollectionView>, <xref:System.Windows.Data.BindingListCollectionView>, and <xref:System.Windows.Controls.ItemCollection> classes implement the <xref:System.ComponentModel.ICollectionViewLiveShaping> interface. The <xref:System.Windows.Data.CollectionViewSource> class also implements the properties defined by <xref:System.ComponentModel.ICollectionViewLiveShaping> to enable setting the properties in XAML.
+
+## Notes for Inheritors
+ Implement this interface on your custom <xref:System.Windows.Data.CollectionView> to support sorting, grouping, and filtering data in real time. Your <xref:System.Windows.Data.CollectionView> can implement the sorting, grouping, and filtering operations itself, or you can delegate one or more of them to another object, such as the underlying collection. If you delegate the shaping operations, the <xref:System.Windows.Data.CollectionView> might not have control over whether live shaping is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the appropriate **CanChange*** properties to `false`.  If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live shaping, it can set the appropriate `IsLive`* properties to the known value.  Otherwise, the <xref:System.Windows.Data.CollectionView> should set the `IsLive`* properties to `null`.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -49,6 +51,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -58,13 +62,13 @@
         <value>
           <see langword="true" /> if the collection view supports turning live filtering on or off; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## Notes for Inheritors  
- Your <xref:System.Windows.Data.CollectionView> can implement live filtering itself, or you can delegate live filtering to another object, such as the underlying collection. If you delegate live filtering, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering%2A> property to `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+## Notes for Inheritors
+ Your <xref:System.Windows.Data.CollectionView> can implement live filtering itself, or you can delegate live filtering to another object, such as the underlying collection. If you delegate live filtering, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering> property to `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -85,6 +89,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -94,13 +100,13 @@
         <value>
           <see langword="true" /> if the collection view supports turning live grouping on or off; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## Notes for Inheritors  
- Your <xref:System.Windows.Data.CollectionView> can implement live grouping itself, or you can delegate live grouping to another object, such as the underlying collection. If you delegate live grouping, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping%2A> property to `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+## Notes for Inheritors
+ Your <xref:System.Windows.Data.CollectionView> can implement live grouping itself, or you can delegate live grouping to another object, such as the underlying collection. If you delegate live grouping, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping> property to `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -121,6 +127,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -130,13 +138,13 @@
         <value>
           <see langword="true" /> if the collection view supports turning live sorting on or off; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## Notes for Inheritors  
- Your <xref:System.Windows.Data.CollectionView> can implement live sorting itself, or you can delegate live sorting to another object, such as the underlying collection. If you delegate live sorting, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting%2A> property to `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+## Notes for Inheritors
+ Your <xref:System.Windows.Data.CollectionView> can implement live sorting itself, or you can delegate live sorting to another object, such as the underlying collection. If you delegate live sorting, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. In this case, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting> property to `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -157,6 +165,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
@@ -166,13 +176,13 @@
         <value>
           <see langword="true" /> if filtering data in real time is enabled; <see langword="false" /> if live filtering is not enabled; <see langword="null" /> if it cannot be determined whether the collection view implements live filtering.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## Notes for Inheritors  
- Your <xref:System.Windows.Data.CollectionView> can implement live filtering itself, or you can delegate live filtering to another object, such as the underlying collection. If you delegate live filtering, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live filtering, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering%2A> property to the known value.  Otherwise, set <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering%2A> to `null`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+## Notes for Inheritors
+ Your <xref:System.Windows.Data.CollectionView> can implement live filtering itself, or you can delegate live filtering to another object, such as the underlying collection. If you delegate live filtering, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live filtering, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering> property to the known value.  Otherwise, set <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering*> to `null`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -193,6 +203,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
@@ -202,13 +214,13 @@
         <value>
           <see langword="true" /> if grouping data in real time is enable; <see langword="false" /> if live grouping is not enabled; <see langword="null" /> if it cannot be determined whether the collection view implements live grouping.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## Notes for Inheritors  
- Your <xref:System.Windows.Data.CollectionView> can implement live grouping itself, or you can delegate live grouping to another object, such as the underlying collection. If you delegate live grouping, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live grouping, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping%2A> property to the known value.  Otherwise, set <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping%2A> to `null`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+## Notes for Inheritors
+ Your <xref:System.Windows.Data.CollectionView> can implement live grouping itself, or you can delegate live grouping to another object, such as the underlying collection. If you delegate live grouping, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live grouping, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping> property to the known value.  Otherwise, set <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping*> to `null`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -229,6 +241,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
@@ -238,13 +252,13 @@
         <value>
           <see langword="true" /> if sorting data in real time is enable; <see langword="false" /> if live sorting is not enabled; <see langword="null" /> if it cannot be determined whether the collection view implements live sorting.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-## Notes for Inheritors  
- Your <xref:System.Windows.Data.CollectionView> can implement live sorting itself, or you can delegate live sorting to another object, such as the underlying collection. If you delegate live sorting, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live sorting, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting%2A> property to the known value.  Otherwise, set <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting%2A> to `null`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+## Notes for Inheritors
+ Your <xref:System.Windows.Data.CollectionView> can implement live sorting itself, or you can delegate live sorting to another object, such as the underlying collection. If you delegate live sorting, the <xref:System.Windows.Data.CollectionView> might not have control over whether it is enabled. Your <xref:System.Windows.Data.CollectionView> must accept the behavior of the object to which it delegates. If your <xref:System.Windows.Data.CollectionView> knows whether the delegate object supports live sorting, set the <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting> property to the known value.  Otherwise, set <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting*> to `null`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -265,6 +279,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
@@ -291,6 +307,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
@@ -317,6 +335,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>

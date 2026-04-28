@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class DataGridComboBoxColumn&#xA;Inherits DataGridColumn" />
   <TypeSignature Language="F#" Value="type DataGridComboBoxColumn = class&#xA;    inherit DataGridColumn" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataGridComboBoxColumn : System::Windows::Controls::DataGridColumn" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridComboBoxColumn extends System.Windows.Controls.DataGridColumn" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridComboBoxColumn extends System.Windows.Controls.DataGridColumn" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.DataGridColumn</BaseTypeName>
@@ -29,23 +31,23 @@
 
  ![A DataGridComboBoxColumn](~/add/media/ndp-datagridcombobox.png "A DataGridComboBoxColumn")
 
- To populate the drop-down list, first set the <xref:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource%2A> property for the <xref:System.Windows.Controls.ComboBox> by using one of the following options:
+ To populate the drop-down list, first set the <xref:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource> property for the <xref:System.Windows.Controls.ComboBox> by using one of the following options:
 
--   A static resource. For more information, see [StaticResource Markup Extension](/dotnet/framework/wpf/advanced/staticresource-markup-extension).
+- A static resource. For more information, see [StaticResource Markup Extension](/dotnet/desktop/wpf/advanced/staticresource-markup-extension).
 
--   An x:Static code entity. For more information, see [x:Static Markup Extension](/dotnet/framework/xaml-services/x-static-markup-extension).
+- An x:Static code entity. For more information, see [x:Static Markup Extension](/dotnet/framework/xaml-services/x-static-markup-extension).
 
--   An inline collection of <xref:System.Windows.Controls.ComboBoxItem> types.
+- An inline collection of <xref:System.Windows.Controls.ComboBoxItem> types.
 
- Once the <xref:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource%2A> is set, bind the selected item in the <xref:System.Windows.Controls.ComboBox> to the data item for the row that the cell is in. You can set the binding by using one of the following properties:
+ Once the <xref:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource*> is set, bind the selected item in the <xref:System.Windows.Controls.ComboBox> to the data item for the row that the cell is in. You can set the binding by using one of the following properties:
 
 |Property|Description|
 |--------------|-----------------|
-|<xref:System.Windows.Controls.DataGridComboBoxColumn.TextBinding%2A>|Sets the binding path of the text for the currently selected item.|
-|<xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding%2A>|Sets the binding path of the object that is currently selected.|
-|<xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding%2A>|Sets the binding path to the value of the selected item specified by the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath%2A> property.|
+|<xref:System.Windows.Controls.DataGridComboBoxColumn.TextBinding*>|Sets the binding path of the text for the currently selected item.|
+|<xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding*>|Sets the binding path of the object that is currently selected.|
+|<xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding*>|Sets the binding path to the value of the selected item specified by the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath> property.|
 
- When the <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A> property is set to `true`, users cannot edit the column and they will not be able to see the drop-down list.
+ When the <xref:System.Windows.Controls.DataGridColumn.IsReadOnly> property is set to `true`, users cannot edit the column and they will not be able to see the drop-down list.
 
  If you want to display other types of data, <xref:System.Windows.Controls.DataGrid> provides the following column types:
 
@@ -60,19 +62,19 @@
 
 
 ## Examples
- The following example shows how to populate the drop-down list for each <xref:System.Windows.Controls.ComboBox> in the column with the values of an enumeration. The selected item in the drop-down list is bound by setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding%2A> property to the property of the object displayed in each row.
+ The following example shows how to populate the drop-down list for each <xref:System.Windows.Controls.ComboBox> in the column with the values of an enumeration. The selected item in the drop-down list is bound by setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding> property to the property of the object displayed in each row.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/DataGrid/Overview/window11.xaml" id="Snippetcombobox1":::
 :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/DataGrid/Overview/window11.xaml" id="Snippetcombobox2":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/DataGrid/Overview/window11.xaml.cs" id="Snippettop":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb" id="Snippettop":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/DataGrid/Overview/window11.xaml.vb" id="Snippettop":::
 :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/DataGrid/Overview/window11.xaml.cs" id="Snippetall2":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb" id="Snippetall2":::
+:::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/DataGrid/Overview/window11.xaml.vb" id="Snippetall2":::
 :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/DataGrid/Overview/window11.xaml.cs" id="Snippetcustomerclass":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb" id="Snippetcustomerclass":::
+:::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/DataGrid/Overview/window11.xaml.vb" id="Snippetcustomerclass":::
 :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/DataGrid/Overview/window11.xaml.cs" id="Snippetenum":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb" id="Snippetenum":::
+:::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/DataGrid/Overview/window11.xaml.vb" id="Snippetenum":::
 
  ]]></format>
     </remarks>
@@ -93,6 +95,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -122,13 +126,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="uneditedValue" Type="System.Object" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="uneditedValue" Type="System.Object" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="editingElement">The element that the column displays for a cell in editing mode.</param>
@@ -153,6 +159,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Data.BindingBase</ReturnType>
@@ -179,12 +187,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="editingElement">The element that the column displays for a cell in editing mode.</param>
@@ -210,6 +220,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -227,9 +239,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This style is the same as the <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle%2A>.
+ This style is the same as the <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle*>.
 
- If you are creating new styles for cells and you want to inherit some of the existing style elements, base the new style on <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle%2A> by using the <xref:System.Windows.Style.BasedOn%2A> property.
+ If you are creating new styles for cells and you want to inherit some of the existing style elements, base the new style on <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle*> by using the <xref:System.Windows.Style.BasedOn> property.
 
  ]]></format>
         </remarks>
@@ -251,6 +263,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Style</ReturnType>
@@ -262,7 +276,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If you are creating new styles and you want to inherit some of the existing style elements, base the new style on <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle%2A> by using the <xref:System.Windows.Style.BasedOn%2A> property.
+ If you are creating new styles and you want to inherit some of the existing style elements, base the new style on <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle*> by using the <xref:System.Windows.Style.BasedOn> property.
 
  ]]></format>
         </remarks>
@@ -284,6 +298,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -295,7 +311,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use this property to define a simple template that describes how to display the data objects. Setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.DisplayMemberPath%2A> property is equivalent to setting the <xref:System.Windows.Data.Binding.Path%2A> of the <xref:System.Windows.Controls.TextBlock.Text%2A?displayProperty=nameWithType> property binding in a template. The following template shows an example of the equivalent setting.
+ Use this property to define a simple template that describes how to display the data objects. Setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.DisplayMemberPath> property is equivalent to setting the <xref:System.Windows.Data.Binding.Path*> of the <xref:System.Windows.Controls.TextBlock.Text?displayProperty=nameWithType> property binding in a template. The following template shows an example of the equivalent setting.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/DataGridComboBoxColumn/DisplayMemberPath/window1.xaml" id="Snippet1":::
 
@@ -320,6 +336,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -345,6 +363,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Style</ReturnType>
@@ -356,7 +376,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can reset the default <xref:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle%2A> by getting the <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle%2A>.
+ You can reset the default <xref:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle*> by getting the <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle*>.
 
  ]]></format>
         </remarks>
@@ -378,6 +398,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -403,6 +425,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Style</ReturnType>
@@ -414,7 +438,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can reset the default <xref:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle%2A> by getting the <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle%2A>.
+ You can reset the default <xref:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle*> by getting the <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle*>.
 
  ]]></format>
         </remarks>
@@ -436,6 +460,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -461,6 +487,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FrameworkElement</ReturnType>
@@ -493,6 +521,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FrameworkElement</ReturnType>
@@ -525,6 +555,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerable</ReturnType>
@@ -536,7 +568,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property populates the drop-down list for all the combo boxes in the column. This is equivalent to the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property on <xref:System.Windows.Controls.ItemsControl>.
+ This property populates the drop-down list for all the combo boxes in the column. This is equivalent to the <xref:System.Windows.Controls.ItemsControl.ItemsSource> property on <xref:System.Windows.Controls.ItemsControl>.
 
  ]]></format>
         </remarks>
@@ -558,6 +590,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -583,6 +617,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -614,6 +650,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -645,6 +683,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -676,6 +716,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -707,6 +749,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -739,6 +783,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -770,6 +816,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -787,7 +835,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding%2A> property is equivalent to setting the <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> property of <xref:System.Windows.Controls.ComboBox>.
+ Setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding> property is equivalent to setting the <xref:System.Windows.Controls.Primitives.Selector.SelectedItem> property of <xref:System.Windows.Controls.ComboBox>.
 
  ]]></format>
         </remarks>
@@ -810,6 +858,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -827,7 +877,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The selected value is determined by the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath%2A> property of the selected item. The selected value path is a property on the selected item object. Setting this property is equivalent to setting the <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property of <xref:System.Windows.Controls.ComboBox>.
+ The selected value is determined by the <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath> property of the selected item. The selected value path is a property on the selected item object. Setting this property is equivalent to setting the <xref:System.Windows.Controls.Primitives.Selector.SelectedValue> property of <xref:System.Windows.Controls.ComboBox>.
 
  ]]></format>
         </remarks>
@@ -850,6 +900,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -861,7 +913,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath%2A> property allows you to display a value of the selected item object by setting the path to that property. This is equivalent to the <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A> property on <xref:System.Windows.Controls.Primitives.Selector>.
+ The <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath> property allows you to display a value of the selected item object by setting the path to that property. This is equivalent to the <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath> property on <xref:System.Windows.Controls.Primitives.Selector>.
 
  ]]></format>
         </remarks>
@@ -883,6 +935,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -908,6 +962,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -925,7 +981,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.TextBinding%2A> property is equivalent to setting the <xref:System.Windows.Controls.ComboBox.Text%2A> property of the <xref:System.Windows.Controls.ComboBox> control.
+ Setting the <xref:System.Windows.Controls.DataGridComboBoxColumn.TextBinding> property is equivalent to setting the <xref:System.Windows.Controls.ComboBox.Text> property of the <xref:System.Windows.Controls.ComboBox> control.
 
  ]]></format>
         </remarks>
@@ -947,6 +1003,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.ComponentResourceKey</ReturnType>

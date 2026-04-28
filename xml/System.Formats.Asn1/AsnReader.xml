@@ -12,6 +12,10 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,7 +23,7 @@
   <Interfaces />
   <Docs>
     <summary>
-              A stateful, forward-only reader for BER-, CER-, or DER-encoded ASN.1 data.
+              Represents a stateful, forward-only reader for BER-encoded, CER-encoded, or DER-encoded ASN.1 data.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -38,6 +42,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="data" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" />
@@ -75,6 +81,8 @@
         <AssemblyName>System.Formats.Asn1</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Formats.Asn1.AsnReader</ReturnType>
@@ -105,13 +113,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-              Gets an indication of whether the reader has remaining data available to process.
+              Gets a value that indicates whether the reader has remaining data available to process.
             </summary>
         <value>
           <see langword="true" /> if there is more data available for the reader to process;
@@ -135,6 +145,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlyMemory&lt;System.Byte&gt;</ReturnType>
@@ -142,7 +154,7 @@
       <Parameters />
       <Docs>
         <summary>
-              Get a <see cref="T:System.ReadOnlyMemory`1" /> view of the content octets (bytes) of the
+              Gets a <see cref="T:System.ReadOnlyMemory`1" /> view of the content octets (bytes) of the
               next encoded value without advancing the reader.
             </summary>
         <returns>
@@ -171,6 +183,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlyMemory&lt;System.Byte&gt;</ReturnType>
@@ -178,20 +192,20 @@
       <Parameters />
       <Docs>
         <summary>
-              Get a <see cref="T:System.ReadOnlyMemory`1" /> view of the next encoded value without
-              advancing the reader. For indefinite length encodings this includes the
+              Gets a <see cref="T:System.ReadOnlyMemory`1" /> view of the next encoded value without
+              advancing the reader. For indefinite length encodings, this includes the
               End of Contents marker.
             </summary>
         <returns>
               The bytes of the next encoded value.
             </returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.PeekContentBytes" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadEncodedValue" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
               The reader is positioned at a point where the tag or length is invalid
               under the current encoding rules.
             </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadEncodedValue" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.PeekContentBytes" />
       </Docs>
     </Member>
     <Member MemberName="PeekTag">
@@ -209,6 +223,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Formats.Asn1.Asn1Tag</ReturnType>
@@ -216,14 +232,14 @@
       <Parameters />
       <Docs>
         <summary>
-              Read the encoded tag at the next data position, without advancing the reader.
+              Reads the encoded tag at the next data position, without advancing the reader.
             </summary>
         <returns>
               The decoded tag value.
             </returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.Formats.Asn1.AsnContentException">
-              a tag could not be decoded at the reader's current position.
+              A tag could not be decoded at the reader's current position.
             </exception>
       </Docs>
     </Member>
@@ -241,6 +257,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -255,7 +273,7 @@
                "unused" by the writer.
              </param>
         <param name="expectedTag">
-               The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 1).
+               The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 3).
              </param>
         <summary>
                Reads the next value as a BIT STRING with a specified tag, returning the value
@@ -265,7 +283,7 @@
                A copy of the value in a newly allocated, precisely sized, array.
              </returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveBitString(System.Int32@,System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadBitString(System.Span{System.Byte},System.Int32@,System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
                The next value does not have the correct tag.
             
@@ -283,7 +301,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not correct for
                the method.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadBitString(System.Span{System.Byte},System.Int32@,System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveBitString(System.Int32@,System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="ReadBoolean">
@@ -300,6 +318,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -351,6 +371,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -375,8 +397,8 @@
                The decoded value.
              </returns>
         <remarks>To be added.</remarks>
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveCharacterStringBytes(System.Formats.Asn1.Asn1Tag,System.ReadOnlyMemory{System.Byte}@)" />
         <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadCharacterStringBytes(System.Span{System.Byte},System.Formats.Asn1.Asn1Tag,System.Int32@)" />
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadCharacterString(System.Span{System.Char},System.Formats.Asn1.UniversalTagNumber,System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="encodingType" /> is not a known character string type.
              </exception>
@@ -401,7 +423,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not the same as
                <paramref name="encodingType" />.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveCharacterStringBytes(System.Formats.Asn1.Asn1Tag,System.ReadOnlyMemory{System.Byte}@)" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadCharacterString(System.Span{System.Char},System.Formats.Asn1.UniversalTagNumber,System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="ReadEncodedValue">
@@ -419,6 +441,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlyMemory&lt;System.Byte&gt;</ReturnType>
@@ -427,7 +451,7 @@
       <Docs>
         <summary>
               Get a <see cref="T:System.ReadOnlyMemory`1" /> view of the next encoded value,
-              and advance the reader past it. For an indefinite length encoding this includes
+              and advance the reader past it. For an indefinite length encoding, this includes
               the End of Contents marker.
             </summary>
         <returns>
@@ -451,6 +475,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlyMemory&lt;System.Byte&gt;</ReturnType>
@@ -463,7 +489,7 @@
                The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 10).
              </param>
         <summary>
-               Reads the next value as a Enumerated with a specified tag, returning the contents
+               Reads the next value as an Enumerated with a specified tag, returning the contents
                as a <see cref="T:System.ReadOnlyMemory`1" /> over the original data.
              </summary>
         <returns>
@@ -504,6 +530,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Enum</ReturnType>
@@ -576,21 +604,23 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TEnum</ReturnType>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TEnum">
-          <Constraints>
-            <BaseTypeName>System.Enum</BaseTypeName>
-          </Constraints>
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
+          <Constraints>
+            <BaseTypeName>System.Enum</BaseTypeName>
+          </Constraints>
         </TypeParameter>
       </TypeParameters>
       <Parameters>
@@ -657,6 +687,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -708,6 +740,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Numerics.BigInteger</ReturnType>
@@ -759,6 +793,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlyMemory&lt;System.Byte&gt;</ReturnType>
@@ -811,6 +847,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.BitArray</ReturnType>
@@ -861,6 +899,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Enum</ReturnType>
@@ -928,21 +968,23 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TFlagsEnum</ReturnType>
       </ReturnValue>
       <TypeParameters>
         <TypeParameter Name="TFlagsEnum">
-          <Constraints>
-            <BaseTypeName>System.Enum</BaseTypeName>
-          </Constraints>
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
+          <Constraints>
+            <BaseTypeName>System.Enum</BaseTypeName>
+          </Constraints>
         </TypeParameter>
       </TypeParameters>
       <Parameters>
@@ -1043,6 +1085,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1091,6 +1135,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1141,6 +1187,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -1160,7 +1208,7 @@
                A copy of the value in a newly allocated, precisely sized, array.
              </returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveOctetString(System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadOctetString(System.Span{System.Byte},System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
                The next value does not have the correct tag.
             
@@ -1178,7 +1226,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not correct for
                the method.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadOctetString(System.Span{System.Byte},System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveOctetString(System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="ReadSequence">
@@ -1195,6 +1243,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Formats.Asn1.AsnReader</ReturnType>
@@ -1252,6 +1302,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Formats.Asn1.AsnReader</ReturnType>
@@ -1311,6 +1363,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Formats.Asn1.AsnReader</ReturnType>
@@ -1374,6 +1428,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -1428,6 +1484,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -1450,7 +1508,7 @@
                The decoded value.
              </returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadUtcTime(System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="P:System.Globalization.Calendar.TwoDigitYearMax" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
                The next value does not have the correct tag.
             
@@ -1468,7 +1526,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not correct for
                the method.
              </exception>
-        <altmember cref="P:System.Globalization.Calendar.TwoDigitYearMax" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadUtcTime(System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="RuleSet">
@@ -1486,6 +1544,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Formats.Asn1.AsnEncodingRules</ReturnType>
@@ -1515,6 +1575,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1523,7 +1585,7 @@
       <Docs>
         <summary>
               Throws a standardized <see cref="T:System.Formats.Asn1.AsnContentException" /> if the reader has remaining
-              data, performs no function if <see cref="P:System.Formats.Asn1.AsnReader.HasData" /> returns <see langword="false" />.
+              data, or performs no function if <see cref="P:System.Formats.Asn1.AsnReader.HasData" /> returns <see langword="false" />.
             </summary>
         <remarks>
               This method provides a standardized target and standardized exception for reading a
@@ -1545,6 +1607,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1565,7 +1629,7 @@
                On success, receives the number of bytes written to <paramref name="destination" />.
              </param>
         <param name="expectedTag">
-               The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 1).
+               The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 3).
              </param>
         <summary>
                Reads the next value as a BIT STRING with a specified tag, copying the value
@@ -1577,7 +1641,7 @@
                <see langword="false" /> and the reader does not advance.
              </returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveBitString(System.Int32@,System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadBitString(System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
                The next value does not have the correct tag.
             
@@ -1595,7 +1659,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not correct for
                the method.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadBitString(System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveBitString(System.Int32@,System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="TryReadCharacterString">
@@ -1612,6 +1676,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1644,8 +1710,8 @@
                <see langword="false" /> and the reader does not advance.
              </returns>
         <remarks>To be added.</remarks>
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveCharacterStringBytes(System.Formats.Asn1.Asn1Tag,System.ReadOnlyMemory{System.Byte}@)" />
         <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadCharacterStringBytes(System.Span{System.Byte},System.Formats.Asn1.Asn1Tag,System.Int32@)" />
-        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadCharacterString(System.Formats.Asn1.UniversalTagNumber,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="encodingType" /> is not a known character string type.
              </exception>
@@ -1670,7 +1736,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not the same as
                <paramref name="encodingType" />.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveCharacterStringBytes(System.Formats.Asn1.Asn1Tag,System.ReadOnlyMemory{System.Byte}@)" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadCharacterString(System.Formats.Asn1.UniversalTagNumber,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="TryReadCharacterStringBytes">
@@ -1688,6 +1754,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1715,8 +1783,8 @@
         <remarks>
                This method does not determine if the string used only characters defined by the encoding.
              </remarks>
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveCharacterStringBytes(System.Formats.Asn1.Asn1Tag,System.ReadOnlyMemory{System.Byte}@)" />
         <altmember cref="M:System.Formats.Asn1.AsnReader.ReadCharacterString(System.Formats.Asn1.UniversalTagNumber,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadCharacterString(System.Span{System.Char},System.Formats.Asn1.UniversalTagNumber,System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
                The next value does not have the correct tag.
             
@@ -1734,7 +1802,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not a character
                string tag type.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveCharacterStringBytes(System.Formats.Asn1.Asn1Tag,System.ReadOnlyMemory{System.Byte}@)" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadCharacterString(System.Span{System.Char},System.Formats.Asn1.UniversalTagNumber,System.Int32@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="TryReadInt32">
@@ -1751,6 +1819,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1809,6 +1879,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1867,6 +1939,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1894,7 +1968,7 @@
                <see langword="false" /> and the reader does not advance.
              </returns>
         <remarks>To be added.</remarks>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveOctetString(System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadOctetString(System.Nullable{System.Formats.Asn1.Asn1Tag})" />
         <exception cref="T:System.Formats.Asn1.AsnContentException">
                The next value does not have the correct tag.
             
@@ -1912,7 +1986,7 @@
                <paramref name="expectedTag" />.<see cref="P:System.Formats.Asn1.Asn1Tag.TagValue" /> is not correct for
                the method.
              </exception>
-        <altmember cref="M:System.Formats.Asn1.AsnReader.ReadOctetString(System.Nullable{System.Formats.Asn1.Asn1Tag})" />
+        <altmember cref="M:System.Formats.Asn1.AsnReader.TryReadPrimitiveOctetString(System.ReadOnlyMemory{System.Byte}@,System.Nullable{System.Formats.Asn1.Asn1Tag})" />
       </Docs>
     </Member>
     <Member MemberName="TryReadPrimitiveBitString">
@@ -1929,6 +2003,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1948,7 +2024,7 @@
                corresponding to the value of the BIT STRING.
              </param>
         <param name="expectedTag">
-               The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 1).
+               The tag to check for before reading, or <see langword="null" /> for the default tag (Universal 3).
              </param>
         <summary>
                Reads the next value as a BIT STRING with a specified tag, returning the contents
@@ -1994,6 +2070,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -2053,6 +2131,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -2110,6 +2190,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2174,6 +2256,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

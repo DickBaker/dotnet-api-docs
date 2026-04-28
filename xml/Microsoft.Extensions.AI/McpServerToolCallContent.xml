@@ -1,0 +1,164 @@
+<Type Name="McpServerToolCallContent" FullName="Microsoft.Extensions.AI.McpServerToolCallContent">
+  <TypeSignature Language="C#" Value="public sealed class McpServerToolCallContent : Microsoft.Extensions.AI.ToolCallContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit McpServerToolCallContent extends Microsoft.Extensions.AI.ToolCallContent" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Extensions.AI.McpServerToolCallContent" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class McpServerToolCallContent&#xA;Inherits ToolCallContent" />
+  <TypeSignature Language="F#" Value="type McpServerToolCallContent = class&#xA;    inherit ToolCallContent" />
+  <TypeSignature Language="C++ CLI" Value="public ref class McpServerToolCallContent sealed : Microsoft::Extensions::AI::ToolCallContent" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+    <AssemblyVersion>9.9.0.0</AssemblyVersion>
+    <AssemblyVersion>9.10.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.1.0.0</AssemblyVersion>
+    <AssemblyVersion>10.2.0.0</AssemblyVersion>
+    <AssemblyVersion>10.3.0.0</AssemblyVersion>
+    <AssemblyVersion>10.4.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Extensions.AI.ToolCallContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a tool call request to a MCP server.
+            </summary>
+    <remarks>
+      <para>
+            This content type is used to represent an invocation of an MCP server tool by a hosted service.
+            It is informational only and may appear as part of an approval request
+            to convey what is being approved, or as a record of which MCP server tool was invoked.
+            </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public McpServerToolCallContent (string callId, string name, string? serverName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string callId, string name, string serverName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Extensions.AI.McpServerToolCallContent.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (callId As String, name As String, serverName As String)" />
+      <MemberSignature Language="F#" Value="new Microsoft.Extensions.AI.McpServerToolCallContent : string * string * string -&gt; Microsoft.Extensions.AI.McpServerToolCallContent" Usage="new Microsoft.Extensions.AI.McpServerToolCallContent (callId, name, serverName)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; McpServerToolCallContent(System::String ^ callId, System::String ^ name, System::String ^ serverName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callId" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="serverName" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="callId">The tool call ID.</param>
+        <param name="name">The tool name.</param>
+        <param name="serverName">The MCP server name that hosts the tool.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.McpServerToolCallContent" /> class.
+            </summary>
+        <remarks>
+            This content is informational only and may appear as part of an approval request
+            to convey what is being approved, or as a record of which MCP server tool was invoked.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callId" /> or <paramref name="name" /> is <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="callId" /> or <paramref name="name" /> is empty or composed entirely of whitespace.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object?&gt;? Arguments { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Arguments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Extensions.AI.McpServerToolCallContent.Arguments" />
+      <MemberSignature Language="VB.NET" Value="Public Property Arguments As IDictionary(Of String, Object)" />
+      <MemberSignature Language="F#" Value="member this.Arguments : System.Collections.Generic.IDictionary&lt;string, obj&gt; with get, set" Usage="Microsoft.Extensions.AI.McpServerToolCallContent.Arguments" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::Object ^&gt; ^ Arguments { System::Collections::Generic::IDictionary&lt;System::String ^, System::Object ^&gt; ^ get(); void set(System::Collections::Generic::IDictionary&lt;System::String ^, System::Object ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the arguments requested to be provided to the tool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Extensions.AI.McpServerToolCallContent.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Extensions.AI.McpServerToolCallContent.Name" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the tool requested.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerName">
+      <MemberSignature Language="C#" Value="public string? ServerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Extensions.AI.McpServerToolCallContent.ServerName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerName As String" />
+      <MemberSignature Language="F#" Value="member this.ServerName : string" Usage="Microsoft.Extensions.AI.McpServerToolCallContent.ServerName" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ServerName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the MCP server that hosts the tool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

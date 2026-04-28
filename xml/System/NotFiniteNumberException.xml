@@ -1,6 +1,6 @@
 <Type Name="NotFiniteNumberException" FullName="System.NotFiniteNumberException">
   <TypeSignature Language="C#" Value="public class NotFiniteNumberException : ArithmeticException" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NotFiniteNumberException extends System.ArithmeticException" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NotFiniteNumberException extends System.ArithmeticException" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.NotFiniteNumberException" />
   <TypeSignature Language="VB.NET" Value="Public Class NotFiniteNumberException&#xA;Inherits ArithmeticException" />
   <TypeSignature Language="F#" Value="type NotFiniteNumberException = class&#xA;    inherit ArithmeticException" />
@@ -28,8 +28,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -41,7 +45,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -57,15 +61,15 @@
   <Docs>
     <summary>The exception that is thrown when a floating-point value is positive infinity, negative infinity, or Not-a-Number (NaN).</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.NotFiniteNumberException> is available for programming languages that do not support the concepts of infinity and Not-a-Number in floating-point operations.  
-  
- <xref:System.NotFiniteNumberException> uses the HRESULT COR_E_NOTFINITENUMBER, which has the value 0x80131528.  
-  
- For a list of initial property values for an instance of <xref:System.NotFiniteNumberException>, see the <xref:System.NotFiniteNumberException.%23ctor%2A> constructors.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.NotFiniteNumberException> is available for programming languages that do not support the concepts of infinity and Not-a-Number in floating-point operations.
+
+ <xref:System.NotFiniteNumberException> uses the HRESULT COR_E_NOTFINITENUMBER, which has the value 0x80131528.
+
+ For a list of initial property values for an instance of <xref:System.NotFiniteNumberException>, see the <xref:System.NotFiniteNumberException.%23ctor*> constructors.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Exception" />
@@ -113,23 +117,25 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor initializes the <xref:System.Exception.Message%2A> property of the new instance to a system-supplied message that describes the error, such as "The number encountered was not a finite quantity." This message takes into account the current system culture.  
-  
- The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.  
-  
-|Property|Value|  
-|--------------|-----------|  
-|<xref:System.Exception.InnerException%2A>|A null reference (`Nothing` in Visual Basic).|  
-|<xref:System.Exception.Message%2A>|The localized error message string.|  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor initializes the <xref:System.Exception.Message> property of the new instance to a system-supplied message that describes the error, such as "The number encountered was not a finite quantity." This message takes into account the current system culture.
+
+ The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.
+
+|Property|Value|
+|--------------|-----------|
+|<xref:System.Exception.InnerException*>|A null reference (`Nothing` in Visual Basic).|
+|<xref:System.Exception.Message*>|The localized error message string.|
+
  ]]></format>
         </remarks>
       </Docs>
@@ -164,6 +170,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="offendingNumber" Type="System.Double" />
@@ -172,24 +180,24 @@
         <param name="offendingNumber">The value of the argument that caused the exception.</param>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class with the invalid number.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `offendingNumber` parameter must be both a <xref:System.Double> and an invalid number.  
-  
- The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.  
-  
-|Property|Value|  
-|--------------|-----------|  
-|<xref:System.Exception.InnerException%2A>|A null reference (`Nothing` in Visual Basic).|  
-|<xref:System.NotFiniteNumberException.OffendingNumber%2A>|The invalid number.|  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `offendingNumber` parameter must be both a <xref:System.Double> and an invalid number.
+
+ The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.
+
+|Property|Value|
+|--------------|-----------|
+|<xref:System.Exception.InnerException*>|A null reference (`Nothing` in Visual Basic).|
+|<xref:System.NotFiniteNumberException.OffendingNumber*>|The invalid number.|
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.NotFiniteNumberException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
@@ -219,6 +227,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -227,18 +237,18 @@
         <param name="message">The message that describes the error.</param>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class with a specified error message.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Ensure that the `message` string is understandable to the user and that it is localized for the current culture.  
-  
- The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.  
-  
-|Property|Value|  
-|--------------|-----------|  
-|<xref:System.Exception.InnerException%2A>|A null reference (`Nothing` in Visual Basic).|  
-|<xref:System.Exception.Message%2A>|The error message string.|  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Ensure that the `message` string is understandable to the user and that it is localized for the current culture.
+
+ The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.
+
+|Property|Value|
+|--------------|-----------|
+|<xref:System.Exception.InnerException*>|A null reference (`Nothing` in Visual Basic).|
+|<xref:System.Exception.Message*>|The error message string.|
+
  ]]></format>
         </remarks>
       </Docs>
@@ -273,13 +283,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("This API supports obsolete formatter-based serialization. It should not be called or extended by application code.", DiagnosticId="SYSLIB0051", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("This API supports obsolete formatter-based serialization. It should not be called or extended by application code.", DiagnosticId="SYSLIB0051", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -297,17 +309,17 @@
         <param name="context">The contextual information about the source or destination.</param>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class with serialized data.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor is called during deserialization to reconstitute the exception object transmitted over a stream.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor is called during deserialization to reconstitute the exception object transmitted over a stream.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message, double offendingNumber);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message, double offendingNumber);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, float64 offendingNumber) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.NotFiniteNumberException.#ctor(System.String,System.Double)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, offendingNumber As Double)" />
@@ -337,6 +349,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -347,25 +361,25 @@
         <param name="offendingNumber">The value of the argument that caused the exception.</param>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class with a specified error message and the invalid number.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Ensure that the `message` string is understandable to the user and that it is localized for the current culture.  
-  
- The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.  
-  
-|Property|Value|  
-|--------------|-----------|  
-|<xref:System.Exception.InnerException%2A>|A null reference (`Nothing` in Visual Basic).|  
-|<xref:System.Exception.Message%2A>|The error message string.|  
-|<xref:System.NotFiniteNumberException.OffendingNumber%2A>|The invalid number.|  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Ensure that the `message` string is understandable to the user and that it is localized for the current culture.
+
+ The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.
+
+|Property|Value|
+|--------------|-----------|
+|<xref:System.Exception.InnerException*>|A null reference (`Nothing` in Visual Basic).|
+|<xref:System.Exception.Message*>|The error message string.|
+|<xref:System.NotFiniteNumberException.OffendingNumber*>|The invalid number.|
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message, Exception? innerException);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message, Exception? innerException);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.NotFiniteNumberException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
@@ -394,34 +408,36 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="innerException" Type="System.Exception" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="message" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="innerException" Type="System.Exception" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="message">The error message that explains the reason for the exception.</param>
         <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException" /> parameter is not a null reference (<see langword="Nothing" /> in Visual Basic), the current exception is raised in a <see langword="catch" /> block that handles the inner exception.</param>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class with a specified error message and a reference to the inner exception that is root cause of this exception.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- An exception that is thrown as a direct result of a previous exception can include a reference to the previous exception in the <xref:System.Exception.InnerException%2A> property. The <xref:System.Exception.InnerException%2A> property returns the same value that is passed into the constructor, or `null` if the <xref:System.Exception.InnerException%2A> property does not supply the inner exception value to the constructor.  
-  
- The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.  
-  
-|Property|Value|  
-|--------------|-----------|  
-|<xref:System.Exception.InnerException%2A>|The inner exception reference.|  
-|<xref:System.Exception.Message%2A>|The error message string.|  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ An exception that is thrown as a direct result of a previous exception can include a reference to the previous exception in the <xref:System.Exception.InnerException> property. The <xref:System.Exception.InnerException> property returns the same value that is passed into the constructor, or `null` if the <xref:System.Exception.InnerException> property does not supply the inner exception value to the constructor.
+
+ The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.
+
+|Property|Value|
+|--------------|-----------|
+|<xref:System.Exception.InnerException*>|The inner exception reference.|
+|<xref:System.Exception.Message*>|The error message string.|
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message, double offendingNumber, Exception? innerException);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public NotFiniteNumberException (string? message, double offendingNumber, Exception? innerException);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, float64 offendingNumber, class System.Exception innerException) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.NotFiniteNumberException.#ctor(System.String,System.Double,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, offendingNumber As Double, innerException As Exception)" />
@@ -451,6 +467,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -463,19 +481,19 @@
         <param name="innerException">The exception that is the cause of the current exception. If the <paramref name="innerException" /> parameter is not a null reference (<see langword="Nothing" /> in Visual Basic), the current exception is raised in a <see langword="catch" /> block that handles the inner exception.</param>
         <summary>Initializes a new instance of the <see cref="T:System.NotFiniteNumberException" /> class with a specified error message, the invalid number, and a reference to the inner exception that is root cause of this exception.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- An exception that is thrown as a direct result of a previous exception can include a reference to the previous exception in the <xref:System.Exception.InnerException%2A> property. The <xref:System.Exception.InnerException%2A> property returns the same value that is passed into the constructor, or `null` if the <xref:System.Exception.InnerException%2A> property does not supply the inner exception value to the constructor.  
-  
- The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.  
-  
-|Property|Value|  
-|--------------|-----------|  
-|<xref:System.Exception.InnerException%2A>|The inner exception reference.|  
-|<xref:System.Exception.Message%2A>|The error message string.|  
-|<xref:System.NotFiniteNumberException.OffendingNumber%2A>|The invalid number.|  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ An exception that is thrown as a direct result of a previous exception can include a reference to the previous exception in the <xref:System.Exception.InnerException> property. The <xref:System.Exception.InnerException> property returns the same value that is passed into the constructor, or `null` if the <xref:System.Exception.InnerException> property does not supply the inner exception value to the constructor.
+
+ The following table shows the initial property values for an instance of <xref:System.NotFiniteNumberException>.
+
+|Property|Value|
+|--------------|-----------|
+|<xref:System.Exception.InnerException*>|The inner exception reference.|
+|<xref:System.Exception.Message*>|The error message string.|
+|<xref:System.NotFiniteNumberException.OffendingNumber*>|The invalid number.|
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Exception" />
@@ -512,13 +530,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("This API supports obsolete formatter-based serialization. It should not be called or extended by application code.", DiagnosticId="SYSLIB0051", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("This API supports obsolete formatter-based serialization. It should not be called or extended by application code.", DiagnosticId="SYSLIB0051", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -539,13 +559,13 @@
         <param name="context">The contextual information about the source or destination.</param>
         <summary>Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object with the invalid number and additional exception information.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.TypeLoadException.GetObjectData%2A> sets a <xref:System.Runtime.Serialization.SerializationInfo> with all the exception object data targeted for serialization. During deserialization, the exception object is reconstituted from the <xref:System.Runtime.Serialization.SerializationInfo> transmitted over the stream.  
-  
- For more information, see <xref:System.Runtime.Serialization.SerializationInfo>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.TypeLoadException.GetObjectData*> sets a <xref:System.Runtime.Serialization.SerializationInfo> with all the exception object data targeted for serialization. During deserialization, the exception object is reconstituted from the <xref:System.Runtime.Serialization.SerializationInfo> transmitted over the stream.
+
+ For more information, see <xref:System.Runtime.Serialization.SerializationInfo>.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> object is <see langword="null" />.</exception>
@@ -583,6 +603,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -591,13 +613,13 @@
         <summary>Gets the invalid number that is a positive infinity, a negative infinity, or Not-a-Number (NaN).</summary>
         <value>The invalid number.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.NotFiniteNumberException.OffendingNumber%2A> property returns the same value as was passed into the constructor, or zero if no value was supplied. Override the <xref:System.NotFiniteNumberException.OffendingNumber%2A> property to customize the content or format of the invalid value.  
-  
- This property is read-only.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.NotFiniteNumberException.OffendingNumber> property returns the same value as was passed into the constructor, or zero if no value was supplied. Override the <xref:System.NotFiniteNumberException.OffendingNumber> property to customize the content or format of the invalid value.
+
+ This property is read-only.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Double" />

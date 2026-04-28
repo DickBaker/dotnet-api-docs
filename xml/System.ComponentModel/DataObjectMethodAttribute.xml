@@ -26,8 +26,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -43,7 +47,7 @@
       <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Method)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Method)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -51,19 +55,19 @@
   <Docs>
     <summary>Identifies a data operation method exposed by a type, what type of operation the method performs, and whether the method is the default data method. This class cannot be inherited.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can use the <xref:System.ComponentModel.DataObjectMethodAttribute> to identify data operation methods on a type marked with the <xref:System.ComponentModel.DataObjectAttribute> attribute so that they are more easily identified by callers using reflection. When the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to a method, it describes the type of operation the method performs and indicates whether the method is the default data operation method of a type. Components such as the <xref:System.Web.UI.WebControls.ObjectDataSource> control and the <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> class examine the values of this attribute, if present, to help determine which data method to call at run time.  
-  
-   
-  
-## Examples  
- The following code example demonstrates how you can apply the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute to a publicly exposed method and identify the type of data operation it performs as well as whether it is the type's default data method. In this example the `NorthwindData` type exposes two data methods: one to retrieve a set of data named `GetAllEmployees`, and another to delete data named `DeleteEmployeeByID`. The <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to both methods, the `GetAllEmployees` method is marked as the default method for the Select data operation, and the `DeleteEmployeeByID` method is marked as the default method for the Delete data operation.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can use the <xref:System.ComponentModel.DataObjectMethodAttribute> to identify data operation methods on a type marked with the <xref:System.ComponentModel.DataObjectAttribute> attribute so that they are more easily identified by callers using reflection. When the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to a method, it describes the type of operation the method performs and indicates whether the method is the default data operation method of a type. Components such as the <xref:System.Web.UI.WebControls.ObjectDataSource> control and the <xref:System.Web.UI.Design.WebControls.ObjectDataSourceDesigner> class examine the values of this attribute, if present, to help determine which data method to call at run time.
+
+
+
+## Examples
+ The following code example demonstrates how you can apply the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute to a publicly exposed method and identify the type of data operation it performs as well as whether it is the type's default data method. In this example the `NorthwindData` type exposes two data methods: one to retrieve a set of data named `GetAllEmployees`, and another to delete data named `DeleteEmployeeByID`. The <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to both methods, the `GetAllEmployees` method is marked as the default method for the Select data operation, and the `DeleteEmployeeByID` method is marked as the default method for the Delete data operation.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb" id="Snippet3":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -107,6 +111,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -121,19 +127,19 @@
         <param name="methodType">One of the <see cref="T:System.ComponentModel.DataObjectMethodType" /> values that describes the data operation the method performs.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> class and identifies the type of data operation the method performs.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> property is set to `false` when you create a <xref:System.ComponentModel.DataObjectMethodAttribute> object using this <xref:System.ComponentModel.DataObjectMethodAttribute.%23ctor%28System.ComponentModel.DataObjectMethodType%29> constructor.  
-  
-   
-  
-## Examples  
- The following code example demonstrates how you can apply the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute to a publicly exposed method and identify the type of data operation it performs as well as whether it is the type's default data method. In this example the `NorthwindData` type exposes two data methods: one to retrieve a set of data named `GetAllEmployees`, and another to delete data named `DeleteEmployeeByID`. The <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to both methods, the `GetAllEmployees` method is marked as the default method for the Select data operation, and the `DeleteEmployeeByID` method is marked as the default method for the Delete data operation.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault> property is set to `false` when you create a <xref:System.ComponentModel.DataObjectMethodAttribute> object using this <xref:System.ComponentModel.DataObjectMethodAttribute.%23ctor(System.ComponentModel.DataObjectMethodType)> constructor.
+
+
+
+## Examples
+ The following code example demonstrates how you can apply the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute to a publicly exposed method and identify the type of data operation it performs as well as whether it is the type's default data method. In this example the `NorthwindData` type exposes two data methods: one to retrieve a set of data named `GetAllEmployees`, and another to delete data named `DeleteEmployeeByID`. The <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to both methods, the `GetAllEmployees` method is marked as the default method for the Select data operation, and the `DeleteEmployeeByID` method is marked as the default method for the Delete data operation.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb" id="Snippet3":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -167,6 +173,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -184,26 +192,26 @@
           <see langword="true" /> to indicate the method that the attribute is applied to is the default method of the data object for the specified <paramref name="methodType" />; otherwise, <see langword="false" />.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> class, identifies the type of data operation the method performs, and identifies whether the method is the default data method that the data object exposes.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example demonstrates how you can apply the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute to a publicly exposed method and identify the type of data operation it performs as well as whether it is the type's default data method. In this example the `NorthwindData` type exposes two data methods: one to retrieve a set of data named `GetAllEmployees`, and another to delete data named `DeleteEmployeeByID`. The <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to both methods, the `GetAllEmployees` method is marked as the default method for the Select data operation, and the `DeleteEmployeeByID` method is marked as the default method for the Delete data operation.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example demonstrates how you can apply the <xref:System.ComponentModel.DataObjectMethodAttribute> attribute to a publicly exposed method and identify the type of data operation it performs as well as whether it is the type's default data method. In this example the `NorthwindData` type exposes two data methods: one to retrieve a set of data named `GetAllEmployees`, and another to delete data named `DeleteEmployeeByID`. The <xref:System.ComponentModel.DataObjectMethodAttribute> attribute is applied to both methods, the `GetAllEmployees` method is marked as the default method for the Select data operation, and the `DeleteEmployeeByID` method is marked as the default method for the Delete data operation.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb" id="Snippet3":::
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="net-5.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="dataObjectMethodAttribute.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="net-5.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -226,6 +234,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -233,7 +243,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -246,11 +256,11 @@
         <returns>
           <see langword="true" /> if this instance is the same as the instance specified by the <paramref name="obj" /> parameter; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method determines whether this <xref:System.ComponentModel.DataObjectMethodAttribute> fits the pattern of another object.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method determines whether this <xref:System.ComponentModel.DataObjectMethodAttribute> fits the pattern of another object.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -284,6 +294,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -324,6 +336,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -339,27 +353,27 @@
         <value>
           <see langword="true" /> if the method is the default method exposed by the object for a method type; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Web.UI.WebControls.ObjectDataSource> control uses the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> property to distinguish between multiple methods that match the signature requirements for a specific method type. If two methods match the signature requirements, the method with the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> property set to `true` is selected.  
-  
- At design-time the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> property is used to automatically set the <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateMethod%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod%2A>, and <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod%2A> properties on an <xref:System.Web.UI.WebControls.ObjectDataSource> instance.  
-  
- If the <xref:System.ComponentModel.DataObjectMethodAttribute> is created using the <xref:System.ComponentModel.DataObjectMethodAttribute.%23ctor%28System.ComponentModel.DataObjectMethodType%29> constructor that only takes a <xref:System.ComponentModel.DataObjectMethodType> parameter, the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault%2A> property is set to `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Web.UI.WebControls.ObjectDataSource> control uses the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault> property to distinguish between multiple methods that match the signature requirements for a specific method type. If two methods match the signature requirements, the method with the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault> property set to `true` is selected.
+
+ At design-time the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault> property is used to automatically set the <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod*>, <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateMethod*>, <xref:System.Web.UI.WebControls.ObjectDataSource.DeleteMethod*>, and <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod*> properties on an <xref:System.Web.UI.WebControls.ObjectDataSource> instance.
+
+ If the <xref:System.ComponentModel.DataObjectMethodAttribute> is created using the <xref:System.ComponentModel.DataObjectMethodAttribute.%23ctor(System.ComponentModel.DataObjectMethodType)> constructor that only takes a <xref:System.ComponentModel.DataObjectMethodType> parameter, the <xref:System.ComponentModel.DataObjectMethodAttribute.IsDefault> property is set to `false`.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Match">
-      <MemberSignature Language="C#" Value="public override bool Match (object obj);" FrameworkAlternate="net-5.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override bool Match (object? obj);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataObjectMethodAttribute.Match(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Match (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Match : obj -&gt; bool" Usage="dataObjectMethodAttribute.Match obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Match(System::Object ^ obj);" />
-      <MemberSignature Language="C#" Value="public override bool Match (object? obj);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Match (object obj);" FrameworkAlternate="net-5.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -382,6 +396,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -389,7 +405,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -402,11 +418,11 @@
         <returns>
           <see langword="true" /> if this instance is the same as the instance specified by the <paramref name="obj" /> parameter; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method determines whether one <xref:System.ComponentModel.DataObjectMethodAttribute> fits the pattern of another. Its implementation is not the same as that of <xref:System.ComponentModel.DataObjectMethodAttribute.Equals%2A>, however, because it does not test for true equality.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method determines whether one <xref:System.ComponentModel.DataObjectMethodAttribute> fits the pattern of another. Its implementation is not the same as that of <xref:System.ComponentModel.DataObjectMethodAttribute.Equals*>, however, because it does not test for true equality.
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.ComponentModel.DataObjectMethodAttribute.Equals(System.Object)" />
@@ -441,6 +457,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

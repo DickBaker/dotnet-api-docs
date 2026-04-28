@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Security</AssemblyName>
@@ -24,12 +26,15 @@
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Security.Cryptography.Pkcs" FromVersion="11.0.0.0" To="System.Security" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -77,6 +82,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -95,8 +102,8 @@
 
 |Property|Default value|
 |--------------|-------------------|
-|<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.ContentInfo%2A>|Content Type: 1.2.840.113549.1.7.1 (data)<br/>Length: zero|
-|<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.ContentEncryptionAlgorithm%2A>|1.2.840.113549.3.7 (RSA_DES_EDE3_CBC) or 2.16.840.1.101.3.4.1.42 (AES-256-CBC)|
+|<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.ContentInfo*>|Content Type: 1.2.840.113549.1.7.1 (data)<br/>Length: zero|
+|<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.ContentEncryptionAlgorithm*>|1.2.840.113549.3.7 (RSA_DES_EDE3_CBC) or 2.16.840.1.101.3.4.1.42 (AES-256-CBC)|
 
  The default <xref:System.Security.Cryptography.Pkcs.SubjectIdentifierType> for recipients is <xref:System.Security.Cryptography.Pkcs.SubjectIdentifierType.IssuerAndSerialNumber>.
 
@@ -126,6 +133,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -175,6 +184,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -297,6 +308,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -314,9 +327,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the contents of this collection are embedded into the pending message during the call to one of the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt%2A> methods. Changes after the encryption operation have no effect.
+ When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the contents of this collection are embedded into the pending message during the call to one of the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt*> methods. Changes after the encryption operation have no effect.
 
- The value of this property is replaced with a different collection object during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A>, which then represents the certificates that were read out of the decoded message.
+ The value of this property is replaced with a different collection object during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*>, which then represents the certificates that were read out of the decoded message.
 
  ]]></format>
         </remarks>
@@ -340,6 +353,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -359,7 +374,7 @@
 ## Remarks
  When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the value of this property indicates which symmetric encryption algorithm to use to encrypt the content of <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.ContentInfo>.
 
- The value of this property is replaced during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A>, which then represents the symmetric encryption algorithm which was used to encrypt the decoded message.
+ The value of this property is replaced during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*>, which then represents the symmetric encryption algorithm which was used to encrypt the decoded message.
 
  ]]></format>
         </remarks>
@@ -383,6 +398,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -400,9 +417,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the value of this property represents the data to encrypt. It is not replaced with encrypted content after a call to an <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt%2A> method.
+ When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the value of this property represents the data to encrypt. It is not replaced with encrypted content after a call to an <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt*> method.
 
- The value of this property is replaced during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A>, which then represents the encrypted content decoded from the message. After a successful call to a <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt%2A> method, the value is replaced again, with the decrypted message contents.
+ The value of this property is replaced during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*>, which then represents the encrypted content decoded from the message. After a successful call to a <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt*> method, the value is replaced again, with the decrypted message contents.
 
  ]]></format>
         </remarks>
@@ -426,6 +443,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -455,12 +474,12 @@
       </Docs>
     </Member>
     <Member MemberName="Decode">
-      <MemberSignature Language="C#" Value="public void Decode (ReadOnlySpan&lt;byte&gt; encodedMessage);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decode(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; encodedMessage) cil managed" />
-      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.ReadOnlySpan{System.Byte})" />
-      <MemberSignature Language="VB.NET" Value="Public Sub Decode (encodedMessage As ReadOnlySpan(Of Byte))" />
-      <MemberSignature Language="F#" Value="member this.Decode : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="envelopedCms.Decode encodedMessage" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decode(ReadOnlySpan&lt;System::Byte&gt; encodedMessage);" />
+      <MemberSignature Language="C#" Value="public void Decode (ReadOnlySpan&lt;byte&gt; encodedMessage);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decode(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; encodedMessage) cil managed" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.ReadOnlySpan{System.Byte})" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Decode (encodedMessage As ReadOnlySpan(Of Byte))" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Decode : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="envelopedCms.Decode encodedMessage" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decode(ReadOnlySpan&lt;System::Byte&gt; encodedMessage);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
@@ -469,12 +488,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="encodedMessage" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1-pp;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="encodedMessage" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       </Parameters>
       <Docs>
         <param name="encodedMessage">The data to decode.</param>
@@ -510,6 +534,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -528,7 +554,7 @@
 
 ## Remarks
 
-<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A?displayProperty=nameWithType> should be called before <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt?displayProperty=nameWithType> or any other <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt%2A> method.
+<xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*?displayProperty=nameWithType> should be called before <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt?displayProperty=nameWithType> or any other <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt*> method.
 
 The <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt> method does not search the computer My store if it is inaccessible.
 
@@ -561,6 +587,8 @@ The following permissions are required to access the decryption key on .NET Fram
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -610,6 +638,8 @@ The following permissions are required to access the decryption key on .NET Fram
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -642,13 +672,13 @@ The following permissions are required to access the decryption key on .NET Fram
       </Docs>
     </Member>
     <Member MemberName="Decrypt">
-      <MemberSignature Language="C#" Value="public void Decrypt (System.Security.Cryptography.Pkcs.RecipientInfo recipientInfo, System.Security.Cryptography.AsymmetricAlgorithm? privateKey);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1-pp;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decrypt(class System.Security.Cryptography.Pkcs.RecipientInfo recipientInfo, class System.Security.Cryptography.AsymmetricAlgorithm privateKey) cil managed" />
-      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt(System.Security.Cryptography.Pkcs.RecipientInfo,System.Security.Cryptography.AsymmetricAlgorithm)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub Decrypt (recipientInfo As RecipientInfo, privateKey As AsymmetricAlgorithm)" />
-      <MemberSignature Language="F#" Value="member this.Decrypt : System.Security.Cryptography.Pkcs.RecipientInfo * System.Security.Cryptography.AsymmetricAlgorithm -&gt; unit" Usage="envelopedCms.Decrypt (recipientInfo, privateKey)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decrypt(System::Security::Cryptography::Pkcs::RecipientInfo ^ recipientInfo, System::Security::Cryptography::AsymmetricAlgorithm ^ privateKey);" />
-      <MemberSignature Language="C#" Value="public void Decrypt (System.Security.Cryptography.Pkcs.RecipientInfo recipientInfo, System.Security.Cryptography.AsymmetricAlgorithm privateKey);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public void Decrypt (System.Security.Cryptography.Pkcs.RecipientInfo recipientInfo, System.Security.Cryptography.AsymmetricAlgorithm? privateKey);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decrypt(class System.Security.Cryptography.Pkcs.RecipientInfo recipientInfo, class System.Security.Cryptography.AsymmetricAlgorithm privateKey) cil managed" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.EnvelopedCms.Decrypt(System.Security.Cryptography.Pkcs.RecipientInfo,System.Security.Cryptography.AsymmetricAlgorithm)" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Decrypt (recipientInfo As RecipientInfo, privateKey As AsymmetricAlgorithm)" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Decrypt : System.Security.Cryptography.Pkcs.RecipientInfo * System.Security.Cryptography.AsymmetricAlgorithm -&gt; unit" Usage="envelopedCms.Decrypt (recipientInfo, privateKey)" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decrypt(System::Security::Cryptography::Pkcs::RecipientInfo ^ recipientInfo, System::Security::Cryptography::AsymmetricAlgorithm ^ privateKey);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public void Decrypt (System.Security.Cryptography.Pkcs.RecipientInfo recipientInfo, System.Security.Cryptography.AsymmetricAlgorithm privateKey);" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
@@ -659,15 +689,20 @@ The following permissions are required to access the decryption key on .NET Fram
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="recipientInfo" Type="System.Security.Cryptography.Pkcs.RecipientInfo" Index="0" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="privateKey" Type="System.Security.Cryptography.AsymmetricAlgorithm" Index="1" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Parameter Name="recipientInfo" Type="System.Security.Cryptography.Pkcs.RecipientInfo" Index="0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="privateKey" Type="System.Security.Cryptography.AsymmetricAlgorithm" Index="1" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -710,6 +745,8 @@ Unlike the other overloads of `Decrypt`, this overload does not search certifica
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -761,6 +798,8 @@ The following permissions are required to access the decryption key on .NET Fram
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -785,7 +824,7 @@ The following permissions are required to access the decryption key on .NET Fram
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method can only be called after a successful call to an <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt%2A> method.
+ This method can only be called after a successful call to an <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt*> method.
 
  ]]></format>
         </remarks>
@@ -830,7 +869,7 @@ The following permissions are required to access the decryption key on .NET Fram
 
 ## Remarks
 
-This method displays a user interface in which you choose the recipients for whom to encrypt the message. This requires that the current process is running in *user interactive mode*, meaning that the <xref:System.Environment.UserInteractive%2A?displayProperty=nameWithType> property is `true`. A process is normally in user interactive mode unless it is a service process or running inside a Web application.
+This method displays a user interface in which you choose the recipients for whom to encrypt the message. This requires that the current process is running in *user interactive mode*, meaning that the <xref:System.Environment.UserInteractive?displayProperty=nameWithType> property is `true`. A process is normally in user interactive mode unless it is a service process or running inside a Web application.
 
 The user interface will only present certificates that are within their validity period and that have Key Encipherment or Key Agreement included in their key usage.
 
@@ -861,6 +900,8 @@ The following permissions are required to display the user interface on .NET Fra
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -901,6 +942,8 @@ The following permissions are required to display the user interface on .NET Fra
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -940,6 +983,8 @@ The following permissions are required to display the user interface on .NET Fra
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -965,9 +1010,9 @@ The following permissions are required to display the user interface on .NET Fra
 ## Remarks
  Although this property is read-only, a modification to the <xref:System.Security.Cryptography.Pkcs.RecipientInfo> objects in the <xref:System.Security.Cryptography.Pkcs.RecipientInfoCollection> can be done by using their properties.
 
- The <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.RecipientInfos%2A> property is not populated as a result of calling the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encode%2A?displayProperty=nameWithType> method nor any of the overloaded EnvelopedCms.Encrypt methods.
+ The <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.RecipientInfos> property is not populated as a result of calling the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encode*?displayProperty=nameWithType> method nor any of the overloaded EnvelopedCms.Encrypt methods.
 
- The value of this property is replaced with a different collection object during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A>, which then represents the certificates that were read out of the decoded message.
+ The value of this property is replaced with a different collection object during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*>, which then represents the certificates that were read out of the decoded message.
 
  ]]></format>
         </remarks>
@@ -991,6 +1036,8 @@ The following permissions are required to display the user interface on .NET Fra
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -1008,9 +1055,9 @@ The following permissions are required to display the user interface on .NET Fra
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the contents of this collection are embedded into the pending message during the call to one of the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt%2A> methods. Changes after the encryption operation have no effect.
+ When the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> class is being used to to encrypt data, the contents of this collection are embedded into the pending message during the call to one of the <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Encrypt*> methods. Changes after the encryption operation have no effect.
 
- The value of this property is replaced with a different collection object during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A>, which then represents the attributes which were attached to the message without being encrypted.
+ The value of this property is replaced with a different collection object during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*>, which then represents the attributes which were attached to the message without being encrypted.
 
  ]]></format>
         </remarks>
@@ -1034,6 +1081,8 @@ The following permissions are required to display the user interface on .NET Fra
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -1051,7 +1100,7 @@ The following permissions are required to display the user interface on .NET Fra
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The value of this property is replaced during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode%2A>, which then represents the version number contained within the message.
+ The value of this property is replaced during a call to <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode*>, which then represents the version number contained within the message.
 
  ]]></format>
         </remarks>

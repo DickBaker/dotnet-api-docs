@@ -9,20 +9,28 @@
     <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Security.Cryptography</AssemblyName>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
-    <TypeForwarding From="Microsoft.Bcl.Cryptography" FromVersion="9.0.0.1" To="System.Security.Cryptography" ToVersion="9.0.0.0" FrameworkAlternate="net-9.0-pp" />
+    <TypeForwarding From="Microsoft.Bcl.Cryptography" FromVersion="11.0.0.0" To="System.Security.Cryptography" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp" />
+    <TypeForwarding From="Microsoft.Bcl.Cryptography" FromVersion="11.0.0.0" To="System.Security.Cryptography" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -43,11 +51,17 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -72,11 +86,17 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="copyFrom" Type="System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" />
@@ -93,6 +113,35 @@
             </exception>
       </Docs>
     </Member>
+    <Member MemberName="AllowDuplicateAttributes">
+      <MemberSignature Language="C#" Value="public bool AllowDuplicateAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDuplicateAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.AllowDuplicateAttributes" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowDuplicateAttributes As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AllowDuplicateAttributes : bool with get, set" Usage="System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.AllowDuplicateAttributes" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowDuplicateAttributes { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether duplicate attributes are permitted.</summary>
+        <value>
+          <para>
+            <see langword="true" /> to permit duplicate attributes; <see langword="false" /> to fail loading when duplicate attributes are found.</para>
+          <para>The default is <see langword="false" />.</para>
+        </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DangerousNoLimits">
       <MemberSignature Language="C#" Value="public static System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits DangerousNoLimits { get; }" />
       <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits DangerousNoLimits" />
@@ -103,11 +152,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits</ReturnType>
@@ -148,11 +203,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits</ReturnType>
@@ -169,6 +230,7 @@
               property values may change over time.
             </remarks>
         <altmember cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IsReadOnly" />
+        <seealso cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IsReadOnly" />
       </Docs>
     </Member>
     <Member MemberName="IgnoreEncryptedAuthSafes">
@@ -181,11 +243,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -213,11 +281,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -244,11 +318,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -274,11 +354,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -303,11 +389,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -330,11 +422,17 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -357,11 +455,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -386,11 +490,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -415,11 +525,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -441,6 +557,7 @@
               This property has no effect on non-Windows systems.
             </remarks>
         <altmember cref="P:System.Security.Cryptography.X509Certificates.X509Certificate2.FriendlyName" />
+        <seealso cref="P:System.Security.Cryptography.X509Certificates.X509Certificate2.FriendlyName" />
       </Docs>
     </Member>
     <Member MemberName="PreserveKeyName">
@@ -453,11 +570,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -489,11 +612,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -525,11 +654,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -559,11 +694,17 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Bcl.Cryptography</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>9.0.0.2</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.2</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography</AssemblyName>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>

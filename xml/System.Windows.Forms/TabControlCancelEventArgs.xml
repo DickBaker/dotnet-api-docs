@@ -14,13 +14,15 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -28,27 +30,27 @@
   <Docs>
     <summary>Provides data for the <see cref="E:System.Windows.Forms.TabControl.Selecting" /> and <see cref="E:System.Windows.Forms.TabControl.Deselecting" /> events of a <see cref="T:System.Windows.Forms.TabControl" /> control.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use the <xref:System.Windows.Forms.TabControlCancelEventArgs.Action%2A> property to determine which event is occurring. This enables you to handle multiple event types with one event handler.  
-  
- Use the <xref:System.Windows.Forms.TabControlCancelEventArgs.TabPage%2A> and <xref:System.Windows.Forms.TabControlCancelEventArgs.TabPageIndex%2A> properties to determine which <xref:System.Windows.Forms.TabPage> the event is occurring for.  
-  
- To cancel a tab change in a <xref:System.Windows.Forms.TabControl>, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property to `true`.  
-  
- For more information about handling events, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
-   
-  
-## Examples  
- The following code example demonstrates the use of this type. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.  
-  
- To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting> event.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use the <xref:System.Windows.Forms.TabControlCancelEventArgs.Action> property to determine which event is occurring. This enables you to handle multiple event types with one event handler.
+
+ Use the <xref:System.Windows.Forms.TabControlCancelEventArgs.TabPage*> and <xref:System.Windows.Forms.TabControlCancelEventArgs.TabPageIndex*> properties to determine which <xref:System.Windows.Forms.TabPage> the event is occurring for.
+
+ To cancel a tab change in a <xref:System.Windows.Forms.TabControl>, set the <xref:System.ComponentModel.CancelEventArgs.Cancel> property to `true`.
+
+ For more information about handling events, see [Handling and Raising Events](/dotnet/standard/events/).
+
+
+
+## Examples
+ The following code example demonstrates the use of this type. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+
+ To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting> event.
+
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet557":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet557":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet557":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Forms.TabControl" />
@@ -67,7 +69,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (tabPage As TabPage, tabPageIndex As Integer, cancel As Boolean, action As TabControlAction)" />
       <MemberSignature Language="F#" Value="new System.Windows.Forms.TabControlCancelEventArgs : System.Windows.Forms.TabPage * int * bool * System.Windows.Forms.TabControlAction -&gt; System.Windows.Forms.TabControlCancelEventArgs" Usage="new System.Windows.Forms.TabControlCancelEventArgs (tabPage, tabPageIndex, cancel, action)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TabControlCancelEventArgs(System::Windows::Forms::TabPage ^ tabPage, int tabPageIndex, bool cancel, System::Windows::Forms::TabControlAction action);" />
-      <MemberSignature Language="C#" Value="public TabControlCancelEventArgs (System.Windows.Forms.TabPage? tabPage, int tabPageIndex, bool cancel, System.Windows.Forms.TabControlAction action);" FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public TabControlCancelEventArgs (System.Windows.Forms.TabPage? tabPage, int tabPageIndex, bool cancel, System.Windows.Forms.TabControlAction action);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -78,6 +80,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -99,11 +103,11 @@
         <param name="action">One of the <see cref="T:System.Windows.Forms.TabControlAction" /> values.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Forms.TabControlCancelEventArgs" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The property values of the newly created instance are initialized to the specified parameter values.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The property values of the newly created instance are initialized to the specified parameter values.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" />
@@ -133,6 +137,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -147,16 +153,16 @@
         <summary>Gets a value indicating which event is occurring.</summary>
         <value>One of the <see cref="T:System.Windows.Forms.TabControlAction" /> values.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.  
-  
- To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+
+ To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event.
+
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet557":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet557":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet557":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Windows.Forms.TabControlAction" />
@@ -171,7 +177,7 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TabPage As TabPage" />
       <MemberSignature Language="F#" Value="member this.TabPage : System.Windows.Forms.TabPage" Usage="System.Windows.Forms.TabControlCancelEventArgs.TabPage" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::TabPage ^ TabPage { System::Windows::Forms::TabPage ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.TabPage? TabPage { get; }" FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TabPage? TabPage { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -182,6 +188,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -196,16 +204,16 @@
         <summary>Gets the <see cref="T:System.Windows.Forms.TabPage" /> the event is occurring for.</summary>
         <value>The <see cref="T:System.Windows.Forms.TabPage" /> the event is occurring for.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.  
-  
- To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+
+ To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event.
+
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet557":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet557":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet557":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Windows.Forms.TabPage" />
@@ -228,6 +236,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -242,16 +252,16 @@
         <summary>Gets the zero-based index of the <see cref="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" /> in the <see cref="P:System.Windows.Forms.TabControl.TabPages" /> collection.</summary>
         <value>The zero-based index of the <see cref="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" /> in the <see cref="P:System.Windows.Forms.TabControl.TabPages" /> collection.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.  
-  
- To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+
+ To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.TabControl> named `TabControl1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.TabControl.Selecting?displayProperty=nameWithType> event.
+
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet557":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet557":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet557":::
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.TabControlCancelEventArgs.TabPage" />

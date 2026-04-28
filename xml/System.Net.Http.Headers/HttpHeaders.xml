@@ -18,6 +18,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
@@ -25,6 +27,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Http" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -43,7 +47,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -73,6 +77,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -104,7 +110,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub Add (name As String, values As IEnumerable(Of String))" />
       <MemberSignature Language="F#" Value="member this.Add : string * seq&lt;string&gt; -&gt; unit" Usage="httpHeaders.Add (name, values)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(System::String ^ name, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ values);" />
-      <MemberSignature Language="C#" Value="public void Add (string name, System.Collections.Generic.IEnumerable&lt;string?&gt; values);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public void Add (string name, System.Collections.Generic.IEnumerable&lt;string?&gt; values);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -119,6 +125,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -132,7 +140,7 @@
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -151,7 +159,7 @@
 
  The header `values` will be parsed and validated.
 
- If the specified header does not exist, the <xref:System.Net.Http.Headers.HttpHeaders.Add%2A> method inserts a new header into the list of header name/value pairs.
+ If the specified header does not exist, the <xref:System.Net.Http.Headers.HttpHeaders.Add*> method inserts a new header into the list of header name/value pairs.
 
  If the specified header is already present, `values` are added to the comma-separated list of values associated with the header.
 
@@ -175,7 +183,7 @@ The header value format is invalid for this header name, or the header does not 
       <MemberSignature Language="VB.NET" Value="Public Sub Add (name As String, value As String)" />
       <MemberSignature Language="F#" Value="member this.Add : string * string -&gt; unit" Usage="httpHeaders.Add (name, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(System::String ^ name, System::String ^ value);" />
-      <MemberSignature Language="C#" Value="public void Add (string name, string? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public void Add (string name, string? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -190,6 +198,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -203,7 +213,7 @@ The header value format is invalid for this header name, or the header does not 
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="value" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -222,7 +232,7 @@ The header value format is invalid for this header name, or the header does not 
 
  The header `values` will be parsed and validated.
 
- If the specified header does not exist, the <xref:System.Net.Http.Headers.HttpHeaders.Add%2A> method inserts a new header into the list of header name/value pairs.
+ If the specified header does not exist, the <xref:System.Net.Http.Headers.HttpHeaders.Add*> method inserts a new header into the list of header name/value pairs.
 
  If the specified header is already present, `value` is added to the comma-separated list of values associated with the header.
 
@@ -259,6 +269,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -295,6 +307,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -319,7 +333,7 @@ The header value format is invalid for this header name, or the header does not 
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Collections.Generic.IEnumerable&lt;string&gt;&gt;&gt; GetEnumerator ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Collections.Generic.IEnumerable`1&lt;string&gt;&gt;&gt; GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.Http.Headers.HttpHeaders.GetEnumerator" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator(Of KeyValuePair(Of String, IEnumerable(Of String)))" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator(Of KeyValuePair(Of String, IEnumerable(Of String)))" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string, seq&lt;string&gt;&gt;&gt;&#xA;override this.GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string, seq&lt;string&gt;&gt;&gt;" Usage="httpHeaders.GetEnumerator " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerator&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^&gt;&gt; ^ GetEnumerator();" />
       <MemberSignature Language="VB.NET" Value="Public Iterator Overridable NotOverridable Function GetEnumerator () As IEnumerator(Of KeyValuePair(Of String, IEnumerable(Of String)))" FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -340,6 +354,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -387,6 +403,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -421,6 +439,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -455,6 +475,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -500,6 +522,8 @@ The header value format is invalid for this header name, or the header does not 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -545,6 +569,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -570,7 +596,7 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Returns a value that indicates whether a new header and its values were added to  the <see cref="T:System.Net.Http.Headers.HttpHeaders" /> collection without validating the provided information.</summary>
+        <summary>Returns a value that indicates whether a new header and its values were added to the <see cref="T:System.Net.Http.Headers.HttpHeaders" /> collection without validating the header values.</summary>
       </Docs>
     </MemberGroup>
     <Member MemberName="TryAddWithoutValidation">
@@ -580,7 +606,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Public Function TryAddWithoutValidation (name As String, values As IEnumerable(Of String)) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryAddWithoutValidation : string * seq&lt;string&gt; -&gt; bool" Usage="httpHeaders.TryAddWithoutValidation (name, values)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryAddWithoutValidation(System::String ^ name, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ values);" />
-      <MemberSignature Language="C#" Value="public bool TryAddWithoutValidation (string name, System.Collections.Generic.IEnumerable&lt;string?&gt; values);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public bool TryAddWithoutValidation (string name, System.Collections.Generic.IEnumerable&lt;string?&gt; values);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -595,6 +621,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -608,7 +636,7 @@ This member is an explicit interface member implementation. It can be used only 
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -621,7 +649,26 @@ This member is an explicit interface member implementation. It can be used only 
         <summary>Returns a value that indicates whether the specified header and its values were added to the <see cref="T:System.Net.Http.Headers.HttpHeaders" /> collection without validating the provided information.</summary>
         <returns>
           <see langword="true" /> if the specified header <paramref name="name" /> and <paramref name="values" /> could be added to the collection; otherwise <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+This method performs header name validation, returning `false` for invalid names. Header names are enforced to be valid HTTP tokens, where a token is defined as any set of ASCII letters, digits, or symbols from the ``"!#$%&'*+-.^_`|~"`` set, matching [RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html#name-collected-abnf)'s definition. Non-ASCII characters aren't allowed in a header name.
+
+This method doesn't perform any header value validation. Values added via this method are assumed to be trusted, and other application logic, such as <xref:System.Net.Http.HttpClient>, might misbehave if they're not well formed.
+
+Values added without validation might be observed when enumerating the collection or querying for the specific header name, even when the caller isn't using the <xref:System.Net.Http.Headers.HttpHeaders.NonValidated> view of the collection.
+
+> [!CAUTION]
+> This method must never be used with untrusted values, unless they were otherwise sufficiently validated.
+>
+> What constitutes "sufficient" validation can vary by use case. At a minimum, prohibit newline characters for protocol correctness, for example, `if (value.ContainsAny('\r', '\n', '\0')) throw ...`. This validation should ensure that the server application sees values in the same way as the client application, with the server now being responsible for properly sanitizing its own inputs.
+>
+> To guard against attacks such as request smuggling, callers are highly encouraged to validate that these values don't contain newline characters.
+
+          ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TryAddWithoutValidation">
@@ -631,7 +678,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Public Function TryAddWithoutValidation (name As String, value As String) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryAddWithoutValidation : string * string -&gt; bool" Usage="httpHeaders.TryAddWithoutValidation (name, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryAddWithoutValidation(System::String ^ name, System::String ^ value);" />
-      <MemberSignature Language="C#" Value="public bool TryAddWithoutValidation (string name, string? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public bool TryAddWithoutValidation (string name, string? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -646,6 +693,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -659,7 +708,7 @@ This member is an explicit interface member implementation. It can be used only 
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="value" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -672,7 +721,26 @@ This member is an explicit interface member implementation. It can be used only 
         <summary>Returns a value that indicates whether the specified header and its value were added to the <see cref="T:System.Net.Http.Headers.HttpHeaders" /> collection without validating the provided information.</summary>
         <returns>
           <see langword="true" /> if the specified header <paramref name="name" /> and <paramref name="value" /> could be added to the collection; otherwise <see langword="false" />.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+This method performs header name validation, returning `false` for invalid names. Header names are enforced to be valid HTTP tokens, where a token is defined as any set of ASCII letters, digits, or symbols from the ``"!#$%&'*+-.^_`|~"`` set, matching [RFC9110](https://www.rfc-editor.org/rfc/rfc9110.html#name-collected-abnf)'s definition. Non-ASCII characters aren't allowed in a header name.
+
+This method doesn't perform any header value validation. Values added via this method are assumed to be trusted, and other application logic, such as <xref:System.Net.Http.HttpClient>, might misbehave if they're not well formed.
+
+Values added without validation might be observed when enumerating the collection or querying for the specific header name, even when the caller isn't using the <xref:System.Net.Http.Headers.HttpHeaders.NonValidated> view of the collection.
+
+> [!CAUTION]
+> This method must never be used with untrusted values, unless they were otherwise sufficiently validated.
+>
+> What constitutes "sufficient" validation can vary by use case. At a minimum, prohibit newline characters for protocol correctness, for example, `if (value.ContainsAny('\r', '\n', '\0')) throw ...`. This validation should ensure that the server application sees values in the same way as the client application, with the server now being responsible for properly sanitizing its own inputs.
+>
+> To guard against attacks such as request smuggling, callers are highly encouraged to validate that these values don't contain newline characters.
+
+          ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TryGetValues">
@@ -682,7 +750,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Public Function TryGetValues (name As String, ByRef values As IEnumerable(Of String)) As Boolean" />
       <MemberSignature Language="F#" Value="member this.TryGetValues : string * seq -&gt; bool" Usage="httpHeaders.TryGetValues (name, values)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetValues(System::String ^ name, [Runtime::InteropServices::Out] System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ % values);" />
-      <MemberSignature Language="C#" Value="public bool TryGetValues (string name, out System.Collections.Generic.IEnumerable&lt;string&gt;? values);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public bool TryGetValues (string name, out System.Collections.Generic.IEnumerable&lt;string&gt;? values);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -697,6 +765,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -710,11 +780,11 @@ This member is an explicit interface member implementation. It can be used only 
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="values" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" RefType="out">
           <Attributes>
-            <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>

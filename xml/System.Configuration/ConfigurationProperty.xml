@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -76,9 +81,9 @@
 
  You can use a programmatic or a declarative (attributed) coding model to create a custom configuration element.
 
--   Programmatic Model. This model requires that you create a property for each element attribute to get and/or set its value and add it to the internal property bag of the underlying <see cref="T:System.Configuration.ConfigurationElement" /> base class.
+- Programmatic Model. This model requires that you create a property for each element attribute to get and/or set its value and add it to the internal property bag of the underlying <see cref="T:System.Configuration.ConfigurationElement" /> base class.
 
--   Declarative Model. This simpler model, also called attributed model, allows you to define an element attribute by using a property and decorate it with attributes. These attributes instruct the ASP.NET configuration system about the property types and their default values. With this information, obtained through reflection, the ASP.NET configuration system creates the element property objects for you and performs the required initialization.</para>
+- Declarative Model. This simpler model, also called attributed model, allows you to define an element attribute by using a property and decorate it with attributes. These attributes instruct the ASP.NET configuration system about the property types and their default values. With this information, obtained through reflection, the ASP.NET configuration system creates the element property objects for you and performs the required initialization.</para>
     </block>
     <forInternalUseOnly />
     <altmember cref="T:System.Configuration.ElementInformation" />
@@ -120,6 +125,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -155,6 +162,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -170,12 +179,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When you instantiate a <xref:System.Configuration.ConfigurationProperty> object using this constructor, the <xref:System.Configuration.ConfigurationProperty.IsRequired%2A> and <xref:System.Configuration.ConfigurationProperty.IsKey%2A> properties are set to `false`. Additionally, an instance made with this constructor will not function as a default collection-key property.
+ When you instantiate a <xref:System.Configuration.ConfigurationProperty> object using this constructor, the <xref:System.Configuration.ConfigurationProperty.IsRequired*> and <xref:System.Configuration.ConfigurationProperty.IsKey*> properties are set to `false`. Additionally, an instance made with this constructor will not function as a default collection-key property.
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%29?displayProperty=nameWithType> constructor to instantiate a configuration-property object.
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationProperty.%23ctor(System.String,System.Type,System.Object)?displayProperty=nameWithType> constructor to instantiate a configuration-property object.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet2":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet2":::
@@ -213,6 +222,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -230,7 +241,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to use <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%2CSystem.Configuration.ConfigurationPropertyOptions%29?displayProperty=nameWithType> constructor to instantiate a configuration-property object.
+ The following code example shows how to use <xref:System.Configuration.ConfigurationProperty.%23ctor(System.String,System.Type,System.Object,System.Configuration.ConfigurationPropertyOptions)?displayProperty=nameWithType> constructor to instantiate a configuration-property object.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet3":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet3":::
@@ -268,6 +279,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -289,7 +302,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows the kind of parameters to use when calling the <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%2CSystem.ComponentModel.TypeConverter%2CSystem.Configuration.ConfigurationValidatorBase%2CSystem.Configuration.ConfigurationPropertyOptions%29?displayProperty=nameWithType> constructor.
+ The following code example shows the kind of parameters to use when calling the <xref:System.Configuration.ConfigurationProperty.%23ctor(System.String,System.Type,System.Object,System.ComponentModel.TypeConverter,System.Configuration.ConfigurationValidatorBase,System.Configuration.ConfigurationPropertyOptions)?displayProperty=nameWithType> constructor.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet4":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet4":::
@@ -327,6 +340,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String" />
@@ -350,7 +365,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to use the <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%2CSystem.ComponentModel.TypeConverter%2CSystem.Configuration.ConfigurationValidatorBase%2CSystem.Configuration.ConfigurationPropertyOptions%2CSystem.String%29?displayProperty=nameWithType> constructor to instantiate a configuration-property object.
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationProperty.%23ctor(System.String,System.Type,System.Object,System.ComponentModel.TypeConverter,System.Configuration.ConfigurationValidatorBase,System.Configuration.ConfigurationPropertyOptions,System.String)?displayProperty=nameWithType> constructor to instantiate a configuration-property object.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet4":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet4":::
@@ -388,6 +403,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
@@ -399,7 +416,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to use the <xref:System.Configuration.ConfigurationProperty.Converter%2A> property to get the <xref:System.ComponentModel.TypeConverter> for a specified configuration-property object.
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationProperty.Converter> property to get the <xref:System.ComponentModel.TypeConverter> for a specified configuration-property object.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet5":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet5":::
@@ -438,6 +455,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -449,12 +468,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default value of a new <xref:System.Configuration.ConfigurationProperty> object is passed into its constructor. That same object will be returned by the <xref:System.Configuration.ConfigurationProperty.DefaultValue%2A> property.
+ The default value of a new <xref:System.Configuration.ConfigurationProperty> object is passed into its constructor. That same object will be returned by the <xref:System.Configuration.ConfigurationProperty.DefaultValue> property.
 
 
 
 ## Examples
- The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.DefaultValue%2A> for a specified property.
+ The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.DefaultValue*> for a specified property.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet6":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet6":::
@@ -492,6 +511,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -503,7 +524,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.Description%2A> for a specified property.
+ The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.Description*> for a specified property.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet11":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet11":::
@@ -540,6 +561,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -557,7 +580,6 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/bb398791(v=vs.100)">.NET Framework Targeting for Web Projects</related>
       </Docs>
     </Member>
     <Member MemberName="IsDefaultCollection">
@@ -582,6 +604,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -623,6 +647,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -635,12 +661,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can define a new <xref:System.Configuration.ConfigurationProperty> object to be the key for the containing element when implementing the <xref:System.Configuration.ConfigurationElement> element. If this flag is not used, the <xref:System.Configuration.ConfigurationProperty.IsKey%2A> property will return `false`.
+ You can define a new <xref:System.Configuration.ConfigurationProperty> object to be the key for the containing element when implementing the <xref:System.Configuration.ConfigurationElement> element. If this flag is not used, the <xref:System.Configuration.ConfigurationProperty.IsKey> property will return `false`.
 
 
 
 ## Examples
- The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.IsKey%2A> property for a specified property.
+ The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.IsKey> property for a specified property.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet7":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet7":::
@@ -678,6 +704,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -690,7 +718,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.IsRequired%2A> property value for a specified configuration-property object.
+ The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.IsRequired> property value for a specified configuration-property object.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet8":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet8":::
@@ -727,6 +755,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -744,7 +774,6 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/bb398791(v=vs.100)">.NET Framework Targeting for Web Projects</related>
       </Docs>
     </Member>
     <Member MemberName="IsVersionCheckRequired">
@@ -768,6 +797,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -787,7 +818,6 @@
  ]]></format>
         </remarks>
         <forInternalUseOnly />
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/bb398791(v=vs.100)">.NET Framework Targeting for Web Projects</related>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -812,6 +842,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -828,7 +860,7 @@
 
 
 ## Examples
- The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.Name%2A> for a specified property.
+ The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.Name*> for a specified property.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet9":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet9":::
@@ -866,6 +898,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -882,7 +916,7 @@
 
 
 ## Examples
- The following example shows how to get the <xref:System.Configuration.ConfigurationProperty.Type%2A> property value for a specified configuration-property object.
+ The following example shows how to get the <xref:System.Configuration.ConfigurationProperty.Type> property value for a specified configuration-property object.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet10":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet10":::
@@ -920,6 +954,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>
@@ -931,7 +967,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.Validator%2A> for a specified property.
+ The following code example shows how to get the <xref:System.Configuration.ConfigurationProperty.Validator*> for a specified property.
 
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs" id="Snippet12":::
  :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb" id="Snippet12":::

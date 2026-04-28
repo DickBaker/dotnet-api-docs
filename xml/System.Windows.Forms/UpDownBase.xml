@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Forms.ContainerControl</BaseTypeName>
@@ -37,11 +39,11 @@
       <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(true)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(true)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.ComponentModel.Designer("System.Windows.Forms.Design.UpDownBaseDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Designer("System.Windows.Forms.Design.UpDownBaseDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -49,35 +51,35 @@
   <Docs>
     <summary>Implements the basic functionality required by a spin box (also known as an up-down control).</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A spin box consists of a text box and a small vertical scroll bar, commonly referred to as a spin button control. The <xref:System.Windows.Forms.UpDownBase> class links the two controls and allows the user to change the display in the text box by clicking the up or down buttons or by entering the appropriate type of value directly into the text box. Use the spin box in cases where you want to limit the list of values a user can select, similar to a list box or combo box. Depending upon the type of list you want to display, the advantage to using a spin box is that it allows you to quickly set a range of valid values, rather than adding items one at a time. Implementing a spin box requires less data validation than a text box, as you can limit the data type when you derive a class from <xref:System.Windows.Forms.UpDownBase>. An example of this is the <xref:System.Windows.Forms.NumericUpDown> class, which limits the values to the numeric type and uses a <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> and <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> property to validate the data.  
-  
- To allow the user to use the arrow keys to change the contents of a spin box, set the <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A> property to `true`. To restrict the user to values you specify, set the <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> property to `true`. To control the alignment of text in the spin box, set the <xref:System.Windows.Forms.UpDownBase.TextAlign%2A> property. To set the alignment of the up and down buttons in relation to the text box portion of the control, set the <xref:System.Windows.Forms.UpDownBase.UpDownAlign%2A> property to either <xref:System.Windows.Forms.LeftRightAlignment.Left> or <xref:System.Windows.Forms.LeftRightAlignment.Right>.  
-  
- The <xref:System.Windows.Forms.UpDownBase.UpButton%2A> and <xref:System.Windows.Forms.UpDownBase.DownButton%2A> methods, when overridden, handle the clicking of the up or down buttons. When overridden, the <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> and <xref:System.Windows.Forms.UpDownBase.UpdateEditText%2A> methods validate the value (either selected or entered) and update the text displayed in the spin box. If the value fails validation, use the <xref:System.Windows.Forms.UpDownBase.Select%2A> method to select the text that is not valid. This allows the user to quickly correct the text by simply typing in a new value without having to manually select or delete the existing text.  
-  
- Starting with the .NET Framework 4.6, the <xref:System.Windows.Forms.UpDownBase> control will be resized based on the system DPI setting when the app.config file contains the following entry:  
-  
-```  
-<appSettings>  
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
-</appSettings>  
-  
-```  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.  
-  
- The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A spin box consists of a text box and a small vertical scroll bar, commonly referred to as a spin button control. The <xref:System.Windows.Forms.UpDownBase> class links the two controls and allows the user to change the display in the text box by clicking the up or down buttons or by entering the appropriate type of value directly into the text box. Use the spin box in cases where you want to limit the list of values a user can select, similar to a list box or combo box. Depending upon the type of list you want to display, the advantage to using a spin box is that it allows you to quickly set a range of valid values, rather than adding items one at a time. Implementing a spin box requires less data validation than a text box, as you can limit the data type when you derive a class from <xref:System.Windows.Forms.UpDownBase>. An example of this is the <xref:System.Windows.Forms.NumericUpDown> class, which limits the values to the numeric type and uses a <xref:System.Windows.Forms.NumericUpDown.Minimum*> and <xref:System.Windows.Forms.NumericUpDown.Maximum> property to validate the data.
+
+ To allow the user to use the arrow keys to change the contents of a spin box, set the <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys> property to `true`. To restrict the user to values you specify, set the <xref:System.Windows.Forms.UpDownBase.ReadOnly> property to `true`. To control the alignment of text in the spin box, set the <xref:System.Windows.Forms.UpDownBase.TextAlign> property. To set the alignment of the up and down buttons in relation to the text box portion of the control, set the <xref:System.Windows.Forms.UpDownBase.UpDownAlign> property to either <xref:System.Windows.Forms.LeftRightAlignment.Left> or <xref:System.Windows.Forms.LeftRightAlignment.Right>.
+
+ The <xref:System.Windows.Forms.UpDownBase.UpButton*> and <xref:System.Windows.Forms.UpDownBase.DownButton*> methods, when overridden, handle the clicking of the up or down buttons. When overridden, the <xref:System.Windows.Forms.UpDownBase.ValidateEditText*> and <xref:System.Windows.Forms.UpDownBase.UpdateEditText*> methods validate the value (either selected or entered) and update the text displayed in the spin box. If the value fails validation, use the <xref:System.Windows.Forms.UpDownBase.Select*> method to select the text that is not valid. This allows the user to quickly correct the text by simply typing in a new value without having to manually select or delete the existing text.
+
+ Starting with the .NET Framework 4.6, the <xref:System.Windows.Forms.UpDownBase> control will be resized based on the system DPI setting when the app.config file contains the following entry:
+
+```
+<appSettings>
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
+</appSettings>
+
+```
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.
+
+ The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <block subset="none" type="overrides">
@@ -104,6 +106,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -131,23 +135,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -158,11 +160,11 @@
         <value>
           <see langword="false" /> in all cases.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.AutoScroll%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.AutoScroll> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -185,23 +187,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -211,11 +211,11 @@
         <summary>Gets or sets the size of the auto-scroll margin.</summary>
         <value>A <see cref="T:System.Drawing.Size" /> that represents the height and width, in pixels, of the auto-scroll margin.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.AutoScrollMargin%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.AutoScrollMargin> property.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The <see cref="P:System.Drawing.Size.Height" /> or <see cref="P:System.Drawing.Size.Width" /> is less than 0.</exception>
@@ -239,23 +239,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -265,11 +263,11 @@
         <summary>Gets or sets the minimum size of the auto-scroll area.</summary>
         <value>A <see cref="T:System.Drawing.Size" /> that represents the minimum height and width, in pixels, of the scroll bars.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.AutoScrollMinSize%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.AutoScrollMinSize> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -291,23 +289,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(true)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -327,7 +323,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event AutoSizeChanged As EventHandler " />
       <MemberSignature Language="F#" Value="member this.AutoSizeChanged : EventHandler " Usage="member this.AutoSizeChanged : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ AutoSizeChanged;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? AutoSizeChanged;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? AutoSizeChanged;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -338,17 +334,19 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(true)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -359,21 +357,21 @@
       <Docs>
         <summary>Occurs when the value of the <see cref="P:System.Windows.Forms.UpDownBase.AutoSize" /> property changes.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- For more information about handling events, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
-   
-  
-## Examples  
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.UpDownBase.AutoSizeChanged> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.  
-  
- To run the example code, paste it into a project that contains an instance of a type that inherits from <xref:System.Windows.Forms.UpDownBase>, such as a <xref:System.Windows.Forms.NumericUpDown> or <xref:System.Windows.Forms.DomainUpDown>. Then name the instance `UpDownBase1` and ensure that the event handler is associated with the <xref:System.Windows.Forms.UpDownBase.AutoSizeChanged> event.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For more information about handling events, see [Handling and Raising Events](/dotnet/standard/events/).
+
+
+
+## Examples
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.UpDownBase.AutoSizeChanged> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+
+ To run the example code, paste it into a project that contains an instance of a type that inherits from <xref:System.Windows.Forms.UpDownBase>, such as a <xref:System.Windows.Forms.NumericUpDown> or <xref:System.Windows.Forms.DomainUpDown>. Then name the instance `UpDownBase1` and ensure that the event handler is associated with the <xref:System.Windows.Forms.UpDownBase.AutoSizeChanged> event.
+
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet380":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet380":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet380":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -396,6 +394,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Color</ReturnType>
@@ -413,7 +413,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Property BackgroundImage As Image" />
       <MemberSignature Language="F#" Value="member this.BackgroundImage : System.Drawing.Image with get, set" Usage="System.Windows.Forms.UpDownBase.BackgroundImage" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Drawing::Image ^ BackgroundImage { System::Drawing::Image ^ get(); void set(System::Drawing::Image ^ value); };" />
-      <MemberSignature Language="C#" Value="public override System.Drawing.Image? BackgroundImage { get; set; }" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image? BackgroundImage { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -425,13 +425,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
@@ -439,11 +441,7 @@
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -455,11 +453,11 @@
         <summary>Gets or sets the background image for the <see cref="T:System.Windows.Forms.UpDownBase" />.</summary>
         <value>The background image for the <see cref="T:System.Windows.Forms.UpDownBase" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.BackgroundImage%2A> property has no effect on the appearance of the <xref:System.Windows.Forms.UpDownBase> control; therefore, it is hidden in the designer and from IntelliSense.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.BackgroundImage> property has no effect on the appearance of the <xref:System.Windows.Forms.UpDownBase> control; therefore, it is hidden in the designer and from IntelliSense.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -471,7 +469,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event BackgroundImageChanged As EventHandler " />
       <MemberSignature Language="F#" Value="member this.BackgroundImageChanged : EventHandler " Usage="member this.BackgroundImageChanged : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ BackgroundImageChanged;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? BackgroundImageChanged;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? BackgroundImageChanged;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -483,6 +481,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -493,7 +493,7 @@
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -523,23 +523,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -549,11 +547,11 @@
         <summary>Gets or sets the layout of the <see cref="P:System.Windows.Forms.UpDownBase.BackgroundImage" /> of the <see cref="T:System.Windows.Forms.UpDownBase" />.</summary>
         <value>One of the <see cref="T:System.Windows.Forms.ImageLayout" /> values.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.BackgroundImageLayout%2A> property has no effect on the appearance of the <xref:System.Windows.Forms.UpDownBase> control; therefore, it is hidden in the designer and from IntelliSense.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.BackgroundImageLayout> property has no effect on the appearance of the <xref:System.Windows.Forms.UpDownBase> control; therefore, it is hidden in the designer and from IntelliSense.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -565,7 +563,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event BackgroundImageLayoutChanged As EventHandler " />
       <MemberSignature Language="F#" Value="member this.BackgroundImageLayoutChanged : EventHandler " Usage="member this.BackgroundImageLayoutChanged : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ BackgroundImageLayoutChanged;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? BackgroundImageLayoutChanged;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? BackgroundImageLayoutChanged;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -576,17 +574,19 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -617,6 +617,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -639,22 +641,22 @@
         <summary>Gets or sets the border style for the spin box (also known as an up-down control).</summary>
         <value>One of the <see cref="T:System.Windows.Forms.BorderStyle" /> values. The default value is <see cref="F:System.Windows.Forms.BorderStyle.Fixed3D" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can use the <xref:System.Windows.Forms.TextBoxBase.BorderStyle%2A> property to create borderless and flat controls in addition to the default three-dimensional control.  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.  
-  
- The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can use the <xref:System.Windows.Forms.TextBoxBase.BorderStyle> property to create borderless and flat controls in addition to the default three-dimensional control.
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.
+
+ The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value assigned is not one of the <see cref="T:System.Windows.Forms.BorderStyle" /> values.</exception>
@@ -679,6 +681,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -698,11 +702,11 @@
         <value>
           <see langword="true" /> if the <see cref="P:System.Windows.Forms.UpDownBase.Text" /> property is being changed internally by the <see cref="T:System.Windows.Forms.UpDownBase" /> class; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.ChangingText%2A> property acts as a flag for the <xref:System.Windows.Forms.UpDownBase> class. This property is used by derived classes to indicate when the class is changing the current <xref:System.Windows.Forms.UpDownBase.Text%2A> property internally. If this property is set to `false`, the control requires that the user is changing the <xref:System.Windows.Forms.UpDownBase.Text%2A> property and will set the <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> property to `true`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.ChangingText> property acts as a flag for the <xref:System.Windows.Forms.UpDownBase> class. This property is used by derived classes to indicate when the class is changing the current <xref:System.Windows.Forms.UpDownBase.Text> property internally. If this property is set to `false`, the control requires that the user is changing the <xref:System.Windows.Forms.UpDownBase.Text> property and will set the <xref:System.Windows.Forms.UpDownBase.UserEdit> property to `true`.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.UpDownBase.UserEdit" />
@@ -730,11 +734,11 @@
         <summary>Gets or sets the shortcut menu associated with the spin box (also known as an up-down control).</summary>
         <value>The <see cref="T:System.Windows.Forms.ContextMenu" /> associated with the spin box.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The preferred way to associate a shortcut menu with a tree node is with the <xref:System.Windows.Forms.UpDownBase.ContextMenuStrip%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The preferred way to associate a shortcut menu with a tree node is with the <xref:System.Windows.Forms.UpDownBase.ContextMenuStrip> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -746,7 +750,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Property ContextMenuStrip As ContextMenuStrip" />
       <MemberSignature Language="F#" Value="member this.ContextMenuStrip : System.Windows.Forms.ContextMenuStrip with get, set" Usage="System.Windows.Forms.UpDownBase.ContextMenuStrip" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::ContextMenuStrip ^ ContextMenuStrip { System::Windows::Forms::ContextMenuStrip ^ get(); void set(System::Windows::Forms::ContextMenuStrip ^ value); };" />
-      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip? ContextMenuStrip { get; set; }" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip? ContextMenuStrip { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -757,9 +761,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -771,11 +777,11 @@
         <summary>Gets or sets the shortcut menu for the spin box (also known as an up-down control).</summary>
         <value>The <see cref="T:System.Windows.Forms.ContextMenuStrip" /> associated with the control.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The shortcut menu appears when the user right-clicks the spin box.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The shortcut menu appears when the user right-clicks the spin box.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -793,6 +799,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
@@ -822,6 +830,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
@@ -850,6 +860,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Size</ReturnType>
@@ -904,23 +916,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -930,11 +940,11 @@
         <summary>Gets the dock padding settings for all edges of the <see cref="T:System.Windows.Forms.UpDownBase" /> control.</summary>
         <value>The dock paddings settings for this control.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.DockPadding%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase> control does not use the <xref:System.Windows.Forms.UpDownBase.DockPadding> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -957,6 +967,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -989,19 +1001,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1033,6 +1043,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Color</ReturnType>
@@ -1041,11 +1053,11 @@
         <summary>Gets or sets the foreground color of the spin box (also known as an up-down control).</summary>
         <value>The foreground <see cref="T:System.Drawing.Color" /> of the spin box.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.ForeColor%2A> property will change the color of the text in the textbox portion of the spin box.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.ForeColor> property will change the color of the text in the textbox portion of the spin box.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1068,6 +1080,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1091,22 +1105,22 @@
         <value>
           <see langword="true" /> if the control allows the use of the UP ARROW and DOWN ARROW keys to select values; otherwise, <see langword="false" />. The default value is <see langword="true" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A> property is set to `true` and the spin box (also known as an up-down control) has focus, the user can use the UP ARROW and DOWN ARROW keys to select values.  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.  
-  
- The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys> property is set to `true` and the spin box (also known as an up-down control) has focus, the user can use the UP ARROW and DOWN ARROW keys to select values.
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.
+
+ The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1128,6 +1142,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Size</ReturnType>
@@ -1136,11 +1152,11 @@
         <summary>Gets or sets the maximum size of the spin box (also known as an up-down control).</summary>
         <value>The <see cref="T:System.Drawing.Size" />, which is the maximum size of the spin box.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Regardless of the specified value, the <xref:System.Drawing.Size.Height%2A> of the maximum size will always be 0.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Regardless of the specified value, the <xref:System.Drawing.Size.Height*> of the maximum size will always be 0.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1162,6 +1178,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Size</ReturnType>
@@ -1179,7 +1197,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event MouseEnter As EventHandler " />
       <MemberSignature Language="F#" Value="member this.MouseEnter : EventHandler " Usage="member this.MouseEnter : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ MouseEnter;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? MouseEnter;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? MouseEnter;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1191,6 +1209,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1201,7 +1221,7 @@
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1221,7 +1241,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event MouseHover As EventHandler " />
       <MemberSignature Language="F#" Value="member this.MouseHover : EventHandler " Usage="member this.MouseHover : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ MouseHover;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? MouseHover;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? MouseHover;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1233,6 +1253,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1243,7 +1265,7 @@
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1263,7 +1285,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event MouseLeave As EventHandler " />
       <MemberSignature Language="F#" Value="member this.MouseLeave : EventHandler " Usage="member this.MouseLeave : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ MouseLeave;" />
-      <MemberSignature Language="C#" Value="public event EventHandler? MouseLeave;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event EventHandler? MouseLeave;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1275,6 +1297,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1285,7 +1309,7 @@
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1305,7 +1329,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event MouseMove As MouseEventHandler " />
       <MemberSignature Language="F#" Value="member this.MouseMove : System.Windows.Forms.MouseEventHandler " Usage="member this.MouseMove : System.Windows.Forms.MouseEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::MouseEventHandler ^ MouseMove;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler? MouseMove;" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler? MouseMove;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1317,6 +1341,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1327,7 +1353,7 @@
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1347,7 +1373,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnChanged (source As Object, e As EventArgs)" />
       <MemberSignature Language="F#" Value="abstract member OnChanged : obj * EventArgs -&gt; unit&#xA;override this.OnChanged : obj * EventArgs -&gt; unit" Usage="upDownBase.OnChanged (source, e)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnChanged(System::Object ^ source, EventArgs ^ e);" />
-      <MemberSignature Language="C#" Value="protected virtual void OnChanged (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual void OnChanged (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1359,6 +1385,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1366,7 +1394,7 @@
       <Parameters>
         <Parameter Name="source" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1399,6 +1427,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1410,13 +1440,13 @@
         <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.FontChanged" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnFontChanged%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnFontChanged*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1442,6 +1472,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1453,13 +1485,13 @@
         <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.HandleCreated" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnHandleCreated%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnHandleCreated*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1484,24 +1516,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="e" Type="System.EventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="e" Type="System.EventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.HandleDestroyed" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnHandleDestroyed%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnHandleDestroyed*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1527,6 +1561,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1538,18 +1574,18 @@
         <param name="e">A <see cref="T:System.Windows.Forms.LayoutEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.Layout" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnLayout%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnLayout*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>When overriding <see cref="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> method so that registered delegates receive the event.  
-  
+          <para>When overriding <see cref="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> method so that registered delegates receive the event.
+
  Example</para>
         </block>
       </Docs>
@@ -1571,24 +1607,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.MouseDown" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnMouseDown%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnMouseDown*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1613,26 +1651,28 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="mevent">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.MouseUp" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If a double-click occurs, the <xref:System.Windows.Forms.UpDownBase.OnMouseUp%2A> method will raise the <xref:System.Windows.Forms.Control.DoubleClick> event.  
-  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnMouseUp%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If a double-click occurs, the <xref:System.Windows.Forms.UpDownBase.OnMouseUp*> method will raise the <xref:System.Windows.Forms.Control.DoubleClick> event.
+
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnMouseUp*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1658,6 +1698,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1669,15 +1711,15 @@
         <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.MouseWheel" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the spin box (also known as an up-down control) has focus when this event occurs, the direction the user scrolled the mouse wheel is determined, and either the <xref:System.Windows.Forms.UpDownBase.UpButton%2A> or <xref:System.Windows.Forms.UpDownBase.DownButton%2A> method is called.  
-  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnMouseWheel%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the spin box (also known as an up-down control) has focus when this event occurs, the direction the user scrolled the mouse wheel is determined, and either the <xref:System.Windows.Forms.UpDownBase.UpButton*> or <xref:System.Windows.Forms.UpDownBase.DownButton*> method is called.
+
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnMouseWheel*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1704,24 +1746,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.Paint" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnPaint%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnPaint*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1736,7 +1780,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTextBoxKeyDown (source As Object, e As KeyEventArgs)" />
       <MemberSignature Language="F#" Value="abstract member OnTextBoxKeyDown : obj * System.Windows.Forms.KeyEventArgs -&gt; unit&#xA;override this.OnTextBoxKeyDown : obj * System.Windows.Forms.KeyEventArgs -&gt; unit" Usage="upDownBase.OnTextBoxKeyDown (source, e)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTextBoxKeyDown(System::Object ^ source, System::Windows::Forms::KeyEventArgs ^ e);" />
-      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxKeyDown (object? source, System.Windows.Forms.KeyEventArgs e);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxKeyDown (object? source, System.Windows.Forms.KeyEventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1748,6 +1792,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1755,7 +1801,7 @@
       <Parameters>
         <Parameter Name="source" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1768,15 +1814,15 @@
         <param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.KeyDown" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A> property is set to `true` and the user presses the UP ARROW key, the <xref:System.Windows.Forms.UpDownBase.UpButton%2A> method is called. Likewise, if the user presses the DOWN ARROW key, the <xref:System.Windows.Forms.UpDownBase.DownButton%2A> method is called.  
-  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnTextBoxKeyDown%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys> property is set to `true` and the user presses the UP ARROW key, the <xref:System.Windows.Forms.UpDownBase.UpButton*> method is called. Likewise, if the user presses the DOWN ARROW key, the <xref:System.Windows.Forms.UpDownBase.DownButton*> method is called.
+
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnTextBoxKeyDown*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1795,7 +1841,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTextBoxKeyPress (source As Object, e As KeyPressEventArgs)" />
       <MemberSignature Language="F#" Value="abstract member OnTextBoxKeyPress : obj * System.Windows.Forms.KeyPressEventArgs -&gt; unit&#xA;override this.OnTextBoxKeyPress : obj * System.Windows.Forms.KeyPressEventArgs -&gt; unit" Usage="upDownBase.OnTextBoxKeyPress (source, e)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTextBoxKeyPress(System::Object ^ source, System::Windows::Forms::KeyPressEventArgs ^ e);" />
-      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxKeyPress (object? source, System.Windows.Forms.KeyPressEventArgs e);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxKeyPress (object? source, System.Windows.Forms.KeyPressEventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1807,6 +1853,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1814,7 +1862,7 @@
       <Parameters>
         <Parameter Name="source" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1827,13 +1875,13 @@
         <param name="e">A <see cref="T:System.Windows.Forms.KeyPressEventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.KeyPress" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnTextBoxKeyPress%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnTextBoxKeyPress*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1849,7 +1897,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTextBoxLostFocus (source As Object, e As EventArgs)" />
       <MemberSignature Language="F#" Value="abstract member OnTextBoxLostFocus : obj * EventArgs -&gt; unit&#xA;override this.OnTextBoxLostFocus : obj * EventArgs -&gt; unit" Usage="upDownBase.OnTextBoxLostFocus (source, e)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTextBoxLostFocus(System::Object ^ source, EventArgs ^ e);" />
-      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxLostFocus (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxLostFocus (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1861,6 +1909,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1868,7 +1918,7 @@
       <Parameters>
         <Parameter Name="source" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1881,15 +1931,15 @@
         <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.LostFocus" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method validates the text in the text box portion of the control when the spin box (also known as an up-down control) loses focus.  
-  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnTextBoxLostFocus%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method validates the text in the text box portion of the control when the spin box (also known as an up-down control) loses focus.
+
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnTextBoxLostFocus*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1905,7 +1955,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTextBoxResize (source As Object, e As EventArgs)" />
       <MemberSignature Language="F#" Value="abstract member OnTextBoxResize : obj * EventArgs -&gt; unit&#xA;override this.OnTextBoxResize : obj * EventArgs -&gt; unit" Usage="upDownBase.OnTextBoxResize (source, e)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTextBoxResize(System::Object ^ source, EventArgs ^ e);" />
-      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxResize (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxResize (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1917,6 +1967,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1924,7 +1976,7 @@
       <Parameters>
         <Parameter Name="source" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1937,15 +1989,15 @@
         <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.Resize" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method adjusts the size of the spin box (also known as an up-down control) when the text box portion of the control is resized.  
-  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnTextBoxResize%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method adjusts the size of the spin box (also known as an up-down control) when the text box portion of the control is resized.
+
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnTextBoxResize*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -1961,7 +2013,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTextBoxTextChanged (source As Object, e As EventArgs)" />
       <MemberSignature Language="F#" Value="abstract member OnTextBoxTextChanged : obj * EventArgs -&gt; unit&#xA;override this.OnTextBoxTextChanged : obj * EventArgs -&gt; unit" Usage="upDownBase.OnTextBoxTextChanged (source, e)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTextBoxTextChanged(System::Object ^ source, EventArgs ^ e);" />
-      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxTextChanged (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxTextChanged (object? source, EventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1973,6 +2025,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1980,7 +2034,7 @@
       <Parameters>
         <Parameter Name="source" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1993,13 +2047,13 @@
         <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
         <summary>Raises the <see cref="E:System.Windows.Forms.Control.TextChanged" /> event.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).  
-  
- The <xref:System.Windows.Forms.UpDownBase.OnTextBoxTextChanged%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Raising an event invokes the event handler through a delegate. For more information, see [Handling and Raising Events](/dotnet/standard/events/).
+
+ The <xref:System.Windows.Forms.UpDownBase.OnTextBoxTextChanged*> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -2026,23 +2080,21 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2052,20 +2104,20 @@
         <summary>Gets the height of the spin box (also known as an up-down control).</summary>
         <value>The height, in pixels, of the spin box.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.PreferredHeight%2A> property value is based on the <xref:System.Windows.Forms.TextBoxBase.PreferredHeight%2A> property of the text box portion of the control and is adjusted for the style of border.  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control, two <xref:System.Windows.Forms.ComboBox> controls, and three <xref:System.Windows.Forms.CheckBox> controls created on a form. Label the <xref:System.Windows.Forms.ComboBox> controls <xref:System.Windows.Forms.UpDownBase.BorderStyle%2A> and <xref:System.Windows.Forms.UpDownBase.TextAlign%2A>. Label the <xref:System.Windows.Forms.CheckBox> controls <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, and <xref:System.Windows.Forms.UpDownBase.UpDownAlign%2A>. The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box. Add the following items to the combo box labeled BorderStyle: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to the combo box labeled TextAlign: `Left`, `Right`, and `Center`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.PreferredHeight> property value is based on the <xref:System.Windows.Forms.TextBoxBase.PreferredHeight> property of the text box portion of the control and is adjusted for the style of border.
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control, two <xref:System.Windows.Forms.ComboBox> controls, and three <xref:System.Windows.Forms.CheckBox> controls created on a form. Label the <xref:System.Windows.Forms.ComboBox> controls <xref:System.Windows.Forms.UpDownBase.BorderStyle*> and <xref:System.Windows.Forms.UpDownBase.TextAlign*>. Label the <xref:System.Windows.Forms.CheckBox> controls <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys*>, <xref:System.Windows.Forms.UpDownBase.ReadOnly*>, and <xref:System.Windows.Forms.UpDownBase.UpDownAlign*>. The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box. Add the following items to the combo box labeled BorderStyle: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to the combo box labeled TextAlign: `Left`, `Right`, and `Center`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase.BorderStyle Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/PreferredHeight/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase.BorderStyle Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/PreferredHeight/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.TextBoxBase.PreferredHeight" />
@@ -2089,6 +2141,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2104,23 +2158,23 @@
         <value>
           <see langword="true" /> if the text can be changed by the use of the up or down buttons only; otherwise, <see langword="false" />. The default value is <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By setting the <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> property to `true`, you will eliminate the need for much validation of the <xref:System.Windows.Forms.UpDownBase.Text%2A> property. The user will be restricted to the use of the up and down buttons to change the <xref:System.Windows.Forms.UpDownBase.Text%2A> values. It will only allow them to select values you specify.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By setting the <xref:System.Windows.Forms.UpDownBase.ReadOnly> property to `true`, you will eliminate the need for much validation of the <xref:System.Windows.Forms.UpDownBase.Text> property. The user will be restricted to the use of the up and down buttons to change the <xref:System.Windows.Forms.UpDownBase.Text*> values. It will only allow them to select values you specify.
+
 > [!NOTE]
->  In the derived class <xref:System.Windows.Forms.DomainUpDown>, the behavior described is slightly different. When <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> is set to `true` and a key is pressed, the control selects the first item in the collection where the first character matches the key pressed.  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control, two <xref:System.Windows.Forms.ComboBox> controls, and three <xref:System.Windows.Forms.CheckBox> controls created on a form. Label the <xref:System.Windows.Forms.ComboBox> controls <xref:System.Windows.Forms.UpDownBase.BorderStyle%2A> and <xref:System.Windows.Forms.UpDownBase.TextAlign%2A>. Label the <xref:System.Windows.Forms.CheckBox> controls <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, and <xref:System.Windows.Forms.UpDownBase.UpDownAlign%2A>. The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box. Add the following items to the combo box labeled BorderStyle: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to the combo box labeled TextAlign: `Left`, `Right`, and `Center`.  
-  
+>  In the derived class <xref:System.Windows.Forms.DomainUpDown>, the behavior described is slightly different. When <xref:System.Windows.Forms.UpDownBase.ReadOnly*> is set to `true` and a key is pressed, the control selects the first item in the collection where the first character matches the key pressed.
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control, two <xref:System.Windows.Forms.ComboBox> controls, and three <xref:System.Windows.Forms.CheckBox> controls created on a form. Label the <xref:System.Windows.Forms.ComboBox> controls <xref:System.Windows.Forms.UpDownBase.BorderStyle*> and <xref:System.Windows.Forms.UpDownBase.TextAlign*>. Label the <xref:System.Windows.Forms.CheckBox> controls <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys*>, <xref:System.Windows.Forms.UpDownBase.ReadOnly*>, and <xref:System.Windows.Forms.UpDownBase.UpDownAlign*>. The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box. Add the following items to the combo box labeled BorderStyle: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to the combo box labeled TextAlign: `Left`, `Right`, and `Center`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.UpDownBase.Text" />
@@ -2142,13 +2196,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="deviceDpiOld" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="deviceDpiNew" Type="System.Int32" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="deviceDpiOld" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="deviceDpiNew" Type="System.Int32" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="deviceDpiOld">The DPI value prior to the change.</param>
@@ -2175,6 +2231,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2188,20 +2246,20 @@
         <param name="length">The total number of characters to be selected.</param>
         <summary>Selects a range of text in the spin box (also known as an up-down control) specifying the starting position and number of characters to select.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.Select%2A> method can be used when the spin box gets focus, or when the <xref:System.Windows.Forms.UpDownBase.Text%2A> property fails data validation. When adding the validation code for the <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> method in a derived class, call the <xref:System.Windows.Forms.UpDownBase.Select%2A> method when validation fails.  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown>. This code requires that a <xref:System.Windows.Forms.NumericUpDown> control and a <xref:System.Windows.Forms.Button> have been created on a form and the <xref:System.Drawing> namespace has been added as a reference. On the <xref:System.Windows.Forms.Control.Click> event for the button, the point size of text in the <xref:System.Windows.Forms.NumericUpDown> control increases. This prompts the control to adjust its <xref:System.Windows.Forms.UpDownBase.PreferredHeight%2A> property so that all the text is visible in the control. After the user enters a new value and leaves the <xref:System.Windows.Forms.NumericUpDown> control, the text is converted to a numeric value from a string value and validated to be between the <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> and <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> values. If the value is not valid, a <xref:System.Windows.Forms.MessageBox> is displayed with the error, and the <xref:System.Windows.Forms.UpDownBase.Select%2A> method will select the text so the user can enter a new value.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.Select*> method can be used when the spin box gets focus, or when the <xref:System.Windows.Forms.UpDownBase.Text> property fails data validation. When adding the validation code for the <xref:System.Windows.Forms.UpDownBase.ValidateEditText*> method in a derived class, call the <xref:System.Windows.Forms.UpDownBase.Select*> method when validation fails.
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown>. This code requires that a <xref:System.Windows.Forms.NumericUpDown> control and a <xref:System.Windows.Forms.Button> have been created on a form and the <xref:System.Drawing> namespace has been added as a reference. On the <xref:System.Windows.Forms.Control.Click> event for the button, the point size of text in the <xref:System.Windows.Forms.NumericUpDown> control increases. This prompts the control to adjust its <xref:System.Windows.Forms.UpDownBase.PreferredHeight> property so that all the text is visible in the control. After the user enters a new value and leaves the <xref:System.Windows.Forms.NumericUpDown> control, the text is converted to a numeric value from a string value and validated to be between the <xref:System.Windows.Forms.NumericUpDown.Minimum*> and <xref:System.Windows.Forms.NumericUpDown.Maximum*> values. If the value is not valid, a <xref:System.Windows.Forms.MessageBox> is displayed with the error, and the <xref:System.Windows.Forms.UpDownBase.Select*> method will select the text so the user can enter a new value.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase.Text Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Select/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase.Text Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Select/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.Windows.Forms.UpDownBase.ValidateEditText" />
@@ -2257,6 +2315,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2271,20 +2331,20 @@
         <summary>Gets or sets the text displayed in the spin box (also known as an up-down control).</summary>
         <value>The string value displayed in the spin box.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.UpDownBase.UpdateEditText%2A> method is called if the <xref:System.Windows.Forms.UpDownBase.Text%2A> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> property is set to `true`. The <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> method is called if the <xref:System.Windows.Forms.UpDownBase.Text%2A> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> property is set to `false`.  
-  
-   
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown>. This code requires that a <xref:System.Windows.Forms.NumericUpDown> control and a <xref:System.Windows.Forms.Button> have been created on a form and the <xref:System.Drawing> namespace has been added as a reference. On the <xref:System.Windows.Forms.Control.Click> event for the button, the point size of text in the <xref:System.Windows.Forms.NumericUpDown> control increases. This prompts the control to adjust its <xref:System.Windows.Forms.UpDownBase.PreferredHeight%2A> property so all the text is visible in the control. After the user enters a new value and leaves the <xref:System.Windows.Forms.NumericUpDown> control, the text is converted to a numeric value from a string value and validated to be between the <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> and <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> values. If the value is not valid, a <xref:System.Windows.Forms.MessageBox> is displayed with the error, and the <xref:System.Windows.Forms.UpDownBase.Select%2A> method will select the text so the user can enter a new value.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.UpDownBase.UpdateEditText*> method is called if the <xref:System.Windows.Forms.UpDownBase.Text> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit> property is set to `true`. The <xref:System.Windows.Forms.UpDownBase.ValidateEditText*> method is called if the <xref:System.Windows.Forms.UpDownBase.Text> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit> property is set to `false`.
+
+
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown>. This code requires that a <xref:System.Windows.Forms.NumericUpDown> control and a <xref:System.Windows.Forms.Button> have been created on a form and the <xref:System.Drawing> namespace has been added as a reference. On the <xref:System.Windows.Forms.Control.Click> event for the button, the point size of text in the <xref:System.Windows.Forms.NumericUpDown> control increases. This prompts the control to adjust its <xref:System.Windows.Forms.UpDownBase.PreferredHeight> property so all the text is visible in the control. After the user enters a new value and leaves the <xref:System.Windows.Forms.NumericUpDown> control, the text is converted to a numeric value from a string value and validated to be between the <xref:System.Windows.Forms.NumericUpDown.Minimum*> and <xref:System.Windows.Forms.NumericUpDown.Maximum*> values. If the value is not valid, a <xref:System.Windows.Forms.MessageBox> is displayed with the error, and the <xref:System.Windows.Forms.UpDownBase.Select*> method will select the text so the user can enter a new value.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase.Text Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Select/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase.Text Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Select/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.UpDownBase.UserEdit" />
@@ -2310,6 +2370,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2328,17 +2390,17 @@
         <summary>Gets or sets the alignment of the text in the spin box (also known as an up-down control).</summary>
         <value>One of the <see cref="T:System.Windows.Forms.HorizontalAlignment" /> values. The default value is <see cref="F:System.Windows.Forms.HorizontalAlignment.Left" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.  
-  
- The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.
+
+ The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value assigned is not one of the <see cref="T:System.Windows.Forms.HorizontalAlignment" /> values.</exception>
@@ -2363,6 +2425,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2395,6 +2459,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2428,6 +2494,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2450,17 +2518,17 @@
         <summary>Gets or sets the alignment of the up and down buttons on the spin box (also known as an up-down control).</summary>
         <value>One of the <see cref="T:System.Windows.Forms.LeftRightAlignment" /> values. The default value is <see cref="F:System.Windows.Forms.LeftRightAlignment.Right" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.  
-  
- The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example uses the derived class <xref:System.Windows.Forms.NumericUpDown> and sets some of its properties derived from <xref:System.Windows.Forms.UpDownBase>. This code requires that you have a <xref:System.Windows.Forms.NumericUpDown> control named `numericUpDown1`, two <xref:System.Windows.Forms.ComboBox> controls named `comboBox1` and `comboBox2`, and three <xref:System.Windows.Forms.CheckBox> controls named `checkBox1`, `checkBox2`, and `checkBox2` created on a form. Add the following items to `comboBox1`: `None`, `Fixed3D`, and `FixedSingle`. Add the following items to `comboBox2`: `Left`, `Right`, and `Center`.
+
+ The code allows you to change the property values at run time and see how each affects the appearance and behavior of the spin box.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/UpDownBase/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/UpDownBase/Overview/source.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The value assigned is not one of the <see cref="T:System.Windows.Forms.LeftRightAlignment" /> values.</exception>
@@ -2485,6 +2553,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2504,11 +2574,11 @@
         <value>
           <see langword="true" /> if the user has changed the <see cref="P:System.Windows.Forms.UpDownBase.Text" /> property; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.UpDownBase.Text%2A> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> property is set to `true`, the <xref:System.Windows.Forms.UpDownBase.UpdateEditText%2A> method is called. If the <xref:System.Windows.Forms.UpDownBase.Text%2A> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> property is set to `false`, the <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> method is called.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.UpDownBase.Text> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit> property is set to `true`, the <xref:System.Windows.Forms.UpDownBase.UpdateEditText*> method is called. If the <xref:System.Windows.Forms.UpDownBase.Text> property is set while the <xref:System.Windows.Forms.UpDownBase.UserEdit> property is set to `false`, the <xref:System.Windows.Forms.UpDownBase.ValidateEditText*> method is called.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.UpDownBase.Text" />
@@ -2534,6 +2604,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2542,11 +2614,11 @@
       <Docs>
         <summary>When overridden in a derived class, validates the text displayed in the spin box (also known as an up-down control).</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Some examples of validation include comparing the text entered to the data type set in your derived class, comparing the text to a list of values, or verifying the text to be within a range of values.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Some examples of validation include comparing the text entered to the data type set in your derived class, comparing the text to a list of values, or verifying the text to be within a range of values.
+
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
@@ -2574,6 +2646,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>

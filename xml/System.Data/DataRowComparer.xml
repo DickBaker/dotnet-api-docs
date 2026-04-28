@@ -19,12 +19,18 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Data.DataSetExtensions" FromVersion="10.0.0.0" To="System.Data.Common" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Data.DataSetExtensions" FromVersion="11.0.0.0" To="System.Data.Common" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.Data.DataSetExtensions" FromVersion="4.0.0.0" To="System.Data.Common" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -43,7 +49,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -51,15 +57,15 @@
   <Docs>
     <summary>Returns a singleton instance of the <see cref="T:System.Data.DataRowComparer`1" /> class.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Data.DataRowComparer%601> class is used to compare the values of the <xref:System.Data.DataRow> objects and does not compare the object references.  
-  
- This class cannot be directly instantiated.  Instead, the <xref:System.Data.DataRowComparer.Default%2A> property must be used to return a singleton instance of the <xref:System.Data.DataRowComparer%601> class.  
-  
- This class is stateless.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Data.DataRowComparer`1> class is used to compare the values of the <xref:System.Data.DataRow> objects and does not compare the object references.
+
+ This class cannot be directly instantiated.  Instead, the <xref:System.Data.DataRowComparer.Default> property must be used to return a singleton instance of the <xref:System.Data.DataRowComparer`1> class.
+
+ This class is stateless.
+
  ]]></format>
     </remarks>
     <related type="Article" href="/dotnet/framework/data/adonet/comparing-datarows-linq-to-dataset">Comparing DataRows</related>
@@ -88,6 +94,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -100,11 +108,11 @@
         <summary>Gets a singleton instance of <see cref="T:System.Data.DataRowComparer`1" />. This property is read-only.</summary>
         <value>An instance of a <see cref="T:System.Data.DataRowComparer`1" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property is read-only.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property is read-only.
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/framework/data/adonet/comparing-datarows-linq-to-dataset">Comparing DataRows</related>

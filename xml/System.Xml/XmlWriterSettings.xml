@@ -18,6 +18,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Xml</AssemblyName>
@@ -32,6 +34,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.Xml" FromVersion="4.0.0.0" To="System.Xml.ReaderWriter" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.ReaderWriter" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.ReaderWriter" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.ReaderWriter" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.ReaderWriter" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Xml.ReaderWriter" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -43,7 +47,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -54,10 +58,10 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Xml.XmlWriter.Create%2A> method is the preferred mechanism for obtaining <xref:System.Xml.XmlWriter> instances. The <xref:System.Xml.XmlWriter.Create%2A> method uses the <xref:System.Xml.XmlWriterSettings> class to specify which features to implement in the <xref:System.Xml.XmlWriter> object that is created.
+ The <xref:System.Xml.XmlWriter.Create*> method is the preferred mechanism for obtaining <xref:System.Xml.XmlWriter> instances. The <xref:System.Xml.XmlWriter.Create*> method uses the <xref:System.Xml.XmlWriterSettings> class to specify which features to implement in the <xref:System.Xml.XmlWriter> object that is created.
 
 > [!NOTE]
->  If you're using the <xref:System.Xml.XmlWriter> object with the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method, you should use the <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A> property to obtain an <xref:System.Xml.XmlWriterSettings> object with the correct settings. This ensures that the created <xref:System.Xml.XmlWriter> object has the correct output settings.
+> If you're using the <xref:System.Xml.XmlWriter> object with the <xref:System.Xml.Xsl.XslCompiledTransform.Transform*> method, you should use the <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings> property to obtain an <xref:System.Xml.XmlWriterSettings> object with the correct settings. This ensures that the created <xref:System.Xml.XmlWriter> object has the correct output settings.
 
  The <xref:System.Xml.XmlWriterSettings> class provides properties that control data conformance and output format.
 
@@ -65,21 +69,21 @@
 
 |Property|Specifies|Value|Default|
 |--------------|---------------|-----------|-------------|
-|<xref:System.Xml.XmlWriterSettings.CheckCharacters%2A>|Whether to check that characters are in the legal XML character set, as defined by W3C.|`true` or `false`|`true`|
-|<xref:System.Xml.XmlWriterSettings.ConformanceLevel%2A>|Whether to check that output is a well-formed XML 1.0 document or fragment.|<xref:System.Xml.ConformanceLevel.Document?displayProperty=nameWithType> (document-level), <xref:System.Xml.ConformanceLevel.Fragment> (fragment-level), or <xref:System.Xml.ConformanceLevel.Auto> (auto-detection)|<xref:System.Xml.ConformanceLevel.Document?displayProperty=nameWithType> (document-level conformance)|
-|<xref:System.Xml.XmlWriterSettings.WriteEndDocumentOnClose%2A>|Whether to add closing tags to all unclosed elements when the <xref:System.Xml.XmlWriter.Close%2A> method is called.|`true` or `false`|`true`|
+|<xref:System.Xml.XmlWriterSettings.CheckCharacters>|Whether to check that characters are in the legal XML character set, as defined by W3C.|`true` or `false`|`true`|
+|<xref:System.Xml.XmlWriterSettings.ConformanceLevel>|Whether to check that output is a well-formed XML 1.0 document or fragment.|<xref:System.Xml.ConformanceLevel.Document?displayProperty=nameWithType> (document-level), <xref:System.Xml.ConformanceLevel.Fragment> (fragment-level), or <xref:System.Xml.ConformanceLevel.Auto> (auto-detection)|<xref:System.Xml.ConformanceLevel.Document?displayProperty=nameWithType> (document-level conformance)|
+|<xref:System.Xml.XmlWriterSettings.WriteEndDocumentOnClose>|Whether to add closing tags to all unclosed elements when the <xref:System.Xml.XmlWriter.Close*> method is called.|`true` or `false`|`true`|
 
  To specify output format, use these properties:
 
 |Property|Specifies|Value|Default|
 |--------------|---------------|-----------|-------------|
-|<xref:System.Xml.XmlWriterSettings.Encoding%2A>|Text encoding to use.|<xref:System.Text.Encoding?displayProperty=nameWithType> value|<xref:System.Text.Encoding.UTF8?displayProperty=nameWithType>|
-|<xref:System.Xml.XmlWriterSettings.Indent%2A>|Whether to indent elements|`true` or `false`|`false` (no indentation)|
-|<xref:System.Xml.XmlWriterSettings.IndentChars%2A>|Character string to use when indenting (used when <xref:System.Xml.XmlWriterSettings.Indent%2A> is set to `true`).|String|Two spaces|
-|<xref:System.Xml.XmlWriterSettings.NewLineChars%2A>|Character string to use for line breaks.|String|`\r\n` (carriage return, line feed) for non-Unix platforms, or `\n` (line feed) for Unix platforms|
-|<xref:System.Xml.XmlWriterSettings.NewLineHandling%2A>|How to handle newline characters.|<xref:System.Xml.NewLineHandling?displayProperty=nameWithType> value: <xref:System.Xml.NewLineHandling.Entitize> (normalize), <xref:System.Xml.NewLineHandling.Replace> (replace), or <xref:System.Xml.NewLineHandling.None> (leave unchanged)|<xref:System.Xml.NewLineHandling.Replace> (replace with characters specified by <xref:System.Xml.XmlWriterSettings.NewLineChars%2A>)|
-|<xref:System.Xml.XmlWriterSettings.NewLineOnAttributes%2A>|Whether to write attributes on individual lines (has no effect when <xref:System.Xml.XmlWriterSettings.Indent%2A> is `false`).|`true` or `false`|`false`|
-|<xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A>|Whether to write an XML declaration.|`true` or `false`|`false`|
+|<xref:System.Xml.XmlWriterSettings.Encoding>|Text encoding to use.|<xref:System.Text.Encoding?displayProperty=nameWithType> value|<xref:System.Text.Encoding.UTF8?displayProperty=nameWithType>|
+|<xref:System.Xml.XmlWriterSettings.Indent>|Whether to indent elements|`true` or `false`|`false` (no indentation)|
+|<xref:System.Xml.XmlWriterSettings.IndentChars>|Character string to use when indenting (used when <xref:System.Xml.XmlWriterSettings.Indent> is set to `true`).|String|Two spaces|
+|<xref:System.Xml.XmlWriterSettings.NewLineChars>|Character string to use for line breaks.|String|`\r\n` (carriage return, line feed) for non-Unix platforms, or `\n` (line feed) for Unix platforms|
+|<xref:System.Xml.XmlWriterSettings.NewLineHandling>|How to handle newline characters.|<xref:System.Xml.NewLineHandling?displayProperty=nameWithType> value: <xref:System.Xml.NewLineHandling.Entitize> (normalize), <xref:System.Xml.NewLineHandling.Replace> (replace), or <xref:System.Xml.NewLineHandling.None> (leave unchanged)|<xref:System.Xml.NewLineHandling.Replace> (replace with characters specified by <xref:System.Xml.XmlWriterSettings.NewLineChars>)|
+|<xref:System.Xml.XmlWriterSettings.NewLineOnAttributes>|Whether to write attributes on individual lines (has no effect when <xref:System.Xml.XmlWriterSettings.Indent> is `false`).|`true` or `false`|`false`|
+|<xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration>|Whether to write an XML declaration.|`true` or `false`|`false`|
 
 
 
@@ -123,6 +127,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -146,18 +152,18 @@
 
 |Property|Initial Value|
 |--------------|-------------------|
-|<xref:System.Xml.XmlWriterSettings.Async%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.CheckCharacters%2A>|`true`.|
-|<xref:System.Xml.XmlWriterSettings.CloseOutput%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.ConformanceLevel%2A>|<xref:System.Xml.ConformanceLevel.Document>.|
-|<xref:System.Xml.XmlWriterSettings.Encoding%2A>|`Encoding.UTF8`.|
-|<xref:System.Xml.XmlWriterSettings.Indent%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.IndentChars%2A>|Two spaces.|
-|<xref:System.Xml.XmlWriterSettings.NewLineChars%2A>|`\r\n` (carriage return, line feed) for non-Unix platforms, or `\n` (line feed) for Unix platforms.|
-|<xref:System.Xml.XmlWriterSettings.NewLineHandling%2A>|<xref:System.Xml.NewLineHandling.Replace>.|
-|<xref:System.Xml.XmlWriterSettings.NewLineOnAttributes%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.WriteEndDocumentOnClose%2A>|`true`.|
+|<xref:System.Xml.XmlWriterSettings.Async>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.CheckCharacters>|`true`.|
+|<xref:System.Xml.XmlWriterSettings.CloseOutput>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.ConformanceLevel>|<xref:System.Xml.ConformanceLevel.Document>.|
+|<xref:System.Xml.XmlWriterSettings.Encoding>|`Encoding.UTF8`.|
+|<xref:System.Xml.XmlWriterSettings.Indent>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.IndentChars>|Two spaces.|
+|<xref:System.Xml.XmlWriterSettings.NewLineChars>|`\r\n` (carriage return, line feed) for non-Unix platforms, or `\n` (line feed) for Unix platforms.|
+|<xref:System.Xml.XmlWriterSettings.NewLineHandling>|<xref:System.Xml.NewLineHandling.Replace>.|
+|<xref:System.Xml.XmlWriterSettings.NewLineOnAttributes>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.WriteEndDocumentOnClose>|`true`.|
 
 
 
@@ -192,6 +198,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -214,13 +222,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You must set this value to `true` when you create a new <xref:System.Xml.XmlWriter> instance if you want to use asynchronous <xref:System.Xml.XmlWriter> methods on that instance. After the <xref:System.Xml.XmlWriter> instance is created, the <xref:System.Xml.XmlWriterSettings.Async%2A> property is read-only. The default value of this property is `false`.
+ You must set this value to `true` when you create a new <xref:System.Xml.XmlWriter> instance if you want to use asynchronous <xref:System.Xml.XmlWriter> methods on that instance. After the <xref:System.Xml.XmlWriter> instance is created, the <xref:System.Xml.XmlWriterSettings.Async> property is read-only. The default value of this property is `false`.
 
- This flag is ignored by the <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> overload. This means that if you create a new <xref:System.Xml.XmlWriter> based on an existing <xref:System.Xml.XmlWriter>, the async behavior depends on the input <xref:System.Xml.XmlWriter>, and you cannot use the <xref:System.Xml.XmlWriterSettings.Async%2A> flag to change the async behavior.
+ This flag is ignored by the <xref:System.Xml.XmlWriter.Create*?displayProperty=nameWithType> overload. This means that if you create a new <xref:System.Xml.XmlWriter> based on an existing <xref:System.Xml.XmlWriter>, the async behavior depends on the input <xref:System.Xml.XmlWriter>, and you cannot use the <xref:System.Xml.XmlWriterSettings.Async> flag to change the async behavior.
 
  ]]></format>
         </remarks>
-        <related type="Article" href="/dotnet/csharp/async">Asynchronous programming (C#)</related>
+        <related type="Article" href="/dotnet/csharp/asynchronous-programming/">Asynchronous programming (C#)</related>
         <related type="Article" href="/dotnet/visual-basic/programming-guide/concepts/async/">Asynchronous programming with Async and Await (Visual Basic)</related>
       </Docs>
     </Member>
@@ -245,6 +253,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -303,6 +313,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -353,6 +365,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -419,6 +433,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -447,34 +463,34 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Xml.XmlWriterSettings.ConformanceLevel%2A?displayProperty=nameWithType> property configures the XML writer to check and guarantee that the stream being written complies with a certain set of rules. The XML data can be checked to see that it conforms to the rules for a well-formed XML 1.0 document or a document fragment. The following table describes the three settings. The default is document-level conformance.
+ The <xref:System.Xml.XmlWriterSettings.ConformanceLevel?displayProperty=nameWithType> property configures the XML writer to check and guarantee that the stream being written complies with a certain set of rules. The XML data can be checked to see that it conforms to the rules for a well-formed XML 1.0 document or a document fragment. The following table describes the three settings. The default is document-level conformance.
 
 |Setting|Description|
 |-------------|-----------------|
 |<xref:System.Xml.ConformanceLevel.Document>|Ensures that the XML output conforms to the [rules for a well-formed XML 1.0 document](https://www.w3.org/TR/REC-xml/#sec-well-formed) and can be processed by any conforming processor.<br /><br /> The document conformance checks include most of the fragment-level checks and also ensure the following:<br /><br /> -   The top-level item doesn't have any nodes other than XML Declaration, DTD, element, comment, white space, or processing instruction.<br />-   The XML data has one and only one top-level element node.<br /><br /> The XML writer doesn't parse DTD information that is written. The user is responsible for ensuring that the DTD is well-formed.|
 |<xref:System.Xml.ConformanceLevel.Fragment>|Ensures that the XML output conforms to the [rules for a well-formed XML 1.0 document fragment](https://www.w3.org/TR/REC-xml/#wf-entities).<br /><br /> This setting accepts XML data that has multiple root elements or text nodes at the top level. This level of checking ensures that any processor can consume the stream being read as an XML 1.0 external parsed entity.<br /><br /> DTD information isn't allowed in document fragments.|
-|<xref:System.Xml.ConformanceLevel.Auto>|Specifies that the XML writer should determine the level of conformance checking based on the incoming data. This setting can be useful when you don't know whether the generated XML will be a well-formed XML document or a fragment.<br /><br /> Document conformance checking is applied in the following cases:<br /><br /> -   If the <xref:System.Xml.XmlWriter.WriteStartDocument%2A> method is called.<br />-   If DTD information is written.<br /><br /> Fragment conformance checking is applied if the XML data contains one of these:<br /><br /> -   Text, CDATA, or EntityReference node at the root level.<br />-   More than one element at the root level.<br />-   No element at the root level.<br /><br /> An <xref:System.Xml.XmlException> is thrown if there is a conflict, such as when you try to write a text node and a DTD at the root level.<br /><br /> If you are wrapping another <xref:System.Xml.XmlWriter> object, the outer object doesn't do any additional conformance checking; this is left to the underlying object.|
+|<xref:System.Xml.ConformanceLevel.Auto>|Specifies that the XML writer should determine the level of conformance checking based on the incoming data. This setting can be useful when you don't know whether the generated XML will be a well-formed XML document or a fragment.<br /><br /> Document conformance checking is applied in the following cases:<br /><br /> -   If the <xref:System.Xml.XmlWriter.WriteStartDocument*> method is called.<br />-   If DTD information is written.<br /><br /> Fragment conformance checking is applied if the XML data contains one of these:<br /><br /> -   Text, CDATA, or EntityReference node at the root level.<br />-   More than one element at the root level.<br />-   No element at the root level.<br /><br /> An <xref:System.Xml.XmlException> is thrown if there is a conflict, such as when you try to write a text node and a DTD at the root level.<br /><br /> If you are wrapping another <xref:System.Xml.XmlWriter> object, the outer object doesn't do any additional conformance checking; this is left to the underlying object.|
 
  If the XML writer detects any information that would violate the specified level of conformance, it throws an exception. In some cases, the XML writer automatically corrects the conformance error. For example, the writer closes an unclosed attribute without throwing an exception. The following table shows how various conformance violations are handled in each setting.
 
 |Condition|<xref:System.Xml.ConformanceLevel.Document>|<xref:System.Xml.ConformanceLevel.Fragment>|<xref:System.Xml.ConformanceLevel.Auto>|
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 |DTD information is found.|Not a violation for this setting. However, the XML writer doesn't check the DTD; the user must ensure that the DTD is well-formed.|<xref:System.Xml.XmlException> is thrown.|Document conformance checking is applied.|
-|<xref:System.Xml.XmlWriter.WriteStartDocument%2A> is called.|Not considered a violation for this setting.|<xref:System.Xml.XmlException> is thrown.|Document conformance checking is applied.|
-|<xref:System.Xml.XmlWriter.WriteStartDocument%2A> is called multiple times.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
+|<xref:System.Xml.XmlWriter.WriteStartDocument*> is called.|Not considered a violation for this setting.|<xref:System.Xml.XmlException> is thrown.|Document conformance checking is applied.|
+|<xref:System.Xml.XmlWriter.WriteStartDocument*> is called multiple times.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
 |A text value appears at the top level (not below an element or attribute node).|<xref:System.Xml.XmlException> is thrown.|Not considered a violation.|Fragment conformance checking is applied.|
 |Multiple elements or no elements appear at the top level.|<xref:System.Xml.XmlException> is thrown.|Not considered a violation.|Fragment conformance checking is applied.|
 |Top-level item is white space.|Not considered a violation.|Not considered a violation.|Not considered a violation.|
-|<xref:System.Xml.XmlWriter.WriteEndAttribute%2A> isn't called to end an attribute node.|Fixed by XML writer.|Fixed by XML writer.|Fixed by XML writer.|
-|The XML writer is in an improperly nested state (for example, a <xref:System.Xml.XmlWriter.WriteStartElement%2A> call is followed by a <xref:System.Xml.XmlWriter.WriteEndAttribute%2A>).|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
+|<xref:System.Xml.XmlWriter.WriteEndAttribute*> isn't called to end an attribute node.|Fixed by XML writer.|Fixed by XML writer.|Fixed by XML writer.|
+|The XML writer is in an improperly nested state (for example, a <xref:System.Xml.XmlWriter.WriteStartElement*> call is followed by a <xref:System.Xml.XmlWriter.WriteEndAttribute*>).|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
 |Top-level item is an attribute.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
 |Multiple, contiguous text nodes are found.|Not considered a violation, but it's the responsibility of the user to concatenate the text nodes.|Not considered a violation, but it's the responsibility of the user to concatenate the text nodes.|Not considered a violation, but it's the responsibility of the user to concatenate the text nodes.|
 |The same namespace prefix is declared twice in an element.|The XML writer generates a new prefix for the second namespace.|The XML writer generates a new prefix for the second namespace.|The XML writer generates a new prefix for the second namespace.|
-|<xref:System.Xml.XmlWriter.WriteStartElement%2A> specifies a prefix and a namespace that isn't declared within that scope, or the prefix is associated with a different namespace.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|
-|<xref:System.Xml.XmlWriter.WriteStartAttribute%2A> specifies a prefix and a namespace that isn't declared within that scope.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|
-|<xref:System.Xml.XmlWriter.WriteStartAttribute%2A> specifies a prefix and a namespace, but the prefix is associated with a different in-scope namespace.|The XML writer ignores the specified prefix and either looks up the correct prefix or generates a new prefix.|The XML writer ignores the specified prefix and either looks up the correct prefix or generates a new prefix.|The XML writer ignores the specified prefix and either looks up the correct prefix or generates a new prefix.|
-|<xref:System.Xml.XmlWriter.WriteQualifiedName%2A> is used to write element content by using a namespace that doesn't exist within the scope.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
-|<xref:System.Xml.XmlWriter.WriteQualifiedName%2A> is used to write attribute content by using a namespace that doesn't exist within the scope.|The XML writer writes the necessary namespace declaration.|The XML writer writes the necessary namespace declaration.|The XML writer writes the necessary namespace declaration.|
+|<xref:System.Xml.XmlWriter.WriteStartElement*> specifies a prefix and a namespace that isn't declared within that scope, or the prefix is associated with a different namespace.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|
+|<xref:System.Xml.XmlWriter.WriteStartAttribute*> specifies a prefix and a namespace that isn't declared within that scope.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|The XML writer writes the necessary namespace node.|
+|<xref:System.Xml.XmlWriter.WriteStartAttribute*> specifies a prefix and a namespace, but the prefix is associated with a different in-scope namespace.|The XML writer ignores the specified prefix and either looks up the correct prefix or generates a new prefix.|The XML writer ignores the specified prefix and either looks up the correct prefix or generates a new prefix.|The XML writer ignores the specified prefix and either looks up the correct prefix or generates a new prefix.|
+|<xref:System.Xml.XmlWriter.WriteQualifiedName*> is used to write element content by using a namespace that doesn't exist within the scope.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
+|<xref:System.Xml.XmlWriter.WriteQualifiedName*> is used to write attribute content by using a namespace that doesn't exist within the scope.|The XML writer writes the necessary namespace declaration.|The XML writer writes the necessary namespace declaration.|The XML writer writes the necessary namespace declaration.|
 |The `xml:space` attribute doesn't contain a valid value.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
 |An invalid name is encountered.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|<xref:System.Xml.XmlException> is thrown.|
 |The `xml` prefix isn't matched to a URI.|The XML writer doesn't check for this type of violation.|The XML writer doesn't check for this type of violation.|The XML writer doesn't check for this type of violation.|
@@ -523,6 +539,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -555,6 +573,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -583,19 +603,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Xml.XmlWriter> encodes a buffer of characters all at once, rather than character by character. An exception is thrown when the <xref:System.Xml.XmlWriter.Flush%2A> method is called if any encoding errors are encountered.
+ The <xref:System.Xml.XmlWriter> encodes a buffer of characters all at once, rather than character by character. An exception is thrown when the <xref:System.Xml.XmlWriter.Flush*> method is called if any encoding errors are encountered.
 
- The <xref:System.Xml.XmlWriterSettings.Encoding%2A> property only applies to the <xref:System.Xml.XmlWriter> instances that are created either with the specified <xref:System.IO.Stream> or with the specified file name. If the <xref:System.Xml.XmlWriter> instance is created with the specified <xref:System.IO.TextWriter>, the <xref:System.Xml.XmlWriterSettings.Encoding%2A> property is overridden by the encoding of the underlying <xref:System.IO.TextWriter>. For example, if this property is set to Unicode (UTF-16) for a particular <xref:System.Xml.XmlWriter>, but the underlying writer is a <xref:System.IO.StreamWriter> (which derives from <xref:System.IO.TextWriter>) with its encoding set to UTF8, the output will be UTF-8 encoded.
+ The <xref:System.Xml.XmlWriterSettings.Encoding> property only applies to the <xref:System.Xml.XmlWriter> instances that are created either with the specified <xref:System.IO.Stream> or with the specified file name. If the <xref:System.Xml.XmlWriter> instance is created with the specified <xref:System.IO.TextWriter>, the <xref:System.Xml.XmlWriterSettings.Encoding> property is overridden by the encoding of the underlying <xref:System.IO.TextWriter>. For example, if this property is set to Unicode (UTF-16) for a particular <xref:System.Xml.XmlWriter>, but the underlying writer is a <xref:System.IO.StreamWriter> (which derives from <xref:System.IO.TextWriter>) with its encoding set to UTF8, the output will be UTF-8 encoded.
 
- If the <xref:System.Xml.XmlWriter> instance is created with other output parameters, the <xref:System.Xml.XmlWriterSettings.Encoding%2A> property is ignored.
+ If the <xref:System.Xml.XmlWriter> instance is created with other output parameters, the <xref:System.Xml.XmlWriterSettings.Encoding> property is ignored.
 
  In the following example:
 
--   The default value of <xref:System.Xml.XmlWriterSettings.Encoding%2A> is `Encoding.UTF8`.
+- The default value of <xref:System.Xml.XmlWriterSettings.Encoding> is `Encoding.UTF8`.
 
--   The <xref:System.IO.StreamWriter> is set to `Encoding.Unicode` and the <xref:System.IO.StreamWriter>'s encoding overrides the <xref:System.Xml.XmlWriterSettings.Encoding%2A> setting.
+- The <xref:System.IO.StreamWriter> is set to `Encoding.Unicode` and the <xref:System.IO.StreamWriter>'s encoding overrides the <xref:System.Xml.XmlWriterSettings.Encoding> setting.
 
--   The output will be `Encoding.Unicode`.
+- The output will be `Encoding.Unicode`.
 
 ```csharp
 using (StreamWriter output =
@@ -613,7 +633,7 @@ using (StreamWriter output =
 ```
 
 > [!IMPORTANT]
->  Do not accept an <xref:System.Text.Encoding> object from an untrusted source.
+> Do not accept an <xref:System.Text.Encoding> object from an untrusted source.
 
 
 
@@ -648,6 +668,8 @@ using (StreamWriter output =
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -673,7 +695,7 @@ using (StreamWriter output =
 ## Remarks
  This property only applies to <xref:System.Xml.XmlWriter> instances that output text content; otherwise, this setting is ignored.
 
- The elements are indented as long as the element does not contain mixed content. Once the <xref:System.Xml.XmlWriter.WriteString%2A> or <xref:System.Xml.XmlWriter.WriteWhitespace%2A> method is called to write out a mixed element content, the <xref:System.Xml.XmlWriter> stops indenting. The indenting resumes once the mixed content element is closed.
+ The elements are indented as long as the element does not contain mixed content. Once the <xref:System.Xml.XmlWriter.WriteString*> or <xref:System.Xml.XmlWriter.WriteWhitespace*> method is called to write out a mixed element content, the <xref:System.Xml.XmlWriter> stops indenting. The indenting resumes once the mixed content element is closed.
 
 
 
@@ -708,6 +730,8 @@ using (StreamWriter output =
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -772,6 +796,8 @@ using (StreamWriter output =
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -819,6 +845,8 @@ using (StreamWriter output =
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -875,6 +903,8 @@ using (StreamWriter output =
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -905,13 +935,13 @@ using (StreamWriter output =
 ## Remarks
  This setting applies when writing text content or attribute values. Each of the <xref:System.Xml.NewLineHandling> values is described below:
 
--   The <xref:System.Xml.NewLineHandling.Entitize> setting tells the <xref:System.Xml.XmlWriter> to replace new line characters that would not be otherwise preserved by a normalizing <xref:System.Xml.XmlReader> with character entities. This is useful in round-trip scenarios where the output is read by a normalizing <xref:System.Xml.XmlReader>. Additional normalization rules apply for attribute values when round tripping since `\t`, `\n` and `\r` are replaced with a space in attribute values when normalized in an <xref:System.Xml.XmlReader>.
+- The <xref:System.Xml.NewLineHandling.Entitize> setting tells the <xref:System.Xml.XmlWriter> to replace new line characters that would not be otherwise preserved by a normalizing <xref:System.Xml.XmlReader> with character entities. This is useful in round-trip scenarios where the output is read by a normalizing <xref:System.Xml.XmlReader>. Additional normalization rules apply for attribute values when round tripping since `\t`, `\n` and `\r` are replaced with a space in attribute values when normalized in an <xref:System.Xml.XmlReader>.
 
--   The <xref:System.Xml.NewLineHandling.Replace> setting tells the <xref:System.Xml.XmlWriter> to replace new line characters with the character(s) specificed in the <xref:System.Xml.XmlWriterSettings.NewLineChars%2A> property. This setting also replaces new lines in attributes with character entities to preserve the characters. It is also the default value.
+- The <xref:System.Xml.NewLineHandling.Replace> setting tells the <xref:System.Xml.XmlWriter> to replace new line characters with the character(s) specificed in the <xref:System.Xml.XmlWriterSettings.NewLineChars> property. This setting also replaces new lines in attributes with character entities to preserve the characters. It is also the default value.
 
--   The <xref:System.Xml.NewLineHandling.None> setting tells the <xref:System.Xml.XmlWriter> to leave the input unchanged. This setting is used when you do not want any new-line processing. This is useful when the output is read by an <xref:System.Xml.XmlReader> that does not do any normalization (for example, an <xref:System.Xml.XmlTextReader> with default settings.)
+- The <xref:System.Xml.NewLineHandling.None> setting tells the <xref:System.Xml.XmlWriter> to leave the input unchanged. This setting is used when you do not want any new-line processing. This is useful when the output is read by an <xref:System.Xml.XmlReader> that does not do any normalization (for example, an <xref:System.Xml.XmlTextReader> with default settings.)
 
- The following tables show the output of the <xref:System.Xml.XmlWriter.WriteString%2A> method when supplied with the input value depending on the <xref:System.Xml.XmlWriterSettings.NewLineHandling%2A> property setting. The tables show the output when writing text content and also when writing an attribute value.
+ The following tables show the output of the <xref:System.Xml.XmlWriter.WriteString*> method when supplied with the input value depending on the <xref:System.Xml.XmlWriterSettings.NewLineHandling> property setting. The tables show the output when writing text content and also when writing an attribute value.
 
 Text Node Value:
 
@@ -930,7 +960,7 @@ Attribute Value:
 | `None`            | \r\n     | \n   | \r   | \t    |
 
 > [!NOTE]
->  The <xref:System.Xml.XmlWriter> has the following behavior when writing content within a CDATA section, comment, or processing instruction. New lines are never replaced with their character entities, even when the <xref:System.Xml.XmlWriterSettings.NewLineHandling%2A> property is set to <xref:System.Xml.NewLineHandling.Entitize>. This is because character entities are not recognized in CDATA sections, comments or processing instructions. If the <xref:System.Xml.XmlWriterSettings.NewLineHandling%2A> property is set to <xref:System.Xml.NewLineHandling.None> or <xref:System.Xml.NewLineHandling.Replace>, the behavior is the same as when writing a text node value.
+> The <xref:System.Xml.XmlWriter> has the following behavior when writing content within a CDATA section, comment, or processing instruction. New lines are never replaced with their character entities, even when the <xref:System.Xml.XmlWriterSettings.NewLineHandling> property is set to <xref:System.Xml.NewLineHandling.Entitize>. This is because character entities are not recognized in CDATA sections, comments or processing instructions. If the <xref:System.Xml.XmlWriterSettings.NewLineHandling> property is set to <xref:System.Xml.NewLineHandling.None> or <xref:System.Xml.NewLineHandling.Replace>, the behavior is the same as when writing a text node value.
 
  The following table describes what a normalizing <xref:System.Xml.XmlReader> returns for each white space input. For more information, see sections 2.11 and 3.3.3 of the W3C [XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/).
 
@@ -940,7 +970,7 @@ Attribute Value:
 | Attribute  | single space | single space | single space | single space |
 
 > [!NOTE]
-> A normalizing reader is any <xref:System.Xml.XmlReader> object created by the <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> method. These objects always perform line break normalization and full normalization of attributes. The <xref:System.Xml.XmlTextReader> object can also be a normalizing reader if its <xref:System.Xml.XmlTextReader.Normalization%2A> property is set to `true`.
+> A normalizing reader is any <xref:System.Xml.XmlReader> object created by the <xref:System.Xml.XmlReader.Create*?displayProperty=nameWithType> method. These objects always perform line break normalization and full normalization of attributes. The <xref:System.Xml.XmlTextReader> object can also be a normalizing reader if its <xref:System.Xml.XmlTextReader.Normalization> property is set to `true`.
 
  ]]></format>
         </remarks>
@@ -967,6 +997,8 @@ Attribute Value:
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -1044,6 +1076,8 @@ This setting has no effect when the <xref:System.Xml.XmlWriterSettings.Indent> p
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -1075,11 +1109,11 @@ This setting has no effect when the <xref:System.Xml.XmlWriterSettings.Indent> p
 ## Remarks
  This property only applies to <xref:System.Xml.XmlWriter> instances that output text content; otherwise, this setting is ignored.
 
- If <xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A> is set to `false`, The XML declaration is written automatically
+ If <xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration> is set to `false`, The XML declaration is written automatically
 
- The XML declaration is always written if <xref:System.Xml.XmlWriterSettings.ConformanceLevel%2A> is set to <xref:System.Xml.ConformanceLevel.Document>, even if <xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A> is set to `true`.
+ The XML declaration is always written if <xref:System.Xml.XmlWriterSettings.ConformanceLevel> is set to <xref:System.Xml.ConformanceLevel.Document>, even if <xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration> is set to `true`.
 
- The XML declaration is never written if <xref:System.Xml.XmlWriterSettings.ConformanceLevel%2A> is set to <xref:System.Xml.ConformanceLevel.Fragment>. You can call <xref:System.Xml.XmlWriter.WriteProcessingInstruction%2A> to explicitly write out an XML declaration.
+ The XML declaration is never written if <xref:System.Xml.XmlWriterSettings.ConformanceLevel> is set to <xref:System.Xml.ConformanceLevel.Fragment>. You can call <xref:System.Xml.XmlWriter.WriteProcessingInstruction*> to explicitly write out an XML declaration.
 
 
 
@@ -1122,6 +1156,8 @@ This setting has no effect when the <xref:System.Xml.XmlWriterSettings.Indent> p
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1170,6 +1206,8 @@ This setting has no effect when the <xref:System.Xml.XmlWriterSettings.Indent> p
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
@@ -1196,18 +1234,18 @@ This setting has no effect when the <xref:System.Xml.XmlWriterSettings.Indent> p
 
 |Property|Initial value|
 |--------------|-------------------|
-|<xref:System.Xml.XmlWriterSettings.Async%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.CheckCharacters%2A>|`true`.|
-|<xref:System.Xml.XmlWriterSettings.CloseOutput%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.ConformanceLevel%2A>|<xref:System.Xml.ConformanceLevel.Document>.|
-|<xref:System.Xml.XmlWriterSettings.Encoding%2A>|`Encoding.UTF8`.|
-|<xref:System.Xml.XmlWriterSettings.Indent%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.IndentChars%2A>|Two spaces.|
-|<xref:System.Xml.XmlWriterSettings.NewLineChars%2A>|`\r\n` (carriage return, line feed) for non-Unix platforms, or `\n` (line feed) for Unix platforms.|
-|<xref:System.Xml.XmlWriterSettings.NewLineHandling%2A>|<xref:System.Xml.NewLineHandling.Replace>.|
-|<xref:System.Xml.XmlWriterSettings.NewLineOnAttributes%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration%2A>|`false`.|
-|<xref:System.Xml.XmlWriterSettings.WriteEndDocumentOnClose%2A>|`true`.|
+|<xref:System.Xml.XmlWriterSettings.Async>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.CheckCharacters>|`true`.|
+|<xref:System.Xml.XmlWriterSettings.CloseOutput>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.ConformanceLevel>|<xref:System.Xml.ConformanceLevel.Document>.|
+|<xref:System.Xml.XmlWriterSettings.Encoding>|`Encoding.UTF8`.|
+|<xref:System.Xml.XmlWriterSettings.Indent>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.IndentChars>|Two spaces.|
+|<xref:System.Xml.XmlWriterSettings.NewLineChars>|`\r\n` (carriage return, line feed) for non-Unix platforms, or `\n` (line feed) for Unix platforms.|
+|<xref:System.Xml.XmlWriterSettings.NewLineHandling>|<xref:System.Xml.NewLineHandling.Replace>.|
+|<xref:System.Xml.XmlWriterSettings.NewLineOnAttributes>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.OmitXmlDeclaration>|`false`.|
+|<xref:System.Xml.XmlWriterSettings.WriteEndDocumentOnClose>|`true`.|
 
  ]]></format>
         </remarks>
@@ -1234,6 +1272,8 @@ This setting has no effect when the <xref:System.Xml.XmlWriterSettings.Indent> p
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>

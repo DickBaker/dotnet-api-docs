@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class Frame&#xA;Inherits ContentControl&#xA;Implements IAddChild, IUriContext" />
   <TypeSignature Language="F#" Value="type Frame = class&#xA;    inherit ContentControl&#xA;    interface IAddChild&#xA;    interface IUriContext" />
   <TypeSignature Language="C++ CLI" Value="public ref class Frame : System::Windows::Controls::ContentControl, System::Windows::Markup::IAddChild, System::Windows::Markup::IUriContext" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Frame extends System.Windows.Controls.ContentControl implements class System.Windows.Markup.IAddChild, class System.Windows.Markup.IUriContext" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Frame extends System.Windows.Controls.ContentControl implements class System.Windows.Markup.IAddChild, class System.Windows.Markup.IUriContext" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
@@ -58,67 +60,59 @@
  <xref:System.Windows.Controls.Frame> is a content control that provides the ability to navigate to and display content. <xref:System.Windows.Controls.Frame> can be hosted within other content, as with other controls and elements.
 
 > [!CAUTION]
->  When the <xref:System.Windows.Controls.Frame> control navigates to HTML content, the <xref:System.Windows.Controls.Frame> control internally instantiates the native WebBrowser ActiveX control. WPF enables security features by applying feature controls to the WebBrowser ActiveX control. The feature controls that are applied differ for XBAPs and stand-alone applications. Some applications should apply additional feature controls to prevent malicious content from running. For more information, see the "WebBrowser Control and Feature Controls" section in [Security (WPF)](/dotnet/framework/wpf/security-wpf) and [WebBrowser Control Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=179388).
+> When the <xref:System.Windows.Controls.Frame> control navigates to HTML content, the <xref:System.Windows.Controls.Frame> control internally instantiates the native WebBrowser ActiveX control. WPF enables security features by applying feature controls to the WebBrowser ActiveX control. The feature controls that are applied differ for XBAPs and stand-alone applications. Some applications should apply additional feature controls to prevent malicious content from running. For more information, see the "WebBrowser Control and Feature Controls" section in [Security (WPF)](https://learn.microsoft.com/dotnet/desktop/wpf/security-wpf).
 
  Content can be any type of .NET Framework object and HTML files. In general, however, pages are the preferred the way to package content for navigation (see <xref:System.Windows.Controls.Page>).
 
- Content can be navigated to by setting the <xref:System.Windows.Controls.Frame.Source%2A> property with the URI for the desired content. Additionally, content can be navigated to by using one of the following overloads of the <xref:System.Windows.Controls.Frame.Navigate%2A> method:
+ Content can be navigated to by setting the <xref:System.Windows.Controls.Frame.Source> property with the URI for the desired content. Additionally, content can be navigated to by using one of the following overloads of the <xref:System.Windows.Controls.Frame.Navigate*> method:
 
--   <xref:System.Windows.Controls.Frame.Navigate%28System.Uri%29>
+- <xref:System.Windows.Controls.Frame.Navigate(System.Uri)>
+- <xref:System.Windows.Controls.Frame.Navigate(System.Uri,System.Object)>
 
--   <xref:System.Windows.Controls.Frame.Navigate%28System.Uri%2CSystem.Object%29>
+ When content is navigated to by URI, <xref:System.Windows.Controls.Frame> returns an object that contains the content. Alternatively, content can be navigated to by using one of the <xref:System.Windows.Controls.Frame.Navigate*> method overloads that accepts an object:
 
- When content is navigated to by URI, <xref:System.Windows.Controls.Frame> returns an object that contains the content. Alternatively, content can be navigated to by using one of the <xref:System.Windows.Controls.Frame.Navigate%2A> method overloads that accepts an object:
-
--   <xref:System.Windows.Controls.Frame.Navigate%28System.Object%29>
-
--   <xref:System.Windows.Controls.Frame.Navigate%28System.Object%2CSystem.Object%29>
+- <xref:System.Windows.Controls.Frame.Navigate(System.Object)>
+- <xref:System.Windows.Controls.Frame.Navigate(System.Object,System.Object)>
 
  The lifetime of a navigation can be tracked through the following events:
 
--   <xref:System.Windows.Controls.Frame.Navigating>
-
--   <xref:System.Windows.Controls.Frame.Navigated>
-
--   <xref:System.Windows.Controls.Frame.NavigationProgress>
-
--   <xref:System.Windows.Controls.Frame.NavigationFailed>
-
--   <xref:System.Windows.Controls.Frame.NavigationStopped>
-
--   <xref:System.Windows.Controls.Frame.LoadCompleted>
-
--   <xref:System.Windows.Controls.Frame.FragmentNavigation>
+- <xref:System.Windows.Controls.Frame.Navigating>
+- <xref:System.Windows.Controls.Frame.Navigated>
+- <xref:System.Windows.Controls.Frame.NavigationProgress>
+- <xref:System.Windows.Controls.Frame.NavigationFailed>
+- <xref:System.Windows.Controls.Frame.NavigationStopped>
+- <xref:System.Windows.Controls.Frame.LoadCompleted>
+- <xref:System.Windows.Controls.Frame.FragmentNavigation>
 
  Not all events are raised each time that a navigation occurs; the set of events that are raised is determined by the type of navigation that occurs (content or content fragment) and how the navigation completes (canceled, stopped, or failed).
 
  The following figure illustrates the sequence in which these events will fire:
 
- ![Page navigation flow chart](~/add/media/navigationoverviewfigure11.png "Page navigation flow chart")
+ ![Page navigation flow chart](~/add/media/navigationoverviewfigure11.png)
 
- During or after a navigation, <xref:System.Windows.Controls.Frame> provides information about the content that is being navigated to, including the URI of the content being navigated to (<xref:System.Windows.Controls.Frame.Source%2A>), the URI of the current content (<xref:System.Windows.Controls.Frame.CurrentSource%2A>), and an object that contains the content that was navigated to (<xref:System.Windows.Controls.ContentControl.Content%2A>).
+ During or after a navigation, <xref:System.Windows.Controls.Frame> provides information about the content that is being navigated to, including the URI of the content being navigated to (<xref:System.Windows.Controls.Frame.Source*>), the URI of the current content (<xref:System.Windows.Controls.Frame.CurrentSource*>), and an object that contains the content that was navigated to (<xref:System.Windows.Controls.ContentControl.Content*>).
 
- When content is navigated to, <xref:System.Windows.Controls.Frame> records the navigation as an entry in navigation history. An entry is added to back navigation history when either a new navigation occurs, by calling the <xref:System.Windows.Controls.Frame.Navigate%2A> method, or by navigating to an entry in forward navigation history, by calling <xref:System.Windows.Controls.Frame.GoForward%2A>. An entry is added to forward navigation history by navigating to an entry in back navigation history, by calling <xref:System.Windows.Controls.Frame.GoBack%2A>. <xref:System.Windows.Controls.Frame.CanGoBack%2A> and <xref:System.Windows.Controls.Frame.CanGoForward%2A> report whether there are entries in back and forward navigation history, respectively.
+ When content is navigated to, <xref:System.Windows.Controls.Frame> records the navigation as an entry in navigation history. An entry is added to back navigation history when either a new navigation occurs, by calling the <xref:System.Windows.Controls.Frame.Navigate*> method, or by navigating to an entry in forward navigation history, by calling <xref:System.Windows.Controls.Frame.GoForward*>. An entry is added to forward navigation history by navigating to an entry in back navigation history, by calling <xref:System.Windows.Controls.Frame.GoBack*>. <xref:System.Windows.Controls.Frame.CanGoBack*> and <xref:System.Windows.Controls.Frame.CanGoForward*> report whether there are entries in back and forward navigation history, respectively.
 
- The first time that one piece of content is navigated to from another piece of content, <xref:System.Windows.Controls.Frame> automatically displays a navigation UI that allows users to navigate back and forward through navigation history. You can configure when the navigation UI is shown by setting the <xref:System.Windows.Controls.Frame.NavigationUIVisibility%2A> property.
+ The first time that one piece of content is navigated to from another piece of content, <xref:System.Windows.Controls.Frame> automatically displays a navigation UI that allows users to navigate back and forward through navigation history. You can configure when the navigation UI is shown by setting the <xref:System.Windows.Controls.Frame.NavigationUIVisibility> property.
 
- By default, <xref:System.Windows.Controls.Frame> will use its own navigation history only if a parent navigator (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) with its own navigation history cannot be found. This means that navigation history entries for the frame are mingled with navigation history entries for the parent navigator. To specify that a <xref:System.Windows.Controls.Frame> manages its own navigation history, set the <xref:System.Windows.Controls.Frame.JournalOwnership%2A> property to <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>.
+ By default, <xref:System.Windows.Controls.Frame> will use its own navigation history only if a parent navigator (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) with its own navigation history cannot be found. This means that navigation history entries for the frame are mingled with navigation history entries for the parent navigator. To specify that a <xref:System.Windows.Controls.Frame> manages its own navigation history, set the <xref:System.Windows.Controls.Frame.JournalOwnership> property to <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>.
 
- The most recent entry in back navigation history can be removed by calling <xref:System.Windows.Controls.Frame.RemoveBackEntry%2A>.
+ The most recent entry in back navigation history can be removed by calling <xref:System.Windows.Controls.Frame.RemoveBackEntry*>.
 
  <xref:System.Windows.Controls.Frame> does not store an instance of a content object in navigation history. Instead, <xref:System.Windows.Controls.Frame> creates a new instance of the content object each time it is navigated to by using navigation history. This behavior is designed to avoid excessive memory consumption when large numbers and large pieces of content are being navigated to. Consequently, the state of the content is not remembered from one navigation to the next. However, WPF provides several techniques by which you can store a state for a piece of content in navigation history.
 
- Using <xref:System.Windows.Controls.Frame.AddBackEntry%2A>, you can also remember multiple sets of state for a single page instance.
+ Using <xref:System.Windows.Controls.Frame.AddBackEntry*>, you can also remember multiple sets of state for a single page instance.
 
 ## Customizing the Frame Control
- To apply the same property settings to multiple <xref:System.Windows.Controls.Frame> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](/dotnet/framework/wpf/controls/customizing-the-appearance-of-an-existing-control).  To see the parts and states that are specific to the <xref:System.Windows.Controls.Frame>, see [Frame Styles and Templates](/dotnet/framework/wpf/controls/frame-styles-and-templates).
+ To apply the same property settings to multiple <xref:System.Windows.Controls.Frame> controls, use the <xref:System.Windows.FrameworkElement.Style> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [How to create a template for a control](/dotnet/desktop/wpf/controls/how-to-create-apply-template).  To see the parts and states that are specific to the <xref:System.Windows.Controls.Frame>, see [Frame Styles and Templates](/dotnet/desktop/wpf/controls/frame).
 
  Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.
 
 [!INCLUDE[setting-a-visual-property](~/includes/visual-property-note.md)]
 
 ## Examples
- The following example shows how to create a simple <xref:System.Windows.Controls.Frame> control and specify initial source content to load from a URI using the <xref:System.Windows.Controls.Frame.Source%2A> property.
+ The following example shows how to create a simple <xref:System.Windows.Controls.Frame> control and specify initial source content to load from a URI using the <xref:System.Windows.Controls.Frame.Source> property.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/Frame/Overview/MainWindow.xaml" id="Snippetsetframesourcexaml1":::
 :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/Frame/Overview/MainWindow.xaml" id="Snippetsetframesourcexaml2":::
@@ -144,6 +138,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -158,9 +154,9 @@
       <MemberSignature Language="VB.NET" Value="Public Sub AddBackEntry (state As CustomContentState)" />
       <MemberSignature Language="F#" Value="abstract member AddBackEntry : System.Windows.Navigation.CustomContentState -&gt; unit&#xA;override this.AddBackEntry : System.Windows.Navigation.CustomContentState -&gt; unit" Usage="frame.AddBackEntry state" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AddBackEntry(System::Windows::Navigation::CustomContentState ^ state);" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddBackEntry(class System.Windows.Navigation.CustomContentState state) cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.AddBackEntry : System.Windows.Navigation.CustomContentState -&gt; unit" Usage="frame.AddBackEntry state" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddBackEntry(System::Windows::Navigation::CustomContentState ^ state);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddBackEntry(class System.Windows.Navigation.CustomContentState state) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.AddBackEntry : System.Windows.Navigation.CustomContentState -&gt; unit" Usage="frame.AddBackEntry state" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddBackEntry(System::Windows::Navigation::CustomContentState ^ state);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -171,6 +167,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -185,7 +183,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.AddBackEntry*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -214,6 +212,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -228,7 +228,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method is overridden because <xref:System.Windows.Controls.Frame> does not allow children. Instead, use the <xref:System.Windows.Controls.ContentControl.Content%2A> property to set content.
+ This method is overridden because <xref:System.Windows.Controls.Frame> does not allow children. Instead, use the <xref:System.Windows.Controls.ContentControl.Content> property to set content.
 
  ]]></format>
         </remarks>
@@ -254,6 +254,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -291,6 +293,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerable</ReturnType>
@@ -303,7 +307,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The entries that are returned by <xref:System.Windows.Controls.Frame.BackStack%2A> including whole content, fragment navigations, and custom state.
+ The entries that are returned by <xref:System.Windows.Controls.Frame.BackStack*> including whole content, fragment navigations, and custom state.
 
 <a name="dependencyPropertyInfo_FrameBackStack"></a>
 ## Dependency Property Information
@@ -336,6 +340,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -346,7 +352,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.BackStack%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.BackStack*> dependency property.
 
  ]]></format>
         </remarks>
@@ -369,6 +375,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -380,9 +388,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Controls.Frame.BaseUri%2A> can be set to aid resolution of relative uniform resource identifiers (URIs) for further navigation.
+ <xref:System.Windows.Controls.Frame.BaseUri*> can be set to aid resolution of relative uniform resource identifiers (URIs) for further navigation.
 
- To get or set the uniform resource identifier (URI) of the <xref:System.Windows.Controls.Frame> control, use the <xref:System.Windows.Controls.Frame.Source%2A> property.
+ To get or set the uniform resource identifier (URI) of the <xref:System.Windows.Controls.Frame> control, use the <xref:System.Windows.Controls.Frame.Source> property.
 
  This is protected virtual property and cannot be used directly, although can be used in derived classes.
 
@@ -408,6 +416,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -420,7 +430,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.CanGoBack*?displayProperty=nameWithType>.
 
 <a name="dependencyPropertyInfo_FrameCanGoBack"></a>
 ## Dependency Property Information
@@ -454,6 +464,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -464,7 +476,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.CanGoBack%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.CanGoBack*> dependency property.
 
  ]]></format>
         </remarks>
@@ -487,6 +499,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -499,7 +513,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Controls.Frame.CanGoForward%2A>.
+ See <xref:System.Windows.Controls.Frame.CanGoForward*>.
 
 <a name="dependencyPropertyInfo_FrameCanGoForward"></a>
 ## Dependency Property Information
@@ -533,6 +547,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -543,7 +559,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.CanGoForward%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.CanGoForward*> dependency property.
 
  ]]></format>
         </remarks>
@@ -553,11 +569,11 @@
       <MemberSignature Language="C#" Value="public event EventHandler ContentRendered;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContentRendered" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Frame.ContentRendered" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event ContentRendered As EventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ContentRendered As EventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.ContentRendered : EventHandler " Usage="member this.ContentRendered : System.EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event EventHandler ^ ContentRendered;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="VB.NET" Value="Public Event ContentRendered As EventHandler " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ ContentRendered;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ ContentRendered;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -568,6 +584,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler</ReturnType>
@@ -603,6 +621,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -614,7 +634,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.CurrentSource*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -637,6 +657,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerable</ReturnType>
@@ -648,7 +670,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The entries that are returned by <xref:System.Windows.Controls.Frame.ForwardStack%2A> including whole content, fragment navigations, and custom state.
+ The entries that are returned by <xref:System.Windows.Controls.Frame.ForwardStack*> including whole content, fragment navigations, and custom state.
 
 <a name="dependencyPropertyInfo_FrameForwardStack"></a>
 ## Dependency Property Information
@@ -679,6 +701,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -689,7 +713,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.ForwardStack%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.ForwardStack*> dependency property.
 
  ]]></format>
         </remarks>
@@ -702,7 +726,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event FragmentNavigation As FragmentNavigationEventHandler " />
       <MemberSignature Language="F#" Value="member this.FragmentNavigation : System.Windows.Navigation.FragmentNavigationEventHandler " Usage="member this.FragmentNavigation : System.Windows.Navigation.FragmentNavigationEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::FragmentNavigationEventHandler ^ FragmentNavigation;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::FragmentNavigationEventHandler ^ FragmentNavigation;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::FragmentNavigationEventHandler ^ FragmentNavigation;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -713,6 +737,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.FragmentNavigationEventHandler</ReturnType>
@@ -742,9 +768,9 @@
       <MemberSignature Language="VB.NET" Value="Public Sub GoBack ()" />
       <MemberSignature Language="F#" Value="abstract member GoBack : unit -&gt; unit&#xA;override this.GoBack : unit -&gt; unit" Usage="frame.GoBack " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void GoBack();" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoBack() cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.GoBack : unit -&gt; unit" Usage="frame.GoBack " FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void GoBack();" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoBack() cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.GoBack : unit -&gt; unit" Usage="frame.GoBack " FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void GoBack();" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -755,6 +781,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -768,11 +796,11 @@
 ## Remarks
  If navigation history for a frame is managed by a parent navigator (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>), the `GoBack` method on that navigator or associated <xref:System.Windows.Navigation.NavigationService> object must be called:
 
--   <xref:System.Windows.Controls.Frame.GoBack%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Controls.Frame.GoBack*?displayProperty=nameWithType>
 
--   <xref:System.Windows.Navigation.NavigationWindow.GoBack%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Navigation.NavigationWindow.GoBack*?displayProperty=nameWithType>
 
--   <xref:System.Windows.Navigation.NavigationService.GoBack%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Navigation.NavigationService.GoBack*?displayProperty=nameWithType>
 
  ]]></format>
         </remarks>
@@ -790,9 +818,9 @@
       <MemberSignature Language="VB.NET" Value="Public Sub GoForward ()" />
       <MemberSignature Language="F#" Value="abstract member GoForward : unit -&gt; unit&#xA;override this.GoForward : unit -&gt; unit" Usage="frame.GoForward " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void GoForward();" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoForward() cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.GoForward : unit -&gt; unit" Usage="frame.GoForward " FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void GoForward();" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoForward() cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.GoForward : unit -&gt; unit" Usage="frame.GoForward " FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void GoForward();" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -803,6 +831,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -816,11 +846,11 @@
 ## Remarks
  If navigation history for a frame is managed by a parent navigator (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>), the `GoForward` method on that navigator or associated <xref:System.Windows.Navigation.NavigationService> object must be called:
 
--   <xref:System.Windows.Controls.Frame.GoForward%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Controls.Frame.GoForward*?displayProperty=nameWithType>
 
--   <xref:System.Windows.Navigation.NavigationWindow.GoForward%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Navigation.NavigationWindow.GoForward*?displayProperty=nameWithType>
 
--   <xref:System.Windows.Navigation.NavigationService.GoForward%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Navigation.NavigationService.GoForward*?displayProperty=nameWithType>
 
  ]]></format>
         </remarks>
@@ -848,6 +878,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -865,7 +897,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- By default, <xref:System.Windows.Controls.Frame> will use its own navigation history only if a parent navigation host (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) with its own journal cannot be found (for example, if a <xref:System.Windows.Controls.Frame> is hosted in content that is hosted by a <xref:System.Windows.Window>). To force <xref:System.Windows.Controls.Frame> to manage its own navigation history, set <xref:System.Windows.Controls.Frame.JournalOwnership%2A> to <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>.
+ By default, <xref:System.Windows.Controls.Frame> will use its own navigation history only if a parent navigation host (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) with its own journal cannot be found (for example, if a <xref:System.Windows.Controls.Frame> is hosted in content that is hosted by a <xref:System.Windows.Window>). To force <xref:System.Windows.Controls.Frame> to manage its own navigation history, set <xref:System.Windows.Controls.Frame.JournalOwnership*> to <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>.
 
 <a name="dependencyPropertyInfo_FrameJournalOwnership"></a>
 ## Dependency Property Information
@@ -903,6 +935,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -913,7 +947,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.JournalOwnership%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.JournalOwnership*> dependency property.
 
  ]]></format>
         </remarks>
@@ -926,7 +960,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event LoadCompleted As LoadCompletedEventHandler " />
       <MemberSignature Language="F#" Value="member this.LoadCompleted : System.Windows.Navigation.LoadCompletedEventHandler " Usage="member this.LoadCompleted : System.Windows.Navigation.LoadCompletedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::LoadCompletedEventHandler ^ LoadCompleted;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::LoadCompletedEventHandler ^ LoadCompleted;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::LoadCompletedEventHandler ^ LoadCompleted;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -937,6 +971,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.LoadCompletedEventHandler</ReturnType>
@@ -975,9 +1011,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function Navigate (content As Object) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Navigate : obj -&gt; bool&#xA;override this.Navigate : obj -&gt; bool" Usage="frame.Navigate content" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Navigate(System::Object ^ content);" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(object content) cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.Navigate : obj -&gt; bool" Usage="frame.Navigate content" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(System::Object ^ content);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(object content) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Navigate : obj -&gt; bool" Usage="frame.Navigate content" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(System::Object ^ content);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -988,6 +1024,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1004,7 +1042,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%29?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.Navigate(System.Object)?displayProperty=nameWithType>.
 
 
 
@@ -1012,7 +1050,7 @@
  The following example shows how to navigate to content that is contained by an object.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Frame/Navigate/MainWindow.xaml.cs" id="Snippetnavigatetopageobjcode":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb" id="Snippetnavigatetopageobjcode":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Frame/Navigate/mainwindow.xaml.vb" id="Snippetnavigatetopageobjcode":::
 
  ]]></format>
         </remarks>
@@ -1025,9 +1063,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function Navigate (source As Uri) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Navigate : Uri -&gt; bool&#xA;override this.Navigate : Uri -&gt; bool" Usage="frame.Navigate source" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Navigate(Uri ^ source);" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source) cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.Navigate : Uri -&gt; bool" Usage="frame.Navigate source" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(Uri ^ source);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Navigate : Uri -&gt; bool" Usage="frame.Navigate source" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(Uri ^ source);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1038,6 +1076,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1054,18 +1094,18 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%29?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.Navigate(System.Uri)?displayProperty=nameWithType>.
 
 > [!NOTE]
->  Uniform resource identifiers (URIs) can be either relative or absolute. For more information, see [Pack URIs in WPF](/dotnet/framework/wpf/app-development/pack-uris-in-wpf).
+> Uniform resource identifiers (URIs) can be either relative or absolute. For more information, see [Pack URIs in WPF](/dotnet/desktop/wpf/app-development/pack-uris-in-wpf).
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.Frame.Navigate%2A> method to navigate to a uniform resource identifier (URI).
+ The following example shows how to use the <xref:System.Windows.Controls.Frame.Navigate*> method to navigate to a uniform resource identifier (URI).
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Frame/Navigate/MainWindow.xaml.cs" id="Snippetnavigatetopagenavcode":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb" id="Snippetnavigatetopagenavcode":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Frame/Navigate/mainwindow.xaml.vb" id="Snippetnavigatetopagenavcode":::
 
  ]]></format>
         </remarks>
@@ -1078,9 +1118,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function Navigate (content As Object, extraData As Object) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Navigate : obj * obj -&gt; bool&#xA;override this.Navigate : obj * obj -&gt; bool" Usage="frame.Navigate (content, extraData)" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Navigate(System::Object ^ content, System::Object ^ extraData);" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(object content, object extraData) cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.Navigate : obj * obj -&gt; bool" Usage="frame.Navigate (content, extraData)" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(System::Object ^ content, System::Object ^ extraData);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(object content, object extraData) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Navigate : obj * obj -&gt; bool" Usage="frame.Navigate (content, extraData)" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(System::Object ^ content, System::Object ^ extraData);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1091,6 +1131,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1109,7 +1151,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%2CSystem.Object%29?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.Navigate(System.Object,System.Object)?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1122,9 +1164,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function Navigate (source As Uri, extraData As Object) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Navigate : Uri * obj -&gt; bool&#xA;override this.Navigate : Uri * obj -&gt; bool" Usage="frame.Navigate (source, extraData)" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Navigate(Uri ^ source, System::Object ^ extraData);" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source, object extraData) cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.Navigate : Uri * obj -&gt; bool" Usage="frame.Navigate (source, extraData)" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(Uri ^ source, System::Object ^ extraData);" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source, object extraData) cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Navigate : Uri * obj -&gt; bool" Usage="frame.Navigate (source, extraData)" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Navigate(Uri ^ source, System::Object ^ extraData);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1135,6 +1177,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1153,7 +1197,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%2CSystem.Object%29?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.Navigate(System.Uri,System.Object)?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1166,7 +1210,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event Navigated As NavigatedEventHandler " />
       <MemberSignature Language="F#" Value="member this.Navigated : System.Windows.Navigation.NavigatedEventHandler " Usage="member this.Navigated : System.Windows.Navigation.NavigatedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::NavigatedEventHandler ^ Navigated;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigatedEventHandler ^ Navigated;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigatedEventHandler ^ Navigated;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1177,6 +1221,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigatedEventHandler</ReturnType>
@@ -1206,7 +1252,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event Navigating As NavigatingCancelEventHandler " />
       <MemberSignature Language="F#" Value="member this.Navigating : System.Windows.Navigation.NavigatingCancelEventHandler " Usage="member this.Navigating : System.Windows.Navigation.NavigatingCancelEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::NavigatingCancelEventHandler ^ Navigating;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigatingCancelEventHandler ^ Navigating;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigatingCancelEventHandler ^ Navigating;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1217,6 +1263,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigatingCancelEventHandler</ReturnType>
@@ -1246,7 +1294,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event NavigationFailed As NavigationFailedEventHandler " />
       <MemberSignature Language="F#" Value="member this.NavigationFailed : System.Windows.Navigation.NavigationFailedEventHandler " Usage="member this.NavigationFailed : System.Windows.Navigation.NavigationFailedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::NavigationFailedEventHandler ^ NavigationFailed;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigationFailedEventHandler ^ NavigationFailed;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigationFailedEventHandler ^ NavigationFailed;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1257,6 +1305,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigationFailedEventHandler</ReturnType>
@@ -1286,7 +1336,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event NavigationProgress As NavigationProgressEventHandler " />
       <MemberSignature Language="F#" Value="member this.NavigationProgress : System.Windows.Navigation.NavigationProgressEventHandler " Usage="member this.NavigationProgress : System.Windows.Navigation.NavigationProgressEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::NavigationProgressEventHandler ^ NavigationProgress;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigationProgressEventHandler ^ NavigationProgress;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigationProgressEventHandler ^ NavigationProgress;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1297,6 +1347,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigationProgressEventHandler</ReturnType>
@@ -1336,6 +1388,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigationService</ReturnType>
@@ -1347,15 +1401,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Controls.Frame> uses <xref:System.Windows.Navigation.NavigationService> to support navigation for hosted content. <xref:System.Windows.Controls.Frame.NavigationService%2A> is useful for code that hosts a <xref:System.Windows.Controls.Frame> to get a reference to the <xref:System.Windows.Navigation.NavigationService>. Content that is hosted by a <xref:System.Windows.Controls.Frame>, such as <xref:System.Windows.Controls.Page>, should use <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> or <xref:System.Windows.Controls.Page.NavigationService%2A> to get a reference to the <xref:System.Windows.Navigation.NavigationService>.
+ <xref:System.Windows.Controls.Frame> uses <xref:System.Windows.Navigation.NavigationService> to support navigation for hosted content. <xref:System.Windows.Controls.Frame.NavigationService*> is useful for code that hosts a <xref:System.Windows.Controls.Frame> to get a reference to the <xref:System.Windows.Navigation.NavigationService>. Content that is hosted by a <xref:System.Windows.Controls.Frame>, such as <xref:System.Windows.Controls.Page>, should use <xref:System.Windows.Navigation.NavigationService.GetNavigationService*> or <xref:System.Windows.Controls.Page.NavigationService*> to get a reference to the <xref:System.Windows.Navigation.NavigationService>.
 
 > [!NOTE]
->  <xref:System.Windows.Controls.Frame.NavigationService%2A> does not return a reference to the same <xref:System.Windows.Controls.Frame.NavigationService%2A> as calling <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> and passing <xref:System.Windows.Controls.Frame> does. The former returns the <xref:System.Windows.Controls.Frame.NavigationService%2A> that is owned by the <xref:System.Windows.Controls.Frame> while the latter returns the <xref:System.Windows.Controls.Frame.NavigationService%2A> for the navigation host that navigated to the content in which the <xref:System.Windows.Controls.Frame> is hosted. The following code demonstrates the differences.
+>  <xref:System.Windows.Controls.Frame.NavigationService*> does not return a reference to the same <xref:System.Windows.Controls.Frame.NavigationService*> as calling <xref:System.Windows.Navigation.NavigationService.GetNavigationService*> and passing <xref:System.Windows.Controls.Frame> does. The former returns the <xref:System.Windows.Controls.Frame.NavigationService*> that is owned by the <xref:System.Windows.Controls.Frame> while the latter returns the <xref:System.Windows.Controls.Frame.NavigationService*> for the navigation host that navigated to the content in which the <xref:System.Windows.Controls.Frame> is hosted. The following code demonstrates the differences.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Frame/NavigationService/Window1.xaml.cs" id="Snippetnsframediffcode1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/NSGNSvsFNSSnippets/visualbasic/window1.xaml.vb" id="Snippetnsframediffcode1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Frame/NavigationService/window1.xaml.vb" id="Snippetnsframediffcode1":::
 :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Frame/NavigationService/Window1.xaml.cs" id="Snippetnsframediffcode2":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/NSGNSvsFNSSnippets/visualbasic/window1.xaml.vb" id="Snippetnsframediffcode2":::
+:::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Frame/NavigationService/window1.xaml.vb" id="Snippetnsframediffcode2":::
 
  ]]></format>
         </remarks>
@@ -1368,7 +1422,7 @@
       <MemberSignature Language="VB.NET" Value="Public Custom Event NavigationStopped As NavigationStoppedEventHandler " />
       <MemberSignature Language="F#" Value="member this.NavigationStopped : System.Windows.Navigation.NavigationStoppedEventHandler " Usage="member this.NavigationStopped : System.Windows.Navigation.NavigationStoppedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Windows::Navigation::NavigationStoppedEventHandler ^ NavigationStopped;" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigationStoppedEventHandler ^ NavigationStopped;" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Navigation::NavigationStoppedEventHandler ^ NavigationStopped;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1379,6 +1433,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigationStoppedEventHandler</ReturnType>
@@ -1418,6 +1474,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.NavigationUIVisibility</ReturnType>
@@ -1435,7 +1493,7 @@
 
 1.  <xref:System.Windows.Navigation.NavigationUIVisibility> to <xref:System.Windows.Navigation.NavigationUIVisibility.Visible>
 
-2.  <xref:System.Windows.Controls.Frame.JournalOwnership%2A> to <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>
+2.  <xref:System.Windows.Controls.Frame.JournalOwnership*> to <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>
 
  You set <xref:System.Windows.Navigation.NavigationUIVisibility> to <xref:System.Windows.Navigation.NavigationUIVisibility.Hidden> if you want to hide the navigation UI. This might be the case when navigation UI doesn't make sense with the content you are displaying from a <xref:System.Windows.Controls.Frame>, or because you are providing your own navigation UI.
 
@@ -1450,10 +1508,10 @@
 
 
 ## Examples
- The following example demonstrates how to make sure the navigation chrome of a <xref:System.Windows.Controls.Frame> is always visible by setting <xref:System.Windows.Controls.Frame.NavigationUIVisibility%2A> to <xref:System.Windows.Navigation.NavigationUIVisibility.Visible>.
+ The following example demonstrates how to make sure the navigation chrome of a <xref:System.Windows.Controls.Frame> is always visible by setting <xref:System.Windows.Controls.Frame.NavigationUIVisibility*> to <xref:System.Windows.Navigation.NavigationUIVisibility.Visible>.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Frame/NavigationUIVisibility/Window1.xaml.cs" id="Snippetsetnavigationuivisibility":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FrameNavigationUIVisibilitySnippets/visualbasic/window1.xaml.vb" id="Snippetsetnavigationuivisibility":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Frame/NavigationUIVisibility/window1.xaml.vb" id="Snippetsetnavigationuivisibility":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/FrameNavigationUIVisibilitySnippets/XAML/Window1.xaml" id="Snippetsetnavigationuivisibility":::
 
  ]]></format>
@@ -1477,6 +1535,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1487,7 +1547,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.NavigationUIVisibility%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.NavigationUIVisibility*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1510,6 +1570,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1537,6 +1599,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1551,9 +1615,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Controls.Frame.OnContentRendered%2A> raises the <xref:System.Windows.Controls.Frame.ContentRendered> event.
+ <xref:System.Windows.Controls.Frame.OnContentRendered*> raises the <xref:System.Windows.Controls.Frame.ContentRendered> event.
 
- A type that derives from <xref:System.Windows.Controls.Frame> may override <xref:System.Windows.Controls.Frame.OnContentRendered%2A>. The overridden method must call <xref:System.Windows.Controls.Frame.OnContentRendered%2A> on the base class if <xref:System.Windows.Controls.Frame.ContentRendered> needs to be raised.
+ A type that derives from <xref:System.Windows.Controls.Frame> may override <xref:System.Windows.Controls.Frame.OnContentRendered*>. The overridden method must call <xref:System.Windows.Controls.Frame.OnContentRendered*> on the base class if <xref:System.Windows.Controls.Frame.ContentRendered> needs to be raised.
 
  ]]></format>
         </remarks>
@@ -1576,6 +1640,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -1588,7 +1654,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.ContentElement.OnCreateAutomationPeer*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1601,9 +1667,9 @@
       <MemberSignature Language="VB.NET" Value="Public Sub Refresh ()" />
       <MemberSignature Language="F#" Value="abstract member Refresh : unit -&gt; unit&#xA;override this.Refresh : unit -&gt; unit" Usage="frame.Refresh " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Refresh();" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.Refresh : unit -&gt; unit" Usage="frame.Refresh " FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh();" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.Refresh : unit -&gt; unit" Usage="frame.Refresh " FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh();" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1614,6 +1680,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1625,7 +1693,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.Refresh%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.Refresh*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1638,9 +1706,9 @@
       <MemberSignature Language="VB.NET" Value="Public Function RemoveBackEntry () As JournalEntry" />
       <MemberSignature Language="F#" Value="abstract member RemoveBackEntry : unit -&gt; System.Windows.Navigation.JournalEntry&#xA;override this.RemoveBackEntry : unit -&gt; System.Windows.Navigation.JournalEntry" Usage="frame.RemoveBackEntry " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Navigation::JournalEntry ^ RemoveBackEntry();" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Navigation.JournalEntry RemoveBackEntry() cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.RemoveBackEntry : unit -&gt; System.Windows.Navigation.JournalEntry" Usage="frame.RemoveBackEntry " FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Navigation::JournalEntry ^ RemoveBackEntry();" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Navigation.JournalEntry RemoveBackEntry() cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.RemoveBackEntry : unit -&gt; System.Windows.Navigation.JournalEntry" Usage="frame.RemoveBackEntry " FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Navigation::JournalEntry ^ RemoveBackEntry();" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1651,6 +1719,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Navigation.JournalEntry</ReturnType>
@@ -1663,7 +1733,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.RemoveBackEntry%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.RemoveBackEntry*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1687,6 +1757,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1699,19 +1771,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- External content is XAML content that is not included with an application as either a resource file or a content file (see [WPF Application Resource, Content, and Data Files](/dotnet/framework/wpf/app-development/wpf-application-resource-content-and-data-files)).
+ External content is XAML content that is not included with an application as either a resource file or a content file (see [WPF Application Resource, Content, and Data Files](/dotnet/desktop/wpf/app-development/wpf-application-resource-content-and-data-files)).
 
- When <xref:System.Windows.Controls.Frame.SandboxExternalContent%2A> is `true`, and the source for the content of the <xref:System.Windows.Controls.Frame> is an external XAML file, the content is loaded into a partial trust security sandbox that is limited to the default `Internet` permission set. The external content is subsequently loaded into a separate process. As a result, the external content becomes isolated and does not have access to application-scope resources, such as resource dictionaries (see <xref:System.Windows.ResourceDictionary>).
+ When <xref:System.Windows.Controls.Frame.SandboxExternalContent*> is `true`, and the source for the content of the <xref:System.Windows.Controls.Frame> is an external XAML file, the content is loaded into a partial trust security sandbox that is limited to the default `Internet` permission set. The external content is subsequently loaded into a separate process. As a result, the external content becomes isolated and does not have access to application-scope resources, such as resource dictionaries (see <xref:System.Windows.ResourceDictionary>).
 
 > [!NOTE]
->  <xref:System.Windows.Controls.Frame> will only contain external content when the <xref:System.Windows.Controls.Frame.Source%2A> property is set to the uniform resource identifier (URI) for an external XAML file. <xref:System.Windows.Controls.Frame> content that is provided using the <xref:System.Windows.Controls.ContentControl.Content%2A> property is considered internal content and, subsequently, is not isolated.
+>  <xref:System.Windows.Controls.Frame> will only contain external content when the <xref:System.Windows.Controls.Frame.Source> property is set to the uniform resource identifier (URI) for an external XAML file. <xref:System.Windows.Controls.Frame> content that is provided using the <xref:System.Windows.Controls.ContentControl.Content> property is considered internal content and, subsequently, is not isolated.
 
 <a name="dependencyPropertyInfo_FrameSandboxExternalContent"></a>
 ## Dependency Property Information
 
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
-|Identifier field|<xref:System.Windows.Controls.Frame.SandboxExternalContent%2A>|
+|Identifier field|<xref:System.Windows.Controls.Frame.SandboxExternalContent*>|
 |Metadata properties set to `true`|None|
 
  ]]></format>
@@ -1737,6 +1809,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1747,7 +1821,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Frame.SandboxExternalContent%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Frame.SandboxExternalContent*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1770,6 +1844,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1805,6 +1881,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1822,10 +1900,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.Source*?displayProperty=nameWithType>.
 
 > [!NOTE]
->  Uniform resource identifiers (URIs) can be either relative or absolute. For more information, see [Pack URIs in WPF](/dotnet/framework/wpf/app-development/pack-uris-in-wpf).
+> Uniform resource identifiers (URIs) can be either relative or absolute. For more information, see [Pack URIs in WPF](/dotnet/desktop/wpf/app-development/pack-uris-in-wpf).
 
 <a name="dependencyPropertyInfo_FrameSource"></a>
 ## Dependency Property Information
@@ -1833,15 +1911,15 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.Frame.SourceProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.Journal*>|
 
 
 
 ## Examples
- The following example shows how to navigate to a uniform resource identifier (URI) by setting the <xref:System.Windows.Controls.Frame.Source%2A> property.
+ The following example shows how to navigate to a uniform resource identifier (URI) by setting the <xref:System.Windows.Controls.Frame.Source> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Frame/Navigate/MainWindow.xaml.cs" id="Snippetnavigatetopagesrccode":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb" id="Snippetnavigatetopagesrccode":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Frame/Navigate/mainwindow.xaml.vb" id="Snippetnavigatetopagesrccode":::
 
  ]]></format>
         </remarks>
@@ -1864,6 +1942,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1880,9 +1960,9 @@
       <MemberSignature Language="VB.NET" Value="Public Sub StopLoading ()" />
       <MemberSignature Language="F#" Value="abstract member StopLoading : unit -&gt; unit&#xA;override this.StopLoading : unit -&gt; unit" Usage="frame.StopLoading " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void StopLoading();" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopLoading() cil managed" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="F#" Value="member this.StopLoading : unit -&gt; unit" Usage="frame.StopLoading " FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopLoading();" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopLoading() cil managed" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="member this.StopLoading : unit -&gt; unit" Usage="frame.StopLoading " FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopLoading();" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -1893,6 +1973,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1904,7 +1986,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See <xref:System.Windows.Navigation.NavigationService.StopLoading%2A?displayProperty=nameWithType>.
+ See <xref:System.Windows.Navigation.NavigationService.StopLoading*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1931,6 +2013,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

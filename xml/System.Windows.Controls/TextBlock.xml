@@ -5,8 +5,8 @@
   <TypeSignature Language="VB.NET" Value="Public Class TextBlock&#xA;Inherits FrameworkElement&#xA;Implements IContentHost, IServiceProvider" />
   <TypeSignature Language="F#" Value="type TextBlock = class&#xA;    inherit FrameworkElement&#xA;    interface IContentHost&#xA;    interface IAddChild&#xA;    interface IServiceProvider" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="C++ CLI" Value="public ref class TextBlock : System::Windows::FrameworkElement, IServiceProvider, System::Windows::IContentHost" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextBlock extends System.Windows.FrameworkElement implements class System.IServiceProvider, class System.Windows.IContentHost, class System.Windows.Markup.IAddChild" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-  <TypeSignature Language="F#" Value="type TextBlock = class&#xA;    inherit FrameworkElement&#xA;    interface IServiceProvider&#xA;    interface IContentHost&#xA;    interface IAddChild" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextBlock extends System.Windows.FrameworkElement implements class System.IServiceProvider, class System.Windows.IContentHost, class System.Windows.Markup.IAddChild" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="F#" Value="type TextBlock = class&#xA;    inherit FrameworkElement&#xA;    interface IServiceProvider&#xA;    interface IContentHost&#xA;    interface IAddChild" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
@@ -47,13 +49,13 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Windows.Controls.TextBlock> can contain a string in its <xref:System.Windows.Controls.TextBlock.Text%2A> property or <xref:System.Windows.Documents.Inline> flow content elements, such as <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Hyperlink>, and <xref:System.Windows.Documents.InlineUIContainer>, in its <xref:System.Windows.Controls.TextBlock.Inlines%2A> property.
+ A <xref:System.Windows.Controls.TextBlock> can contain a string in its <xref:System.Windows.Controls.TextBlock.Text> property or <xref:System.Windows.Documents.Inline> flow content elements, such as <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Hyperlink>, and <xref:System.Windows.Documents.InlineUIContainer>, in its <xref:System.Windows.Controls.TextBlock.Inlines> property.
 
  <xref:System.Windows.Controls.TextBlock> is designed to be lightweight, and is geared specifically at integrating small portions of flow content into a user interface (UI).  <xref:System.Windows.Controls.TextBlock> is optimized for single-line display, and provides good performance for displaying up to a few lines of content.
 
  <xref:System.Windows.Controls.TextBlock> is not optimized for scenarios that need to display more than a few lines of content; for such scenarios, a <xref:System.Windows.Documents.FlowDocument> coupled with an appropriate viewing control is a better choice than <xref:System.Windows.Controls.TextBlock>, in terms of performance.  After <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.FlowDocumentScrollViewer> is the next lightest-weight control for displaying flow content, and simply provides a scrolling content area with minimal UI.  <xref:System.Windows.Controls.FlowDocumentPageViewer> is optimized around "page-at-a-time" viewing mode for flow content.  Finally, <xref:System.Windows.Controls.FlowDocumentReader> supports the richest set functionality for viewing flow content, but is correspondingly heavier-weight.
 
- Horizontally aligning text within a <xref:System.Windows.Controls.TextBlock> is done with the <xref:System.Windows.Controls.TextBlock.TextAlignment%2A> property. Aligning the <xref:System.Windows.Controls.TextBlock> within the layout of the page is done with the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> properties.
+ Horizontally aligning text within a <xref:System.Windows.Controls.TextBlock> is done with the <xref:System.Windows.Controls.TextBlock.TextAlignment> property. Aligning the <xref:System.Windows.Controls.TextBlock> within the layout of the page is done with the <xref:System.Windows.FrameworkElement.HorizontalAlignment*> and <xref:System.Windows.FrameworkElement.VerticalAlignment*> properties.
 
 
 
@@ -69,12 +71,12 @@
  The following example shows how to achieve similar results programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblocksimple":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblocksimple":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblocksimple":::
 
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Controls.Label" />
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160053">WPF Controls Gallery Sample</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Getting%20Started/ControlsAndLayout">WPF Controls Gallery Sample</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -102,6 +104,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -126,6 +130,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="inline" Type="System.Windows.Documents.Inline" />
@@ -145,7 +151,7 @@
  The following example demonstrates the use of this constructor.  In this case, the <xref:System.Windows.Controls.TextBlock> contains a text <xref:System.Windows.Documents.Run>.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockconstructorsimple":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockconstructorsimple":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockconstructorsimple":::
 
  ]]></format>
         </remarks>
@@ -170,6 +176,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -185,7 +193,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.FrameworkElement.ArrangeOverride%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.FrameworkElement.ArrangeOverride*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -208,6 +216,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Brush</ReturnType>
@@ -219,7 +229,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Any <xref:System.Windows.Controls.TextBlock.Background%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.Background*> settings on child elements override this top-level setting.
 
  For a table of swatches that show the available predefined brush colors, see <xref:System.Windows.Media.Brushes>.
 
@@ -229,19 +239,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.BackgroundProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Background%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Background*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Background%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Background> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -264,6 +274,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -290,6 +302,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -303,7 +317,7 @@
 ## Remarks
  The baseline is the imaginary horizontal line with which the base of each character in a line of text is aligned.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.BaselineOffset="double".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetBaselineOffset%2A> and <xref:System.Windows.Controls.TextBlock.SetBaselineOffset%2A>.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.BaselineOffset="double".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetBaselineOffset*> and <xref:System.Windows.Controls.TextBlock.SetBaselineOffset*>.
 
  ]]></format>
         </remarks>
@@ -326,6 +340,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -352,6 +368,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.LineBreakCondition</ReturnType>
@@ -387,6 +405,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.LineBreakCondition</ReturnType>
@@ -422,6 +442,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
@@ -459,6 +481,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
@@ -496,6 +520,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -513,25 +539,25 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Any <xref:System.Windows.Controls.TextBlock.FontFamily%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.FontFamily*> settings on child elements override this top-level setting.
 
  When multiple families are specified, the second and subsequent font families serve as fallback families to be used in cases where the primary font family is unavailable or not applicable.
 
- This property specifies a preference only.  If the specified font family is not available, the <xref:System.Windows.Controls.TextBlock> silently falls back to the font determined by the <xref:System.Windows.SystemFonts.MessageFontFamily%2A> value.
+ This property specifies a preference only.  If the specified font family is not available, the <xref:System.Windows.Controls.TextBlock> silently falls back to the font determined by the <xref:System.Windows.SystemFonts.MessageFontFamily*> value.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontFamily="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format values as explained in XAML Values. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontFamily%2A> and <xref:System.Windows.Controls.TextBlock.SetFontFamily%2A>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontFamily` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontFamily="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format values as explained in XAML Values. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontFamily*> and <xref:System.Windows.Controls.TextBlock.SetFontFamily*>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontFamily` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
 
 <a name="xamlAttributeUsage_FontFamily"></a>
 ## XAML Attribute Usage
 
-```
-<object FontFamily="fontFamilyName"/>
+```xaml
+<object FontFamily="fontFamilyName"/>
 - or -
-<object FontFamily="fontFamilyNamesList"/>
+<object FontFamily="fontFamilyNamesList"/>
 - or -
-<object FontFamily="fontFamilyFolderReference"/>
+<object FontFamily="fontFamilyFolderReference"/>
 - or -
-<object FontFamily="fontFamilyUriReference"/>
+<object FontFamily="fontFamilyUriReference"/>
 ```
 
 <a name="xamlValues_FontFamily"></a>
@@ -554,19 +580,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.FontFamilyProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontFamily%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontFamily*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontFamily%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontFamily> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -589,6 +615,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -615,6 +643,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -636,17 +666,17 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Any <xref:System.Windows.Controls.TextBlock.FontSize%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.FontSize*> settings on child elements override this top-level setting.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontSize="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format values as explained in XAML Values. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontSize%2A> and <xref:System.Windows.Controls.TextBlock.SetFontSize%2A>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontSize` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontSize="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format values as explained in XAML Values. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontSize*> and <xref:System.Windows.Controls.TextBlock.SetFontSize*>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontSize` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
 
 <a name="xamlAttributeUsage_FontSize"></a>
 ## XAML Attribute Usage
 
-```
-<object FontSize="double"/>
+```xaml
+<object FontSize="double"/>
 - or -
-<object FontSize="qualifiedDouble"/>
+<object FontSize="qualifiedDouble"/>
 ```
 
 <a name="xamlValues_FontSize"></a>
@@ -673,19 +703,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.FontSizeProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontSize%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontSize*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontSize%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontSize> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -708,6 +738,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -734,6 +766,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontStretch</ReturnType>
@@ -745,9 +779,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Any <xref:System.Windows.Controls.TextBlock.FontStretch%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.FontStretch*> settings on child elements override this top-level setting.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontStretch="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format property names of the <xref:System.Windows.FontStretch> class. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontStretch%2A> and <xref:System.Windows.Controls.TextBlock.SetFontStretch%2A>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontStretch` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontStretch="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format property names of the <xref:System.Windows.FontStretch> class. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontStretch*> and <xref:System.Windows.Controls.TextBlock.SetFontStretch*>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontStretch` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
 
 <a name="dependencyPropertyInfo_FontStretch"></a>
 ## Dependency Property Information
@@ -755,19 +789,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.FontStretchProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStretch%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStretch*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStretch%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStretch> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -790,6 +824,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -816,6 +852,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontStyle</ReturnType>
@@ -827,9 +865,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Any <xref:System.Windows.Controls.TextBlock.FontStyle%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.FontStyle*> settings on child elements override this top-level setting.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontStyle="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format property names in the <xref:System.Windows.FontStyles> class. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontStyle%2A> and <xref:System.Windows.Controls.TextBlock.SetFontStyle%2A>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontStyle` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontStyle="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format property names in the <xref:System.Windows.FontStyles> class. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontStyle*> and <xref:System.Windows.Controls.TextBlock.SetFontStyle*>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontStyle` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
 
 <a name="dependencyPropertyInfo_FontStyle"></a>
 ## Dependency Property Information
@@ -837,19 +875,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.FontStyleProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStyle%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStyle*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStyle%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontStyle> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -872,6 +910,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -898,6 +938,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontWeight</ReturnType>
@@ -909,11 +951,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Any <xref:System.Windows.Controls.TextBlock.FontWeight%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.FontWeight*> settings on child elements override this top-level setting.
 
  For a list of valid values of font weights, see the <xref:System.Windows.FontWeights> class.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontWeight="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format values of a property of the <xref:System.Windows.FontWeights> class. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontWeight%2A> and <xref:System.Windows.Controls.TextBlock.SetFontWeight%2A>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontWeight` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.FontWeight="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is one of the string-format values of a property of the <xref:System.Windows.FontWeights> class. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetFontWeight*> and <xref:System.Windows.Controls.TextBlock.SetFontWeight*>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `FontWeight` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
 
 <a name="dependencyPropertyInfo_FontWeight"></a>
 ## Dependency Property Information
@@ -921,19 +963,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.FontWeightProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontWeight%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontWeight*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontWeight%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.FontWeight> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -956,6 +998,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -982,6 +1026,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Brush</ReturnType>
@@ -995,9 +1041,9 @@
 ## Remarks
  For a table of swatches that show the available pre-defined brush colors, see <xref:System.Windows.Media.Brushes>.
 
- Any <xref:System.Windows.Controls.TextBlock.Foreground%2A> settings on child elements override this top-level setting.
+ Any <xref:System.Windows.Controls.TextBlock.Foreground*> settings on child elements override this top-level setting.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.Foreground="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string that resolves to a <xref:System.Windows.Media.Brush> implementation value. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetForeground%2A> and <xref:System.Windows.Controls.TextBlock.SetForeground%2A>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `Foreground` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.Foreground="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string that resolves to a <xref:System.Windows.Media.Brush> implementation value. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetForeground*> and <xref:System.Windows.Controls.TextBlock.SetForeground*>. The attached property usage is not common, because most elements that can be contained in a <xref:System.Windows.Controls.TextBlock> support an analogous nonattached `Foreground` property, which the <xref:System.Windows.Controls.TextBlock> uses for rendering.
 
 <a name="dependencyPropertyInfo_Foreground"></a>
 ## Dependency Property Information
@@ -1005,19 +1051,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.ForegroundProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Foreground%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Foreground*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Foreground%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Foreground> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -1040,6 +1086,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1066,6 +1114,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -1100,6 +1150,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.FontFamily</ReturnType>
@@ -1134,6 +1186,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1174,6 +1228,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontStretch</ReturnType>
@@ -1208,6 +1264,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontStyle</ReturnType>
@@ -1242,6 +1300,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.FontWeight</ReturnType>
@@ -1276,6 +1336,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Brush</ReturnType>
@@ -1310,6 +1372,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1350,6 +1414,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
@@ -1384,6 +1450,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
@@ -1426,6 +1494,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt;</ReturnType>
@@ -1466,6 +1536,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextAlignment</ReturnType>
@@ -1500,6 +1572,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Visual</ReturnType>
@@ -1515,7 +1589,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.FrameworkElement.GetVisualChild%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.FrameworkElement.GetVisualChild*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1540,6 +1614,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
@@ -1557,7 +1633,7 @@
 ## Remarks
  This method is intended to enable precise hit testing for rendered content.
 
- This method overrides <xref:System.Windows.UIElement.HitTestCore%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.UIElement.HitTestCore*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1582,6 +1658,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt;</ReturnType>
@@ -1609,15 +1687,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1653,6 +1729,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.IInputElement</ReturnType>
@@ -1684,6 +1762,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1704,7 +1784,7 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.IsHyphenationEnabledProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
  ]]></format>
         </remarks>
@@ -1728,6 +1808,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1754,6 +1836,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1771,21 +1855,21 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Changing this value does not change the height of the associated text; rather, it changes the height of the line that contains the text. To change the size of the text, use the <xref:System.Windows.Controls.TextBlock.FontSize%2A> property.
+ Changing this value does not change the height of the associated text; rather, it changes the height of the line that contains the text. To change the size of the text, use the <xref:System.Windows.Controls.TextBlock.FontSize> property.
 
- In addition to this property, the layout of lines in a <xref:System.Windows.Controls.TextBlock> is affected by its <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> property.
+ In addition to this property, the layout of lines in a <xref:System.Windows.Controls.TextBlock> is affected by its <xref:System.Windows.Controls.TextBlock.LineStackingStrategy> property.
 
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.LineHeight="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string as explained in XAML Values. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetLineHeight%2A> and <xref:System.Windows.Controls.TextBlock.SetLineHeight%2A>. The attached property usage is not common.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.LineHeight="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string as explained in XAML Values. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetLineHeight*> and <xref:System.Windows.Controls.TextBlock.SetLineHeight*>. The attached property usage is not common.
 
 <a name="xamlAttributeUsage_LineHeight"></a>
 ## XAML Attribute Usage
 
-```
-<object LineHeight="double"/>
+```xaml
+<object LineHeight="double"/>
 - or -
-<object LineHeight="qualifiedDouble"/>
+<object LineHeight="qualifiedDouble"/>
 - or -
-<object LineHeight="Auto"/>
+<object LineHeight="Auto"/>
 ```
 
 <a name="xamlValues_LineHeight"></a>
@@ -1815,19 +1899,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.LineHeightProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.LineHeight%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.LineHeight*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.LineHeight%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.LineHeight> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -1853,6 +1937,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1879,6 +1965,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
@@ -1890,7 +1978,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.LineStackingStrategy="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string value of the <xref:System.Windows.LineStackingStrategy> enumeration. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetLineStackingStrategy%2A> and <xref:System.Windows.Controls.TextBlock.SetLineStackingStrategy%2A>. The attached property usage is not common.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.LineStackingStrategy="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string value of the <xref:System.Windows.LineStackingStrategy> enumeration. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetLineStackingStrategy*> and <xref:System.Windows.Controls.TextBlock.SetLineStackingStrategy*>. The attached property usage is not common.
 
 <a name="dependencyPropertyInfo_LineStackingStrategy"></a>
 ## Dependency Property Information
@@ -1898,12 +1986,12 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.LineStackingStrategyProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> property to determine how the line boxes are created for text lines of a <xref:System.Windows.Controls.TextBlock>. The first <xref:System.Windows.Controls.TextBlock> has a <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> value of <xref:System.Windows.LineStackingStrategy.MaxHeight> and the second <xref:System.Windows.Controls.TextBlock> has a value of <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.
+ The following example shows how to use the <xref:System.Windows.Controls.TextBlock.LineStackingStrategy> property to determine how the line boxes are created for text lines of a <xref:System.Windows.Controls.TextBlock>. The first <xref:System.Windows.Controls.TextBlock> has a <xref:System.Windows.Controls.TextBlock.LineStackingStrategy*> value of <xref:System.Windows.LineStackingStrategy.MaxHeight> and the second <xref:System.Windows.Controls.TextBlock> has a value of <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/BaselineAlignment/Overview/linestackingstrategyexample.xaml" id="Snippetlinestackingstrategyexamplewholepage":::
 
@@ -1932,6 +2020,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1958,6 +2048,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -1985,6 +2077,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -2002,7 +2096,7 @@
 ## Remarks
  Override this method to implement custom sizing behavior.
 
- This method overrides <xref:System.Windows.FrameworkElement.MeasureOverride%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.FrameworkElement.MeasureOverride*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -2025,6 +2119,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2055,6 +2151,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -2067,7 +2165,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.ContentElement.OnCreateAutomationPeer*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -2090,6 +2188,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2104,7 +2204,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.FrameworkElement.OnPropertyChanged*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -2128,6 +2228,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2167,6 +2269,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Thickness</ReturnType>
@@ -2178,21 +2282,21 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Controls.TextBlock.Padding%2A> can be described as uniform in all directions (`Padding="10"`), or as four distinct values that represent left, top, right, and bottom padding independently (`Padding="5,0,10,20"`).
+ <xref:System.Windows.Controls.TextBlock.Padding*> can be described as uniform in all directions (`Padding="10"`), or as four distinct values that represent left, top, right, and bottom padding independently (`Padding="5,0,10,20"`).
 
  If a specified padding thickness exceeds the corresponding content area dimension (for example, the sum of the left and right padding widths exceeds the content area width), the thickness of the padding is proportionally reduced to be no greater than the relevant content area dimension.
 
 <a name="xamlAttributeUsage_Padding"></a>
 ## XAML Attribute Usage
 
-```
-<object Padding="uniformThickness"/>
+```xaml
+<object Padding="uniformThickness"/>
 - or -
-<object Padding="independentThickness"/>
+<object Padding="independentThickness"/>
 - or -
-<object Padding="qualifiedUniformThickness"/>
+<object Padding="qualifiedUniformThickness"/>
 - or -
-<object Padding="qualifiedIndependentThickness"/>
+<object Padding="qualifiedIndependentThickness"/>
 ```
 
 <a name="xamlValues_Padding"></a>
@@ -2227,19 +2331,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.PaddingProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Padding%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Padding*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Padding%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Padding> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -2262,6 +2366,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -2288,6 +2394,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2323,6 +2431,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2358,6 +2468,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2393,6 +2505,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2428,6 +2542,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2463,6 +2579,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2498,6 +2616,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2533,6 +2653,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2570,6 +2692,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2605,6 +2729,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2640,6 +2766,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2675,6 +2803,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2715,6 +2845,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2753,6 +2885,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -2787,6 +2921,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2827,6 +2963,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2863,6 +3001,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2903,6 +3043,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2942,6 +3084,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2975,6 +3119,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -3005,6 +3151,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -3022,7 +3170,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use this property when you want to show plain text in a <xref:System.Windows.Controls.TextBlock>.  When you need to format the text, add <xref:System.Windows.Documents.Inline> objects to the <xref:System.Windows.Controls.TextBlock.Inlines%2A> property.
+ Use this property when you want to show plain text in a <xref:System.Windows.Controls.TextBlock>.  When you need to format the text, add <xref:System.Windows.Documents.Inline> objects to the <xref:System.Windows.Controls.TextBlock.Inlines> property.
 
 <a name="dependencyPropertyInfo_Text"></a>
 ## Dependency Property Information
@@ -3030,21 +3178,21 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.TextProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Text%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Text*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/TextBlock/Text/Window1.xaml" id="Snippet_textblock_text1xaml":::
 
  Alternately, the contents of a text run may simply be contained by <xref:System.Windows.Controls.TextBlock> element tags.
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Text%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Text> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/TextBlock/Text/Window1.xaml.cs" id="Snippet_textblock_text":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblock_text":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/TextBlock/Text/window1.xaml.vb" id="Snippet_textblock_text":::
 
  ]]></format>
         </remarks>
@@ -3067,6 +3215,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextAlignment</ReturnType>
@@ -3078,7 +3228,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.TextAlignment="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string value of the <xref:System.Windows.TextAlignment> enumeration. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetTextAlignment%2A> and <xref:System.Windows.Controls.TextBlock.SetTextAlignment%2A>. The attached property usage is not common.
+ This dependency property also has an attached property usage. In XAML, the usage is `<object TextBlock.TextAlignment="value".../>`, where *object* is an object element (typically a flow element) contained within a <xref:System.Windows.Controls.TextBlock>, and *value* is a string value of the <xref:System.Windows.TextAlignment> enumeration. In code, the attached property usage is supported by <xref:System.Windows.Controls.TextBlock.GetTextAlignment*> and <xref:System.Windows.Controls.TextBlock.SetTextAlignment*>. The attached property usage is not common.
 
 <a name="dependencyPropertyInfo_TextAlignment"></a>
 ## Dependency Property Information
@@ -3086,19 +3236,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.TextAlignmentProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextAlignment%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextAlignment*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextAlignment%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextAlignment> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -3122,6 +3272,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -3148,6 +3300,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
@@ -3159,7 +3313,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Windows.TextDecoration> object is a visual ornamentation you can add to text. There are four types of text decorations: underline, baseline, strikethrough, and overline.  For more information about text decorations, see [How to: Create a Text Decoration](/dotnet/framework/wpf/advanced/how-to-create-a-text-decoration).
+ A <xref:System.Windows.TextDecoration> object is a visual ornamentation you can add to text. There are four types of text decorations: underline, baseline, strikethrough, and overline.  For more information about text decorations, see [How to: Create a Text Decoration](/dotnet/desktop/wpf/advanced/how-to-create-a-text-decoration).
 
  By default, this property is set to `null` and has no <xref:System.Windows.TextDecorationCollection> associated with it.  Before adding any text effects, create a new <xref:System.Windows.TextDecorationCollection> and assign it to this property.
 
@@ -3169,12 +3323,12 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.TextDecorationsProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> attribute.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextDecorations*> attribute.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextDecorations/Window1.xaml" id="Snippet_textblock_textdecxaml":::
 
@@ -3182,7 +3336,7 @@
 
  ![Screenshot: Text with default strikethrough effect](~/add/media/inline-textdec-strike.png "Screenshot: Text with default strikethrough effect")
 
- The following figures show how the <xref:System.Windows.TextDecorations.OverLine%2A>, <xref:System.Windows.TextDecorations.Baseline%2A>, and <xref:System.Windows.TextDecorations.Underline%2A> decorations render, respectively.
+ The following figures show how the <xref:System.Windows.TextDecorations.OverLine*>, <xref:System.Windows.TextDecorations.Baseline*>, and <xref:System.Windows.TextDecorations.Underline*> decorations render, respectively.
 
  ![Screenshot: Overline TextDecorator](~/add/media/inline-textdec-over.png "Screenshot: Overline TextDecorator")
 
@@ -3190,10 +3344,10 @@
 
  ![Screenshot: Text with default underline effect](~/add/media/inline-textdec-under.png "Screenshot: Text with default underline effect")
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextDecorations> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextDecorations/Window1.xaml.cs" id="Snippet_textblock_textdec":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblock_textdec":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/TextBlock/TextDecorations/window1.xaml.vb" id="Snippet_textblock_textdec":::
 
  ]]></format>
         </remarks>
@@ -3216,6 +3370,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -3242,6 +3398,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.TextEffectCollection</ReturnType>
@@ -3261,7 +3419,7 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.TextEffectsProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
@@ -3269,7 +3427,7 @@
  The following example shows how to create a simple text effect and apply it to a text of a <xref:System.Windows.Controls.TextBlock>.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextEffects/Window1.xaml.cs" id="Snippet_textblock_texteffects":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblock_texteffects":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/TextBlock/TextEffects/window1.xaml.vb" id="Snippet_textblock_texteffects":::
 
  ]]></format>
         </remarks>
@@ -3292,6 +3450,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -3318,6 +3478,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -3344,6 +3506,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextTrimming</ReturnType>
@@ -3362,7 +3526,7 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.TextTrimmingProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
  ]]></format>
         </remarks>
@@ -3385,6 +3549,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -3411,6 +3577,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextWrapping</ReturnType>
@@ -3429,19 +3597,19 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBlock.TextWrappingProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextWrapping*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.TextWrapping> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -3464,6 +3632,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -3490,6 +3660,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.Typography</ReturnType>
@@ -3501,19 +3673,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.TextBlock.Typography%2A> property is applicable only to OpenType fonts. A typography variant has no effect on fonts that do not support the variant.  For more information on this topic, see [Typography in WPF](/dotnet/framework/wpf/advanced/typography-in-wpf).
+ The <xref:System.Windows.Controls.TextBlock.Typography> property is applicable only to OpenType fonts. A typography variant has no effect on fonts that do not support the variant.  For more information on this topic, see [Typography in WPF](/dotnet/desktop/wpf/advanced/typography-in-wpf).
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Typography%2A> attribute of a <xref:System.Windows.Controls.TextBlock> element.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Typography*> attribute of a <xref:System.Windows.Controls.TextBlock> element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml" id="Snippet_textblockpropsxaml":::
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Typography%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBlock.Typography> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextAlignment/Overview/Window1.xaml.cs" id="Snippet_textblockprops":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb" id="Snippet_textblockprops":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/FlowDocumentPageViewer/MaxZoom/window1.xaml.vb" id="Snippet_textblockprops":::
 
  ]]></format>
         </remarks>
@@ -3537,6 +3709,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>

@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class RadioButton&#xA;Inherits ToggleButton" />
   <TypeSignature Language="F#" Value="type RadioButton = class&#xA;    inherit ToggleButton" />
   <TypeSignature Language="C++ CLI" Value="public ref class RadioButton : System::Windows::Controls::Primitives::ToggleButton" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RadioButton extends System.Windows.Controls.Primitives.ToggleButton" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RadioButton extends System.Windows.Controls.Primitives.ToggleButton" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.Primitives.ToggleButton</BaseTypeName>
@@ -34,12 +36,12 @@
 ## Remarks
  A <xref:System.Windows.Controls.RadioButton> is a <xref:System.Windows.Controls.ContentControl>, which means that it can contain a single object of any type (such as a string, an image, or a panel). For more information, see the <xref:System.Windows.Controls.ContentControl> class.
 
- A <xref:System.Windows.Controls.RadioButton> has two states: `true` or `false`. The <xref:System.Windows.Controls.RadioButton> is a control that is usually used as an item in a group of <xref:System.Windows.Controls.RadioButton> controls. However, it is possible to create a single <xref:System.Windows.Controls.RadioButton>.  Whether a <xref:System.Windows.Controls.RadioButton> is selected is determined by the state of its <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> property.
+ A <xref:System.Windows.Controls.RadioButton> has two states: `true` or `false`. The <xref:System.Windows.Controls.RadioButton> is a control that is usually used as an item in a group of <xref:System.Windows.Controls.RadioButton> controls. However, it is possible to create a single <xref:System.Windows.Controls.RadioButton>.  Whether a <xref:System.Windows.Controls.RadioButton> is selected is determined by the state of its <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked> property.
 
- When a <xref:System.Windows.Controls.RadioButton> is selected, it cannot be cleared by clicking it. When <xref:System.Windows.Controls.RadioButton> elements are grouped, the buttons are mutually exclusive. A user can select only one item at a time within a <xref:System.Windows.Controls.RadioButton> group. You can group <xref:System.Windows.Controls.RadioButton> controls by placing them inside a parent or by setting the <xref:System.Windows.Controls.RadioButton.GroupName%2A> property on each <xref:System.Windows.Controls.RadioButton>.
+ When a <xref:System.Windows.Controls.RadioButton> is selected, it cannot be cleared by clicking it. When <xref:System.Windows.Controls.RadioButton> elements are grouped, the buttons are mutually exclusive. A user can select only one item at a time within a <xref:System.Windows.Controls.RadioButton> group. You can group <xref:System.Windows.Controls.RadioButton> controls by placing them inside a parent or by setting the <xref:System.Windows.Controls.RadioButton.GroupName> property on each <xref:System.Windows.Controls.RadioButton>.
 
 ## Customizing the RadioButton Control
- To apply the same property settings to multiple <xref:System.Windows.Controls.RadioButton> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](/dotnet/framework/wpf/controls/customizing-the-appearance-of-an-existing-control).  To see the parts and states that are specific to the <xref:System.Windows.Controls.RadioButton>, see [RadioButton Styles and Templates](/dotnet/framework/wpf/controls/radiobutton-styles-and-templates).
+ To apply the same property settings to multiple <xref:System.Windows.Controls.RadioButton> controls, use the <xref:System.Windows.FrameworkElement.Style> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [How to create a template for a control](/dotnet/desktop/wpf/controls/how-to-create-apply-template).  To see the parts and states that are specific to the <xref:System.Windows.Controls.RadioButton>, see [RadioButton Styles and Templates](/dotnet/desktop/wpf/controls/radiobutton).
 
  Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.
 
@@ -51,7 +53,7 @@
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/RadioButton/Overview/Pane1.xaml" id="Snippet3":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/RadioButton/Overview/Pane1.xaml.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/RadioButton/VisualBasic/Window1.xaml.vb" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/RadioButton/Overview/Window1.xaml.vb" id="Snippet5":::
 
  The following code sample creates two separate <xref:System.Windows.Controls.RadioButton> groups: `colorgrp` and `numgrp`. The user can choose one <xref:System.Windows.Controls.RadioButton> in each group.
 
@@ -59,7 +61,7 @@
 
  ]]></format>
     </remarks>
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160053">WPF Controls Gallery Sample</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Getting%20Started/ControlsAndLayout">WPF Controls Gallery Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -78,6 +80,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -108,6 +112,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -129,7 +135,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When two or more <xref:System.Windows.Controls.RadioButton> controls have the same <xref:System.Windows.Controls.RadioButton.GroupName%2A>, a user can select only one <xref:System.Windows.Controls.RadioButton> at a time.
+ When two or more <xref:System.Windows.Controls.RadioButton> controls have the same <xref:System.Windows.Controls.RadioButton.GroupName*>, a user can select only one <xref:System.Windows.Controls.RadioButton> at a time.
 
 <a name="dependencyPropertyInfo_GroupName"></a>
 ## Dependency Property Information
@@ -167,6 +173,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -193,6 +201,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -223,6 +233,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -253,6 +265,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -281,6 +295,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -292,7 +308,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method toggles the <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> property.
+ This method toggles the <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked> property.
 
  ]]></format>
         </remarks>

@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,11 +33,11 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.ComponentModel.ListBindable(false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.ListBindable(false)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -43,31 +45,31 @@
   <Docs>
     <summary>Represents the collection containing the indexes to the checked items in a list view control.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A <xref:System.Windows.Forms.ListView.CheckedIndexCollection> stores the indexes to the checked items in a <xref:System.Windows.Forms.ListView> control. Items can be checked only if the <xref:System.Windows.Forms.ListView.CheckBoxes%2A> property of the <xref:System.Windows.Forms.ListView> control is set to `true`. The indexes stored in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> are index positions within the <xref:System.Windows.Forms.ListView.ListViewItemCollection>. The <xref:System.Windows.Forms.ListView.ListViewItemCollection> stores all items displayed in the <xref:System.Windows.Forms.ListView> control.  
-  
- The following table is an example of how the <xref:System.Windows.Forms.ListView.ListViewItemCollection> stores the items of the <xref:System.Windows.Forms.ListView> as well as their checked states in an example <xref:System.Windows.Forms.ListView> control.  
-  
-|Index|Item|Checked state in the ListView|  
-|-----------|----------|-----------------------------------|  
-|0|Item1|Unchecked|  
-|1|Item2|Checked|  
-|2|Item3|Unchecked|  
-|3|Item4|Checked|  
-|4|Item5|Checked|  
-  
- Based on the <xref:System.Windows.Forms.ListView.ListViewItemCollection> example in the previous table, the following table demonstrates how the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> would appear.  
-  
-|Index|Index of checked item in ListViewItemCollection|  
-|-----------|-----------------------------------------------------|  
-|0|1|  
-|1|3|  
-|2|4|  
-  
- You can use the properties and methods of this class to perform a variety of tasks with the collection. The <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains%2A> method enables you to determine whether an index position from the <xref:System.Windows.Forms.ListView.ListViewItemCollection> is one of the indexes stored in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. Once you know that the item is in the collection, you can use the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf%2A> method to determine the position of the index in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A <xref:System.Windows.Forms.ListView.CheckedIndexCollection> stores the indexes to the checked items in a <xref:System.Windows.Forms.ListView> control. Items can be checked only if the <xref:System.Windows.Forms.ListView.CheckBoxes> property of the <xref:System.Windows.Forms.ListView> control is set to `true`. The indexes stored in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> are index positions within the <xref:System.Windows.Forms.ListView.ListViewItemCollection>. The <xref:System.Windows.Forms.ListView.ListViewItemCollection> stores all items displayed in the <xref:System.Windows.Forms.ListView> control.
+
+ The following table is an example of how the <xref:System.Windows.Forms.ListView.ListViewItemCollection> stores the items of the <xref:System.Windows.Forms.ListView> as well as their checked states in an example <xref:System.Windows.Forms.ListView> control.
+
+|Index|Item|Checked state in the ListView|
+|-----------|----------|-----------------------------------|
+|0|Item1|Unchecked|
+|1|Item2|Checked|
+|2|Item3|Unchecked|
+|3|Item4|Checked|
+|4|Item5|Checked|
+
+ Based on the <xref:System.Windows.Forms.ListView.ListViewItemCollection> example in the previous table, the following table demonstrates how the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> would appear.
+
+|Index|Index of checked item in ListViewItemCollection|
+|-----------|-----------------------------------------------------|
+|0|1|
+|1|3|
+|2|4|
+
+ You can use the properties and methods of this class to perform a variety of tasks with the collection. The <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains*> method enables you to determine whether an index position from the <xref:System.Windows.Forms.ListView.ListViewItemCollection> is one of the indexes stored in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. Once you know that the item is in the collection, you can use the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf*> method to determine the position of the index in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Forms.ListView.ListViewItemCollection" />
@@ -91,6 +93,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -105,11 +109,11 @@
         <param name="owner">A <see cref="T:System.Windows.Forms.ListView" /> control that owns the collection.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot create an instance of this class without associating it with a <xref:System.Windows.Forms.ListView> control.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot create an instance of this class without associating it with a <xref:System.Windows.Forms.ListView> control.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">.NET 7 and later versions: <paramref name="owner" /> is <see langword="null" />.</exception>
@@ -133,6 +137,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -146,11 +152,11 @@
         <returns>
           <see langword="true" /> if the specified index from the <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> for the <see cref="T:System.Windows.Forms.ListView" /> is an item in the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains%2A> method enables you to determine whether an index position from the <xref:System.Windows.Forms.ListView.ListViewItemCollection> is one of the checked indexes stored in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. Once you know that an item is in the checked index collection, you can use the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf%2A> method to determine the position of the index in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains*> method enables you to determine whether an index position from the <xref:System.Windows.Forms.ListView.ListViewItemCollection> is one of the checked indexes stored in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. Once you know that an item is in the checked index collection, you can use the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf*> method to determine the position of the index in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf(System.Int32)" />
@@ -177,6 +183,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -191,11 +199,11 @@
         <summary>Gets the number of items in the collection.</summary>
         <value>The number of items in the collection.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property enables you to determine the number of checked items in the <xref:System.Windows.Forms.ListView>. You can then use this value when you are looping through the values of the collection and need to provide a number of iterations to perform the loop.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property enables you to determine the number of checked items in the <xref:System.Windows.Forms.ListView>. You can then use this value when you are looping through the values of the collection and need to provide a number of iterations to perform the loop.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -221,6 +229,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -250,6 +260,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -262,11 +274,11 @@
         <summary>Returns the index within the <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" /> of the specified index from the <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> of the list view control.</summary>
         <returns>The zero-based index in the collection where the specified index of the <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> is located within the <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />; otherwise, -1 if the index is not located in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Once you know that an item is in the checked index collection (using the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains%2A> method), you can use the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf%2A> method to determine the position of the index in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Once you know that an item is in the checked index collection (using the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.Contains*> method), you can use the <xref:System.Windows.Forms.ListView.CheckedIndexCollection.IndexOf*> method to determine the position of the index in the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>.
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.Windows.Forms.ListView.CheckedIndexCollection.Contains(System.Int32)" />
@@ -293,6 +305,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -302,11 +316,11 @@
         <value>
           <see langword="true" /> if the collection is read-only; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property is always `true` for this collection. The items in the collection can only be modified by the <xref:System.Windows.Forms.ListView> control.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property is always `true` for this collection. The items in the collection can only be modified by the <xref:System.Windows.Forms.ListView> control.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -329,6 +343,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -341,11 +357,11 @@
         <summary>Gets the index value at the specified index within the collection.</summary>
         <value>The index value from the <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> that is stored at the specified location.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This indexer enables you to get a specific index from the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. The index stored in the collection is an index into the <xref:System.Windows.Forms.ListView.ListViewItemCollection> of the <xref:System.Windows.Forms.ListView> that represents a checked item in the <xref:System.Windows.Forms.ListView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This indexer enables you to get a specific index from the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>. The index stored in the collection is an index into the <xref:System.Windows.Forms.ListView.ListViewItemCollection> of the <xref:System.Windows.Forms.ListView> that represents a checked item in the <xref:System.Windows.Forms.ListView>.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="index" /> parameter is less than 0 or greater than or equal to the value of the <see cref="P:System.Windows.Forms.ListView.CheckedIndexCollection.Count" /> property of <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</exception>
@@ -372,6 +388,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -385,11 +403,11 @@
         <param name="index">The zero-based index in the array at which copying begins.</param>
         <summary>Copies the collection of checked-item indexes into an array.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The array must contain 32-bit signed integers, or it must be an <xref:System.Object> array.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The array must contain 32-bit signed integers, or it must be an <xref:System.Object> array.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArrayTypeMismatchException">The array type cannot be cast to an <see cref="T:System.Int32" />.</exception>
@@ -415,6 +433,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -454,6 +474,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -479,7 +501,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function Add (value As Object) As Integer Implements IList.Add" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Add : obj -&gt; int&#xA;override this.System.Collections.IList.Add : obj -&gt; int" Usage="checkedIndexCollection.System.Collections.IList.Add value" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.Add(System::Object ^ value) = System::Collections::IList::Add;" />
-      <MemberSignature Language="C#" Value="int IList.Add (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="int IList.Add (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Add(System.Object)</InterfaceMember>
@@ -494,6 +516,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -506,11 +530,11 @@ This member is an explicit interface member implementation. It can be used only 
         <summary>Adds an item to the collection.</summary>
         <returns>The zero-based index where <paramref name="value" /> is located in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot change the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> class directly. To add an item to the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot change the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> class directly. To add an item to the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked> property.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">Always thrown.</exception>
@@ -537,6 +561,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -545,11 +571,11 @@ This member is an explicit interface member implementation. It can be used only 
       <Docs>
         <summary>Removes all items from the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To clear the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, set the <xref:System.Windows.Forms.ListViewItem.Checked%2A> property to `false` for each <xref:System.Windows.Forms.ListViewItem> in the <xref:System.Windows.Forms.ListView.ListViewItemCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To clear the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, set the <xref:System.Windows.Forms.ListViewItem.Checked> property to `false` for each <xref:System.Windows.Forms.ListViewItem> in the <xref:System.Windows.Forms.ListView.ListViewItemCollection>.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">Always thrown.</exception>
@@ -562,7 +588,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function Contains (checkedIndex As Object) As Boolean Implements IList.Contains" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Contains : obj -&gt; bool&#xA;override this.System.Collections.IList.Contains : obj -&gt; bool" Usage="checkedIndexCollection.System.Collections.IList.Contains checkedIndex" />
       <MemberSignature Language="C++ CLI" Value=" virtual bool System.Collections.IList.Contains(System::Object ^ checkedIndex) = System::Collections::IList::Contains;" />
-      <MemberSignature Language="C#" Value="bool IList.Contains (object? checkedIndex);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="bool IList.Contains (object? checkedIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Contains(System.Object)</InterfaceMember>
@@ -577,6 +603,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -599,7 +627,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function IndexOf (checkedIndex As Object) As Integer Implements IList.IndexOf" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.IndexOf : obj -&gt; int&#xA;override this.System.Collections.IList.IndexOf : obj -&gt; int" Usage="checkedIndexCollection.System.Collections.IList.IndexOf checkedIndex" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.IndexOf(System::Object ^ checkedIndex) = System::Collections::IList::IndexOf;" />
-      <MemberSignature Language="C#" Value="int IList.IndexOf (object? checkedIndex);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object? checkedIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.IndexOf(System.Object)</InterfaceMember>
@@ -614,6 +642,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -635,7 +665,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Sub Insert (index As Integer, value As Object) Implements IList.Insert" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Insert : int * obj -&gt; unit&#xA;override this.System.Collections.IList.Insert : int * obj -&gt; unit" Usage="checkedIndexCollection.System.Collections.IList.Insert (index, value)" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Insert(int index, System::Object ^ value) = System::Collections::IList::Insert;" />
-      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Insert(System.Int32,System.Object)</InterfaceMember>
@@ -650,6 +680,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -663,11 +695,11 @@ This member is an explicit interface member implementation. It can be used only 
         <param name="value">The object to be added to the <see cref="T:System.Windows.Forms.ListView.SelectedIndexCollection" />.</param>
         <summary>Inserts an item into the collection at a specified index.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To add an item to the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To add an item to the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked> property.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">Always thrown.</exception>
@@ -693,6 +725,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -719,7 +753,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
       <MemberSignature Language="F#" Value="member this.System.Collections.IList.Item(int) : obj with get, set" Usage="System.Collections.IList.Item" />
       <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IList::Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
-      <MemberSignature Language="C#" Value="object? System.Collections.IList.Item[int index] { get; set; }" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="object? System.Collections.IList.Item[int index] { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
@@ -733,9 +767,11 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -744,7 +780,7 @@ This member is an explicit interface member implementation. It can be used only 
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The zero-based index of the element to get or set.</param>
@@ -760,7 +796,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Sub Remove (value As Object) Implements IList.Remove" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Remove : obj -&gt; unit&#xA;override this.System.Collections.IList.Remove : obj -&gt; unit" Usage="checkedIndexCollection.System.Collections.IList.Remove value" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Remove(System::Object ^ value) = System::Collections::IList::Remove;" />
-      <MemberSignature Language="C#" Value="void IList.Remove (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Remove (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Remove(System.Object)</InterfaceMember>
@@ -775,6 +811,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -786,11 +824,11 @@ This member is an explicit interface member implementation. It can be used only 
         <param name="value">The object to be removed from the <see cref="T:System.Windows.Forms.ListView.CheckedIndexCollection" />.</param>
         <summary>Removes the first occurrence of an item from the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To remove an item from the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To remove an item from the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked> property.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">Always thrown.</exception>
@@ -817,6 +855,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -828,11 +868,11 @@ This member is an explicit interface member implementation. It can be used only 
         <param name="index">The zero-based index of the item to remove.</param>
         <summary>Removes an item from the collection at a specified index.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To remove an item from the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot change the <xref:System.Windows.Forms.ListView.CheckedIndexCollection> class directly. To remove an item from the <xref:System.Windows.Forms.ListView.CheckedIndexCollection>, use the <xref:System.Windows.Forms.ListViewItem.Checked> property.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">Always thrown.</exception>

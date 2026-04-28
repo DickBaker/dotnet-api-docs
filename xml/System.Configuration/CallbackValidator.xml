@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Configuration.ConfigurationValidatorBase</BaseTypeName>
   </Base>
@@ -28,11 +33,11 @@
   <Docs>
     <summary>Provides dynamic validation of an object.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- To use this class, you need to implement a <xref:System.Configuration.ValidatorCallback> delegate for the type of object you want to validate. When you instantiate this class, you pass in the object type and a reference to the delegate. You can then call <xref:System.Configuration.CallbackValidator.CanValidate%2A> to determine if an object is the correct type or <xref:System.Configuration.CallbackValidator.Validate%2A> to execute the delegate on the object.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ To use this class, you need to implement a <xref:System.Configuration.ValidatorCallback> delegate for the type of object you want to validate. When you instantiate this class, you pass in the object type and a reference to the delegate. You can then call <xref:System.Configuration.CallbackValidator.CanValidate*> to determine if an object is the correct type or <xref:System.Configuration.CallbackValidator.Validate*> to execute the delegate on the object.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -59,6 +64,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="type" Type="System.Type" />
@@ -95,6 +102,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -132,6 +141,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -143,11 +154,11 @@
         <param name="value">The value of an object.</param>
         <summary>Determines whether the value of an object is valid.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.CallbackValidator> class contains the type and delegate necessary to validate an object. The type and delegate are established when an instance of the <xref:System.Configuration.CallbackValidator> class is created. The object to validate is passed as a parameter of the <xref:System.Configuration.CallbackValidator.Validate%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.CallbackValidator> class contains the type and delegate necessary to validate an object. The type and delegate are established when an instance of the <xref:System.Configuration.CallbackValidator> class is created. The object to validate is passed as a parameter of the <xref:System.Configuration.CallbackValidator.Validate*> method.
+
  ]]></format>
         </remarks>
       </Docs>

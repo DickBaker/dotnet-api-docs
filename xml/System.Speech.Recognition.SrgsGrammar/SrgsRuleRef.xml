@@ -1,6 +1,6 @@
 <Type Name="SrgsRuleRef" FullName="System.Speech.Recognition.SrgsGrammar.SrgsRuleRef">
   <TypeSignature Language="C#" Value="public class SrgsRuleRef : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SrgsRuleRef extends System.Speech.Recognition.SrgsGrammar.SrgsElement" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SrgsRuleRef extends System.Speech.Recognition.SrgsGrammar.SrgsElement" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
   <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef" />
   <TypeSignature Language="VB.NET" Value="Public Class SrgsRuleRef&#xA;Inherits SrgsElement" />
   <TypeSignature Language="F#" Value="type SrgsRuleRef = class&#xA;    inherit SrgsElement" />
@@ -13,6 +13,11 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
@@ -22,6 +27,10 @@
     <Attribute>
       <AttributeName Language="C#">[System.ComponentModel.ImmutableObject(true)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.ImmutableObject(true)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
     <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString()}")]</AttributeName>
@@ -42,17 +51,16 @@
 
  You can use one of the constructors of the <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> class to reference an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object or a `rule` element if the following is true:
 
--   The <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object is in the containing grammar and the value of its <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Scope%2A> property is <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Public> or <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Private>.
+- The <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object is in the containing grammar and the value of its <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule.Scope> property is <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Public> or <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Private>.
+- The `rule` element is in an external grammar and the value of its `scope` attribute is `public`.
+- The `rule` element is in an external grammar, the value of its `scope` attribute is `private`, and it is declared as the `root rule` of the external grammar.
 
--   The `rule` element is in an external grammar and the value of its `scope` attribute is `public`.
+ This class represents the `ruleref` element as defined in the World Wide Web Consortium (W3C) [Speech Recognition Grammar Specification (SRGS) Version 1.0](https://www.w3.org/TR/speech-grammar/).
 
--   The `rule` element is in an external grammar, the value of its `scope` attribute is `private`, and it is declared as the `root rule` of the external grammar.
-
- This class represents the `ruleref` element as defined in the World Wide Web Consortium (W3C) [Speech Recognition Grammar Specification (SRGS) Version 1.0](https://go.microsoft.com/fwlink/?LinkId=201761). For information about the SRGS `ruleref` element and details about its support by System.Speech, see [ruleref Element](https://msdn.microsoft.com/library/56eb0031-4908-4788-83ab-7c5e19aa4ac0).
+[!INCLUDE [untrusted-data-instance-note](~/includes/untrusted-data-instance-note.md)]
 
  ]]></format>
     </remarks>
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -76,7 +84,7 @@
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rule" Type="System.Speech.Recognition.SrgsGrammar.SrgsRule" />
@@ -90,20 +98,20 @@
 ## Remarks
  This constructor creates a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the containing  grammar. To create a rule reference to a `rule` element in an external grammar file, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%28System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%29>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor(System.Uri,System.String,System.String,System.String)>
 
 
 
 ## Examples
  The following example creates a grammar that recognizes the phrase "A nation that has won the World Cup is" followed by the name of a country that has won the World Cup. After creating the <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object `winnerRule` and giving it the string identifier `WorldCupWinner`, the example appends the string  "A nation that has won the World Cup is" to the rule. Using <xref:System.Speech.Recognition.SrgsGrammar.SrgsOneOf> objects, the example then builds a list of European countries/regions and a list of South American countries/regions, and adds each list to its respective rule, `ruleEurope` or `ruleSAmerica`. The example then creates rule references for `ruleEurope` and `ruleSAmerica` and adds them to the `WorldCupWinner` rule.
 
-```
+```csharp
 public void WorldSoccerWinners ()
 {
 
@@ -139,7 +147,7 @@ public void WorldSoccerWinners ()
 
  The created grammar has the following form.
 
-```
+```xml
 <grammar version="1.0" xml:lang="en-US" xmlns="http://www.w3.org/2001/06/grammar" root="WorldCupWinner">
     <rule id="WorldCupWinner" scope="public">
         <item> A nation that has won the world cup is </item>
@@ -174,7 +182,6 @@ public void WorldSoccerWinners ()
         </remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="rule" /> is <see langword="null" />.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -189,7 +196,7 @@ public void WorldSoccerWinners ()
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="uri" Type="System.Uri" />
@@ -203,20 +210,20 @@ public void WorldSoccerWinners ()
 ## Remarks
  This constructor creates a rule reference to an external grammar file. The URI may also include the identifier of a rule to reference, for example `http://www.contoso.com/ExternalGrammar.grxml#targetRule`.  If the `uri` parameter does not specify a rule identifier, the rule reference points to the root rule of the target grammar. To create a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the same grammar, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
-
+[!INCLUDE [untrusted-data-instance-note](~/includes/untrusted-data-instance-note.md)]
 
 ## Examples
  The following example creates a grammar for an application that returns information about bus shuttle service. The first method, `GrammarUrlForRoute`, takes a string that specifies a route and appends it to a string specifying the location of a grammar. This specifies a particular rule in that grammar. The method returns a `Uri` for that rule.
 
  The second method, `CreateGrammarForRoute`, creates an <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> element named `grammar` with a rule reference specified by the `Uri` passed to it by `GrammarUrlForRoute`. Note that the variable named _route is a member of an enclosing class.
 
-```
+```csharp
 private Uri GrammarUrlForRoute(string route)
 {
   return new Uri("http://localhost/MyBus/MyBusLocations.grxml#LocationsForRoute" + route);
@@ -246,7 +253,6 @@ private SrgsDocument CreateGrammarForRoute()
         </remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="uri" /> is <see langword="null" />.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -261,7 +267,7 @@ private SrgsDocument CreateGrammarForRoute()
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rule" Type="System.Speech.Recognition.SrgsGrammar.SrgsRule" />
@@ -277,20 +283,20 @@ private SrgsDocument CreateGrammarForRoute()
 ## Remarks
  This constructor creates a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the containing  grammar. To create a rule reference to a `rule` element in an external grammar file, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%28System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%29>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor(System.Uri,System.String,System.String,System.String)>
 
 
 
 ## Examples
- The following example creates a grammar for choosing the cities for a flight. The example constructs two <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> instances, each of which specifies a semantic key. Both rule references target the same <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object, named `cities`, but tag the recognition result from the rule reference with a different semantic key. The semantic key identifies a recognized city as the departure city or the arrival city for the flight. The handler for the <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized> event uses the keys to retrieve the semantics values created using <xref:System.Speech.Recognition.SrgsGrammar.SrgsNameValueTag.%23ctor%2A> from the recognition result.
+ The following example creates a grammar for choosing the cities for a flight. The example constructs two <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef> instances, each of which specifies a semantic key. Both rule references target the same <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object, named `cities`, but tag the recognition result from the rule reference with a different semantic key. The semantic key identifies a recognized city as the departure city or the arrival city for the flight. The handler for the <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized> event uses the keys to retrieve the semantics values created using <xref:System.Speech.Recognition.SrgsGrammar.SrgsNameValueTag.%23ctor*> from the recognition result.
 
-```
+```csharp
 using System;
 using System.Speech.Recognition;
 using System.Speech.Recognition.SrgsGrammar;
@@ -368,7 +374,6 @@ namespace SampleRecognition
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -383,7 +388,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="uri" Type="System.Uri" />
@@ -399,11 +404,13 @@ namespace SampleRecognition
 ## Remarks
  This constructor creates a rule reference to a `rule` element in an external grammar file. To create a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the same grammar, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
+
+[!INCLUDE [untrusted-data-instance-note](~/includes/untrusted-data-instance-note.md)]
 
  ]]></format>
         </remarks>
@@ -413,7 +420,6 @@ namespace SampleRecognition
  <paramref name="rule" /> is <see langword="null" />.</exception>
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="rule" /> is empty.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -428,7 +434,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rule" Type="System.Speech.Recognition.SrgsGrammar.SrgsRule" />
@@ -446,17 +452,16 @@ namespace SampleRecognition
 ## Remarks
  This constructor creates a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the containing  grammar. To create a rule reference to a `rule` element in an external grammar file, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%28System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%29>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor(System.Uri,System.String,System.String,System.String)>
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -471,7 +476,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="uri" Type="System.Uri" />
@@ -489,11 +494,13 @@ namespace SampleRecognition
 ## Remarks
  This constructor creates a rule reference to a `rule` element in an external grammar file. To create a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the same grammar, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
+
+[!INCLUDE [untrusted-data-instance-note](~/includes/untrusted-data-instance-note.md)]
 
  ]]></format>
         </remarks>
@@ -503,7 +510,6 @@ namespace SampleRecognition
  <paramref name="semanticKey" /> is <see langword="null" />.</exception>
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="semanticKey" /> is empty.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -518,7 +524,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="uri" Type="System.Uri" />
@@ -538,15 +544,16 @@ namespace SampleRecognition
 ## Remarks
  This constructor creates a rule reference to a `rule` element in an external grammar file. To create a rule reference to an <xref:System.Speech.Recognition.SrgsGrammar.SrgsRule> object within the same grammar, use any of the following constructors:
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
 
--   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor%2A>
+-   <xref:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.%23ctor*>
+
+[!INCLUDE [untrusted-data-instance-note](~/includes/untrusted-data-instance-note.md)]
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/office/developer/speech-technologies/hh361680(v%3doffice.14)">Create Grammars Using SrgsGrammar</related>
       </Docs>
     </Member>
     <Member MemberName="Dictation">
@@ -561,7 +568,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
@@ -583,7 +590,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
@@ -605,7 +612,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
@@ -627,7 +634,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>
@@ -638,20 +645,25 @@ namespace SampleRecognition
       </Docs>
     </Member>
     <Member MemberName="Params">
-      <MemberSignature Language="C#" Value="public string Params { get; }" />
+      <MemberSignature Language="C#" Value="public string? Params { get; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance string Params" />
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Params" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Params As String" />
       <MemberSignature Language="F#" Value="member this.Params : string" Usage="System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Params" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Params { System::String ^ get(); };" />
+      <MemberSignature Language="C#" Value="public string Params { get; }" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -667,20 +679,25 @@ namespace SampleRecognition
       </Docs>
     </Member>
     <Member MemberName="SemanticKey">
-      <MemberSignature Language="C#" Value="public string SemanticKey { get; }" />
+      <MemberSignature Language="C#" Value="public string? SemanticKey { get; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance string SemanticKey" />
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.SemanticKey" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SemanticKey As String" />
       <MemberSignature Language="F#" Value="member this.SemanticKey : string" Usage="System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.SemanticKey" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SemanticKey { System::String ^ get(); };" />
+      <MemberSignature Language="C#" Value="public string SemanticKey { get; }" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -696,20 +713,25 @@ namespace SampleRecognition
       </Docs>
     </Member>
     <Member MemberName="Uri">
-      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="C#" Value="public Uri? Uri { get; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Uri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As Uri" />
       <MemberSignature Language="F#" Value="member this.Uri : Uri" Usage="System.Speech.Recognition.SrgsGrammar.SrgsRuleRef.Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ Uri { Uri ^ get(); };" />
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
@@ -736,7 +758,7 @@ namespace SampleRecognition
         <AssemblyName>System.Speech</AssemblyName>
         <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleRef</ReturnType>

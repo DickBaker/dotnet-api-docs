@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
@@ -23,8 +25,14 @@
     <AssemblyName>System.Memory</AssemblyName>
     <AssemblyVersion>4.0.1.2</AssemblyVersion>
     <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+    <AssemblyVersion>4.0.5.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Memory" FromVersion="10.0.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Memory" FromVersion="11.0.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.Memory" FromVersion="5.0.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -42,7 +50,7 @@
   <TypeParameters>
     <TypeParameter Name="T">
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -54,33 +62,25 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsByRefLike]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsByRefLike&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.CompilerFeatureRequired("RefStructs")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.CompilerFeatureRequired("RefStructs")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
-      <AttributeName Language="C#">[System.Runtime.InteropServices.Marshalling.NativeMarshalling(typeof(System.Runtime.InteropServices.Marshalling.SpanMarshaller&lt;,&gt;))]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Marshalling.NativeMarshalling(typeof(System.Runtime.InteropServices.Marshalling.SpanMarshaller&lt;,&gt;))&gt;]</AttributeName>
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsByRefLike]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsByRefLike&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute>
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{ToString(),raw}")]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{ToString(),raw}")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp">
-      <AttributeName Language="C#">[System.Diagnostics.DebuggerTypeProxy(typeof(System.SpanDebugView&lt;&gt;))]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerTypeProxy(typeof(System.SpanDebugView&lt;&gt;))&gt;]</AttributeName>
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Marshalling.NativeMarshalling(typeof(System.Runtime.InteropServices.Marshalling.SpanMarshaller&lt;,&gt;))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Marshalling.NativeMarshalling(typeof(System.Runtime.InteropServices.Marshalling.SpanMarshaller&lt;,&gt;))&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -104,6 +104,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -112,7 +114,7 @@
         <AssemblyName>System.Memory</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="reference" Type="T" RefType="ref" Index="0" FrameworkAlternate="net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="reference" Type="T" RefType="ref" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="reference">A reference to data.</param>
@@ -121,13 +123,13 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Span (T[]? array);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public Span (T[]? array);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T[] array) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Span`1.#ctor(`0[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (array As T())" />
       <MemberSignature Language="F#" Value="new Span&lt;'T&gt; : 'T[] -&gt; Span&lt;'T&gt;" Usage="new System.Span&lt;'T&gt; array" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Span(cli::array &lt;T&gt; ^ array);" />
-      <MemberSignature Language="C#" Value="public Span (T[] array);" FrameworkAlternate="netcore-2.1;netcore-2.2;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public Span (T[] array);" FrameworkAlternate="netcore-2.1;netcore-2.2;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -138,6 +140,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -147,11 +151,13 @@
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="array" Type="T[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -188,6 +194,8 @@ If `array` is `null`, this constructor returns a `null` `Span<T>`.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -197,11 +205,17 @@ If `array` is `null`, this constructor returns a `null` `Span<T>`.
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
@@ -224,13 +238,13 @@ If `array` is `null`, this constructor returns a `null` `Span<T>`.
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Span (T[]? array, int start, int length);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public Span (T[]? array, int start, int length);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T[] array, int32 start, int32 length) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Span`1.#ctor(`0[],System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (array As T(), start As Integer, length As Integer)" />
       <MemberSignature Language="F#" Value="new Span&lt;'T&gt; : 'T[] * int * int -&gt; Span&lt;'T&gt;" Usage="new System.Span&lt;'T&gt; (array, start, length)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Span(cli::array &lt;T&gt; ^ array, int start, int length);" />
-      <MemberSignature Language="C#" Value="public Span (T[] array, int start, int length);" FrameworkAlternate="netcore-2.1;netcore-2.2;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public Span (T[] array, int start, int length);" FrameworkAlternate="netcore-2.1;netcore-2.2;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -241,6 +255,8 @@ If `array` is `null`, this constructor returns a `null` `Span<T>`.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -250,11 +266,13 @@ If `array` is `null`, this constructor returns a `null` `Span<T>`.
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="array" Type="T[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -309,6 +327,8 @@ This method returns `default` when `array` is `null`.
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -318,6 +338,8 @@ This method returns `default` when `array` is `null`.
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -328,7 +350,7 @@ This method returns `default` when `array` is `null`.
         <remarks>
           <format type="text/markdown"><![CDATA[
 
-The `Clear` method sets the items in the <xref:System.Span%601> object to their default values. It does not remove items from the <xref:System.Span%601>.
+The `Clear` method sets the items in the <xref:System.Span`1> object to their default values. It does not remove items from the <xref:System.Span`1>.
 
          ]]></format>
         </remarks>
@@ -351,6 +373,8 @@ The `Clear` method sets the items in the <xref:System.Span%601> object to their 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -360,6 +384,8 @@ The `Clear` method sets the items in the <xref:System.Span%601> object to their 
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -367,7 +393,7 @@ The `Clear` method sets the items in the <xref:System.Span%601> object to their 
       <Parameters>
         <Parameter Name="destination" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -405,6 +431,8 @@ This method copies all of `source` to `destination` even if `source` and `destin
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -414,9 +442,11 @@ This method copies all of `source` to `destination` even if `source` and `destin
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -431,13 +461,13 @@ This method copies all of `source` to `destination` even if `source` and `destin
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Span`1.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="span.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="netcore-2.1;netcore-2.2;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="netcore-2.1;netcore-2.2;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -448,6 +478,8 @@ This method copies all of `source` to `destination` even if `source` and `destin
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -457,19 +489,21 @@ This method copies all of `source` to `destination` even if `source` and `destin
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="net-5.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1">
-          <AttributeName Language="C#">[System.Obsolete("Equals() on Span will always throw an exception. Use == instead.")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("Equals() on Span will always throw an exception. Use == instead.")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("Equals() on Span will always throw an exception. Use the equality operator instead.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("Equals() on Span will always throw an exception. Use the equality operator instead.")&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-5.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.1">
+          <AttributeName Language="C#">[System.Obsolete("Equals() on Span will always throw an exception. Use == instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Equals() on Span will always throw an exception. Use == instead.")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -484,13 +518,13 @@ This method copies all of `source` to `destination` even if `source` and `destin
         <returns>Calls to this method are not supported.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[
-Calls to the <xref:System.Span%601.Equals%2A> method are not supported. Calls to the <xref:System.Span%601.Equals%2A> methods produce either of two results:
+Calls to the <xref:System.Span`1.Equals*> method are not supported. Calls to the <xref:System.Span`1.Equals*> methods produce either of two results:
 
-- If `obj` is a <xref:System.Span%601>, the method call generates compiler error CS1503: "cannot convert from 'System.Span' to 'object'." This is because <xref:System.Span%601> is a [ref struct](/dotnet/csharp/language-reference/builtin-types/ref-struct) that cannot be boxed and therefore cannot be converted to an <xref:System.Object>.
+- If `obj` is a <xref:System.Span`1>, the method call generates compiler error CS1503: "cannot convert from 'System.Span' to 'object'." This is because <xref:System.Span`1> is a [ref struct](/dotnet/csharp/language-reference/builtin-types/ref-struct) that cannot be boxed and therefore cannot be converted to an <xref:System.Object>.
 
-- If the type of `obj` is not a <xref:System.Span%601>, the method call throws a <xref:System.NotSupportedException>.
+- If the type of `obj` is not a <xref:System.Span`1>, the method call throws a <xref:System.NotSupportedException>.
 
-To compare two <xref:System.Span%601> objects for equality, use the <xref:System.Span%601.op_Equality%2A> comparison operator.
+To compare two <xref:System.Span`1> objects for equality, use the <xref:System.Span`1.op_Equality*> comparison operator.
 
         ]]></format>
         </remarks>
@@ -514,6 +548,8 @@ To compare two <xref:System.Span%601> objects for equality, use the <xref:System
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -523,6 +559,8 @@ To compare two <xref:System.Span%601> objects for equality, use the <xref:System
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -553,6 +591,8 @@ To compare two <xref:System.Span%601> objects for equality, use the <xref:System
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -562,9 +602,17 @@ To compare two <xref:System.Span%601> objects for equality, use the <xref:System
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Span&lt;T&gt;+Enumerator</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters />
       <Docs>
@@ -572,7 +620,7 @@ To compare two <xref:System.Span%601> objects for equality, use the <xref:System
         <returns>An enumerator for this span.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[
-Instead of calling the <xref:System.Span%601.GetEnumerator%2A> method directly, you can use the C# `foreach` statement and the Visual Basic `For Each`...`Next` construct to enumerate a <xref:System.Span%601>.
+Instead of calling the <xref:System.Span`1.GetEnumerator*> method directly, you can use the C# `foreach` statement and the Visual Basic `For Each`...`Next` construct to enumerate a <xref:System.Span`1>.
 
        ]]></format>
         </remarks>
@@ -595,6 +643,8 @@ Instead of calling the <xref:System.Span%601.GetEnumerator%2A> method directly, 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -604,6 +654,8 @@ Instead of calling the <xref:System.Span%601.GetEnumerator%2A> method directly, 
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -643,6 +695,8 @@ Instead of calling the <xref:System.Span%601.GetEnumerator%2A> method directly, 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -652,6 +706,8 @@ Instead of calling the <xref:System.Span%601.GetEnumerator%2A> method directly, 
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -705,6 +761,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -714,6 +772,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -742,6 +802,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -751,6 +813,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue RefType="Ref">
         <ReturnType>T</ReturnType>
@@ -784,6 +848,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -793,6 +859,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -820,6 +888,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -829,6 +899,8 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -836,7 +908,7 @@ The following example demonstrates creating an integer array, pinning it, and wr
       <Parameters>
         <Parameter Name="left" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -844,7 +916,7 @@ The following example demonstrates creating an integer array, pinning it, and wr
         </Parameter>
         <Parameter Name="right" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -860,7 +932,7 @@ The following example demonstrates creating an integer array, pinning it, and wr
         <remarks>
           <format type="text/markdown"><![CDATA[
 
-Two <xref:System.Span%601> objects are equal if they have the same length and the corresponding elements of `left` and `right` point to the same memory. Note that the test for equality does *not* attempt to determine whether the contents are equal.
+Two <xref:System.Span`1> objects are equal if they have the same length and the corresponding elements of `left` and `right` point to the same memory. Note that the test for equality does *not* attempt to determine whether the contents are equal.
 
          ]]></format>
         </remarks>
@@ -883,6 +955,8 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -892,14 +966,22 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Span&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="segment" Type="System.ArraySegment&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -930,6 +1012,8 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -939,14 +1023,22 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="span" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -961,13 +1053,13 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
       </Docs>
     </Member>
     <Member MemberName="op_Implicit">
-      <MemberSignature Language="C#" Value="public static implicit operator Span&lt;T&gt; (T[]? array);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public static implicit operator Span&lt;T&gt; (T[]? array);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Span`1&lt;!T&gt; op_Implicit(!T[] array) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Span`1.op_Implicit(`0[])~System.Span{`0}" />
       <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (array As T()) As Span(Of T)" />
       <MemberSignature Language="F#" Value="static member op_Implicit : 'T[] -&gt; Span&lt;'T&gt;" Usage="System.Span&lt;'T&gt;.op_Implicit array" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Span&lt;T&gt;(cli::array &lt;T&gt; ^ array);" />
-      <MemberSignature Language="C#" Value="public static implicit operator Span&lt;T&gt; (T[] array);" FrameworkAlternate="netcore-2.1;netcore-2.2;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public static implicit operator Span&lt;T&gt; (T[] array);" FrameworkAlternate="netcore-2.1;netcore-2.2;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -978,6 +1070,8 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -987,14 +1081,22 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Span&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="array" Type="T[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -1025,6 +1127,8 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1034,6 +1138,8 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1041,7 +1147,7 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
       <Parameters>
         <Parameter Name="left" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -1049,7 +1155,7 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         </Parameter>
         <Parameter Name="right" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -1065,7 +1171,7 @@ Two <xref:System.Span%601> objects are equal if they have the same length and th
         <remarks>
           <format type="text/markdown"><![CDATA[
 
-Two <xref:System.Span%601> objects are not equal if they have different lengths or if the corresponding elements of `left` and `right` do not point to the same memory.
+Two <xref:System.Span`1> objects are not equal if they have different lengths or if the corresponding elements of `left` and `right` do not point to the same memory.
 
          ]]></format>
         </remarks>
@@ -1088,6 +1194,8 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1097,9 +1205,17 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Span&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="start" Type="System.Int32" />
@@ -1130,6 +1246,8 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1139,9 +1257,17 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Span&lt;T&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="start" Type="System.Int32" />
@@ -1174,6 +1300,8 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1183,6 +1311,8 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T[]</ReturnType>
@@ -1194,7 +1324,7 @@ Two <xref:System.Span%601> objects are not equal if they have different lengths 
         <remarks>
           <format type="text/markdown"><![CDATA[
 
-This method performs a heap allocation and therefore should be avoided if possible. Heap allocations are expected in APIs that work with arrays. Using such APIs is unavoidable if an alternative API overload that takes a <xref:System.Span%601> does not exist.
+This method performs a heap allocation and therefore should be avoided if possible. Heap allocations are expected in APIs that work with arrays. Using such APIs is unavoidable if an alternative API overload that takes a <xref:System.Span`1> does not exist.
 
          ]]></format>
         </remarks>
@@ -1217,6 +1347,8 @@ This method performs a heap allocation and therefore should be avoided if possib
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1226,6 +1358,8 @@ This method performs a heap allocation and therefore should be avoided if possib
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1236,7 +1370,7 @@ This method performs a heap allocation and therefore should be avoided if possib
         <returns>The string representation of this <see cref="T:System.Span`1" /> object.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[
-For a `Span<Char>`, the `ToString` method returns a <xref:System.String> that contains the characters pointed to by the <xref:System.Span%601>. Otherwise, it returns a <xref:System.String> with the name of the type and the number of elements that the <xref:System.Span%601> contains.
+For a `Span<Char>`, the `ToString` method returns a <xref:System.String> that contains the characters pointed to by the <xref:System.Span`1>. Otherwise, it returns a <xref:System.String> with the name of the type and the number of elements that the <xref:System.Span`1> contains.
 
        ]]></format>
         </remarks>
@@ -1259,6 +1393,8 @@ For a `Span<Char>`, the `ToString` method returns a <xref:System.String> that co
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1268,6 +1404,8 @@ For a `Span<Char>`, the `ToString` method returns a <xref:System.String> that co
         <AssemblyName>System.Memory</AssemblyName>
         <AssemblyVersion>4.0.1.2</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.5.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1275,7 +1413,7 @@ For a `Span<Char>`, the `ToString` method returns a <xref:System.String> that co
       <Parameters>
         <Parameter Name="destination" Type="System.Span&lt;T&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 0, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -1292,7 +1430,7 @@ For a `Span<Char>`, the `ToString` method returns a <xref:System.String> that co
 
 This method copies all of `source` to `destination` even if `source` and `destination` overlap.
 
-If `destination` is shorter than the source <xref:System.Span%601>, this method returns `false`, and no data is written to `destination`.
+If `destination` is shorter than the source <xref:System.Span`1>, this method returns `false`, and no data is written to `destination`.
 
          ]]></format>
         </remarks>

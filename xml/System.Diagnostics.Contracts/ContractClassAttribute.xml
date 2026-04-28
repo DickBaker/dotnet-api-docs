@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -28,6 +30,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="mscorlib" FromVersion="4.0.0.0" To="System.Diagnostics.Contracts" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.Contracts" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.Contracts" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.Contracts" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.Contracts" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Diagnostics.Contracts" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -51,7 +55,7 @@
       <AttributeName Language="C#">[System.Diagnostics.Conditional("CONTRACTS_FULL")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.Conditional("CONTRACTS_FULL")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -59,19 +63,19 @@
   <Docs>
     <summary>Specifies that a separate type contains the code contracts for this type.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Types that are marked with this attribute have code contracts that are included in a separate type. The type that contains the contracts is specified in the constructor.  
-  
-   
-  
-## Examples  
- The following example shows how to use the <xref:System.Diagnostics.Contracts.ContractClassAttribute> attribute to specify that the contracts for the `IArray` interface are contained in the `IArrayContracts` class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Types that are marked with this attribute have code contracts that are included in a separate type. The type that contains the contracts is specified in the constructor.
+
+
+
+## Examples
+ The following example shows how to use the <xref:System.Diagnostics.Contracts.ContractClassAttribute> attribute to specify that the contracts for the `IArray` interface are contained in the `IArrayContracts` class.
+
  :::code language="csharp" source="~/snippets/csharp/System.Diagnostics.Contracts/Contract/Ensures/program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Diagnostics.Contracts/Contract/Ensures/program.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Diagnostics.Contracts.ContractClassForAttribute" />
@@ -95,6 +99,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -113,14 +119,14 @@
         <param name="typeContainingContracts">The type that contains the code contracts for this type.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Diagnostics.Contracts.ContractClassAttribute" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use the <xref:System.Diagnostics.Contracts.ContractClassAttribute.%23ctor%2A> constructor to specify that the contracts for the `IArray` interface are contained in the `IArrayContracts` class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use the <xref:System.Diagnostics.Contracts.ContractClassAttribute.%23ctor*> constructor to specify that the contracts for the `IArray` interface are contained in the `IArrayContracts` class.
+
  :::code language="csharp" source="~/snippets/csharp/System.Diagnostics.Contracts/Contract/Ensures/program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Diagnostics.Contracts/Contract/Ensures/program.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -143,6 +149,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>

@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ArcSegment&#xA;Inherits PathSegment" />
   <TypeSignature Language="F#" Value="type ArcSegment = class&#xA;    inherit PathSegment" />
   <TypeSignature Language="C++ CLI" Value="public ref class ArcSegment sealed : System::Windows::Media::PathSegment" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ArcSegment extends System.Windows.Media.PathSegment" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ArcSegment extends System.Windows.Media.PathSegment" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Media.PathSegment</BaseTypeName>
@@ -30,7 +32,7 @@
 
  An elliptical arc is defined by its start and end points, x- and y-radius, x-axis rotation factor, a value indicating whether the arc should be greater than 180 degrees, and a value describing the direction in which the arc is drawn. The <xref:System.Windows.Media.ArcSegment> class does not contain a property for the starting point of the arc; it only defines the destination point of the arc it represents. The beginning point of the arc is the current point of the <xref:System.Windows.Media.PathFigure> to which the <xref:System.Windows.Media.ArcSegment> is added.
 
- The following illustrations demonstrate the different end point, <xref:System.Windows.Media.ArcSegment.Size%2A>, and <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> settings.
+ The following illustrations demonstrate the different end point, <xref:System.Windows.Media.ArcSegment.Size*>, and <xref:System.Windows.Media.ArcSegment.RotationAngle*> settings.
 
  ![ArcSegments with different Point settings](~/add/media/arcsegment-point.png "ArcSegments with different Point settings")
 
@@ -39,11 +41,11 @@
  ![ArcSegments with different RotationAngle settings](~/add/media/arcsegment-rotationangle.png "ArcSegments with different RotationAngle settings")
 
 ## IsLargeArc and SweepDirection
- For most arcs of a particular position, size, and rotation, there are four different arcs that can be drawn; the  <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> and <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> properties indicate which arc to use.
+ For most arcs of a particular position, size, and rotation, there are four different arcs that can be drawn; the  <xref:System.Windows.Media.ArcSegment.IsLargeArc*> and <xref:System.Windows.Media.ArcSegment.SweepDirection*> properties indicate which arc to use.
 
- Of the four candidate arc sweeps, two represent large arcs with sweeps of 180 degrees or greater, and two represent smaller arcs with sweeps 180 degrees or less. If <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> is `true`, then one of the two larger arc sweeps is chosen; otherwise, if  is `false`, one of the smaller arc sweeps is chosen. The remaining two arc candidates are each drawn in a different direction: <xref:System.Windows.Media.SweepDirection.Counterclockwise> or <xref:System.Windows.Media.SweepDirection.Clockwise>. The <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> property specifies which one to use.
+ Of the four candidate arc sweeps, two represent large arcs with sweeps of 180 degrees or greater, and two represent smaller arcs with sweeps 180 degrees or less. If <xref:System.Windows.Media.ArcSegment.IsLargeArc*> is `true`, then one of the two larger arc sweeps is chosen; otherwise, if  is `false`, one of the smaller arc sweeps is chosen. The remaining two arc candidates are each drawn in a different direction: <xref:System.Windows.Media.SweepDirection.Counterclockwise> or <xref:System.Windows.Media.SweepDirection.Clockwise>. The <xref:System.Windows.Media.ArcSegment.SweepDirection> property specifies which one to use.
 
- The following illustrations show different <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> and <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> settings.
+ The following illustrations show different <xref:System.Windows.Media.ArcSegment.IsLargeArc*> and <xref:System.Windows.Media.ArcSegment.SweepDirection*> settings.
 
  ![ArcSegments with different IsLargeArc settings](~/add/media/arcsegment-islargearc.png "ArcSegments with different IsLargeArc settings")
 ArcSegment objects with different IsLargeArc settings
@@ -52,7 +54,7 @@ ArcSegment objects with different IsLargeArc settings
 ArcSegment objects with different SweepDirection settings
 
 ## Freezable Features
- An <xref:System.Windows.Media.ArcSegment> is a type of <xref:System.Windows.Freezable> object. For information about <xref:System.Windows.Freezable> features, such as freezing and cloning, see the [Freezable Objects Overview](/dotnet/framework/wpf/advanced/freezable-objects-overview).
+ An <xref:System.Windows.Media.ArcSegment> is a type of <xref:System.Windows.Freezable> object. For information about <xref:System.Windows.Freezable> features, such as freezing and cloning, see the [Freezable Objects Overview](/dotnet/desktop/wpf/advanced/freezable-objects-overview).
 
  ]]></format>
     </remarks>
@@ -98,6 +100,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -141,6 +145,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="point" Type="System.Windows.Point" />
@@ -191,6 +197,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.ArcSegment</ReturnType>
@@ -205,7 +213,7 @@ ArcSegment objects with different SweepDirection settings
 ## Remarks
  This method is used to produce modifiable copies of frozen <xref:System.Windows.Freezable> objects (or any <xref:System.Windows.Freezable> object). For convenience, this method shadows the inherited version with a strongly typed implementation.
 
- For more information, see <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.
+ For more information, see <xref:System.Windows.Freezable.Clone*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -228,6 +236,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.ArcSegment</ReturnType>
@@ -242,7 +252,7 @@ ArcSegment objects with different SweepDirection settings
 ## Remarks
  This method is used to produce modifiable copies of frozen <xref:System.Windows.Freezable> objects (or any <xref:System.Windows.Freezable> object). For convenience, this method shadows the inherited version with a strongly typed implementation.
 
- For more information, see <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.
+ For more information, see <xref:System.Windows.Freezable.CloneCurrentValue*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -265,6 +275,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Freezable</ReturnType>
@@ -293,6 +305,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -305,11 +319,11 @@ ArcSegment objects with different SweepDirection settings
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- For most arcs of a particular position, size, and rotation, there are four different arcs that can be drawn; the  <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> and <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> properties indicate which arc to use.
+ For most arcs of a particular position, size, and rotation, there are four different arcs that can be drawn; the  <xref:System.Windows.Media.ArcSegment.IsLargeArc*> and <xref:System.Windows.Media.ArcSegment.SweepDirection*> properties indicate which arc to use.
 
- Of the four candidate arc sweeps, two represent large arcs with sweeps of 180 degrees or greater, and two represent smaller arcs with sweeps 180 degrees or less. If <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> is `true`, then one of the two larger arc sweeps is chosen; otherwise, if  is `false`, one of the smaller arc sweeps is chosen. The remaining two arc candidates are each drawn in a different direction: <xref:System.Windows.Media.SweepDirection.Counterclockwise> or <xref:System.Windows.Media.SweepDirection.Clockwise>. The <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> property specifies which one to use.
+ Of the four candidate arc sweeps, two represent large arcs with sweeps of 180 degrees or greater, and two represent smaller arcs with sweeps 180 degrees or less. If <xref:System.Windows.Media.ArcSegment.IsLargeArc*> is `true`, then one of the two larger arc sweeps is chosen; otherwise, if  is `false`, one of the smaller arc sweeps is chosen. The remaining two arc candidates are each drawn in a different direction: <xref:System.Windows.Media.SweepDirection.Counterclockwise> or <xref:System.Windows.Media.SweepDirection.Clockwise>. The <xref:System.Windows.Media.ArcSegment.SweepDirection> property specifies which one to use.
 
- The following illustration shows two elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> settings.
+ The following illustration shows two elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.IsLargeArc*> settings.
 
  ![ArcSegments with different IsLargeArc settings](~/add/media/arcsegment-islargearc.png "ArcSegments with different IsLargeArc settings")
 ArcSegment objects with different IsLargeArc settings
@@ -343,6 +357,8 @@ ArcSegment objects with different IsLargeArc settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -369,6 +385,8 @@ ArcSegment objects with different IsLargeArc settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Point</ReturnType>
@@ -384,11 +402,11 @@ ArcSegment objects with different IsLargeArc settings
 
  If the arc segment's start point and end point are the same, no arc is drawn.
 
- For most arcs of a particular position, size, and rotation, there are four different arcs that can be drawn; the  <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> and <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> properties indicate which arc to use.
+ For most arcs of a particular position, size, and rotation, there are four different arcs that can be drawn; the  <xref:System.Windows.Media.ArcSegment.IsLargeArc*> and <xref:System.Windows.Media.ArcSegment.SweepDirection*> properties indicate which arc to use.
 
- Of the four candidate arc sweeps, two represent large arcs with sweeps of 180 degrees or greater, and two represent smaller arcs with sweeps 180 degrees or less. If <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> is `true`, then one of the two larger arc sweeps is chosen; otherwise, if  is `false`, one of the smaller arc sweeps is chosen. The remaining two arc candidates are each drawn in a different direction: <xref:System.Windows.Media.SweepDirection.Counterclockwise> or <xref:System.Windows.Media.SweepDirection.Clockwise>. The <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> property specifies which one to use.
+ Of the four candidate arc sweeps, two represent large arcs with sweeps of 180 degrees or greater, and two represent smaller arcs with sweeps 180 degrees or less. If <xref:System.Windows.Media.ArcSegment.IsLargeArc*> is `true`, then one of the two larger arc sweeps is chosen; otherwise, if  is `false`, one of the smaller arc sweeps is chosen. The remaining two arc candidates are each drawn in a different direction: <xref:System.Windows.Media.SweepDirection.Counterclockwise> or <xref:System.Windows.Media.SweepDirection.Clockwise>. The <xref:System.Windows.Media.ArcSegment.SweepDirection> property specifies which one to use.
 
- The following illustration shows several elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.Point%2A> settings.
+ The following illustration shows several elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.Point*> settings.
 
  ![ArcSegments with different Point settings](~/add/media/arcsegment-point.png "ArcSegments with different Point settings")
 Several ArcSegment objects with different Point settings
@@ -422,6 +440,8 @@ Several ArcSegment objects with different Point settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -448,6 +468,8 @@ Several ArcSegment objects with different Point settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -459,7 +481,7 @@ Several ArcSegment objects with different Point settings
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The following illustration shows several elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.RotationAngle%2A> settings.
+ The following illustration shows several elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.RotationAngle*> settings.
 
  ![ArcSegments with different RotationAngle settings](~/add/media/arcsegment-rotationangle.png "ArcSegments with different RotationAngle settings")
 Several ArcSegment objects with different RotationAngle settings
@@ -495,6 +517,8 @@ Several ArcSegment objects with different RotationAngle settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -521,6 +545,8 @@ Several ArcSegment objects with different RotationAngle settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -532,7 +558,7 @@ Several ArcSegment objects with different RotationAngle settings
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The following illustration shows several elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.Size%2A> settings.
+ The following illustration shows several elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.Size*> settings.
 
  ![ArcSegments with different Size settings](~/add/media/arcsegment-size.png "ArcSegments with different Size settings")
 Several ArcSegment objects with different Size settings
@@ -566,6 +592,8 @@ Several ArcSegment objects with different Size settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -592,6 +620,8 @@ Several ArcSegment objects with different Size settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.SweepDirection</ReturnType>
@@ -603,9 +633,9 @@ Several ArcSegment objects with different Size settings
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- For an <xref:System.Windows.Media.ArcSegment> with a given <xref:System.Windows.Media.ArcSegment.Size%2A>, <xref:System.Windows.Media.ArcSegment.RotationAngle%2A>, start point, and end <xref:System.Windows.Media.ArcSegment.Point%2A>, four different arcs are possible. Specifying the <xref:System.Windows.Media.ArcSegment.IsLargeArc%2A> property reduces the number of possible arcs to two: an arc drawn from the start point to the end <xref:System.Windows.Media.ArcSegment.Point%2A> in a <xref:System.Windows.Media.SweepDirection.Clockwise> direction and an arc drawn from the start point to the end point in a <xref:System.Windows.Media.SweepDirection.Counterclockwise> direction.
+ For an <xref:System.Windows.Media.ArcSegment> with a given <xref:System.Windows.Media.ArcSegment.Size*>, <xref:System.Windows.Media.ArcSegment.RotationAngle*>, start point, and end <xref:System.Windows.Media.ArcSegment.Point*>, four different arcs are possible. Specifying the <xref:System.Windows.Media.ArcSegment.IsLargeArc> property reduces the number of possible arcs to two: an arc drawn from the start point to the end <xref:System.Windows.Media.ArcSegment.Point*> in a <xref:System.Windows.Media.SweepDirection.Clockwise> direction and an arc drawn from the start point to the end point in a <xref:System.Windows.Media.SweepDirection.Counterclockwise> direction.
 
- The following illustration shows two elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.SweepDirection%2A> settings.
+ The following illustration shows two elliptical arcs that are identical except for their <xref:System.Windows.Media.ArcSegment.SweepDirection*> settings.
 
  ![ArcSegments with different SweepDirection settings](~/add/media/arcsegment-sweepdirection.png "ArcSegments with different SweepDirection settings")
 ArcSegment objects with different SweepDirection settings
@@ -639,6 +669,8 @@ ArcSegment objects with different SweepDirection settings
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

@@ -9,6 +9,18 @@
     <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.1.0.0</AssemblyVersion>
+    <AssemblyVersion>9.3.0.0</AssemblyVersion>
+    <AssemblyVersion>9.4.0.0</AssemblyVersion>
+    <AssemblyVersion>9.5.0.0</AssemblyVersion>
+    <AssemblyVersion>9.6.0.0</AssemblyVersion>
+    <AssemblyVersion>9.7.0.0</AssemblyVersion>
+    <AssemblyVersion>9.9.0.0</AssemblyVersion>
+    <AssemblyVersion>9.10.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.1.0.0</AssemblyVersion>
+    <AssemblyVersion>10.2.0.0</AssemblyVersion>
+    <AssemblyVersion>10.3.0.0</AssemblyVersion>
+    <AssemblyVersion>10.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -19,11 +31,15 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute>
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerDisplay("{Value,nq}")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerDisplay("{Value,nq}")&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -34,7 +50,7 @@
   </Attributes>
   <Docs>
     <summary>
-            Describes the intended purpose of a message within a chat completion interaction.
+            Describes the intended purpose of a message within a chat interaction.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -49,7 +65,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -78,7 +94,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.ChatRole</ReturnType>
@@ -102,7 +118,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -128,7 +144,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -136,7 +152,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -161,7 +177,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -184,7 +200,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -201,7 +217,7 @@
             case-insensitive comparison of their values.
             </summary>
         <returns>
-          <see langword="true" /> if left and right are both null or have equivalent values; otherwise, <see langword="false" />.</returns>
+          <see langword="true" /> if left and right are both <see langword="null" /> or have equivalent values; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -215,7 +231,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -232,7 +248,7 @@
             case-insensitive comparison of their values.
             </summary>
         <returns>
-          <see langword="true" /> if left and right have different values; <see langword="false" /> if they have equivalent values or are both null.</returns>
+          <see langword="true" /> if left and right have different values; <see langword="false" /> if they have equivalent values or are both <see langword="null" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -246,13 +262,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.ChatRole</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the role that instructs or sets the behavior of the assistant.</summary>
+        <summary>Gets the role that instructs or sets the behavior of the system.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -267,13 +283,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.ChatRole</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the role that provides additional information and references for chat completions.</summary>
+        <summary>Gets the role that provides additional information and references in response to tool use requests.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -288,7 +304,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -311,13 +327,13 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.ChatRole</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the role that provides input for chat completions.</summary>
+        <summary>Gets the role that provides user input for chat interactions.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -332,7 +348,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

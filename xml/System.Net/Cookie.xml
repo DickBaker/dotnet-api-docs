@@ -1,6 +1,6 @@
 <Type Name="Cookie" FullName="System.Net.Cookie">
   <TypeSignature Language="C#" Value="public sealed class Cookie" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Cookie extends System.Object" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Cookie extends System.Object" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Net.Cookie" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Cookie" />
   <TypeSignature Language="F#" Value="type Cookie = class" />
@@ -19,6 +19,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -38,6 +40,8 @@
   <TypeForwardingChain>
     <TypeForwarding From="System" FromVersion="4.0.0.0" To="System.Net.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
     <TypeForwarding From="System.Net" FromVersion="4.0.0.0" To="System.Net.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Primitives" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Primitives" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Primitives" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -50,7 +54,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -74,9 +78,8 @@
 ## Examples
  The following example sends a request to a URL and displays the cookies returned in the response.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -117,6 +120,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -140,7 +145,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The parameterless constructor initializes all fields to their default values, using empty strings ("") for `name`, `value`, `path`, and `domain`. Note that at least the <xref:System.Net.Cookie.Name%2A> property must be initialized before using an instance of the <xref:System.Net.Cookie> class.
+ The parameterless constructor initializes all fields to their default values, using empty strings ("") for `name`, `value`, `path`, and `domain`. Note that at least the <xref:System.Net.Cookie.Name> property must be initialized before using an instance of the <xref:System.Net.Cookie> class.
 
  ]]></format>
         </remarks>
@@ -153,7 +158,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As String)" />
       <MemberSignature Language="F#" Value="new System.Net.Cookie : string * string -&gt; System.Net.Cookie" Usage="new System.Net.Cookie (name, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Cookie(System::String ^ name, System::String ^ value);" />
-      <MemberSignature Language="C#" Value="public Cookie (string name, string? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public Cookie (string name, string? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Primitives</AssemblyName>
@@ -168,6 +173,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -188,7 +195,7 @@
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="value" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -254,7 +261,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As String, path As String)" />
       <MemberSignature Language="F#" Value="new System.Net.Cookie : string * string * string -&gt; System.Net.Cookie" Usage="new System.Net.Cookie (name, value, path)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Cookie(System::String ^ name, System::String ^ value, System::String ^ path);" />
-      <MemberSignature Language="C#" Value="public Cookie (string name, string? value, string? path);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public Cookie (string name, string? value, string? path);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Primitives</AssemblyName>
@@ -269,6 +276,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -288,7 +297,7 @@
       <Parameters>
         <Parameter Name="name" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -357,7 +366,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As String, path As String, domain As String)" />
       <MemberSignature Language="F#" Value="new System.Net.Cookie : string * string * string * string -&gt; System.Net.Cookie" Usage="new System.Net.Cookie (name, value, path, domain)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Cookie(System::String ^ name, System::String ^ value, System::String ^ path, System::String ^ domain);" />
-      <MemberSignature Language="C#" Value="public Cookie (string name, string? value, string? path, string? domain);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public Cookie (string name, string? value, string? path, string? domain);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Primitives</AssemblyName>
@@ -372,6 +381,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -391,7 +402,7 @@
       <Parameters>
         <Parameter Name="name" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -474,6 +485,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -513,9 +526,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -531,7 +543,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property CommentUri As Uri" />
       <MemberSignature Language="F#" Value="member this.CommentUri : Uri with get, set" Usage="System.Net.Cookie.CommentUri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ CommentUri { Uri ^ get(); void set(Uri ^ value); };" />
-      <MemberSignature Language="C#" Value="public Uri? CommentUri { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public Uri? CommentUri { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Primitives</AssemblyName>
@@ -546,6 +558,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -563,7 +577,7 @@
         <AssemblyName>System.Net</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -593,9 +607,8 @@
 ## Examples
  The following example displays the properties of cookies that are returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -625,6 +638,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -669,9 +684,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -701,6 +715,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -740,9 +756,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -758,7 +773,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (comparand As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="cookie.Equals comparand" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ comparand);" />
-      <MemberSignature Language="C#" Value="public override bool Equals (object? comparand);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? comparand);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Primitives</AssemblyName>
@@ -773,6 +788,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -795,7 +812,7 @@
       <Parameters>
         <Parameter Name="comparand" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -833,6 +850,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -867,9 +886,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -899,6 +917,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -937,16 +957,15 @@
 ## Remarks
  Setting the `Expires` property to <xref:System.DateTime.MinValue?displayProperty=nameWithType> makes this a session cookie, which is its default value.
 
- The <xref:System.DateTime.Kind> property of <xref:System.Net.Cookie.Expires%2A> is used to determine if the cookie is set to <xref:System.DateTimeKind.Local?displayProperty=nameWithType> or <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>. If the <xref:System.DateTime.Kind> property is set to <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, then <xref:System.DateTimeKind.Utc> is assumed.
+ The <xref:System.DateTime.Kind> property of <xref:System.Net.Cookie.Expires*> is used to determine if the cookie is set to <xref:System.DateTimeKind.Local?displayProperty=nameWithType> or <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>. If the <xref:System.DateTime.Kind> property is set to <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, then <xref:System.DateTimeKind.Utc> is assumed.
 
 
 
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -976,6 +995,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1030,6 +1051,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1092,6 +1115,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1124,16 +1149,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.Cookie.Name%2A> property must be initialized before using an instance of the <xref:System.Net.Cookie> class.
+ The <xref:System.Net.Cookie.Name> property must be initialized before using an instance of the <xref:System.Net.Cookie> class.
 
  The following characters are reserved and cannot be used for this attribute value: equal sign, semicolon, comma, new line (\n), return (\r), tab (\t), and space character. The dollar sign ($) character cannot be the first character.
 
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -1168,6 +1192,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1200,16 +1226,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.Cookie.Path%2A> property specifies the subset of URIs on the origin server to which this <xref:System.Net.Cookie> applies. If this property is not specified, then this <xref:System.Net.Cookie> will be sent to all pages on the origin server or servers.
+ The <xref:System.Net.Cookie.Path> property specifies the subset of URIs on the origin server to which this <xref:System.Net.Cookie> applies. If this property is not specified, then this <xref:System.Net.Cookie> will be sent to all pages on the origin server or servers.
 
 
 
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -1239,6 +1264,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1278,9 +1305,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -1311,6 +1337,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1355,9 +1383,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -1387,6 +1414,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1426,9 +1455,8 @@
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -1458,6 +1486,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1492,9 +1522,8 @@
 ## Examples
  The following example displays the string value of a cookie returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet4":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet4":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet4":::
 
  ]]></format>
         </remarks>
@@ -1521,6 +1550,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1553,18 +1584,17 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.Cookie.Value%2A> of a <xref:System.Net.Cookie> must not be `null`. If a `null` value is assigned to this property, it's replaced with an empty string.
+ The <xref:System.Net.Cookie.Value*> of a <xref:System.Net.Cookie> must not be `null`. If a `null` value is assigned to this property, it's replaced with an empty string.
 
- Semicolons and commas are reserved characters that cannot be used in the value of this property. Assigning invalid characters to this property doesn't throw an exception; but when you try to add this <xref:System.Net.Cookie> to a <xref:System.Net.CookieContainer> instance with the <xref:System.Net.CookieContainer.Add%2A> method, the operation will fail and throw an exception.
+ Semicolons and commas are reserved characters that cannot be used in the value of this property. Assigning invalid characters to this property doesn't throw an exception; but when you try to add this <xref:System.Net.Cookie> to a <xref:System.Net.CookieContainer> instance with the <xref:System.Net.CookieContainer.Add*> method, the operation will fail and throw an exception.
 
 
 
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -1594,6 +1624,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1626,18 +1658,17 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default value for the <xref:System.Net.Cookie.Version%2A> property is 0, complying with the original Netscape specification. If the value is explicitly set to 1, then this <xref:System.Net.Cookie> must conform to RFC 2109. Note that if a <xref:System.Net.Cookie> was created automatically by receiving a Set-Cookie2 HTTP response header, the conformance is set to RFC 2965.
+ The default value for the <xref:System.Net.Cookie.Version> property is 0, complying with the original Netscape specification. If the value is explicitly set to 1, then this <xref:System.Net.Cookie> must conform to RFC 2109. Note that if a <xref:System.Net.Cookie> was created automatically by receiving a Set-Cookie2 HTTP response header, the conformance is set to RFC 2965.
 
- An attempt to set the <xref:System.Net.Cookie.Version%2A> property to a value less than zero will throw an exception.
+ An attempt to set the <xref:System.Net.Cookie.Version> property to a value less than zero will throw an exception.
 
 
 
 ## Examples
  The following example displays the properties of cookies returned in a response. For the complete example, see the <xref:System.Net.Cookie> class topic.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/NCLCookies/CPP/cookiessnippets.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net/Cookie/Overview/cookiessnippets.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/NCLCookies/VB/cookiessnippets.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net/Cookie/Overview/cookiessnippets.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>

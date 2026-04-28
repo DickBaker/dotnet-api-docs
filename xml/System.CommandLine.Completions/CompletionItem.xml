@@ -1,18 +1,31 @@
 <Type Name="CompletionItem" FullName="System.CommandLine.Completions.CompletionItem">
-  <TypeSignature Language="C#" Value="public class CompletionItem" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompletionItem extends System.Object" />
+  <TypeSignature Language="C#" Value="public class CompletionItem : IEquatable&lt;System.CommandLine.Completions.CompletionItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompletionItem extends System.Object implements class System.IEquatable`1&lt;class System.CommandLine.Completions.CompletionItem&gt;" />
   <TypeSignature Language="DocId" Value="T:System.CommandLine.Completions.CompletionItem" />
-  <TypeSignature Language="VB.NET" Value="Public Class CompletionItem" />
-  <TypeSignature Language="F#" Value="type CompletionItem = class" />
-  <TypeSignature Language="C++ CLI" Value="public ref class CompletionItem" />
+  <TypeSignature Language="VB.NET" Value="Public Class CompletionItem&#xA;Implements IEquatable(Of CompletionItem)" />
+  <TypeSignature Language="F#" Value="type CompletionItem = class&#xA;    interface IEquatable&lt;CompletionItem&gt;" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CompletionItem : IEquatable&lt;System::CommandLine::Completions::CompletionItem ^&gt;" />
   <AssemblyInfo>
     <AssemblyName>System.CommandLine</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <AssemblyVersion>2.0.2.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.CommandLine.Completions.CompletionItem&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Provides details about a command line completion item.
@@ -29,11 +42,25 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="label" Type="System.String" />
-        <Parameter Name="kind" Type="System.String" />
+        <Parameter Name="label" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="kind" Type="System.String">
+          <Attributes>
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
         <Parameter Name="sortText" Type="System.String" />
         <Parameter Name="insertText" Type="System.String" />
         <Parameter Name="documentation" Type="System.String" />
@@ -60,7 +87,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -83,7 +110,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -97,16 +124,19 @@
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="protected bool Equals (System.CommandLine.Completions.CompletionItem other);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool Equals(class System.CommandLine.Completions.CompletionItem other) cil managed" />
+      <MemberSignature Language="C#" Value="public bool Equals (System.CommandLine.Completions.CompletionItem? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.CommandLine.Completions.CompletionItem other) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.CommandLine.Completions.CompletionItem.Equals(System.CommandLine.Completions.CompletionItem)" />
-      <MemberSignature Language="VB.NET" Value="Protected Function Equals (other As CompletionItem) As Boolean" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CompletionItem) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : System.CommandLine.Completions.CompletionItem -&gt; bool" Usage="completionItem.Equals other" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; bool Equals(System::CommandLine::Completions::CompletionItem ^ other);" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::CommandLine::Completions::CompletionItem ^ other);" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -133,7 +163,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -159,7 +189,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -182,7 +212,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -205,7 +235,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -228,8 +258,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -251,8 +287,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -274,7 +316,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.CommandLine</AssemblyName>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

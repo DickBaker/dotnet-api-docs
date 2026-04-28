@@ -1,6 +1,6 @@
 <Type Name="ObjectIDGenerator" FullName="System.Runtime.Serialization.ObjectIDGenerator">
   <TypeSignature Language="C#" Value="public class ObjectIDGenerator" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectIDGenerator extends System.Object" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-8.0-pp;net-9.0;net-9.0-pp;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectIDGenerator extends System.Object" FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ObjectIDGenerator" />
   <TypeSignature Language="VB.NET" Value="Public Class ObjectIDGenerator" />
   <TypeSignature Language="F#" Value="type ObjectIDGenerator = class" />
@@ -29,24 +29,26 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="8.1.0.0" FrameworkAlternate="net-10.0;net-11.0;net-9.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="8.0.0.0" FrameworkAlternate="net-8.0" />
-    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Formatters" ToVersion="8.1.0.0" FrameworkAlternate="net-9.0" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Obsolete("Formatter-based serialization is obsolete and should not be used.", DiagnosticId="SYSLIB0050", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("Formatter-based serialization is obsolete and should not be used.", DiagnosticId="SYSLIB0050", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-8.0-pp;net-9.0;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -62,17 +64,17 @@
   <Docs>
     <summary>Generates IDs for objects.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Runtime.Serialization.ObjectIDGenerator> keeps track of previously identified objects. When you ask for the ID of an object, the <xref:System.Runtime.Serialization.ObjectIDGenerator> knows whether to return the existing ID, or generate and remember a new ID.  
-  
- The IDs are unique for the life of the <xref:System.Runtime.Serialization.ObjectIDGenerator> instance. Generally, a <xref:System.Runtime.Serialization.ObjectIDGenerator> life lasts as long as the <xref:System.Runtime.Serialization.Formatter> that created it. Object IDs have meaning only within a given serialized stream, and are used for tracking which objects have references to others within the serialized object graph.  
-  
- Using a hash table, the <xref:System.Runtime.Serialization.ObjectIDGenerator> retains which ID is assigned to which object. The object references, which uniquely identify each object, are addresses in the runtime garbage-collected heap. Object reference values can change during serialization, but the table is updated automatically so the information is correct.  
-  
- Object IDs are 64-bit numbers. Allocation starts from one, so zero is never a valid object ID. A formatter can choose a zero value to represent an object reference whose value is `null`.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Runtime.Serialization.ObjectIDGenerator> keeps track of previously identified objects. When you ask for the ID of an object, the <xref:System.Runtime.Serialization.ObjectIDGenerator> knows whether to return the existing ID, or generate and remember a new ID.
+
+ The IDs are unique for the life of the <xref:System.Runtime.Serialization.ObjectIDGenerator> instance. Generally, a <xref:System.Runtime.Serialization.ObjectIDGenerator> life lasts as long as the <xref:System.Runtime.Serialization.Formatter> that created it. Object IDs have meaning only within a given serialized stream, and are used for tracking which objects have references to others within the serialized object graph.
+
+ Using a hash table, the <xref:System.Runtime.Serialization.ObjectIDGenerator> retains which ID is assigned to which object. The object references, which uniquely identify each object, are addresses in the runtime garbage-collected heap. Object reference values can change during serialization, but the table is updated automatically so the information is correct.
+
+ Object IDs are 64-bit numbers. Allocation starts from one, so zero is never a valid object ID. A formatter can choose a zero value to represent an object reference whose value is `null`.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Runtime.Serialization.Formatter" />
@@ -108,7 +110,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -146,7 +148,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -202,7 +204,7 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.1.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int64</ReturnType>
@@ -218,11 +220,11 @@
         <summary>Determines whether an object has already been assigned an ID.</summary>
         <returns>The object ID of <paramref name="obj" /> if previously known to the <see cref="T:System.Runtime.Serialization.ObjectIDGenerator" />; otherwise, zero.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the object has already been assigned an ID, the ID is returned and `firstTime` is set to `false`; otherwise, zero is returned and `firstTime` is set to `true`. <xref:System.Runtime.Serialization.ObjectIDGenerator.HasId%2A> differs from <xref:System.Runtime.Serialization.ObjectIDGenerator.GetId%2A> in that it never creates an ID for an object that has not already been seen by the <xref:System.Runtime.Serialization.ObjectIDGenerator>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the object has already been assigned an ID, the ID is returned and `firstTime` is set to `false`; otherwise, zero is returned and `firstTime` is set to `true`. <xref:System.Runtime.Serialization.ObjectIDGenerator.HasId*> differs from <xref:System.Runtime.Serialization.ObjectIDGenerator.GetId*> in that it never creates an ID for an object that has not already been seen by the <xref:System.Runtime.Serialization.ObjectIDGenerator>.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="obj" /> parameter is <see langword="null" />.</exception>

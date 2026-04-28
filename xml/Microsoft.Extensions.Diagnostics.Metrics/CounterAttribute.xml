@@ -17,6 +17,19 @@
     <AssemblyVersion>8.10.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.1.0.0</AssemblyVersion>
+    <AssemblyVersion>9.2.0.0</AssemblyVersion>
+    <AssemblyVersion>9.3.0.0</AssemblyVersion>
+    <AssemblyVersion>9.4.0.0</AssemblyVersion>
+    <AssemblyVersion>9.5.0.0</AssemblyVersion>
+    <AssemblyVersion>9.6.0.0</AssemblyVersion>
+    <AssemblyVersion>9.7.0.0</AssemblyVersion>
+    <AssemblyVersion>9.9.0.0</AssemblyVersion>
+    <AssemblyVersion>9.10.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.1.0.0</AssemblyVersion>
+    <AssemblyVersion>10.2.0.0</AssemblyVersion>
+    <AssemblyVersion>10.3.0.0</AssemblyVersion>
+    <AssemblyVersion>10.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Attribute</BaseTypeName>
@@ -31,7 +44,7 @@
       <AttributeName Language="C#">[System.Diagnostics.Conditional("CODE_GENERATION_ATTRIBUTES")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.Conditional("CODE_GENERATION_ATTRIBUTES")&gt;]</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -42,7 +55,7 @@
             </summary>
     <remarks>
             This attribute is applied to a method that has the following constraints:
-            <list type="bullet"><item><description>Must be a partial method.</description></item><item><description>Must return <c>metricName</c> as the type. A class with that name will be generated.</description></item><item><description>Must not be generic.</description></item><item><description>Must have <c>System.Diagnostics.Metrics.Meter</c> as first parameter.</description></item><item><description>Must have all the keys provided in <c>staticTagNames</c> as string type parameters.</description></item></list></remarks>
+            <list type="bullet"><item>Must be a partial method.</item><item>Must return <c>metricName</c> as the type. A class with that name will be generated.</item><item>Must not be generic.</item><item>Must have <c>System.Diagnostics.Metrics.Meter</c> as first parameter.</item><item>Must have all the keys provided in <c>staticTagNames</c> as string type parameters.</item></list></remarks>
     <example>
       <code language="csharp">
             static partial class Metric
@@ -64,7 +77,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="tagNames" Type="System.String[]">
@@ -94,7 +107,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="type" Type="System.Type" />
@@ -117,7 +130,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -155,10 +168,10 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -184,14 +197,43 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Gets the type that supplies metric tags values.
+            Gets the type that supplies metric tag values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unit">
+      <MemberSignature Language="C#" Value="public string? Unit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Unit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Extensions.Diagnostics.Metrics.CounterAttribute.Unit" />
+      <MemberSignature Language="VB.NET" Value="Public Property Unit As String" />
+      <MemberSignature Language="F#" Value="member this.Unit : string with get, set" Usage="Microsoft.Extensions.Diagnostics.Metrics.CounterAttribute.Unit" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Unit { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.Experimental("EXTEXP0003")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.Experimental("EXTEXP0003")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the unit of measurement for the metric.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

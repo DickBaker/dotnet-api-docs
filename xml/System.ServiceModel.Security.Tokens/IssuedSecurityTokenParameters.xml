@@ -25,13 +25,19 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
-    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="netstandard-2.0-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.ServiceModel.Security.Tokens.SecurityTokenParameters</BaseTypeName>
@@ -40,11 +46,11 @@
   <Docs>
     <summary>Represents the parameters for a security token issued in a Federated security scenario.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This class is a collection of token properties and methods, and is used in creating security binding elements and tokens.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This class is a collection of token properties and methods, and is used in creating security binding elements and tokens.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -57,13 +63,13 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The difference between these overloads is where instance property values come from. <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor%2A> sets them to their default values. <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor%2A> takes them from the instance referenced by the input parameter.  
-  
- The other constructors set them to their default values and then set other properties based on the input parameters.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The difference between these overloads is where instance property values come from. <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor*> sets them to their default values. <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor*> takes them from the instance referenced by the input parameter.
+
+ The other constructors set them to their default values and then set other properties based on the input parameters.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -88,7 +94,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -104,17 +110,17 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The new instance property values are set to their defaults:  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> is set to `true`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The new instance property values are set to their defaults:
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys> is set to `true`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -140,7 +146,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -153,11 +159,11 @@
         <param name="other">The other instance of this class.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The new instance property values are set to the corresponding values in `other`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The new instance property values are set to the corresponding values in `other`.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -165,12 +171,12 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenType As String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters : string -&gt; System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" Usage="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters tokenType" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; IssuedSecurityTokenParameters(System::String ^ tokenType);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenType As String)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters : string -&gt; System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" Usage="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters tokenType" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IssuedSecurityTokenParameters(System::String ^ tokenType);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -195,36 +201,36 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="tokenType" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="tokenType" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="tokenType">The token type.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> class using the specified token type.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The new instance property values are set to their defaults:  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> is set to `true`.  
-  
--   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A> is set to `tokenType`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The new instance property values are set to their defaults:
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys> is set to `true`.
+
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType> is set to `tokenType`.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType, System.ServiceModel.EndpointAddress issuerAddress);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType, class System.ServiceModel.EndpointAddress issuerAddress) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String,System.ServiceModel.EndpointAddress)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenType As String, issuerAddress As EndpointAddress)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters : string * System.ServiceModel.EndpointAddress -&gt; System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" Usage="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters (tokenType, issuerAddress)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; IssuedSecurityTokenParameters(System::String ^ tokenType, System::ServiceModel::EndpointAddress ^ issuerAddress);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType, System.ServiceModel.EndpointAddress issuerAddress);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType, class System.ServiceModel.EndpointAddress issuerAddress) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String,System.ServiceModel.EndpointAddress)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenType As String, issuerAddress As EndpointAddress)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters : string * System.ServiceModel.EndpointAddress -&gt; System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" Usage="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters (tokenType, issuerAddress)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IssuedSecurityTokenParameters(System::String ^ tokenType, System::ServiceModel::EndpointAddress ^ issuerAddress);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -249,40 +255,40 @@
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="tokenType" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="issuerAddress" Type="System.ServiceModel.EndpointAddress" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="tokenType" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="issuerAddress" Type="System.ServiceModel.EndpointAddress" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="tokenType">The token type.</param>
         <param name="issuerAddress">The address of the endpoint that issues the token.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> class using the specified token type and issuer address.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The new instance property values are set to their defaults:  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> is set to `true`.  
-  
--   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A> is set to `tokenType`.  
-  
--   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress%2A> is set to `issuerAddress`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The new instance property values are set to their defaults:
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys> is set to `true`.
+
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType> is set to `tokenType`.
+
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress> is set to `issuerAddress`.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType, System.ServiceModel.EndpointAddress issuerAddress, System.ServiceModel.Channels.Binding issuerBinding);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType, class System.ServiceModel.EndpointAddress issuerAddress, class System.ServiceModel.Channels.Binding issuerBinding) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String,System.ServiceModel.EndpointAddress,System.ServiceModel.Channels.Binding)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenType As String, issuerAddress As EndpointAddress, issuerBinding As Binding)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters : string * System.ServiceModel.EndpointAddress * System.ServiceModel.Channels.Binding -&gt; System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" Usage="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters (tokenType, issuerAddress, issuerBinding)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; IssuedSecurityTokenParameters(System::String ^ tokenType, System::ServiceModel::EndpointAddress ^ issuerAddress, System::ServiceModel::Channels::Binding ^ issuerBinding);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType, System.ServiceModel.EndpointAddress issuerAddress, System.ServiceModel.Channels.Binding issuerBinding);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType, class System.ServiceModel.EndpointAddress issuerAddress, class System.ServiceModel.Channels.Binding issuerBinding) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String,System.ServiceModel.EndpointAddress,System.ServiceModel.Channels.Binding)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tokenType As String, issuerAddress As EndpointAddress, issuerBinding As Binding)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters : string * System.ServiceModel.EndpointAddress * System.ServiceModel.Channels.Binding -&gt; System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" Usage="new System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters (tokenType, issuerAddress, issuerBinding)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IssuedSecurityTokenParameters(System::String ^ tokenType, System::ServiceModel::EndpointAddress ^ issuerAddress, System::ServiceModel::Channels::Binding ^ issuerBinding);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -301,9 +307,9 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="tokenType" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="issuerAddress" Type="System.ServiceModel.EndpointAddress" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="issuerBinding" Type="System.ServiceModel.Channels.Binding" Index="2" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="tokenType" Type="System.String" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="issuerAddress" Type="System.ServiceModel.EndpointAddress" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="issuerBinding" Type="System.ServiceModel.Channels.Binding" Index="2" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="tokenType">The token type.</param>
@@ -311,23 +317,23 @@
         <param name="issuerBinding">The binding of the issuer.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> class using the specified token type, issuer address and issuer binding.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The new instance property values are set to their defaults:  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
-  
--   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> is set to `true`.  
-  
--   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A> is set to `tokenType`.  
-  
--   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress%2A> is set to `issuerAddress`.  
-  
--   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding%2A> is set to `issuerBinding`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The new instance property values are set to their defaults:
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle> is set to <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.
+
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys> is set to `true`.
+
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType> is set to `tokenType`.
+
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress> is set to `issuerAddress`.
+
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding> is set to `issuerBinding`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -348,7 +354,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -373,12 +379,12 @@
       </Docs>
     </Member>
     <Member MemberName="ClaimTypeRequirements">
-      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClaimTypeRequirements As Collection(Of ClaimTypeRequirement)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.ClaimTypeRequirements : System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt;" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::ServiceModel::Security::Tokens::ClaimTypeRequirement ^&gt; ^ ClaimTypeRequirements { System::Collections::ObjectModel::Collection&lt;System::ServiceModel::Security::Tokens::ClaimTypeRequirement ^&gt; ^ get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClaimTypeRequirements As Collection(Of ClaimTypeRequirement)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.ClaimTypeRequirements : System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt;" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::ServiceModel::Security::Tokens::ClaimTypeRequirement ^&gt; ^ ClaimTypeRequirements { System::Collections::ObjectModel::Collection&lt;System::ServiceModel::Security::Tokens::ClaimTypeRequirement ^&gt; ^ get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -403,19 +409,19 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt;</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets a collection of claim type requirements.</summary>
         <value>A <see cref="T:System.Collections.ObjectModel.Collection`1" /> of type <see cref="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" /> that holds the additional claim type requirements.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- In a federated scenario, services state the requirements on incoming credentials. For example, the incoming credentials must possess a certain set of claim types. Each <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement> in the returned collection specifies the types of required and optional claims expected to appear in a federated credential.  
-  
- A claim type requirement consists of the URI of the claim type requested in the issued token along with a Boolean parameter that indicates whether that claim type is required in the issued token or is optional.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ In a federated scenario, services state the requirements on incoming credentials. For example, the incoming credentials must possess a certain set of claim types. Each <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement> in the returned collection specifies the types of required and optional claims expected to appear in a federated credential.
+
+ A claim type requirement consists of the URI of the claim type requested in the issued token along with a Boolean parameter that indicates whether that claim type is required in the issued token or is optional.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -444,7 +450,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -458,26 +464,26 @@
         <summary>Clones another instance of this instance of the class.</summary>
         <returns>A <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" /> that represents the copy.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.Clone%2A> and <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> methods follow the Core design pattern.  
-  
- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> is an `abstract` class that is overridden by <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore%2A>.  
-  
- The <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore%2A> method calls the <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor%2A> constructor.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.Clone*> and <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore*> methods follow the Core design pattern.
+
+ <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore*> is an `abstract` class that is overridden by <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore*>.
+
+ The <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore*> method calls the <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor*> constructor.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="CreateKeyIdentifierClause">
-      <MemberSignature Language="C#" Value="protected internal override System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause (System.IdentityModel.Tokens.SecurityToken token, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityToken token, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CreateKeyIdentifierClause(System.IdentityModel.Tokens.SecurityToken,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateKeyIdentifierClause (token As SecurityToken, referenceStyle As SecurityTokenReferenceStyle) As SecurityKeyIdentifierClause" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="override this.CreateKeyIdentifierClause : System.IdentityModel.Tokens.SecurityToken * System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle -&gt; System.IdentityModel.Tokens.SecurityKeyIdentifierClause" Usage="issuedSecurityTokenParameters.CreateKeyIdentifierClause (token, referenceStyle)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::IdentityModel::Tokens::SecurityKeyIdentifierClause ^ CreateKeyIdentifierClause(System::IdentityModel::Tokens::SecurityToken ^ token, System::ServiceModel::Security::Tokens::SecurityTokenReferenceStyle referenceStyle);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="protected internal override System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause (System.IdentityModel.Tokens.SecurityToken token, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityToken token, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CreateKeyIdentifierClause(System.IdentityModel.Tokens.SecurityToken,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateKeyIdentifierClause (token As SecurityToken, referenceStyle As SecurityTokenReferenceStyle) As SecurityKeyIdentifierClause" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="override this.CreateKeyIdentifierClause : System.IdentityModel.Tokens.SecurityToken * System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle -&gt; System.IdentityModel.Tokens.SecurityKeyIdentifierClause" Usage="issuedSecurityTokenParameters.CreateKeyIdentifierClause (token, referenceStyle)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::IdentityModel::Tokens::SecurityKeyIdentifierClause ^ CreateKeyIdentifierClause(System::IdentityModel::Tokens::SecurityToken ^ token, System::ServiceModel::Security::Tokens::SecurityTokenReferenceStyle referenceStyle);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -496,11 +502,11 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="referenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="referenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" Index="1" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="token">The token.</param>
@@ -508,11 +514,11 @@
         <summary>Creates a key identifier clause for a token.</summary>
         <returns>The security key identifier clause.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Creates a key identifier clause using the <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause%2A> method, with `referenceStyle` as a generic parameter.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Creates a key identifier clause using the <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause*> method, with `referenceStyle` as a generic parameter.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -544,8 +550,8 @@
         <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="messageSecurityVersion" Type="System.ServiceModel.MessageSecurityVersion" Index="0" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" Index="1" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="messageSecurityVersion" Type="System.ServiceModel.MessageSecurityVersion" Index="0" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" Index="1" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="messageSecurityVersion">The message security version.</param>
@@ -576,7 +582,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -602,12 +608,12 @@
       </Docs>
     </Member>
     <Member MemberName="HasAsymmetricKey">
-      <MemberSignature Language="C#" Value="protected internal override bool HasAsymmetricKey { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool HasAsymmetricKey" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.HasAsymmetricKey" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property HasAsymmetricKey As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.HasAsymmetricKey : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.HasAsymmetricKey" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool HasAsymmetricKey { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="protected internal override bool HasAsymmetricKey { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAsymmetricKey" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.HasAsymmetricKey" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property HasAsymmetricKey As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.HasAsymmetricKey : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.HasAsymmetricKey" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool HasAsymmetricKey { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -626,29 +632,29 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates whether the issued token has an asymmetric key.</summary>
         <value>
           <see langword="true" /> if the issued token has an asymmetric key; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Asymmetric keys are used in public-key cryptography, which uses two keys, a public key and a private key, which are related mathematically. The public key is distributed widely, but the private key is kept secret. In public-key cryptography, there is no requirement to exchange a common key.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Asymmetric keys are used in public-key cryptography, which uses two keys, a public key and a private key, which are related mathematically. The public key is distributed widely, but the private key is kept secret. In public-key cryptography, there is no requirement to exchange a common key.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="InitializeSecurityTokenRequirement">
-      <MemberSignature Language="C#" Value="protected internal override void InitializeSecurityTokenRequirement (System.IdentityModel.Selectors.SecurityTokenRequirement requirement);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeSecurityTokenRequirement(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.InitializeSecurityTokenRequirement(System.IdentityModel.Selectors.SecurityTokenRequirement)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub InitializeSecurityTokenRequirement (requirement As SecurityTokenRequirement)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="override this.InitializeSecurityTokenRequirement : System.IdentityModel.Selectors.SecurityTokenRequirement -&gt; unit" Usage="issuedSecurityTokenParameters.InitializeSecurityTokenRequirement requirement" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void InitializeSecurityTokenRequirement(System::IdentityModel::Selectors::SecurityTokenRequirement ^ requirement);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="protected internal override void InitializeSecurityTokenRequirement (System.IdentityModel.Selectors.SecurityTokenRequirement requirement);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeSecurityTokenRequirement(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement) cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.InitializeSecurityTokenRequirement(System.IdentityModel.Selectors.SecurityTokenRequirement)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub InitializeSecurityTokenRequirement (requirement As SecurityTokenRequirement)" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="override this.InitializeSecurityTokenRequirement : System.IdentityModel.Selectors.SecurityTokenRequirement -&gt; unit" Usage="issuedSecurityTokenParameters.InitializeSecurityTokenRequirement requirement" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void InitializeSecurityTokenRequirement(System::IdentityModel::Selectors::SecurityTokenRequirement ^ requirement);" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -667,26 +673,26 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Void</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="requirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+        <Parameter Name="requirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" Index="0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       </Parameters>
       <Docs>
         <param name="requirement">The security token requirement to initialize.</param>
         <summary>When implemented, initializes a security token requirement based on the properties set on the <see langword="IssuedSecurityTokenParameters" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The following properties of the <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> are initialized:  
-  
--   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A> is set to the value in the current instance of this class.  
-  
--   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken%2A> = `true`.  
-  
--   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A> is set to the value in the current instance of this class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The following properties of the <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> are initialized:
+
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType> is set to the value in the current instance of this class.
+
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken> = `true`.
+
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType> is set to the value in the current instance of this class.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -712,7 +718,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -758,7 +764,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -781,22 +787,22 @@
         <summary>Gets or sets the token issuer's binding, to be used by the client.</summary>
         <value>The <see cref="T:System.ServiceModel.Channels.Binding" /> of the token issuer, to be used by the client.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Note that this property does not need to be populated on the service, because it is only accessed by the client.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Note that this property does not need to be populated on the service, because it is only accessed by the client.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="IssuerMetadataAddress">
-      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerMetadataAddress { get; set; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerMetadataAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Property IssuerMetadataAddress As EndpointAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.IssuerMetadataAddress : System.ServiceModel.EndpointAddress with get, set" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::EndpointAddress ^ IssuerMetadataAddress { System::ServiceModel::EndpointAddress ^ get(); void set(System::ServiceModel::EndpointAddress ^ value); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerMetadataAddress { get; set; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerMetadataAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Property IssuerMetadataAddress As EndpointAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.IssuerMetadataAddress : System.ServiceModel.EndpointAddress with get, set" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::EndpointAddress ^ IssuerMetadataAddress { System::ServiceModel::EndpointAddress ^ get(); void set(System::ServiceModel::EndpointAddress ^ value); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -825,7 +831,7 @@
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.ServiceModel.EndpointAddress</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.ServiceModel.EndpointAddress</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the token issuer's metadata address.</summary>
@@ -849,7 +855,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -895,7 +901,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -917,12 +923,12 @@
       </Docs>
     </Member>
     <Member MemberName="SupportsClientAuthentication">
-      <MemberSignature Language="C#" Value="protected internal override bool SupportsClientAuthentication { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property SupportsClientAuthentication As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.SupportsClientAuthentication : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool SupportsClientAuthentication { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="protected internal override bool SupportsClientAuthentication { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property SupportsClientAuthentication As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.SupportsClientAuthentication : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool SupportsClientAuthentication { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -941,29 +947,29 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>When implemented, gets a value that indicates whether the token supports client authentication.</summary>
         <value>
           <see langword="true" /> if the token supports client authentication; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property always returns `true`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property always returns `true`.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="SupportsClientWindowsIdentity">
-      <MemberSignature Language="C#" Value="protected internal override bool SupportsClientWindowsIdentity { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientWindowsIdentity" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientWindowsIdentity" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property SupportsClientWindowsIdentity As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.SupportsClientWindowsIdentity : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientWindowsIdentity" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool SupportsClientWindowsIdentity { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="protected internal override bool SupportsClientWindowsIdentity { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientWindowsIdentity" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientWindowsIdentity" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property SupportsClientWindowsIdentity As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.SupportsClientWindowsIdentity : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientWindowsIdentity" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool SupportsClientWindowsIdentity { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -982,29 +988,29 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>When implemented, gets a value that indicates whether the token supports a Windows identity for authentication.</summary>
         <value>
           <see langword="true" /> if the token supports a Windows identity for authentication; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property always returns `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property always returns `false`.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="SupportsServerAuthentication">
-      <MemberSignature Language="C#" Value="protected internal override bool SupportsServerAuthentication { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsServerAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsServerAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property SupportsServerAuthentication As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.SupportsServerAuthentication : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsServerAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool SupportsServerAuthentication { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="protected internal override bool SupportsServerAuthentication { get; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsServerAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsServerAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property SupportsServerAuthentication As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.SupportsServerAuthentication : bool" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsServerAuthentication" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual property bool SupportsServerAuthentication { bool get(); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1023,18 +1029,18 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>When implemented, gets a value that indicates whether the token supports server authentication.</summary>
         <value>
           <see langword="true" /> if the token supports server authentication; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property always returns `true`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property always returns `true`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1060,7 +1066,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1086,12 +1092,12 @@
       </Docs>
     </Member>
     <Member MemberName="ToString">
-      <MemberSignature Language="C#" Value="public override string ToString ();" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ToString" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="issuedSecurityTokenParameters.ToString " FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public override string ToString ();" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ToString" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="issuedSecurityTokenParameters.ToString " FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1110,29 +1116,29 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.String</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.String</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>Displays a text representation of this instance of the class.</summary>
         <returns>A text representation of this instance of this class.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The method displays the name of this class, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeySize%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding%2A> (if not `null`) and binding elements, and <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A> (if not 0).  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The method displays the name of this class, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeySize>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding> (if not `null`) and binding elements, and <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements> (if not 0).
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="UseStrTransform">
-      <MemberSignature Language="C#" Value="public bool UseStrTransform { get; set; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool UseStrTransform" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="VB.NET" Value="Public Property UseStrTransform As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="F#" Value="member this.UseStrTransform : bool with get, set" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseStrTransform { bool get(); void set(bool value); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+      <MemberSignature Language="C#" Value="public bool UseStrTransform { get; set; }" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseStrTransform" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseStrTransform As Boolean" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="F#" Value="member this.UseStrTransform : bool with get, set" Usage="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseStrTransform { bool get(); void set(bool value); };" FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -1151,7 +1157,7 @@
         <AssemblyName>System.ServiceModel.Security</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">System.Boolean</ReturnType>
+        <ReturnType FrameworkAlternate="net-6.0-pp;net-7.0-pp;netframework-3.0;netframework-3.5;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netframework-4.6.2-pp;netframework-4.7-pp;net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp">System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a value that indicates whether the issued token parameter uses STR transform.</summary>

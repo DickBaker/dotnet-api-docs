@@ -15,13 +15,18 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -68,7 +73,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -93,7 +98,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
@@ -104,19 +109,19 @@
             Initializes a new instance of the <see cref="T:System.Runtime.Serialization.XsdDataContractImporter" /> class with the <see cref="T:System.CodeDom.CodeCompileUnit" /> that will be used to generate CLR code.
             </summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use this constructor to add more code into a <xref:System.CodeDom.CodeCompileUnit> that has already been generated.  
-  
-   
-  
-## Examples  
- The following example creates an <xref:System.Xml.Schema.XmlSchemaSet> and calls the <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> method to create a <xref:System.CodeDom.CodeCompileUnit>. The <xref:System.CodeDom.CodeCompileUnit> is then used to create both Visual C# and Visual Basic code files.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use this constructor to add more code into a <xref:System.CodeDom.CodeCompileUnit> that has already been generated.
+
+
+
+## Examples
+ The following example creates an <xref:System.Xml.Schema.XmlSchemaSet> and calls the <xref:System.Runtime.Serialization.XsdDataContractImporter.Import*> method to create a <xref:System.CodeDom.CodeCompileUnit>. The <xref:System.CodeDom.CodeCompileUnit> is then used to create both Visual C# and Visual Basic code files.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -129,11 +134,11 @@
       <Docs>
         <summary>Gets a value that indicates whether the schemas can be transformed into a <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- For more information about types that can be imported, see [Types Supported by the Data Contract Serializer](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer).  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For more information about types that can be imported, see [Types Supported by the Data Contract Serializer](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer).
+
  ]]></format>
         </remarks>
       </Docs>
@@ -153,10 +158,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -172,16 +177,17 @@
         <summary>
             Gets a value that indicates whether the schemas contained in an <see cref="T:System.Xml.Schema.XmlSchemaSet" /> can be transformed into a <see cref="T:System.CodeDom.CodeCompileUnit" />.
             </summary>
-        <returns>true if the schemas can be transformed to data contract types; otherwise, false.</returns>
+        <returns>
+          <see langword="true" /> if the schemas can be transformed to data contract types; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example calls the <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> method to determine whether the <xref:System.CodeDom.CodeCompileUnit> can be generated.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example calls the <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport*> method to determine whether the <xref:System.CodeDom.CodeCompileUnit> can be generated.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="schemas" /> parameter is <see langword="null" />.</exception>
@@ -203,10 +209,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -219,12 +225,13 @@
         <Parameter Name="typeNames" Type="System.Collections.Generic.ICollection&lt;System.Xml.XmlQualifiedName&gt;" />
       </Parameters>
       <Docs>
-        <param name="schemas">A <see cref="T:System.Xml.Schema.XmlSchemaSet" /> that contains the schemas to transform.</param>
-        <param name="typeNames">An <see cref="T:System.Collections.Generic.ICollection`1" /> of <see cref="T:System.Xml.XmlQualifiedName" /> that represents the set of schema types to import.</param>
+        <param name="schemas">The schemas to transform.</param>
+        <param name="typeNames">The set of schema types to import.</param>
         <summary>
             Gets a value that indicates whether the specified set of types contained in an <see cref="T:System.Xml.Schema.XmlSchemaSet" /> can be transformed into CLR types generated into a <see cref="T:System.CodeDom.CodeCompileUnit" />.
             </summary>
-        <returns>true if the schemas can be transformed; otherwise, false.</returns>
+        <returns>
+          <see langword="true" /> if the schemas can be transformed; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="schemas" /> or <paramref name="typeNames" /> parameter is <see langword="null" />.</exception>
         <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">A data contract involved in the import is invalid.</exception>
@@ -245,10 +252,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -266,13 +273,14 @@
         <summary>
             Gets a value that indicates whether a specific schema element contained in an <see cref="T:System.Xml.Schema.XmlSchemaSet" /> can be imported.
             </summary>
-        <returns>true if the element can be imported; otherwise, false.</returns>
+        <returns>
+          <see langword="true" /> if the element can be imported; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method checks the type and all schema types referenced from it.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method checks the type and all schema types referenced from it.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="schemas" /> or <paramref name="element" /> parameter is <see langword="null" />.</exception>
@@ -294,10 +302,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -310,18 +318,19 @@
         <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
       </Parameters>
       <Docs>
-        <param name="schemas">A <see cref="T:System.Xml.Schema.XmlSchemaSet" /> that contains the schema representations.</param>
-        <param name="typeName">An <see cref="T:System.Xml.XmlQualifiedName" /> that specifies the names of the schema types that need to be imported from the <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <param name="schemas">The schema representations.</param>
+        <param name="typeName">The names of the schema types that need to be imported from the <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
         <summary>
             Gets a value that indicates whether the schemas contained in an <see cref="T:System.Xml.Schema.XmlSchemaSet" /> can be transformed into a <see cref="T:System.CodeDom.CodeCompileUnit" />.
             </summary>
-        <returns>true if the schemas can be transformed to data contract types; otherwise, false.</returns>
+        <returns>
+          <see langword="true" /> if the schemas can be transformed to data contract types; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- For more information about types that can be imported, see [Types Supported by the Data Contract Serializer](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer).  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For more information about types that can be imported, see [Types Supported by the Data Contract Serializer](/dotnet/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer).
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="schemas" /> or <paramref name="typeName" /> parameter is <see langword="null" />.</exception>
@@ -343,7 +352,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
@@ -354,19 +363,19 @@
             </summary>
         <value>A <see cref="T:System.CodeDom.CodeCompileUnit" /> used to store the CLR types generated.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Call this property after importing schemas using the <xref:System.Runtime.Serialization.XsdDataContractImporter> to access the <xref:System.CodeDom.CodeCompileUnit> in which all the generated code is stored.  
-  
-   
-  
-## Examples  
- The following example uses creates a <xref:System.CodeDom.CodeCompileUnit>. The <xref:System.CodeDom.CodeCompileUnit> is then used to create both a Visual C# and Visual Basic code file.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Call this property after importing schemas using the <xref:System.Runtime.Serialization.XsdDataContractImporter> to access the <xref:System.CodeDom.CodeCompileUnit> in which all the generated code is stored.
+
+
+
+## Examples
+ The following example uses creates a <xref:System.CodeDom.CodeCompileUnit>. The <xref:System.CodeDom.CodeCompileUnit> is then used to create both a Visual C# and Visual Basic code file.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.CodeDom.CodeCompileUnit" />
@@ -397,10 +406,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -418,11 +427,11 @@
             </summary>
         <returns>A <see cref="T:System.CodeDom.CodeTypeReference" /> reference to the CLR type generated for the schema type with the typeName specified.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use this method to look up the reference to a generated CLR type after calling the <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> method. The <xref:System.CodeDom.CodeTypeReference> contains the name of the generated type and can be used to look up the corresponding <xref:System.CodeDom.CodeTypeDeclaration> in the <xref:System.CodeDom.CodeCompileUnit>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use this method to look up the reference to a generated CLR type after calling the <xref:System.Runtime.Serialization.XsdDataContractImporter.Import*> method. The <xref:System.CodeDom.CodeTypeReference> contains the name of the generated type and can be used to look up the corresponding <xref:System.CodeDom.CodeTypeDeclaration> in the <xref:System.CodeDom.CodeCompileUnit>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -442,10 +451,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -465,19 +474,19 @@
             </summary>
         <returns>A <see cref="T:System.CodeDom.CodeTypeReference" /> that represents the type that was generated for the specified schema type.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The schema element is needed for data about the type that is specified at the element scope. The main example of this is the XSD attribute `nillable`. In schema, setting `nillable` to `true` is specified on the containing schema element whereas the concept of null is expressed in the CLR type <xref:System.Nullable%601>. The element is passed in so that this importer can look up the element-level information and return the correct type reference accordingly.  
-  
- When importing WSDL, each parameter is imported separately and therefore the parameter elements need to be passed in separately.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The schema element is needed for data about the type that is specified at the element scope. The main example of this is the XSD attribute `nillable`. In schema, setting `nillable` to `true` is specified on the containing schema element whereas the concept of null is expressed in the CLR type <xref:System.Nullable`1>. The element is passed in so that this importer can look up the element-level information and return the correct type reference accordingly.
+
+ When importing WSDL, each parameter is imported separately and therefore the parameter elements need to be passed in separately.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetKnownTypeReferences">
-      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.CodeDom.CodeTypeReference&gt;? GetKnownTypeReferences (System.Xml.XmlQualifiedName typeName);" FrameworkAlternate="net-8.0-pp;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.CodeDom.CodeTypeReference&gt;? GetKnownTypeReferences (System.Xml.XmlQualifiedName typeName);" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class System.CodeDom.CodeTypeReference&gt; GetKnownTypeReferences(class System.Xml.XmlQualifiedName typeName) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.GetKnownTypeReferences(System.Xml.XmlQualifiedName)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetKnownTypeReferences (typeName As XmlQualifiedName) As ICollection(Of CodeTypeReference)" />
@@ -492,10 +501,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -503,7 +512,7 @@
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.CodeDom.CodeTypeReference&gt;</ReturnType>
         <Attributes>
-          <Attribute FrameworkAlternate="net-8.0-pp">
+          <Attribute FrameworkAlternate="net-10.0-pp">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
           </Attribute>
@@ -519,13 +528,13 @@
             </summary>
         <returns>A collection of type <see cref="T:System.CodeDom.CodeTypeReference" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When generating CLR types for schema types, known types are also generated for all derived types that are present in the schema. In many cases, these known types are added using attributes to the generated code. (For example, see the <xref:System.Runtime.Serialization.KnownTypeAttribute> class. ) However, for the top-level type, there needs to be a way to return the set of known types generated. This method returns the <xref:System.CodeDom.CodeTypeReference> for known types that were generated for a specific schema type.  
-  
- For more information, see [Data Contract Known Types](/dotnet/framework/wcf/feature-details/data-contract-known-types).  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When generating CLR types for schema types, known types are also generated for all derived types that are present in the schema. In many cases, these known types are added using attributes to the generated code. (For example, see the <xref:System.Runtime.Serialization.KnownTypeAttribute> class. ) However, for the top-level type, there needs to be a way to return the set of known types generated. This method returns the <xref:System.CodeDom.CodeTypeReference> for known types that were generated for a specific schema type.
+
+ For more information, see [Data Contract Known Types](/dotnet/framework/wcf/feature-details/data-contract-known-types).
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Runtime.Serialization.KnownTypeAttribute" />
@@ -556,10 +565,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -576,14 +585,14 @@
             Transforms the specified set of XML schemas contained in an <see cref="T:System.Xml.Schema.XmlSchemaSet" /> into a <see cref="T:System.CodeDom.CodeCompileUnit" />.
             </summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example uses the <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> method to test whether a set of schemas can be imported. If the <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> method returns `true`, the code invokes the <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example uses the <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport*> method to test whether a set of schemas can be imported. If the <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport*> method returns `true`, the code invokes the <xref:System.Runtime.Serialization.XsdDataContractImporter.Import*> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="schemas" /> parameter is <see langword="null" />.</exception>
@@ -604,10 +613,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -621,7 +630,7 @@
       </Parameters>
       <Docs>
         <param name="schemas">A <see cref="T:System.Xml.Schema.XmlSchemaSet" /> that contains the schema representations.</param>
-        <param name="typeNames">A <see cref="T:System.Collections.Generic.ICollection`1" /> (of <see cref="T:System.Xml.XmlQualifiedName" />) that represents the set of schema types to import.</param>
+        <param name="typeNames">The set of schema types to import.</param>
         <summary>
             Transforms the specified set of schema types contained in an <see cref="T:System.Xml.Schema.XmlSchemaSet" /> into CLR types generated into a <see cref="T:System.CodeDom.CodeCompileUnit" />.
             </summary>
@@ -629,7 +638,7 @@
       </Docs>
     </Member>
     <Member MemberName="Import">
-      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName? Import (System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.XmlSchemaElement element);" FrameworkAlternate="net-8.0-pp;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName? Import (System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.XmlSchemaElement element);" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName Import(class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.XmlSchemaElement element) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.Import(System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.XmlSchemaElement)" />
       <MemberSignature Language="VB.NET" Value="Public Function Import (schemas As XmlSchemaSet, element As XmlSchemaElement) As XmlQualifiedName" />
@@ -644,10 +653,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -655,7 +664,7 @@
       <ReturnValue>
         <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
         <Attributes>
-          <Attribute FrameworkAlternate="net-8.0-pp">
+          <Attribute FrameworkAlternate="net-10.0-pp">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
           </Attribute>
@@ -692,10 +701,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("Data Contract Serialization and Deserialization might require types that cannot be statically analyzed. Make sure all of the required types are preserved.")&gt;]</AttributeName>
         </Attribute>
@@ -718,7 +727,7 @@
       </Docs>
     </Member>
     <Member MemberName="Options">
-      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ImportOptions? Options { get; set; }" FrameworkAlternate="net-8.0-pp;net-9.0-pp" />
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ImportOptions? Options { get; set; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ImportOptions Options" />
       <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.XsdDataContractImporter.Options" />
       <MemberSignature Language="VB.NET" Value="Public Property Options As ImportOptions" />
@@ -733,10 +742,10 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Schema</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -750,11 +759,11 @@
             </summary>
         <value>A <see cref="T:System.Runtime.Serialization.ImportOptions" /> that contains settable options.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use the <xref:System.Runtime.Serialization.ImportOptions> class to customize how the CLR types are generated during schema import.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use the <xref:System.Runtime.Serialization.ImportOptions> class to customize how the CLR types are generated during schema import.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Runtime.Serialization.XsdDataContractExporter" />

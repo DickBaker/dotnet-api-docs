@@ -1,6 +1,6 @@
 <Type Name="ConfigurationSectionGroupCollection" FullName="System.Configuration.ConfigurationSectionGroupCollection">
   <TypeSignature Language="C#" Value="public sealed class ConfigurationSectionGroupCollection : System.Collections.Specialized.NameObjectCollectionBase" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationSectionGroupCollection extends System.Collections.Specialized.NameObjectCollectionBase" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationSectionGroupCollection extends System.Collections.Specialized.NameObjectCollectionBase" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationSectionGroupCollection" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConfigurationSectionGroupCollection&#xA;Inherits NameObjectCollectionBase" />
   <TypeSignature Language="F#" Value="type ConfigurationSectionGroupCollection = class&#xA;    inherit NameObjectCollectionBase" />
@@ -21,7 +21,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
   </Base>
@@ -35,37 +40,37 @@
   <Docs>
     <summary>Represents a collection of <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objects.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use the <xref:System.Configuration.ConfigurationSectionGroupCollection> class to iterate through a collection of <xref:System.Configuration.ConfigurationSectionGroup> objects. You can access this collection of objects using the <xref:System.Configuration.Configuration.SectionGroups%2A> property or the <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups%2A> property.  
-  
- The <xref:System.Configuration.ConfigurationSectionGroupCollection> class is also used in the creation of custom types that extend the <xref:System.Configuration.ConfigurationSectionGroup> class.  
-  
-   
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection> class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use the <xref:System.Configuration.ConfigurationSectionGroupCollection> class to iterate through a collection of <xref:System.Configuration.ConfigurationSectionGroup> objects. You can access this collection of objects using the <xref:System.Configuration.Configuration.SectionGroups> property or the <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups> property.
+
+ The <xref:System.Configuration.ConfigurationSectionGroupCollection> class is also used in the creation of custom types that extend the <xref:System.Configuration.ConfigurationSectionGroup> class.
+
+
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection> class.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet1":::  
-  
- The following example is an excerpt of the configuration file used by the previous example.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <configSections>  
-    <section name="CustomSection"   
-      type="Samples.AspNet.Configuration.CustomSection, ConfigurationSectionCollection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" allowDefinition="Everywhere" allowExeDefinition="MachineToApplication" restartOnExternalChanges="true" />  
-  /configSections>  
-  
-<CustomSection fileName="default.txt" maxUsers="1000"   
-  maxIdleTime="00:05:00" />  
-  
-</configuration>  
-```  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet1":::
+
+ The following example is an excerpt of the configuration file used by the previous example.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="CustomSection"
+      type="Samples.AspNet.Configuration.CustomSection, ConfigurationSectionCollection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" allowDefinition="Everywhere" allowExeDefinition="MachineToApplication" restartOnExternalChanges="true" />
+  /configSections>
+
+<CustomSection fileName="default.txt" maxUsers="1000"
+  maxIdleTime="00:05:00" />
+
+</configuration>
+```
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -95,6 +100,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -108,11 +115,11 @@
         <param name="sectionGroup">The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object to be added.</param>
         <summary>Adds a <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object to this <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, this method adds the specified <xref:System.Configuration.ConfigurationSectionGroup> object if it is not already contained within the collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, this method adds the specified <xref:System.Configuration.ConfigurationSectionGroup> object if it is not already contained within the collection.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -139,6 +146,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -147,19 +156,19 @@
       <Docs>
         <summary>Clears the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseClear%2A> method.  
-  
-   
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Clear%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseClear*> method.
+
+
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Clear*> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet3":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -189,6 +198,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -230,6 +241,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -248,11 +261,11 @@
       <Docs>
         <summary>Gets a <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object from the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -279,6 +292,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationSectionGroup</ReturnType>
@@ -291,11 +306,11 @@
         <summary>Gets the specified <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object contained in the collection.</summary>
         <returns>The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object at the specified index.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet*> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -322,6 +337,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationSectionGroup</ReturnType>
@@ -334,19 +351,19 @@
         <summary>Gets the specified <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object from the collection.</summary>
         <returns>The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object with the specified name.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> method.  
-  
-   
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Get%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is a wrapper around the <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet*> method.
+
+
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Get*> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet4":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet4":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet4":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">
@@ -360,10 +377,10 @@
       <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroupCollection.GetEnumerator" />
-      <MemberSignature Language="VB.NET" Value="Public Iterator Overrides Function GetEnumerator () As IEnumerator" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Overrides Function GetEnumerator () As IEnumerator" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0-pp" />
       <MemberSignature Language="F#" Value="override this.GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="configurationSectionGroupCollection.GetEnumerator " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Collections::IEnumerator ^ GetEnumerator();" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetEnumerator () As IEnumerator" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetEnumerator () As IEnumerator" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -379,9 +396,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Configuration.ConfigurationSectionGroupCollection+&lt;GetEnumerator&gt;d__14))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Configuration.ConfigurationSectionGroupCollection+&lt;GetEnumerator&gt;d__14))&gt;]</AttributeName>
         </Attribute>
@@ -402,14 +421,14 @@
         <summary>Gets an enumerator that can iterate through the <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> that can be used to iterate through the <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.GetEnumerator%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.GetEnumerator*> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet5":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet5":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -439,6 +458,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -451,14 +472,14 @@
         <summary>Gets the key of the specified <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object contained in this <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</summary>
         <returns>The key of the <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object at the specified index.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.GetKey%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.GetKey*> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet6":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet6":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet6":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -471,9 +492,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroupCollection.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
-      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="configurationSectionGroupCollection.GetObjectData (info, context)" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="configurationSectionGroupCollection.GetObjectData (info, context)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
-      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="configurationSectionGroupCollection.GetObjectData (info, context)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -490,13 +510,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Obsolete("This API supports obsolete formatter-based serialization. It should not be called or extended by application code.", DiagnosticId="SYSLIB0051", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("This API supports obsolete formatter-based serialization. It should not be called or extended by application code.", DiagnosticId="SYSLIB0051", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -505,19 +527,19 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0;netframework-4.6.2-pp;windowsdesktop-10.0;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-11.0" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0;netframework-4.6.2-pp;windowsdesktop-10.0;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="info">The applicable <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object.</param>
         <param name="context">The applicable <see cref="T:System.Runtime.Serialization.StreamingContext" /> object.</param>
         <summary>Used by the system during serialization.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.ConfigurationSectionGroupCollection.GetObjectData%2A> method is used during serialization; that is, when persisting configuration data to a configuration file.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.ConfigurationSectionGroupCollection.GetObjectData*> method is used during serialization; that is, when persisting configuration data to a configuration file.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -530,14 +552,14 @@
       <Docs>
         <summary>Gets or sets a <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object contained in this <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Item%2A> property to iterate through a <xref:System.Configuration.ConfigurationSectionGroupCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Item*> property to iterate through a <xref:System.Configuration.ConfigurationSectionGroupCollection>.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/ConfigurationSectionGroupCollection/CS/sample.cs" id="Snippet9":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/ConfigurationSectionGroupCollection/VB/sample.vb" id="Snippet9":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/ConfigurationSectionGroupCollection/VB/sample.vb" id="Snippet9":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -564,6 +586,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationSectionGroup</ReturnType>
@@ -574,8 +598,8 @@
       <Docs>
         <param name="index">The index of the <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object to be returned.</param>
         <summary>Gets the <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object whose index is specified from the collection.</summary>
-        <value>The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object at the specified index.  
-  
+        <value>The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object at the specified index.
+
  In C#, this property is the indexer for the <see cref="T:System.Configuration.ConfigurationSectionCollection" /> class.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -602,6 +626,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationSectionGroup</ReturnType>
@@ -612,18 +638,18 @@
       <Docs>
         <param name="name">The name of the <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object to be returned.</param>
         <summary>Gets the <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object whose name is specified from the collection.</summary>
-        <value>The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object with the specified name.  
-  
+        <value>The <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object with the specified name.
+
  In C#, this property is the indexer for the <see cref="T:System.Configuration.ConfigurationSectionCollection" /> class.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Item%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Item*> property.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet8":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet8":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet8":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -654,6 +680,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
@@ -662,14 +690,14 @@
         <summary>Gets the keys to all <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objects contained in this <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</summary>
         <value>A <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> object that contains the names of all section groups in this collection.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Keys%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Keys> property.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet7":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet7":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet7":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -699,6 +727,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -710,14 +740,14 @@
         <param name="name">The name of the section group to be removed.</param>
         <summary>Removes the <see cref="T:System.Configuration.ConfigurationSectionGroup" /> object whose name is specified from this <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Remove%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example shows how to use the <xref:System.Configuration.ConfigurationSectionGroupCollection.Remove*> method.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/CS/ConfigurationSectionGroupCollection.cs" id="Snippet9":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet9":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroupCollection/VB/ConfigurationSectionGroupCollection.vb" id="Snippet9":::
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.Configuration.ConfigurationSectionGroup" />
@@ -747,6 +777,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -1,6 +1,6 @@
 <Type Name="UTF7Encoding" FullName="System.Text.UTF7Encoding">
   <TypeSignature Language="C#" Value="public class UTF7Encoding : System.Text.Encoding" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UTF7Encoding extends System.Text.Encoding" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UTF7Encoding extends System.Text.Encoding" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Text.UTF7Encoding" />
   <TypeSignature Language="VB.NET" Value="Public Class UTF7Encoding&#xA;Inherits Encoding" />
   <TypeSignature Language="F#" Value="type UTF7Encoding = class&#xA;    inherit Encoding" />
@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -31,6 +33,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Text.Encoding.Extensions" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Text.Encoding.Extensions" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Text.Encoding.Extensions" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Text.Encoding.Extensions" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Text.Encoding.Extensions" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -42,7 +46,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -70,9 +74,9 @@
 
  For more information about the UTFs and other encodings supported by <xref:System.Text>, see [Character Encoding in the .NET Framework](/dotnet/standard/base-types/character-encoding).
 
- The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method determines how many bytes result in encoding a set of Unicode characters, and the <xref:System.Text.UTF7Encoding.GetBytes%2A> method performs the actual encoding.
+ The <xref:System.Text.UTF7Encoding.GetByteCount*> method determines how many bytes result in encoding a set of Unicode characters, and the <xref:System.Text.UTF7Encoding.GetBytes*> method performs the actual encoding.
 
- Likewise, the <xref:System.Text.UTF7Encoding.GetCharCount%2A> method determines how many characters result in decoding a sequence of bytes, and the <xref:System.Text.UTF7Encoding.GetChars%2A> and <xref:System.Text.UTF7Encoding.GetString%2A> methods perform the actual decoding.
+ Likewise, the <xref:System.Text.UTF7Encoding.GetCharCount*> method determines how many characters result in decoding a sequence of bytes, and the <xref:System.Text.UTF7Encoding.GetChars*> and <xref:System.Text.UTF7Encoding.GetString*> methods perform the actual decoding.
 
  <xref:System.Text.UTF7Encoding> corresponds to the Windows code page 65000.
 
@@ -84,9 +88,8 @@
 ## Examples
  The following code example demonstrates how to use a <xref:System.Text.UTF7Encoding> to encode a string of Unicode characters and store them in a byte array. Notice that when the byte array is decoded back to a string, no data is lost.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding Example/CPP/snippet.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/Overview/snippet.cs" interactive="try-dotnet" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding Example/VB/snippet.vb" id="Snippet1":::
+ :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/Overview/snippet.cs" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/Overview/snippet.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -123,6 +126,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -137,7 +142,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("The UTF-7 encoding is insecure and should not be used. Consider using UTF-8 instead.", DiagnosticId="SYSLIB0001", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("The UTF-7 encoding is insecure and should not be used. Consider using UTF-8 instead.", DiagnosticId="SYSLIB0001", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -149,7 +154,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This constructor creates an instance that does not allow optional characters. Calling the <xref:System.Text.UTF7Encoding.%23ctor%2A> constructor is equivalent to calling the <xref:System.Text.UTF7Encoding.%23ctor%28System.Boolean%29?displayProperty=nameWithType> constructor that takes an `allowOptionals` parameter and specifying `false` for that parameter.
+ This constructor creates an instance that does not allow optional characters. Calling the <xref:System.Text.UTF7Encoding.%23ctor*> constructor is equivalent to calling the <xref:System.Text.UTF7Encoding.%23ctor(System.Boolean)?displayProperty=nameWithType> constructor that takes an `allowOptionals` parameter and specifying `false` for that parameter.
 
  If an instance allows optional characters, Unicode code points are encoded with a corresponding optional character instead of a modified base 64 character. The optional characters are exclamation point ("!"), backward slash ("\\"), vertical line ("&#124;"), double quote ("""), number sign ("#"), dollar sign ("$"), percent sign ("%"), ampersand ("&"), asterisk ("*"), semicolon (";"), left angle bracket ("\<"), right angle bracket (">"), left curly bracket ("{"), right curly bracket ("}"), left square bracket ("["), right square bracket ("]"), equal sign ("="), at sign ("@"), circumflex accent ("^"), underscore ("_"), and grave accent ("`").
 
@@ -161,9 +166,8 @@
 ## Examples
  The following code example demonstrates how to create a new <xref:System.Text.UTF7Encoding> instance and display the name of the encoding.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.ctor1 Example/CPP/ctor.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/.ctor/ctor.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.ctor1 Example/VB/ctor.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/.ctor/ctor.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -188,6 +192,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -202,7 +208,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("The UTF-7 encoding is insecure and should not be used. Consider using UTF-8 instead.", DiagnosticId="SYSLIB0001", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("The UTF-7 encoding is insecure and should not be used. Consider using UTF-8 instead.", DiagnosticId="SYSLIB0001", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -228,9 +234,8 @@
 ## Examples
  The following code example demonstrates how to create a new <xref:System.Text.UTF7Encoding> instance that allows optional characters.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.ctor2 Example/CPP/ctor-boolean.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/.ctor/ctor-boolean.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.ctor2 Example/VB/ctor-boolean.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/.ctor/ctor-boolean.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -243,7 +248,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (value As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="uTF7Encoding.Equals value" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ value);" />
-      <MemberSignature Language="C#" Value="public override bool Equals (object? value);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? value);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Text.Encoding.Extensions</AssemblyName>
@@ -256,6 +261,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -278,9 +285,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
+        <Parameter Name="value" Type="System.Object" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -296,7 +303,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Two <xref:System.Text.UTF7Encoding> objects are equal if they both either allow or disallow optional characters, and if their underlying <xref:System.Text.Encoding.EncoderFallback%2A> and <xref:System.Text.Encoding.DecoderFallback%2A> properties are equal.
+ Two <xref:System.Text.UTF7Encoding> objects are equal if they both either allow or disallow optional characters, and if their underlying <xref:System.Text.Encoding.EncoderFallback*> and <xref:System.Text.Encoding.DecoderFallback*> properties are equal.
 
  ]]></format>
         </remarks>
@@ -333,6 +340,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -359,7 +368,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="s" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="s" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="s">The <see cref="T:System.String" /> object containing the set of characters to encode.</param>
@@ -369,16 +378,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size that <xref:System.Text.UTF7Encoding.GetBytes%2A> requires to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size that <xref:System.Text.UTF7Encoding.GetBytes*> requires to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetByteCount%2A> method to return the number of bytes required to encode a character array.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetByteCount*> method to return the number of bytes required to encode a character array.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetByteCount Example/CPP/getbytecount-char[]-int32-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetByteCount/getbytecount-char[]-int32-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetByteCount Example/VB/getbytecount-char[]-int32-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetByteCount/getbytecount-char[]-int32-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -413,6 +421,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -426,13 +436,17 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
+        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6">
           <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
@@ -443,8 +457,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="chars" Type="System.Char*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="count" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="chars" Type="System.Char*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="count" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="chars">A pointer to the first character to encode.</param>
@@ -455,7 +469,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size that <xref:System.Text.UTF7Encoding.GetBytes%2A> requires to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size that <xref:System.Text.UTF7Encoding.GetBytes*> requires to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
  ]]></format>
         </remarks>
@@ -496,6 +510,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -533,16 +549,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes%2A> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes*> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetByteCount%2A> method to return the number of bytes required to encode an array of Unicode characters.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetByteCount*> method to return the number of bytes required to encode an array of Unicode characters.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetByteCount Example/CPP/getbytecount-char[]-int32-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetByteCount/getbytecount-char[]-int32-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetByteCount Example/VB/getbytecount-char[]-int32-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetByteCount/getbytecount-char[]-int32-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -596,6 +611,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -609,13 +626,17 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
+        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6">
           <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
@@ -626,10 +647,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="chars" Type="System.Char*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="charCount" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="bytes" Type="System.Byte*" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="byteCount" Type="System.Int32" Index="3" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="chars" Type="System.Char*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="charCount" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="bytes" Type="System.Byte*" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="byteCount" Type="System.Int32" Index="3" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="chars">A pointer to the first character to encode.</param>
@@ -642,9 +663,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes%2A> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes*> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
- Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method or the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method, respectively.
+ Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder*> method or the <xref:System.Text.UTF7Encoding.GetEncoder*> method, respectively.
 
 > [!NOTE]
 >  <xref:System.Text.UTF7Encoding> does not provide error detection. Invalid characters are encoded as a modified base 64 character. For security reasons, your applications are recommended to use <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, or <xref:System.Text.UTF32Encoding> and enable error detection.
@@ -690,6 +711,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -731,9 +754,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes%2A> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes*> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
- Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method or the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method, respectively.
+ Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder*> method or the <xref:System.Text.UTF7Encoding.GetEncoder*> method, respectively.
 
 > [!NOTE]
 >  <xref:System.Text.UTF7Encoding> does not provide error detection. Invalid characters are encoded as a modified base 64 character. For security reasons, your applications are recommended to use <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, or <xref:System.Text.UTF32Encoding> and enable error detection.
@@ -741,11 +764,10 @@
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetBytes%2A> method to encode a range of characters from a <xref:System.String> and store the encoded bytes in a range of elements in a byte array.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetBytes*> method to encode a range of characters from a <xref:System.String> and store the encoded bytes in a range of elements in a byte array.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetBytes Example/CPP/getbytes-char[]-int32-int32-byte[]-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetBytes/getbytes-char[]-int32-int32-byte[]-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetBytes Example/VB/getbytes-char[]-int32-int32-byte[]-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetBytes/getbytes-char[]-int32-int32-byte[]-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -796,6 +818,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -822,11 +846,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="s" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="charIndex" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="charCount" Type="System.Int32" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="bytes" Type="System.Byte[]" Index="3" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="byteIndex" Type="System.Int32" Index="4" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="s" Type="System.String" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="charIndex" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="charCount" Type="System.Int32" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="bytes" Type="System.Byte[]" Index="3" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="byteIndex" Type="System.Int32" Index="4" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="s">The <see cref="T:System.String" /> containing the set of characters to encode.</param>
@@ -840,9 +864,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes%2A> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes*> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
- Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method or the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method, respectively.
+ Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder*> method or the <xref:System.Text.UTF7Encoding.GetEncoder*> method, respectively.
 
 > [!NOTE]
 >  <xref:System.Text.UTF7Encoding> does not provide error detection. Invalid characters are encoded as a modified base 64 character. For security reasons, your applications are recommended to use <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, or <xref:System.Text.UTF32Encoding> and enable error detection.
@@ -850,11 +874,10 @@
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetBytes%2A> method to encode a range of elements from a Unicode character array, and store the encoded bytes in a range of elements in a byte array.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetBytes*> method to encode a range of elements from a Unicode character array, and store the encoded bytes in a range of elements in a byte array.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetBytes Example/CPP/getbytes-char[]-int32-int32-byte[]-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetBytes/getbytes-char[]-int32-int32-byte[]-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetBytes Example/VB/getbytes-char[]-int32-int32-byte[]-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetBytes/getbytes-char[]-int32-int32-byte[]-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -869,7 +892,7 @@
 
  -or-
 
- <paramref name="charIndex" /> and <paramref name="charCount" /> do not denote a valid range in <paramref name="chars" />.
+ <paramref name="charIndex" /> and <paramref name="charCount" /> do not denote a valid range in <paramref name="s" />.
 
  -or-
 
@@ -914,6 +937,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -927,13 +952,17 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
+        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6">
           <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
@@ -944,8 +973,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bytes" Type="System.Byte*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="count" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="bytes" Type="System.Byte*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="count" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="bytes">A pointer to the first byte to decode.</param>
@@ -956,7 +985,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars%2A> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A>. The <xref:System.Text.UTF7Encoding.GetCharCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars*> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount*>. The <xref:System.Text.UTF7Encoding.GetCharCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount*> method generally executes faster.
 
  ]]></format>
         </remarks>
@@ -997,6 +1026,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1034,16 +1065,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars%2A> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A>. The <xref:System.Text.UTF7Encoding.GetCharCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars*> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount*>. The <xref:System.Text.UTF7Encoding.GetCharCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount*> method generally executes faster.
 
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetCharCount%2A> method to return the number of characters produced by decoding a range of elements in a byte array.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetCharCount*> method to return the number of characters produced by decoding a range of elements in a byte array.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UnicodeEncoding.GetCharCount Example/CPP/getcharcount-byte[]-int32-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UnicodeEncoding/GetCharCount/getcharcount-byte[]-int32-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UnicodeEncoding.GetCharCount Example/VB/getcharcount-byte[]-int32-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UnicodeEncoding/GetCharCount/getcharcount-byte[]-int32-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1097,6 +1127,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1110,13 +1142,17 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
+        <Attribute FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1">
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="dotnet-uwp-10.0;netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6">
           <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
@@ -1127,10 +1163,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bytes" Type="System.Byte*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="byteCount" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="chars" Type="System.Char*" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="charCount" Type="System.Int32" Index="3" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="bytes" Type="System.Byte*" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="byteCount" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="chars" Type="System.Char*" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="charCount" Type="System.Int32" Index="3" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="bytes">A pointer to the first byte to decode.</param>
@@ -1143,9 +1179,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars%2A> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A>. The <xref:System.Text.UTF7Encoding.GetCharCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars*> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount*>. The <xref:System.Text.UTF7Encoding.GetCharCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount*> method generally executes faster.
 
- Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method or the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method, respectively.
+ Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder*> method or the <xref:System.Text.UTF7Encoding.GetEncoder*> method, respectively.
 
 > [!NOTE]
 >  <xref:System.Text.UTF7Encoding> does not provide error detection. When invalid bytes are encountered, <xref:System.Text.UTF7Encoding> generally emits the invalid bytes. If a byte is larger than hexadecimal 0x7F, the byte value is zero-extended into a Unicode character, the result is stored in the `chars` array, and any shift sequence is terminated. For example, if the byte to encode is hexadecimal 0x81, the resulting character is U+0081. For security reasons, your applications are recommended to use <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, or <xref:System.Text.UTF32Encoding> and enable error detection.
@@ -1192,6 +1228,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1233,9 +1271,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars%2A> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A>. The <xref:System.Text.UTF7Encoding.GetCharCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars*> to store the resulting characters, use <xref:System.Text.UTF7Encoding.GetCharCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount*>. The <xref:System.Text.UTF7Encoding.GetCharCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount*> method generally executes faster.
 
- Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method or the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method, respectively.
+ Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder*> method or the <xref:System.Text.UTF7Encoding.GetEncoder*> method, respectively.
 
 > [!NOTE]
 >  <xref:System.Text.UTF7Encoding> does not provide error detection. When invalid bytes are encountered, <xref:System.Text.UTF7Encoding> generally emits the invalid bytes. If a byte is larger than hexadecimal 0x7F, the byte value is zero-extended into a Unicode character, the result is stored in the `chars` array, and any shift sequence is terminated. For example, if the byte to encode is hexadecimal 0x81, the resulting character is U+0081. For security reasons, your applications are recommended to use <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, or <xref:System.Text.UTF32Encoding> and enable error detection.
@@ -1243,11 +1281,10 @@
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetChars%2A> method to decode a range of elements in a byte array and store the result in a character array.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetChars*> method to decode a range of elements in a byte array and store the result in a character array.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetChars Example/CPP/getchars-byte[]-int32-int32-char[]-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetChars/getchars-byte[]-int32-int32-char[]-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetChars Example/VB/getchars-byte[]-int32-int32-char[]-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetChars/getchars-byte[]-int32-int32-char[]-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1262,7 +1299,7 @@
 
  -or-
 
- <paramref name="byteindex" /> and <paramref name="byteCount" /> do not denote a valid range in <paramref name="bytes" />.
+ <paramref name="byteIndex" /> and <paramref name="byteCount" /> do not denote a valid range in <paramref name="bytes" />.
 
  -or-
 
@@ -1299,6 +1336,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1323,16 +1362,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> method converts sequential blocks of bytes into sequential blocks of characters, in a manner similar to the <xref:System.Text.UTF7Encoding.GetChars%2A> method of this class. However, a <xref:System.Text.Decoder> maintains state information between calls so it can correctly decode byte sequences that span blocks. The <xref:System.Text.Decoder> also preserves trailing bytes at the end of data blocks and uses the trailing bytes in the next decoding operation. Therefore, <xref:System.Text.UTF7Encoding.GetDecoder%2A> and <xref:System.Text.UTF7Encoding.GetEncoder%2A> are useful for network transmission and file operations, because those operations often deal with blocks of data instead of a complete data stream.
+ The <xref:System.Text.Decoder.GetChars*?displayProperty=nameWithType> method converts sequential blocks of bytes into sequential blocks of characters, in a manner similar to the <xref:System.Text.UTF7Encoding.GetChars*> method of this class. However, a <xref:System.Text.Decoder> maintains state information between calls so it can correctly decode byte sequences that span blocks. The <xref:System.Text.Decoder> also preserves trailing bytes at the end of data blocks and uses the trailing bytes in the next decoding operation. Therefore, <xref:System.Text.UTF7Encoding.GetDecoder*> and <xref:System.Text.UTF7Encoding.GetEncoder*> are useful for network transmission and file operations, because those operations often deal with blocks of data instead of a complete data stream.
 
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method to obtain a decoder to convert the UTF-7 encoded bytes into a sequence of characters.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetDecoder*> method to obtain a decoder to convert the UTF-7 encoded bytes into a sequence of characters.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetDecoder Example/CPP/getdecoder-.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetDecoder/getdecoder-.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetDecoder Example/VB/getdecoder-.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetDecoder/getdecoder-.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1363,6 +1401,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1387,16 +1427,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> method converts sequential blocks of bytes into sequential blocks of characters, in a manner similar to the <xref:System.Text.UTF7Encoding.GetChars%2A> method. However, a <xref:System.Text.Decoder> maintains state information between calls so it can correctly decode byte sequences that span blocks. The <xref:System.Text.Decoder> also preserves trailing bytes at the end of data blocks and uses the trailing bytes in the next decoding operation. Therefore, <xref:System.Text.UTF7Encoding.GetDecoder%2A> and <xref:System.Text.UTF7Encoding.GetEncoder%2A> are useful for network transmission and file operations, because those operations often deal with blocks of data instead of a complete data stream.
+ The <xref:System.Text.Decoder.GetChars*?displayProperty=nameWithType> method converts sequential blocks of bytes into sequential blocks of characters, in a manner similar to the <xref:System.Text.UTF7Encoding.GetChars*> method. However, a <xref:System.Text.Decoder> maintains state information between calls so it can correctly decode byte sequences that span blocks. The <xref:System.Text.Decoder> also preserves trailing bytes at the end of data blocks and uses the trailing bytes in the next decoding operation. Therefore, <xref:System.Text.UTF7Encoding.GetDecoder*> and <xref:System.Text.UTF7Encoding.GetEncoder*> are useful for network transmission and file operations, because those operations often deal with blocks of data instead of a complete data stream.
 
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method to obtain an encoder to convert a sequence of characters into a UTF-7 encoded sequence of bytes.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetEncoder*> method to obtain an encoder to convert a sequence of characters into a UTF-7 encoded sequence of bytes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetEncoder Example/CPP/getencoder-.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetEncoder/getencoder-.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetEncoder Example/VB/getencoder-.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetEncoder/getencoder-.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1426,6 +1465,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1455,7 +1496,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The value returned by the <xref:System.Text.UTF7Encoding.GetHashCode%2A> method is not suitable for distinguishing one <xref:System.Text.UTF7Encoding> object from another. If your application needs a unique hash code, it should override the <xref:System.Text.UTF7Encoding.GetHashCode%2A> method.
+ The value returned by the <xref:System.Text.UTF7Encoding.GetHashCode*> method is not suitable for distinguishing one <xref:System.Text.UTF7Encoding> object from another. If your application needs a unique hash code, it should override the <xref:System.Text.UTF7Encoding.GetHashCode*> method.
 
  ]]></format>
         </remarks>
@@ -1480,6 +1521,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1507,13 +1550,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes%2A> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>. The <xref:System.Text.UTF7Encoding.GetByteCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetBytes*> to store the resulting bytes, the application uses <xref:System.Text.UTF7Encoding.GetByteCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>. The <xref:System.Text.UTF7Encoding.GetByteCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method generally executes faster.
 
- <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> is a worst-case number, including the worst case for the currently selected <xref:System.Text.EncoderFallback>. If a fallback is chosen with a potentially large string, <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> can return large values.
+ <xref:System.Text.UTF7Encoding.GetMaxByteCount*> is a worst-case number, including the worst case for the currently selected <xref:System.Text.EncoderFallback>. If a fallback is chosen with a potentially large string, <xref:System.Text.UTF7Encoding.GetMaxByteCount*> can return large values.
 
- In most cases, this method returns reasonable numbers for small strings. For large strings, you might have to choose between using very large buffers and catching errors in the rare case that a more reasonable buffer is exceeded. You might also want to consider a different approach using <xref:System.Text.UTF7Encoding.GetByteCount%2A> or <xref:System.Text.Encoder.Convert%2A?displayProperty=nameWithType>. While UTF-7 is very efficient at encoding ASCII data, one byte per character, it is extremely inefficient for other data. As remarked above, <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> deals with a worst case. If the data to be encoded is largely ASCII, and especially if the ASCII characters cluster together, UTF-7 is significantly more efficient than the number returned by this method suggests.
+ In most cases, this method returns reasonable numbers for small strings. For large strings, you might have to choose between using very large buffers and catching errors in the rare case that a more reasonable buffer is exceeded. You might also want to consider a different approach using <xref:System.Text.UTF7Encoding.GetByteCount*> or <xref:System.Text.Encoder.Convert*?displayProperty=nameWithType>. While UTF-7 is very efficient at encoding ASCII data, one byte per character, it is extremely inefficient for other data. As remarked above, <xref:System.Text.UTF7Encoding.GetMaxByteCount*> deals with a worst case. If the data to be encoded is largely ASCII, and especially if the ASCII characters cluster together, UTF-7 is significantly more efficient than the number returned by this method suggests.
 
- <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> has no relation to <xref:System.Text.UTF7Encoding.GetChars%2A>. If your application needs a similar function to use with <xref:System.Text.UTF7Encoding.GetChars%2A>, it should use <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A>.
+ <xref:System.Text.UTF7Encoding.GetMaxByteCount*> has no relation to <xref:System.Text.UTF7Encoding.GetChars*>. If your application needs a similar function to use with <xref:System.Text.UTF7Encoding.GetChars*>, it should use <xref:System.Text.UTF7Encoding.GetMaxCharCount*>.
 
 > [!NOTE]
 >  `GetMaxByteCount(N)` is not necessarily the same value as `N* GetMaxByteCount(1)`.
@@ -1521,11 +1564,10 @@
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A> method to return the maximum number of bytes required to encode a specified number of characters.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetMaxByteCount*> method to return the maximum number of bytes required to encode a specified number of characters.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetMaxByteCount Example/CPP/getmaxbytecount-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetMaxByteCount/getmaxbytecount-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetMaxByteCount Example/VB/getmaxbytecount-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetMaxByteCount/getmaxbytecount-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1564,6 +1606,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1591,13 +1635,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars%2A> to store the resulting characters, the application uses <xref:System.Text.UTF7Encoding.GetCharCount%2A>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A>. The <xref:System.Text.UTF7Encoding.GetCharCount%2A> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> method generally executes faster.
+ To calculate the exact array size required by <xref:System.Text.UTF7Encoding.GetChars*> to store the resulting characters, the application uses <xref:System.Text.UTF7Encoding.GetCharCount*>. To calculate the maximum array size, the application should use <xref:System.Text.UTF7Encoding.GetMaxCharCount*>. The <xref:System.Text.UTF7Encoding.GetCharCount*> method generally allows allocation of less memory, while the <xref:System.Text.UTF7Encoding.GetMaxCharCount*> method generally executes faster.
 
- <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> is a worst-case number, including the worst case for the currently selected <xref:System.Text.DecoderFallback>. If a fallback is chosen with a potentially large string, <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> can return large values.
+ <xref:System.Text.UTF7Encoding.GetMaxCharCount*> is a worst-case number, including the worst case for the currently selected <xref:System.Text.DecoderFallback>. If a fallback is chosen with a potentially large string, <xref:System.Text.UTF7Encoding.GetMaxCharCount*> can return large values.
 
- In most cases, this method returns reasonable numbers for small strings. For large strings, you might have to choose between using very large buffers and catching errors in the rare case that a more reasonable buffer is exceeded. You might also want to consider a different approach using <xref:System.Text.UTF7Encoding.GetCharCount%2A> or <xref:System.Text.Decoder.Convert%2A?displayProperty=nameWithType>.
+ In most cases, this method returns reasonable numbers for small strings. For large strings, you might have to choose between using very large buffers and catching errors in the rare case that a more reasonable buffer is exceeded. You might also want to consider a different approach using <xref:System.Text.UTF7Encoding.GetCharCount*> or <xref:System.Text.Decoder.Convert*?displayProperty=nameWithType>.
 
- <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> has no relation to <xref:System.Text.UTF7Encoding.GetBytes%2A>. If your application needs a similar function to use with <xref:System.Text.UTF7Encoding.GetBytes%2A>, it should use <xref:System.Text.UTF7Encoding.GetMaxByteCount%2A>.
+ <xref:System.Text.UTF7Encoding.GetMaxCharCount*> has no relation to <xref:System.Text.UTF7Encoding.GetBytes*>. If your application needs a similar function to use with <xref:System.Text.UTF7Encoding.GetBytes*>, it should use <xref:System.Text.UTF7Encoding.GetMaxByteCount*>.
 
 > [!NOTE]
 >  `GetMaxCharCount(N)` is not necessarily the same value as `N* GetMaxCharCount(1)`.
@@ -1605,11 +1649,10 @@
 
 
 ## Examples
- The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetMaxCharCount%2A> method to return the maximum number of characters produced by decoding a specified number of bytes.
+ The following code example demonstrates how to use the <xref:System.Text.UTF7Encoding.GetMaxCharCount*> method to return the maximum number of characters produced by decoding a specified number of bytes.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetMaxCharCount Example/CPP/getmaxcharcount-int32.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetMaxCharCount/getmaxcharcount-int32.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.GetMaxCharCount Example/VB/getmaxcharcount-int32.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetMaxCharCount/getmaxcharcount-int32.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1649,6 +1692,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1675,9 +1720,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bytes" Type="System.Byte[]" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="index" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="bytes" Type="System.Byte[]" Index="0" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="index" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="bytes">The byte array containing the sequence of bytes to decode.</param>
@@ -1689,7 +1734,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder%2A> method or the <xref:System.Text.UTF7Encoding.GetEncoder%2A> method, respectively.
+ Data to be converted, such as data read from a stream, might be available only in sequential blocks. In this case, or if the amount of data is so large that it needs to be divided into smaller blocks, the application should use the <xref:System.Text.Decoder> or the <xref:System.Text.Encoder> provided by the <xref:System.Text.UTF7Encoding.GetDecoder*> method or the <xref:System.Text.UTF7Encoding.GetEncoder*> method, respectively.
 
 > [!NOTE]
 >  <xref:System.Text.UTF7Encoding> does not provide error detection. When invalid bytes are encountered, <xref:System.Text.UTF7Encoding> generally emits the invalid bytes. If a byte is larger than hexadecimal 0x7F, the byte value is zero-extended into a Unicode character, the result is stored in the `chars` array, and any shift sequence is terminated. For example, if the byte to encode is hexadecimal 0x81, the resulting character is U+0081. For security reasons, your applications are recommended to use <xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, or <xref:System.Text.UTF32Encoding> and enable error detection.
@@ -1699,9 +1744,8 @@
 ## Examples
  The following code example encodes a string into an array of bytes, and then decodes the bytes back into a string.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Text.UTF7Encoding.getstring/CPP/getstring.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Text/UTF7Encoding/GetString/getstring.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.UTF7Encoding.getstring/VB/getstring.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Text/UTF7Encoding/GetString/getstring.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>

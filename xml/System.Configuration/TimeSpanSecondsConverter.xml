@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Configuration.ConfigurationConverterBase</BaseTypeName>
   </Base>
@@ -28,20 +33,20 @@
   <Docs>
     <summary>Converts a time span expressed in seconds.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This type, like all the other configuration converter types, converts strings found in the configuration file to and from the related strongly typed properties.  
-  
- In particular, the <xref:System.Configuration.TimeSpanSecondsConverter> converts <xref:System.String> seconds, assigned to a configuration property, to <xref:System.TimeSpan> seconds and vice versa.  
-  
- The <xref:System.Configuration.TimeSpanMinutesConverter> persists values of type `long` that represent a number of seconds.  
-  
-   
-  
-## Examples  
- Refer to the code examples in <xref:System.Configuration.InfiniteTimeSpanConverter> and <xref:System.Configuration.TimeSpanMinutesConverter>.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This type, like all the other configuration converter types, converts strings found in the configuration file to and from the related strongly typed properties.
+
+ In particular, the <xref:System.Configuration.TimeSpanSecondsConverter> converts <xref:System.String> seconds, assigned to a configuration property, to <xref:System.TimeSpan> seconds and vice versa.
+
+ The <xref:System.Configuration.TimeSpanMinutesConverter> persists values of type `long` that represent a number of seconds.
+
+
+
+## Examples
+ Refer to the code examples in <xref:System.Configuration.InfiniteTimeSpanConverter> and <xref:System.Configuration.TimeSpanMinutesConverter>.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Configuration.GenericEnumConverter" />
@@ -74,16 +79,18 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Configuration.TimeSpanSecondsConverter" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Normally, you use the converter types provided by the system. The only time you need to use the <xref:System.Configuration.TimeSpanSecondsConverter.%23ctor%2A> constructor is when you create your own conversion type.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Normally, you use the converter types provided by the system. The only time you need to use the <xref:System.Configuration.TimeSpanSecondsConverter.%23ctor*> constructor is when you create your own conversion type.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -93,9 +100,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertFrom (ctx As ITypeDescriptorContext, ci As CultureInfo, data As Object) As Object" />
-      <MemberSignature Language="F#" Value="override this.ConvertFrom : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj -&gt; obj" Usage="timeSpanSecondsConverter.ConvertFrom (ctx, ci, data)" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.ConvertFrom : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj -&gt; obj" Usage="timeSpanSecondsConverter.ConvertFrom (ctx, ci, data)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ ConvertFrom(System::ComponentModel::ITypeDescriptorContext ^ ctx, System::Globalization::CultureInfo ^ ci, System::Object ^ data);" />
-      <MemberSignature Language="F#" Value="abstract member ConvertFrom : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj -&gt; obj&#xA;override this.ConvertFrom : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj -&gt; obj" Usage="timeSpanSecondsConverter.ConvertFrom (ctx, ci, data)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -111,6 +117,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -127,11 +135,11 @@
         <summary>Converts a <see cref="T:System.String" /> to a <see cref="T:System.TimeSpan" />.</summary>
         <returns>The <see cref="T:System.TimeSpan" /> representing the <paramref name="data" /> parameter in seconds.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The system uses the <xref:System.Configuration.TimeSpanSecondsConverter.ConvertFrom%2A> method when it reads from a configuration file to convert a <xref:System.String> value to <xref:System.TimeSpan>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The system uses the <xref:System.Configuration.TimeSpanSecondsConverter.ConvertFrom*> method when it reads from a configuration file to convert a <xref:System.String> value to <xref:System.TimeSpan>.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">
@@ -143,9 +151,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ConvertTo (ctx As ITypeDescriptorContext, ci As CultureInfo, value As Object, type As Type) As Object" />
-      <MemberSignature Language="F#" Value="override this.ConvertTo : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj * Type -&gt; obj" Usage="timeSpanSecondsConverter.ConvertTo (ctx, ci, value, type)" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.ConvertTo : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj * Type -&gt; obj" Usage="timeSpanSecondsConverter.ConvertTo (ctx, ci, value, type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ ConvertTo(System::ComponentModel::ITypeDescriptorContext ^ ctx, System::Globalization::CultureInfo ^ ci, System::Object ^ value, Type ^ type);" />
-      <MemberSignature Language="F#" Value="abstract member ConvertTo : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj * Type -&gt; obj&#xA;override this.ConvertTo : System.ComponentModel.ITypeDescriptorContext * System.Globalization.CultureInfo * obj * Type -&gt; obj" Usage="timeSpanSecondsConverter.ConvertTo (ctx, ci, value, type)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
@@ -161,6 +168,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -179,11 +188,11 @@
         <summary>Converts a <see cref="T:System.TimeSpan" /> to a <see cref="T:System.String" />.</summary>
         <returns>The <see cref="T:System.String" /> that represents the <paramref name="value" /> parameter in minutes.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The system uses the <xref:System.Configuration.TimeSpanSecondsConverter.ConvertTo%2A> method when it writes to a configuration file to convert a <xref:System.TimeSpan> to a <xref:System.String>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The system uses the <xref:System.Configuration.TimeSpanSecondsConverter.ConvertTo*> method when it writes to a configuration file to convert a <xref:System.TimeSpan> to a <xref:System.String>.
+
  ]]></format>
         </remarks>
       </Docs>

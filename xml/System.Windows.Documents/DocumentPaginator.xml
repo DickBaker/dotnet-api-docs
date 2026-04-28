@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,11 +24,11 @@
   <Docs>
     <summary>Provides an abstract base class that supports creation of multiple-page elements from a single document.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If you need automatic background repagination in response to events such as changing the page size of a <xref:System.Windows.Documents.FlowDocument>, then use <xref:System.Windows.Documents.DynamicDocumentPaginator> as your base class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If you need automatic background repagination in response to events such as changing the page size of a <xref:System.Windows.Documents.FlowDocument>, then use <xref:System.Windows.Documents.DynamicDocumentPaginator> as your base class.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -47,6 +49,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -77,6 +81,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -88,11 +94,11 @@
         <param name="userState">The original <paramref name="userState" /> passed to <see cref="Overload:System.Windows.Documents.DocumentPaginator.GetPageAsync" />, <see cref="Overload:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" />, or <see cref="Overload:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync" /> that identifies the asynchronous task to cancel.</param>
         <summary>Cancels a previous <see cref="Overload:System.Windows.Documents.DocumentPaginator.GetPageAsync" /> or <see cref="Overload:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" /> operation.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If `userState` is `null`, then all asynchronous tasks are cancelled.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If `userState` is `null`, then all asynchronous tasks are cancelled.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -114,6 +120,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -122,11 +130,11 @@
       <Docs>
         <summary>Forces a pagination of the content, updates <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> with the new total, and sets <see cref="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" /> to <see langword="true" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> will be `true` immediately after this is called. If content is modified or <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A> is changed after this method is called, <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> will likely revert to `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid*> will be `true` immediately after this is called. If content is modified or <xref:System.Windows.Documents.DocumentPaginator.PageSize*> is changed after this method is called, <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid*> will likely revert to `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -157,6 +165,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -171,11 +181,11 @@
       <Docs>
         <summary>Asynchronously, forces a pagination of the content, updates <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> with the new total, and sets <see cref="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" /> to <see langword="true" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The only way to cancel the asynchronous operation of this method is to cancel all asynchronous operations. Contrast this with the other overload of this method: <xref:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync%28System.Object%29>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The only way to cancel the asynchronous operation of this method is to cancel all asynchronous operations. Contrast this with the other overload of this method: <xref:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync(System.Object)>.
+
  This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <xref:System.ArgumentException>, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <xref:System.Windows.Documents.DocumentPaginator.ComputePageCount>.
 
 ]]></format>
@@ -199,6 +209,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -210,13 +222,13 @@
         <param name="userState">A unique identifier for the asynchronous task.</param>
         <summary>Asynchronously, forces a pagination of the content, updates <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> with the new total, sets <see cref="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" /> to <see langword="true" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The specified ID is assigned to the asynchronous task.  
-  
- This overload of the method makes it possible to cancel this asynchronous operation without cancelling all asynchronous operations.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The specified ID is assigned to the asynchronous task.
+
+ This overload of the method makes it possible to cancel this asynchronous operation without cancelling all asynchronous operations.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -225,7 +237,7 @@
       <MemberSignature Language="C#" Value="public event System.ComponentModel.AsyncCompletedEventHandler ComputePageCountCompleted;" />
       <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.AsyncCompletedEventHandler ComputePageCountCompleted" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DocumentPaginator.ComputePageCountCompleted" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event ComputePageCountCompleted As AsyncCompletedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ComputePageCountCompleted As AsyncCompletedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.ComputePageCountCompleted : System.ComponentModel.AsyncCompletedEventHandler " Usage="member this.ComputePageCountCompleted : System.ComponentModel.AsyncCompletedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::ComponentModel::AsyncCompletedEventHandler ^ ComputePageCountCompleted;" />
       <MemberSignature Language="VB.NET" Value="Public Event ComputePageCountCompleted As AsyncCompletedEventHandler " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -239,6 +251,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.AsyncCompletedEventHandler</ReturnType>
@@ -265,6 +279,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.DocumentPage</ReturnType>
@@ -277,13 +293,13 @@
         <summary>When overridden in a derived class, gets the <see cref="T:System.Windows.Documents.DocumentPage" /> for the specified page number.</summary>
         <returns>The <see cref="T:System.Windows.Documents.DocumentPage" /> for the specified <paramref name="pageNumber" />, or <see cref="F:System.Windows.Documents.DocumentPage.Missing" /> if the page does not exist.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If pages prior to `pageNumber` have not been formatted, they will be paginated synchronously prior to returning the requested page.  
-  
- <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%2A> provides similar functionality as <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A>, but for asynchronous operation.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If pages prior to `pageNumber` have not been formatted, they will be paginated synchronously prior to returning the requested page.
+
+ <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync*> provides similar functionality as <xref:System.Windows.Documents.DocumentPaginator.GetPage*>, but for asynchronous operation.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">
@@ -316,6 +332,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -333,13 +351,13 @@
         <param name="pageNumber">The zero-based page number of the document page that is needed.</param>
         <summary>Asynchronously returns (through the <see cref="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" /> event) the <see cref="T:System.Windows.Documents.DocumentPage" /> for the specified page number.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The only way to cancel the asynchronous operation of this method is to cancel all asynchronous operations. Contrast this with the other overload of this method: <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29>.  
-  
- This method raises the <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> event. The <xref:System.Windows.Documents.DocumentPage> is passed to the event as one of the event arguments. See <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> for how to use this method to get the page.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The only way to cancel the asynchronous operation of this method is to cancel all asynchronous operations. Contrast this with the other overload of this method: <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)>.
+
+ This method raises the <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> event. The <xref:System.Windows.Documents.DocumentPage> is passed to the event as one of the event arguments. See <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)> for how to use this method to get the page.
+
  This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <xref:System.ArgumentException>, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <xref:System.Windows.Documents.DocumentPaginator.GetPage(System.Int32)>.
 
 ]]></format>
@@ -365,6 +383,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -378,25 +398,25 @@
         <param name="userState">A unique identifier for the asynchronous task.</param>
         <summary>Asynchronously returns (through the <see cref="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" /> event) the <see cref="T:System.Windows.Documents.DocumentPage" /> for the specified page number and assigns the specified ID to the asynchronous task.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This overload of the method makes it possible to cancel this asynchronous operation without cancelling all asynchronous operations.  
-  
- This method raises the <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> event. The <xref:System.Windows.Documents.DocumentPage> is passed to the event as one of the event arguments.  
-  
- The following steps illustrate how to retrieve a <xref:System.Windows.Documents.DocumentPage> asynchronously:  
-  
-1.  Create a <xref:System.Windows.Documents.GetPageCompletedEventHandler> delegate and add it to be notified of <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> events.  
-  
-2.  Call <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> specifying the `pageNumber` desired and a unique `userState`, which will be used to identify the completion of the asynchronous event.  
-  
-3.  When the event occurs and the delegate is called, compare the event's <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> property with the original <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> `userState` parameter.  (The <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.Windows.Documents.GetPageCompletedEventArgs.PageNumber%2A> property will also match the `pageNumber` specified in the <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> call.)  
-  
-4.  When the <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> property matches the original <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> `userState`, the operation is complete and the page is ready.  
-  
-5.  Call <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A> to retrieve the formatted <xref:System.Windows.Documents.DocumentPage>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This overload of the method makes it possible to cancel this asynchronous operation without cancelling all asynchronous operations.
+
+ This method raises the <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> event. The <xref:System.Windows.Documents.DocumentPage> is passed to the event as one of the event arguments.
+
+ The following steps illustrate how to retrieve a <xref:System.Windows.Documents.DocumentPage> asynchronously:
+
+1.  Create a <xref:System.Windows.Documents.GetPageCompletedEventHandler> delegate and add it to be notified of <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> events.
+
+2.  Call <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)> specifying the `pageNumber` desired and a unique `userState`, which will be used to identify the completion of the asynchronous event.
+
+3.  When the event occurs and the delegate is called, compare the event's <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState> property with the original <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)> `userState` parameter.  (The <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.Windows.Documents.GetPageCompletedEventArgs.PageNumber> property will also match the `pageNumber` specified in the <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)> call.)
+
+4.  When the <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState> property matches the original <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)> `userState`, the operation is complete and the page is ready.
+
+5.  Call <xref:System.Windows.Documents.DocumentPaginator.GetPage*> to retrieve the formatted <xref:System.Windows.Documents.DocumentPage>.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">
@@ -407,7 +427,7 @@
       <MemberSignature Language="C#" Value="public event System.Windows.Documents.GetPageCompletedEventHandler GetPageCompleted;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.GetPageCompletedEventHandler GetPageCompleted" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event GetPageCompleted As GetPageCompletedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event GetPageCompleted As GetPageCompletedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.GetPageCompleted : System.Windows.Documents.GetPageCompletedEventHandler " Usage="member this.GetPageCompleted : System.Windows.Documents.GetPageCompletedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Documents::GetPageCompletedEventHandler ^ GetPageCompleted;" />
       <MemberSignature Language="VB.NET" Value="Public Event GetPageCompleted As GetPageCompletedEventHandler " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -421,6 +441,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.GetPageCompletedEventHandler</ReturnType>
@@ -448,6 +470,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -455,8 +479,8 @@
       <Docs>
         <summary>When overridden in a derived class, gets a value indicating whether <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> is the total number of pages.</summary>
         <value>
-          <see langword="true" /> if pagination is complete and <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> is the total number of pages; otherwise, <see langword="false" />, if pagination is in process and <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> is the number of pages currently formatted (not the total).  
-  
+          <see langword="true" /> if pagination is complete and <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> is the total number of pages; otherwise, <see langword="false" />, if pagination is in process and <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> is the number of pages currently formatted (not the total).
+
  This value may revert to <see langword="false" />, after being <see langword="true" />, if <see cref="P:System.Windows.Documents.DocumentPaginator.PageSize" /> or content changes; because those events would force a repagination.</value>
         <remarks>To be added.</remarks>
         <altmember cref="P:System.Windows.Documents.DocumentPaginator.PageCount" />
@@ -479,6 +503,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -509,6 +535,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -539,6 +567,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -569,6 +599,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -577,15 +609,15 @@
         <summary>When overridden in a derived class, gets a count of the number of pages currently formatted.</summary>
         <value>A count of the number of pages that have been formatted.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> is `true`, pagination is complete and <xref:System.Windows.Documents.DocumentPaginator.PageCount%2A> is the total number of pages in the document.  
-  
- If <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> is `false`, pagination is in process and <xref:System.Windows.Documents.DocumentPaginator.PageCount%2A> is the number of pages currently formatted (not the total).  
-  
- This value may change if <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A> or content changes, because those events would force a repagination.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid*> is `true`, pagination is complete and <xref:System.Windows.Documents.DocumentPaginator.PageCount*> is the total number of pages in the document.
+
+ If <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid*> is `false`, pagination is in process and <xref:System.Windows.Documents.DocumentPaginator.PageCount*> is the number of pages currently formatted (not the total).
+
+ This value may change if <xref:System.Windows.Documents.DocumentPaginator.PageSize*> or content changes, because those events would force a repagination.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted" />
@@ -595,7 +627,7 @@
       <MemberSignature Language="C#" Value="public event System.Windows.Documents.PagesChangedEventHandler PagesChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.PagesChangedEventHandler PagesChanged" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DocumentPaginator.PagesChanged" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event PagesChanged As PagesChangedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PagesChanged As PagesChangedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.PagesChanged : System.Windows.Documents.PagesChangedEventHandler " Usage="member this.PagesChanged : System.Windows.Documents.PagesChangedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Documents::PagesChangedEventHandler ^ PagesChanged;" />
       <MemberSignature Language="VB.NET" Value="Public Event PagesChanged As PagesChangedEventHandler " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -609,6 +641,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.PagesChangedEventHandler</ReturnType>
@@ -636,6 +670,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -644,19 +680,19 @@
         <summary>When overridden in a derived class, gets or sets the suggested width and height of each page.</summary>
         <value>A <see cref="T:System.Windows.Size" /> representing the width and height of each page.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Documents.DocumentPaginator> may override the value of this property. Users should check <xref:System.Windows.Documents.DocumentPage.Size%2A?displayProperty=nameWithType>.  
-  
-   
-  
-## Examples  
- The following example shows how to set the <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Documents.DocumentPaginator> may override the value of this property. Users should check <xref:System.Windows.Documents.DocumentPage.Size*?displayProperty=nameWithType>.
+
+
+
+## Examples
+ The following example shows how to set the <xref:System.Windows.Documents.DocumentPaginator.PageSize*>.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Documents/DocumentPaginator/PageSize/XpfContent.cs" id="Snippetcreatefixeddocument":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb" id="Snippetcreatefixeddocument":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Documents/DocumentPaginator/PageSize/xpfcontent.vb" id="Snippetcreatefixeddocument":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -678,6 +714,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.IDocumentPaginatorSource</ReturnType>
@@ -686,11 +724,11 @@
         <summary>When overridden in a derived class, returns the element being paginated.</summary>
         <value>An <see cref="T:System.Windows.Documents.IDocumentPaginatorSource" /> representing the element being paginated.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The object returned has this <xref:System.Windows.Documents.DocumentPaginator> as the value of its <xref:System.Windows.Documents.IDocumentPaginatorSource.DocumentPaginator%2A> property. It is guaranteed to have such a property because it implements <xref:System.Windows.Documents.IDocumentPaginatorSource>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The object returned has this <xref:System.Windows.Documents.DocumentPaginator> as the value of its <xref:System.Windows.Documents.IDocumentPaginatorSource.DocumentPaginator> property. It is guaranteed to have such a property because it implements <xref:System.Windows.Documents.IDocumentPaginatorSource>.
+
  ]]></format>
         </remarks>
       </Docs>

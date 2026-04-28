@@ -20,13 +20,20 @@
     <AssemblyVersion>8.0.10.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.1.0</AssemblyVersion>
+    <AssemblyVersion>9.0.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.1.0</AssemblyVersion>
+    <AssemblyVersion>10.0.2.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Microsoft.Extensions.Logging.AzureAppServices.BatchingLoggerOptions</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Options for Azure diagnostics file logging.</summary>
+    <summary>
+            Specifies options for Azure diagnostics file logging.
+            </summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -39,7 +46,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging.AzureAppServices</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -57,14 +64,20 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging.AzureAppServices</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the prefix of the file name used to store the logging information.</summary>
-        <value>The default is <c>diagnostics-</c>.</value>
+        <summary>
+            Gets or sets the prefix of the file name used to store the logging information.
+            The current date, in the format YYYYMMDD, is added after this value.
+            </summary>
+        <value>
+            The prefix of the file name used to store the logging information.
+            The default is <c>diagnostics-</c>.
+            </value>
         <remarks>The current date in the format YYYYMMDD is added after the specified value.</remarks>
       </Docs>
     </Member>
@@ -78,15 +91,22 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging.AzureAppServices</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the maximum log size in bytes or null for no limit.</summary>
-        <value>The default is 10 MB.</value>
-        <remarks>Once the log is full, no more messages are appended.</remarks>
+        <summary>
+            Gets or sets a strictly positive value representing the maximum log size in bytes, or null for no limit.
+            </summary>
+        <value>
+            The maximum log size in bytes, or <see langword="null" /> for no limit.
+            The default is 10 MB.
+            </value>
+        <remarks>
+            Once the log is full, no more messages are appended.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="RetainedFileCountLimit">
@@ -99,14 +119,19 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Logging.AzureAppServices</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the maximum retained file count or null for no limit.</summary>
-        <value>The default is 2.</value>
+        <summary>
+            Gets or sets a strictly positive value representing the maximum retained file count.
+            </summary>
+        <value>
+            The maximum retained file count, or <see langword="null" /> for no limit.
+            The default is 2.
+            </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

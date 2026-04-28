@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Runtime.Serialization</AssemblyName>
@@ -31,6 +33,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.Runtime.Serialization" FromVersion="4.0.0.0" To="System.Runtime.Serialization.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Primitives" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Primitives" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.Serialization.Primitives" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -46,7 +50,7 @@
       <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Module, AllowMultiple=true, Inherited=false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Module, AllowMultiple=true, Inherited=false)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -54,24 +58,24 @@
   <Docs>
     <summary>Specifies the CLR namespace and XML namespace of the data contract.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to an assembly that contains types to which the <xref:System.Runtime.Serialization.DataContractAttribute> has been applied. The <xref:System.Runtime.Serialization.ContractNamespaceAttribute> enables you to set a namespace that is different than the one generated when the type is serialized. For more information about how names are generated, see [Data Contract Names](/dotnet/framework/wcf/feature-details/data-contract-names).  
-  
- If you are using a type to conform to an existing data contract, you must match the namespace of the existing contract by using the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> (or the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute> class).  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to an assembly that contains types to which the <xref:System.Runtime.Serialization.DataContractAttribute> has been applied. The <xref:System.Runtime.Serialization.ContractNamespaceAttribute> enables you to set a namespace that is different than the one generated when the type is serialized. For more information about how names are generated, see [Data Contract Names](/dotnet/framework/wcf/feature-details/data-contract-names).
+
+ If you are using a type to conform to an existing data contract, you must match the namespace of the existing contract by using the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> (or the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace> property of the <xref:System.Runtime.Serialization.DataContractAttribute> class).
+
 > [!NOTE]
->  In any code, you can use the word `ContractNamespace` instead of the longer <xref:System.Runtime.Serialization.ContractNamespaceAttribute>.  
-  
-   
-  
-## Examples  
- The following example shows the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> applied to an assembly.  
-  
+>  In any code, you can use the word `ContractNamespace` instead of the longer <xref:System.Runtime.Serialization.ContractNamespaceAttribute>.
+
+
+
+## Examples
+ The following example shows the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> applied to an assembly.
+
  :::code language="csharp" source="~/snippets/csharp/VS_Snippets_CFX/contractnamespaceattribute/cs/overview.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/contractnamespaceattribute/vb/overview.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CFX/contractnamespaceattribute/vb/overview.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <related type="Article" href="/dotnet/framework/wcf/feature-details/using-data-contracts">Using Data Contracts</related>
@@ -98,6 +102,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization</AssemblyName>
@@ -126,7 +132,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property ClrNamespace As String" />
       <MemberSignature Language="F#" Value="member this.ClrNamespace : string with get, set" Usage="System.Runtime.Serialization.ContractNamespaceAttribute.ClrNamespace" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ClrNamespace { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberSignature Language="C#" Value="public string? ClrNamespace { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string? ClrNamespace { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
@@ -140,6 +146,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization</AssemblyName>
@@ -153,7 +161,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -187,6 +195,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Serialization</AssemblyName>
@@ -206,11 +216,11 @@
         <summary>Gets the namespace of the data contract members.</summary>
         <value>The namespace of the data contract members.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property can only be set using the constructor when applying the attribute to an assembly.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property can only be set using the constructor when applying the attribute to an assembly.
+
  ]]></format>
         </remarks>
       </Docs>

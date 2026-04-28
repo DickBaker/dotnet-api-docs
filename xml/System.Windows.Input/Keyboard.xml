@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -27,23 +29,23 @@
 ## Remarks
  The <xref:System.Windows.Input.Keyboard> class provides keyboard-related events, methods, and properties that provide information regarding the state of the keyboard.
 
- Each of the events that <xref:System.Windows.Input.Keyboard> defines as an attached event is also re-exposed by the base element classes <xref:System.Windows.UIElement> and <xref:System.Windows.ContentElement> as a new routed event. Generally, it is more convenient to handle keyboard events for an application on <xref:System.Windows.UIElement> and <xref:System.Windows.ContentElement>, rather than using the <xref:System.Windows.Input.Keyboard> events. For details, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview).
+ Each of the events that <xref:System.Windows.Input.Keyboard> defines as an attached event is also re-exposed by the base element classes <xref:System.Windows.UIElement> and <xref:System.Windows.ContentElement> as a new routed event. Generally, it is more convenient to handle keyboard events for an application on <xref:System.Windows.UIElement> and <xref:System.Windows.ContentElement>, rather than using the <xref:System.Windows.Input.Keyboard> events. For details, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview).
 
- In order for an element to receive keyboard input, the element must be focusable. Most <xref:System.Windows.UIElement> derived objects are focusable by default. Otherwise, to make an element focusable, set the <xref:System.Windows.UIElement.Focusable%2A> property on the base element to `true`.  For more information on the base elements, see [Base Elements Overview](/dotnet/framework/wpf/advanced/base-elements-overview).
+ In order for an element to receive keyboard input, the element must be focusable. Most <xref:System.Windows.UIElement> derived objects are focusable by default. Otherwise, to make an element focusable, set the <xref:System.Windows.UIElement.Focusable> property on the base element to `true`.  For more information on the base elements, see [Base Elements Overview](/dotnet/desktop/wpf/advanced/base-elements-overview).
 
- <xref:System.Windows.Controls.Panel> classes, such as <xref:System.Windows.Controls.StackPanel> and <xref:System.Windows.Controls.Canvas>, set the default value of <xref:System.Windows.UIElement.Focusable%2A> to `false`. Therefore, for these objects to obtain keyboard focus, <xref:System.Windows.UIElement.Focusable%2A> must be set to `true`.
+ <xref:System.Windows.Controls.Panel> classes, such as <xref:System.Windows.Controls.StackPanel> and <xref:System.Windows.Controls.Canvas>, set the default value of <xref:System.Windows.UIElement.Focusable*> to `false`. Therefore, for these objects to obtain keyboard focus, <xref:System.Windows.UIElement.Focusable*> must be set to `true`.
 
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
  The static members of the <xref:System.Windows.Input.Keyboard> class delegate to the primary <xref:System.Windows.Input.KeyboardDevice> of the calling thread, so they are not necessarily thread-safe.
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> method to determine if a key is in the toggled state. If the <xref:System.Windows.Input.Key> passed to <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> is toggled, the background of a button is changed.
+ The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyToggled*> method to determine if a key is in the toggled state. If the <xref:System.Windows.Input.Key> passed to <xref:System.Windows.Input.Keyboard.IsKeyToggled*> is toggled, the background of a button is changed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/Overview/Window1.xaml.cs" id="Snippetkeyeventargskeyboardistoggled":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb" id="Snippetkeyeventargskeyboardistoggled":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/Overview/window1.xaml.vb" id="Snippetkeyeventargskeyboardistoggled":::
 
  ]]></format>
     </remarks>
@@ -68,6 +70,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -106,13 +110,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="element">The <see cref="T:System.Windows.UIElement" /> or <see cref="T:System.Windows.ContentElement" /> that listens to this event.</param>
@@ -145,6 +151,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -184,6 +192,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -223,6 +233,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -262,6 +274,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -300,13 +314,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="element">The <see cref="T:System.Windows.UIElement" /> or <see cref="T:System.Windows.ContentElement" /> that listens to this event.</param>
@@ -339,6 +355,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -378,6 +396,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -417,6 +437,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -455,6 +477,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -466,7 +490,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If focus is within a Win32 window, WPF calls the <xref:System.Windows.Input.Keyboard.ClearFocus%2A> method on restoration of focus when a menu is closed.
+ If focus is within a Win32 window, WPF calls the <xref:System.Windows.Input.Keyboard.ClearFocus*> method on restoration of focus when a menu is closed.
 
  When leaving menu mode, Win32 focus is returned to the hosted child HWND, and no element has WPF focus.
 
@@ -490,6 +514,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Input.RestoreFocusMode</ReturnType>
@@ -517,6 +543,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.IInputElement</ReturnType>
@@ -532,9 +560,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- For an element to receive keyboard input, the element must be focusable. To make an element focusable, set the <xref:System.Windows.UIElement.Focusable%2A> property on the base element to `true`.  For more information on the base elements, see [Base Elements Overview](/dotnet/framework/wpf/advanced/base-elements-overview).  <xref:System.Windows.Controls.Panel> classes, such as <xref:System.Windows.Controls.StackPanel> and <xref:System.Windows.Controls.Canvas>, set the default value of <xref:System.Windows.UIElement.Focusable%2A> to `false`; therefore, for these objects to obtain keyboard focus, <xref:System.Windows.UIElement.Focusable%2A> must be set to `true`.
+ For an element to receive keyboard input, the element must be focusable. To make an element focusable, set the <xref:System.Windows.UIElement.Focusable> property on the base element to `true`.  For more information on the base elements, see [Base Elements Overview](/dotnet/desktop/wpf/advanced/base-elements-overview).  <xref:System.Windows.Controls.Panel> classes, such as <xref:System.Windows.Controls.StackPanel> and <xref:System.Windows.Controls.Canvas>, set the default value of <xref:System.Windows.UIElement.Focusable*> to `false`; therefore, for these objects to obtain keyboard focus, <xref:System.Windows.UIElement.Focusable*> must be set to `true`.
 
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
  An element with keyboard focus also has logical focus for the focus scope the element belongs to.  An element with logical focus may or may not have keyboard focus.
 
@@ -544,7 +572,7 @@
  The following example shows a <xref:System.Windows.FrameworkElement.Loaded> event handler that sets keyboard focus on a <xref:System.Windows.Controls.Button>.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/FrameworkElement/MoveFocus/Window1.xaml.cs" id="Snippetfocussamplesetfocus":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb" id="Snippetfocussamplesetfocus":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/FrameworkElement/MoveFocus/window1.xaml.vb" id="Snippetfocussamplesetfocus":::
 
  ]]></format>
         </remarks>
@@ -567,6 +595,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.IInputElement</ReturnType>
@@ -578,7 +608,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
  An element with keyboard focus also has logical focus for the focus scope the element belongs to.  An element with logical focus may or may not have keyboard focus.
 
@@ -588,7 +618,7 @@
  The following example gets the element with keyboard focus and casts it to a <xref:System.Windows.Controls.Control>.  If the element with keyboard focus is a <xref:System.Windows.Controls.Control>, the background of the element is changed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/FrameworkElement/MoveFocus/Window1.xaml.cs" id="Snippetgetkeyboardfocusedelement":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb" id="Snippetgetkeyboardfocusedelement":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/FrameworkElement/MoveFocus/window1.xaml.vb" id="Snippetgetkeyboardfocusedelement":::
 
  ]]></format>
         </remarks>
@@ -611,6 +641,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Input.KeyStates</ReturnType>
@@ -628,15 +660,15 @@
 ## Remarks
  <xref:System.Windows.Input.KeyStates> is a bit field enumeration; therefore, it is possible for a key to be in multiple states.  For example, a key could be in the pressed state as well as in the toggled state.  Use bit comparison operations to determine the exact state or states the key is in.
 
- The <xref:System.Windows.Input.Keyboard> class provides a number of static methods which can also be used to obtain key state information.  The methods are: <xref:System.Windows.Input.Keyboard.IsKeyDown%2A>, <xref:System.Windows.Input.Keyboard.IsKeyUp%2A>, and <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A>.
+ The <xref:System.Windows.Input.Keyboard> class provides a number of static methods which can also be used to obtain key state information.  The methods are: <xref:System.Windows.Input.Keyboard.IsKeyDown*>, <xref:System.Windows.Input.Keyboard.IsKeyUp*>, and <xref:System.Windows.Input.Keyboard.IsKeyToggled*>.
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> method to determine if the <xref:System.Windows.Input.Key.Return> key is in the <xref:System.Windows.Input.KeyStates.Down> state.  A bit AND operation is used to compare the <xref:System.Windows.Input.KeyStates> returned from <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> and the <xref:System.Windows.Input.Key.Down> state. If the key is down, the background of a <xref:System.Windows.Controls.Button> is changed.
+ The following example shows how to use the <xref:System.Windows.Input.Keyboard.GetKeyStates*> method to determine if the <xref:System.Windows.Input.Key.Return> key is in the <xref:System.Windows.Input.KeyStates.Down> state.  A bit AND operation is used to compare the <xref:System.Windows.Input.KeyStates> returned from <xref:System.Windows.Input.Keyboard.GetKeyStates*> and the <xref:System.Windows.Input.Key.Down> state. If the key is down, the background of a <xref:System.Windows.Controls.Button> is changed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/Overview/Window1.xaml.cs" id="Snippetkeyeventargskeyboardgetkeystates":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb" id="Snippetkeyeventargskeyboardgetkeystates":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/Overview/window1.xaml.vb" id="Snippetkeyeventargskeyboardgetkeystates":::
 
  ]]></format>
         </remarks>
@@ -660,6 +692,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when an element receives keyboard focus.</summary>
@@ -667,9 +701,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
  If the <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> event or the <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus> event is handled, keyboard focus does change.
 
@@ -682,7 +716,7 @@
 |Routing strategy|Bubbling|
 |Delegate|<xref:System.Windows.Input.KeyboardFocusChangedEventHandler>|
 
--   The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>.
+- The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>.
 
 
 
@@ -692,10 +726,10 @@
  :::code language="xml" source="~/snippets/csharp/System.Windows.Input/Keyboard/GotKeyboardFocus/Window1.xaml" id="Snippetkeyboardsamplexamlhandlerhookup":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/GotKeyboardFocus/Window1.xaml.cs" id="Snippetkeyboardsamplegotfocus":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb" id="Snippetkeyboardsamplegotfocus":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/GotKeyboardFocus/window1.xaml.vb" id="Snippetkeyboardsamplegotfocus":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/GotKeyboardFocus/Window1.xaml.cs" id="Snippetkeyboardsamplelostfocus":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb" id="Snippetkeyboardsamplelostfocus":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/GotKeyboardFocus/window1.xaml.vb" id="Snippetkeyboardsamplelostfocus":::
 
  ]]></format>
         </remarks>
@@ -718,6 +752,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -751,6 +787,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -767,15 +805,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> method can be used to determine the set of states of a specific key.
+ The <xref:System.Windows.Input.Keyboard.GetKeyStates*> method can be used to determine the set of states of a specific key.
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> method to determine the state of a specific key.  The <xref:System.Windows.Input.Key.Return> key is passed to the <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> method.  If the method returns `true`, the background of a <xref:System.Windows.Controls.Button> is changed.
+ The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyDown*> method to determine the state of a specific key.  The <xref:System.Windows.Input.Key.Return> key is passed to the <xref:System.Windows.Input.Keyboard.IsKeyDown*> method.  If the method returns `true`, the background of a <xref:System.Windows.Controls.Button> is changed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/Overview/Window1.xaml.cs" id="Snippetkeyeventargskeyboardiskeydown":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb" id="Snippetkeyeventargskeyboardiskeydown":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/Overview/window1.xaml.vb" id="Snippetkeyeventargskeyboardiskeydown":::
 
  ]]></format>
         </remarks>
@@ -800,6 +838,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -816,15 +856,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> method can be used to determine the set of states of a specific key.
+ The <xref:System.Windows.Input.Keyboard.GetKeyStates*> method can be used to determine the set of states of a specific key.
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> method to determine the state of a specific key. The <xref:System.Windows.Input.Key.Return> key is passed to the <xref:System.Windows.Input.Keyboard.IsKeyToggled%2A> method.  If the method returns `true`, then the background of a <xref:System.Windows.Controls.Button> is changed.
+ The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyToggled*> method to determine the state of a specific key. The <xref:System.Windows.Input.Key.Return> key is passed to the <xref:System.Windows.Input.Keyboard.IsKeyToggled*> method.  If the method returns `true`, then the background of a <xref:System.Windows.Controls.Button> is changed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/Overview/Window1.xaml.cs" id="Snippetkeyeventargskeyboardistoggled":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb" id="Snippetkeyeventargskeyboardistoggled":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/Overview/window1.xaml.vb" id="Snippetkeyeventargskeyboardistoggled":::
 
  ]]></format>
         </remarks>
@@ -849,6 +889,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -865,15 +907,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> method can be used to determine the set of states of a specific key.
+ The <xref:System.Windows.Input.Keyboard.GetKeyStates*> method can be used to determine the set of states of a specific key.
 
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyUp%2A> method to determine the state of a specific key.  The <xref:System.Windows.Input.Key.Return> key is passed to the <xref:System.Windows.Input.Keyboard.IsKeyUp%2A> method.  If the method returns `true`, then the background of a <xref:System.Windows.Controls.Button> is changed.
+ The following example shows how to use the <xref:System.Windows.Input.Keyboard.IsKeyUp*> method to determine the state of a specific key.  The <xref:System.Windows.Input.Key.Return> key is passed to the <xref:System.Windows.Input.Keyboard.IsKeyUp*> method.  If the method returns `true`, then the background of a <xref:System.Windows.Controls.Button> is changed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/Overview/Window1.xaml.cs" id="Snippetkeyeventargskeyboardiskeyup":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb" id="Snippetkeyeventargskeyboardiskeyup":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/Overview/window1.xaml.vb" id="Snippetkeyeventargskeyboardiskeyup":::
 
  ]]></format>
         </remarks>
@@ -896,6 +938,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when the keyboard input provider acquires focus.</summary>
@@ -903,7 +947,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
 <a name="routedEventInfo_KeyboardInputProviderAcquireFocus"></a>
 ## Routed Event Information
@@ -914,7 +958,7 @@
 |Routing strategy|Bubbling|
 |Delegate|<xref:System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler>|
 
--   The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus>.
+- The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewKeyboardInputProviderAcquireFocus>.
 
  ]]></format>
         </remarks>
@@ -936,6 +980,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -968,6 +1014,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when a key on the keyboard is pressed.</summary>
@@ -975,7 +1023,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
 <a name="routedEventInfo_KeyDown"></a>
 ## Routed Event Information
@@ -986,7 +1034,7 @@
 |Routing strategy|Bubbling|
 |Delegate|<xref:System.Windows.Input.KeyEventHandler>|
 
--   The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewKeyDown>.
+- The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewKeyDown>.
 
 
 
@@ -996,7 +1044,7 @@
  :::code language="xml" source="~/snippets/csharp/System.Windows.Input/Keyboard/KeyDown/Window1.xaml" id="Snippetkeydownui":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/KeyDown/Window1.xaml.cs" id="Snippetkeydownsample":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb" id="Snippetkeydownsample":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/KeyDown/Window1.xaml.vb" id="Snippetkeydownsample":::
 
  ]]></format>
         </remarks>
@@ -1020,6 +1068,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1052,6 +1102,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when a key on the keyboard is released.</summary>
@@ -1059,7 +1111,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
 <a name="routedEventInfo_KeyUp"></a>
 ## Routed Event Information
@@ -1070,7 +1122,7 @@
 |Routing strategy|Bubbling|
 |Delegate|<xref:System.Windows.Input.KeyEventHandler>|
 
--   The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewKeyUp>.
+- The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewKeyUp>.
 
  ]]></format>
         </remarks>
@@ -1094,6 +1146,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1126,6 +1180,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when an element loses keyboard focus.</summary>
@@ -1133,9 +1189,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
  If the <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> event or the <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus> event is handled, keyboard focus does not change.
 
@@ -1148,7 +1204,7 @@
 |Routing strategy|Bubbling|
 |Delegate|<xref:System.Windows.Input.KeyboardFocusChangedEventHandler>|
 
--   The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>.
+- The corresponding tunneling event is <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>.
 
 
 
@@ -1158,10 +1214,10 @@
  :::code language="xml" source="~/snippets/csharp/System.Windows.Input/Keyboard/GotKeyboardFocus/Window1.xaml" id="Snippetkeyboardsamplexamlhandlerhookup":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/GotKeyboardFocus/Window1.xaml.cs" id="Snippetkeyboardsamplegotfocus":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb" id="Snippetkeyboardsamplegotfocus":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/GotKeyboardFocus/window1.xaml.vb" id="Snippetkeyboardsamplegotfocus":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/GotKeyboardFocus/Window1.xaml.cs" id="Snippetkeyboardsamplelostfocus":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb" id="Snippetkeyboardsamplelostfocus":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/GotKeyboardFocus/window1.xaml.vb" id="Snippetkeyboardsamplelostfocus":::
 
  ]]></format>
         </remarks>
@@ -1184,6 +1240,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1217,6 +1275,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
@@ -1236,7 +1296,7 @@
  The following example uses a bit AND comparison to determine if the <xref:System.Windows.Input.ModifierKeys.Control> modifier key is pressed.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Input/Keyboard/Overview/Window1.xaml.cs" id="Snippetkeyboardmodifiersbitoperation":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb" id="Snippetkeyboardmodifiersbitoperation":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Input/Keyboard/Overview/window1.xaml.vb" id="Snippetkeyboardmodifiersbitoperation":::
 
  ]]></format>
         </remarks>
@@ -1258,6 +1318,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when an element is in the process of acquiring keyboard focus.</summary>
@@ -1265,11 +1327,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
  If the <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> event or the <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus> event is handled, keyboard focus does not change.
 
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
 <a name="routedEventInfo_PreviewGotKeyborad"></a>
 ## Routed Event Information
@@ -1280,7 +1342,7 @@
 |Routing strategy|Tunneling|
 |Delegate|<xref:System.Windows.Input.KeyboardFocusChangedEventHandler>|
 
--   The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>.
+- The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>.
 
  ]]></format>
         </remarks>
@@ -1303,6 +1365,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1334,6 +1398,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when the keyboard input provider is in the process of acquiring focus.</summary>
@@ -1341,7 +1407,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
 <a name="routedEventInfo_PreviewKeyboardInputProviderAcquireFocus"></a>
 ## Routed Event Information
@@ -1352,7 +1418,7 @@
 |Routing strategy|Tunneling|
 |Delegate|<xref:System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler>|
 
--   The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus>.
+- The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.KeyboardInputProviderAcquireFocus>.
 
  ]]></format>
         </remarks>
@@ -1374,6 +1440,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1406,6 +1474,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when a key on the keyboard is pressed.</summary>
@@ -1413,7 +1483,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
 <a name="routedEventInfo_PreviewKeyDown"></a>
 ## Routed Event Information
@@ -1424,7 +1494,7 @@
 |Routing strategy|Tunneling|
 |Delegate|<xref:System.Windows.Input.KeyEventHandler>|
 
--   The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.KeyDown>.
+- The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.KeyDown>.
 
  ]]></format>
         </remarks>
@@ -1447,6 +1517,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1479,6 +1551,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when a key on the keyboard is released.</summary>
@@ -1486,7 +1560,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
 <a name="routedEventInfo_PreviewKeyUp"></a>
 ## Routed Event Information
@@ -1497,7 +1571,7 @@
 |Routing strategy|Tunneling|
 |Delegate|<xref:System.Windows.Input.KeyEventHandler>|
 
--   The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.KeyUp>.
+- The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.KeyUp>.
 
  ]]></format>
         </remarks>
@@ -1520,6 +1594,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1552,6 +1628,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Occurs when an element is in the process of losing keyboard focus.</summary>
@@ -1559,11 +1637,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/framework/wpf/advanced/attached-events-overview).
+ This is an attached event. WPF implements attached events as routed events. Attached events are fundamentally a XAML language concept for referencing events that can be handled on objects that do not define that event, which WPF expands upon by also enabling the event to traverse a route. Attached events do not have a direct handling syntax in code; to attach handlers for a routed event in code, you use a designated Add*Handler method. For details, see [Attached Events Overview](/dotnet/desktop/wpf/events/attached-events-overview).
 
  If the <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> event or the <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus> event is handled, keyboard focus does not change.
 
- Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/framework/wpf/advanced/input-overview) and [Focus Overview](/dotnet/framework/wpf/advanced/focus-overview).
+ Keyboard focus refers to the object that is receiving keyboard input. The element with keyboard focus has <xref:System.Windows.IInputElement.IsKeyboardFocused*> set to `true`.  There can be only one element with keyboard focus on the entire desktop.  Logical focus refers to the object within a focus scope that has focus.  For more information on focus, keyboard focus, and logical focus, see [Input Overview](/dotnet/desktop/wpf/advanced/input-overview) and [Focus Overview](/dotnet/desktop/wpf/advanced/focus-overview).
 
 <a name="routedEventInfo_PreviewLostKeyboardFocus"></a>
 ## Routed Event Information
@@ -1574,7 +1652,7 @@
 |Routing strategy|Tunneling|
 |Delegate|<xref:System.Windows.Input.KeyboardFocusChangedEventHandler>|
 
--   The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.
+- The corresponding bubbling event is <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>.
 
  ]]></format>
         </remarks>
@@ -1597,6 +1675,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.RoutedEvent</ReturnType>
@@ -1630,6 +1710,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -1671,6 +1753,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1709,13 +1793,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="element">The <see cref="T:System.Windows.UIElement" /> or <see cref="T:System.Windows.ContentElement" /> that listens to this event.</param>
@@ -1748,6 +1834,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1787,6 +1875,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1826,6 +1916,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1865,6 +1957,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1903,13 +1997,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="element" Type="System.Windows.DependencyObject" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="handler" Type="System.Windows.Input.KeyboardInputProviderAcquireFocusEventHandler" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="element">The <see cref="T:System.Windows.UIElement" /> or <see cref="T:System.Windows.ContentElement" /> that listens to this event.</param>
@@ -1942,6 +2038,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1981,6 +2079,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2020,6 +2120,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

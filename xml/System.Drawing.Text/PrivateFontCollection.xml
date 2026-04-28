@@ -22,19 +22,24 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Drawing.Common" FromVersion="11.0.0.0" To="System.Drawing" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Drawing.Text.FontCollection</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;windowsdesktop-8.0;windowsdesktop-9.0">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
-    </Attribute>
     <Attribute FrameworkAlternate="netframework-1.1">
       <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -49,7 +54,7 @@
 
  ]]></format>
     </remarks>
-    <related type="Article" href="/dotnet/framework/winforms/advanced/using-fonts-and-text">Using Fonts and Text</related>
+    <related type="Article" href="/dotnet/desktop/winforms/advanced/using-fonts-and-text">Using Fonts and Text</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -74,6 +79,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -104,6 +111,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -118,12 +127,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Windows Forms applications support TrueType fonts and have limited support for OpenType fonts. If you try to use a font that is not supported, such as an unsupported OpenType font or a Bitmap font, an exception will occur. The <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> is not supported on operating systems before Windows 2000. When using a private font on operating systems before Windows 2000, the default font, typically Microsoft Sans Serif, will be substituted.
+ Windows Forms applications support TrueType fonts and have limited support for OpenType fonts. If you try to use a font that is not supported, such as an unsupported OpenType font or a Bitmap font, an exception will occur. The <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile*> is not supported on operating systems before Windows 2000. When using a private font on operating systems before Windows 2000, the default font, typically Microsoft Sans Serif, will be substituted.
 
  ]]></format>
         </remarks>
         <exception cref="T:System.IO.FileNotFoundException">The specified font is not supported or the font file cannot be found.</exception>
-        <related type="Article" href="/dotnet/framework/winforms/advanced/using-fonts-and-text">Using Fonts and Text</related>
+        <related type="Article" href="/dotnet/desktop/winforms/advanced/using-fonts-and-text">Using Fonts and Text</related>
       </Docs>
     </Member>
     <Member MemberName="AddMemoryFont">
@@ -149,6 +158,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -165,7 +176,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To use the memory font, text on a control must be rendered with GDI+. Use the <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A> method, passing `true`, to set GDI+ rendering on the application, or on individual controls by setting the control's <xref:System.Windows.Forms.GroupBox.UseCompatibleTextRendering%2A> property to `true`. Some controls cannot be rendered with GDI+.
+ To use the memory font, text on a control must be rendered with GDI+. Use the <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault*> method, passing `true`, to set GDI+ rendering on the application, or on individual controls by setting the control's <xref:System.Windows.Forms.GroupBox.UseCompatibleTextRendering> property to `true`. Some controls cannot be rendered with GDI+.
 
  ]]></format>
         </remarks>
@@ -196,6 +207,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

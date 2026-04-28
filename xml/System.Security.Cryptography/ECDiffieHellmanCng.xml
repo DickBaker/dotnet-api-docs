@@ -24,19 +24,22 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="System.Security.Cryptography.Cng" FromVersion="10.0.0.0" To="System.Security.Cryptography" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Security.Cryptography.Cng" FromVersion="11.0.0.0" To="System.Security.Cryptography" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="System.Security.Cryptography.Cng" FromVersion="7.0.0.0" To="System.Security.Cryptography" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
     <TypeForwarding From="System.Security.Cryptography.Cng" FromVersion="8.0.0.0" To="System.Security.Cryptography" ToVersion="8.0.0.0" FrameworkAlternate="net-8.0" />
     <TypeForwarding From="System.Security.Cryptography.Cng" FromVersion="9.0.0.0" To="System.Security.Cryptography" ToVersion="9.0.0.0" FrameworkAlternate="net-9.0" />
-    <TypeForwarding From="System.Security.Cryptography.Cng" FromVersion="5.0.0.0" To="System.Core" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.7-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Security.Cryptography.ECDiffieHellman</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -51,9 +54,9 @@
 
 |Key derivation function|Properties|
 |-----------------------------|----------------|
-|<xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash>|<xref:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm%2A> - The hash algorithm that is used to process the secret agreement.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend%2A> - An optional byte array to prepend to the secret agreement before hashing it.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend%2A> - An optional byte array to append to the secret agreement before hashing it.|
-|<xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac>|<xref:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm%2A> - The hash algorithm that is used to process the secret agreement.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend%2A>- An optional byte array to prepend to the secret agreement before hashing it.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend%2A> - An optional byte array to append to the secret agreement before hashing it.|
-|<xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls>|<xref:System.Security.Cryptography.ECDiffieHellmanCng.Label%2A> - The label for key derivation.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.Seed%2A> - The seed for key derivation.|
+|<xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash>|<xref:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm*> - The hash algorithm that is used to process the secret agreement.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend*> - An optional byte array to prepend to the secret agreement before hashing it.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend*> - An optional byte array to append to the secret agreement before hashing it.|
+|<xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac>|<xref:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm*> - The hash algorithm that is used to process the secret agreement.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend*>- An optional byte array to prepend to the secret agreement before hashing it.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend*> - An optional byte array to append to the secret agreement before hashing it.|
+|<xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls>|<xref:System.Security.Cryptography.ECDiffieHellmanCng.Label*> - The label for key derivation.<br /><br /> <xref:System.Security.Cryptography.ECDiffieHellmanCng.Seed*> - The seed for key derivation.|
 
  The result of passing the secret agreement through the key derivation function is a byte array that may be used as key material for your application. The number of bytes of key material generated is dependent on the key derivation function; for example, SHA-256 will generate 256 bits of key material, whereas SHA-512 will generate 512 bits of key material. The basic flow of an ECDH key exchange is as follows:
 
@@ -73,7 +76,7 @@
  The following example shows how to use the <xref:System.Security.Cryptography.ECDiffieHellmanCng> class to establish a key exchange and how to use that key to encrypt a message that can be sent over a public channel and decrypted by the receiver.
 
  :::code language="csharp" source="~/snippets/csharp/System.Security.Cryptography/ECDiffieHellmanCng/Overview/program.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/ecdiffiehellmancng/vb/program.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security.Cryptography/ECDiffieHellmanCng/Overview/program.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -112,9 +115,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
         </Attribute>
@@ -161,9 +166,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
         </Attribute>
@@ -216,9 +223,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
         </Attribute>
@@ -269,15 +278,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.Versioning.SupportedOSPlatform("windows")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.Versioning.SupportedOSPlatform("windows")&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
-        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="curve">The curve used to generate the public/private key pair.</param>
@@ -286,7 +297,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- `curve` must validate (that is, it must return `true`) when passed to the <xref:System.Security.Cryptography.ECCurve.Validate%2A?displayProperty=nameWithType> method and must be either a named or explicit prime.
+ `curve` must validate (that is, it must return `true`) when passed to the <xref:System.Security.Cryptography.ECCurve.Validate*?displayProperty=nameWithType> method and must be either a named or explicit prime.
 
  ]]></format>
         </remarks>
@@ -304,13 +315,13 @@
       </Docs>
     </MemberGroup>
     <Member MemberName="DeriveKeyFromHash">
-      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHash (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[]? secretPrepend, byte[]? secretAppend);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHash (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[]? secretPrepend, byte[]? secretAppend);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DeriveKeyFromHash(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, unsigned int8[] secretPrepend, unsigned int8[] secretAppend) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyFromHash(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Security.Cryptography.HashAlgorithmName,System.Byte[],System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function DeriveKeyFromHash (otherPartyPublicKey As ECDiffieHellmanPublicKey, hashAlgorithm As HashAlgorithmName, secretPrepend As Byte(), secretAppend As Byte()) As Byte()" />
       <MemberSignature Language="F#" Value="override this.DeriveKeyFromHash : System.Security.Cryptography.ECDiffieHellmanPublicKey * System.Security.Cryptography.HashAlgorithmName * byte[] * byte[] -&gt; byte[]" Usage="eCDiffieHellmanCng.DeriveKeyFromHash (otherPartyPublicKey, hashAlgorithm, secretPrepend, secretAppend)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override cli::array &lt;System::Byte&gt; ^ DeriveKeyFromHash(System::Security::Cryptography::ECDiffieHellmanPublicKey ^ otherPartyPublicKey, System::Security::Cryptography::HashAlgorithmName hashAlgorithm, cli::array &lt;System::Byte&gt; ^ secretPrepend, cli::array &lt;System::Byte&gt; ^ secretAppend);" />
-      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHash (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] secretPrepend, byte[] secretAppend);" FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHash (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] secretPrepend, byte[] secretAppend);" FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -328,6 +339,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -339,19 +352,19 @@
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="secretPrepend" Type="System.Byte[]" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="secretPrepend" Type="System.Byte[]" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="secretAppend" Type="System.Byte[]" Index="3" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
+        <Parameter Name="secretAppend" Type="System.Byte[]" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -392,13 +405,13 @@ This instance represents only a public key.</exception>
       </Docs>
     </MemberGroup>
     <Member MemberName="DeriveKeyFromHmac">
-      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHmac (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[]? hmacKey, byte[]? secretPrepend, byte[]? secretAppend);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHmac (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[]? hmacKey, byte[]? secretPrepend, byte[]? secretAppend);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DeriveKeyFromHmac(class System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, valuetype System.Security.Cryptography.HashAlgorithmName hashAlgorithm, unsigned int8[] hmacKey, unsigned int8[] secretPrepend, unsigned int8[] secretAppend) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyFromHmac(System.Security.Cryptography.ECDiffieHellmanPublicKey,System.Security.Cryptography.HashAlgorithmName,System.Byte[],System.Byte[],System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function DeriveKeyFromHmac (otherPartyPublicKey As ECDiffieHellmanPublicKey, hashAlgorithm As HashAlgorithmName, hmacKey As Byte(), secretPrepend As Byte(), secretAppend As Byte()) As Byte()" />
       <MemberSignature Language="F#" Value="override this.DeriveKeyFromHmac : System.Security.Cryptography.ECDiffieHellmanPublicKey * System.Security.Cryptography.HashAlgorithmName * byte[] * byte[] * byte[] -&gt; byte[]" Usage="eCDiffieHellmanCng.DeriveKeyFromHmac (otherPartyPublicKey, hashAlgorithm, hmacKey, secretPrepend, secretAppend)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override cli::array &lt;System::Byte&gt; ^ DeriveKeyFromHmac(System::Security::Cryptography::ECDiffieHellmanPublicKey ^ otherPartyPublicKey, System::Security::Cryptography::HashAlgorithmName hashAlgorithm, cli::array &lt;System::Byte&gt; ^ hmacKey, cli::array &lt;System::Byte&gt; ^ secretPrepend, cli::array &lt;System::Byte&gt; ^ secretAppend);" />
-      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHmac (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] hmacKey, byte[] secretPrepend, byte[] secretAppend);" FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public override byte[] DeriveKeyFromHmac (System.Security.Cryptography.ECDiffieHellmanPublicKey otherPartyPublicKey, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, byte[] hmacKey, byte[] secretPrepend, byte[] secretAppend);" FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -416,6 +429,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -425,20 +440,26 @@ This instance represents only a public key.</exception>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="hmacKey" Type="System.Byte[]" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="secretPrepend" Type="System.Byte[]" Index="3" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="secretAppend" Type="System.Byte[]" Index="4" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="hashAlgorithm" Type="System.Security.Cryptography.HashAlgorithmName" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="hmacKey" Type="System.Byte[]" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="secretPrepend" Type="System.Byte[]" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="secretAppend" Type="System.Byte[]" Index="4" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="otherPartyPublicKey">The other party's public key.</param>
@@ -505,6 +526,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0">
@@ -560,6 +583,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -602,6 +627,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -613,9 +640,9 @@ This instance represents only a public key.</exception>
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="prfLabel" Type="System.Byte[]" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
-        <Parameter Name="prfSeed" Type="System.Byte[]" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="otherPartyPublicKey" Type="System.Security.Cryptography.ECDiffieHellmanPublicKey" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="prfLabel" Type="System.Byte[]" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="prfSeed" Type="System.Byte[]" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="otherPartyPublicKey">The other party's public key.</param>
@@ -651,7 +678,7 @@ This instance represents only a public key.</exception>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Security.Cryptography.ECDiffieHellmanCng.DeriveSecretAgreementHandle%2A> method overloads are for advanced users who need a handle to the raw secret agreement instead of the key material. The secret agreement handle can be used in platform invoke calls to perform any work that is not wrapped by the <xref:System.Security.Cryptography.ECDiffieHellmanCng> class.
+ The <xref:System.Security.Cryptography.ECDiffieHellmanCng.DeriveSecretAgreementHandle*> method overloads are for advanced users who need a handle to the raw secret agreement instead of the key material. The secret agreement handle can be used in platform invoke calls to perform any work that is not wrapped by the <xref:System.Security.Cryptography.ECDiffieHellmanCng> class.
 
  ]]></format>
         </remarks>
@@ -682,6 +709,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -732,6 +761,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle</ReturnType>
@@ -775,6 +806,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -802,26 +835,25 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="passwordBytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="passwordBytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="passwordBytes">The bytes to use as a password when encrypting the key material.</param>
@@ -845,26 +877,25 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="password" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="password" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="password">The password to use when encrypting the key material.</param>
@@ -899,12 +930,14 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="includePrivateParameters" Type="System.Boolean" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="includePrivateParameters">
@@ -940,12 +973,14 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.ECParameters</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="includePrivateParameters" Type="System.Boolean" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="includePrivateParameters" Type="System.Boolean" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="includePrivateParameters">
@@ -1004,7 +1039,7 @@ This instance represents only a public key.</exception>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To deserialize an XML key, use the <xref:System.Security.Cryptography.ECDiffieHellmanCng.FromXmlString%28System.String%2CSystem.Security.Cryptography.ECKeyXmlFormat%29> overload instead.
+ To deserialize an XML key, use the <xref:System.Security.Cryptography.ECDiffieHellmanCng.FromXmlString(System.String,System.Security.Cryptography.ECKeyXmlFormat)> overload instead.
 
  ]]></format>
         </remarks>
@@ -1036,9 +1071,11 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("ToXmlString and FromXmlString have no implementation for ECC types, and are obsolete. Use a standard import and export format such as ExportSubjectPublicKeyInfo or ImportSubjectPublicKeyInfo for public keys and ExportPkcs8PrivateKey or ImportPkcs8PrivateKey for private keys.", DiagnosticId="SYSLIB0042", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("ToXmlString and FromXmlString have no implementation for ECC types, and are obsolete. Use a standard import and export format such as ExportSubjectPublicKeyInfo or ImportSubjectPublicKeyInfo for public keys and ExportPkcs8PrivateKey or ImportPkcs8PrivateKey for private keys.", DiagnosticId="SYSLIB0042", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -1089,12 +1126,14 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="curve" Type="System.Security.Cryptography.ECCurve" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="curve">The curve used to generate an ephemeral public/private key pair.</param>
@@ -1103,7 +1142,7 @@ This instance represents only a public key.</exception>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- `curve` must validate (that is, it must return true when passed to the <xref:System.Security.Cryptography.ECCurve.Validate%2A?displayProperty=nameWithType> method) and must not be implicit.
+ `curve` must validate (that is, it must return true when passed to the <xref:System.Security.Cryptography.ECCurve.Validate*?displayProperty=nameWithType> method) and must not be implicit.
 
  Characteristic-2 curves are not supported on Windows.
 
@@ -1138,6 +1177,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1155,13 +1196,13 @@ This instance represents only a public key.</exception>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property is used by Cryptography Next Generation (CNG) objects only if the <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash> or <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac> value is set in the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> property.
+ This property is used by Cryptography Next Generation (CNG) objects only if the <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash> or <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac> value is set in the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction> property.
 
- This property accepts the following algorithms: <xref:System.Security.Cryptography.CngAlgorithm.MD5%2A>, <xref:System.Security.Cryptography.CngAlgorithm.Sha1%2A>, <xref:System.Security.Cryptography.CngAlgorithm.Sha256%2A>, <xref:System.Security.Cryptography.CngAlgorithm.Sha384%2A>, and <xref:System.Security.Cryptography.CngAlgorithm.Sha512%2A>.
+ This property accepts the following algorithms: <xref:System.Security.Cryptography.CngAlgorithm.MD5*>, <xref:System.Security.Cryptography.CngAlgorithm.Sha1*>, <xref:System.Security.Cryptography.CngAlgorithm.Sha256*>, <xref:System.Security.Cryptography.CngAlgorithm.Sha384*>, and <xref:System.Security.Cryptography.CngAlgorithm.Sha512*>.
 
  Other custom hash algorithms may also be used.
 
- Due to collision problems with MD5 and SHA1, Microsoft recommends <xref:System.Security.Cryptography.CngAlgorithm.Sha256%2A>. The default algorithm is <xref:System.Security.Cryptography.CngAlgorithm.Sha256%2A>.
+ Due to collision problems with MD5 and SHA-1, Microsoft recommends <xref:System.Security.Cryptography.CngAlgorithm.Sha256*>. The default algorithm is <xref:System.Security.Cryptography.CngAlgorithm.Sha256*>.
 
  ]]></format>
         </remarks>
@@ -1169,13 +1210,13 @@ This instance represents only a public key.</exception>
       </Docs>
     </Member>
     <Member MemberName="HmacKey">
-      <MemberSignature Language="C#" Value="public byte[]? HmacKey { get; set; }" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public byte[]? HmacKey { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] HmacKey" />
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellmanCng.HmacKey" />
       <MemberSignature Language="VB.NET" Value="Public Property HmacKey As Byte()" />
       <MemberSignature Language="F#" Value="member this.HmacKey : byte[] with get, set" Usage="System.Security.Cryptography.ECDiffieHellmanCng.HmacKey" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Byte&gt; ^ HmacKey { cli::array &lt;System::Byte&gt; ^ get(); void set(cli::array &lt;System::Byte&gt; ^ value); };" />
-      <MemberSignature Language="C#" Value="public byte[] HmacKey { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public byte[] HmacKey { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -1194,9 +1235,11 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1219,7 +1262,7 @@ This instance represents only a public key.</exception>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property applies only when the <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac> value is set in the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> property, and the <xref:System.Security.Cryptography.ECDiffieHellmanCng.UseSecretAgreementAsHmacKey%2A> property is `false`. By default, the value is `null`.
+ This property applies only when the <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac> value is set in the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction> property, and the <xref:System.Security.Cryptography.ECDiffieHellmanCng.UseSecretAgreementAsHmacKey> property is `false`. By default, the value is `null`.
 
  ]]></format>
         </remarks>
@@ -1238,20 +1281,19 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="passwordBytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="passwordBytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
@@ -1275,20 +1317,19 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="password" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="password" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="password">The password to use for decrypting the key material.</param>
@@ -1323,12 +1364,14 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
+        <Parameter Name="parameters" Type="System.Security.Cryptography.ECParameters" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0" />
       </Parameters>
       <Docs>
         <param name="parameters">The curve's parameters to import.</param>
@@ -1337,7 +1380,7 @@ This instance represents only a public key.</exception>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Security.Cryptography.ECDiffieHellmanCng.ImportParameters%2A> method replaces the existing key that this object is working with by creating a         new <xref:System.Security.Cryptography.CngKey> object. If `parameters` contains only the <xref:System.Security.Cryptography.ECParameters.Q> field, then only a public key is imported.         If `parameters` also contains <xref:System.Security.Cryptography.ECParameters.D>, then a full key pair is be imported. The `parameter` <xref:System.Security.Cryptography.ECParameters.Curve> value specifies the type of the curve to import.
+ The <xref:System.Security.Cryptography.ECDiffieHellmanCng.ImportParameters*> method replaces the existing key that this object is working with by creating a         new <xref:System.Security.Cryptography.CngKey> object. If `parameters` contains only the <xref:System.Security.Cryptography.ECParameters.Q> field, then only a public key is imported.         If `parameters` also contains <xref:System.Security.Cryptography.ECParameters.D>, then a full key pair is be imported. The `parameter` <xref:System.Security.Cryptography.ECParameters.Curve> value specifies the type of the curve to import.
 
  ]]></format>
         </remarks>
@@ -1362,19 +1405,18 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="source" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="source">The bytes of a PKCS#8 PrivateKeyInfo structure in the ASN.1-BER encoding.</param>
@@ -1409,6 +1451,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.CngKey</ReturnType>
@@ -1444,6 +1488,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1488,9 +1534,8 @@ This instance represents only a public key.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1505,7 +1550,7 @@ This instance represents only a public key.</exception>
 Setting this property to its current value has no visible effect.
 Setting this property to a new legal value discards the current key, but defers creation of a new key until one is needed.
 
-Because key sizes do not uniquely identify elliptic curves, the use of the property setter is discouraged. To generate a new key on a specific curve, use the <xref:System.Security.Cryptography.ECDiffieHellmanCng.GenerateKey%2A> method.
+Because key sizes do not uniquely identify elliptic curves, the use of the property setter is discouraged. To generate a new key on a specific curve, use the <xref:System.Security.Cryptography.ECDiffieHellmanCng.GenerateKey*> method.
 
 ]]></format>
         </remarks>
@@ -1515,13 +1560,13 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
       </Docs>
     </Member>
     <Member MemberName="Label">
-      <MemberSignature Language="C#" Value="public byte[]? Label { get; set; }" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public byte[]? Label { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Label" />
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellmanCng.Label" />
       <MemberSignature Language="VB.NET" Value="Public Property Label As Byte()" />
       <MemberSignature Language="F#" Value="member this.Label : byte[] with get, set" Usage="System.Security.Cryptography.ECDiffieHellmanCng.Label" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Byte&gt; ^ Label { cli::array &lt;System::Byte&gt; ^ get(); void set(cli::array &lt;System::Byte&gt; ^ value); };" />
-      <MemberSignature Language="C#" Value="public byte[] Label { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public byte[] Label { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -1540,9 +1585,11 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1565,7 +1612,7 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls> value is set in the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> property. By default, it is `null`.
+ This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls> value is set in the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction> property. By default, it is `null`.
 
  ]]></format>
         </remarks>
@@ -1584,12 +1631,11 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.KeySizes[]</ReturnType>
@@ -1626,6 +1672,8 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0">
@@ -1643,13 +1691,13 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
       </Docs>
     </Member>
     <Member MemberName="SecretAppend">
-      <MemberSignature Language="C#" Value="public byte[]? SecretAppend { get; set; }" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public byte[]? SecretAppend { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SecretAppend" />
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend" />
       <MemberSignature Language="VB.NET" Value="Public Property SecretAppend As Byte()" />
       <MemberSignature Language="F#" Value="member this.SecretAppend : byte[] with get, set" Usage="System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Byte&gt; ^ SecretAppend { cli::array &lt;System::Byte&gt; ^ get(); void set(cli::array &lt;System::Byte&gt; ^ value); };" />
-      <MemberSignature Language="C#" Value="public byte[] SecretAppend { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public byte[] SecretAppend { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -1668,9 +1716,11 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1700,13 +1750,13 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
       </Docs>
     </Member>
     <Member MemberName="SecretPrepend">
-      <MemberSignature Language="C#" Value="public byte[]? SecretPrepend { get; set; }" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public byte[]? SecretPrepend { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SecretPrepend" />
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend" />
       <MemberSignature Language="VB.NET" Value="Public Property SecretPrepend As Byte()" />
       <MemberSignature Language="F#" Value="member this.SecretPrepend : byte[] with get, set" Usage="System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Byte&gt; ^ SecretPrepend { cli::array &lt;System::Byte&gt; ^ get(); void set(cli::array &lt;System::Byte&gt; ^ value); };" />
-      <MemberSignature Language="C#" Value="public byte[] SecretPrepend { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public byte[] SecretPrepend { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -1725,9 +1775,11 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1750,7 +1802,7 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> property is set to one of the following values:
+ This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction> property is set to one of the following values:
 
 -   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash>
 
@@ -1763,13 +1815,13 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
       </Docs>
     </Member>
     <Member MemberName="Seed">
-      <MemberSignature Language="C#" Value="public byte[]? Seed { get; set; }" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.1-pp;windowsdesktop-5.0" />
+      <MemberSignature Language="C#" Value="public byte[]? Seed { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0;windowsdesktop-5.0" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Seed" />
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ECDiffieHellmanCng.Seed" />
       <MemberSignature Language="VB.NET" Value="Public Property Seed As Byte()" />
       <MemberSignature Language="F#" Value="member this.Seed : byte[] with get, set" Usage="System.Security.Cryptography.ECDiffieHellmanCng.Seed" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Byte&gt; ^ Seed { cli::array &lt;System::Byte&gt; ^ get(); void set(cli::array &lt;System::Byte&gt; ^ value); };" />
-      <MemberSignature Language="C#" Value="public byte[] Seed { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
+      <MemberSignature Language="C#" Value="public byte[] Seed { get; set; }" FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -1788,9 +1840,11 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1813,7 +1867,7 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> property is set to <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls>. By default, the value is `null`.
+ This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction> property is set to <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls>. By default, the value is `null`.
 
  ]]></format>
         </remarks>
@@ -1862,7 +1916,7 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To convert the current key to an XML representation, use the <xref:System.Security.Cryptography.ECDiffieHellmanCng.ToXmlString%28System.Security.Cryptography.ECKeyXmlFormat%29> overload instead.
+ To convert the current key to an XML representation, use the <xref:System.Security.Cryptography.ECDiffieHellmanCng.ToXmlString(System.Security.Cryptography.ECKeyXmlFormat)> overload instead.
 
  ]]></format>
         </remarks>
@@ -1894,9 +1948,11 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Obsolete("ToXmlString and FromXmlString have no implementation for ECC types, and are obsolete. Use a standard import and export format such as ExportSubjectPublicKeyInfo or ImportSubjectPublicKeyInfo for public keys and ExportPkcs8PrivateKey or ImportPkcs8PrivateKey for private keys.", DiagnosticId="SYSLIB0042", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("ToXmlString and FromXmlString have no implementation for ECC types, and are obsolete. Use a standard import and export format such as ExportSubjectPublicKeyInfo or ImportSubjectPublicKeyInfo for public keys and ExportPkcs8PrivateKey or ImportPkcs8PrivateKey for private keys.", DiagnosticId="SYSLIB0042", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
         </Attribute>
@@ -1930,28 +1986,27 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="passwordBytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="passwordBytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="3" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="passwordBytes">The bytes to use as a password when encrypting the key material.</param>
@@ -1978,28 +2033,27 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="password" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0">
+        <Parameter Name="password" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="pbeParameters" Type="System.Security.Cryptography.PbeParameters" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="3" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="password">The password to use when encrypting the key material.</param>
@@ -2026,19 +2080,18 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
-      </AssemblyInfo>
-      <AssemblyInfo>
-        <AssemblyName>System.Core</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
-        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="1" FrameworkAlternate="net-7.0;net-8.0;windowsdesktop-9.0;net-9.0" />
+        <Parameter Name="destination" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="bytesWritten" Type="System.Int32" RefType="out" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="destination">The byte span to receive the PKCS#8 PrivateKeyInfo data.</param>
@@ -2075,6 +2128,8 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -2088,7 +2143,7 @@ Because key sizes do not uniquely identify elliptic curves, the use of the prope
 
 ## Remarks
 
-This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> property is set to <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac>. By default, the value is `false`.
+This value is used for key derivation if the <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction> property is set to <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac>. By default, the value is `false`.
 
  ]]></format>
         </remarks>

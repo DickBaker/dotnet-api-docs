@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub DataGridViewCellToolTipTextNeededEventHandler(sender As Object, e As DataGridViewCellToolTipTextNeededEventArgs)" />
   <TypeSignature Language="F#" Value="type DataGridViewCellToolTipTextNeededEventHandler = delegate of obj * DataGridViewCellToolTipTextNeededEventArgs -&gt; unit" />
   <TypeSignature Language="C++ CLI" Value="public delegate void DataGridViewCellToolTipTextNeededEventHandler(System::Object ^ sender, DataGridViewCellToolTipTextNeededEventArgs ^ e);" />
-  <TypeSignature Language="C#" Value="public delegate void DataGridViewCellToolTipTextNeededEventHandler(object? sender, DataGridViewCellToolTipTextNeededEventArgs e);" FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewCellToolTipTextNeededEventHandler(object? sender, DataGridViewCellToolTipTextNeededEventArgs e);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Delegate</BaseTypeName>
@@ -22,7 +24,7 @@
   <Parameters>
     <Parameter Name="sender" Type="System.Object">
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -41,15 +43,15 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event occurs only when the <xref:System.Windows.Forms.DataGridView> control <xref:System.Windows.Forms.DataGridView.DataSource%2A> property is set or its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property is `true`.
+ The <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event occurs only when the <xref:System.Windows.Forms.DataGridView> control <xref:System.Windows.Forms.DataGridView.DataSource> property is set or its <xref:System.Windows.Forms.DataGridView.VirtualMode> property is `true`.
 
- When you handle the <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event, the ToolTip text you specify in the handler is shown whenever the mouse pointer is over a cell and the control <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> property value is `true`. The <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event is useful when you want to display ToolTips determined by the current state or value of a cell.
+ When you handle the <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event, the ToolTip text you specify in the handler is shown whenever the mouse pointer is over a cell and the control <xref:System.Windows.Forms.DataGridView.ShowCellToolTips> property value is `true`. The <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event is useful when you want to display ToolTips determined by the current state or value of a cell.
 
- The <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event also occurs whenever the value of the <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> property is retrieved, either programmatically or when the mouse pointer enters a cell.
+ The <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event also occurs whenever the value of the <xref:System.Windows.Forms.DataGridViewCell.ToolTipText?displayProperty=nameWithType> property is retrieved, either programmatically or when the mouse pointer enters a cell.
 
- You can use the <xref:System.Windows.Forms.DataGridViewCellEventArgs.ColumnIndex%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.DataGridViewCellEventArgs.RowIndex%2A> properties to determine the state or value of a cell, and use this information to set the <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A> property. This property is initialized with the value of the cell <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> property, which the event value overrides.
+ You can use the <xref:System.Windows.Forms.DataGridViewCellEventArgs.ColumnIndex*?displayProperty=nameWithType> and <xref:System.Windows.Forms.DataGridViewCellEventArgs.RowIndex*> properties to determine the state or value of a cell, and use this information to set the <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText> property. This property is initialized with the value of the cell <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> property, which the event value overrides.
 
- Handle the <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event when working with large amounts of data to avoid the performance penalties of setting the cell <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> value for multiple cells. For more information, see [Best Practices for Scaling the Windows Forms DataGridView Control](/dotnet/desktop/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control).
+ Handle the <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> event when working with large amounts of data to avoid the performance penalties of setting the cell <xref:System.Windows.Forms.DataGridViewCell.ToolTipText*> value for multiple cells. For more information, see [Best Practices for Scaling the Windows Forms DataGridView Control](/dotnet/desktop/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control).
 
  For more information about how to handle events, see [Handling and Raising Events](/dotnet/standard/events/).
 
@@ -62,7 +64,7 @@
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CPP/sharedrows.cpp" id="Snippet30":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/DataGridView/CellContextMenuStripNeeded/sharedrows.cs" id="Snippet30":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/VB/sharedrows.vb" id="Snippet30":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/DataGridView/CellContextMenuStripNeeded/sharedrows.vb" id="Snippet30":::
 
  ]]></format>
     </remarks>
@@ -74,6 +76,6 @@
     <altmember cref="T:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs" />
     <altmember cref="P:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText" />
     <altmember cref="P:System.Windows.Forms.DataGridViewCell.ToolTipText" />
-    <related type="Article" href="/dotnet/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control">Best Practices for Scaling the Windows Forms DataGridView Control</related>
+    <related type="Article" href="/dotnet/desktop/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control">Best Practices for Scaling the Windows Forms DataGridView Control</related>
   </Docs>
 </Type>

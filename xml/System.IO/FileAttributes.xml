@@ -1,6 +1,6 @@
 <Type Name="FileAttributes" FullName="System.IO.FileAttributes">
   <TypeSignature Language="C#" Value="public enum FileAttributes" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FileAttributes extends System.Enum" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FileAttributes extends System.Enum" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.IO.FileAttributes" />
   <TypeSignature Language="VB.NET" Value="Public Enum FileAttributes" />
   <TypeSignature Language="F#" Value="type FileAttributes = " />
@@ -33,8 +33,14 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.IO.FileSystem.Primitives" FromVersion="10.0.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.IO.FileSystem.Primitives" FromVersion="11.0.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.IO.FileSystem.Primitives" FromVersion="5.0.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -69,13 +75,13 @@
   <Docs>
     <summary>Provides attributes for files and directories.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can get attributes for files and directories by calling the <xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType> method, and you can set them by calling the <xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType> method.  
-  
- It is not possible to change the compression status of a <xref:System.IO.File> object by using the <xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType> method. Instead, you must actually compress the file using either a compression tool or one of the classes in the <xref:System.IO.Compression?displayProperty=nameWithType> namespace.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can get attributes for files and directories by calling the <xref:System.IO.File.GetAttributes*?displayProperty=nameWithType> method, and you can set them by calling the <xref:System.IO.File.SetAttributes*?displayProperty=nameWithType> method.
+
+ It is not possible to change the compression status of a <xref:System.IO.File> object by using the <xref:System.IO.File.SetAttributes*?displayProperty=nameWithType> method. Instead, you must actually compress the file using either a compression tool or one of the classes in the <xref:System.IO.Compression?displayProperty=nameWithType> namespace.
+
 The following attributes are not supported by .NET Core on Linux and macOS:
 
 - <xref:System.IO.FileAttributes.Archive?displayProperty=nameWithType>
@@ -90,14 +96,14 @@ The following attributes are not supported by .NET Core on Linux and macOS:
 - <xref:System.IO.FileAttributes.System?displayProperty=nameWithType>
 - <xref:System.IO.FileAttributes.Temporary?displayProperty=nameWithType>
 
-On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType> includes `Hidden` for a file whose name begins with a period ("."). On macOS, you can get or set the hidden flag.
+On Unix systems, the value returned by <xref:System.IO.File.GetAttributes*?displayProperty=nameWithType> includes `Hidden` for a file whose name begins with a period ("."). On macOS, you can get or set the hidden flag.
 
-## Examples  
- The following example shows how to retrieve the attributes for a file and check if the file is read-only.  
-  
+## Examples
+ The following example shows how to retrieve the attributes for a file and check if the file is read-only.
+
  :::code language="csharp" source="~/snippets/csharp/System.IO/FileAttributes/Overview/example.cs" id="Snippet1":::
  :::code language="fsharp" source="~/snippets/fsharp/System.IO/FileAttributes/Overview/example.fs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.io.fileattributes/vb/example.vb" id="Snippet1"::: 
+ :::code language="vb" source="~/snippets/visualbasic/System.IO/FileAttributes/Overview/example.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -140,6 +146,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -184,6 +192,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -228,6 +238,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -272,6 +284,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -316,6 +330,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -360,6 +376,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -402,6 +420,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -429,6 +449,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -482,6 +504,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -524,6 +548,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -574,6 +600,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -618,6 +646,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -662,6 +692,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -706,6 +738,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -750,6 +784,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -794,6 +830,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>
@@ -838,6 +876,8 @@ On Unix systems, the value returned by <xref:System.IO.File.GetAttributes%2A?dis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.FileAttributes</ReturnType>

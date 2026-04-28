@@ -21,7 +21,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="Microsoft.Win32.SystemEvents" FromVersion="11.0.0.0" To="System" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.EventArgs</BaseTypeName>
   </Base>
@@ -29,13 +34,13 @@
   <Docs>
     <summary>Provides data for the <see cref="E:Microsoft.Win32.SystemEvents.PowerModeChanged" /> event.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> event is raised when the user suspends or resumes the operating system, or when a system power status notification occurs. A system power status notification can occur when a weak or charging power source is detected, or when a transition from AC or battery power source occurs.  
-  
- The <xref:Microsoft.Win32.PowerModeChangedEventArgs.Mode%2A> property of a <xref:Microsoft.Win32.PowerModeChangedEventArgs> indicates the type of power mode event that has occurred.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> event is raised when the user suspends or resumes the operating system, or when a system power status notification occurs. A system power status notification can occur when a weak or charging power source is detected, or when a transition from AC or battery power source occurs.
+
+ The <xref:Microsoft.Win32.PowerModeChangedEventArgs.Mode> property of a <xref:Microsoft.Win32.PowerModeChangedEventArgs> indicates the type of power mode event that has occurred.
+
  ]]></format>
     </remarks>
     <altmember cref="E:Microsoft.Win32.SystemEvents.PowerModeChanged" />
@@ -65,6 +70,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -79,11 +86,11 @@
         <param name="mode">One of the <see cref="T:Microsoft.Win32.PowerModes" /> values that represents the type of power mode event.</param>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Win32.PowerModeChangedEventArgs" /> class using the specified power mode event type.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor can be used to create a <xref:Microsoft.Win32.PowerModeChangedEventArgs> that indicates a type of power mode event.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor can be used to create a <xref:Microsoft.Win32.PowerModeChangedEventArgs> that indicates a type of power mode event.
+
  ]]></format>
         </remarks>
         <altmember cref="T:Microsoft.Win32.PowerModes" />
@@ -112,6 +119,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -126,11 +135,11 @@
         <summary>Gets an identifier that indicates the type of the power mode event that has occurred.</summary>
         <value>One of the <see cref="T:Microsoft.Win32.PowerModes" /> values.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property indicates the type of the power mode transition that is occurring.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property indicates the type of the power mode transition that is occurring.
+
  ]]></format>
         </remarks>
         <altmember cref="T:Microsoft.Win32.PowerModes" />

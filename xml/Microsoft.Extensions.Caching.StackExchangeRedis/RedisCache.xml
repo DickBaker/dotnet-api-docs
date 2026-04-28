@@ -15,6 +15,12 @@
     <AssemblyVersion>8.0.6.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.1.0</AssemblyVersion>
+    <AssemblyVersion>9.0.2.0</AssemblyVersion>
+    <AssemblyVersion>9.0.4.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.1.0</AssemblyVersion>
+    <AssemblyVersion>10.0.2.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,13 +37,15 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+            Distributed cache implementation using Redis.
+            <para>Uses <c>StackExchange.Redis</c> as the Redis client.</para></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -51,14 +59,16 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="optionsAccessor" Type="Microsoft.Extensions.Options.IOptions&lt;Microsoft.Extensions.Caching.StackExchangeRedis.RedisCacheOptions&gt;" />
       </Parameters>
       <Docs>
-        <param name="optionsAccessor">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="optionsAccessor">The configuration options.</param>
+        <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache" />.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -75,7 +85,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -84,6 +94,7 @@
       <Docs>
         <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Get">
@@ -99,12 +110,12 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
         <Attributes>
-          <Attribute FrameworkAlternate="net-8.0-pp">
+          <Attribute FrameworkAlternate="net-10.0-pp">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
           </Attribute>
@@ -118,6 +129,7 @@
         <summary>Gets a value with the given key.</summary>
         <returns>The located value or <see langword="null" />.</returns>
         <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="GetAsync">
@@ -132,12 +144,12 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task&lt;System.Byte[]&gt;</ReturnType>
         <Attributes>
-          <Attribute FrameworkAlternate="net-8.0-pp">
+          <Attribute FrameworkAlternate="net-10.0-pp">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 2 })&gt;]</AttributeName>
           </Attribute>
@@ -154,6 +166,7 @@
         <returns>The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation, containing the located value or <see langword="null" />.</returns>
         <remarks>This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <see cref="T:System.ArgumentException" />, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <see cref="M:Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Get(System.String)" />.</remarks>
         <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Microsoft.Extensions.Caching.Distributed.IBufferDistributedCache.Set">
@@ -169,7 +182,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -200,7 +213,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
@@ -234,7 +247,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -264,7 +277,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Boolean&gt;</ReturnType>
@@ -296,7 +309,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -308,6 +321,7 @@
         <param name="key">A string identifying the requested value.</param>
         <summary>Refreshes a value in the cache based on its key, resetting its sliding expiration timeout (if any).</summary>
         <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="RefreshAsync">
@@ -322,7 +336,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -338,6 +352,7 @@
         <returns>The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.</returns>
         <remarks>This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <see cref="T:System.ArgumentException" />, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <see cref="M:Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Refresh(System.String)" />.</remarks>
         <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -353,7 +368,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -365,6 +380,7 @@
         <param name="key">A string identifying the requested value.</param>
         <summary>Removes the value with the given key.</summary>
         <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="RemoveAsync">
@@ -379,7 +395,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -395,6 +411,7 @@
         <returns>The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.</returns>
         <remarks>This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <see cref="T:System.ArgumentException" />, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <see cref="M:Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Remove(System.String)" />.</remarks>
         <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Set">
@@ -410,7 +427,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -426,6 +443,7 @@
         <param name="options">The cache options for the value.</param>
         <summary>Sets a value with the given key.</summary>
         <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="SetAsync">
@@ -440,7 +458,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Caching.StackExchangeRedis</AssemblyName>
-        <AssemblyVersion>9.0.1.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -460,6 +478,7 @@
         <returns>The <see cref="T:System.Threading.Tasks.Task" /> that represents the asynchronous operation.</returns>
         <remarks>This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <see cref="T:System.ArgumentException" />, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <see cref="M:Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Set(System.String,System.Byte[],Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions)" />.</remarks>
         <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
+        <inheritdoc />
       </Docs>
     </Member>
   </Members>

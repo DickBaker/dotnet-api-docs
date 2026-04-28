@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -39,11 +41,11 @@
       <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.TreeNodeCollectionEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.TreeNodeCollectionEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.TreeNodeCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.TreeNodeCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -51,27 +53,27 @@
   <Docs>
     <summary>Represents a collection of <see cref="T:System.Windows.Forms.TreeNode" /> objects.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, and <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> methods enable you to add and remove individual tree nodes from the collection.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNodeCollection.Add*>, <xref:System.Windows.Forms.TreeNodeCollection.Remove*>, and <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*> methods enable you to add and remove individual tree nodes from the collection.
+
 > [!NOTE]
->  Enumerating the collection and removing nodes is not supported.  
-  
- You can also use the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods to add or remove all the tree nodes from the collection.  
-  
- Classes cannot inherit from the <xref:System.Windows.Forms.TreeNodeCollection> class.  
-  
-   
-  
-## Examples  
- The following code example displays customer information in a <xref:System.Windows.Forms.TreeView> control. The root tree nodes display customer names, and the child tree nodes display the order numbers assigned to each customer. In this example, 1,000 customers are displayed with 15 orders each. The repainting of the <xref:System.Windows.Forms.TreeView> is suppressed by using the <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> and <xref:System.Windows.Forms.TreeView.EndUpdate%2A> methods, and a wait <xref:System.Windows.Forms.Cursor> is displayed while the <xref:System.Windows.Forms.TreeView> creates and paints the <xref:System.Windows.Forms.TreeNode> objects. This example requires that you have a `Customer` object that can hold a collection of `Order` objects. It also requires that you have created an instance of a <xref:System.Windows.Forms.TreeView> control on a <xref:System.Windows.Forms.Form>.  
-  
+>  Enumerating the collection and removing nodes is not supported.
+
+ You can also use the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods to add or remove all the tree nodes from the collection.
+
+ Classes cannot inherit from the <xref:System.Windows.Forms.TreeNodeCollection> class.
+
+
+
+## Examples
+ The following code example displays customer information in a <xref:System.Windows.Forms.TreeView> control. The root tree nodes display customer names, and the child tree nodes display the order numbers assigned to each customer. In this example, 1,000 customers are displayed with 15 orders each. The repainting of the <xref:System.Windows.Forms.TreeView> is suppressed by using the <xref:System.Windows.Forms.TreeView.BeginUpdate*> and <xref:System.Windows.Forms.TreeView.EndUpdate*> methods, and a wait <xref:System.Windows.Forms.Cursor> is displayed while the <xref:System.Windows.Forms.TreeView> creates and paints the <xref:System.Windows.Forms.TreeNode> objects. This example requires that you have a `Customer` object that can hold a collection of `Order` objects. It also requires that you have created an instance of a <xref:System.Windows.Forms.TreeView> control on a <xref:System.Windows.Forms.Form>.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/Cursor/Overview/treeview.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/Cursor/Overview/treeview.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Forms.TreeView" />
@@ -94,7 +96,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Add (text As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Add : string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Add : string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Add text" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Add(System::String ^ text);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? text);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? text);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -106,6 +108,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
@@ -113,7 +117,7 @@
       <Parameters>
         <Parameter Name="text" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -125,22 +129,22 @@
         <summary>Adds a new tree node with the specified label text to the end of the current tree node collection.</summary>
         <returns>A <see cref="T:System.Windows.Forms.TreeNode" /> that represents the tree node being added to the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
- To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods.  
-  
-   
-  
-## Examples  
- The following code example displays customer information in a <xref:System.Windows.Forms.TreeView> control. The root tree nodes display customer names, and the child tree nodes display the order numbers assigned to each customer. In this example, 1,000 customers are displayed with 15 orders each. The repainting of the <xref:System.Windows.Forms.TreeView> is suppressed by using the <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> and <xref:System.Windows.Forms.TreeView.EndUpdate%2A> methods, and a wait <xref:System.Windows.Forms.Cursor> is displayed while the <xref:System.Windows.Forms.TreeView> creates and paints the <xref:System.Windows.Forms.TreeNode> objects. This example requires that you have a `Customer` object that can hold a collection of `Order` objects. It also requires that you have created an instance of a <xref:System.Windows.Forms.TreeView> control on a <xref:System.Windows.Forms.Form>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+ To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove*>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods.
+
+
+
+## Examples
+ The following code example displays customer information in a <xref:System.Windows.Forms.TreeView> control. The root tree nodes display customer names, and the child tree nodes display the order numbers assigned to each customer. In this example, 1,000 customers are displayed with 15 orders each. The repainting of the <xref:System.Windows.Forms.TreeView> is suppressed by using the <xref:System.Windows.Forms.TreeView.BeginUpdate*> and <xref:System.Windows.Forms.TreeView.EndUpdate*> methods, and a wait <xref:System.Windows.Forms.Cursor> is displayed while the <xref:System.Windows.Forms.TreeView> creates and paints the <xref:System.Windows.Forms.TreeNode> objects. This example requires that you have a `Customer` object that can hold a collection of `Order` objects. It also requires that you have created an instance of a <xref:System.Windows.Forms.TreeView> control on a <xref:System.Windows.Forms.Form>.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/Cursor/Overview/treeview.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/Cursor/Overview/treeview.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.Windows.Forms.TreeNodeCollection.Remove(System.Windows.Forms.TreeNode)" />
@@ -165,6 +169,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -183,27 +189,27 @@
         <summary>Adds a previously created tree node to the end of the tree node collection.</summary>
         <returns>The zero-based index value of the <see cref="T:System.Windows.Forms.TreeNode" /> added to the tree node collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This version of the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method allows you to add previously created <xref:System.Windows.Forms.TreeNode> objects to the end of the tree node collection.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
- To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This version of the <xref:System.Windows.Forms.TreeNodeCollection.Add*> method allows you to add previously created <xref:System.Windows.Forms.TreeNode> objects to the end of the tree node collection.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+ To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove*>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods.
+
 > [!NOTE]
->  A <xref:System.Windows.Forms.TreeNode> can be assigned to only one <xref:System.Windows.Forms.TreeView> control at a time. To add the tree node to a new tree view control, you must remove it from the other tree view first or clone it.  
-  
-   
-  
-## Examples  
- The following code example displays customer information in a <xref:System.Windows.Forms.TreeView> control. The root tree nodes display customer names, and the child tree nodes display the order numbers assigned to each customer. In this example, 1,000 customers are displayed with 15 orders each. The repainting of the <xref:System.Windows.Forms.TreeView> is suppressed by using the <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> and <xref:System.Windows.Forms.TreeView.EndUpdate%2A> methods, and a wait <xref:System.Windows.Forms.Cursor> is displayed while the <xref:System.Windows.Forms.TreeView> creates and paints the <xref:System.Windows.Forms.TreeNode> objects. This example requires that you have a `Customer` object that can hold a collection of `Order` objects. It also requires that you have created an instance of a <xref:System.Windows.Forms.TreeView> control on a <xref:System.Windows.Forms.Form>.  
-  
+>  A <xref:System.Windows.Forms.TreeNode> can be assigned to only one <xref:System.Windows.Forms.TreeView> control at a time. To add the tree node to a new tree view control, you must remove it from the other tree view first or clone it.
+
+
+
+## Examples
+ The following code example displays customer information in a <xref:System.Windows.Forms.TreeView> control. The root tree nodes display customer names, and the child tree nodes display the order numbers assigned to each customer. In this example, 1,000 customers are displayed with 15 orders each. The repainting of the <xref:System.Windows.Forms.TreeView> is suppressed by using the <xref:System.Windows.Forms.TreeView.BeginUpdate*> and <xref:System.Windows.Forms.TreeView.EndUpdate*> methods, and a wait <xref:System.Windows.Forms.Cursor> is displayed while the <xref:System.Windows.Forms.TreeView> creates and paints the <xref:System.Windows.Forms.TreeNode> objects. This example requires that you have a `Customer` object that can hold a collection of `Order` objects. It also requires that you have created an instance of a <xref:System.Windows.Forms.TreeView> control on a <xref:System.Windows.Forms.Form>.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/Cursor/Overview/treeview.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/Cursor/Overview/treeview.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The <paramref name="node" /> is currently assigned to another <see cref="T:System.Windows.Forms.TreeView" />.</exception>
@@ -218,7 +224,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Add (key As String, text As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Add : string * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Add : string * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Add (key, text)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Add(System::String ^ key, System::String ^ text);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -229,13 +235,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node.</param>
@@ -243,13 +251,13 @@
         <summary>Creates a new tree node with the specified key and text, and adds it to the collection.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was added to the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -261,7 +269,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Add (key As String, text As String, imageIndex As Integer) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Add : string * string * int -&gt; System.Windows.Forms.TreeNode&#xA;override this.Add : string * string * int -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Add (key, text, imageIndex)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Add(System::String ^ key, System::String ^ text, int imageIndex);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, int imageIndex);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, int imageIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -272,14 +280,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageIndex" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageIndex" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node.</param>
@@ -288,15 +298,15 @@
         <summary>Creates a tree node with the specified key, text, and image, and adds it to the collection.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was added to the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
- The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
+ The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -308,7 +318,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Add (key As String, text As String, imageKey As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Add : string * string * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Add : string * string * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Add (key, text, imageKey)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Add(System::String ^ key, System::String ^ text, System::String ^ imageKey);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, string? imageKey);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, string? imageKey);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -319,14 +329,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageKey" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageKey" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node.</param>
@@ -335,15 +347,15 @@
         <summary>Creates a tree node with the specified key, text, and image, and adds it to the collection.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was added to the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
- The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+ The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -355,7 +367,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Add (key As String, text As String, imageIndex As Integer, selectedImageIndex As Integer) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Add : string * string * int * int -&gt; System.Windows.Forms.TreeNode&#xA;override this.Add : string * string * int * int -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Add (key, text, imageIndex, selectedImageIndex)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Add(System::String ^ key, System::String ^ text, int imageIndex, int selectedImageIndex);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, int imageIndex, int selectedImageIndex);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, int imageIndex, int selectedImageIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -366,15 +378,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageIndex" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="selectedImageIndex" Type="System.Int32" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageIndex" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node.</param>
@@ -384,17 +398,17 @@
         <summary>Creates a tree node with the specified key, text, and images, and adds it to the collection.</summary>
         <returns>The tree node that was added to the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
- The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
- The `selectedImageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+ The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
+ The `selectedImageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -406,7 +420,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Add (key As String, text As String, imageKey As String, selectedImageKey As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Add : string * string * string * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Add : string * string * string * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Add (key, text, imageKey, selectedImageKey)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Add(System::String ^ key, System::String ^ text, System::String ^ imageKey, System::String ^ selectedImageKey);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, string? imageKey, string? selectedImageKey);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string? key, string? text, string? imageKey, string? selectedImageKey);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -417,15 +431,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageKey" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="selectedImageKey" Type="System.String" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageKey" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="selectedImageKey" Type="System.String" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node.</param>
@@ -435,17 +451,17 @@
         <summary>Creates a tree node with the specified key, text, and images, and adds it to the collection.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was added to the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
- The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
- The `selectedImageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The tree node is added to the end of the collection. You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+ The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
+ The `selectedImageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -457,9 +473,9 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub AddRange (nodes As TreeNode())" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0" />
       <MemberSignature Language="F#" Value="abstract member AddRange : System.Windows.Forms.TreeNode[] -&gt; unit&#xA;override this.AddRange : System.Windows.Forms.TreeNode[] -&gt; unit" Usage="treeNodeCollection.AddRange nodes" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AddRange(cli::array &lt;System::Windows::Forms::TreeNode ^&gt; ^ nodes);" FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0" />
-      <MemberSignature Language="C#" Value="public virtual void AddRange (params System.Windows.Forms.TreeNode[] nodes);" FrameworkAlternate="windowsdesktop-9.0" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable Sub AddRange (ParamArray nodes As TreeNode())" FrameworkAlternate="windowsdesktop-9.0" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AddRange(... cli::array &lt;System::Windows::Forms::TreeNode ^&gt; ^ nodes);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual void AddRange (params System.Windows.Forms.TreeNode[] nodes);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub AddRange (ParamArray nodes As TreeNode())" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AddRange(... cli::array &lt;System::Windows::Forms::TreeNode ^&gt; ^ nodes);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -471,6 +487,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -478,7 +496,7 @@
       <Parameters>
         <Parameter Name="nodes" Type="System.Windows.Forms.TreeNode[]">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.ParamArray]</AttributeName>
               <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
             </Attribute>
@@ -489,24 +507,24 @@
         <param name="nodes">An array of <see cref="T:System.Windows.Forms.TreeNode" /> objects representing the tree nodes to add to the collection.</param>
         <summary>Adds an array of previously created tree nodes to the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode> objects contained in the `nodes` array are appended to the end of the collection.  
-  
- You can use the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> method to quickly add a group of previously created <xref:System.Windows.Forms.TreeNode> objects to the collection instead of manually adding each <xref:System.Windows.Forms.TreeNode> to the collection using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method.  
-  
- To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods.  
-  
-   
-  
-## Examples  
- The following code example copies the <xref:System.Windows.Forms.TreeNodeCollection> from a <xref:System.Windows.Forms.TreeView> to a temporary <xref:System.Array>, and then adds the contents of the array to another <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> method. The <xref:System.Windows.Forms.TreeNodeCollection> from the source <xref:System.Windows.Forms.TreeView> is cleared using the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method. This example requires that you have two <xref:System.Windows.Forms.TreeView> controls, one with a collection of <xref:System.Windows.Forms.TreeNode> objects.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode> objects contained in the `nodes` array are appended to the end of the collection.
+
+ You can use the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> method to quickly add a group of previously created <xref:System.Windows.Forms.TreeNode> objects to the collection instead of manually adding each <xref:System.Windows.Forms.TreeNode> to the collection using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> method.
+
+ To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove*>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods.
+
+
+
+## Examples
+ The following code example copies the <xref:System.Windows.Forms.TreeNodeCollection> from a <xref:System.Windows.Forms.TreeView> to a temporary <xref:System.Array>, and then adds the contents of the array to another <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> method. The <xref:System.Windows.Forms.TreeNodeCollection> from the source <xref:System.Windows.Forms.TreeView> is cleared using the <xref:System.Windows.Forms.TreeNodeCollection.Clear*> method. This example requires that you have two <xref:System.Windows.Forms.TreeView> controls, one with a collection of <xref:System.Windows.Forms.TreeNode> objects.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CPP/treenodecollection_clear.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/AddRange/treenodecollection_clear.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Clear/VB/treenodecollection_clear.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/AddRange/treenodecollection_clear.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -538,6 +556,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -546,24 +566,24 @@
       <Docs>
         <summary>Removes all tree nodes from the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can use this method to clear the entire collection of tree nodes from a tree view.  
-  
- To remove an individual tree node from the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> or <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> methods.  
-  
- To add new <xref:System.Windows.Forms.TreeNode> objects to the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
-   
-  
-## Examples  
- The following code example copies the <xref:System.Windows.Forms.TreeNodeCollection> from a <xref:System.Windows.Forms.TreeView> to a temporary <xref:System.Array>, and then adds the contents of the array to another <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> method. The <xref:System.Windows.Forms.TreeNodeCollection> from the source <xref:System.Windows.Forms.TreeView> is cleared using the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method. This example requires that you have two <xref:System.Windows.Forms.TreeView> controls, one with a collection of <xref:System.Windows.Forms.TreeNode> objects.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can use this method to clear the entire collection of tree nodes from a tree view.
+
+ To remove an individual tree node from the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove*> or <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*> methods.
+
+ To add new <xref:System.Windows.Forms.TreeNode> objects to the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Add*>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange*>, or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+
+
+## Examples
+ The following code example copies the <xref:System.Windows.Forms.TreeNodeCollection> from a <xref:System.Windows.Forms.TreeView> to a temporary <xref:System.Array>, and then adds the contents of the array to another <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> method. The <xref:System.Windows.Forms.TreeNodeCollection> from the source <xref:System.Windows.Forms.TreeView> is cleared using the <xref:System.Windows.Forms.TreeNodeCollection.Clear*> method. This example requires that you have two <xref:System.Windows.Forms.TreeView> controls, one with a collection of <xref:System.Windows.Forms.TreeNode> objects.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CPP/treenodecollection_clear.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/AddRange/treenodecollection_clear.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Clear/VB/treenodecollection_clear.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/AddRange/treenodecollection_clear.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -586,6 +606,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -599,27 +621,27 @@
         <returns>
           <see langword="true" /> if the <see cref="T:System.Windows.Forms.TreeNode" /> is a member of the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method enables you to determine whether a <xref:System.Windows.Forms.TreeNode> is a member of the collection before attempting to perform operations on the <xref:System.Windows.Forms.TreeNode>. You can use this method to confirm that a <xref:System.Windows.Forms.TreeNode> has been added to or is still a member of the collection.  
-  
- The amount of time this method takes is proportional to the size of the node collection, so you may want to avoid using it with large collections.  
-  
- This method checks for reference equality only. You cannot use it to determine whether an equivalent but different node is in the collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method enables you to determine whether a <xref:System.Windows.Forms.TreeNode> is a member of the collection before attempting to perform operations on the <xref:System.Windows.Forms.TreeNode>. You can use this method to confirm that a <xref:System.Windows.Forms.TreeNode> has been added to or is still a member of the collection.
+
+ The amount of time this method takes is proportional to the size of the node collection, so you may want to avoid using it with large collections.
+
+ This method checks for reference equality only. You cannot use it to determine whether an equivalent but different node is in the collection.
+
 > [!NOTE]
->  One implication of the reference-equality requirement is that you cannot customize the behavior of this method for derived <xref:System.Windows.Forms.TreeNode> types by overriding the <xref:System.Object.Equals%2A> method of the <xref:System.Windows.Forms.TreeNode> class.  
-  
-   
-  
-## Examples  
- The following code example determines if a specified <xref:System.Windows.Forms.TreeNode> is within a <xref:System.Windows.Forms.TreeNodeCollection>, and then enumerates the collection. This example requires that you have a <xref:System.Windows.Forms.Form> with a <xref:System.Windows.Forms.TreeView> that has a <xref:System.Windows.Forms.TreeNodeCollection> that contains a <xref:System.Windows.Forms.TreeNode> named `myTreeNode2`.  
-  
+>  One implication of the reference-equality requirement is that you cannot customize the behavior of this method for derived <xref:System.Windows.Forms.TreeNode> types by overriding the <xref:System.Object.Equals*> method of the <xref:System.Windows.Forms.TreeNode> class.
+
+
+
+## Examples
+ The following code example determines if a specified <xref:System.Windows.Forms.TreeNode> is within a <xref:System.Windows.Forms.TreeNodeCollection>, and then enumerates the collection. This example requires that you have a <xref:System.Windows.Forms.Form> with a <xref:System.Windows.Forms.TreeView> that has a <xref:System.Windows.Forms.TreeNodeCollection> that contains a <xref:System.Windows.Forms.TreeNode> named `myTreeNode2`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/Contains/treenodecollection_contains_getenumerator.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/Contains/treenodecollection_contains_getenumerator.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -631,7 +653,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ContainsKey (key As String) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member ContainsKey : string -&gt; bool&#xA;override this.ContainsKey : string -&gt; bool" Usage="treeNodeCollection.ContainsKey key" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool ContainsKey(System::String ^ key);" />
-      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string? key);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string? key);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -642,12 +664,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the <see cref="T:System.Windows.Forms.TreeNode" /> to search for.</param>
@@ -655,13 +679,13 @@
         <returns>
           <see langword="true" /> to indicate the collection contains a <see cref="T:System.Windows.Forms.TreeNode" /> with the specified key; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> property returns `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.TreeNodeCollection.Item*> property returns `false`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -687,6 +711,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -700,15 +726,15 @@
         <param name="index">The index in the destination array at which storing begins.</param>
         <summary>Copies the entire collection into an existing array at a specified location within the array.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example displays the number of <xref:System.Windows.Forms.TreeNode> objects in a <xref:System.Windows.Forms.TreeNodeCollection>, copies the contents of the collection to an <xref:System.Object> array, and displays a list of the tree nodes in a <xref:System.Windows.Forms.Label> control. This example requires that you have a <xref:System.Windows.Forms.TreeView> with at least one <xref:System.Windows.Forms.TreeNode> in its <xref:System.Windows.Forms.TreeNodeCollection>, and a <xref:System.Windows.Forms.Label> control on a <xref:System.Windows.Forms.Form>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example displays the number of <xref:System.Windows.Forms.TreeNode> objects in a <xref:System.Windows.Forms.TreeNodeCollection>, copies the contents of the collection to an <xref:System.Object> array, and displays a list of the tree nodes in a <xref:System.Windows.Forms.Label> control. This example requires that you have a <xref:System.Windows.Forms.TreeView> with at least one <xref:System.Windows.Forms.TreeNode> in its <xref:System.Windows.Forms.TreeNodeCollection>, and a <xref:System.Windows.Forms.Label> control on a <xref:System.Windows.Forms.Form>.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CPP/treenodecollection_count_copyto.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/CopyTo/treenodecollection_count_copyto.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/VB/treenodecollection_count_copyto.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/CopyTo/treenodecollection_count_copyto.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -734,6 +760,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -752,23 +780,23 @@
         <summary>Gets the total number of <see cref="T:System.Windows.Forms.TreeNode" /> objects in the collection.</summary>
         <value>The total number of <see cref="T:System.Windows.Forms.TreeNode" /> objects in the collection.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNodeCollection.Count%2A> property holds the number of <xref:System.Windows.Forms.TreeNode> objects assigned to the collection. You can use the <xref:System.Windows.Forms.TreeNodeCollection.Count%2A> property value as the upper bounds of a loop to iterate through a collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNodeCollection.Count> property holds the number of <xref:System.Windows.Forms.TreeNode> objects assigned to the collection. You can use the <xref:System.Windows.Forms.TreeNodeCollection.Count> property value as the upper bounds of a loop to iterate through a collection.
+
 > [!NOTE]
->  Because the index value of a collection is a zero-based index, you must subtract one from the looping variable. If you do not account for this, you will exceed the upper bounds of the collection and throw an <xref:System.IndexOutOfRangeException> exception.  
-  
-   
-  
-## Examples  
- The following code example displays the number of <xref:System.Windows.Forms.TreeNode> objects in a <xref:System.Windows.Forms.TreeNodeCollection>, copies the contents of the collection to an <xref:System.Object> array, and displays a list of the tree nodes in a <xref:System.Windows.Forms.Label> control. This example requires that you have a <xref:System.Windows.Forms.TreeView> with at least one <xref:System.Windows.Forms.TreeNode> in its <xref:System.Windows.Forms.TreeNodeCollection>, and a <xref:System.Windows.Forms.Label> control on a <xref:System.Windows.Forms.Form>.  
-  
+>  Because the index value of a collection is a zero-based index, you must subtract one from the looping variable. If you do not account for this, you will exceed the upper bounds of the collection and throw an <xref:System.IndexOutOfRangeException> exception.
+
+
+
+## Examples
+ The following code example displays the number of <xref:System.Windows.Forms.TreeNode> objects in a <xref:System.Windows.Forms.TreeNodeCollection>, copies the contents of the collection to an <xref:System.Object> array, and displays a list of the tree nodes in a <xref:System.Windows.Forms.Label> control. This example requires that you have a <xref:System.Windows.Forms.TreeView> with at least one <xref:System.Windows.Forms.TreeNode> in its <xref:System.Windows.Forms.TreeNodeCollection>, and a <xref:System.Windows.Forms.Label> control on a <xref:System.Windows.Forms.Form>.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CPP/treenodecollection_count_copyto.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/CopyTo/treenodecollection_count_copyto.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/VB/treenodecollection_count_copyto.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/CopyTo/treenodecollection_count_copyto.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -790,13 +818,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="searchAllChildren" Type="System.Boolean" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="searchAllChildren" Type="System.Boolean" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node to search for.</param>
@@ -805,13 +835,13 @@
         <summary>Finds the tree nodes with specified key, optionally searching subnodes.</summary>
         <returns>An array of <see cref="T:System.Windows.Forms.TreeNode" /> objects whose <see cref="P:System.Windows.Forms.TreeNode.Name" /> property matches the specified key.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, or there are no matches, the <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> property returns an empty array`.`  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, or there are no matches, the <xref:System.Windows.Forms.TreeNodeCollection.Item*> property returns an empty array`.`
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">.NET 5 and later: <paramref name="key" /> is <see langword="null" /> or empty.</exception>
@@ -838,6 +868,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -847,15 +879,15 @@
         <summary>Returns an enumerator that can be used to iterate through the tree node collection.</summary>
         <returns>An <see cref="T:System.Collections.IEnumerator" /> that represents the tree node collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example determines if a specified <xref:System.Windows.Forms.TreeNode> is within a <xref:System.Windows.Forms.TreeNodeCollection>, and then enumerates the collection. This example requires that you have a <xref:System.Windows.Forms.Form> with a <xref:System.Windows.Forms.TreeView> that has a <xref:System.Windows.Forms.TreeNodeCollection> that contains a <xref:System.Windows.Forms.TreeNode> named `myTreeNode2`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example determines if a specified <xref:System.Windows.Forms.TreeNode> is within a <xref:System.Windows.Forms.TreeNodeCollection>, and then enumerates the collection. This example requires that you have a <xref:System.Windows.Forms.Form> with a <xref:System.Windows.Forms.TreeView> that has a <xref:System.Windows.Forms.TreeNodeCollection> that contains a <xref:System.Windows.Forms.TreeNode> named `myTreeNode2`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/Contains/treenodecollection_contains_getenumerator.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/Contains/treenodecollection_contains_getenumerator.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -878,6 +910,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -890,25 +924,25 @@
         <summary>Returns the index of the specified tree node in the collection.</summary>
         <returns>The zero-based index of the item found in the tree node collection; otherwise, -1.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The amount of time this method takes is proportional to the size of the node collection, so you may want to avoid using it with large collections.  
-  
- This method checks for reference equality only. You cannot use it to retrieve the index of an equivalent but different node in the collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The amount of time this method takes is proportional to the size of the node collection, so you may want to avoid using it with large collections.
+
+ This method checks for reference equality only. You cannot use it to retrieve the index of an equivalent but different node in the collection.
+
 > [!NOTE]
->  One implication of the reference-equality requirement is that you cannot customize the behavior of this method for derived <xref:System.Windows.Forms.TreeNode> types by overriding the <xref:System.Object.Equals%2A> method of the <xref:System.Windows.Forms.TreeNode> class.  
-  
-   
-  
-## Examples  
- The following code example determines if a specified <xref:System.Windows.Forms.TreeNode> is within a <xref:System.Windows.Forms.TreeNodeCollection>, and then enumerates the collection. This example requires that you have a <xref:System.Windows.Forms.Form> with a <xref:System.Windows.Forms.TreeView> that has a <xref:System.Windows.Forms.TreeNodeCollection> that contains a <xref:System.Windows.Forms.TreeNode> named `myTreeNode2`.  
-  
+>  One implication of the reference-equality requirement is that you cannot customize the behavior of this method for derived <xref:System.Windows.Forms.TreeNode> types by overriding the <xref:System.Object.Equals*> method of the <xref:System.Windows.Forms.TreeNode> class.
+
+
+
+## Examples
+ The following code example determines if a specified <xref:System.Windows.Forms.TreeNode> is within a <xref:System.Windows.Forms.TreeNodeCollection>, and then enumerates the collection. This example requires that you have a <xref:System.Windows.Forms.Form> with a <xref:System.Windows.Forms.TreeView> that has a <xref:System.Windows.Forms.TreeNodeCollection> that contains a <xref:System.Windows.Forms.TreeNode> named `myTreeNode2`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNodeCollection/Contains/treenodecollection_contains_getenumerator.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNodeCollection/Contains/treenodecollection_contains_getenumerator.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -920,7 +954,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IndexOfKey (key As String) As Integer" />
       <MemberSignature Language="F#" Value="abstract member IndexOfKey : string -&gt; int&#xA;override this.IndexOfKey : string -&gt; int" Usage="treeNodeCollection.IndexOfKey key" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int IndexOfKey(System::String ^ key);" />
-      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string? key);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string? key);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -931,27 +965,29 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node to search for.</param>
         <summary>Returns the index of the first occurrence of a tree node with the specified key.</summary>
         <returns>The zero-based index of the first occurrence of a tree node with the specified key, if found; otherwise, -1.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If <xref:System.Windows.Forms.TreeNodeCollection.IndexOfKey%2A> is called successively, the last returned index will be checked for a key match first, and if there is no match, the search starts at the beginning of the collection.  
-  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The key comparison is not case-sensitive. If `key` is `null` or an empty string, the <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> property returns -1.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If <xref:System.Windows.Forms.TreeNodeCollection.IndexOfKey*> is called successively, the last returned index will be checked for a key match first, and if there is no match, the search starts at the beginning of the collection.
+
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The key comparison is not case-sensitive. If `key` is `null` or an empty string, the <xref:System.Windows.Forms.TreeNodeCollection.Item*> property returns -1.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -972,7 +1008,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Insert (index As Integer, text As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Insert : int * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Insert : int * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Insert (index, text)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Insert(int index, System::String ^ text);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? text);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? text);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -983,15 +1019,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1004,13 +1042,13 @@
         <summary>Creates a tree node with the specified text and inserts it at the specified index.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was inserted in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1033,6 +1071,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1046,27 +1086,27 @@
         <param name="node">The <see cref="T:System.Windows.Forms.TreeNode" /> to insert into the collection.</param>
         <summary>Inserts an existing tree node into the tree node collection at the specified location.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A?displayProperty=nameWithType> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view, and the <xref:System.Windows.Forms.TreeView> resorted.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
- To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted?displayProperty=nameWithType> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view, and the <xref:System.Windows.Forms.TreeView> resorted.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
+ To remove a <xref:System.Windows.Forms.TreeNode> that you previously added, use the <xref:System.Windows.Forms.TreeNodeCollection.Remove*>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*>, or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods.
+
 > [!NOTE]
->  A <xref:System.Windows.Forms.TreeNode> can be assigned to only one <xref:System.Windows.Forms.TreeView> control at a time. To add the tree node to a new tree view control, you must remove it from the other tree view first or clone it.  
-  
-   
-  
-## Examples  
- The following code example removes the selected tree node from one <xref:System.Windows.Forms.TreeView> and adds it to another if both tree node collections are not read-only. When a <xref:System.Windows.Forms.Button> is clicked, the <xref:System.Windows.Forms.TreeNode> represented by the <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> property is deleted from one <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method and added to the other <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> method. This example requires that you have a <xref:System.Windows.Forms.Form> that contains two <xref:System.Windows.Forms.TreeView> controls and a <xref:System.Windows.Forms.Button>. The <xref:System.Windows.Forms.TreeView> controls should be named `treeView1` and `treeView2`.  
-  
+>  A <xref:System.Windows.Forms.TreeNode> can be assigned to only one <xref:System.Windows.Forms.TreeView> control at a time. To add the tree node to a new tree view control, you must remove it from the other tree view first or clone it.
+
+
+
+## Examples
+ The following code example removes the selected tree node from one <xref:System.Windows.Forms.TreeView> and adds it to another if both tree node collections are not read-only. When a <xref:System.Windows.Forms.Button> is clicked, the <xref:System.Windows.Forms.TreeNode> represented by the <xref:System.Windows.Forms.TreeView.SelectedNode?displayProperty=nameWithType> property is deleted from one <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Remove*> method and added to the other <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Insert*> method. This example requires that you have a <xref:System.Windows.Forms.Form> that contains two <xref:System.Windows.Forms.TreeView> controls and a <xref:System.Windows.Forms.Button>. The <xref:System.Windows.Forms.TreeView> controls should be named `treeView1` and `treeView2`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNode/Nodes/treenodecollection.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNode/Nodes/treenodecollection.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The <paramref name="node" /> is currently assigned to another <see cref="T:System.Windows.Forms.TreeView" />.</exception>
@@ -1079,7 +1119,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Insert (index As Integer, key As String, text As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Insert : int * string * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Insert : int * string * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Insert (index, key, text)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Insert(int index, System::String ^ key, System::String ^ text);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1090,14 +1130,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The location within the collection to insert the node.</param>
@@ -1106,15 +1148,15 @@
         <summary>Creates a tree node with the specified text and key, and inserts it into the collection.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was inserted in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1126,7 +1168,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Insert (index As Integer, key As String, text As String, imageIndex As Integer) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Insert : int * string * string * int -&gt; System.Windows.Forms.TreeNode&#xA;override this.Insert : int * string * string * int -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Insert (index, key, text, imageIndex)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Insert(int index, System::String ^ key, System::String ^ text, int imageIndex);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, int imageIndex);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, int imageIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1137,15 +1179,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageIndex" Type="System.Int32" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageIndex" Type="System.Int32" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The location within the collection to insert the node.</param>
@@ -1155,17 +1199,17 @@
         <summary>Creates a tree node with the specified key, text, and image, and inserts it into the collection at the specified index.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was inserted in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1177,7 +1221,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Insert (index As Integer, key As String, text As String, imageKey As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Insert : int * string * string * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Insert : int * string * string * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Insert (index, key, text, imageKey)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Insert(int index, System::String ^ key, System::String ^ text, System::String ^ imageKey);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, string? imageKey);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, string? imageKey);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1188,15 +1232,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageKey" Type="System.String" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageKey" Type="System.String" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The location within the collection to insert the node.</param>
@@ -1206,17 +1252,17 @@
         <summary>Creates a tree node with the specified key, text, and image, and inserts it into the collection at the specified index.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was inserted in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1228,7 +1274,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Insert (index As Integer, key As String, text As String, imageIndex As Integer, selectedImageIndex As Integer) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Insert : int * string * string * int * int -&gt; System.Windows.Forms.TreeNode&#xA;override this.Insert : int * string * string * int * int -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Insert (index, key, text, imageIndex, selectedImageIndex)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Insert(int index, System::String ^ key, System::String ^ text, int imageIndex, int selectedImageIndex);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, int imageIndex, int selectedImageIndex);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, int imageIndex, int selectedImageIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1239,16 +1285,18 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageIndex" Type="System.Int32" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="selectedImageIndex" Type="System.Int32" Index="4" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageIndex" Type="System.Int32" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" Index="4" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The location within the collection to insert the node.</param>
@@ -1259,19 +1307,19 @@
         <summary>Creates a tree node with the specified key, text, and images, and inserts it into the collection at the specified index.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was inserted in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
- The `selectedimageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The `imageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
+ The `selectedimageIndex` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1283,7 +1331,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Insert (index As Integer, key As String, text As String, imageKey As String, selectedImageKey As String) As TreeNode" />
       <MemberSignature Language="F#" Value="abstract member Insert : int * string * string * string * string -&gt; System.Windows.Forms.TreeNode&#xA;override this.Insert : int * string * string * string * string -&gt; System.Windows.Forms.TreeNode" Usage="treeNodeCollection.Insert (index, key, text, imageKey, selectedImageKey)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::TreeNode ^ Insert(int index, System::String ^ key, System::String ^ text, System::String ^ imageKey, System::String ^ selectedImageKey);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, string? imageKey, string? selectedImageKey);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string? key, string? text, string? imageKey, string? selectedImageKey);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1294,16 +1342,18 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="imageKey" Type="System.String" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="selectedImageKey" Type="System.String" Index="4" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="key" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="text" Type="System.String" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="imageKey" Type="System.String" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="selectedImageKey" Type="System.String" Index="4" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The location within the collection to insert the node.</param>
@@ -1314,19 +1364,19 @@
         <summary>Creates a tree node with the specified key, text, and images, and inserts it into the collection at the specified index.</summary>
         <returns>The <see cref="T:System.Windows.Forms.TreeNode" /> that was inserted in the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.  
-  
- You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> methods.  
-  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
- The `selectedimageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList%2A> property of the parent <xref:System.Windows.Forms.TreeView>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter value is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Windows.Forms.TreeView> is sorted again.
+
+ You can also add new <xref:System.Windows.Forms.TreeNode> objects to the collection by using the <xref:System.Windows.Forms.TreeNodeCollection.Add*> or <xref:System.Windows.Forms.TreeNodeCollection.AddRange*> methods.
+
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The `imageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.ImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
+ The `selectedimageKey` parameter refers to an image in the <xref:System.Windows.Forms.TreeView.StateImageList> property of the parent <xref:System.Windows.Forms.TreeView>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1352,6 +1402,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1361,15 +1413,15 @@
         <value>
           <see langword="true" /> if the collection is read-only; otherwise, <see langword="false" />. The default is <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example removes the selected tree node from one <xref:System.Windows.Forms.TreeView> and adds it to another if both tree node collections are not read-only. When a <xref:System.Windows.Forms.Button> is clicked, the <xref:System.Windows.Forms.TreeNode> represented by the <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> property is deleted from one <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method and added to the other <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> method. This example requires that you have a <xref:System.Windows.Forms.Form> that contains two <xref:System.Windows.Forms.TreeView> controls and a <xref:System.Windows.Forms.Button>. The <xref:System.Windows.Forms.TreeView> controls should be named `treeView1` and `treeView2`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example removes the selected tree node from one <xref:System.Windows.Forms.TreeView> and adds it to another if both tree node collections are not read-only. When a <xref:System.Windows.Forms.Button> is clicked, the <xref:System.Windows.Forms.TreeNode> represented by the <xref:System.Windows.Forms.TreeView.SelectedNode?displayProperty=nameWithType> property is deleted from one <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Remove*> method and added to the other <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Insert*> method. This example requires that you have a <xref:System.Windows.Forms.Form> that contains two <xref:System.Windows.Forms.TreeView> controls and a <xref:System.Windows.Forms.Button>. The <xref:System.Windows.Forms.TreeView> controls should be named `treeView1` and `treeView2`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNode/Nodes/treenodecollection.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNode/Nodes/treenodecollection.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1401,9 +1453,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
         </Attribute>
@@ -1419,19 +1473,19 @@
         <summary>Gets or sets the <see cref="T:System.Windows.Forms.TreeNode" /> at the specified indexed location in the collection.</summary>
         <value>The <see cref="T:System.Windows.Forms.TreeNode" /> at the specified indexed location in the collection.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
+          <format type="text/markdown"><![CDATA[
+
 ## Remarks
 
 To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, or to retrieve them from the <xref:System.Windows.Forms.TreeNodeCollection>, you can reference the collection object with a specific index value. The index value of the <xref:System.Windows.Forms.TreeNodeCollection> is a zero-based index.
 
-## Examples  
- The following code example removes the first <xref:System.Windows.Forms.TreeNode> from a <xref:System.Windows.Forms.TreeView> if its <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> property is set to "Node0". When a <xref:System.Windows.Forms.Button> is clicked, the first <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeView> is deleted using the <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> method. This example requires that you have created a <xref:System.Windows.Forms.TreeView> and a <xref:System.Windows.Forms.Button> on a <xref:System.Windows.Forms.Form>. The first <xref:System.Windows.Forms.TreeNode> in your <xref:System.Windows.Forms.TreeView> should have a text property of "Node0."  
-  
+## Examples
+ The following code example removes the first <xref:System.Windows.Forms.TreeNode> from a <xref:System.Windows.Forms.TreeView> if its <xref:System.Windows.Forms.TreeNode.Text?displayProperty=nameWithType> property is set to "Node0". When a <xref:System.Windows.Forms.Button> is clicked, the first <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeView> is deleted using the <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*> method. This example requires that you have created a <xref:System.Windows.Forms.TreeView> and a <xref:System.Windows.Forms.Button> on a <xref:System.Windows.Forms.Form>. The first <xref:System.Windows.Forms.TreeNode> in your <xref:System.Windows.Forms.TreeView> should have a text property of "Node0."
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNode/Nodes/treenodecollection.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNode/Nodes/treenodecollection.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">.NET 6 and later versions: <paramref name="index" /> is <see langword="null" />.</exception>
@@ -1447,7 +1501,7 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
       <MemberSignature Language="VB.NET" Value="Default Public Overridable ReadOnly Property Item(key As String) As TreeNode" />
       <MemberSignature Language="F#" Value="member this.Item(string) : System.Windows.Forms.TreeNode" Usage="System.Windows.Forms.TreeNodeCollection.Item" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::TreeNode ^ default[System::String ^] { System::Windows::Forms::TreeNode ^ get(System::String ^ key); };" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode? this[string? key] { get; }" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode? this[string? key] { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1458,25 +1512,27 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the <see cref="T:System.Windows.Forms.TreeNode" /> to retrieve from the collection.</param>
         <summary>Gets the tree node with the specified key from the collection.</summary>
         <value>The <see cref="T:System.Windows.Forms.TreeNode" /> with the specified key.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
- The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> property returns `null`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
+ The key comparison is not case-sensitive. If the `key` parameter is `null` or an empty string, the <xref:System.Windows.Forms.TreeNodeCollection.Item*> property returns `null`.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1499,6 +1555,8 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1510,27 +1568,27 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <param name="node">The <see cref="T:System.Windows.Forms.TreeNode" /> to remove.</param>
         <summary>Removes the specified tree node from the tree node collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When a <xref:System.Windows.Forms.TreeNode> is removed from the tree node collection, all subsequent tree nodes are moved up one position in the collection.  
-  
- You can also remove a <xref:System.Windows.Forms.TreeNode> that you previously added by using the <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When a <xref:System.Windows.Forms.TreeNode> is removed from the tree node collection, all subsequent tree nodes are moved up one position in the collection.
+
+ You can also remove a <xref:System.Windows.Forms.TreeNode> that you previously added by using the <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*> or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods.
+
 > [!NOTE]
->  Enumerating the collection and removing nodes is not supported.  
-  
- To add new <xref:System.Windows.Forms.TreeNode> objects to the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
-   
-  
-## Examples  
- The following code example removes the selected tree node from one <xref:System.Windows.Forms.TreeView> and adds it to another if both tree node collections are not read-only. When a <xref:System.Windows.Forms.Button> is clicked, the <xref:System.Windows.Forms.TreeNode> represented by the <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> property is deleted from one <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method and added to the other <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> method. This example requires that you have a <xref:System.Windows.Forms.Form> that contains two <xref:System.Windows.Forms.TreeView> controls and a <xref:System.Windows.Forms.Button>. The <xref:System.Windows.Forms.TreeView> controls should be named `treeView1` and `treeView2`.  
-  
+>  Enumerating the collection and removing nodes is not supported.
+
+ To add new <xref:System.Windows.Forms.TreeNode> objects to the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Add*>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange*>, or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+
+
+## Examples
+ The following code example removes the selected tree node from one <xref:System.Windows.Forms.TreeView> and adds it to another if both tree node collections are not read-only. When a <xref:System.Windows.Forms.Button> is clicked, the <xref:System.Windows.Forms.TreeNode> represented by the <xref:System.Windows.Forms.TreeView.SelectedNode?displayProperty=nameWithType> property is deleted from one <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Remove*> method and added to the other <xref:System.Windows.Forms.TreeView> using the <xref:System.Windows.Forms.TreeNodeCollection.Insert*> method. This example requires that you have a <xref:System.Windows.Forms.Form> that contains two <xref:System.Windows.Forms.TreeView> controls and a <xref:System.Windows.Forms.Button>. The <xref:System.Windows.Forms.TreeView> controls should be named `treeView1` and `treeView2`.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNode/Nodes/treenodecollection.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNode/Nodes/treenodecollection.vb" id="Snippet1":::
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.Windows.Forms.TreeNodeCollection.RemoveAt(System.Int32)" />
@@ -1557,6 +1615,8 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1568,27 +1628,27 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <param name="index">The index of the <see cref="T:System.Windows.Forms.TreeNode" /> to remove.</param>
         <summary>Removes a tree node from the tree node collection at a specified index.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- When a <xref:System.Windows.Forms.TreeNode> is removed from the tree node collection, all subsequent tree nodes are moved up one position in the collection.  
-  
- You can also remove a <xref:System.Windows.Forms.TreeNode> that you previously added by using the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> or <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> methods.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ When a <xref:System.Windows.Forms.TreeNode> is removed from the tree node collection, all subsequent tree nodes are moved up one position in the collection.
+
+ You can also remove a <xref:System.Windows.Forms.TreeNode> that you previously added by using the <xref:System.Windows.Forms.TreeNodeCollection.Remove*> or <xref:System.Windows.Forms.TreeNodeCollection.Clear*> methods.
+
 > [!NOTE]
->  Enumerating the collection and removing nodes is not supported.  
-  
- To add new <xref:System.Windows.Forms.TreeNode> objects to the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, or <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> methods.  
-  
-   
-  
-## Examples  
- The following code example removes the first <xref:System.Windows.Forms.TreeNode> from a <xref:System.Windows.Forms.TreeView> if its <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> property is set to "Node0". When a <xref:System.Windows.Forms.Button> is clicked, the first <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeView> is deleted using the <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> method. This example requires that you have created a <xref:System.Windows.Forms.TreeView> and a <xref:System.Windows.Forms.Button> on a <xref:System.Windows.Forms.Form>. The first <xref:System.Windows.Forms.TreeNode> in your <xref:System.Windows.Forms.TreeView> should have a text property of "Node0."  
-  
+>  Enumerating the collection and removing nodes is not supported.
+
+ To add new <xref:System.Windows.Forms.TreeNode> objects to the collection, use the <xref:System.Windows.Forms.TreeNodeCollection.Add*>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange*>, or <xref:System.Windows.Forms.TreeNodeCollection.Insert*> methods.
+
+
+
+## Examples
+ The following code example removes the first <xref:System.Windows.Forms.TreeNode> from a <xref:System.Windows.Forms.TreeView> if its <xref:System.Windows.Forms.TreeNode.Text?displayProperty=nameWithType> property is set to "Node0". When a <xref:System.Windows.Forms.Button> is clicked, the first <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeView> is deleted using the <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt*> method. This example requires that you have created a <xref:System.Windows.Forms.TreeView> and a <xref:System.Windows.Forms.Button> on a <xref:System.Windows.Forms.Form>. The first <xref:System.Windows.Forms.TreeNode> in your <xref:System.Windows.Forms.TreeView> should have a text property of "Node0."
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/TreeNode/Nodes/treenodecollection.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/TreeNode/Nodes/treenodecollection.vb" id="Snippet2":::
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.Windows.Forms.TreeNodeCollection.Remove(System.Windows.Forms.TreeNode)" />
@@ -1601,7 +1661,7 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub RemoveByKey (key As String)" />
       <MemberSignature Language="F#" Value="abstract member RemoveByKey : string -&gt; unit&#xA;override this.RemoveByKey : string -&gt; unit" Usage="treeNodeCollection.RemoveByKey key" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RemoveByKey(System::String ^ key);" />
-      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string? key);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string? key);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1612,22 +1672,24 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="key" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="key">The name of the tree node to remove from the collection.</param>
         <summary>Removes the tree node with the specified key from the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.TreeNode.Name%2A> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.TreeNode.Name> property corresponds to the key for a <xref:System.Windows.Forms.TreeNode> in the <xref:System.Windows.Forms.TreeNodeCollection>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1652,6 +1714,8 @@ To assign <xref:System.Windows.Forms.TreeNode> objects to a specific location, o
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1691,9 +1755,11 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
         </Attribute>
@@ -1722,7 +1788,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function Add (node As Object) As Integer Implements IList.Add" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Add : obj -&gt; int&#xA;override this.System.Collections.IList.Add : obj -&gt; int" Usage="treeNodeCollection.System.Collections.IList.Add node" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.Add(System::Object ^ node) = System::Collections::IList::Add;" />
-      <MemberSignature Language="C#" Value="int IList.Add (object? node);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="int IList.Add (object? node);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Add(System.Object)</InterfaceMember>
@@ -1737,6 +1803,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1749,11 +1817,11 @@ This member is an explicit interface member implementation. It can be used only 
         <summary>Adds an object to the end of the tree node collection.</summary>
         <returns>The zero-based index value of the <see cref="T:System.Windows.Forms.TreeNode" /> that was added to the tree node collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If `node` is not a <xref:System.Windows.Forms.TreeNodeCollection>, the <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Add%2A> method will use the string returned by the <xref:System.Windows.Forms.TreeNode.ToString%2A> method of the <xref:System.Windows.Forms.TreeNode> class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If `node` is not a <xref:System.Windows.Forms.TreeNodeCollection>, the <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Add*> method will use the string returned by the <xref:System.Windows.Forms.TreeNode.ToString*> method of the <xref:System.Windows.Forms.TreeNode> class.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.Exception">
@@ -1769,7 +1837,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function Contains (node As Object) As Boolean Implements IList.Contains" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Contains : obj -&gt; bool&#xA;override this.System.Collections.IList.Contains : obj -&gt; bool" Usage="treeNodeCollection.System.Collections.IList.Contains node" />
       <MemberSignature Language="C++ CLI" Value=" virtual bool System.Collections.IList.Contains(System::Object ^ node) = System::Collections::IList::Contains;" />
-      <MemberSignature Language="C#" Value="bool IList.Contains (object? node);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="bool IList.Contains (object? node);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Contains(System.Object)</InterfaceMember>
@@ -1784,6 +1852,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1797,11 +1867,11 @@ This member is an explicit interface member implementation. It can be used only 
         <returns>
           <see langword="true" /> if <paramref name="node" /> is a member of the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If `node` is not a <xref:System.Windows.Forms.TreeNode>, the <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Contains%2A> method returns `false`. Therefore, you cannot pass in a string to determine if the collection contains a node that has the value of the string as its <xref:System.Windows.Forms.TreeNode.Text%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If `node` is not a <xref:System.Windows.Forms.TreeNode>, the <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Contains*> method returns `false`. Therefore, you cannot pass in a string to determine if the collection contains a node that has the value of the string as its <xref:System.Windows.Forms.TreeNode.Text> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1813,7 +1883,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Function IndexOf (node As Object) As Integer Implements IList.IndexOf" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.IndexOf : obj -&gt; int&#xA;override this.System.Collections.IList.IndexOf : obj -&gt; int" Usage="treeNodeCollection.System.Collections.IList.IndexOf node" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.IndexOf(System::Object ^ node) = System::Collections::IList::IndexOf;" />
-      <MemberSignature Language="C#" Value="int IList.IndexOf (object? node);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object? node);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.IndexOf(System.Object)</InterfaceMember>
@@ -1828,6 +1898,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1840,11 +1912,11 @@ This member is an explicit interface member implementation. It can be used only 
         <summary>Returns the index of the specified tree node in the collection.</summary>
         <returns>The zero-based index of the item found in the tree node collection; otherwise, -1.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If `node` is not a <xref:System.Windows.Forms.TreeNode>, the <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23IndexOf%2A> method returns -1. Therefore, you cannot pass in a string to find the node that has the value of the string as its <xref:System.Windows.Forms.TreeNode.Text%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If `node` is not a <xref:System.Windows.Forms.TreeNode>, the <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23IndexOf*> method returns -1. Therefore, you cannot pass in a string to find the node that has the value of the string as its <xref:System.Windows.Forms.TreeNode.Text> property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1856,7 +1928,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Sub Insert (index As Integer, node As Object) Implements IList.Insert" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Insert : int * obj -&gt; unit&#xA;override this.System.Collections.IList.Insert : int * obj -&gt; unit" Usage="treeNodeCollection.System.Collections.IList.Insert (index, node)" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Insert(int index, System::Object ^ node) = System::Collections::IList::Insert;" />
-      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? node);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? node);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Insert(System.Int32,System.Object)</InterfaceMember>
@@ -1871,6 +1943,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1884,18 +1958,18 @@ This member is an explicit interface member implementation. It can be used only 
         <param name="node">The <see cref="T:System.Windows.Forms.TreeNode" /> to insert into the collection.</param>
         <summary>Inserts an existing tree node in the tree node collection at the specified location.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If the <xref:System.Windows.Forms.TreeView.Sorted%2A> property is set to `true`, the `index` parameter is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Web.UI.WebControls.TreeView> is sorted again.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If the <xref:System.Windows.Forms.TreeView.Sorted> property is set to `true`, the `index` parameter is ignored. The <xref:System.Windows.Forms.TreeNode> is inserted into the tree view and the <xref:System.Web.UI.WebControls.TreeView> is sorted again.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">
-          <paramref name="node" /> is currently assigned to another <see cref="T:System.Windows.Forms.TreeView" />.  
-  
- -or-  
-  
+          <paramref name="node" /> is currently assigned to another <see cref="T:System.Windows.Forms.TreeView" />.
+
+ -or-
+
  <paramref name="node" /> is not a <see cref="T:System.Windows.Forms.TreeNode" />.</exception>
       </Docs>
     </Member>
@@ -1919,6 +1993,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1945,7 +2021,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
       <MemberSignature Language="F#" Value="member this.System.Collections.IList.Item(int) : obj with get, set" Usage="System.Collections.IList.Item" />
       <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IList::Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
-      <MemberSignature Language="C#" Value="object? System.Collections.IList.Item[int index] { get; set; }" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="object? System.Collections.IList.Item[int index] { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
@@ -1959,6 +2035,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1970,7 +2048,7 @@ This member is an explicit interface member implementation. It can be used only 
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="index" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="index">The zero-based index at which to get or set the item.</param>
@@ -1987,7 +2065,7 @@ This member is an explicit interface member implementation. It can be used only 
       <MemberSignature Language="VB.NET" Value="Sub Remove (node As Object) Implements IList.Remove" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Remove : obj -&gt; unit&#xA;override this.System.Collections.IList.Remove : obj -&gt; unit" Usage="treeNodeCollection.System.Collections.IList.Remove node" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Remove(System::Object ^ node) = System::Collections::IList::Remove;" />
-      <MemberSignature Language="C#" Value="void IList.Remove (object? node);" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Remove (object? node);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Remove(System.Object)</InterfaceMember>
@@ -2002,6 +2080,8 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2013,13 +2093,13 @@ This member is an explicit interface member implementation. It can be used only 
         <param name="node">The <see cref="T:System.Windows.Forms.TreeNode" /> to remove from the collection.</param>
         <summary>Removes the specified tree node from the tree node collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot pass in a string to remove the node that has the value of the string as its <xref:System.Windows.Forms.TreeNode.Text%2A> property.  
-  
- When a <xref:System.Windows.Forms.TreeNode> is removed from the tree node collection, all subsequent tree nodes are moved up one position in the collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot pass in a string to remove the node that has the value of the string as its <xref:System.Windows.Forms.TreeNode.Text> property.
+
+ When a <xref:System.Windows.Forms.TreeNode> is removed from the tree node collection, all subsequent tree nodes are moved up one position in the collection.
+
  ]]></format>
         </remarks>
       </Docs>

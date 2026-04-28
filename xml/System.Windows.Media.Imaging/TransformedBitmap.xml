@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TransformedBitmap&#xA;Inherits BitmapSource&#xA;Implements ISupportInitialize" />
   <TypeSignature Language="F#" Value="type TransformedBitmap = class&#xA;    inherit BitmapSource&#xA;    interface ISupportInitialize" />
   <TypeSignature Language="C++ CLI" Value="public ref class TransformedBitmap sealed : System::Windows::Media::Imaging::BitmapSource, System::ComponentModel::ISupportInitialize" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransformedBitmap extends System.Windows.Media.Imaging.BitmapSource implements class System.ComponentModel.ISupportInitialize" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransformedBitmap extends System.Windows.Media.Imaging.BitmapSource implements class System.ComponentModel.ISupportInitialize" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Media.Imaging.BitmapSource</BaseTypeName>
@@ -32,9 +34,9 @@
 ## Remarks
  <xref:System.Windows.Media.Imaging.TransformedBitmap> supports only orthogonal transforms such as rotation transforms of 90° increments and scale transforms. Transforms that skew the image are not supported.
 
- <xref:System.Windows.Media.Imaging.TransformedBitmap> implements the <xref:System.ComponentModel.ISupportInitialize> interface to optimize initialization on multiple properties. Property changes can only occur during object initialization. Call <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> to signal that initialization has begun and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> to signal that initialization has completed. After initialization, property changes are ignored.
+ <xref:System.Windows.Media.Imaging.TransformedBitmap> implements the <xref:System.ComponentModel.ISupportInitialize> interface to optimize initialization on multiple properties. Property changes can only occur during object initialization. Call <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit*> to signal that initialization has begun and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit*> to signal that initialization has completed. After initialization, property changes are ignored.
 
- <xref:System.Windows.Media.Imaging.TransformedBitmap> objects created using the <xref:System.Windows.Media.Imaging.TransformedBitmap.%23ctor%28System.Windows.Media.Imaging.BitmapSource%2CSystem.Windows.Media.Transform%29> constructor are automatically initialized and property changes are ignored.
+ <xref:System.Windows.Media.Imaging.TransformedBitmap> objects created using the <xref:System.Windows.Media.Imaging.TransformedBitmap.%23ctor(System.Windows.Media.Imaging.BitmapSource,System.Windows.Media.Transform)> constructor are automatically initialized and property changes are ignored.
 
  Metadata tags related to image data must be updated if an image is saved to a file after a transform is applied.
 
@@ -68,6 +70,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -76,7 +80,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Media.Imaging.TransformedBitmap> implements the <xref:System.ComponentModel.ISupportInitialize> interface to optimize initialization on multiple properties. To initialize a <xref:System.Windows.Media.Imaging.TransformedBitmap> created using this constructor, you must perform property initialization between <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> calls.
+ <xref:System.Windows.Media.Imaging.TransformedBitmap> implements the <xref:System.ComponentModel.ISupportInitialize> interface to optimize initialization on multiple properties. To initialize a <xref:System.Windows.Media.Imaging.TransformedBitmap> created using this constructor, you must perform property initialization between <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit*> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit*> calls.
 
  ]]></format>
         </remarks>
@@ -99,6 +103,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="source" Type="System.Windows.Media.Imaging.BitmapSource" />
@@ -133,7 +139,7 @@
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void BeginInit();" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">M:System.ComponentModel.ISupportInitialize.BeginInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.BeginInit</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -144,6 +150,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -155,15 +163,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Property initialization must be done between <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> calls. Once the <xref:System.Windows.Media.Imaging.TransformedBitmap> has been initialized, property changes are ignored.
+ Property initialization must be done between <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit*> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit*> calls. Once the <xref:System.Windows.Media.Imaging.TransformedBitmap> has been initialized, property changes are ignored.
 
 
 
 ## Examples
- The following example demonstrates how to initialize a <xref:System.Windows.Media.Imaging.TransformedBitmap> with a set of properties by using the <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> methods.
+ The following example demonstrates how to initialize a <xref:System.Windows.Media.Imaging.TransformedBitmap> with a set of properties by using the <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit*> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit*> methods.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Media/PixelFormat/Overview/TransformedBitmapExample.cs" id="Snippettransformedbitmappropinit":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/TransformedBitmapExample.vb" id="Snippettransformedbitmappropinit":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Media/PixelFormat/Overview/TransformedBitmapExample.vb" id="Snippettransformedbitmappropinit":::
 
  ]]></format>
         </remarks>
@@ -193,6 +201,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Imaging.TransformedBitmap</ReturnType>
@@ -207,7 +217,7 @@
 ## Remarks
  This method is used to produce modifiable copies of frozen <xref:System.Windows.Freezable> objects (or any <xref:System.Windows.Freezable> object). For convenience, this method shadows the inherited version with a strongly typed implementation.
 
- For more information, see <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.
+ For more information, see <xref:System.Windows.Freezable.Clone*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -230,6 +240,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -260,6 +272,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Imaging.TransformedBitmap</ReturnType>
@@ -274,7 +288,7 @@
 ## Remarks
  This method is used to produce modifiable copies of frozen <xref:System.Windows.Freezable> objects (or any <xref:System.Windows.Freezable> object). For convenience, this method shadows the inherited version with a strongly typed implementation.
 
- For more information, see <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.
+ For more information, see <xref:System.Windows.Freezable.CloneCurrentValue*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -297,6 +311,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -327,6 +343,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Freezable</ReturnType>
@@ -347,7 +365,7 @@
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndInit();" />
       <MemberType>Method</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">M:System.ComponentModel.ISupportInitialize.EndInit</InterfaceMember>
+        <InterfaceMember>M:System.ComponentModel.ISupportInitialize.EndInit</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -358,6 +376,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -375,15 +395,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Property initialization must be done between <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> calls. Once the <xref:System.Windows.Media.Imaging.TransformedBitmap> has been initialized, property changes are ignored.
+ Property initialization must be done between <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit*> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit*> calls. Once the <xref:System.Windows.Media.Imaging.TransformedBitmap> has been initialized, property changes are ignored.
 
 
 
 ## Examples
- The following example demonstrates how to initialize a <xref:System.Windows.Media.Imaging.TransformedBitmap> with a set of properties by using the <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit%2A> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit%2A> methods.
+ The following example demonstrates how to initialize a <xref:System.Windows.Media.Imaging.TransformedBitmap> with a set of properties by using the <xref:System.Windows.Media.Imaging.TransformedBitmap.BeginInit*> and <xref:System.Windows.Media.Imaging.TransformedBitmap.EndInit*> methods.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Media/PixelFormat/Overview/TransformedBitmapExample.cs" id="Snippettransformedbitmappropinit":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/TransformedBitmapExample.vb" id="Snippettransformedbitmappropinit":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Media/PixelFormat/Overview/TransformedBitmapExample.vb" id="Snippettransformedbitmappropinit":::
 
  ]]></format>
         </remarks>
@@ -417,6 +437,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -447,6 +469,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -477,6 +501,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
@@ -488,7 +514,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can chain a <xref:System.Windows.Media.Imaging.TransformedBitmap> to another <xref:System.Windows.Media.Imaging.BitmapSource> by setting the <xref:System.Windows.Media.Imaging.TransformedBitmap.Source%2A> property of the <xref:System.Windows.Media.Imaging.TransformedBitmap> to the <xref:System.Windows.Media.Imaging.BitmapSource> that you want. See [How to: Chain BitmapSource Objects Together](/dotnet/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together) for an example of chaining.
+ You can chain a <xref:System.Windows.Media.Imaging.TransformedBitmap> to another <xref:System.Windows.Media.Imaging.BitmapSource> by setting the <xref:System.Windows.Media.Imaging.TransformedBitmap.Source> property of the <xref:System.Windows.Media.Imaging.TransformedBitmap> to the <xref:System.Windows.Media.Imaging.BitmapSource> that you want. See [How to: Chain BitmapSource Objects Together](/dotnet/desktop/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together) for an example of chaining.
 
 <a name="dependencyPropertyInfo_Source"></a>
 ## Dependency Property Information
@@ -519,6 +545,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -545,6 +573,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Transform</ReturnType>
@@ -569,12 +599,12 @@
 
 
 ## Examples
- The following example shows how to apply a <xref:System.Windows.Media.Imaging.TransformedBitmap.Transform%2A> to a bitmap.
+ The following example shows how to apply a <xref:System.Windows.Media.Imaging.TransformedBitmap.Transform*> to a bitmap.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Media.Imaging/BitmapImage/Overview/TransformedImageExample.xaml" id="Snippettransformedxaml2":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Media.Imaging/BitmapImage/Overview/TransformedImageExample.xaml.cs" id="Snippettransformedcsharp1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb" id="Snippettransformedcsharp1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Media.Imaging/BitmapImage/Overview/TransformedImageExample.xaml.vb" id="Snippettransformedcsharp1":::
 
  ]]></format>
         </remarks>
@@ -597,6 +627,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class RibbonContextualTabGroup&#xA;Inherits Control" />
   <TypeSignature Language="F#" Value="type RibbonContextualTabGroup = class&#xA;    inherit Control" />
   <TypeSignature Language="C++ CLI" Value="public ref class RibbonContextualTabGroup : System::Windows::Controls::Control" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonContextualTabGroup extends System.Windows.Controls.Control" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonContextualTabGroup extends System.Windows.Controls.Control" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
@@ -33,21 +35,18 @@
 ## Remarks
  You use a *contextual tab* to display groups of commands that are relevant only in a particular context. Contextual tab groups are shown or hidden based on specified criteria. For example, an Ink Tools tab group might be shown when tablet input is detected, or a Picture Tools tab group might be shown when an Image object is selected.
 
-
-
 ## Examples
  The following example shows a <xref:System.Windows.Controls.Ribbon.RibbonTab> named **Pens** that is in the **Ink Tools** contextual tab group.
 
 ```xaml
 </ribbon:Ribbon>
-    <ribbon:RibbonTab Name="Pens" Header="Pens" ContextualTabGroupHeader="Ink Tools" >
+    <ribbon:RibbonTab Name="Pens" Header="Pens" ContextualTabGroupHeader="Ink Tools" >
     <!-- Ribbon Tab Content -->
-    </ribbon:RibbonTab>
-    <ribbon:Ribbon.ContextualTabGroups>
-        <ribbon:RibbonContextualTabGroup Header="Ink Tools" Visibility="Visible" Background="Green" />
-    </ribbon:Ribbon.ContextualTabGroups>
+    </ribbon:RibbonTab>
+    <ribbon:Ribbon.ContextualTabGroups>
+        <ribbon:RibbonContextualTabGroup Header="Ink Tools" Visibility="Visible" Background="Green" />
+    </ribbon:Ribbon.ContextualTabGroups>
 </ribbon:Ribbon>
-
 ```
 
  ]]></format>
@@ -69,6 +68,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -92,13 +93,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the content of the contextual tab group header.</summary>
-        <value>The content of the contextual tab group header. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/framework/wpf/advanced/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
+        <value>The content of the contextual tab group header. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/desktop/wpf/properties/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
 
@@ -132,6 +135,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -157,18 +162,20 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the format that is used to display the header content as a string.</summary>
-        <value>The format that is used to display the header content as a string. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/framework/wpf/advanced/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
+        <value>The format that is used to display the header content as a string. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/desktop/wpf/properties/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormat%2A> property is only used when there is no header template.
+ The <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderStringFormat> property is only used when there is no header template.
 
 <a name="dependencyPropertyInfo_HeaderStringFormat"></a>
 ## Dependency Property Information
@@ -200,6 +207,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -225,13 +234,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DataTemplate</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the <see cref="T:System.Windows.DataTemplate" /> that is used to display the contents of the header.</summary>
-        <value>A template that specifies the visualization of the header. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/framework/wpf/advanced/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
+        <value>A template that specifies the visualization of the header. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/desktop/wpf/properties/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
 
@@ -267,6 +278,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -292,18 +305,20 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.DataTemplateSelector</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the custom logic for selecting a <see cref="T:System.Windows.DataTemplate" /> that is used to display the contents of the header.</summary>
-        <value>A custom <see cref="T:System.Windows.Controls.DataTemplateSelector" /> object that provides logic and returns a <see cref="T:System.Windows.DataTemplate" />. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/framework/wpf/advanced/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
+        <value>A custom <see cref="T:System.Windows.Controls.DataTemplateSelector" /> object that provides logic and returns a <see cref="T:System.Windows.DataTemplate" />. The registered default is <see langword="null" />. For more information about what can influence the value, see <see href="/dotnet/desktop/wpf/properties/dependency-property-value-precedence">Dependency Property Value Precedence</see>.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You use the <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate%2A> property to specify the visualization of the header. If you have more than one template defined and want to specify logic that selects a template to use, then you use this property. This property is ignored if the <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate%2A> property is set.
+ You use the <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate> property to specify the visualization of the header. If you have more than one template defined and want to specify logic that selects a template to use, then you use this property. This property is ignored if the <xref:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.HeaderTemplate> property is set.
 
 <a name="dependencyPropertyInfo_HeaderTemplateSelector"></a>
 ## Dependency Property Information
@@ -335,6 +350,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -360,6 +377,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -387,6 +406,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -418,6 +439,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -434,7 +457,7 @@
 ## Remarks
  This method captures the mouse when a single-click occurs on the contextual tab group. It minimizes or maximizes the window when a double-click occurs.
 
- This implementation marks the <xref:System.Windows.UIElement.MouseLeftButtonDown> event as handled by setting the <xref:System.Windows.RoutedEventArgs.Handled%2A> property of the event data to `true`.
+ This implementation marks the <xref:System.Windows.UIElement.MouseLeftButtonDown> event as handled by setting the <xref:System.Windows.RoutedEventArgs.Handled> property of the event data to `true`.
 
  ]]></format>
         </remarks>
@@ -456,6 +479,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -472,7 +497,7 @@
 ## Remarks
  This method releases the mouse capture and sends click notifications to the <xref:System.Windows.Controls.Ribbon.Ribbon>.
 
- This implementation marks the <xref:System.Windows.UIElement.MouseUp> event as handled by setting the <xref:System.Windows.RoutedEventArgs.Handled%2A> property of the event data to `true`.
+ This implementation marks the <xref:System.Windows.UIElement.MouseUp> event as handled by setting the <xref:System.Windows.RoutedEventArgs.Handled> property of the event data to `true`.
 
  ]]></format>
         </remarks>
@@ -494,6 +519,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.Ribbon.Ribbon</ReturnType>
@@ -535,6 +562,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

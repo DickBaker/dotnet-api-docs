@@ -41,7 +41,7 @@
 
  The <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> instance accepts messages serialized in either binary or SOAP format.
 
- A <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> object has associated configuration properties that can be set at run time either in a configuration file (by invoking the static <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> method) or programmatically (by passing an <xref:System.Collections.IDictionary> collection to the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.%23ctor%2A> constructor). For a list of these configuration properties, see the documentation for the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.%23ctor%2A> constructor.
+ A <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> object has associated configuration properties that can be set at run time either in a configuration file (by invoking the static <xref:System.Runtime.Remoting.RemotingConfiguration.Configure*?displayProperty=nameWithType> method) or programmatically (by passing an <xref:System.Collections.IDictionary> collection to the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.%23ctor*> constructor). For a list of these configuration properties, see the documentation for the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.%23ctor*> constructor.
 
 > [!CAUTION]
 >  When setting the `exclusiveAddressUse` property to `false` in the `properties` argument, several <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> objects can be registered for the same named pipe. In such a case requests can go to any of the channels registered. This setting is considered secure only if ALCs are also used.
@@ -131,7 +131,6 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- For more information about channel configuration properties, see [Channel and Formatter Configuration Properties](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)).
 
  If you do not require sink functionality, set the `sinkProvider` parameter to `null`.
 
@@ -148,7 +147,6 @@
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)">Channel and Formatter Configuration Properties</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -176,7 +174,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This constructor sets the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName%2A> property by using the `name` parameter. If you want to register more than one channel, each channel must have a unique name.
+ This constructor sets the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName> property by using the `name` parameter. If you want to register more than one channel, each channel must have a unique name.
 
 
 
@@ -217,7 +215,6 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- For more information about channel configuration properties, see [Channel and Formatter Configuration Properties](https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)).
 
  If you do not require sink functionality, set the `sinkProvider` parameter to `null`. If you do not require a security descriptor, set the `securityDescriptor` parameter to `null`.
 
@@ -226,7 +223,6 @@
 
  ]]></format>
         </remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/kw7c6kwc(v=vs.100)">Channel and Formatter Configuration Properties</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -256,7 +252,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This constructor sets the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName%2A> property by using the `name` parameter. If you want to register more than one channel, each channel must have a unique name.
+ This constructor sets the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName> property by using the `name` parameter. If you want to register more than one channel, each channel must have a unique name.
 
  If you do not require sink functionality, set the `sinkProvider` parameter to `null`.
 
@@ -303,7 +299,7 @@
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelData%2A> property.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelData> property.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel/CPP/server.cpp" id="Snippet15":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Ipc/IpcServerChannel/.ctor/server.cs" id="Snippet15":::
@@ -338,12 +334,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Every registered channel has a unique name. The name is used to retrieve a specific channel when calling the <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel%2A> method. The default name is "ipc server".
+ Every registered channel has a unique name. The name is used to retrieve a specific channel when calling the <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel*> method. The default name is "ipc server".
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName%2A> property.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName> property.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel/CPP/server.cpp" id="Snippet12":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Ipc/IpcServerChannel/.ctor/server.cs" id="Snippet12":::
@@ -383,7 +379,7 @@
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelPriority%2A> property.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelPriority> property.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel/CPP/server.cpp" id="Snippet13":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Ipc/IpcServerChannel/.ctor/server.cs" id="Snippet13":::
@@ -421,7 +417,7 @@
 
 
 ## Examples
- The following code example illustrates how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetChannelUri%2A> method.
+ The following code example illustrates how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetChannelUri*> method.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/Remoting_Ipc/CPP/server.cpp" id="Snippet12":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Ipc/IpcClientChannel/Overview/server.cs" id="Snippet12":::
@@ -460,12 +456,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method is used by the <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject%2A?displayProperty=nameWithType> method.
+ This method is used by the <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject*?displayProperty=nameWithType> method.
 
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetUrlsForUri%2A> method.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetUrlsForUri*> method.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel/CPP/server.cpp" id="Snippet19":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Ipc/IpcServerChannel/.ctor/server.cs" id="Snippet19":::
@@ -536,7 +532,7 @@
 
 
 ## Examples
- The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.Parse%2A> method.
+ The following code example shows how to use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.Parse*> method.
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcServerChannel/CPP/server.cpp" id="Snippet19":::
  :::code language="csharp" source="~/snippets/csharp/System.Runtime.Remoting.Channels.Ipc/IpcServerChannel/.ctor/server.cs" id="Snippet19":::
@@ -576,7 +572,7 @@
 ## Remarks
  It is not necessary to call this method to begin listening on a newly initialized channel.
 
- Use this method to restart listening on a channel after the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StopListening%2A> method has been called to stop listening on the channel.
+ Use this method to restart listening on a channel after the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StopListening*> method has been called to stop listening on the channel.
 
  The data object can be used to pass a specific initialization state to the channel. If you do not want to pass a specific state to the channel, pass `null` as the `data` parameter value.
 
@@ -614,7 +610,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use this method to stop listening on a channel. To restart listening, use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StartListening%2A> method.
+ Use this method to stop listening on a channel. To restart listening, use the <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StartListening*> method.
 
  The data object can be used to pass a specific initialization state to the channel. If you do not want to pass a specific state to the channel, pass `null` as the `data` parameter value.
 

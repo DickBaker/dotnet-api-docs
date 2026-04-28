@@ -1,6 +1,6 @@
 <Type Name="Cer" FullName="System.Runtime.ConstrainedExecution.Cer">
   <TypeSignature Language="C#" Value="public enum Cer" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Cer extends System.Enum" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Cer extends System.Enum" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Runtime.ConstrainedExecution.Cer" />
   <TypeSignature Language="VB.NET" Value="Public Enum Cer" />
   <TypeSignature Language="F#" Value="type Cer = " />
@@ -27,8 +27,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -39,7 +43,7 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Attributes>
-    <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Obsolete("The Constrained Execution Region (CER) feature is not supported.", DiagnosticId="SYSLIB0004", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("The Constrained Execution Region (CER) feature is not supported.", DiagnosticId="SYSLIB0004", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
@@ -51,31 +55,31 @@
   <Docs>
     <summary>Specifies a method's behavior when called within a constrained execution region.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
+      <format type="text/markdown"><![CDATA[
+
 ## Remarks
- 
-The <xref:System.Runtime.ConstrainedExecution.Cer> enumeration specifies the behavior of a method, type, or assembly within a constrained execution region (CER). Use one of the three available values to indicate that the entity will succeed, has no knowledge of a CER, or might (deterministically) be able to report success or failure.  
-  
-A CER provides guarantees that the region of code will execute uninterrupted even if an asynchronous exception such as an aborted thread out-of-memory exception, or stack overflow is raised.  
-  
+
+The <xref:System.Runtime.ConstrainedExecution.Cer> enumeration specifies the behavior of a method, type, or assembly within a constrained execution region (CER). Use one of the three available values to indicate that the entity will succeed, has no knowledge of a CER, or might (deterministically) be able to report success or failure.
+
+A CER provides guarantees that the region of code will execute uninterrupted even if an asynchronous exception such as an aborted thread out-of-memory exception, or stack overflow is raised.
+
 However, the `Cer.None` enumeration value indicates that the method, type, or assembly has no concept of a CER. It does not take advantage of CER guarantees. This implies the following:
 
-- In the face of exceptional conditions the method might fail.  
-  
-- The method might or might not report that it failed (it is non-deterministic).  
-  
-- The method is not written with CERs in mind (which is the most likely scenario).  
-  
-If a method, type, or assembly is not explicitly marked to succeed, it is implicitly marked as `Cer.None`.  
+- In the face of exceptional conditions the method might fail.
+
+- The method might or might not report that it failed (it is non-deterministic).
+
+- The method is not written with CERs in mind (which is the most likely scenario).
+
+If a method, type, or assembly is not explicitly marked to succeed, it is implicitly marked as `Cer.None`.
 
 ## Examples
 
-The following code example demonstrates the use of the <xref:System.Runtime.ConstrainedExecution.Cer> enumeration when specifying a constrained execution region for a method. This code example is part of a larger example provided for the <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.%23ctor%2A> constructor.  
-  
+The following code example demonstrates the use of the <xref:System.Runtime.ConstrainedExecution.Cer> enumeration when specifying a constrained execution region for a method. This code example is part of a larger example provided for the <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.%23ctor*> constructor.
+
 :::code language="csharp" source="~/snippets/csharp/System.Runtime.ConstrainedExecution/Cer/Overview/program.cs" id="Snippet3":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/vb/program.vb" id="Snippet3":::  
-  
+:::code language="vb" source="~/snippets/visualbasic/System.Runtime.ConstrainedExecution/Cer/Overview/program.vb" id="Snippet3":::
+
  ]]></format>
     </remarks>
     <altmember cref="M:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions" />
@@ -113,6 +117,8 @@ The following code example demonstrates the use of the <xref:System.Runtime.Cons
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>
@@ -151,6 +157,8 @@ The following code example demonstrates the use of the <xref:System.Runtime.Cons
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>
@@ -189,6 +197,8 @@ The following code example demonstrates the use of the <xref:System.Runtime.Cons
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>

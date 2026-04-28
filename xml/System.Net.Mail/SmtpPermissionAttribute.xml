@@ -1,6 +1,6 @@
 <Type Name="SmtpPermissionAttribute" FullName="System.Net.Mail.SmtpPermissionAttribute">
   <TypeSignature Language="C#" Value="public sealed class SmtpPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SmtpPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SmtpPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.Net.Mail.SmtpPermissionAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SmtpPermissionAttribute&#xA;Inherits CodeAccessSecurityAttribute" />
   <TypeSignature Language="F#" Value="type SmtpPermissionAttribute = class&#xA;    inherit CodeAccessSecurityAttribute" />
@@ -21,7 +21,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Security.Permissions" FromVersion="11.0.0.0" To="System" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
   </Base>
@@ -31,7 +36,7 @@
       <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Struct, AllowMultiple=true, Inherited=false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Struct, AllowMultiple=true, Inherited=false)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Obsolete("Code Access Security is not supported or honored by the runtime.", DiagnosticId="SYSLIB0003", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("Code Access Security is not supported or honored by the runtime.", DiagnosticId="SYSLIB0003", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
@@ -43,16 +48,16 @@
   <Docs>
     <summary>Controls access to Simple Mail Transport Protocol (SMTP) servers.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
+      <format type="text/markdown"><![CDATA[
+
 ## Remarks
 
 [!INCLUDE[cas-deprecated](~/includes/cas-deprecated.md)]
 
- The <xref:System.Net.Mail.SmtpPermission> and <xref:System.Net.Mail.SmtpPermissionAttribute> classes control access to SMTP host computers. The <xref:System.Net.Mail.SmtpClient> class demands an <xref:System.Net.Mail.SmtpPermission> when sending electronic mail to the SMTP host for delivery.  
-  
- The <xref:System.Net.Mail.SmtpAccess> enumeration specifies the level of access controlled by an instance of this permission.  
-  
+ The <xref:System.Net.Mail.SmtpPermission> and <xref:System.Net.Mail.SmtpPermissionAttribute> classes control access to SMTP host computers. The <xref:System.Net.Mail.SmtpClient> class demands an <xref:System.Net.Mail.SmtpPermission> when sending electronic mail to the SMTP host for delivery.
+
+ The <xref:System.Net.Mail.SmtpAccess> enumeration specifies the level of access controlled by an instance of this permission.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -79,6 +84,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -93,11 +100,11 @@
         <param name="action">One of the <see cref="T:System.Security.Permissions.SecurityAction" /> values that specifies the permission behavior.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Mail.SmtpPermissionAttribute" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The security action defines which callers must have the permission.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The security action defines which callers must have the permission.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">
@@ -126,6 +133,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -144,11 +153,11 @@
         <summary>Gets or sets the level of access to SMTP servers controlled by the attribute.</summary>
         <value>A <see cref="T:System.String" /> value. Valid values are "Connect" and "None".</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If you specify an invalid value when setting this property, the <xref:System.Net.Mail.SmtpPermissionAttribute.CreatePermission%2A> method will throw an <xref:System.ArgumentException> when called by the system.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If you specify an invalid value when setting this property, the <xref:System.Net.Mail.SmtpPermissionAttribute.CreatePermission*> method will throw an <xref:System.ArgumentException> when called by the system.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -175,6 +184,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.IPermission</ReturnType>
@@ -184,13 +195,13 @@
         <summary>Creates a permission object that can be stored with the <see cref="T:System.Security.Permissions.SecurityAction" /> in an assembly's metadata.</summary>
         <returns>An <see cref="T:System.Net.Mail.SmtpPermission" /> instance.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method should only be called by the security system, never by application code.  
-  
- At compile time, attributes are converted into security declarations and stored in Microsoft intermediate language (MSIL) metadata. At run time, the security declarations in metadata are used to create permission objects that map to the state described in the metadata.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method should only be called by the security system, never by application code.
+
+ At compile time, attributes are converted into security declarations and stored in Microsoft intermediate language (MSIL) metadata. At run time, the security declarations in metadata are used to create permission objects that map to the state described in the metadata.
+
  ]]></format>
         </remarks>
       </Docs>

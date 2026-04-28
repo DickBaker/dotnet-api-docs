@@ -18,8 +18,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="System.Design" FromVersion="10.0.0.0" To="System.Windows.Forms.Design" ToVersion="10.0.0.0" FrameworkAlternate="windowsdesktop-10.0" />
+    <TypeForwarding From="System.Design" FromVersion="11.0.0.0" To="System.Windows.Forms.Design" ToVersion="11.0.0.0" FrameworkAlternate="windowsdesktop-11.0" />
     <TypeForwarding From="System.Design" FromVersion="4.0.0.0" To="System.Windows.Forms.Design" ToVersion="4.0.0.0" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1" />
     <TypeForwarding From="System.Design" FromVersion="5.0.0.0" To="System.Windows.Forms.Design" ToVersion="5.0.0.0" FrameworkAlternate="windowsdesktop-5.0" />
     <TypeForwarding From="System.Design" FromVersion="6.0.0.0" To="System.Windows.Forms.Design" ToVersion="6.0.0.0" FrameworkAlternate="windowsdesktop-6.0" />
@@ -32,7 +36,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -40,11 +44,11 @@
   <Docs>
     <summary>Serializes collections.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> class can create either statements or expressions. If the object to serialize is an array, the <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> will create an expression and assign it to the statement in the current context stack. If the object is a collection with an *AddRange* or similar method, the <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> will create a statement that calls the method.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> class can create either statements or expressions. If the object to serialize is an array, the <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> will create an expression and assign it to the statement in the current context stack. If the object is a collection with an *AddRange* or similar method, the <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer> will create a statement that calls the method.
+
  ]]></format>
     </remarks>
     <related type="Article" href="/dotnet/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation">Dynamic Source Code Generation and Compilation</related>
@@ -70,6 +74,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -104,6 +110,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -117,11 +125,11 @@
         <returns>
           <see langword="true" /> if the <paramref name="method" /> supports serialization; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Checks the `method` attributes to see if they support serialization.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Checks the `method` attributes to see if they support serialization.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -137,7 +145,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Serialize (manager As IDesignerSerializationManager, value As Object) As Object" />
       <MemberSignature Language="F#" Value="override this.Serialize : System.ComponentModel.Design.Serialization.IDesignerSerializationManager * obj -&gt; obj" Usage="collectionCodeDomSerializer.Serialize (manager, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ Serialize(System::ComponentModel::Design::Serialization::IDesignerSerializationManager ^ manager, System::Object ^ value);" />
-      <MemberSignature Language="C#" Value="public override object? Serialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public override object? Serialize (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -152,6 +160,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -166,21 +176,21 @@
         <summary>Serializes the given collection into a CodeDOM object.</summary>
         <returns>A CodeDOM object representing <paramref name="value" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Collections are serialized as follows:  
-  
-1.  If the collection is an array, the array is written.  
-  
-    1.  If the collection has an *AddRange* method, it will be called and provided with an array.  
-  
-    2.  If the collection has an *Add* method, it will be called repeatedly until all items in the collection are written.  
-  
-2.  If the collection is an <xref:System.Collections.IList>, the <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize%2A> method will cast the collection to an <xref:System.Collections.IList> and add through that interface.  
-  
-    1.  If the collection has no *Add* method, but is marked with <xref:System.ComponentModel.DesignerSerializationVisibility.Content?displayProperty=nameWithType>, <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize%2A> will enumerate the collection and serialize each element.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Collections are serialized as follows:
+
+1.  If the collection is an array, the array is written.
+
+    1.  If the collection has an *AddRange* method, it will be called and provided with an array.
+
+    2.  If the collection has an *Add* method, it will be called repeatedly until all items in the collection are written.
+
+2.  If the collection is an <xref:System.Collections.IList>, the <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize*> method will cast the collection to an <xref:System.Collections.IList> and add through that interface.
+
+    1.  If the collection has no *Add* method, but is marked with <xref:System.ComponentModel.DesignerSerializationVisibility.Content?displayProperty=nameWithType>, <xref:System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer.Serialize*> will enumerate the collection and serialize each element.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -196,7 +206,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function SerializeCollection (manager As IDesignerSerializationManager, targetExpression As CodeExpression, targetType As Type, originalCollection As ICollection, valuesToSerialize As ICollection) As Object" />
       <MemberSignature Language="F#" Value="abstract member SerializeCollection : System.ComponentModel.Design.Serialization.IDesignerSerializationManager * System.CodeDom.CodeExpression * Type * System.Collections.ICollection * System.Collections.ICollection -&gt; obj&#xA;override this.SerializeCollection : System.ComponentModel.Design.Serialization.IDesignerSerializationManager * System.CodeDom.CodeExpression * Type * System.Collections.ICollection * System.Collections.ICollection -&gt; obj" Usage="collectionCodeDomSerializer.SerializeCollection (manager, targetExpression, targetType, originalCollection, valuesToSerialize)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Object ^ SerializeCollection(System::ComponentModel::Design::Serialization::IDesignerSerializationManager ^ manager, System::CodeDom::CodeExpression ^ targetExpression, Type ^ targetType, System::Collections::ICollection ^ originalCollection, System::Collections::ICollection ^ valuesToSerialize);" />
-      <MemberSignature Language="C#" Value="protected virtual object? SerializeCollection (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeExpression? targetExpression, Type targetType, System.Collections.ICollection originalCollection, System.Collections.ICollection valuesToSerialize);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual object? SerializeCollection (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, System.CodeDom.CodeExpression? targetExpression, Type targetType, System.Collections.ICollection originalCollection, System.Collections.ICollection valuesToSerialize);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -211,6 +221,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -219,7 +231,7 @@
         <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
         <Parameter Name="targetExpression" Type="System.CodeDom.CodeExpression">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -238,11 +250,11 @@
         <summary>Serializes the given collection.</summary>
         <returns>Serialized collection if the serialization process succeeded; otherwise, <see langword="null" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.CodeDom.CodeExpression> that refers to the collection can be `null`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.CodeDom.CodeExpression> that refers to the collection can be `null`.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">

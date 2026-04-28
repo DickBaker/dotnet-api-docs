@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,25 +24,25 @@
   <Docs>
     <summary>Displays a message box.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A message box is a prefabricated modal dialog box that displays a text message to a user. You show a message box by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class. The text message that is displayed is the string argument that you pass to <xref:System.Windows.MessageBox.Show%2A>. Several overloads of the <xref:System.Windows.MessageBox.Show%2A> method also enables you to provide a title bar caption.  
-  
- To enable a user to close a message box, <xref:System.Windows.MessageBox.Show%2A> displays a message box that has an **OK** button and a **Close** button in the title bar.  
-  
- You can also use a message box to ask a user a question. The user answers by clicking one of several buttons that you specify to display by using the <xref:System.Windows.MessageBoxButton> enumeration. You can pass this enumeration to several overloads of the <xref:System.Windows.MessageBox.Show%2A> method. The default value of the <xref:System.Windows.MessageBoxButton> enumeration is <xref:System.Windows.MessageBoxButton.OK>.  
-  
- You can determine which button a user clicks by examining the value that <xref:System.Windows.MessageBox.Show%2A> returns. The return value is a value of the <xref:System.Windows.MessageBoxResult> enumeration, where each value equates to one of the buttons that a message box can display. The default value for message box is <xref:System.Windows.MessageBoxResult.OK> because **OK** is the default message box button. However, some overloads of the <xref:System.Windows.MessageBox.Show%2A> method enable you to provide a different <xref:System.Windows.MessageBoxResult> default value.  
-  
- Message boxes can communicate information and can ask questions that have varying degrees of importance. Message boxes use icons to indicate importance. For example, icons can indicate whether the message is informational, is a warning, or is important. The <xref:System.Windows.MessageBoxImage> enumeration encapsulates the set of possible message box icons. By default, a message box does not display an icon. However, you can pass a <xref:System.Windows.MessageBoxImage> value to one of several <xref:System.Windows.MessageBox.Show%2A> method overloads in order to specify that the message box includes an icon.  
-  
- Message boxes sometimes provide special functionality, such as right-to-left reading. You can customize the behavior of a message box by using one or more <xref:System.Windows.MessageBoxOptions> enumeration values that are accepted by some overloads of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
- Message boxes always have an owner window. By default, the owner of a message box is the window that is currently active in an application at the time that a message box is opened. However, you can specify another owner for the <xref:System.Windows.Window> by using one of several <xref:System.Windows.MessageBox.Show%2A> overloads. For more information about owner windows, see <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>.  
-  
- For more information, see [MessageBox Sample](https://go.microsoft.com/fwlink/?LinkID=160023).  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A message box is a prefabricated modal dialog box that displays a text message to a user. You show a message box by calling the static <xref:System.Windows.MessageBox.Show*> method of the <xref:System.Windows.MessageBox> class. The text message that is displayed is the string argument that you pass to <xref:System.Windows.MessageBox.Show*>. Several overloads of the <xref:System.Windows.MessageBox.Show*> method also enables you to provide a title bar caption.
+
+ To enable a user to close a message box, <xref:System.Windows.MessageBox.Show*> displays a message box that has an **OK** button and a **Close** button in the title bar.
+
+ You can also use a message box to ask a user a question. The user answers by clicking one of several buttons that you specify to display by using the <xref:System.Windows.MessageBoxButton> enumeration. You can pass this enumeration to several overloads of the <xref:System.Windows.MessageBox.Show*> method. The default value of the <xref:System.Windows.MessageBoxButton> enumeration is <xref:System.Windows.MessageBoxButton.OK>.
+
+ You can determine which button a user clicks by examining the value that <xref:System.Windows.MessageBox.Show*> returns. The return value is a value of the <xref:System.Windows.MessageBoxResult> enumeration, where each value equates to one of the buttons that a message box can display. The default value for message box is <xref:System.Windows.MessageBoxResult.OK> because **OK** is the default message box button. However, some overloads of the <xref:System.Windows.MessageBox.Show*> method enable you to provide a different <xref:System.Windows.MessageBoxResult> default value.
+
+ Message boxes can communicate information and can ask questions that have varying degrees of importance. Message boxes use icons to indicate importance. For example, icons can indicate whether the message is informational, is a warning, or is important. The <xref:System.Windows.MessageBoxImage> enumeration encapsulates the set of possible message box icons. By default, a message box does not display an icon. However, you can pass a <xref:System.Windows.MessageBoxImage> value to one of several <xref:System.Windows.MessageBox.Show*> method overloads in order to specify that the message box includes an icon.
+
+ Message boxes sometimes provide special functionality, such as right-to-left reading. You can customize the behavior of a message box by using one or more <xref:System.Windows.MessageBoxOptions> enumeration values that are accepted by some overloads of the <xref:System.Windows.MessageBox.Show*> method.
+
+ Message boxes always have an owner window. By default, the owner of a message box is the window that is currently active in an application at the time that a message box is opened. However, you can specify another owner for the <xref:System.Windows.Window> by using one of several <xref:System.Windows.MessageBox.Show*> overloads. For more information about owner windows, see <xref:System.Windows.Window.Owner*?displayProperty=nameWithType>.
+
+ For more information, see [MessageBox Sample](https://github.com/Microsoft/WPF-Samples/tree/main/Windows/MessageBox).
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.MessageBoxButton" />
@@ -57,11 +59,11 @@
       <Docs>
         <summary>Displays a message box.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use an overload of the <xref:System.Windows.MessageBox.Show%2A> method, which enables you to specify an owner window. Otherwise, the message box is owned by the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use an overload of the <xref:System.Windows.MessageBox.Show*> method, which enables you to specify an owner window. Otherwise, the message box is owned by the window that is currently active.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -83,6 +85,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -101,14 +105,14 @@
         <summary>Displays a message box that has a message and that returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show*> method.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows/MessageBox/Show/Show1Window.xaml.cs" id="Snippetmessageboxshow1code":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb" id="Snippetmessageboxshow1code":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/MessageBox/Show/show1window.xaml.vb" id="Snippetmessageboxshow1code":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -130,6 +134,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -150,14 +156,14 @@
         <summary>Displays a message box that has a message and title bar caption; and that returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show*> method.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows/MessageBox/Show/Show2Window.xaml.cs" id="Snippetmessageboxshow2code":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show2window.xaml.vb" id="Snippetmessageboxshow2code":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/MessageBox/Show/show2window.xaml.vb" id="Snippetmessageboxshow2code":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -179,6 +185,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -199,11 +207,11 @@
         <summary>Displays a message box in front of the specified window. The message box displays a message and returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, the message box appears in front of the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, the message box appears in front of the window that is currently active.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Window.Activated" />
@@ -227,6 +235,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -249,14 +259,14 @@
         <summary>Displays a message box that has a message, title bar caption, and button; and that returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show*> method.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows/MessageBox/Show/Show3Window.xaml.cs" id="Snippetmessageboxshow3code":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show3window.xaml.vb" id="Snippetmessageboxshow3code":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/MessageBox/Show/show3window.xaml.vb" id="Snippetmessageboxshow3code":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -278,6 +288,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -300,11 +312,11 @@
         <summary>Displays a message box in front of the specified window. The message box displays a message and title bar caption; and it returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, the message box appears in front of the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, the message box appears in front of the window that is currently active.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Window.Activated" />
@@ -328,6 +340,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -352,14 +366,14 @@
         <summary>Displays a message box that has a message, title bar caption, button, and icon; and that returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show*> method.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows/MessageBox/Show/Show4Window.xaml.cs" id="Snippetmessageboxshow4code":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show4window.xaml.vb" id="Snippetmessageboxshow4code":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/MessageBox/Show/show4window.xaml.vb" id="Snippetmessageboxshow4code":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -381,6 +395,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -405,11 +421,11 @@
         <summary>Displays a message box in front of the specified window. The message box displays a message, title bar caption, and button; and it also returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, the message box appears in front of the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, the message box appears in front of the window that is currently active.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Window.Activated" />
@@ -433,6 +449,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -459,14 +477,14 @@
         <summary>Displays a message box that has a message, title bar caption, button, and icon; and that accepts a default message box result and returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show*> method.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows/MessageBox/Show/Show5Window.xaml.cs" id="Snippetmessageboxshow5code":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show5window.xaml.vb" id="Snippetmessageboxshow5code":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/MessageBox/Show/show5window.xaml.vb" id="Snippetmessageboxshow5code":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -488,6 +506,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -514,11 +534,11 @@
         <summary>Displays a message box in front of the specified window. The message box displays a message, title bar caption, button, and icon; and it also returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, the message box appears in front of the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, the message box appears in front of the window that is currently active.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Window.Activated" />
@@ -542,6 +562,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -570,14 +592,14 @@
         <summary>Displays a message box that has a message, title bar caption, button, and icon; and that accepts a default message box result, complies with the specified options, and returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following example shows how to use this overload of the <xref:System.Windows.MessageBox.Show*> method.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows/MessageBox/Show/Show6Window.xaml.cs" id="Snippetmessageboxshow6code":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show6window.xaml.vb" id="Snippetmessageboxshow6code":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/MessageBox/Show/show6window.xaml.vb" id="Snippetmessageboxshow6code":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -599,6 +621,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -627,11 +651,11 @@
         <summary>Displays a message box in front of the specified window. The message box displays a message, title bar caption, button, and icon; and accepts a default message box result and returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, the message box appears in front of the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, the message box appears in front of the window that is currently active.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Window.Activated" />
@@ -655,6 +679,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -685,11 +711,11 @@
         <summary>Displays a message box in front of the specified window. The message box displays a message, title bar caption, button, and icon; and accepts a default message box result, complies with the specified options, and returns a result.</summary>
         <returns>A <see cref="T:System.Windows.MessageBoxResult" /> value that specifies which message box button is clicked by the user.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- By default, the message box appears in front of the window that is currently active.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ By default, the message box appears in front of the window that is currently active.
+
  ]]></format>
         </remarks>
         <altmember cref="E:System.Windows.Window.Activated" />

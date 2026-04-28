@@ -17,13 +17,26 @@
     <AssemblyVersion>8.10.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.1.0.0</AssemblyVersion>
+    <AssemblyVersion>9.2.0.0</AssemblyVersion>
+    <AssemblyVersion>9.3.0.0</AssemblyVersion>
+    <AssemblyVersion>9.4.0.0</AssemblyVersion>
+    <AssemblyVersion>9.5.0.0</AssemblyVersion>
+    <AssemblyVersion>9.6.0.0</AssemblyVersion>
+    <AssemblyVersion>9.7.0.0</AssemblyVersion>
+    <AssemblyVersion>9.9.0.0</AssemblyVersion>
+    <AssemblyVersion>9.10.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.1.0.0</AssemblyVersion>
+    <AssemblyVersion>10.2.0.0</AssemblyVersion>
+    <AssemblyVersion>10.3.0.0</AssemblyVersion>
+    <AssemblyVersion>10.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -44,7 +57,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -65,7 +78,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="methodType" Type="System.String" />
@@ -95,7 +108,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -107,9 +120,11 @@
         <value>To be added.</value>
         <remarks>
             DependencyName is used in the following manner by outgoing http request auto collectors:
-            <list type="bullet"><item><description>
-            For outgoing request metrics: This is added as dependency name dimension so metrics can be pivoted based on the dependency.</description></item><item><description>
-            For outgoing request traces and logs: This is added as dependency name dimension for better diagnosability.</description></item></list></remarks>
+            <list type="bullet"><item>
+              For outgoing request metrics: This is added as dependency name dimension so metrics can be pivoted based on the dependency.
+              </item><item>
+              For outgoing request traces and logs: This is added as dependency name dimension for better diagnosability.
+              </item></list></remarks>
       </Docs>
     </Member>
     <Member MemberName="MethodType">
@@ -122,7 +137,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -147,7 +162,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -159,11 +174,15 @@
         <value>To be added.</value>
         <remarks>
             RequestName is used in the following manner by outgoing HTTP request auto collectors:
-            <list type="bullet"><item><description>
-            For outgoing request metrics: RequestName is used as the request name dimension if present. If not provided, the RequestRoute value is used instead.</description></item><item><description>
-            For outgoing request traces: RequestName is used as the Display name for the activity. That is, when looking at the E2E trace flow, this name is used in the Tree view of traces.</description></item><item><description>
-            If RequestName isn't provided, the RequestRoute value is used instead.</description></item><item><description>
-            For outgoing request logs: When present, RequestName is added as an additional tag to logs.</description></item></list></remarks>
+            <list type="bullet"><item>
+              For outgoing request metrics: RequestName is used as the request name dimension if present. If not provided, the RequestRoute value is used instead.
+              </item><item>
+              For outgoing request traces: RequestName is used as the Display name for the activity. That is, when looking at the E2E trace flow, this name is used in the Tree view of traces.
+              </item><item>
+              If RequestName isn't provided, the RequestRoute value is used instead.
+              </item><item>
+              For outgoing request logs: When present, RequestName is added as an additional tag to logs.
+              </item></list></remarks>
       </Docs>
     </Member>
     <Member MemberName="RequestRoute">
@@ -176,7 +195,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.Telemetry.Abstractions</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -188,12 +207,14 @@
         <value>To be added.</value>
         <remarks>
             Request Route is used for multiple use cases:
-            <list type="bullet"><item><description>
-            For outgoing request metrics, it is used as the request name dimension (if RequestName is not provided).</description></item><item><description>
-            For Logs and traces, it is used to identify sensitive parameters from the path and redact them in the exported path, so sensitive data leakage can be avoided.
-            If you are using redaction, the template should be accurate for the request else redaction won't be applied to sensitive parameters.
-            For example, the template would look something like /v1/users/{userId}/chats/{chatId}/messages. For parameters to be redacted, the sensitive parameter names should match exactly as provided
-            in configuration for outgoing tracing and outgoing logging autocollectors.</description></item></list></remarks>
+            <list type="bullet"><item>
+              For outgoing request metrics, it is used as the request name dimension (if RequestName is not provided).
+              </item><item>
+              For Logs and traces, it is used to identify sensitive parameters from the path and redact them in the exported path, so sensitive data leakage can be avoided.
+              If you are using redaction, the template should be accurate for the request else redaction won't be applied to sensitive parameters.
+              For example, the template would look something like /v1/users/{userId}/chats/{chatId}/messages. For parameters to be redacted, the sensitive parameter names should match exactly as provided
+              in configuration for outgoing tracing and outgoing logging autocollectors.
+              </item></list></remarks>
       </Docs>
     </Member>
   </Members>

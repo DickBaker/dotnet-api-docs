@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BitmapCacheBrush&#xA;Inherits Brush" />
   <TypeSignature Language="F#" Value="type BitmapCacheBrush = class&#xA;    inherit Brush" />
   <TypeSignature Language="C++ CLI" Value="public ref class BitmapCacheBrush sealed : System::Windows::Media::Brush" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BitmapCacheBrush extends System.Windows.Media.Brush" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BitmapCacheBrush extends System.Windows.Media.Brush" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Media.Brush</BaseTypeName>
@@ -27,43 +29,43 @@
 ## Remarks
  Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently. This is useful when you need to paint complex content onto multiple elements. Use the <xref:System.Windows.Media.BitmapCache> class to cache a complex element.
 
- Assign a <xref:System.Windows.Media.Visual> to the <xref:System.Windows.Media.BitmapCacheBrush.Target%2A> property and optionally assign a <xref:System.Windows.Media.BitmapCache> to the <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache%2A> property. The <xref:System.Windows.Media.CacheMode> of the brush and the target <xref:System.Windows.Media.Visual> interact to produce different behaviors. The following table describes this interaction.
+ Assign a <xref:System.Windows.Media.Visual> to the <xref:System.Windows.Media.BitmapCacheBrush.Target> property and optionally assign a <xref:System.Windows.Media.BitmapCache> to the <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache> property. The <xref:System.Windows.Media.CacheMode> of the brush and the target <xref:System.Windows.Media.Visual> interact to produce different behaviors. The following table describes this interaction.
 
 | Brush has CacheMode | Target has no CacheMode | Target has CacheMode |
 |---------------------|-------------------------|----------------------|
 | No                  | Target visual renders normally; brush uses default cache behavior. | Target visual renders into its own cache; brush uses target's cache when rendering. |
 | Yes                 | Target visual renders normally; brush renders target into its own cache and uses this to render. | Target visual renders into its own cache; brush renders target into brush's own cache and uses this to render. |
 
- The <xref:System.Windows.Media.BitmapCacheBrush> class is similar to the <xref:System.Windows.Media.VisualBrush> class, but <xref:System.Windows.Media.BitmapCacheBrush> always renders from a cache on the target element, or from a cache defined by the <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache%2A> property. The <xref:System.Windows.Media.BitmapCacheBrush> class also supports dirty regions.
+ The <xref:System.Windows.Media.BitmapCacheBrush> class is similar to the <xref:System.Windows.Media.VisualBrush> class, but <xref:System.Windows.Media.BitmapCacheBrush> always renders from a cache on the target element, or from a cache defined by the <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache> property. The <xref:System.Windows.Media.BitmapCacheBrush> class also supports dirty regions.
 
  The following table shows the default bitmap cache settings for the <xref:System.Windows.Media.BitmapCacheBrush> class.
 
 | Bitmap Cache Property                                          | Default Setting |
 |----------------------------------------------------------------|-----------------|
-| <xref:System.Windows.Media.BitmapCache.SnapsToDevicePixels%2A> | `false`         |
-| <xref:System.Windows.Media.BitmapCache.EnableClearType%2A>     | `false`         |
-| <xref:System.Windows.Media.BitmapCache.RenderAtScale%2A>       | 1               |
+| <xref:System.Windows.Media.BitmapCache.SnapsToDevicePixels*> | `false`         |
+| <xref:System.Windows.Media.BitmapCache.EnableClearType*>     | `false`         |
+| <xref:System.Windows.Media.BitmapCache.RenderAtScale*>       | 1               |
 
- The <xref:System.Windows.Media.BitmapCache.SnapsToDevicePixels%2A> property is ignored by the <xref:System.Windows.Media.BitmapCacheBrush> class.
+ The <xref:System.Windows.Media.BitmapCache.SnapsToDevicePixels> property is ignored by the <xref:System.Windows.Media.BitmapCacheBrush> class.
 
  The <xref:System.Windows.Media.BitmapCacheBrush> class ignores the following properties on the root <xref:System.Windows.Media.Visual>. This behavior differs from the <xref:System.Windows.Media.VisualBrush> class.
 
--   <xref:System.Windows.Media.Visual.VisualOffset%2A>
+-   <xref:System.Windows.Media.Visual.VisualOffset*>
 
--   <xref:System.Windows.Media.Visual.VisualTransform%2A>
+-   <xref:System.Windows.Media.Visual.VisualTransform*>
 
--   <xref:System.Windows.Media.Visual.VisualClip%2A>
+-   <xref:System.Windows.Media.Visual.VisualClip*>
 
--   <xref:System.Windows.Media.Visual.VisualEffect%2A>
+-   <xref:System.Windows.Media.Visual.VisualEffect*>
 
--   <xref:System.Windows.Media.Visual.VisualOpacity%2A>
+-   <xref:System.Windows.Media.Visual.VisualOpacity*>
 
--   <xref:System.Windows.Media.Visual.VisualOpacityMask%2A>
+-   <xref:System.Windows.Media.Visual.VisualOpacityMask*>
 
 
 
 ## Examples
- The following code example shows how to associate a <xref:System.Windows.Media.BitmapCache> with a <xref:System.Windows.Media.BitmapCacheBrush>. You can use the <xref:System.Windows.Media.BitmapCacheBrush> resource on multiple elements and achieve good performance. For the complete code listing, see [How to: Use a Cached Element as a Brush](/dotnet/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush).
+ The following code example shows how to associate a <xref:System.Windows.Media.BitmapCache> with a <xref:System.Windows.Media.BitmapCacheBrush>. You can use the <xref:System.Windows.Media.BitmapCacheBrush> resource on multiple elements and achieve good performance. For the complete code listing, see [How to: Use a Cached Element as a Brush](/dotnet/desktop/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush).
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Media/BitmapCacheBrush/Overview/window1.xaml" id="Snippet_bitmapcachebrushcreation":::
 
@@ -97,6 +99,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -120,6 +124,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="visual" Type="System.Windows.Media.Visual" />
@@ -146,6 +152,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -158,7 +166,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the <xref:System.Windows.Media.BitmapCacheBrush.AutoLayoutContent%2A> property is `true`, layout is applied to the contents of the brush if <xref:System.Windows.Media.BitmapCacheBrush.Target%2A> is a <xref:System.Windows.UIElement> with no parent.
+ When the <xref:System.Windows.Media.BitmapCacheBrush.AutoLayoutContent> property is `true`, layout is applied to the contents of the brush if <xref:System.Windows.Media.BitmapCacheBrush.Target*> is a <xref:System.Windows.UIElement> with no parent.
 
  ]]></format>
         </remarks>
@@ -180,6 +188,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -205,6 +215,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.BitmapCache</ReturnType>
@@ -216,7 +228,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache%2A> property interacts with the <xref:System.Windows.Media.BitmapCacheBrush.Target%2A> property. For a table that shows this interaction, see the <xref:System.Windows.Media.BitmapCacheBrush> class overview.
+ The <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache> property interacts with the <xref:System.Windows.Media.BitmapCacheBrush.Target> property. For a table that shows this interaction, see the <xref:System.Windows.Media.BitmapCacheBrush> class overview.
 
  ]]></format>
         </remarks>
@@ -240,6 +252,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -265,6 +279,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.BitmapCacheBrush</ReturnType>
@@ -292,6 +308,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.BitmapCacheBrush</ReturnType>
@@ -319,6 +337,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Freezable</ReturnType>
@@ -346,6 +366,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -375,6 +397,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Visual</ReturnType>
@@ -386,7 +410,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Media.BitmapCacheBrush.Target%2A> property interacts with the <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache%2A> property. For a table that shows this interaction, see the <xref:System.Windows.Media.BitmapCacheBrush> class overview.
+ The <xref:System.Windows.Media.BitmapCacheBrush.Target> property interacts with the <xref:System.Windows.Media.BitmapCacheBrush.BitmapCache> property. For a table that shows this interaction, see the <xref:System.Windows.Media.BitmapCacheBrush> class overview.
 
  ]]></format>
         </remarks>
@@ -410,6 +434,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

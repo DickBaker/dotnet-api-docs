@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Interface IMessageFilter" />
   <TypeSignature Language="F#" Value="type IMessageFilter = interface" />
   <TypeSignature Language="C++ CLI" Value="public interface class IMessageFilter" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMessageFilter" FrameworkAlternate="windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IMessageFilter" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
     <AssemblyVersion>1.0.5000.0</AssemblyVersion>
@@ -16,18 +16,20 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Docs>
     <summary>Defines a message filter interface.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This interface allows an application to capture a message before it is dispatched to a control or form.  
-  
- A class that implements the <xref:System.Windows.Forms.IMessageFilter> interface can be added to the application's message pump to filter out a message or perform other operations before the message is dispatched to a form or control. To add the message filter to an application's message pump, use the <xref:System.Windows.Forms.Application.AddMessageFilter%2A> method in the <xref:System.Windows.Forms.Application> class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This interface allows an application to capture a message before it is dispatched to a control or form.
+
+ A class that implements the <xref:System.Windows.Forms.IMessageFilter> interface can be added to the application's message pump to filter out a message or perform other operations before the message is dispatched to a form or control. To add the message filter to an application's message pump, use the <xref:System.Windows.Forms.Application.AddMessageFilter*> method in the <xref:System.Windows.Forms.Application> class.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Forms.IMessageFilter" />
@@ -53,6 +55,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -66,11 +70,11 @@
         <returns>
           <see langword="true" /> to filter the message and stop it from being dispatched; <see langword="false" /> to allow the message to continue to the next filter or control.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A> to filter out a message before it is dispatched to a control or form. For example, to stop the <xref:System.Windows.Forms.Control.Click> event of a <xref:System.Windows.Forms.Button> control from being dispatched to the control, you implement the <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A> method and return a `true` value when the <xref:System.Windows.Forms.Control.Click> message occurs. You can also use this method to perform code work that you might need to do before the message is dispatched.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage*> to filter out a message before it is dispatched to a control or form. For example, to stop the <xref:System.Windows.Forms.Control.Click> event of a <xref:System.Windows.Forms.Button> control from being dispatched to the control, you implement the <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage*> method and return a `true` value when the <xref:System.Windows.Forms.Control.Click> message occurs. You can also use this method to perform code work that you might need to do before the message is dispatched.
+
  ]]></format>
         </remarks>
       </Docs>

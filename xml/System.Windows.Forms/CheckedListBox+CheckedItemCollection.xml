@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -31,7 +33,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -39,44 +41,44 @@
   <Docs>
     <summary>Encapsulates the collection of checked items, including items in an indeterminate state, in a <see cref="T:System.Windows.Forms.CheckedListBox" /> control.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The checked items collection is a subset of all items in the <xref:System.Windows.Forms.CheckedListBox> control; it contains only those items that are in a checked or indeterminate state.  
-  
- The following table is an example of the indexed collection of items in the control (all items contained in the control).  
-  
-|Index|Item|Check State|  
-|-----------|----------|-----------------|  
-|0|object 1|<xref:System.Windows.Forms.CheckState.Unchecked>|  
-|1|object 2|<xref:System.Windows.Forms.CheckState.Checked>|  
-|2|object 3|<xref:System.Windows.Forms.CheckState.Unchecked>|  
-|3|object 4|<xref:System.Windows.Forms.CheckState.Indeterminate>|  
-|4|object 5|<xref:System.Windows.Forms.CheckState.Checked>|  
-  
- Based on the previous example, the following table shows the indexed collection of the checked items.  
-  
-|Index|Item|  
-|-----------|----------|  
-|0|object 2|  
-|1|object 4|  
-|2|object 5|  
-  
- The <xref:System.Windows.Forms.CheckedListBox> class has two members that allow you to access the stored indexes, the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.Item%2A> property and the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.IndexOf%2A> method.  
-  
- Based on the previous example, a call to the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.Item%2A> property with a parameter value of 1 returns object 4. A call to <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.IndexOf%2A> with a parameter of object 4 returns a value of 1.  
-  
-   
-  
-## Examples  
- The following example enumerates the checked items in the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> to see what check state an item is in. The example demonstrates using the <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState%2A> method to set the check state of an item. The example also demonstrates using the <xref:System.Windows.Forms.CheckedListBox.CheckedIndices%2A> property to get the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, and the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property to get the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection>.  
-  
- The first loop uses the <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState%2A> method to get the <xref:System.Windows.Forms.CheckState> of each checked item, given the index of the item. The second loop also uses <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState%2A>, but uses the <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf%2A?displayProperty=nameWithType> method to retrieve the index for the item.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The checked items collection is a subset of all items in the <xref:System.Windows.Forms.CheckedListBox> control; it contains only those items that are in a checked or indeterminate state.
+
+ The following table is an example of the indexed collection of items in the control (all items contained in the control).
+
+|Index|Item|Check State|
+|-----------|----------|-----------------|
+|0|object 1|<xref:System.Windows.Forms.CheckState.Unchecked>|
+|1|object 2|<xref:System.Windows.Forms.CheckState.Checked>|
+|2|object 3|<xref:System.Windows.Forms.CheckState.Unchecked>|
+|3|object 4|<xref:System.Windows.Forms.CheckState.Indeterminate>|
+|4|object 5|<xref:System.Windows.Forms.CheckState.Checked>|
+
+ Based on the previous example, the following table shows the indexed collection of the checked items.
+
+|Index|Item|
+|-----------|----------|
+|0|object 2|
+|1|object 4|
+|2|object 5|
+
+ The <xref:System.Windows.Forms.CheckedListBox> class has two members that allow you to access the stored indexes, the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.Item*> property and the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.IndexOf*> method.
+
+ Based on the previous example, a call to the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.Item*> property with a parameter value of 1 returns object 4. A call to <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection.IndexOf*> with a parameter of object 4 returns a value of 1.
+
+
+
+## Examples
+ The following example enumerates the checked items in the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection> to see what check state an item is in. The example demonstrates using the <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState*> method to set the check state of an item. The example also demonstrates using the <xref:System.Windows.Forms.CheckedListBox.CheckedIndices> property to get the <xref:System.Windows.Forms.CheckedListBox.CheckedIndexCollection>, and the <xref:System.Windows.Forms.CheckedListBox.CheckedItems> property to get the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection>.
+
+ The first loop uses the <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState*> method to get the <xref:System.Windows.Forms.CheckState> of each checked item, given the index of the item. The second loop also uses <xref:System.Windows.Forms.CheckedListBox.GetItemCheckState*>, but uses the <xref:System.Windows.Forms.ListBox.ObjectCollection.IndexOf*?displayProperty=nameWithType> method to retrieve the index for the item.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/CheckedListBox/CPP/source.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/CheckedListBox+CheckedIndexCollection/Overview/source.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/CheckedListBox/VB/source.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/CheckedListBox+CheckedIndexCollection/Overview/source.vb" id="Snippet2":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -88,7 +90,7 @@
       <MemberSignature Language="VB.NET" Value="Public Function Contains (item As Object) As Boolean" />
       <MemberSignature Language="F#" Value="abstract member Contains : obj -&gt; bool&#xA;override this.Contains : obj -&gt; bool" Usage="checkedItemCollection.Contains item" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Contains(System::Object ^ item);" />
-      <MemberSignature Language="C#" Value="public bool Contains (object? item);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public bool Contains (object? item);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Contains(System.Object)</InterfaceMember>
@@ -103,6 +105,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -116,11 +120,11 @@
         <returns>
           <see langword="true" /> if item is in the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method determines if an object from the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection is in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method determines if an object from the <xref:System.Windows.Forms.CheckedListBox.Items*> collection is in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems*> collection.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -146,6 +150,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -159,11 +165,11 @@
         <param name="index">The zero-based relative index in <paramref name="dest" /> at which copying begins.</param>
         <summary>Copies the entire collection into an existing array at a specified location within the array.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can use this method to combine the selected indexes from multiple collections into a single array.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can use this method to combine the selected indexes from multiple collections into a single array.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -197,6 +203,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -228,6 +236,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -246,7 +256,7 @@
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (item As Object) As Integer" />
       <MemberSignature Language="F#" Value="abstract member IndexOf : obj -&gt; int&#xA;override this.IndexOf : obj -&gt; int" Usage="checkedItemCollection.IndexOf item" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int IndexOf(System::Object ^ item);" />
-      <MemberSignature Language="C#" Value="public int IndexOf (object? item);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public int IndexOf (object? item);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.IndexOf(System.Object)</InterfaceMember>
@@ -261,6 +271,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -273,11 +285,11 @@
         <summary>Returns an index into the collection of checked items.</summary>
         <returns>The index of the object in the checked item collection or -1 if the object is not in the collection. For more information, see the examples in the <see cref="T:System.Windows.Forms.CheckedListBox.CheckedItemCollection" /> class overview.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection is a subset of the objects in the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, representing only items that are checked. This collection is ordered in ascending order.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.CheckedListBox.CheckedItems*> collection is a subset of the objects in the <xref:System.Windows.Forms.CheckedListBox.Items*> collection, representing only items that are checked. This collection is ordered in ascending order.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.CheckedListBox.CheckedItemCollection.Item(System.Int32)" />
@@ -304,6 +316,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -321,7 +335,7 @@
       <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As Object" />
       <MemberSignature Language="F#" Value="member this.Item(int) : obj with get, set" Usage="System.Windows.Forms.CheckedListBox.CheckedItemCollection.Item" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ default[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
-      <MemberSignature Language="C#" Value="public object? this[int index] { get; set; }" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public object? this[int index] { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
@@ -336,21 +350,19 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -366,11 +378,11 @@
         <summary>Gets an object in the checked items collection.</summary>
         <value>The object at the specified index. For more information, see the examples in the <see cref="T:System.Windows.Forms.CheckedListBox.CheckedItemCollection" /> class overview.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection is a subset of the objects in the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, representing only items that are checked. This collection is ordered in ascending order.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.CheckedListBox.CheckedItems*> collection is a subset of the objects in the <xref:System.Windows.Forms.CheckedListBox.Items*> collection, representing only items that are checked. This collection is ordered in ascending order.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">The object cannot be set.</exception>
@@ -397,6 +409,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -406,11 +420,11 @@
         <value>
           <see langword="false" /> in all cases.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.ICollection> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.ICollection> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -435,6 +449,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -443,11 +459,11 @@
         <summary>For a description of this member, see <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
         <value>The <see cref="T:System.Object" /> used to synchronize to the collection.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.ICollection> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.ICollection> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -459,7 +475,7 @@
       <MemberSignature Language="VB.NET" Value="Function Add (value As Object) As Integer Implements IList.Add" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Add : obj -&gt; int&#xA;override this.System.Collections.IList.Add : obj -&gt; int" Usage="checkedItemCollection.System.Collections.IList.Add value" />
       <MemberSignature Language="C++ CLI" Value=" virtual int System.Collections.IList.Add(System::Object ^ value) = System::Collections::IList::Add;" />
-      <MemberSignature Language="C#" Value="int IList.Add (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="int IList.Add (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Add(System.Object)</InterfaceMember>
@@ -474,6 +490,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -486,11 +504,11 @@
         <summary>For a description of this member, see <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
         <returns>The zero-based index of the item to add.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -516,6 +534,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -524,11 +544,11 @@
       <Docs>
         <summary>For a description of this member, see <see cref="M:System.Collections.IList.Clear" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -540,7 +560,7 @@
       <MemberSignature Language="VB.NET" Value="Sub Insert (index As Integer, value As Object) Implements IList.Insert" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Insert : int * obj -&gt; unit&#xA;override this.System.Collections.IList.Insert : int * obj -&gt; unit" Usage="checkedItemCollection.System.Collections.IList.Insert (index, value)" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Insert(int index, System::Object ^ value) = System::Collections::IList::Insert;" />
-      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Insert(System.Int32,System.Object)</InterfaceMember>
@@ -555,6 +575,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -568,11 +590,11 @@
         <param name="value">The item to insert into the <see cref="T:System.Windows.Forms.CheckedListBox.CheckedItemCollection" />.</param>
         <summary>For a description of this member, see <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -597,6 +619,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -606,11 +630,11 @@
         <value>
           <see langword="false" /> in all cases.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -622,7 +646,7 @@
       <MemberSignature Language="VB.NET" Value="Sub Remove (value As Object) Implements IList.Remove" />
       <MemberSignature Language="F#" Value="abstract member System.Collections.IList.Remove : obj -&gt; unit&#xA;override this.System.Collections.IList.Remove : obj -&gt; unit" Usage="checkedItemCollection.System.Collections.IList.Remove value" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.Collections.IList.Remove(System::Object ^ value) = System::Collections::IList::Remove;" />
-      <MemberSignature Language="C#" Value="void IList.Remove (object? value);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="void IList.Remove (object? value);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Remove(System.Object)</InterfaceMember>
@@ -637,6 +661,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -648,11 +674,11 @@
         <param name="value">The item to remove from the <see cref="T:System.Windows.Forms.CheckedListBox.CheckedItemCollection" />.</param>
         <summary>For a description of this member, see <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -678,6 +704,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -689,11 +717,11 @@
         <param name="index">The zero-based index of the item to remove.</param>
         <summary>For a description of this member, see <see cref="M:System.Collections.IList.RemoveAt(System.Int32)" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.CheckedListBox.CheckedItemCollection> instance is cast to an <xref:System.Collections.IList> interface.
+
  ]]></format>
         </remarks>
       </Docs>

@@ -25,8 +25,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -39,15 +43,15 @@
   <Docs>
     <summary>Specifies the default partial-trust visibility for code that is marked with the <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> (APTCA) attribute.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Security.PartialTrustVisibilityLevel> is passed as a property setting parameter to the <xref:System.Security.AllowPartiallyTrustedCallersAttribute.%23ctor%2A?displayProperty=nameWithType> constructor. If no parameter is passed to the constructor, the default is VisibleToAllHosts.  
-  
- You enable partially trusted assemblies that are identified as NotVisibleByDefault by adding them to the <xref:System.AppDomainSetup.PartialTrustVisibleAssemblies%2A> property of their application domain. If you enable an assembly that references (directly or indirectly) other partially trusted assemblies that are NotVisibleByDefault, those other assemblies should be enabled as well.  
-  
- When an APTCA library that specifies a `PartialTrustVisibilityLevel` and that is eligible for code sharing is loaded for the first time, it is loaded into the shared domain. Whenever that assembly is loaded with the same `PartialTrustVisibilityLevel` into another domain, it will be shared. However, if the assembly is loaded with a different `PartialTrustVisibilityLevel`, it will not be shared.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Security.PartialTrustVisibilityLevel> is passed as a property setting parameter to the <xref:System.Security.AllowPartiallyTrustedCallersAttribute.%23ctor*?displayProperty=nameWithType> constructor. If no parameter is passed to the constructor, the default is VisibleToAllHosts.
+
+ You enable partially trusted assemblies that are identified as NotVisibleByDefault by adding them to the <xref:System.AppDomainSetup.PartialTrustVisibleAssemblies> property of their application domain. If you enable an assembly that references (directly or indirectly) other partially trusted assemblies that are NotVisibleByDefault, those other assemblies should be enabled as well.
+
+ When an APTCA library that specifies a `PartialTrustVisibilityLevel` and that is eligible for code sharing is loaded for the first time, it is loaded into the shared domain. Whenever that assembly is loaded with the same `PartialTrustVisibilityLevel` into another domain, it will be shared. However, if the assembly is loaded with a different `PartialTrustVisibilityLevel`, it will not be shared.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -80,6 +84,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.PartialTrustVisibilityLevel</ReturnType>
@@ -117,6 +123,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.PartialTrustVisibilityLevel</ReturnType>

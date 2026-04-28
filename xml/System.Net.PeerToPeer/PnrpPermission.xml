@@ -1,6 +1,6 @@
 <Type Name="PnrpPermission" FullName="System.Net.PeerToPeer.PnrpPermission">
   <TypeSignature Language="C#" Value="public sealed class PnrpPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PnrpPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PnrpPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PnrpPermission" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PnrpPermission&#xA;Inherits CodeAccessPermission&#xA;Implements IUnrestrictedPermission" />
   <TypeSignature Language="F#" Value="type PnrpPermission = class&#xA;    inherit CodeAccessPermission&#xA;    interface IUnrestrictedPermission" />
@@ -21,7 +21,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Security.Permissions" FromVersion="11.0.0.0" To="System.Net" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
   </Base>
@@ -31,7 +36,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Obsolete("Code Access Security is not supported or honored by the runtime.", DiagnosticId="SYSLIB0003", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("Code Access Security is not supported or honored by the runtime.", DiagnosticId="SYSLIB0003", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
@@ -84,6 +89,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
@@ -129,6 +136,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.IPermission</ReturnType>
@@ -181,6 +190,8 @@ The parameter's version number is not supported.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -234,6 +245,8 @@ The parameter's version number is not supported.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.IPermission</ReturnType>
@@ -253,11 +266,11 @@ The parameter's version number is not supported.</exception>
 
  The following statements are required to be `true` for all implementations of the Intersect method. X and Y represent <xref:System.Security.IPermission> object references that are not a `null` reference (Nothing in Visual Basic).
 
--   X.Intersect(X) returns a value equal to X.
+- X.Intersect(X) returns a value equal to X.
 
--   X.Intersect(Y) returns the same value as Y.Intersect(X).
+- X.Intersect(Y) returns the same value as Y.Intersect(X).
 
--   X.Intersect(a `null` reference (`Nothing` in Visual Basic)) returns a `null` reference (`Nothing` in Visual Basic).
+- X.Intersect(a `null` reference (`Nothing` in Visual Basic)) returns a `null` reference (`Nothing` in Visual Basic).
 
  ]]></format>
         </remarks>
@@ -289,6 +302,8 @@ The parameter's version number is not supported.</exception>
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -316,7 +331,7 @@ The following statements are required to be `true` for all implementations of th
 
 - If `X.IsSubsetOf(Y)` and `Y.IsSubsetOf(Z)` both return `true`, `X.IsSubsetOf(Z)` returns `true`.
 
-If X represents an empty <xref:System.Security.IPermission> object with a permission state of *None*, and Y represents an <xref:System.Security.IPermission> object that is a `null` reference (`Nothing` in Visual Basic), `X.IsSubsetOf(Y)` returns `true`. If Z is also an empty permission, the compound set operation `X.Union(Z).IsSubsetOf(Y)` also returns `true` because the <xref:System.Net.PeerToPeer.PnrpPermission.Union%2A> of two empty permissions is an empty permission.
+If X represents an empty <xref:System.Security.IPermission> object with a permission state of *None*, and Y represents an <xref:System.Security.IPermission> object that is a `null` reference (`Nothing` in Visual Basic), `X.IsSubsetOf(Y)` returns `true`. If Z is also an empty permission, the compound set operation `X.Union(Z).IsSubsetOf(Y)` also returns `true` because the <xref:System.Net.PeerToPeer.PnrpPermission.Union*> of two empty permissions is an empty permission.
 
  ]]></format>
         </remarks>
@@ -351,6 +366,8 @@ If X represents an empty <xref:System.Security.IPermission> object with a permis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -396,6 +413,8 @@ If X represents an empty <xref:System.Security.IPermission> object with a permis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.SecurityElement</ReturnType>
@@ -431,6 +450,8 @@ If X represents an empty <xref:System.Security.IPermission> object with a permis
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.IPermission</ReturnType>
@@ -446,15 +467,15 @@ If X represents an empty <xref:System.Security.IPermission> object with a permis
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The result of a call to <xref:System.Net.PeerToPeer.PnrpPermission.Union%2A> is a permission that represents all the operations represented by both the current <xref:System.Net.PeerToPeer.PnrpPermission> and the specified permission. Any demand that passes either permission passes their union.
+ The result of a call to <xref:System.Net.PeerToPeer.PnrpPermission.Union*> is a permission that represents all the operations represented by both the current <xref:System.Net.PeerToPeer.PnrpPermission> and the specified permission. Any demand that passes either permission passes their union.
 
  The following statements are required to be `true` for all implementations of the Union method. X and Y represent <xref:System.Security.IPermission> objects that are not a `null` reference (`Nothing` in Visual Basic).
 
--   X.Union(X) returns an object that has the same value as X.
+- X.Union(X) returns an object that has the same value as X.
 
--   X.Union(Y) returns an object that has the same value as the object returned by Y.Union(X).
+- X.Union(Y) returns an object that has the same value as the object returned by Y.Union(X).
 
--   X.Union(a `null` reference (`Nothing` in Visual Basic)) returns an object that has the same value as X.
+- X.Union(a `null` reference (`Nothing` in Visual Basic)) returns an object that has the same value as X.
 
  ]]></format>
         </remarks>

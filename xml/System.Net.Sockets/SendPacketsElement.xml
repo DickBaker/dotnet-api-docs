@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -29,6 +31,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -40,7 +44,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -48,11 +52,11 @@
   <Docs>
     <summary>Represents an element in a <see cref="T:System.Net.Sockets.SendPacketsElement" /> array.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used to enhance the <xref:System.Net.Sockets.Socket> class for use by server applications that use asynchronous network I/O to achieve the highest performance. The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used to enhance the <xref:System.Net.Sockets.Socket> class for use by server applications that use asynchronous network I/O to achieve the highest performance. The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
     </remarks>
     <threadsafe>Instances of this class are thread safe.</threadsafe>
@@ -89,6 +93,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -108,11 +114,11 @@
         <param name="buffer">A byte array of data to send using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified buffer.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="buffer" /> parameter cannot be null.</exception>
@@ -138,22 +144,24 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="fileStream" Type="System.IO.FileStream" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="fileStream" Type="System.IO.FileStream" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       </Parameters>
       <Docs>
         <param name="fileStream">The file to be transmitted using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified <see cref="T:System.IO.FileStream" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">
@@ -176,22 +184,24 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="buffer" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="buffer" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="buffer">A <see cref="T:System.ReadOnlyMemory`1" /> of bytes to send using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified buffer.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -215,6 +225,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -240,13 +252,13 @@
         <param name="filepath">The filename of the file to be transmitted using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified file.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
- Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
+ Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="filepath" /> parameter cannot be null.</exception>
@@ -269,24 +281,26 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="buffer" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="endOfPacket" Type="System.Boolean" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="buffer" Type="System.ReadOnlyMemory&lt;System.Byte&gt;" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="endOfPacket" Type="System.Boolean" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       </Parameters>
       <Docs>
         <param name="buffer">A <see cref="T:System.ReadOnlyMemory`1" /> of bytes to send using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
         <param name="endOfPacket">Specifies that this element should not be combined with the next element in a single send request from the sockets layer to the transport. This flag is used for granular control of the content of each message on a datagram or message-oriented socket.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified buffer with an option to combine this element with the next element in a single send request from the sockets layer to the transport.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -310,6 +324,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -339,16 +355,16 @@
         <param name="count">The number of bytes to send starting from the <paramref name="offset" /> parameter. If <paramref name="count" /> is zero, no bytes are sent.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of the buffer.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="buffer" /> parameter cannot be null.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset" /> and <paramref name="count" /> parameters must be greater than or equal to zero.  
-  
+        <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset" /> and <paramref name="count" /> parameters must be greater than or equal to zero.
+
  The <paramref name="offset" /> and <paramref name="count" /> must be less than the size of the buffer.</exception>
         <altmember cref="T:System.ArgumentNullException" />
         <altmember cref="T:System.ArgumentOutOfRangeException" />
@@ -373,14 +389,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="fileStream" Type="System.IO.FileStream" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="fileStream" Type="System.IO.FileStream" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       </Parameters>
       <Docs>
         <param name="fileStream">The file to be transmitted using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
@@ -388,11 +406,11 @@
         <param name="count">The number of bytes to send starting from the <paramref name="offset" />. If <paramref name="count" /> is zero, the entire file is sent.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of a <see cref="T:System.IO.FileStream" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The <paramref name="fileStream" /> parameter must have been opened for asynchronous reading and writing.</exception>
@@ -419,6 +437,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -448,13 +468,13 @@
         <param name="count">The number of bytes to send starting from the <paramref name="offset" /> parameter. If <paramref name="count" /> is zero, the entire file is sent.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of the file.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
- Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
+ Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="filepath" /> parameter cannot be null.</exception>
@@ -482,14 +502,16 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="filepath" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="filepath" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       </Parameters>
       <Docs>
         <param name="filepath">The filename of the file to be transmitted using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
@@ -497,13 +519,13 @@
         <param name="count">The number of bytes to send starting from the <paramref name="offset" />. If <paramref name="count" /> is zero, the entire file is sent.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of the file.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
- Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
+ Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="filepath" /> parameter cannot be <see langword="null" />.</exception>
@@ -529,6 +551,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -560,16 +584,16 @@
         <param name="endOfPacket">A Boolean value that specifies that this element should not be combined with the next element in a single send request from the sockets layer to the transport. This flag is used for granular control of the content of each message on a datagram or message-oriented socket.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of the buffer with an option to combine this element with the next element in a single send request from the sockets layer to the transport.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="buffer" /> parameter cannot be null.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset" /> and <paramref name="count" /> parameters must be greater than or equal to zero.  
-  
+        <exception cref="T:System.ArgumentOutOfRangeException">The <paramref name="offset" /> and <paramref name="count" /> parameters must be greater than or equal to zero.
+
  The <paramref name="offset" /> and <paramref name="count" /> must be less than the size of the buffer.</exception>
         <altmember cref="T:System.ArgumentNullException" />
         <altmember cref="T:System.ArgumentOutOfRangeException" />
@@ -594,15 +618,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="fileStream" Type="System.IO.FileStream" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="endOfPacket" Type="System.Boolean" Index="3" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="fileStream" Type="System.IO.FileStream" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="endOfPacket" Type="System.Boolean" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       </Parameters>
       <Docs>
         <param name="fileStream">The file to be transmitted using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
@@ -611,11 +637,11 @@
         <param name="endOfPacket">Specifies that this element should not be combined with the next element in a single send request from the sockets layer to the transport. This flag is used for granular control of the content of each message on a datagram or message-oriented socket.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of a <see cref="T:System.IO.FileStream" /> object with an option to combine this element with the next element in a single send request from the sockets layer to the transport.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The <paramref name="fileStream" /> parameter must have been opened for asynchronous reading and writing.</exception>
@@ -642,6 +668,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -673,13 +701,13 @@
         <param name="endOfPacket">A Boolean value that specifies that this element should not be combined with the next element in a single send request from the sockets layer to the transport. This flag is used for granular control of the content of each message on a datagram or message-oriented socket.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of the file with an option to combine this element with the next element in a single send request from the sockets layer to the transport.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
- Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
+ Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="filepath" /> parameter cannot be null.</exception>
@@ -707,15 +735,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="filepath" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
-        <Parameter Name="endOfPacket" Type="System.Boolean" Index="3" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="filepath" Type="System.String" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="offset" Type="System.Int64" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="count" Type="System.Int32" Index="2" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+        <Parameter Name="endOfPacket" Type="System.Boolean" Index="3" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
       </Parameters>
       <Docs>
         <param name="filepath">The filename of the file to be transmitted using the <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> method.</param>
@@ -724,13 +754,13 @@
         <param name="endOfPacket">Specifies that this element should not be combined with the next element in a single send request from the sockets layer to the transport. This flag is used for granular control of the content of each message on a datagram or message-oriented socket.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class using the specified range of the file with an option to combine this element with the next element in a single send request from the sockets layer to the transport.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> method.  
-  
- Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Net.Sockets.SendPacketsElement> class is used with the <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements?displayProperty=nameWithType> property to get or set a data buffer or file to be sent using the <xref:System.Net.Sockets.Socket.SendPacketsAsync*?displayProperty=nameWithType> method.
+
+ Universal Naming Convention (UNC) paths are supported by the `filepath` parameter. If the file is in the current working directory, no path information needs to be specified.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="filepath" /> parameter cannot be <see langword="null" />.</exception>
@@ -738,7 +768,7 @@
       </Docs>
     </Member>
     <Member MemberName="Buffer">
-      <MemberSignature Language="C#" Value="public byte[]? Buffer { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public byte[]? Buffer { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Buffer" />
       <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.Buffer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Buffer As Byte()" />
@@ -757,6 +787,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -770,7 +802,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -786,13 +818,13 @@
         <summary>Gets the buffer to be sent if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <paramref name="buffer" /> parameter.</summary>
         <value>The byte buffer to send if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <paramref name="buffer" /> parameter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
  The default value for the <xref:System.Net.Sockets.SendPacketsElement.Buffer> property is `null` if the <xref:System.Net.Sockets.SendPacketsElement> object was not initialized with a `buffer` parameter or `buffer` was passed as a <xref:System.ReadOnlyMemory`1> of bytes.
 
  In the latter case, the buffer can be obtained using the <xref:System.Net.Sockets.SendPacketsElement.MemoryBuffer> property.
-  
+
  ]]></format>
         </remarks>
       </Docs>
@@ -816,6 +848,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -841,13 +875,13 @@
         <summary>Gets the count of bytes to be sent.</summary>
         <value>The count of bytes to send if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> class was initialized with a <paramref name="count" /> parameter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default value for the <xref:System.Net.Sockets.SendPacketsElement.Count%2A> property is zero if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with a `count` parameter.  
-  
- If <xref:System.Net.Sockets.SendPacketsElement.Count%2A> is zero for a file, the entire file is sent. If <xref:System.Net.Sockets.SendPacketsElement.Count%2A> is zero for a buffer, no bytes are sent.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default value for the <xref:System.Net.Sockets.SendPacketsElement.Count> property is zero if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with a `count` parameter.
+
+ If <xref:System.Net.Sockets.SendPacketsElement.Count*> is zero for a file, the entire file is sent. If <xref:System.Net.Sockets.SendPacketsElement.Count*> is zero for a buffer, no bytes are sent.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -871,6 +905,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -890,17 +926,17 @@
         <summary>Gets a Boolean value that indicates if this element should not be combined with the next element in a single send request from the sockets layer to the transport.</summary>
         <value>A Boolean value that indicates if this element should not be combined with the next element in a single send request.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default value for the <xref:System.Net.Sockets.SendPacketsElement.EndOfPacket%2A> property is false if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with an `endOfPacket` parameter set to true.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default value for the <xref:System.Net.Sockets.SendPacketsElement.EndOfPacket> property is false if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with an `endOfPacket` parameter set to true.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="FilePath">
-      <MemberSignature Language="C#" Value="public string? FilePath { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public string? FilePath { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
       <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.FilePath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FilePath As String" />
@@ -919,6 +955,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -932,7 +970,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -948,19 +986,19 @@
         <summary>Gets the filename of the file to send if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <paramref name="filepath" /> parameter.</summary>
         <value>The filename of the file to send if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <paramref name="filepath" /> parameter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Universal Naming Convention (UNC) paths are supported by the <xref:System.Net.Sockets.SendPacketsElement.FilePath%2A> property. If the file is in the current working directory, no path information needs to be specified.  
-  
- The default value for the <xref:System.Net.Sockets.SendPacketsElement.FilePath> property is `null` if the <xref:System.Net.Sockets.SendPacketsElement> object was not initialized with a `filepath` parameter.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Universal Naming Convention (UNC) paths are supported by the <xref:System.Net.Sockets.SendPacketsElement.FilePath> property. If the file is in the current working directory, no path information needs to be specified.
+
+ The default value for the <xref:System.Net.Sockets.SendPacketsElement.FilePath> property is `null` if the <xref:System.Net.Sockets.SendPacketsElement> object was not initialized with a `filepath` parameter.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="FileStream">
-      <MemberSignature Language="C#" Value="public System.IO.FileStream? FileStream { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.IO.FileStream? FileStream { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.IO.FileStream FileStream" />
       <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.FileStream" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FileStream As FileStream" />
@@ -977,12 +1015,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -994,12 +1034,12 @@
         <summary>Gets the object representation of the file to send if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <see cref="T:System.IO.FileStream" /> parameter.</summary>
         <value>An object representation of the file to send if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <see cref="T:System.IO.FileStream" /> parameter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
 
  The default value for the <xref:System.Net.Sockets.SendPacketsElement.FileStream> property is `null` if the <xref:System.Net.Sockets.SendPacketsElement> object was not initialized with a `fileStream` parameter.
-  
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1018,12 +1058,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
         </Attribute>
@@ -1035,12 +1077,12 @@
         <summary>Gets the buffer to be sent if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <code>buffer</code> parameter.</summary>
         <value>The <see cref="T:System.ReadOnlyMemory`1" /> of bytes to be sent if the <see cref="T:System.Net.Sockets.SendPacketsElement" /> object was initialized with a <code>buffer</code> parameter.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
  The default value for the <xref:System.Net.Sockets.SendPacketsElement.MemoryBuffer> property is `null` if the <xref:System.Net.Sockets.SendPacketsElement> object was not initialized with a `buffer` parameter.
  If `buffer` was passed as a `byte[]`, <xref:System.Net.Sockets.SendPacketsElement.MemoryBuffer> returns the contents of <xref:System.Net.Sockets.SendPacketsElement.Buffer> as a <xref:System.ReadOnlyMemory`1> of bytes.
-  
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1064,6 +1106,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1089,12 +1133,12 @@
         <summary>Gets the offset, in bytes, from the beginning of the data buffer or file to the location in the buffer or file to start sending the data.</summary>
         <value>The offset, in bytes, from the beginning of the data buffer or file to the location in the buffer or file to start sending the data.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default value for the <xref:System.Net.Sockets.SendPacketsElement.Offset> property is zero if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with an `offset` parameter.  
-  
-  If <xref:System.Net.Sockets.SendPacketsElement.OffsetLong> is greater than <xref:System.Int32.MaxValue>, <xref:System.Net.Sockets.SendPacketsElement.Offset> will throw a <xref:System.OverflowException> when you try to access it. 
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default value for the <xref:System.Net.Sockets.SendPacketsElement.Offset> property is zero if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with an `offset` parameter.
+
+  If <xref:System.Net.Sockets.SendPacketsElement.OffsetLong> is greater than <xref:System.Int32.MaxValue>, <xref:System.Net.Sockets.SendPacketsElement.Offset> will throw a <xref:System.OverflowException> when you try to access it.
 
  ]]></format>
         </remarks>
@@ -1117,6 +1161,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
@@ -1128,12 +1174,12 @@
         <summary>Gets the offset, in bytes, from the beginning of the data buffer or file to the location in the buffer or file to start sending the data.</summary>
         <value>The offset, in bytes, from the beginning of the data buffer or file to the location in the buffer or file to start sending the data.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default value for the <xref:System.Net.Sockets.SendPacketsElement.OffsetLong> property is zero if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with an `offset` parameter.  
-  
-  If <xref:System.Net.Sockets.SendPacketsElement.OffsetLong> is greater than <xref:System.Int32.MaxValue>, <xref:System.Net.Sockets.SendPacketsElement.Offset> will throw a <xref:System.OverflowException> when you try to access it. 
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default value for the <xref:System.Net.Sockets.SendPacketsElement.OffsetLong> property is zero if the <xref:System.Net.Sockets.SendPacketsElement> class was not initialized with an `offset` parameter.
+
+  If <xref:System.Net.Sockets.SendPacketsElement.OffsetLong> is greater than <xref:System.Int32.MaxValue>, <xref:System.Net.Sockets.SendPacketsElement.Offset> will throw a <xref:System.OverflowException> when you try to access it.
 
  ]]></format>
         </remarks>

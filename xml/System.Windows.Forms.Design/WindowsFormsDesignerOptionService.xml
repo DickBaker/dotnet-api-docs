@@ -18,8 +18,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="System.Design" FromVersion="10.0.0.0" To="System.Windows.Forms.Design" ToVersion="10.0.0.0" FrameworkAlternate="windowsdesktop-10.0" />
+    <TypeForwarding From="System.Design" FromVersion="11.0.0.0" To="System.Windows.Forms.Design" ToVersion="11.0.0.0" FrameworkAlternate="windowsdesktop-11.0" />
     <TypeForwarding From="System.Design" FromVersion="4.0.0.0" To="System.Windows.Forms.Design" ToVersion="4.0.0.0" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1" />
     <TypeForwarding From="System.Design" FromVersion="5.0.0.0" To="System.Windows.Forms.Design" ToVersion="5.0.0.0" FrameworkAlternate="windowsdesktop-5.0" />
     <TypeForwarding From="System.Design" FromVersion="6.0.0.0" To="System.Windows.Forms.Design" ToVersion="6.0.0.0" FrameworkAlternate="windowsdesktop-6.0" />
@@ -31,6 +35,12 @@
     <BaseTypeName>System.ComponentModel.Design.DesignerOptionService</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Provides access to get and set option values for a Windows Forms designer.</summary>
     <remarks>To be added.</remarks>
@@ -56,6 +66,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -90,6 +102,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Design.DesignerOptions</ReturnType>
@@ -105,9 +119,8 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PopulateOptionCollection(class System.ComponentModel.Design.DesignerOptionService/DesignerOptionCollection options) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.PopulateOptionCollection(System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub PopulateOptionCollection (options As DesignerOptionService.DesignerOptionCollection)" />
-      <MemberSignature Language="F#" Value="override this.PopulateOptionCollection : System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection -&gt; unit" Usage="windowsFormsDesignerOptionService.PopulateOptionCollection options" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.PopulateOptionCollection : System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection -&gt; unit" Usage="windowsFormsDesignerOptionService.PopulateOptionCollection options" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void PopulateOptionCollection(System::ComponentModel::Design::DesignerOptionService::DesignerOptionCollection ^ options);" />
-      <MemberSignature Language="F#" Value="abstract member PopulateOptionCollection : System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection -&gt; unit&#xA;override this.PopulateOptionCollection : System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection -&gt; unit" Usage="windowsFormsDesignerOptionService.PopulateOptionCollection options" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -122,6 +135,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -133,11 +148,11 @@
         <param name="options">The collection to populate.</param>
         <summary>Populates a <see cref="T:System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.PopulateOptionCollection%2A> method is called on demand the first time a user asks for child options or properties of an options collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.Design.WindowsFormsDesignerOptionService.PopulateOptionCollection*> method is called on demand the first time a user asks for child options or properties of an options collection.
+
  ]]></format>
         </remarks>
       </Docs>

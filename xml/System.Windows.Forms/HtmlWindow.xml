@@ -14,13 +14,15 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -33,11 +35,11 @@
 ## Remarks
  <xref:System.Windows.Forms.HtmlWindow> should not be confused with the concept of a window in Windows Forms or the Windows API; there is no `HWND` or similar Windows resource that corresponds directly to an instance of <xref:System.Windows.Forms.HtmlWindow>. Rather, <xref:System.Windows.Forms.HtmlWindow> provides high-level descriptions of a document's location on a user's screen, as well as methods for interacting with users by way of prompts and dialog boxes. <xref:System.Windows.Forms.HtmlWindow> acts as a logical container for a Web page's documents and its metadata, such as the document's location and the capabilities of the Web browser.
 
- A Web page consists of a single document, or a `FRAMESET` containing one or more `FRAME` elements, each of which hosts its own document. Web developers use framesets to show logically related pages side by side (for example, a content page next to a navigation page). When a page consists of a single document, you can access it through the <xref:System.Windows.Forms.HtmlWindow.Document%2A> property of <xref:System.Windows.Forms.HtmlWindow>; if the page uses frames, you can access their documents through the <xref:System.Windows.Forms.HtmlWindow.Frames%2A> collection, which consists of one or more <xref:System.Windows.Forms.HtmlWindow> objects.
+ A Web page consists of a single document, or a `FRAMESET` containing one or more `FRAME` elements, each of which hosts its own document. Web developers use framesets to show logically related pages side by side (for example, a content page next to a navigation page). When a page consists of a single document, you can access it through the <xref:System.Windows.Forms.HtmlWindow.Document> property of <xref:System.Windows.Forms.HtmlWindow>; if the page uses frames, you can access their documents through the <xref:System.Windows.Forms.HtmlWindow.Frames*> collection, which consists of one or more <xref:System.Windows.Forms.HtmlWindow> objects.
 
- When your host the <xref:System.Windows.Forms.WebBrowser> control in a Windows Forms application, you can choose to interact with the user using standard Windows Forms classes, such as <xref:System.Windows.Forms.Form> or <xref:System.Windows.Forms.MessageBox>, or you can use methods on <xref:System.Windows.Forms.HtmlWindow> defined for this purpose. The <xref:System.Windows.Forms.HtmlWindow.Alert%2A> method presents a simple dialog box with custom text and an **OK** button; <xref:System.Windows.Forms.HtmlWindow.Prompt%2A> presents a line of custom text and a text input field to the user; and <xref:System.Windows.Forms.HtmlWindow.Confirm%2A> presents a dialog box with a line of custom text and **OK** and **Cancel** buttons.
+ When your host the <xref:System.Windows.Forms.WebBrowser> control in a Windows Forms application, you can choose to interact with the user using standard Windows Forms classes, such as <xref:System.Windows.Forms.Form> or <xref:System.Windows.Forms.MessageBox>, or you can use methods on <xref:System.Windows.Forms.HtmlWindow> defined for this purpose. The <xref:System.Windows.Forms.HtmlWindow.Alert*> method presents a simple dialog box with custom text and an **OK** button; <xref:System.Windows.Forms.HtmlWindow.Prompt*> presents a line of custom text and a text input field to the user; and <xref:System.Windows.Forms.HtmlWindow.Confirm*> presents a dialog box with a line of custom text and **OK** and **Cancel** buttons.
 
- You can use <xref:System.Windows.Forms.HtmlWindow> to open new windows containing new documents. <xref:System.Windows.Forms.HtmlWindow.Open%2A> loads the specified URL into the named window, creating it if it does not already exist, while <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> always opens its URL in a newly created window.
+ You can use <xref:System.Windows.Forms.HtmlWindow> to open new windows containing new documents. <xref:System.Windows.Forms.HtmlWindow.Open*> loads the specified URL into the named window, creating it if it does not already exist, while <xref:System.Windows.Forms.HtmlWindow.OpenNew*> always opens its URL in a newly created window.
 
 
 
@@ -45,12 +47,10 @@
  The following code example contains two methods. The first opens a URL in a window named `displayWindow`, which it creates with a status bar displayed. The second opens another URL in the same window, but specifies that only the location bar should be displayed. Notice that the dimensions of the window and the controls that are displayed depends on which URL is opened first. The code example requires that your form contains a <xref:System.Windows.Forms.WebBrowser> control named `WebBrowser1`.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet13":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet13":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet13":::
 
  ]]></format>
     </remarks>
-    <related type="ExternalDocumentation" href="https://developer.mozilla.org/en-us/docs/web/api/window">window Object</related>
-    <related type="ExternalDocumentation" href="https://learn.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa741505(v=vs.85)">IHTMLWindow2 Interface</related>
   </Docs>
   <Members>
     <Member MemberName="Alert">
@@ -70,6 +70,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -84,7 +86,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.MessageBox?displayProperty=nameWithType> class offers a more powerful version of the <xref:System.Windows.Forms.HtmlWindow.Alert%2A> method.
+ The <xref:System.Windows.Forms.MessageBox?displayProperty=nameWithType> class offers a more powerful version of the <xref:System.Windows.Forms.HtmlWindow.Alert*> method.
 
  ]]></format>
         </remarks>
@@ -108,6 +110,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -148,6 +152,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -159,15 +165,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.Windows.Forms.HtmlWindow.IsClosed%2A> property to determine if the window is already closed. If the window is already closed, this method has no effect.
+ Use the <xref:System.Windows.Forms.HtmlWindow.IsClosed> property to determine if the window is already closed. If the window is already closed, this method has no effect.
 
- When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open%2A> or <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, <xref:System.Windows.Forms.HtmlWindow.Close%2A> causes the HTML Document Object Model to open a new instance of Internet Explorer. If you don't call <xref:System.Windows.Forms.HtmlWindow.Close%2A> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application closes.
+ When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open*> or <xref:System.Windows.Forms.HtmlWindow.OpenNew*>, <xref:System.Windows.Forms.HtmlWindow.Close*> causes the HTML Document Object Model to open a new instance of Internet Explorer. If you don't call <xref:System.Windows.Forms.HtmlWindow.Close*> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application closes.
 
 ## Examples
- The following code example opens a window, and closes it if the user has not used it in the past five minutes. The code example was written under the assumption that your form has a <xref:System.Windows.Forms.WebBrowser> control named `WebBrowser1`, a <xref:System.Windows.Forms.Button> named `Button1`, and a <xref:System.Windows.Forms.Timer> class named `Timer1`. To run this example successfully, change the first argument supplied to <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> to a valid URL.
+ The following code example opens a window, and closes it if the user has not used it in the past five minutes. The code example was written under the assumption that your form has a <xref:System.Windows.Forms.WebBrowser> control named `WebBrowser1`, a <xref:System.Windows.Forms.Button> named `Button1`, and a <xref:System.Windows.Forms.Timer> class named `Timer1`. To run this example successfully, change the first argument supplied to <xref:System.Windows.Forms.HtmlWindow.OpenNew*> to a valid URL.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet9":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet9":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet9":::
 
  ]]></format>
         </remarks>
@@ -191,6 +197,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -207,7 +215,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Forms.HtmlWindow.Confirm%2A> displays a modal dialog box; the user will not be able to access the underlying HTML page without first closing this dialog box.
+ <xref:System.Windows.Forms.HtmlWindow.Confirm*> displays a modal dialog box; the user will not be able to access the underlying HTML page without first closing this dialog box.
 
 ## Examples
 
@@ -233,10 +241,10 @@ Building/Desk:
 </HTML>
 ```
 
-The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2A> dialog box when the user submits `NewOrderForm`.
+The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm*> dialog box when the user submits `NewOrderForm`.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet10":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet10":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet10":::
 
  ]]></format>
         </remarks>
@@ -260,6 +268,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -283,7 +293,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Document As HtmlDocument" />
       <MemberSignature Language="F#" Value="member this.Document : System.Windows.Forms.HtmlDocument" Usage="System.Windows.Forms.HtmlWindow.Document" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlDocument ^ Document { System::Windows::Forms::HtmlDocument ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlDocument? Document { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlDocument? Document { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -294,6 +304,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlDocument</ReturnType>
@@ -305,7 +317,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Typically, you will access the <xref:System.Windows.Forms.HtmlWindow.Document%2A> through the <xref:System.Windows.Forms.WebBrowser.Document%2A> property of the <xref:System.Windows.Forms.WebBrowser> control. Use this property when you need to access a document within a `FRAME` using the <xref:System.Windows.Forms.HtmlWindow.Frames%2A> collection.
+ Typically, you will access the <xref:System.Windows.Forms.HtmlWindow.Document*> through the <xref:System.Windows.Forms.WebBrowser.Document> property of the <xref:System.Windows.Forms.WebBrowser> control. Use this property when you need to access a document within a `FRAME` using the <xref:System.Windows.Forms.HtmlWindow.Frames*> collection.
 
 
 
@@ -313,7 +325,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example inspects each document within a page containing frames and creates a table of all of the outgoing hyperlinks from each page for future inspection.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -336,13 +348,15 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
         </Attribute>
@@ -359,7 +373,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 ## Remarks
  Use the underlying unmanaged interface pointers to the Document Object Model (DOM) to execute methods not exposed by <xref:System.Windows.Forms.HtmlWindow>.
 
- You must add a referenced to the unmanaged MSHTML.dll in order to use <xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>. For more information, see [Importing a Type Library as an Assembly](/dotnet/framework/interop/importing-a-type-library-as-an-assembly).
+ You must add a referenced to the unmanaged MSHTML.dll in order to use <xref:System.Windows.Forms.HtmlWindow.DomWindow*>. For more information, see [Importing a Type Library as an Assembly](/dotnet/framework/interop/importing-a-type-library-as-an-assembly).
 
 
 
@@ -367,7 +381,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example obtains an `IHTMLWindow2` pointer from a document's window and displays a new document in a modal window.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -383,7 +397,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="htmlWindow.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -394,6 +408,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -416,7 +432,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event Error As HtmlElementErrorEventHandler " />
       <MemberSignature Language="F#" Value="member this.Error : System.Windows.Forms.HtmlElementErrorEventHandler " Usage="member this.Error : System.Windows.Forms.HtmlElementErrorEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementErrorEventHandler ^ Error;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementErrorEventHandler? Error;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementErrorEventHandler? Error;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -427,6 +443,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementErrorEventHandler</ReturnType>
@@ -439,13 +457,13 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 ## Remarks
  HTML pages can contain script code, usually written in JScript or VBScript, that executes when a page is loaded. <xref:System.Windows.Forms.HtmlWindow.Error> occurs whenever a script encounters a run-time error. Because script code is late-bound, which means that calls against the object are not resolved until run-time, errors can include everything from referencing a null object to calling an undefined property or method.
 
- You can set the <xref:System.Windows.Forms.HtmlElementErrorEventArgs.Handled%2A> property of <xref:System.Windows.Forms.HtmlElementErrorEventArgs> to `true` in order to prevent the native error dialog box in Internet Explorer from displaying.
+ You can set the <xref:System.Windows.Forms.HtmlElementErrorEventArgs.Handled> property of <xref:System.Windows.Forms.HtmlElementErrorEventArgs> to `true` in order to prevent the native error dialog box in Internet Explorer from displaying.
 
 ## Examples
  The following code example traps the error that results when a script on an HTML page attempts to access an object that is not defined in the document. The page must be fully loaded before the <xref:System.Windows.Forms.HtmlWindow.Error> event handler is attached, otherwise the example will not work.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet16":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet16":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet16":::
 
  ]]></format>
         </remarks>
@@ -469,6 +487,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -480,7 +500,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If another window held the focus before <xref:System.Windows.Forms.HtmlWindow.Focus%2A> was called, that window will lose the focus.
+ If another window held the focus before <xref:System.Windows.Forms.HtmlWindow.Focus*> was called, that window will lose the focus.
 
  Do not call focus on an element inside of a window until the window's <xref:System.Windows.Forms.HtmlWindow.Load> event has been raised.
 
@@ -496,7 +516,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Frames As HtmlWindowCollection" />
       <MemberSignature Language="F#" Value="member this.Frames : System.Windows.Forms.HtmlWindowCollection" Usage="System.Windows.Forms.HtmlWindow.Frames" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlWindowCollection ^ Frames { System::Windows::Forms::HtmlWindowCollection ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindowCollection? Frames { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindowCollection? Frames { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -507,6 +527,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindowCollection</ReturnType>
@@ -528,7 +550,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example inspects each document within a page containing frames and creates a table of all of the outgoing hyperlinks from each page for future inspection.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -552,6 +574,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -570,7 +594,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event GotFocus As HtmlElementEventHandler " />
       <MemberSignature Language="F#" Value="member this.GotFocus : System.Windows.Forms.HtmlElementEventHandler " Usage="member this.GotFocus : System.Windows.Forms.HtmlElementEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementEventHandler ^ GotFocus;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? GotFocus;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? GotFocus;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -581,6 +605,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
@@ -593,11 +619,11 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 ## Remarks
  <xref:System.Windows.Forms.HtmlWindow.GotFocus> will occur for:
 
--   The first window in a `FRAMESET` when the `FRAMESET` first loads.
+- The first window in a `FRAMESET` when the `FRAMESET` first loads.
 
--   The `FRAME` that last had focus when the window containing the <xref:System.Windows.Forms.WebBrowser> control is brought to the foreground.
+- The `FRAME` that last had focus when the window containing the <xref:System.Windows.Forms.WebBrowser> control is brought to the foreground.
 
--   A `FRAME` clicked by the user, but only if the user's click does not put focus on an element within the window.
+- A `FRAME` clicked by the user, but only if the user's click does not put focus on an element within the window.
 
  You cannot cancel the default action for the <xref:System.Windows.Forms.HtmlWindow.GotFocus> event, or prevent it from bubbling.
 
@@ -609,7 +635,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.HtmlWindow> named `HtmlWindow1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.HtmlWindow.GotFocus> event.
 
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet452":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet452":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet452":::
 
  ]]></format>
         </remarks>
@@ -623,7 +649,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property History As HtmlHistory" />
       <MemberSignature Language="F#" Value="member this.History : System.Windows.Forms.HtmlHistory" Usage="System.Windows.Forms.HtmlWindow.History" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlHistory ^ History { System::Windows::Forms::HtmlHistory ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlHistory? History { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlHistory? History { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -634,6 +660,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlHistory</ReturnType>
@@ -645,7 +673,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Forms.HtmlWindow.History%2A> contains all URLs navigated to within the current window, which is referred to as the *navigation stack*, and provides methods for navigating back to those documents.
+ <xref:System.Windows.Forms.HtmlWindow.History*> contains all URLs navigated to within the current window, which is referred to as the *navigation stack*, and provides methods for navigating back to those documents.
 
  ]]></format>
         </remarks>
@@ -668,6 +696,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -680,7 +710,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Forms.HtmlWindow> has been closed by the user or by way of a call to the <xref:System.Windows.Forms.HtmlWindow.Close%2A> method, attempting to navigate to a new URL or access the window's document will result in an error. Use this property to determine whether it is safe to call properties and methods on the current window object.
+ If the <xref:System.Windows.Forms.HtmlWindow> has been closed by the user or by way of a call to the <xref:System.Windows.Forms.HtmlWindow.Close*> method, attempting to navigate to a new URL or access the window's document will result in an error. Use this property to determine whether it is safe to call properties and methods on the current window object.
 
 
 
@@ -688,7 +718,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example opens a window, and closes it if the user has not used it in the past five minutes. The code example requires that your form has a <xref:System.Windows.Forms.WebBrowser> control named `WebBrowser1`, a <xref:System.Windows.Forms.Button> named `Button1`, and a <xref:System.Windows.Forms.Timer> class named `Timer1`.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet8":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet8":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet8":::
 
  ]]></format>
         </remarks>
@@ -702,7 +732,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event Load As HtmlElementEventHandler " />
       <MemberSignature Language="F#" Value="member this.Load : System.Windows.Forms.HtmlElementEventHandler " Usage="member this.Load : System.Windows.Forms.HtmlElementEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementEventHandler ^ Load;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Load;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Load;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -713,6 +743,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
@@ -730,12 +762,12 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 
 
 ## Examples
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Load> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Load> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
 
  To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.HtmlWindow> named `HtmlWindow1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.HtmlWindow.Load> event.
 
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet453":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet453":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet453":::
 
  ]]></format>
         </remarks>
@@ -749,7 +781,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event LostFocus As HtmlElementEventHandler " />
       <MemberSignature Language="F#" Value="member this.LostFocus : System.Windows.Forms.HtmlElementEventHandler " Usage="member this.LostFocus : System.Windows.Forms.HtmlElementEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementEventHandler ^ LostFocus;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? LostFocus;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? LostFocus;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -760,6 +792,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
@@ -775,7 +809,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.HtmlWindow> named `HtmlWindow1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.HtmlWindow.LostFocus> event.
 
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet454":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet454":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet454":::
 
  ]]></format>
         </remarks>
@@ -807,6 +841,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -821,9 +857,9 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You cannot use <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> to move a window off of the visible edge of the screen; this method is also available through script on a Web page, and allowing untrusted script to render windows invisible is not considered secure.
+ You cannot use <xref:System.Windows.Forms.HtmlWindow.MoveTo*> to move a window off of the visible edge of the screen; this method is also available through script on a Web page, and allowing untrusted script to render windows invisible is not considered secure.
 
- <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> will raise an <xref:System.UnauthorizedAccessException> if the window you are trying to move and its parent window have different top-level domains. For example, if you are hosting the <xref:System.Windows.Forms.WebBrowser> control pointing to a.adatum.com, create a new window using <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> to display b.adatum.com. In this case, both windows are considered to be part of the same top-level domain, and the exception is not thrown. However, if you call <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> to display www,microsoft.com, the two windows now have different top-level domains, and the <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> operation will cause the exception to throw.
+ <xref:System.Windows.Forms.HtmlWindow.MoveTo*> will raise an <xref:System.UnauthorizedAccessException> if the window you are trying to move and its parent window have different top-level domains. For example, if you are hosting the <xref:System.Windows.Forms.WebBrowser> control pointing to a.adatum.com, create a new window using <xref:System.Windows.Forms.HtmlWindow.OpenNew*> to display b.adatum.com. In this case, both windows are considered to be part of the same top-level domain, and the exception is not thrown. However, if you call <xref:System.Windows.Forms.HtmlWindow.OpenNew*> to display www,microsoft.com, the two windows now have different top-level domains, and the <xref:System.Windows.Forms.HtmlWindow.MoveTo*> operation will cause the exception to throw.
 
  ]]></format>
         </remarks>
@@ -848,6 +884,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -864,9 +902,9 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You cannot use <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> to move a window off of the visible edge of the screen; this method is also available through script on a Web page, and allowing untrusted script to render windows invisible is not considered secure.
+ You cannot use <xref:System.Windows.Forms.HtmlWindow.MoveTo*> to move a window off of the visible edge of the screen; this method is also available through script on a Web page, and allowing untrusted script to render windows invisible is not considered secure.
 
- <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> will raise an <xref:System.UnauthorizedAccessException> if the window you are trying to move and its parent window have different top-level domains. For example, if you are hosting the <xref:System.Windows.Forms.WebBrowser> control and it is pointing to a.adatum.com, you create a new window using <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> to display b.adatum.com. In this case, both windows are considered to be part of the same top-level domain, and the exception is not thrown. However, if you call <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> to display www,microsoft.com, the two windows now have different top-level domains, and the <xref:System.Windows.Forms.HtmlWindow.MoveTo%2A> operation will cause the exception to throw.
+ <xref:System.Windows.Forms.HtmlWindow.MoveTo*> will raise an <xref:System.UnauthorizedAccessException> if the window you are trying to move and its parent window have different top-level domains. For example, if you are hosting the <xref:System.Windows.Forms.WebBrowser> control and it is pointing to a.adatum.com, you create a new window using <xref:System.Windows.Forms.HtmlWindow.OpenNew*> to display b.adatum.com. In this case, both windows are considered to be part of the same top-level domain, and the exception is not thrown. However, if you call <xref:System.Windows.Forms.HtmlWindow.OpenNew*> to display www,microsoft.com, the two windows now have different top-level domains, and the <xref:System.Windows.Forms.HtmlWindow.MoveTo*> operation will cause the exception to throw.
 
  ]]></format>
         </remarks>
@@ -890,9 +928,11 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
         </Attribute>
@@ -933,6 +973,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -971,6 +1013,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -991,7 +1035,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As HtmlWindow, right As HtmlWindow) As Boolean" />
       <MemberSignature Language="F#" Value="static member ( = ) : System.Windows.Forms.HtmlWindow * System.Windows.Forms.HtmlWindow -&gt; bool" Usage="left = right" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Windows::Forms::HtmlWindow ^ left, System::Windows::Forms::HtmlWindow ^ right);" />
-      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.HtmlWindow? left, System.Windows.Forms.HtmlWindow? right);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.HtmlWindow? left, System.Windows.Forms.HtmlWindow? right);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1002,6 +1046,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1022,7 +1068,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 ## Remarks
  The equality operator tests the `IUnknown` pointers of the underlying COM objects wrapped by the supplied <xref:System.Windows.Forms.HtmlWindow> classes.
 
- The equivalent method for this operator is <xref:System.Windows.Forms.HtmlWindow.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+ The equivalent method for this operator is <xref:System.Windows.Forms.HtmlWindow.Equals(System.Object)?displayProperty=nameWithType>]]></format>
         </remarks>
       </Docs>
     </Member>
@@ -1033,7 +1079,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As HtmlWindow, right As HtmlWindow) As Boolean" />
       <MemberSignature Language="F#" Value="static member op_Inequality : System.Windows.Forms.HtmlWindow * System.Windows.Forms.HtmlWindow -&gt; bool" Usage="System.Windows.Forms.HtmlWindow.op_Inequality (left, right)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Windows::Forms::HtmlWindow ^ left, System::Windows::Forms::HtmlWindow ^ right);" />
-      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.HtmlWindow? left, System.Windows.Forms.HtmlWindow? right);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.HtmlWindow? left, System.Windows.Forms.HtmlWindow? right);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1044,6 +1090,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1077,7 +1125,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Function Open (urlString As String, target As String, windowOptions As String, replaceEntry As Boolean) As HtmlWindow" />
       <MemberSignature Language="F#" Value="member this.Open : string * string * string * bool -&gt; System.Windows.Forms.HtmlWindow" Usage="htmlWindow.Open (urlString, target, windowOptions, replaceEntry)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::HtmlWindow ^ Open(System::String ^ urlString, System::String ^ target, System::String ^ windowOptions, bool replaceEntry);" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Open (string urlString, string target, string windowOptions, bool replaceEntry);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Open (string urlString, string target, string windowOptions, bool replaceEntry);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1088,6 +1136,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
@@ -1148,7 +1198,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The `target` parameter can name a window that was created as the result of a previous call to <xref:System.Windows.Forms.HtmlWindow.Open%2A>. The parameter may also point to a window opened by clicking on a hyperlink (`A` element) or a `FORM` element that uses the `TARGET` attribute to open its URL in a new window. The following HTML code will open a new window named `orderWindow` when the user clicks it:
+ The `target` parameter can name a window that was created as the result of a previous call to <xref:System.Windows.Forms.HtmlWindow.Open*>. The parameter may also point to a window opened by clicking on a hyperlink (`A` element) or a `FORM` element that uses the `TARGET` attribute to open its URL in a new window. The following HTML code will open a new window named `orderWindow` when the user clicks it:
 
  `<A HREF="/startOrder.aspx" TARGET="orderWindow">Click to Start Order</a>`
 
@@ -1156,9 +1206,9 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 
  If the file referenced by `url` is an HTML file, text file, or other file type that can be hosted inside of Internet Explorer, it will be displayed in the named window. If the file cannot be displayed inside of Internet Explorer, and the window named by target does not already exist, then the window will open only long enough for Internet Explorer to download the resource; it will close immediately afterwards.
 
- When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open%2A> or <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close%2A> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
+ When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open*> or <xref:System.Windows.Forms.HtmlWindow.OpenNew*>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close*> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
 
- If you use <xref:System.Windows.Forms.HtmlWindow.Open%2A> to load a URL in an existing window, `windowOptions` will be ignored; the window will retain the dimensions, appearance, and screen location first given it by the initial call to <xref:System.Windows.Forms.HtmlWindow.Open%2A>.
+ If you use <xref:System.Windows.Forms.HtmlWindow.Open*> to load a URL in an existing window, `windowOptions` will be ignored; the window will retain the dimensions, appearance, and screen location first given it by the initial call to <xref:System.Windows.Forms.HtmlWindow.Open*>.
 
  ]]></format>
         </remarks>
@@ -1171,7 +1221,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Function Open (url As Uri, target As String, windowOptions As String, replaceEntry As Boolean) As HtmlWindow" />
       <MemberSignature Language="F#" Value="member this.Open : Uri * string * string * bool -&gt; System.Windows.Forms.HtmlWindow" Usage="htmlWindow.Open (url, target, windowOptions, replaceEntry)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::HtmlWindow ^ Open(Uri ^ url, System::String ^ target, System::String ^ windowOptions, bool replaceEntry);" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Open (Uri url, string target, string windowOptions, bool replaceEntry);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Open (Uri url, string target, string windowOptions, bool replaceEntry);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1182,6 +1232,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
@@ -1242,7 +1294,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The `target` parameter can name a window that was created as the result of a previous call to <xref:System.Windows.Forms.HtmlWindow.Open%2A>. The parameter may also point to a window opened by clicking on a hyperlink (`A` element) or a `FORM` element that uses the `TARGET` attribute to open its URL in a new window. The following HTML code will open a new window named `orderWindow` when the user clicks it:
+ The `target` parameter can name a window that was created as the result of a previous call to <xref:System.Windows.Forms.HtmlWindow.Open*>. The parameter may also point to a window opened by clicking on a hyperlink (`A` element) or a `FORM` element that uses the `TARGET` attribute to open its URL in a new window. The following HTML code will open a new window named `orderWindow` when the user clicks it:
 
  `<A HREF="/startOrder.aspx" TARGET="orderWindow">Click to Start Order</a>`
 
@@ -1250,20 +1302,20 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 
  If the file referenced by `url` is an HTML file, text file, or other file type that can be hosted inside of Internet Explorer, it will be displayed in the named window. If the file cannot be displayed inside of Internet Explorer, and the window named by target does not already exist, then the window will open only long enough for Internet Explorer to download the resource; it will close immediately afterwards.
 
- When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open%2A> or <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close%2A> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
+ When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open*> or <xref:System.Windows.Forms.HtmlWindow.OpenNew*>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close*> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
 
- If you use <xref:System.Windows.Forms.HtmlWindow.Open%2A> to load a URL in an existing window, `windowOptions` will be ignored; the window will retain the dimensions, appearance, and screen location first given it by the initial call to <xref:System.Windows.Forms.HtmlWindow.Open%2A>.
+ If you use <xref:System.Windows.Forms.HtmlWindow.Open*> to load a URL in an existing window, `windowOptions` will be ignored; the window will retain the dimensions, appearance, and screen location first given it by the initial call to <xref:System.Windows.Forms.HtmlWindow.Open*>.
 
 ## Examples
  The following code example contains two methods:
 
--   The first opens a URL in a window named `displayWindow`, which it creates with a status bar displayed.
--   The second opens another URL in the same window, but specifies that only the location bar should be displayed.
+- The first opens a URL in a window named `displayWindow`, which it creates with a status bar displayed.
+- The second opens another URL in the same window, but specifies that only the location bar should be displayed.
 
  Notice that the dimensions of the window and the controls that are displayed depends on which URL is opened first. The code example requires that your form contains a <xref:System.Windows.Forms.WebBrowser> control named `WebBrowser1`.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet13":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet13":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet13":::
 
  ]]></format>
         </remarks>
@@ -1277,7 +1329,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Opener As HtmlWindow" />
       <MemberSignature Language="F#" Value="member this.Opener : System.Windows.Forms.HtmlWindow" Usage="System.Windows.Forms.HtmlWindow.Opener" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlWindow ^ Opener { System::Windows::Forms::HtmlWindow ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Opener { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Opener { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1288,6 +1340,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
@@ -1314,7 +1368,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Function OpenNew (urlString As String, windowOptions As String) As HtmlWindow" />
       <MemberSignature Language="F#" Value="member this.OpenNew : string * string -&gt; System.Windows.Forms.HtmlWindow" Usage="htmlWindow.OpenNew (urlString, windowOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::HtmlWindow ^ OpenNew(System::String ^ urlString, System::String ^ windowOptions);" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? OpenNew (string urlString, string windowOptions);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? OpenNew (string urlString, string windowOptions);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1325,6 +1379,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
@@ -1344,9 +1400,9 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 ## Remarks
  If the file referenced by `url` is an HTML file, text file, or other file type that can be hosted inside of Internet Explorer, it will be displayed in a new window. If the file cannot be displayed inside of Internet Explorer, then the window will open only long enough for Internet Explorer to download the resource; it will close immediately afterwards.
 
- When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open%2A> or <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close%2A> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
+ When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open*> or <xref:System.Windows.Forms.HtmlWindow.OpenNew*>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close*> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
 
- If you want to load a document into a previously opened window, see the <xref:System.Windows.Forms.HtmlWindow.Open%2A> method.
+ If you want to load a document into a previously opened window, see the <xref:System.Windows.Forms.HtmlWindow.Open*> method.
 
  ]]></format>
         </remarks>
@@ -1359,7 +1415,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Function OpenNew (url As Uri, windowOptions As String) As HtmlWindow" />
       <MemberSignature Language="F#" Value="member this.OpenNew : Uri * string -&gt; System.Windows.Forms.HtmlWindow" Usage="htmlWindow.OpenNew (url, windowOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::HtmlWindow ^ OpenNew(Uri ^ url, System::String ^ windowOptions);" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? OpenNew (Uri url, string windowOptions);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? OpenNew (Uri url, string windowOptions);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1370,6 +1426,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
@@ -1389,9 +1447,9 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
 ## Remarks
  If the file referenced by `url` is an HTML file, text file, or other file type that can be hosted inside of Internet Explorer, it will be displayed in a new window. If the file cannot be displayed inside of Internet Explorer, then the window will open only long enough for Internet Explorer to download the resource; it will close immediately afterwards.
 
- When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open%2A> or <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close%2A> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
+ When you create new windows using <xref:System.Windows.Forms.HtmlWindow.Open*> or <xref:System.Windows.Forms.HtmlWindow.OpenNew*>, it causes the HTML Document Object Model to open a new instance of Internet Explorer. If you do not call <xref:System.Windows.Forms.HtmlWindow.Close*> on all of the windows you have created, this instance of Internet Explorer will remain running even after your application has quit.
 
- If you want to load a document into a previously opened window, see the <xref:System.Windows.Forms.HtmlWindow.Open%2A> method.
+ If you want to load a document into a previously opened window, see the <xref:System.Windows.Forms.HtmlWindow.Open*> method.
 
  ]]></format>
         </remarks>
@@ -1405,7 +1463,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As HtmlWindow" />
       <MemberSignature Language="F#" Value="member this.Parent : System.Windows.Forms.HtmlWindow" Usage="System.Windows.Forms.HtmlWindow.Parent" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlWindow ^ Parent { System::Windows::Forms::HtmlWindow ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Parent { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlWindow? Parent { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1416,6 +1474,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlWindow</ReturnType>
@@ -1451,6 +1511,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Point</ReturnType>
@@ -1462,7 +1524,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.Control.Location%2A> property of the <xref:System.Windows.Forms.WebBrowser> control will return the position of the control relative to the upper-left corner of the form. By contrast, <xref:System.Windows.Forms.HtmlWindow.Position%2A> will return the location of the document's display area relative to the top-left corner of the user's monitor.
+ The <xref:System.Windows.Forms.Control.Location> property of the <xref:System.Windows.Forms.WebBrowser> control will return the position of the control relative to the upper-left corner of the form. By contrast, <xref:System.Windows.Forms.HtmlWindow.Position*> will return the location of the document's display area relative to the top-left corner of the user's monitor.
 
 
 
@@ -1470,11 +1532,11 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example opens a new window directly over the <xref:System.Windows.Forms.WebBrowser> control on the form. The code example requires that your form contains an instance of the <xref:System.Windows.Forms.WebBrowser> control named `WebBrowser1`.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet5":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet5":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet5":::
 
  ]]></format>
         </remarks>
-        <related type="Article" href="/dotnet/framework/winforms/windows-forms-coordinates">Windows Forms Coordinates</related>
+        <related type="Article" href="/dotnet/desktop/winforms/windows-forms-coordinates">Windows Forms Coordinates</related>
         <related type="ExternalDocumentation" href="https://developer.mozilla.org/en-us/docs/web/api/screen/left">screenLeft Property</related>
         <related type="ExternalDocumentation" href="https://developer.mozilla.org/en-us/docs/web/api/screen/top">screenTop Property</related>
       </Docs>
@@ -1486,7 +1548,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Function Prompt (message As String, defaultInputValue As String) As String" />
       <MemberSignature Language="F#" Value="member this.Prompt : string * string -&gt; string" Usage="htmlWindow.Prompt (message, defaultInputValue)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ Prompt(System::String ^ message, System::String ^ defaultInputValue);" />
-      <MemberSignature Language="C#" Value="public string? Prompt (string message, string defaultInputValue);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public string? Prompt (string message, string defaultInputValue);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1497,6 +1559,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1514,7 +1578,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Forms.HtmlWindow.Prompt%2A> provides a quick, easy way to obtain simple text input from the user.
+ <xref:System.Windows.Forms.HtmlWindow.Prompt*> provides a quick, easy way to obtain simple text input from the user.
 
  ]]></format>
         </remarks>
@@ -1538,6 +1602,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1549,7 +1615,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When called on a `FRAME` window in a `FRAMESET`, <xref:System.Windows.Forms.HtmlWindow.RemoveFocus%2A> will cause that window to lose focus, but it will not automatically set focus on another window.
+ When called on a `FRAME` window in a `FRAMESET`, <xref:System.Windows.Forms.HtmlWindow.RemoveFocus*> will cause that window to lose focus, but it will not automatically set focus on another window.
 
  ]]></format>
         </remarks>
@@ -1563,7 +1629,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event Resize As HtmlElementEventHandler " />
       <MemberSignature Language="F#" Value="member this.Resize : System.Windows.Forms.HtmlElementEventHandler " Usage="member this.Resize : System.Windows.Forms.HtmlElementEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementEventHandler ^ Resize;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Resize;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Resize;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1574,6 +1640,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
@@ -1584,12 +1652,12 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Resize> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Resize> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
 
  To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.HtmlWindow> named `HtmlWindow1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.HtmlWindow.Resize> event.
 
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet455":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet455":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet455":::
 
  ]]></format>
         </remarks>
@@ -1622,6 +1690,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1639,7 +1709,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example opens a new window, and resizes it to fill the available screen area.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -1664,6 +1734,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1687,7 +1759,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event Scroll As HtmlElementEventHandler " />
       <MemberSignature Language="F#" Value="member this.Scroll : System.Windows.Forms.HtmlElementEventHandler " Usage="member this.Scroll : System.Windows.Forms.HtmlElementEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementEventHandler ^ Scroll;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Scroll;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Scroll;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1698,6 +1770,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
@@ -1708,12 +1782,12 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Scroll> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Scroll> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
 
  To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.HtmlWindow> named `HtmlWindow1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.HtmlWindow.Scroll> event.
 
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet456":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet456":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet456":::
 
  ]]></format>
         </remarks>
@@ -1746,6 +1820,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1760,7 +1836,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A> will cause the document to scroll so that the specified coordinate on the document is located in the upper-left corner of the document's window. If the document is not long or wide enough for this to happen, <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A> will scroll through the document as far as possible in the specified direction.
+ <xref:System.Windows.Forms.HtmlWindow.ScrollTo*> will cause the document to scroll so that the specified coordinate on the document is located in the upper-left corner of the document's window. If the document is not long or wide enough for this to happen, <xref:System.Windows.Forms.HtmlWindow.ScrollTo*> will scroll through the document as far as possible in the specified direction.
 
 
 
@@ -1768,7 +1844,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example scrolls through the document to the coordinate position clicked by the user.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet15":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet15":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet15":::
 
  ]]></format>
         </remarks>
@@ -1792,6 +1868,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1808,7 +1886,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A> will cause the document to scroll so that the specified coordinate on the document is located in the upper-left corner of the document's window. If the document is not long or wide enough for this to happen, <xref:System.Windows.Forms.HtmlWindow.ScrollTo%2A> will scroll through the document as far as possible in the specified direction.
+ <xref:System.Windows.Forms.HtmlWindow.ScrollTo*> will cause the document to scroll so that the specified coordinate on the document is located in the upper-left corner of the document's window. If the document is not long or wide enough for this to happen, <xref:System.Windows.Forms.HtmlWindow.ScrollTo*> will scroll through the document as far as possible in the specified direction.
 
  ]]></format>
         </remarks>
@@ -1831,6 +1909,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Size</ReturnType>
@@ -1858,9 +1938,11 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
         </Attribute>
@@ -1875,7 +1957,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.WebBrowser> control does not display a status bar. Any new window that you open with the <xref:System.Windows.Forms.HtmlWindow.Open%2A> or <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> methods, however, will display a status bar by default.
+ The <xref:System.Windows.Forms.WebBrowser> control does not display a status bar. Any new window that you open with the <xref:System.Windows.Forms.HtmlWindow.Open*> or <xref:System.Windows.Forms.HtmlWindow.OpenNew*> methods, however, will display a status bar by default.
 
  ]]></format>
         </remarks>
@@ -1889,7 +1971,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public Custom Event Unload As HtmlElementEventHandler " />
       <MemberSignature Language="F#" Value="member this.Unload : System.Windows.Forms.HtmlElementEventHandler " Usage="member this.Unload : System.Windows.Forms.HtmlElementEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::HtmlElementEventHandler ^ Unload;" />
-      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Unload;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler? Unload;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1900,6 +1982,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
@@ -1910,12 +1994,12 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Unload> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> with <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
+ The following code example demonstrates the use of this member. In the example, an event handler reports on the occurrence of the <xref:System.Windows.Forms.HtmlWindow.Unload> event. This report helps you to learn when the event occurs and can assist you in debugging. To report on multiple events or on events that occur frequently, consider replacing <xref:System.Windows.Forms.MessageBox.Show*?displayProperty=nameWithType> with <xref:System.Console.WriteLine*?displayProperty=nameWithType> or appending the message to a multiline <xref:System.Windows.Forms.TextBox>.
 
  To run the example code, paste it into a project that contains an instance of type <xref:System.Windows.Forms.HtmlWindow> named `HtmlWindow1`. Then ensure that the event handler is associated with the <xref:System.Windows.Forms.HtmlWindow.Unload> event.
 
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.cs" id="Snippet457":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb" id="Snippet457":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/CollectionChangeEventArgs/Overview/EventExamples.vb" id="Snippet457":::
 
  ]]></format>
         </remarks>
@@ -1929,7 +2013,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Url As Uri" />
       <MemberSignature Language="F#" Value="member this.Url : Uri" Usage="System.Windows.Forms.HtmlWindow.Url" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ Url { Uri ^ get(); };" />
-      <MemberSignature Language="C#" Value="public Uri? Url { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public Uri? Url { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1940,6 +2024,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Uri</ReturnType>
@@ -1951,7 +2037,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property is read-only. To navigate the window to a new document, use the <xref:System.Windows.Forms.HtmlWindow.Navigate%2A> method.
+ This property is read-only. To navigate the window to a new document, use the <xref:System.Windows.Forms.HtmlWindow.Navigate*> method.
 
  ]]></format>
         </remarks>
@@ -1964,7 +2050,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WindowFrameElement As HtmlElement" />
       <MemberSignature Language="F#" Value="member this.WindowFrameElement : System.Windows.Forms.HtmlElement" Usage="System.Windows.Forms.HtmlWindow.WindowFrameElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlElement ^ WindowFrameElement { System::Windows::Forms::HtmlElement ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement? WindowFrameElement { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement? WindowFrameElement { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -1975,6 +2061,8 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
@@ -1986,7 +2074,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When you retrieve a `FRAME` element from the <xref:System.Windows.Forms.HtmlWindow.Frames%2A> collection, it returns an <xref:System.Windows.Forms.HtmlWindow>. Call <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> on this object if you need to access attributes of the underlying `FRAME` element, such as the `SRC` attribute.
+ When you retrieve a `FRAME` element from the <xref:System.Windows.Forms.HtmlWindow.Frames*> collection, it returns an <xref:System.Windows.Forms.HtmlWindow>. Call <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement*> on this object if you need to access attributes of the underlying `FRAME` element, such as the `SRC` attribute.
 
 
 
@@ -1994,7 +2082,7 @@ The following example displays a <xref:System.Windows.Forms.HtmlWindow.Confirm%2
  The following code example compares the `SRC` attribute of frames in a `FRAMESET` to the current location. If they are different, the frames are reset to their original URLs.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.cs" id="Snippet8":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlWindow/VB/Form1.vb" id="Snippet8":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/HtmlElementErrorEventArgs/Overview/Form1.vb" id="Snippet8":::
 
  ]]></format>
         </remarks>

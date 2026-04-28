@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class TextBox&#xA;Inherits TextBoxBase&#xA;Implements IAddChild" />
   <TypeSignature Language="F#" Value="type TextBox = class&#xA;    inherit TextBoxBase&#xA;    interface IAddChild" />
   <TypeSignature Language="C++ CLI" Value="public ref class TextBox : System::Windows::Controls::Primitives::TextBoxBase, System::Windows::Markup::IAddChild" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextBox extends System.Windows.Controls.Primitives.TextBoxBase implements class System.Windows.Markup.IAddChild" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextBox extends System.Windows.Controls.Primitives.TextBoxBase implements class System.Windows.Markup.IAddChild" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.Primitives.TextBoxBase</BaseTypeName>
@@ -40,7 +42,7 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Windows.Controls.TextBox> control can contain only unformatted text in its <xref:System.Windows.Controls.TextBox.Text%2A> property. The following graphic shows an example of a <xref:System.Windows.Controls.TextBox>.
+ A <xref:System.Windows.Controls.TextBox> control can contain only unformatted text in its <xref:System.Windows.Controls.TextBox.Text> property. The following graphic shows an example of a <xref:System.Windows.Controls.TextBox>.
 
  ![TextBox screen shot](~/add/media/ss-ctl-textbox.gif "TextBox screen shot")
 Example of a TextBox
@@ -49,19 +51,19 @@ Example of a TextBox
 
  <xref:System.Windows.Controls.TextBox> supports unformatted text only. For applications that require support for richer content, see <xref:System.Windows.Controls.RichTextBox>. For applications that need to accept passwords or other sensitive input, see <xref:System.Windows.Controls.PasswordBox>.
 
- Horizontally and vertically aligning text within a <xref:System.Windows.Controls.TextBox> is done with the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> and <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> properties. Aligning the <xref:System.Windows.Controls.TextBox> within the layout of the page is done with the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> properties.
+ Horizontally and vertically aligning text within a <xref:System.Windows.Controls.TextBox> is done with the <xref:System.Windows.Controls.Control.HorizontalContentAlignment*> and <xref:System.Windows.Controls.Control.VerticalContentAlignment*> properties. Aligning the <xref:System.Windows.Controls.TextBox> within the layout of the page is done with the <xref:System.Windows.FrameworkElement.HorizontalAlignment*> and <xref:System.Windows.FrameworkElement.VerticalAlignment*> properties.
 
- The best way to hide the border around a <xref:System.Windows.Controls.TextBox> is to set the <xref:System.Windows.Controls.Control.BorderThickness%2A> property of the <xref:System.Windows.Controls.TextBox> to `0`.
+ The best way to hide the border around a <xref:System.Windows.Controls.TextBox> is to set the <xref:System.Windows.Controls.Control.BorderThickness> property of the <xref:System.Windows.Controls.TextBox> to `0`.
 
 > [!IMPORTANT]
->  <xref:System.Windows.Controls.TextBox> has built-in handling for the bubbling  <xref:System.Windows.UIElement.MouseUp> and <xref:System.Windows.UIElement.MouseDown> events. Consequently, custom event handlers that listen for <xref:System.Windows.UIElement.MouseUp> or <xref:System.Windows.UIElement.MouseDown> events from a <xref:System.Windows.Controls.TextBox> will not be called. If you need to respond to these events, listen for the tunneling <xref:System.Windows.UIElement.PreviewMouseUp> and <xref:System.Windows.UIElement.PreviewMouseDown> events instead, or register the handlers with the <xref:System.Windows.EventSetter.HandledEventsToo%2A> argument (this latter option is only available through code). Do not mark the event handled unless you deliberately want to disable <xref:System.Windows.Controls.TextBox> native handling of these events, and be aware that this has notable effects on the control's UI.
+>  <xref:System.Windows.Controls.TextBox> has built-in handling for the bubbling  <xref:System.Windows.UIElement.MouseUp> and <xref:System.Windows.UIElement.MouseDown> events. Consequently, custom event handlers that listen for <xref:System.Windows.UIElement.MouseUp> or <xref:System.Windows.UIElement.MouseDown> events from a <xref:System.Windows.Controls.TextBox> will not be called. If you need to respond to these events, listen for the tunneling <xref:System.Windows.UIElement.PreviewMouseUp> and <xref:System.Windows.UIElement.PreviewMouseDown> events instead, or register the handlers with the <xref:System.Windows.EventSetter.HandledEventsToo*> argument (this latter option is only available through code). Do not mark the event handled unless you deliberately want to disable <xref:System.Windows.Controls.TextBox> native handling of these events, and be aware that this has notable effects on the control's UI.
 
- Scrollbars are not visible on a <xref:System.Windows.Controls.TextBox> by default. To make scrollbars visible, set the <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> and <xref:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility%2A> properties to <xref:System.Windows.Controls.ScrollBarVisibility.Visible> or <xref:System.Windows.Controls.ScrollBarVisibility.Auto>.
+ Scrollbars are not visible on a <xref:System.Windows.Controls.TextBox> by default. To make scrollbars visible, set the <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility*> and <xref:System.Windows.Controls.Primitives.TextBoxBase.HorizontalScrollBarVisibility*> properties to <xref:System.Windows.Controls.ScrollBarVisibility.Visible> or <xref:System.Windows.Controls.ScrollBarVisibility.Auto>.
 
- Usually the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event should be used to detect whenever the text in a <xref:System.Windows.Controls.TextBox> or <xref:System.Windows.Controls.RichTextBox> changes rather then <xref:System.Windows.UIElement.KeyDown> as you might expect. See [How to: Detect When Text in a TextBox Has Changed](/dotnet/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed) for an example.
+ Usually the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event should be used to detect whenever the text in a <xref:System.Windows.Controls.TextBox> or <xref:System.Windows.Controls.RichTextBox> changes rather then <xref:System.Windows.UIElement.KeyDown> as you might expect. See [How to: Detect When Text in a TextBox Has Changed](/dotnet/desktop/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed) for an example.
 
 ## Customizing the TextBox Control
- To apply the same property settings to multiple <xref:System.Windows.Controls.TextBox> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](/dotnet/framework/wpf/controls/customizing-the-appearance-of-an-existing-control).  To see the parts and states that are specific to the <xref:System.Windows.Controls.TextBox>, see [TextBox Styles and Templates](/dotnet/framework/wpf/controls/textbox-styles-and-templates).
+ To apply the same property settings to multiple <xref:System.Windows.Controls.TextBox> controls, use the <xref:System.Windows.FrameworkElement.Style> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [How to create a template for a control](/dotnet/desktop/wpf/controls/how-to-create-apply-template).  To see the parts and states that are specific to the <xref:System.Windows.Controls.TextBox>, see [TextBox Styles and Templates](/dotnet/desktop/wpf/controls/textbox).
 
  Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.
 
@@ -71,7 +73,7 @@ Example of a TextBox
  This example shows how to use the Text property to set the initial text contents of a TextBox control.
 
 > [!NOTE]
->  Although the Extensible Application Markup Language (XAML) version of the example could use the \<TextBox.Text> tags around the text of each button's TextBox content, it is not necessary because the TextBox applies the ContentPropertyAttribute attribute to the Text property.
+> Although the Extensible Application Markup Language (XAML) version of the example could use the \<TextBox.Text> tags around the text of each button's TextBox content, it is not necessary because the TextBox applies the ContentPropertyAttribute attribute to the Text property.
 
 ```xaml
 <TextBox Name="tbSettingText">
@@ -91,8 +93,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
     </remarks>
     <altmember cref="T:System.Windows.Controls.PasswordBox" />
     <altmember cref="T:System.Windows.Controls.RichTextBox" />
-    <related type="ExternalDocumentation" href="/dotnet/framework/wpf/controls/textbox-overview">TextBox Overview</related>
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160053">WPF Controls Gallery Sample</related>
+    <related type="ExternalDocumentation" href="/dotnet/desktop/wpf/controls/textbox">TextBox Overview</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Getting%20Started/ControlsAndLayout">WPF Controls Gallery Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -111,6 +113,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -135,9 +139,11 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
@@ -148,10 +154,6 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <Attribute FrameworkAlternate="netframework-4.0">
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -190,6 +192,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.CharacterCasing</ReturnType>
@@ -214,12 +218,12 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Controls.TextBox.CharacterCasing%2A> property to convert all manually entered characters to uppercase in a text box.
+ The following example shows how to use the <xref:System.Windows.Controls.TextBox.CharacterCasing> property to convert all manually entered characters to uppercase in a text box.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/charactercasingexample.xaml" id="Snippetcharactercasingexamplewholepage":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/CharacterCasingExample.cs" id="Snippetcharactercasingcodeexamplewholepage":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/charactercasingexample.vb" id="Snippetcharactercasingcodeexamplewholepage":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/CharacterCasing/Overview/charactercasingexample.vb" id="Snippetcharactercasingcodeexamplewholepage":::
 
  ]]></format>
         </remarks>
@@ -242,6 +246,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -268,6 +274,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -296,6 +304,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -333,6 +343,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -372,6 +384,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -405,6 +419,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -438,6 +454,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -474,6 +492,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -508,6 +528,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -542,6 +564,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -587,6 +611,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -631,6 +657,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Rect</ReturnType>
@@ -674,6 +702,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.SpellingError</ReturnType>
@@ -708,6 +738,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -739,6 +771,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -770,15 +804,13 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -825,6 +857,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -836,7 +870,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.TextBox.LogicalChildren%2A> property returns an enumerator for a collection that contains a <xref:System.String> that is equal to the <xref:System.Windows.Controls.TextBox.Text%2A> property.
+ The <xref:System.Windows.Controls.TextBox.LogicalChildren> property returns an enumerator for a collection that contains a <xref:System.String> that is equal to the <xref:System.Windows.Controls.TextBox.Text> property.
 
  ]]></format>
         </remarks>
@@ -859,6 +893,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -897,12 +933,12 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 
 
 ## Examples
- The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.MaxLength%2A> of 500 characters.
+ The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.MaxLength*> of 500 characters.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/textboxexample.xaml" id="Snippettextboxexamplewholepage":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/TextBoxExample.cs" id="Snippettextboxcodeexampleinline1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/CharacterCasing/Overview/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
 
  ]]></format>
         </remarks>
@@ -926,6 +962,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -952,6 +990,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -969,11 +1009,11 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Getting this property returns the current value of <xref:System.Windows.Controls.TextBox.MaxLines%2A>. Setting this property causes the text box to resize if the number of visible lines exceeds the limit specified by <xref:System.Windows.Controls.TextBox.MaxLines%2A>.
+ Getting this property returns the current value of <xref:System.Windows.Controls.TextBox.MaxLines*>. Setting this property causes the text box to resize if the number of visible lines exceeds the limit specified by <xref:System.Windows.Controls.TextBox.MaxLines*>.
 
  This property applies only to visible lines, and does not constrain the actual number of lines. Depending on its configuration, a text box may contain additional non-visible lines that are accessible by scrolling.
 
- If the <xref:System.Windows.FrameworkElement.Height%2A> property is explicitly set on a <xref:System.Windows.Controls.TextBox>, the <xref:System.Windows.Controls.TextBox.MaxLines%2A> and <xref:System.Windows.Controls.TextBox.MinLines%2A> property values are ignored.
+ If the <xref:System.Windows.FrameworkElement.Height> property is explicitly set on a <xref:System.Windows.Controls.TextBox>, the <xref:System.Windows.Controls.TextBox.MaxLines*> and <xref:System.Windows.Controls.TextBox.MinLines> property values are ignored.
 
 <a name="dependencyPropertyInfo_MaxLines"></a>
 ## Dependency Property Information
@@ -981,17 +1021,17 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBox.MaxLinesProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>|
 
 
 
 ## Examples
- The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.MaxLines%2A> value of 5.
+ The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.MaxLines*> value of 5.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/textboxexample.xaml" id="Snippettextboxexamplewholepage":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/TextBoxExample.cs" id="Snippettextboxcodeexampleinline1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/CharacterCasing/Overview/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
 
  ]]></format>
         </remarks>
@@ -1018,6 +1058,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1044,6 +1086,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -1082,6 +1126,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1099,9 +1145,9 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Getting this property returns the current value of <xref:System.Windows.Controls.TextBox.MinLines%2A>. Setting this property causes the text box to resize if the number of visible lines is less than value specified by <xref:System.Windows.Controls.TextBox.MinLines%2A>.
+ Getting this property returns the current value of <xref:System.Windows.Controls.TextBox.MinLines*>. Setting this property causes the text box to resize if the number of visible lines is less than value specified by <xref:System.Windows.Controls.TextBox.MinLines*>.
 
- If the <xref:System.Windows.FrameworkElement.Height%2A> property is explicitly set on a <xref:System.Windows.Controls.TextBox>, the <xref:System.Windows.Controls.TextBox.MaxLines%2A> and <xref:System.Windows.Controls.TextBox.MinLines%2A> property values are ignored.
+ If the <xref:System.Windows.FrameworkElement.Height> property is explicitly set on a <xref:System.Windows.Controls.TextBox>, the <xref:System.Windows.Controls.TextBox.MaxLines*> and <xref:System.Windows.Controls.TextBox.MinLines> property values are ignored.
 
 <a name="dependencyPropertyInfo_MinLines"></a>
 ## Dependency Property Information
@@ -1109,17 +1155,17 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBox.MinLinesProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>|
 
 
 
 ## Examples
- The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.MinLines%2A> value of 1.
+ The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.MinLines*> value of 1.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/textboxexample.xaml" id="Snippettextboxexamplewholepage":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/TextBoxExample.cs" id="Snippettextboxcodeexampleinline1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/CharacterCasing/Overview/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
 
  ]]></format>
         </remarks>
@@ -1146,6 +1192,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1172,6 +1220,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -1184,7 +1234,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.ContentElement.OnCreateAutomationPeer*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1207,6 +1257,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1221,7 +1273,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method overrides <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A?displayProperty=nameWithType>.
+ This method overrides <xref:System.Windows.FrameworkElement.OnPropertyChanged*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -1245,6 +1297,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1285,6 +1339,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1322,15 +1378,13 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1369,19 +1423,17 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(0)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(0)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1424,19 +1476,17 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(0)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(0)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1477,6 +1527,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1520,6 +1572,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1563,6 +1617,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1600,6 +1656,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1630,7 +1688,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 <a name="xamlPropertyElementUsage_Text"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   String
 </object>
@@ -1642,7 +1700,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBox.TextProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault*>, <xref:System.Windows.FrameworkPropertyMetadata.Journal*>|
 
  ]]></format>
         </remarks>
@@ -1667,6 +1725,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextAlignment</ReturnType>
@@ -1680,7 +1740,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 ## Remarks
  Getting this property returns the current alignment. Setting this property adjusts the contents of the text box to reflect the specified alignment.
 
- This property has a higher precedence than the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> property.
+ This property has a higher precedence than the <xref:System.Windows.Controls.Control.HorizontalContentAlignment> property.
 
 <a name="dependencyPropertyInfo_TextAlignment"></a>
 ## Dependency Property Information
@@ -1688,17 +1748,17 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBox.TextAlignmentProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits*>|
 
 
 
 ## Examples
- The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.TextAlignment%2A> of <xref:System.Windows.TextAlignment.Center?displayProperty=nameWithType>.
+ The following example shows how to create a <xref:System.Windows.Controls.TextBox> with a <xref:System.Windows.Controls.TextBox.TextAlignment*> of <xref:System.Windows.TextAlignment.Center?displayProperty=nameWithType>.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/textboxexample.xaml" id="Snippettextboxexamplewholepage":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/CharacterCasing/Overview/TextBoxExample.cs" id="Snippettextboxcodeexampleinline1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/CharacterCasing/Overview/textboxexample.vb" id="Snippettextboxcodeexampleinline1":::
 
  ]]></format>
         </remarks>
@@ -1723,6 +1783,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1749,6 +1811,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
@@ -1760,7 +1824,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Windows.TextDecoration> object is a visual ornamentation you can add to text. There are four types of text decorations: underline, baseline, strikethrough, and overline. For more information about text decorations, see [How to: Create a Text Decoration](/dotnet/framework/wpf/advanced/how-to-create-a-text-decoration).
+ A <xref:System.Windows.TextDecoration> object is a visual ornamentation you can add to text. There are four types of text decorations: underline, baseline, strikethrough, and overline. For more information about text decorations, see [How to: Create a Text Decoration](/dotnet/desktop/wpf/advanced/how-to-create-a-text-decoration).
 
 <a name="dependencyPropertyInfo_TextDecorations"></a>
 ## Dependency Property Information
@@ -1768,12 +1832,12 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBox.TextDecorationsProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Documents.Inline.TextDecorations%2A> attribute, using <xref:System.Windows.Documents.Run> as the example element.
+ The following example shows how to set the <xref:System.Windows.Documents.Inline.TextDecorations*> attribute, using <xref:System.Windows.Documents.Run> as the example element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextDecorations/Window1.xaml" id="Snippet_inline_textdecxaml":::
 
@@ -1781,7 +1845,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 
  ![Screenshot: Text with default strikethrough effect](~/add/media/inline-textdec-strike.png "Screenshot: Text with default strikethrough effect")
 
- The following figures show how the <xref:System.Windows.TextDecorations.OverLine%2A>, <xref:System.Windows.TextDecorations.Baseline%2A>, and <xref:System.Windows.TextDecorations.Underline%2A> decorations render, respectively.
+ The following figures show how the <xref:System.Windows.TextDecorations.OverLine*>, <xref:System.Windows.TextDecorations.Baseline*>, and <xref:System.Windows.TextDecorations.Underline*> decorations render, respectively.
 
  ![Screenshot: Overline TextDecorator](~/add/media/inline-textdec-over.png "Screenshot: Overline TextDecorator")
 
@@ -1789,10 +1853,10 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 
  ![Screenshot: Text with default underline effect](~/add/media/inline-textdec-under.png "Screenshot: Text with default underline effect")
 
- The following example shows how to set the <xref:System.Windows.Documents.Inline.TextDecorations%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Documents.Inline.TextDecorations> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextDecorations/Window1.xaml.cs" id="Snippet_inline_textdec":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb" id="Snippet_inline_textdec":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/TextBlock/TextDecorations/window1.xaml.vb" id="Snippet_inline_textdec":::
 
  ]]></format>
         </remarks>
@@ -1815,6 +1879,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1825,7 +1891,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.TextBox.TextDecorations%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.TextBox.TextDecorations*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1848,6 +1914,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1874,6 +1942,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.TextWrapping</ReturnType>
@@ -1885,7 +1955,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Setting the <xref:System.Windows.Controls.TextBox.TextWrapping%2A> attribute to <xref:System.Windows.TextWrapping.Wrap> causes entered text to wrap to a new line when the edge of the <xref:System.Windows.Controls.TextBox> control is reached, automatically expanding the height of the <xref:System.Windows.Controls.TextBox> control to include room for a new line, if necessary.
+ Setting the <xref:System.Windows.Controls.TextBox.TextWrapping*> attribute to <xref:System.Windows.TextWrapping.Wrap> causes entered text to wrap to a new line when the edge of the <xref:System.Windows.Controls.TextBox> control is reached, automatically expanding the height of the <xref:System.Windows.Controls.TextBox> control to include room for a new line, if necessary.
 
 <a name="dependencyPropertyInfo_TextWrapping"></a>
 ## Dependency Property Information
@@ -1893,7 +1963,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier field|<xref:System.Windows.Controls.TextBox.TextWrappingProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure*>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender*>|
 
 
 
@@ -1901,7 +1971,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
  The following example demonstrates how to set the value of this property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows/TextWrapping/Overview/Window1.xaml.cs" id="Snippettextboxbase12":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb" id="Snippettextboxbase12":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows/TextWrapping/Overview/Window1.xaml.vb" id="Snippettextboxbase12":::
 
  ]]></format>
         </remarks>
@@ -1924,6 +1994,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1934,7 +2006,7 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.TextBox.TextWrapping%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.TextBox.TextWrapping*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1957,6 +2029,8 @@ tbSettingText.Text = "Initial text contents of the TextBox."
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Documents.Typography</ReturnType>
@@ -1968,12 +2042,12 @@ tbSettingText.Text = "Initial text contents of the TextBox."
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Documents.FlowDocument.Typography%2A> property is applicable only to OpenType fonts. A typography variant has no effect on fonts that do not support the variant. For more information about this topic, see [Typography in WPF](/dotnet/framework/wpf/advanced/typography-in-wpf).
+ The <xref:System.Windows.Documents.FlowDocument.Typography> property is applicable only to OpenType fonts. A typography variant has no effect on fonts that do not support the variant. For more information about this topic, see [Typography in WPF](/dotnet/desktop/wpf/advanced/typography-in-wpf).
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Documents.TextElement.Typography%2A> attribute, using <xref:System.Windows.Documents.Paragraph> as the example element.
+ The following example shows how to set the <xref:System.Windows.Documents.TextElement.Typography*> attribute, using <xref:System.Windows.Documents.Paragraph> as the example element.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextEffects/Window1.xaml" id="Snippet_textelement_typogxaml":::
 
@@ -1985,10 +2059,10 @@ tbSettingText.Text = "Initial text contents of the TextBox."
 
  ![Screenshot: Text with altered typography](~/add/media/textelement-typog-default.png "Screenshot: Text with altered typography")
 
- The following example shows how to set the <xref:System.Windows.Controls.TextBox.Typography%2A> property programmatically.
+ The following example shows how to set the <xref:System.Windows.Controls.TextBox.Typography> property programmatically.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/TextBlock/TextEffects/Window1.xaml.cs" id="Snippet_textelement_typog":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb" id="Snippet_textelement_typog":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/TextBlock/TextEffects/window1.xaml.vb" id="Snippet_textelement_typog":::
 
  ]]></format>
         </remarks>

@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Interface IToggleProvider" />
   <TypeSignature Language="F#" Value="type IToggleProvider = interface" />
   <TypeSignature Language="C++ CLI" Value="public interface class IToggleProvider" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IToggleProvider" FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IToggleProvider" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>UIAutomationProvider</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
   <Attributes>
@@ -34,11 +36,11 @@
   <Docs>
     <summary>Exposes methods and properties to support UI Automation client access to controls that can cycle through a set of states and maintain a state once set.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Implemented on a UI Automation provider that must support the <xref:System.Windows.Automation.TogglePattern> control pattern.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Implemented on a UI Automation provider that must support the <xref:System.Windows.Automation.TogglePattern> control pattern.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Automation.TogglePattern" />
@@ -66,6 +68,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,19 +78,19 @@
       <Docs>
         <summary>Cycles through the toggle states of a control.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A control must cycle through its toggle states in this order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off>, and (if supported) <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
-  
-   
-  
-## Examples  
- The following example shows one possible implementation of this method for a custom control that can be toggled.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A control must cycle through its toggle states in this order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off>, and (if supported) <xref:System.Windows.Automation.ToggleState.Indeterminate>.
+
+
+
+## Examples
+ The following example shows one possible implementation of this method for a custom control that can be toggled.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Automation.Provider/IToggleProvider/Toggle/ToggleFragment.cs" id="Snippettoggle":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/UIAIToggleProvider_snip/visualbasic/togglefragment.vb" id="Snippettoggle":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/UIAIToggleProvider_snip/visualbasic/togglefragment.vb" id="Snippettoggle":::
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern">Implementing the UI Automation Toggle Control Pattern</related>
@@ -109,6 +113,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
@@ -117,19 +123,19 @@
         <summary>Gets the toggle state of the control.</summary>
         <value>The <see cref="T:System.Windows.Automation.ToggleState" /> of the control.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A control must cycle through its <xref:System.Windows.Automation.ToggleState> in this order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off>, and (if supported) <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
-  
-   
-  
-## Examples  
- The following example shows an implementation of this method for a control that can be toggled. The ToggleState returned is based on the color of the control; this is analogous to the <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> property of a CheckBox control.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A control must cycle through its <xref:System.Windows.Automation.ToggleState> in this order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off>, and (if supported) <xref:System.Windows.Automation.ToggleState.Indeterminate>.
+
+
+
+## Examples
+ The following example shows an implementation of this method for a control that can be toggled. The ToggleState returned is based on the color of the control; this is analogous to the <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked> property of a CheckBox control.
+
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Automation.Provider/IToggleProvider/Toggle/ToggleFragment.cs" id="Snippettogglestate":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/UIAIToggleProvider_snip/visualbasic/togglefragment.vb" id="Snippettogglestate":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/UIAIToggleProvider_snip/visualbasic/togglefragment.vb" id="Snippettogglestate":::
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern">Implementing the UI Automation Toggle Control Pattern</related>

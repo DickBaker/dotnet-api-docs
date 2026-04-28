@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
@@ -38,7 +40,7 @@
 ## Examples
  There are several different types of triggers: <xref:System.Windows.Trigger>, <xref:System.Windows.MultiTrigger>, <xref:System.Windows.EventTrigger>, <xref:System.Windows.DataTrigger>, and <xref:System.Windows.MultiDataTrigger>.
 
- The <xref:System.Windows.Trigger> class is the simplest type of triggers. A <xref:System.Windows.Trigger> object allows you to apply changes based on the value of a property. For example, the following example shows a named <xref:System.Windows.Style> available to <xref:System.Windows.Controls.Button> controls. The <xref:System.Windows.Style> defines a <xref:System.Windows.Trigger> element that changes the <xref:System.Windows.Controls.Control.Foreground%2A> property of a button when the <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> property is `true`.
+ The <xref:System.Windows.Trigger> class is the simplest type of triggers. A <xref:System.Windows.Trigger> object allows you to apply changes based on the value of a property. For example, the following example shows a named <xref:System.Windows.Style> available to <xref:System.Windows.Controls.Button> controls. The <xref:System.Windows.Style> defines a <xref:System.Windows.Trigger> element that changes the <xref:System.Windows.Controls.Control.Foreground> property of a button when the <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed> property is `true`.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows/Setter/Overview/app1.xaml" id="Snippet2":::
 
@@ -52,7 +54,7 @@
 
  ]]></format>
     </remarks>
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160009">Introduction to Data Templating Sample</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Data%20Binding/DataTemplatingIntro">Introduction to Data Templating Sample</related>
   </Docs>
   <Members>
     <Member MemberName="EnterActions">
@@ -72,15 +74,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -93,15 +93,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property does not apply to the <xref:System.Windows.EventTrigger> class because an event represents a point in time while <xref:System.Windows.TriggerBase.EnterActions%2A> and <xref:System.Windows.TriggerBase.ExitActions%2A> correspond to object states. For <xref:System.Windows.EventTrigger> objects, use the <xref:System.Windows.EventTrigger.Actions%2A> property instead.
+ This property does not apply to the <xref:System.Windows.EventTrigger> class because an event represents a point in time while <xref:System.Windows.TriggerBase.EnterActions*> and <xref:System.Windows.TriggerBase.ExitActions*> correspond to object states. For <xref:System.Windows.EventTrigger> objects, use the <xref:System.Windows.EventTrigger.Actions> property instead.
 
 > [!NOTE]
->  This property can only be set in Extensible Application Markup Language (XAML) via the collection syntax shown, or by accessing the collection object and using its various methods such as Add. The property to access the collection object itself is read-only, the collection itself is read-write.
+> This property can only be set in Extensible Application Markup Language (XAML) via the collection syntax shown, or by accessing the collection object and using its various methods such as Add. The property to access the collection object itself is read-only, the collection itself is read-write.
 
 <a name="xamlPropertyElementUsage_EnterActions"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   <object.EnterActions>
     OneOrMoreTriggerActions
@@ -135,15 +135,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -156,15 +154,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property does not apply to the <xref:System.Windows.EventTrigger> class because an event represents a point in time while <xref:System.Windows.TriggerBase.EnterActions%2A> and <xref:System.Windows.TriggerBase.ExitActions%2A> correspond to object states. For <xref:System.Windows.EventTrigger> objects, use the <xref:System.Windows.EventTrigger.Actions%2A> property instead.
+ This property does not apply to the <xref:System.Windows.EventTrigger> class because an event represents a point in time while <xref:System.Windows.TriggerBase.EnterActions*> and <xref:System.Windows.TriggerBase.ExitActions*> correspond to object states. For <xref:System.Windows.EventTrigger> objects, use the <xref:System.Windows.EventTrigger.Actions> property instead.
 
 > [!NOTE]
->  This property can only be set in Extensible Application Markup Language (XAML) via the collection syntax shown, or by accessing the collection object and using its various methods such as Add. The property to access the collection object itself is read-only, the collection itself is read-write.
+> This property can only be set in Extensible Application Markup Language (XAML) via the collection syntax shown, or by accessing the collection object and using its various methods such as Add. The property to access the collection object itself is read-only, the collection itself is read-write.
 
 <a name="xamlPropertyElementUsage_ExitActions"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   <object.ExitActions>
     OneOrMoreTriggerActions

@@ -1,5 +1,5 @@
 <Type Name="WaitCallback" FullName="System.Threading.WaitCallback">
-  <TypeSignature Language="C#" Value="public delegate void WaitCallback(object? state);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+  <TypeSignature Language="C#" Value="public delegate void WaitCallback(object? state);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WaitCallback extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:System.Threading.WaitCallback" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub WaitCallback(state As Object)" />
@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -31,6 +33,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.ThreadPool" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.ThreadPool" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.ThreadPool" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.ThreadPool" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.ThreadPool" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -56,22 +60,22 @@
     <param name="state">An object containing information to be used by the callback method.</param>
     <summary>Represents a callback method to be executed by a thread pool thread.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Threading.WaitCallback> represents a callback method that you want to execute on a <xref:System.Threading.ThreadPool> thread. Create the delegate by passing your callback method to the <xref:System.Threading.WaitCallback> constructor. Your method must have the signature shown here.  
-  
- Queue the method for execution by passing the <xref:System.Threading.WaitCallback> delegate to <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>. The callback method executes when a thread pool thread becomes available.  
-  
-> [!NOTE]
->  Visual Basic users can omit the <xref:System.Threading.WaitCallback> constructor, and simply use the `AddressOf` operator when passing the callback method to <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Visual Basic automatically calls the correct delegate constructor.  
-  
- If you want to pass information to the callback method, create an object that contains the necessary information and pass it to the <xref:System.Threading.ThreadPool.QueueUserWorkItem(System.Threading.WaitCallback,System.Object)> method as the second argument. Each time the callback method executes, the `state` parameter contains this object.  
+      <format type="text/markdown"><![CDATA[
 
- For examples that use the `WaitCallback` delegate, see the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> method.
-  
- For more information about the thread pool, see [The managed thread pool](/dotnet/standard/threading/the-managed-thread-pool).  
-  
+## Remarks
+ <xref:System.Threading.WaitCallback> represents a callback method that you want to execute on a <xref:System.Threading.ThreadPool> thread. Create the delegate by passing your callback method to the <xref:System.Threading.WaitCallback> constructor. Your method must have the signature shown here.
+
+ Queue the method for execution by passing the <xref:System.Threading.WaitCallback> delegate to <xref:System.Threading.ThreadPool.QueueUserWorkItem*?displayProperty=nameWithType>. The callback method executes when a thread pool thread becomes available.
+
+> [!NOTE]
+>  Visual Basic users can omit the <xref:System.Threading.WaitCallback> constructor, and simply use the `AddressOf` operator when passing the callback method to <xref:System.Threading.ThreadPool.QueueUserWorkItem*>. Visual Basic automatically calls the correct delegate constructor.
+
+ If you want to pass information to the callback method, create an object that contains the necessary information and pass it to the <xref:System.Threading.ThreadPool.QueueUserWorkItem(System.Threading.WaitCallback,System.Object)> method as the second argument. Each time the callback method executes, the `state` parameter contains this object.
+
+ For examples that use the `WaitCallback` delegate, see the <xref:System.Threading.ThreadPool.QueueUserWorkItem*?displayProperty=nameWithType> method.
+
+ For more information about the thread pool, see [The managed thread pool](/dotnet/standard/threading/the-managed-thread-pool).
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Threading.ThreadPool" />

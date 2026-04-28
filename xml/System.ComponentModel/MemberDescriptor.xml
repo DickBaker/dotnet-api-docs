@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -31,6 +33,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.TypeConverter" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -42,7 +46,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -54,23 +58,23 @@
   <Docs>
     <summary>Represents a class member, such as a property or event. This is an abstract base class.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.ComponentModel.MemberDescriptor> is the base class for the <xref:System.ComponentModel.EventDescriptor> and the <xref:System.ComponentModel.PropertyDescriptor> classes. The <xref:System.ComponentModel.EventDescriptor> class provides a description of an event, and the <xref:System.ComponentModel.PropertyDescriptor> class provides a description of a property.  
-  
- This class defines properties and methods to access its stored attributes. The <xref:System.ComponentModel.MemberDescriptor.Attributes%2A> property gets the collection of attributes. The <xref:System.ComponentModel.MemberDescriptor.Category%2A>, <xref:System.ComponentModel.MemberDescriptor.IsBrowsable%2A>, <xref:System.ComponentModel.MemberDescriptor.Description%2A>, and <xref:System.ComponentModel.MemberDescriptor.DesignTimeOnly%2A> properties retrieve the values of those specific attributes. The <xref:System.ComponentModel.MemberDescriptor.Name%2A> and <xref:System.ComponentModel.MemberDescriptor.DisplayName%2A> properties provide the name of the member.  
-  
- The <xref:System.ComponentModel.MemberDescriptor> also defines an <xref:System.ComponentModel.MemberDescriptor.Equals%2A> method to compare this <xref:System.ComponentModel.MemberDescriptor> to another.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.ComponentModel.MemberDescriptor> is the base class for the <xref:System.ComponentModel.EventDescriptor> and the <xref:System.ComponentModel.PropertyDescriptor> classes. The <xref:System.ComponentModel.EventDescriptor> class provides a description of an event, and the <xref:System.ComponentModel.PropertyDescriptor> class provides a description of a property.
+
+ This class defines properties and methods to access its stored attributes. The <xref:System.ComponentModel.MemberDescriptor.Attributes> property gets the collection of attributes. The <xref:System.ComponentModel.MemberDescriptor.Category*>, <xref:System.ComponentModel.MemberDescriptor.IsBrowsable*>, <xref:System.ComponentModel.MemberDescriptor.Description*>, and <xref:System.ComponentModel.MemberDescriptor.DesignTimeOnly*> properties retrieve the values of those specific attributes. The <xref:System.ComponentModel.MemberDescriptor.Name*> and <xref:System.ComponentModel.MemberDescriptor.DisplayName*> properties provide the name of the member.
+
+ The <xref:System.ComponentModel.MemberDescriptor> also defines an <xref:System.ComponentModel.MemberDescriptor.Equals*> method to compare this <xref:System.ComponentModel.MemberDescriptor> to another.
+
 > [!NOTE]
->  Typically, you inherit from the <xref:System.ComponentModel.EventDescriptor> and <xref:System.ComponentModel.PropertyDescriptor> classes, and not from this class.  
-  
-   
-  
-## Examples  
- Since most of the usage of this class will fall on the inherited classes <xref:System.ComponentModel.EventDescriptor> and <xref:System.ComponentModel.PropertyDescriptor>, refer to the examples in these classes.  
-  
+>  Typically, you inherit from the <xref:System.ComponentModel.EventDescriptor> and <xref:System.ComponentModel.PropertyDescriptor> classes, and not from this class.
+
+
+
+## Examples
+ Since most of the usage of this class will fall on the inherited classes <xref:System.ComponentModel.EventDescriptor> and <xref:System.ComponentModel.PropertyDescriptor>, refer to the examples in these classes.
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.ComponentModel.PropertyDescriptor" />
@@ -98,7 +102,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -107,6 +110,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -140,7 +145,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -149,6 +153,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -179,18 +185,17 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="protected MemberDescriptor (System.ComponentModel.MemberDescriptor oldMemberDescriptor, Attribute[] newAttributes);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected MemberDescriptor (System.ComponentModel.MemberDescriptor oldMemberDescriptor, Attribute[]? newAttributes);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor oldMemberDescriptor, class System.Attribute[] newAttributes) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.#ctor(System.ComponentModel.MemberDescriptor,System.Attribute[])" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (oldMemberDescriptor As MemberDescriptor, newAttributes As Attribute())" />
       <MemberSignature Language="F#" Value="new System.ComponentModel.MemberDescriptor : System.ComponentModel.MemberDescriptor * Attribute[] -&gt; System.ComponentModel.MemberDescriptor" Usage="new System.ComponentModel.MemberDescriptor (oldMemberDescriptor, newAttributes)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; MemberDescriptor(System::ComponentModel::MemberDescriptor ^ oldMemberDescriptor, cli::array &lt;Attribute ^&gt; ^ newAttributes);" />
-      <MemberSignature Language="C#" Value="protected MemberDescriptor (System.ComponentModel.MemberDescriptor oldMemberDescriptor, Attribute[]? newAttributes);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected MemberDescriptor (System.ComponentModel.MemberDescriptor oldMemberDescriptor, Attribute[] newAttributes);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -199,6 +204,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -216,7 +223,7 @@
         <Parameter Name="oldMemberDescriptor" Type="System.ComponentModel.MemberDescriptor" />
         <Parameter Name="newAttributes" Type="System.Attribute[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -228,28 +235,27 @@
         <param name="newAttributes">An array of <see cref="T:System.Attribute" /> objects with the attributes you want to add to the member.</param>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.MemberDescriptor" /> class with the name in the specified <see cref="T:System.ComponentModel.MemberDescriptor" /> and the attributes in both the old <see cref="T:System.ComponentModel.MemberDescriptor" /> and the <see cref="T:System.Attribute" /> array.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This constructor appends the attributes in the <xref:System.Attribute> array to the attributes in the old <xref:System.ComponentModel.MemberDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This constructor appends the attributes in the <xref:System.Attribute> array to the attributes in the old <xref:System.ComponentModel.MemberDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="protected MemberDescriptor (string name, Attribute[] attributes);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected MemberDescriptor (string name, Attribute[]? attributes);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, class System.Attribute[] attributes) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.#ctor(System.String,System.Attribute[])" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String, attributes As Attribute())" />
       <MemberSignature Language="F#" Value="new System.ComponentModel.MemberDescriptor : string * Attribute[] -&gt; System.ComponentModel.MemberDescriptor" Usage="new System.ComponentModel.MemberDescriptor (name, attributes)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; MemberDescriptor(System::String ^ name, cli::array &lt;Attribute ^&gt; ^ attributes);" />
-      <MemberSignature Language="C#" Value="protected MemberDescriptor (string name, Attribute[]? attributes);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected MemberDescriptor (string name, Attribute[] attributes);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -258,6 +264,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -275,7 +283,7 @@
         <Parameter Name="name" Type="System.String" />
         <Parameter Name="attributes" Type="System.Attribute[]">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -291,18 +299,17 @@
       </Docs>
     </Member>
     <Member MemberName="AttributeArray">
-      <MemberSignature Language="C#" Value="protected virtual Attribute[] AttributeArray { get; set; }" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected virtual Attribute[]? AttributeArray { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Attribute[] AttributeArray" />
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.MemberDescriptor.AttributeArray" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Property AttributeArray As Attribute()" />
       <MemberSignature Language="F#" Value="member this.AttributeArray : Attribute[] with get, set" Usage="System.ComponentModel.MemberDescriptor.AttributeArray" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property cli::array &lt;Attribute ^&gt; ^ AttributeArray { cli::array &lt;Attribute ^&gt; ^ get(); void set(cli::array &lt;Attribute ^&gt; ^ value); };" />
-      <MemberSignature Language="C#" Value="protected virtual Attribute[]? AttributeArray { get; set; }" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual Attribute[] AttributeArray { get; set; }" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -311,6 +318,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -325,7 +334,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
         </Attribute>
@@ -337,11 +346,11 @@
         <summary>Gets or sets an array of attributes.</summary>
         <value>An array of type <see cref="T:System.Attribute" /> that contains the attributes of this member.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Accessing this member allows derived classes to modify the default set of attributes that are used in the <xref:System.ComponentModel.MemberDescriptor.CreateAttributeCollection%2A> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Accessing this member allows derived classes to modify the default set of attributes that are used in the <xref:System.ComponentModel.MemberDescriptor.CreateAttributeCollection*> method.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.ComponentModel.MemberDescriptor.Attributes" />
@@ -358,7 +367,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -367,6 +375,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -387,11 +397,11 @@
         <summary>Gets the collection of attributes for this member.</summary>
         <value>An <see cref="T:System.ComponentModel.AttributeCollection" /> that provides the attributes for this member, or an empty collection if there are no attributes in the <see cref="P:System.ComponentModel.MemberDescriptor.AttributeArray" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If there is no <xref:System.ComponentModel.AttributeCollection> for this member, this property calls the <xref:System.ComponentModel.MemberDescriptor.CreateAttributeCollection%2A> method to create a new <xref:System.ComponentModel.AttributeCollection> using the array of <xref:System.Attribute> objects passed to the constructor.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If there is no <xref:System.ComponentModel.AttributeCollection> for this member, this property calls the <xref:System.ComponentModel.MemberDescriptor.CreateAttributeCollection*> method to create a new <xref:System.ComponentModel.AttributeCollection> using the array of <xref:System.Attribute> objects passed to the constructor.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.ComponentModel.MemberDescriptor.AttributeArray" />
@@ -408,7 +418,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -417,6 +426,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -437,11 +448,11 @@
         <summary>Gets the name of the category to which the member belongs, as specified in the <see cref="T:System.ComponentModel.CategoryAttribute" />.</summary>
         <value>The name of the category to which the member belongs. If there is no <see cref="T:System.ComponentModel.CategoryAttribute" />, the category name is set to the default category, <see langword="Misc" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A visual designer can use this property value to display members in categories.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A visual designer can use this property value to display members in categories.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.ComponentModel.MemberDescriptor.Description" />
@@ -460,7 +471,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -469,6 +479,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -490,11 +502,11 @@
         <summary>Creates a collection of attributes using the array of attributes passed to the constructor.</summary>
         <returns>A new <see cref="T:System.ComponentModel.AttributeCollection" /> that contains the <see cref="P:System.ComponentModel.MemberDescriptor.AttributeArray" /> attributes.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is called from the <xref:System.ComponentModel.MemberDescriptor.Attributes%2A> property when there is no <xref:System.ComponentModel.AttributeCollection> for this member. If there are no attributes in the <xref:System.ComponentModel.MemberDescriptor.AttributeArray%2A>, this will return an empty <xref:System.ComponentModel.AttributeCollection>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is called from the <xref:System.ComponentModel.MemberDescriptor.Attributes> property when there is no <xref:System.ComponentModel.AttributeCollection> for this member. If there are no attributes in the <xref:System.ComponentModel.MemberDescriptor.AttributeArray*>, this will return an empty <xref:System.ComponentModel.AttributeCollection>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -510,7 +522,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -519,6 +530,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -539,11 +552,11 @@
         <summary>Gets the description of the member, as specified in the <see cref="T:System.ComponentModel.DescriptionAttribute" />.</summary>
         <value>The description of the member. If there is no <see cref="T:System.ComponentModel.DescriptionAttribute" />, the property value is set to the default, which is an empty string ("").</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A visual designer can use this description to display information about this member.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A visual designer can use this description to display information about this member.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.ComponentModel.MemberDescriptor.Category" />
@@ -562,7 +575,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -571,6 +583,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -592,11 +606,11 @@
         <value>
           <see langword="true" /> if this member should be set only at design time; <see langword="false" /> if the member can be set during run time.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If there is no <xref:System.ComponentModel.DesignOnlyAttribute>, the return value is the default, which is `false`.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If there is no <xref:System.ComponentModel.DesignOnlyAttribute>, the return value is the default, which is `false`.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.ComponentModel.MemberDescriptor.DisplayName" />
@@ -613,7 +627,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -622,6 +635,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -646,18 +661,17 @@
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="memberDescriptor.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -666,6 +680,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -685,7 +701,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -711,7 +727,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -720,6 +735,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -743,13 +760,13 @@
         <param name="attributeList">An <see cref="T:System.Collections.IList" /> that lists the attributes in the parent class. Initially, this is empty.</param>
         <summary>When overridden in a derived class, adds the attributes of the inheriting class to the specified list of attributes in the parent class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- For duplicate attributes, the last one added to the list is kept.  
-  
- The <xref:System.Collections.IList> with the attributes is created once. If there are duplicate attributes in the list, only the first instance is saved; all subsequent duplicate attributes are removed from the list.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For duplicate attributes, the last one added to the list is kept.
+
+ The <xref:System.Collections.IList> with the attributes is created once. If there are duplicate attributes in the list, only the first instance is saved; all subsequent duplicate attributes are removed from the list.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -765,18 +782,17 @@
       </Docs>
     </MemberGroup>
     <Member MemberName="FindMethod">
-      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo FindMethod (Type componentClass, string name, Type[] args, Type returnType);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo? FindMethod (Type componentClass, string name, Type[] args, Type returnType);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Reflection.MethodInfo FindMethod(class System.Type componentClass, string name, class System.Type[] args, class System.Type returnType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.FindMethod(System.Type,System.String,System.Type[],System.Type)" />
       <MemberSignature Language="VB.NET" Value="Protected Shared Function FindMethod (componentClass As Type, name As String, args As Type(), returnType As Type) As MethodInfo" />
       <MemberSignature Language="F#" Value="static member FindMethod : Type * string * Type[] * Type -&gt; System.Reflection.MethodInfo" Usage="System.ComponentModel.MemberDescriptor.FindMethod (componentClass, name, args, returnType)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; static System::Reflection::MethodInfo ^ FindMethod(Type ^ componentClass, System::String ^ name, cli::array &lt;Type ^&gt; ^ args, Type ^ returnType);" />
-      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo? FindMethod (Type componentClass, string name, Type[] args, Type returnType);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo FindMethod (Type componentClass, string name, Type[] args, Type returnType);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -785,6 +801,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -806,11 +824,17 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Reflection.MethodInfo</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="componentClass" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods)&gt;]</AttributeName>
             </Attribute>
@@ -831,18 +855,17 @@
       </Docs>
     </Member>
     <Member MemberName="FindMethod">
-      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo FindMethod (Type componentClass, string name, Type[] args, Type returnType, bool publicOnly);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo? FindMethod (Type componentClass, string name, Type[] args, Type returnType, bool publicOnly);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Reflection.MethodInfo FindMethod(class System.Type componentClass, string name, class System.Type[] args, class System.Type returnType, bool publicOnly) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.FindMethod(System.Type,System.String,System.Type[],System.Type,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Shared Function FindMethod (componentClass As Type, name As String, args As Type(), returnType As Type, publicOnly As Boolean) As MethodInfo" />
       <MemberSignature Language="F#" Value="static member FindMethod : Type * string * Type[] * Type * bool -&gt; System.Reflection.MethodInfo" Usage="System.ComponentModel.MemberDescriptor.FindMethod (componentClass, name, args, returnType, publicOnly)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; static System::Reflection::MethodInfo ^ FindMethod(Type ^ componentClass, System::String ^ name, cli::array &lt;Type ^&gt; ^ args, Type ^ returnType, bool publicOnly);" />
-      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo? FindMethod (Type componentClass, string name, Type[] args, Type returnType, bool publicOnly);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected static System.Reflection.MethodInfo FindMethod (Type componentClass, string name, Type[] args, Type returnType, bool publicOnly);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -851,6 +874,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -866,11 +891,17 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Reflection.MethodInfo</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
         <Parameter Name="componentClass" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods | System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicMethods | System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicMethods)&gt;]</AttributeName>
             </Attribute>
@@ -903,7 +934,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -912,6 +942,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -936,18 +968,17 @@
       </Docs>
     </Member>
     <Member MemberName="GetInvocationTarget">
-      <MemberSignature Language="C#" Value="protected virtual object GetInvocationTarget (Type type, object instance);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected virtual object? GetInvocationTarget (Type type, object instance);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetInvocationTarget(class System.Type type, object instance) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.GetInvocationTarget(System.Type,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetInvocationTarget (type As Type, instance As Object) As Object" />
       <MemberSignature Language="F#" Value="abstract member GetInvocationTarget : Type * obj -&gt; obj&#xA;override this.GetInvocationTarget : Type * obj -&gt; obj" Usage="memberDescriptor.GetInvocationTarget (type, instance)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Object ^ GetInvocationTarget(Type ^ type, System::Object ^ instance);" />
-      <MemberSignature Language="C#" Value="protected virtual object? GetInvocationTarget (Type type, object instance);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected virtual object GetInvocationTarget (Type type, object instance);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -956,6 +987,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -970,10 +1003,16 @@
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="net-10.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="type" Type="System.Type" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="instance" Type="System.Object" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="type" Type="System.Type" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="instance" Type="System.Object" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="type">The <see cref="T:System.Type" /> of the invocation target.</param>
@@ -981,11 +1020,11 @@
         <summary>Retrieves the object that should be used during invocation of members.</summary>
         <returns>The object to be used during member invocations.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Normally, the return value will be the same as the `instance` parameter. If another object has been associated with this instance, or if the instance is a custom type descriptor, the <xref:System.ComponentModel.MemberDescriptor.GetInvocationTarget%2A> method may return a different value.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Normally, the return value will be the same as the `instance` parameter. If another object has been associated with this instance, or if the instance is a custom type descriptor, the <xref:System.ComponentModel.MemberDescriptor.GetInvocationTarget*> method may return a different value.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -1022,15 +1061,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-7.0;net-8.0;net-9.0">
+          <AttributeName Language="C#">[System.Obsolete("MemberDescriptor.GetInvokee has been deprecated. Use GetInvocationTarget instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("MemberDescriptor.GetInvokee has been deprecated. Use GetInvocationTarget instead.")&gt;]</AttributeName>
+        </Attribute>
         <Attribute FrameworkAlternate="net-5.0">
           <AttributeName Language="C#">[System.Obsolete("This method has been deprecated. Use GetInvocationTarget instead. https://go.microsoft.com/fwlink/?linkid=14202")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("This method has been deprecated. Use GetInvocationTarget instead. https://go.microsoft.com/fwlink/?linkid=14202")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="net-7.0;net-8.0;net-9.0">
-          <AttributeName Language="C#">[System.Obsolete("MemberDescriptor.GetInvokee has been deprecated. Use GetInvocationTarget instead.")]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.Obsolete("MemberDescriptor.GetInvokee has been deprecated. Use GetInvocationTarget instead.")&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0">
           <AttributeName Language="C#">[System.Obsolete("This method has been deprecated. Use GetInvocationTarget instead.  http://go.microsoft.com/fwlink/?linkid=14202")]</AttributeName>
@@ -1045,8 +1086,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="componentClass" Type="System.Type" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="component" Type="System.Object" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="componentClass" Type="System.Type" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="component" Type="System.Object" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="componentClass">A <see cref="T:System.Type" /> representing the type of component this <see cref="T:System.ComponentModel.MemberDescriptor" /> is bound to. For example, if this <see cref="T:System.ComponentModel.MemberDescriptor" /> describes a property, this parameter should be the class that the property is declared on.</param>
@@ -1059,18 +1100,17 @@
       </Docs>
     </Member>
     <Member MemberName="GetSite">
-      <MemberSignature Language="C#" Value="protected static System.ComponentModel.ISite GetSite (object component);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.ISite? GetSite (object? component);" FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.ComponentModel.ISite GetSite(object component) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.MemberDescriptor.GetSite(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Shared Function GetSite (component As Object) As ISite" />
       <MemberSignature Language="F#" Value="static member GetSite : obj -&gt; System.ComponentModel.ISite" Usage="System.ComponentModel.MemberDescriptor.GetSite component" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; static System::ComponentModel::ISite ^ GetSite(System::Object ^ component);" />
-      <MemberSignature Language="C#" Value="protected static System.ComponentModel.ISite? GetSite (object? component);" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="protected static System.ComponentModel.ISite GetSite (object component);" FrameworkAlternate="net-5.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -1079,6 +1119,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1116,7 +1158,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -1125,6 +1166,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1146,11 +1189,11 @@
         <value>
           <see langword="true" /> if the member is browsable; otherwise, <see langword="false" />. If there is no <see cref="T:System.ComponentModel.BrowsableAttribute" />, the property value is set to the default, which is <see langword="true" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A visual designer typically displays the members that are browsable in the Properties window.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A visual designer typically displays the members that are browsable in the Properties window.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.ComponentModel.MemberDescriptor.Category" />
@@ -1169,7 +1212,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -1178,6 +1220,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -1214,7 +1258,6 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
-        <AssemblyVersion>4.1.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
         <AssemblyVersion>4.2.2.0</AssemblyVersion>
@@ -1223,6 +1266,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>

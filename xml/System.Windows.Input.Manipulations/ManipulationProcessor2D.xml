@@ -13,6 +13,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,17 +23,17 @@
   <Docs>
     <summary>Implements a multiple-input, single-output compositor for two-dimensional (2-D) transformations in a shared coordinate space.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> object treats a collection of manipulators as a composite object. Your application is then freed from the necessity of tracking and managing individual manipulators.  
-  
- A manipulation processor by itself does not cause an element to move. Your application begins a manipulation as necessary, and then receives information from a manipulation processor by listening to the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>, <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> and <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> events. The values received via these events enable you to change the location, size or orientation of an element as needed.  
-  
- You inform a manipulation processor which types of manipulations are allowed (translate, scale, rotate) by setting the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.SupportedManipulations%2A> property. You can then provide non-conditional logic to the transformation of the element that is being manipulated. For instance, instead of checking if rotation is enabled before changing the orientation of an element, you can unconditionally apply the rotation factor received from the manipulation processor; if rotation is not enabled, the manipulation processor will report that no rotational change has occurred.  
-  
- When an element that is being manipulated is released (all manipulators are removed), you can use inertia processing to simulate friction and cause the element to gradually slow its movements before coming to a stop. For more information see the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> class.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> object treats a collection of manipulators as a composite object. Your application is then freed from the necessity of tracking and managing individual manipulators.
+
+ A manipulation processor by itself does not cause an element to move. Your application begins a manipulation as necessary, and then receives information from a manipulation processor by listening to the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>, <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> and <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> events. The values received via these events enable you to change the location, size or orientation of an element as needed.
+
+ You inform a manipulation processor which types of manipulations are allowed (translate, scale, rotate) by setting the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.SupportedManipulations> property. You can then provide non-conditional logic to the transformation of the element that is being manipulated. For instance, instead of checking if rotation is enabled before changing the orientation of an element, you can unconditionally apply the rotation factor received from the manipulation processor; if rotation is not enabled, the manipulation processor will report that no rotational change has occurred.
+
+ When an element that is being manipulated is released (all manipulators are removed), you can use inertia processing to simulate friction and cause the element to gradually slow its movements before coming to a stop. For more information see the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> class.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -61,6 +63,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -94,6 +98,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="supportedManipulations" Type="System.Windows.Input.Manipulations.Manipulations2D" />
@@ -111,7 +117,7 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; Completed;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; Completed" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event Completed As EventHandler(Of Manipulation2DCompletedEventArgs) " FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Completed As EventHandler(Of Manipulation2DCompletedEventArgs) " FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.Completed : EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; " Usage="member this.Completed : System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Windows::Input::Manipulations::Manipulation2DCompletedEventArgs ^&gt; ^ Completed;" />
       <MemberSignature Language="VB.NET" Value="Public Event Completed As EventHandler(Of Manipulation2DCompletedEventArgs) " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -124,6 +130,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DCompletedEventArgs&gt;</ReturnType>
@@ -149,6 +157,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -167,7 +177,7 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; Delta;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; Delta" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event Delta As EventHandler(Of Manipulation2DDeltaEventArgs) " FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Delta As EventHandler(Of Manipulation2DDeltaEventArgs) " FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.Delta : EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; " Usage="member this.Delta : System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Windows::Input::Manipulations::Manipulation2DDeltaEventArgs ^&gt; ^ Delta;" />
       <MemberSignature Language="VB.NET" Value="Public Event Delta As EventHandler(Of Manipulation2DDeltaEventArgs) " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -180,6 +190,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs&gt;</ReturnType>
@@ -187,16 +199,16 @@
       <Docs>
         <summary>Occurs when the manipulation origin has changed or when translation, scaling, or rotation have occurred.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta?displayProperty=nameWithType> event and the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta?displayProperty=nameWithType> event are the same type. Typically, you can use the same event handler for both events.  
-  
-   
-  
-## Examples  
- :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_onmanipulationorinertiadelta":::  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta?displayProperty=nameWithType> event and the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta?displayProperty=nameWithType> event are the same type. Typically, you can use the same event handler for both events.
+
+
+
+## Examples
+ :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_onmanipulationorinertiadelta":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -217,6 +229,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -231,15 +245,15 @@
         <summary>Gets or sets the minimum radius, in coordinate units, necessary for a manipulator to participate in scaling and rotation.</summary>
         <value>The minimum radius, in coordinate units, necessary for a manipulator to participate in scaling and rotation.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- If a manipulator is extremely close to the center of mass of the manipulators currently being processed, a very small manipulator motion can become a very large change to rotation or scaling. To avoid this problem, set <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius%2A> to something greater than zero. Any manipulator that is closer than that distance to the center of mass will not be included in rotation and scaling operations.  
-  
- A typical value to use should be based on the likely magnitude of "accidental" motions of the manipulators. For example, if the manipulator is a human finger touching a screen, a radius corresponding to a centimeter or so might be appropriate.  
-  
- The value for <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius%2A> must be a finite, non-negative number.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ If a manipulator is extremely close to the center of mass of the manipulators currently being processed, a very small manipulator motion can become a very large change to rotation or scaling. To avoid this problem, set <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius*> to something greater than zero. Any manipulator that is closer than that distance to the center of mass will not be included in rotation and scaling operations.
+
+ A typical value to use should be based on the likely magnitude of "accidental" motions of the manipulators. For example, if the manipulator is a human finger touching a screen, a radius corresponding to a centimeter or so might be appropriate.
+
+ The value for <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.MinimumScaleRotateRadius*> must be a finite, non-negative number.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -260,6 +274,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -278,11 +294,11 @@
         <summary>Gets or sets the pivot information for the manipulation processor.</summary>
         <value>The pivot information for the manipulation processor.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Pivot%2A> property is used to provide pivot information for single-manipulator rotations. Setting this property to null disables single-manipulator rotations.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Pivot> property is used to provide pivot information for single-manipulator rotations. Setting this property to null disables single-manipulator rotations.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -303,6 +319,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -316,20 +334,20 @@
         <param name="manipulators">The set of manipulators that are currently in scope.</param>
         <summary>Processes the specified manipulators as a single batch action.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The parameter `manipulators` may be an empty list or null. If this results in the number of manipulators reaching zero, the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> event is raised.  
-  
-   
-  
-## Examples  
- In the following example, the <xref:System.Windows.UIElement.OnLostMouseCapture%2A> method of a <xref:System.Windows.UIElement> object is overridden to call the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> method with the list of <xref:System.Windows.Input.Manipulations.Manipulator2D> objects set to null.  
-  
- :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_onlostmousecapture":::  
-  
- :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_timestamp":::  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The parameter `manipulators` may be an empty list or null. If this results in the number of manipulators reaching zero, the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> event is raised.
+
+
+
+## Examples
+ In the following example, the <xref:System.Windows.UIElement.OnLostMouseCapture*> method of a <xref:System.Windows.UIElement> object is overridden to call the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators*> method with the list of <xref:System.Windows.Input.Manipulations.Manipulator2D> objects set to null.
+
+ :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_onlostmousecapture":::
+
+ :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_timestamp":::
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">The timestamp is less than the previous timestamp for the current manipulation.</exception>
@@ -351,6 +369,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -374,7 +394,7 @@
       <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt; Started;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt; Started" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event Started As EventHandler(Of Manipulation2DStartedEventArgs) " FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Started As EventHandler(Of Manipulation2DStartedEventArgs) " FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.Started : EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt; " Usage="member this.Started : System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt; " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Windows::Input::Manipulations::Manipulation2DStartedEventArgs ^&gt; ^ Started;" />
       <MemberSignature Language="VB.NET" Value="Public Event Started As EventHandler(Of Manipulation2DStartedEventArgs) " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
@@ -387,6 +407,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs&gt;</ReturnType>
@@ -394,15 +416,15 @@
       <Docs>
         <summary>Occurs when a new manipulation has started.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- In the following example, an event handler for the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> event checks to see if inertia processing is running and if so, stops it.  
-  
- :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_onmanipulationstarted":::  
-  
- :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_timestamp":::  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ In the following example, an event handler for the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> event checks to see if inertia processing is running and if so, stops it.
+
+ :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_onmanipulationstarted":::
+
+ :::code language="csharp" source="~/snippets/csharp/System.Windows.Input.Manipulations/InertiaProcessor2D/Complete/manipulationitem.xaml.cs" id="Snippet_manipulationitem_timestamp":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -423,6 +445,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

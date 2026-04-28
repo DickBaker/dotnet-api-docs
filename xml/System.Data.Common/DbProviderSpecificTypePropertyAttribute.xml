@@ -1,6 +1,6 @@
 <Type Name="DbProviderSpecificTypePropertyAttribute" FullName="System.Data.Common.DbProviderSpecificTypePropertyAttribute">
   <TypeSignature Language="C#" Value="public sealed class DbProviderSpecificTypePropertyAttribute : Attribute" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbProviderSpecificTypePropertyAttribute extends System.Attribute" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbProviderSpecificTypePropertyAttribute extends System.Attribute" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Data.Common.DbProviderSpecificTypePropertyAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DbProviderSpecificTypePropertyAttribute&#xA;Inherits Attribute" />
   <TypeSignature Language="F#" Value="type DbProviderSpecificTypePropertyAttribute = class&#xA;    inherit Attribute" />
@@ -27,8 +27,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Data.Common" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -52,13 +56,13 @@
   <Docs>
     <summary>Identifies which provider-specific property in the strongly typed parameter classes is to be used when setting a provider-specific type.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Data.Common.DbProviderSpecificTypePropertyAttribute> is used by a provider writer to designate a provider-specific type parameter property which is not inherited from the <xref:System.Data.Common.DbParameter> base class. The <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> property of a <xref:System.Data.SqlClient.SqlParameter> is an example of a provider-specific type property not found in `DbParameter`.  
-  
- A provider writer can apply `DbProviderSpecificTypePropertyAttribute(true)` to indicate a provider-specific data type parameter property. This allows for its discovery using reflection, which enables code generation tools, such as those used in Visual Studio, to generate code geared to a specific provider. The <xref:System.Data.Common.DbProviderSpecificTypePropertyAttribute.IsProviderSpecificTypeProperty%2A> property returns `true` if the property has been set, otherwise `false`.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Data.Common.DbProviderSpecificTypePropertyAttribute> is used by a provider writer to designate a provider-specific type parameter property which is not inherited from the <xref:System.Data.Common.DbParameter> base class. The <xref:System.Data.SqlClient.SqlParameter.SqlDbType> property of a <xref:System.Data.SqlClient.SqlParameter> is an example of a provider-specific type property not found in `DbParameter`.
+
+ A provider writer can apply `DbProviderSpecificTypePropertyAttribute(true)` to indicate a provider-specific data type parameter property. This allows for its discovery using reflection, which enables code generation tools, such as those used in Visual Studio, to generate code geared to a specific provider. The <xref:System.Data.Common.DbProviderSpecificTypePropertyAttribute.IsProviderSpecificTypeProperty> property returns `true` if the property has been set, otherwise `false`.
+
  ]]></format>
     </remarks>
     <related type="Article" href="/dotnet/standard/attributes/">Extending Metadata Using Attributes</related>
@@ -94,6 +98,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="isProviderSpecificTypeProperty" Type="System.Boolean" />
@@ -134,6 +140,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

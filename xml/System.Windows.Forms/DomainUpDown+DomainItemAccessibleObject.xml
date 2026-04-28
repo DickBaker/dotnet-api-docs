@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
@@ -25,15 +27,15 @@
       <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(true)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(true)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Obsolete("DomainItemAccessibleObject is no longer used to provide accessible support for DomainUpDown items.", false, DiagnosticId="WFDEV003", UrlFormat="https://aka.ms/winforms-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("DomainItemAccessibleObject is no longer used to provide accessible support for DomainUpDown items.", false, DiagnosticId="WFDEV003", UrlFormat="https://aka.ms/winforms-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -41,15 +43,15 @@
   <Docs>
     <summary>Provides information about the items in the <see cref="T:System.Windows.Forms.DomainUpDown" /> control to accessibility client applications.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Windows Forms has accessibility support built in and provides information about your application that allows it to work with accessibility client applications. Examples of accessibility client applications are screen enlarger and reviewer utilities, voice input utilities, on-screen keyboards, alternative input devices, and keyboard enhancement utilities. The <xref:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject> class inherits from the <xref:System.Windows.Forms.AccessibleObject> class to provide information about the items in the <xref:System.Windows.Forms.DomainUpDown> control to accessibility client applications.  
-  
- There are instances when you will want to provide custom information, such as a control's name or description, to accessibility client applications. There are two ways of providing this information. To provide limited accessibility information for existing controls, set the control's <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, and <xref:System.Windows.Forms.Control.AccessibleRole%2A> property values, which will be reported to accessibility client applications.  
-  
- If you require more accessibility information to be included with your control, you can write your own class that is derived from the <xref:System.Windows.Forms.AccessibleObject> or <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes. For example, if you are writing your own control that is not derived from the common controls, or you require such operations as hit testing within your control, you should create a <xref:System.Windows.Forms.Control.ControlAccessibleObject> for your control by calling the <xref:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance%2A> method.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Windows Forms has accessibility support built in and provides information about your application that allows it to work with accessibility client applications. Examples of accessibility client applications are screen enlarger and reviewer utilities, voice input utilities, on-screen keyboards, alternative input devices, and keyboard enhancement utilities. The <xref:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject> class inherits from the <xref:System.Windows.Forms.AccessibleObject> class to provide information about the items in the <xref:System.Windows.Forms.DomainUpDown> control to accessibility client applications.
+
+ There are instances when you will want to provide custom information, such as a control's name or description, to accessibility client applications. There are two ways of providing this information. To provide limited accessibility information for existing controls, set the control's <xref:System.Windows.Forms.Control.AccessibleName*>, <xref:System.Windows.Forms.Control.AccessibleDescription*>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription*>, and <xref:System.Windows.Forms.Control.AccessibleRole> property values, which will be reported to accessibility client applications.
+
+ If you require more accessibility information to be included with your control, you can write your own class that is derived from the <xref:System.Windows.Forms.AccessibleObject> or <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes. For example, if you are writing your own control that is not derived from the common controls, or you require such operations as hit testing within your control, you should create a <xref:System.Windows.Forms.Control.ControlAccessibleObject> for your control by calling the <xref:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance*> method.
+
  ]]></format>
     </remarks>
     <forInternalUseOnly />
@@ -62,7 +64,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, parent As AccessibleObject)" />
       <MemberSignature Language="F#" Value="new System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject : string * System.Windows.Forms.AccessibleObject -&gt; System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject" Usage="new System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject (name, parent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DomainItemAccessibleObject(System::String ^ name, System::Windows::Forms::AccessibleObject ^ parent);" />
-      <MemberSignature Language="C#" Value="public DomainItemAccessibleObject (string? name, System.Windows.Forms.AccessibleObject parent);" FrameworkAlternate="windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public DomainItemAccessibleObject (string? name, System.Windows.Forms.AccessibleObject parent);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -74,11 +76,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="name" Type="System.String">
           <Attributes>
-            <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+            <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -91,11 +95,11 @@
         <param name="parent">The <see cref="T:System.Windows.Forms.AccessibleObject" /> that contains the items in the <see cref="T:System.Windows.Forms.DomainUpDown" /> control.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The name of the <xref:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject> is the string that represents an item in the <xref:System.Windows.Forms.DomainUpDown> control.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The name of the <xref:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject> is the string that represents an item in the <xref:System.Windows.Forms.DomainUpDown> control.
+
  ]]></format>
         </remarks>
         <forInternalUseOnly />
@@ -119,6 +123,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -158,6 +164,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -193,6 +201,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
@@ -222,6 +232,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
@@ -251,6 +263,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

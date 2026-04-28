@@ -1,6 +1,6 @@
 <Type Name="GCLatencyMode" FullName="System.Runtime.GCLatencyMode">
   <TypeSignature Language="C#" Value="public enum GCLatencyMode" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GCLatencyMode extends System.Enum" FrameworkAlternate="dotnet-uwp-10.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GCLatencyMode extends System.Enum" FrameworkAlternate="dotnet-uwp-10.0;net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Runtime.GCLatencyMode" />
   <TypeSignature Language="VB.NET" Value="Public Enum GCLatencyMode" />
   <TypeSignature Language="F#" Value="type GCLatencyMode = " />
@@ -20,6 +20,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -34,12 +36,13 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="mscorlib" FromVersion="4.0.0.0" To="System.Runtime" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="8.0.0.0" FrameworkAlternate="net-8.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="9.0.0.0" FrameworkAlternate="net-9.0" />
-    <TypeForwarding From="System.Runtime" FromVersion="4.1.1.1" To="mscorlib" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -53,14 +56,14 @@
   <Docs>
     <summary>Adjusts the time that the garbage collector intrudes in your application.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can adjust the intrusiveness of garbage collection in your application by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A> property to any <xref:System.Runtime.GCLatencyMode> enumeration value except `GCLatencyMode.NoGCRegion`. You can also determine the garbage collector's current latency mode by retrieving the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property value.  
-  
- See [Latency Modes](/dotnet/standard/garbage-collection/latency) for a discussion of how the runtime configuration settings for garbage collection affect the default value for this enumeration.  
+      <format type="text/markdown"><![CDATA[
 
-The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode overrides the [\<gcConcurrent>](/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element) runtime configuration setting. If concurrent garbage collection is enabled by the [\<gcConcurrent>](/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element) element, switching to Batch mode prevents any further concurrent collections.    
+## Remarks
+ You can adjust the intrusiveness of garbage collection in your application by setting the <xref:System.Runtime.GCSettings.LatencyMode> property to any <xref:System.Runtime.GCLatencyMode> enumeration value except `GCLatencyMode.NoGCRegion`. You can also determine the garbage collector's current latency mode by retrieving the <xref:System.Runtime.GCSettings.LatencyMode?displayProperty=nameWithType> property value.
+
+ See [Latency Modes](/dotnet/standard/garbage-collection/latency) for a discussion of how the runtime configuration settings for garbage collection affect the default value for this enumeration.
+
+The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode overrides the [\<gcConcurrent>](/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element) runtime configuration setting. If concurrent garbage collection is enabled by the [\<gcConcurrent>](/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element) element, switching to Batch mode prevents any further concurrent collections.
 
  ]]></format>
     </remarks>
@@ -89,6 +92,8 @@ The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -131,6 +136,8 @@ The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -173,6 +180,8 @@ The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -221,14 +230,16 @@ The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Runtime.GCLatencyMode</ReturnType>
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>Indicates that garbage collection is suspended while the app is executing a critical path.  
-  
+        <summary>Indicates that garbage collection is suspended while the app is executing a critical path.
+
  <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" /> is a read-only value; that is, you cannot assign the <see cref="F:System.Runtime.GCLatencyMode.NoGCRegion" /> value to the <see cref="P:System.Runtime.GCSettings.LatencyMode" /> property. You specify the no GC region latency mode by calling the <see cref="Overload:System.GC.TryStartNoGCRegion" /> method and terminate it by calling the <see cref="M:System.GC.EndNoGCRegion" /> method.</summary>
       </Docs>
     </Member>
@@ -254,6 +265,8 @@ The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode 
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>

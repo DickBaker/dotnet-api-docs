@@ -20,7 +20,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Configuration.ProtectedConfigurationProvider</BaseTypeName>
   </Base>
@@ -36,7 +41,7 @@
  The <xref:System.Configuration.RsaProtectedConfigurationProvider> object uses the cryptography functions provided by <xref:System.Security.Cryptography.RSA> class to encrypt and decrypt configuration sections.
 
 > [!NOTE]
->  Before ASP.NET can decrypt encrypted information in your configuration file, the identity of your ASP.NET application must have read access to the encryption key used to encrypt and decrypt the configuration data. For more information, see [Walkthrough: Encrypting Configuration Information Using Protected Configuration](https://learn.microsoft.com/previous-versions/dtkwfdky(v=vs.140)).
+>  Before ASP.NET can decrypt encrypted information in your configuration file, the identity of your ASP.NET application must have read access to the encryption key used to encrypt and decrypt the configuration data.
 
 > [!NOTE]
 > On .NET Core and .NET 5+, the <xref:System.Configuration.RsaProtectedConfigurationProvider> type is not supported. All APIs throw a <xref:System.PlatformNotSupportedException> at run time.
@@ -82,9 +87,6 @@ The following example shows how to use the standard <xref:System.Configuration.R
     <altmember cref="T:System.Configuration.DpapiProtectedConfigurationProvider" />
     <altmember cref="T:System.Security.Cryptography.RSA" />
     <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/dtkwfdky(v=vs.100)">Walkthrough: Encrypting Configuration Information using Protected Configuration</related>
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/2w117ede(v=vs.100)">Walkthrough: Creating and Exporting an RSA Key Container</related>
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/68ze1hb2(v=vs.100)">Specifying a Protected Configuration Provider</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -108,6 +110,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -116,7 +120,7 @@ The following example shows how to use the standard <xref:System.Configuration.R
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Configuration.RsaProtectedConfigurationProvider.%23ctor%2A> constructor is not intended to be used directly from your code. It is called by the ASP.NET configuration system.
+ The <xref:System.Configuration.RsaProtectedConfigurationProvider.%23ctor*> constructor is not intended to be used directly from your code. It is called by the ASP.NET configuration system.
 
  ]]></format>
         </remarks>
@@ -145,6 +149,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -159,7 +165,6 @@ The following example shows how to use the standard <xref:System.Configuration.R
           <see langword="true" /> to indicate that the key is exportable; otherwise, <see langword="false" />.</param>
         <summary>Adds a key to the RSA key container.</summary>
         <remarks>To be added.</remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/2w117ede(v=vs.100)">Walkthrough: Creating and Exporting an RSA Key Container</related>
       </Docs>
     </Member>
     <Member MemberName="CspProviderName">
@@ -184,6 +189,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -217,6 +224,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Xml.XmlNode</ReturnType>
@@ -253,6 +262,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -261,7 +272,6 @@ The following example shows how to use the standard <xref:System.Configuration.R
       <Docs>
         <summary>Removes a key from the RSA key container.</summary>
         <remarks>To be added.</remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/2w117ede(v=vs.100)">Walkthrough: Creating and Exporting an RSA Key Container</related>
       </Docs>
     </Member>
     <Member MemberName="Encrypt">
@@ -286,6 +296,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Xml.XmlNode</ReturnType>
@@ -322,6 +334,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -361,7 +375,6 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <exception cref="T:System.NotSupportedException">
           <paramref name="xmlFileName" /> is in an invalid format.</exception>
         <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/2w117ede(v=vs.100)">Walkthrough: Creating and Exporting an RSA Key Container</related>
       </Docs>
     </Member>
     <Member MemberName="ImportKey">
@@ -386,6 +399,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -424,7 +439,6 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <exception cref="T:System.IO.FileNotFoundException">The file specified in <paramref name="xmlFileName" /> was not found.</exception>
         <exception cref="T:System.NotSupportedException">
           <paramref name="xmlFileName" /> is in an invalid format.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/2w117ede(v=vs.100)">Walkthrough: Creating and Exporting an RSA Key Container</related>
       </Docs>
     </Member>
     <Member MemberName="Initialize">
@@ -450,13 +464,15 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="configurationValues" Type="System.Collections.Specialized.NameValueCollection" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0;netframework-4.6.2-pp;windowsdesktop-10.0;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-11.0" />
+        <Parameter Name="configurationValues" Type="System.Collections.Specialized.NameValueCollection" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;dotnet-plat-ext-3.0;dotnet-plat-ext-3.1;dotnet-plat-ext-5.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0;netframework-4.6.2-pp;windowsdesktop-10.0;netframework-4.7-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.8.1-pp;netframework-4.8-pp;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="name">The provider name to use for the object.</param>
@@ -489,6 +505,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -497,7 +515,6 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <summary>Gets the name of the key container.</summary>
         <value>The name of the key container.</value>
         <remarks>To be added.</remarks>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/aspnet/2w117ede(v=vs.100)">Walkthrough: Creating and Exporting an RSA Key Container</related>
       </Docs>
     </Member>
     <Member MemberName="RsaPublicKey">
@@ -522,6 +539,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.RSAParameters</ReturnType>
@@ -554,6 +573,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -587,6 +608,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -620,6 +643,8 @@ The following example shows how to use the standard <xref:System.Configuration.R
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

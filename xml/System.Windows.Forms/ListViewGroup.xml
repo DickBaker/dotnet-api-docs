@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,7 +46,7 @@
       <AttributeName Language="C#">[System.Serializable]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -52,36 +54,36 @@
   <Docs>
     <summary>Represents a group of items displayed within a <see cref="T:System.Windows.Forms.ListView" /> control.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Windows.Forms.ListView> grouping feature lets you create visual groups of logically related <xref:System.Windows.Forms.ListView> items. Each group consists of a text-based header followed by a horizontal line and the items assigned to that group. You can align the header text to the left, right, or center of the control. Any groups assigned to a <xref:System.Windows.Forms.ListView> control appear whenever the <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> property is set to a value other than <xref:System.Windows.Forms.View.List?displayProperty=nameWithType>.  
-  
- <xref:System.Windows.Forms.ListView> groups help your users find the items they are looking for by separating the items into useful categories. You can create whatever categories you need. One typical way to group the items is by the way they are sorted. For example, you can group the items by the initial letter of the item name when they are sorted alphabetically, or by subitems such as type or date when the list is sorted by clicking a column header in the details view. Windows Explorer uses this type of grouping.  
-  
- To use the grouping feature, add one or more <xref:System.Windows.Forms.ListViewGroup> objects to the <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> collection of a <xref:System.Windows.Forms.ListView> control. Set the group header text and header alignment in the <xref:System.Windows.Forms.ListViewGroup.%23ctor%2A> constructor, or set them using the <xref:System.Windows.Forms.ListViewGroup.Header%2A> and <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> properties.  
-  
- You can assign an item to a group by specifying the group in the <xref:System.Windows.Forms.ListViewItem.%23ctor%2A> constructor, by setting the <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> property, or by directly adding the item to the <xref:System.Windows.Forms.ListViewGroup.Items%2A> collection of a group. All items should be assigned to groups before they are displayed. Any items that are not assigned to a group will appear in the default group, which has the header label "DefaultGroup{0}". The default group is not contained in the <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> collection, and cannot be altered. It is primarily useful in debugging to ensure that all items have been properly added to groups.  
-  
- An item can only be in one group at a time. You can change the group to which an item belongs by setting the <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> property at run time or by adding it to the <xref:System.Windows.Forms.ListViewGroup.Items%2A> collection of another group, which automatically removes it from the previous group.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Windows.Forms.ListView> grouping feature lets you create visual groups of logically related <xref:System.Windows.Forms.ListView> items. Each group consists of a text-based header followed by a horizontal line and the items assigned to that group. You can align the header text to the left, right, or center of the control. Any groups assigned to a <xref:System.Windows.Forms.ListView> control appear whenever the <xref:System.Windows.Forms.ListView.View?displayProperty=nameWithType> property is set to a value other than <xref:System.Windows.Forms.View.List?displayProperty=nameWithType>.
+
+ <xref:System.Windows.Forms.ListView> groups help your users find the items they are looking for by separating the items into useful categories. You can create whatever categories you need. One typical way to group the items is by the way they are sorted. For example, you can group the items by the initial letter of the item name when they are sorted alphabetically, or by subitems such as type or date when the list is sorted by clicking a column header in the details view. Windows Explorer uses this type of grouping.
+
+ To use the grouping feature, add one or more <xref:System.Windows.Forms.ListViewGroup> objects to the <xref:System.Windows.Forms.ListView.Groups*?displayProperty=nameWithType> collection of a <xref:System.Windows.Forms.ListView> control. Set the group header text and header alignment in the <xref:System.Windows.Forms.ListViewGroup.%23ctor*> constructor, or set them using the <xref:System.Windows.Forms.ListViewGroup.Header*> and <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment*> properties.
+
+ You can assign an item to a group by specifying the group in the <xref:System.Windows.Forms.ListViewItem.%23ctor*> constructor, by setting the <xref:System.Windows.Forms.ListViewItem.Group?displayProperty=nameWithType> property, or by directly adding the item to the <xref:System.Windows.Forms.ListViewGroup.Items*> collection of a group. All items should be assigned to groups before they are displayed. Any items that are not assigned to a group will appear in the default group, which has the header label "DefaultGroup{0}". The default group is not contained in the <xref:System.Windows.Forms.ListView.Groups*?displayProperty=nameWithType> collection, and cannot be altered. It is primarily useful in debugging to ensure that all items have been properly added to groups.
+
+ An item can only be in one group at a time. You can change the group to which an item belongs by setting the <xref:System.Windows.Forms.ListViewItem.Group?displayProperty=nameWithType> property at run time or by adding it to the <xref:System.Windows.Forms.ListViewGroup.Items*> collection of another group, which automatically removes it from the previous group.
+
 > [!NOTE]
->  The insertion mark feature is disabled when using groups. This is because the grouping feature orders items by group membership, while the insertion mark feature is used with drag-and-drop repositioning in a <xref:System.Windows.Forms.ListView> control that does not already order its items.  
-  
+>  The insertion mark feature is disabled when using groups. This is because the grouping feature orders items by group membership, while the insertion mark feature is used with drag-and-drop repositioning in a <xref:System.Windows.Forms.ListView> control that does not already order its items.
+
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView> groups are available only on Windows XP and the Windows Server 2003 family when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method. On earlier operating systems, any code relating to groups will be ignored and the groups will not appear. As a result, any code that depends on the grouping feature might not work correctly. You might want to include a test that determines whether the grouping feature is available, and provide alternate functionality when it is unavailable. For example, you might want to provide alternate sorting when running on operating systems that do not support sorting by group.  
->   
->  The insertion mark feature is provided by the same library that provides the operating system themes feature. To check for the availability of this library, call the <xref:System.Windows.Forms.FeatureSupport.IsPresent%28System.Object%29?displayProperty=nameWithType> method overload and pass in the <xref:System.Windows.Forms.OSFeature.Themes?displayProperty=nameWithType> value.  
-  
-   
-  
-## Examples  
- The following code example demonstrates how to use the <xref:System.Windows.Forms.ListView> grouping feature to organize items by subitem value in the details view. This form of grouping is similar to the grouping used in Windows Explorer. In the example, the groups are created dynamically. For each subitem column, one group is created for each unique subitem value. For the parent item column, one group is created for each unique initial letter. Clicking the header of a column sorts the items into the groups created for that column. Clicking the same column header again reverses the order of the groups.  
-  
+>  <xref:System.Windows.Forms.ListView> groups are available only on Windows XP and the Windows Server 2003 family when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles*?displayProperty=nameWithType> method. On earlier operating systems, any code relating to groups will be ignored and the groups will not appear. As a result, any code that depends on the grouping feature might not work correctly. You might want to include a test that determines whether the grouping feature is available, and provide alternate functionality when it is unavailable. For example, you might want to provide alternate sorting when running on operating systems that do not support sorting by group.
+>
+>  The insertion mark feature is provided by the same library that provides the operating system themes feature. To check for the availability of this library, call the <xref:System.Windows.Forms.FeatureSupport.IsPresent(System.Object)?displayProperty=nameWithType> method overload and pass in the <xref:System.Windows.Forms.OSFeature.Themes?displayProperty=nameWithType> value.
+
+
+
+## Examples
+ The following code example demonstrates how to use the <xref:System.Windows.Forms.ListView> grouping feature to organize items by subitem value in the details view. This form of grouping is similar to the grouping used in Windows Explorer. In the example, the groups are created dynamically. For each subitem column, one group is created for each unique subitem value. For the parent item column, one group is created for each unique initial letter. Clicking the header of a column sorts the items into the groups created for that column. Clicking the same column header again reverses the order of the groups.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/ListView/Groups/listviewgroupsexample.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb" id="Snippet1":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/ListView/Groups/listviewgroupsexample.vb" id="Snippet1":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Forms.ListView" />
@@ -115,6 +117,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -129,7 +133,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (header As String)" />
       <MemberSignature Language="F#" Value="new System.Windows.Forms.ListViewGroup : string -&gt; System.Windows.Forms.ListViewGroup" Usage="new System.Windows.Forms.ListViewGroup header" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ListViewGroup(System::String ^ header);" />
-      <MemberSignature Language="C#" Value="public ListViewGroup (string? header);" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public ListViewGroup (string? header);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -140,6 +144,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="header" Type="System.String" />
@@ -157,7 +163,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (key As String, headerText As String)" />
       <MemberSignature Language="F#" Value="new System.Windows.Forms.ListViewGroup : string * string -&gt; System.Windows.Forms.ListViewGroup" Usage="new System.Windows.Forms.ListViewGroup (key, headerText)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ListViewGroup(System::String ^ key, System::String ^ headerText);" />
-      <MemberSignature Language="C#" Value="public ListViewGroup (string? key, string? headerText);" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public ListViewGroup (string? key, string? headerText);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -168,6 +174,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -193,7 +201,7 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (header As String, headerAlignment As HorizontalAlignment)" />
       <MemberSignature Language="F#" Value="new System.Windows.Forms.ListViewGroup : string * System.Windows.Forms.HorizontalAlignment -&gt; System.Windows.Forms.ListViewGroup" Usage="new System.Windows.Forms.ListViewGroup (header, headerAlignment)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ListViewGroup(System::String ^ header, System::Windows::Forms::HorizontalAlignment headerAlignment);" />
-      <MemberSignature Language="C#" Value="public ListViewGroup (string? header, System.Windows.Forms.HorizontalAlignment headerAlignment);" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public ListViewGroup (string? header, System.Windows.Forms.HorizontalAlignment headerAlignment);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -204,6 +212,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -220,17 +230,17 @@
         <param name="headerAlignment">One of the <see cref="T:System.Windows.Forms.HorizontalAlignment" /> values that specifies the alignment of the header text.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Forms.ListViewGroup" /> class using the specified header text and the specified header alignment.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Examples  
- The following code example demonstrates how the `ListViewGroup` constructor can be used in an application that organizes <xref:System.Windows.Forms.ListView> items by subitem value in the details view. This form of grouping is similar to the grouping used in Windows Explorer. In the example, the groups are created dynamically. For each subitem column, one group is created for each unique subitem value. For the parent item column, one group is created for each unique initial letter. The groups created for each column are stored in a hash table along with the subitem text or initial letter. When a column header is clicked, this text value is used to match items to groups for the appropriate column.  
-  
- For the complete example, see the <xref:System.Windows.Forms.ListViewGroup> overview reference topic.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Examples
+ The following code example demonstrates how the `ListViewGroup` constructor can be used in an application that organizes <xref:System.Windows.Forms.ListView> items by subitem value in the details view. This form of grouping is similar to the grouping used in Windows Explorer. In the example, the groups are created dynamically. For each subitem column, one group is created for each unique subitem value. For the parent item column, one group is created for each unique initial letter. The groups created for each column are stored in a hash table along with the subitem text or initial letter. When a column header is clicked, this text value is used to match items to groups for the appropriate column.
+
+ For the complete example, see the <xref:System.Windows.Forms.ListViewGroup> overview reference topic.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Forms/ListView/Groups/listviewgroupsexample.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb" id="Snippet3":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Forms/ListView/Groups/listviewgroupsexample.vb" id="Snippet3":::
+
  ]]></format>
         </remarks>
       </Docs>
@@ -250,9 +260,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(System.Windows.Forms.ListViewGroupCollapsedState.Default)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(System.Windows.Forms.ListViewGroupCollapsedState.Default)&gt;]</AttributeName>
         </Attribute>
@@ -283,9 +295,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue("")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue("")&gt;]</AttributeName>
         </Attribute>
@@ -314,9 +328,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(System.Windows.Forms.HorizontalAlignment.Left)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(System.Windows.Forms.HorizontalAlignment.Left)&gt;]</AttributeName>
         </Attribute>
@@ -348,9 +364,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue("")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue("")&gt;]</AttributeName>
         </Attribute>
@@ -362,11 +380,11 @@
         <summary>Gets or sets the header text for the group.</summary>
         <value>The text to display for the group header. The default is "ListViewGroup".</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use this property to retrieve the header text or to change the header value at run time. You can also set the header text in the <xref:System.Windows.Forms.ListViewGroup.%23ctor%2A> constructor.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use this property to retrieve the header text or to change the header value at run time. You can also set the header text in the <xref:System.Windows.Forms.ListViewGroup.%23ctor*> constructor.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -388,6 +406,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -406,11 +426,11 @@
         <summary>Gets or sets the alignment of the group header text.</summary>
         <value>One of the <see cref="T:System.Windows.Forms.HorizontalAlignment" /> values that specifies the alignment of the header text. The default is <see cref="F:System.Windows.Forms.HorizontalAlignment.Left" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Use this property to retrieve the header alignment or to change the alignment at run time. You can also set the header alignment in the <xref:System.Windows.Forms.ListViewGroup.%23ctor%2A> constructor.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Use this property to retrieve the header alignment or to change the alignment at run time. You can also set the header alignment in the <xref:System.Windows.Forms.ListViewGroup.%23ctor*> constructor.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The specified value when setting this property is not a valid <see cref="T:System.Windows.Forms.HorizontalAlignment" /> value.</exception>
@@ -433,6 +453,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -447,16 +469,16 @@
         <summary>Gets a collection containing all items associated with this group.</summary>
         <value>A <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> that contains all the items in the group. If there are no items in the group, an empty <see cref="T:System.Windows.Forms.ListView.ListViewItemCollection" /> object is returned.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You can assign an item to a group by specifying the group in the <xref:System.Windows.Forms.ListViewItem.%23ctor%2A> constructor, by setting the <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> property, or by directly adding the item to the <xref:System.Windows.Forms.ListViewGroup.Items%2A> collection of a group. All items should be assigned to groups before they are displayed. Any items that are not assigned to a group will appear in the default group, which has the header label "DefaultGroup{0}". The default group is not contained in the <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> collection, and cannot be altered. It is primarily useful in debugging to ensure that all items have been properly added to groups.  
-  
- An item can only be in one group at a time. You can change the group to which an item belongs by setting the <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> property at run time or by adding it to the <xref:System.Windows.Forms.ListViewGroup.Items%2A> collection of another group, which automatically removes it from the previous group.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You can assign an item to a group by specifying the group in the <xref:System.Windows.Forms.ListViewItem.%23ctor*> constructor, by setting the <xref:System.Windows.Forms.ListViewItem.Group?displayProperty=nameWithType> property, or by directly adding the item to the <xref:System.Windows.Forms.ListViewGroup.Items*> collection of a group. All items should be assigned to groups before they are displayed. Any items that are not assigned to a group will appear in the default group, which has the header label "DefaultGroup{0}". The default group is not contained in the <xref:System.Windows.Forms.ListView.Groups*?displayProperty=nameWithType> collection, and cannot be altered. It is primarily useful in debugging to ensure that all items have been properly added to groups.
+
+ An item can only be in one group at a time. You can change the group to which an item belongs by setting the <xref:System.Windows.Forms.ListViewItem.Group?displayProperty=nameWithType> property at run time or by adding it to the <xref:System.Windows.Forms.ListViewGroup.Items*> collection of another group, which automatically removes it from the previous group.
+
 > [!NOTE]
->  An item can be present within the <xref:System.Windows.Forms.ListViewGroup.Items%2A> collection of a group, but if it is not also present within the <xref:System.Windows.Forms.ListView.Items%2A?displayProperty=nameWithType> collection of the <xref:System.Windows.Forms.ListView> control itself, it will not appear in the control.  
-  
+>  An item can be present within the <xref:System.Windows.Forms.ListViewGroup.Items*> collection of a group, but if it is not also present within the <xref:System.Windows.Forms.ListView.Items*?displayProperty=nameWithType> collection of the <xref:System.Windows.Forms.ListView> control itself, it will not appear in the control.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.Forms.ListViewItem.Group" />
@@ -470,7 +492,7 @@
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListView As ListView" />
       <MemberSignature Language="F#" Value="member this.ListView : System.Windows.Forms.ListView" Usage="System.Windows.Forms.ListViewGroup.ListView" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::ListView ^ ListView { System::Windows::Forms::ListView ^ get(); };" />
-      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListView? ListView { get; }" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListView? ListView { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -481,13 +503,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.Browsable(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Browsable(false)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
@@ -495,11 +519,7 @@
           <AttributeName Language="C#">[get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -520,7 +540,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Windows.Forms.ListViewGroup.Name" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
-      <MemberSignature Language="C#" Value="public string? Name { get; set; }" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public string? Name { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -531,6 +551,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -549,7 +571,7 @@
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -578,9 +600,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue("")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue("")&gt;]</AttributeName>
         </Attribute>
@@ -614,6 +638,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -637,7 +663,7 @@
       <MemberSignature Language="VB.NET" Value="Public Property Tag As Object" />
       <MemberSignature Language="F#" Value="member this.Tag : obj with get, set" Usage="System.Windows.Forms.ListViewGroup.Tag" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Tag { System::Object ^ get(); void set(System::Object ^ value); };" />
-      <MemberSignature Language="C#" Value="public object? Tag { get; set; }" FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public object? Tag { get; set; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
@@ -648,6 +674,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -674,7 +702,7 @@
           <AttributeName Language="C#">[set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]</AttributeName>
           <AttributeName Language="F#">[&lt;set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -686,11 +714,11 @@
         <summary>Gets or sets the object that contains data about the group.</summary>
         <value>An <see cref="T:System.Object" /> for storing the additional data.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Any type derived from the <xref:System.Object> class can be assigned to this property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Any type derived from the <xref:System.Object> class can be assigned to this property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -710,9 +738,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue("")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue("")&gt;]</AttributeName>
         </Attribute>
@@ -741,43 +771,37 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue(-1)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue(-1)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Localizable(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Localizable(true)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.NoneExcludedImageIndexConverter))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.NoneExcludedImageIndexConverter))&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Windows.Forms.RelatedImageList("ListView.GroupImageList")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Windows.Forms.RelatedImageList("ListView.GroupImageList")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.RefreshProperties]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.RefreshProperties&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -805,43 +829,37 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DefaultValue("")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DefaultValue("")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.Localizable(true)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.Localizable(true)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Windows.Forms.RelatedImageList("ListView.GroupImageList")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Windows.Forms.RelatedImageList("ListView.GroupImageList")&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.RefreshProperties]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.RefreshProperties&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -870,6 +888,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -28,6 +30,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="mscorlib" FromVersion="4.0.0.0" To="System.Threading.Tasks.Parallel" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Tasks.Parallel" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Tasks.Parallel" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Tasks.Parallel" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Tasks.Parallel" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Tasks.Parallel" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -39,7 +43,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -56,7 +60,7 @@
  This example demonstrates several approaches to implementing a parallel loop using multiple language constructs.
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/parallelintro.cs" id="Snippet07":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelintro.vb" id="Snippet07":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/parallelintro.vb" id="Snippet07":::
 
  ]]></format>
     </remarks>
@@ -93,6 +97,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -124,15 +130,15 @@
 ## Remarks
  The `body` delegate is invoked once for each value in the iteration range (`fromInclusive`, `toExclusive`). It is provided with two arguments:
 
--   An <xref:System.Int32> value that represents the iteration count.
+- An <xref:System.Int32> value that represents the iteration count.
 
--   A <xref:System.Threading.Tasks.ParallelLoopState> instance that can be used to break out of the loop prematurely. The <xref:System.Threading.Tasks.ParallelLoopState> object is created by the compiler; it cannot be instantiated in user code.
+- A <xref:System.Threading.Tasks.ParallelLoopState> instance that can be used to break out of the loop prematurely. The <xref:System.Threading.Tasks.ParallelLoopState> object is created by the compiler; it cannot be instantiated in user code.
 
- Calling the <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> method informs the `for` operation that iterations after the current one don't have to execute. However, all iterations before the current one will still have to be executed if they haven't already.
+ Calling the <xref:System.Threading.Tasks.ParallelLoopState.Break*> method informs the `for` operation that iterations after the current one don't have to execute. However, all iterations before the current one will still have to be executed if they haven't already.
 
- Therefore, calling <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> is similar to using a break operation within a conventional `for` loop in a language like C#, but it is not a perfect substitute: For example, there is no guarantee that iterations after the current one will definitely not execute.
+ Therefore, calling <xref:System.Threading.Tasks.ParallelLoopState.Break*> is similar to using a break operation within a conventional `for` loop in a language like C#, but it is not a perfect substitute: For example, there is no guarantee that iterations after the current one will definitely not execute.
 
- If executing all iterations before the current one is not necessary, use the <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> method instead of using <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>. Calling <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> informs the `for` loop that it may abandon all remaining iterations, regardless of whether they're before or after the current iteration, because all required work will have already been completed. However, as with <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>, there are no guarantees regarding which other iterations will not execute.
+ If executing all iterations before the current one is not necessary, use the <xref:System.Threading.Tasks.ParallelLoopState.Stop*> method instead of using <xref:System.Threading.Tasks.ParallelLoopState.Break*>. Calling <xref:System.Threading.Tasks.ParallelLoopState.Stop*> informs the `for` loop that it may abandon all remaining iterations, regardless of whether they're before or after the current iteration, because all required work will have already been completed. However, as with <xref:System.Threading.Tasks.ParallelLoopState.Break*>, there are no guarantees regarding which other iterations will not execute.
 
  If a loop is ended prematurely, the <xref:System.Threading.Tasks.ParallelLoopResult> structure that is returned will contain relevant information about the loop's completion.
 
@@ -141,19 +147,18 @@
 
 
 ## Examples
- The following example executes up to 100 iterations of a loop in parallel. Each iteration pauses for a random interval from 1 to 1,000 milliseconds. A randomly generated value determines on which iteration of the loop the <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> method is called. As the output from the example shows, no iterations whose index is greater than the <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A?displayProperty=nameWithType> property value start after the call to the <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> method.
+ The following example executes up to 100 iterations of a loop in parallel. Each iteration pauses for a random interval from 1 to 1,000 milliseconds. A randomly generated value determines on which iteration of the loop the <xref:System.Threading.Tasks.ParallelLoopState.Break*?displayProperty=nameWithType> method is called. As the output from the example shows, no iterations whose index is greater than the <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration?displayProperty=nameWithType> property value start after the call to the <xref:System.Threading.Tasks.ParallelLoopState.Break*?displayProperty=nameWithType> method.
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/For/break1.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/For/break1.vb" id="Snippet2":::
 
- Because iterations of the loop are still likely to be executing when the <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> method is called, each iteration calls the <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A?displayProperty=nameWithType> property to check whether another iteration has called the <xref:System.Threading.Tasks.ParallelLoopState.Break%2A?displayProperty=nameWithType> method. If  the property value is `true`, the iteration checks the value of the <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A?displayProperty=nameWithType> property and, if it is greater than the current iteration's index value, returns immediately.
+ Because iterations of the loop are still likely to be executing when the <xref:System.Threading.Tasks.ParallelLoopState.Break*?displayProperty=nameWithType> method is called, each iteration calls the <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration?displayProperty=nameWithType> property to check whether another iteration has called the <xref:System.Threading.Tasks.ParallelLoopState.Break*?displayProperty=nameWithType> method. If  the property value is `true`, the iteration checks the value of the <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration?displayProperty=nameWithType> property and, if it is greater than the current iteration's index value, returns immediately.
 
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <altmember cref="T:System.Threading.Tasks.ParallelLoopState" />
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -174,6 +179,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -210,16 +217,15 @@
 
 
 ## Examples
- The following example uses the <xref:System.Threading.Tasks.Parallel.For%2A> method for 100 invocations of a delegate that generates random byte values and computes their sum.
+ The following example uses the <xref:System.Threading.Tasks.Parallel.For*> method for 100 invocations of a delegate that generates random byte values and computes their sum.
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/For/for1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel.for/vb/for1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/For/for1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -240,6 +246,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -271,11 +279,11 @@
 ## Remarks
  The `body` delegate is invoked once for each value in the iteration range (`fromInclusive`, `toExclusive`). It is provided with the following parameters: the iteration count (<xref:System.Int64>), and a <xref:System.Threading.Tasks.ParallelLoopState> instance that may be used to break out of the loop prematurely.
 
- Calling the <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> method informs the `for` operation that iterations after the current one don't have to be executed, but all iterations before the current one do.
+ Calling the <xref:System.Threading.Tasks.ParallelLoopState.Break*> method informs the `for` operation that iterations after the current one don't have to be executed, but all iterations before the current one do.
 
  Therefore, calling Break is similar to using a break operation within a conventional `for` loop in a language like C#, but it is not a perfect substitute: For example, there is no guarantee that iterations after the current one will definitely not execute.
 
- If executing all iterations before the current one is not necessary, use the <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> method instead of using <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>. Calling <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> informs the `for` loop that it may abandon all remaining iterations, regardless of whether they're before or after the current iteration, because all required work will have already been completed. However, as with <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>, there are no guarantees regarding which other iterations will not execute.
+ If executing all iterations before the current one is not necessary, use the <xref:System.Threading.Tasks.ParallelLoopState.Stop*> method instead of using <xref:System.Threading.Tasks.ParallelLoopState.Break*>. Calling <xref:System.Threading.Tasks.ParallelLoopState.Stop*> informs the `for` loop that it may abandon all remaining iterations, regardless of whether they're before or after the current iteration, because all required work will have already been completed. However, as with <xref:System.Threading.Tasks.ParallelLoopState.Break*>, there are no guarantees regarding which other iterations will not execute.
 
  If a loop is ended prematurely, the <xref:System.Threading.Tasks.ParallelLoopResult> structure that is returned will contain relevant information about the loop's completion.
 
@@ -285,7 +293,6 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -306,6 +313,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -343,7 +352,6 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -364,6 +372,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -409,7 +419,6 @@
  The <paramref name="parallelOptions" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -430,6 +439,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -471,7 +482,7 @@
  The following example shows how to cancel a parallel loop:
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/parallelforcancel.cs" id="Snippet05":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforcancel.vb" id="Snippet05":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/parallelforcancel.vb" id="Snippet05":::
 
  ]]></format>
         </remarks>
@@ -483,7 +494,6 @@
  The <paramref name="parallelOptions" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -504,6 +514,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -542,10 +554,10 @@
 
 
 ## Examples
- The following example shows how to use the <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method with a <xref:System.Threading.Tasks.ParallelOptions> object:
+ The following example shows how to use the <xref:System.Threading.Tasks.Parallel.For*?displayProperty=nameWithType> method with a <xref:System.Threading.Tasks.ParallelOptions> object:
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/parallelfor.cs" id="Snippet03":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelfor.vb" id="Snippet03":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/parallelfor.vb" id="Snippet03":::
 
  ]]></format>
         </remarks>
@@ -557,7 +569,6 @@
  The <paramref name="parallelOptions" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For">
@@ -578,6 +589,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -619,7 +632,7 @@
  The following example shows how to use <xref:System.Threading.Tasks.ParallelOptions> to specify a custom task scheduler:
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/parallelforwithscheduler.cs" id="Snippet06":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforwithscheduler.vb" id="Snippet06":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/parallelforwithscheduler.vb" id="Snippet06":::
 
  ]]></format>
         </remarks>
@@ -631,7 +644,6 @@
  The <paramref name="parallelOptions" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For&lt;TLocal&gt;">
@@ -652,6 +664,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -669,7 +683,7 @@
       <TypeParameters>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -700,7 +714,7 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.For*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  If `fromInclusive` is greater than or equal to `toExclusive`, then the method returns immediately without performing any iterations.
 
@@ -718,7 +732,6 @@
 
  The <paramref name="localFinally" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For&lt;TLocal&gt;">
@@ -739,6 +752,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -756,7 +771,7 @@
       <TypeParameters>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -787,7 +802,7 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.For*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  If `fromInclusive` is greater than or equal to `toExclusive`, then the method returns immediately without performing any iterations.
 
@@ -805,7 +820,6 @@
 
  The <paramref name="localFinally" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For&lt;TLocal&gt;">
@@ -826,6 +840,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -843,7 +859,7 @@
       <TypeParameters>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -876,7 +892,7 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple threads; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.For*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  If `fromInclusive` is greater than or equal to `toExclusive`, then the method returns immediately without performing any iterations.
 
@@ -886,7 +902,7 @@
  The following example uses thread-local variables to compute the sum of the results of many lengthy operations. This example limits the degree of parallelism to four.
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/threadlocalforwithoptions.cs" id="Snippet04":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/threadlocalforwithoptions.vb" id="Snippet04":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/threadlocalforwithoptions.vb" id="Snippet04":::
 
  ]]></format>
         </remarks>
@@ -906,7 +922,6 @@
         <exception cref="T:System.OperationCanceledException">The <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> argument is canceled.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="For&lt;TLocal&gt;">
@@ -927,6 +942,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -944,7 +961,7 @@
       <TypeParameters>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -977,7 +994,7 @@
 
  The `localInit` delegate is invoked once for each thread that participates in the loop's execution and returns the initial local state for each of those threads. These initial states are passed to the first `body` invocations on each thread. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each thread returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per thread to perform a final action on each thread's local state. This delegate might be invoked concurrently on multiple threads; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.For*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  If `fromInclusive` is greater than or equal to `toExclusive`, then the method returns immediately without performing any iterations.
 
@@ -999,7 +1016,6 @@
         <exception cref="T:System.OperationCanceledException">The <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> argument is canceled.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForAsync&lt;T&gt;">
@@ -1014,6 +1030,8 @@
         <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1032,9 +1050,9 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="fromInclusive" Type="T" Index="0" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="toExclusive" Type="T" Index="1" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;T,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-8.0;net-9.0" />
+        <Parameter Name="fromInclusive" Type="T" Index="0" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="toExclusive" Type="T" Index="1" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;T,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="T">To be added.</typeparam>
@@ -1059,6 +1077,8 @@
         <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1077,10 +1097,10 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="fromInclusive" Type="T" Index="0" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="toExclusive" Type="T" Index="1" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;T,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="3" FrameworkAlternate="net-8.0;net-9.0" />
+        <Parameter Name="fromInclusive" Type="T" Index="0" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="toExclusive" Type="T" Index="1" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="2" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;T,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="3" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="T">To be added.</typeparam>
@@ -1107,6 +1127,8 @@
         <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1125,10 +1147,10 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="fromInclusive" Type="T" Index="0" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="toExclusive" Type="T" Index="1" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" Index="2" FrameworkAlternate="net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;T,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="3" FrameworkAlternate="net-8.0;net-9.0" />
+        <Parameter Name="fromInclusive" Type="T" Index="0" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="toExclusive" Type="T" Index="1" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" Index="2" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;T,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="3" FrameworkAlternate="net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="T">To be added.</typeparam>
@@ -1170,6 +1192,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1187,7 +1211,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1208,7 +1232,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  ]]></format>
         </remarks>
@@ -1227,7 +1251,6 @@
 
  Any methods in the source orderable partitioner return <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception thrown from one of the specified delegates.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource&gt;">
@@ -1248,6 +1271,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1265,7 +1290,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1286,7 +1311,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  ]]></format>
         </remarks>
@@ -1304,7 +1329,6 @@
  -or-
 
  The <see cref="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" /> method in the <paramref name="source" /> partitioner does not return the correct number of partitions.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
         <exception cref="T:System.AggregateException">The exception that is thrown to contain an exception thrown from one of the specified delegates.</exception>
       </Docs>
     </Member>
@@ -1326,6 +1350,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1343,7 +1369,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1364,15 +1390,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
 
 
 ## Examples
- The following example shows how to implement a range partitioner for use with <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>:
+ The following example shows how to implement a range partitioner for use with <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType>:
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/ForEachTSource/rangepartitioner.cs" id="Snippet01":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel_rangepartitioners/vb/rangepart.vb" id="Snippet01":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/ForEachTSource/rangepart.vb" id="Snippet01":::
 
  ]]></format>
         </remarks>
@@ -1390,7 +1416,6 @@
  -or-
 
  The <see cref="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" /> method in the <paramref name="source" /> partitioner does not return the correct number of partitions.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
         <exception cref="T:System.AggregateException">The exception that is thrown to contain an exception thrown from one of the specified delegates.</exception>
       </Docs>
     </Member>
@@ -1412,6 +1437,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1429,7 +1456,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1460,7 +1487,6 @@
 
  The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource&gt;">
@@ -1481,6 +1507,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1498,7 +1526,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1529,7 +1557,6 @@
 
  The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource&gt;">
@@ -1550,6 +1577,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1567,7 +1596,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1593,10 +1622,10 @@
 
 
 ## Examples
- The following example uses the <xref:System.Threading.Tasks.Parallel.ForEach%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Action%7B%60%600%7D%29> method to count the number of vowels and non-white-space characters in a text file. In this case, the <xref:System.Threading.Tasks.ParallelLoopResult> value returned by the method is ignored. Note that, because operations can run in parallel, you must ensure that incrementing the counter variables is an atomic operation, and that multiple threads do not attempt to access the counter variables simultaneously. For this purpose, the example uses the `lock` statement (in C#) and the `SyncLock` statement (in Visual Basic).
+ The following example uses the <xref:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})> method to count the number of vowels and non-white-space characters in a text file. In this case, the <xref:System.Threading.Tasks.ParallelLoopResult> value returned by the method is ignored. Note that, because operations can run in parallel, you must ensure that incrementing the counter variables is an atomic operation, and that multiple threads do not attempt to access the counter variables simultaneously. For this purpose, the example uses the `lock` statement (in C#) and the `SyncLock` statement (in Visual Basic).
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/ForEachTSource/foreach1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel.foreach/vb/foreach1.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/ForEachTSource/foreach1.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -1606,7 +1635,6 @@
 
  The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource&gt;">
@@ -1627,6 +1655,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1644,7 +1674,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1667,7 +1697,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  ]]></format>
         </remarks>
@@ -1691,7 +1721,6 @@
  -or-
 
  The exception that is thrown when any methods in the <paramref name="source" /> orderable partitioner return <see langword="null" />.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
         <exception cref="T:System.AggregateException">The exception that is thrown to contain an exception thrown from one of the specified delegates.</exception>
       </Docs>
     </Member>
@@ -1713,6 +1742,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1730,7 +1761,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1753,7 +1784,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  ]]></format>
         </remarks>
@@ -1773,7 +1804,6 @@
  -or-
 
  The exception that is thrown when any methods in the <paramref name="source" /> partitioner return <see langword="null" />.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
         <exception cref="T:System.AggregateException">The exception that is thrown to contain an exception thrown from one of the specified delegates.</exception>
       </Docs>
     </Member>
@@ -1795,6 +1825,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1812,7 +1844,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1835,7 +1867,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  ]]></format>
         </remarks>
@@ -1855,7 +1887,6 @@
  -or-
 
  The exception that is thrown when any methods in the <paramref name="source" /> partitioner return <see langword="null" />.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
         <exception cref="T:System.AggregateException">The exception that is thrown to contain an exception thrown from one of the specified delegates.</exception>
       </Docs>
     </Member>
@@ -1877,6 +1908,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1894,7 +1927,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1933,7 +1966,6 @@
  The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource&gt;">
@@ -1954,6 +1986,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -1971,7 +2005,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2010,7 +2044,6 @@
  The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource&gt;">
@@ -2031,6 +2064,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2048,7 +2083,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2087,7 +2122,6 @@
  The <paramref name="body" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2108,6 +2142,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2125,7 +2161,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2133,7 +2169,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2159,11 +2195,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2182,7 +2218,6 @@
  The <paramref name="localFinally" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> property in the <paramref name="source" /><see cref="T:System.Collections.Concurrent.Partitioner" /> returns <see langword="false" /> or the partitioner returns <see langword="null" /> partitions.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2203,6 +2238,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2220,7 +2257,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2228,7 +2265,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2254,11 +2291,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  The `localInit` delegate is invoked once for each thread that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2277,7 +2314,6 @@
  The <paramref name="localFinally" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> property in the <paramref name="source" /><see cref="T:System.Collections.Concurrent.Partitioner" /> returns <see langword="false" /> or the partitioner returns <see langword="null" /> partitions.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2298,6 +2334,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2315,7 +2353,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2323,7 +2361,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2353,7 +2391,7 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2371,7 +2409,6 @@
 
  The <paramref name="localFinally" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2392,6 +2429,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2409,7 +2448,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2417,7 +2456,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2447,15 +2486,15 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per thread to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
 
 
 ## Examples
- The following example shows how to use a <xref:System.Threading.Tasks.Parallel.ForEach%2A> method with local state:
+ The following example shows how to use a <xref:System.Threading.Tasks.Parallel.ForEach*> method with local state:
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/parallelforeach.cs" id="Snippet02":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb" id="Snippet02":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/parallelforeach.vb" id="Snippet02":::
 
  ]]></format>
         </remarks>
@@ -2473,7 +2512,6 @@
 
  The <paramref name="localFinally" /> argument is <see langword="null" />.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2494,6 +2532,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2511,7 +2551,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2519,7 +2559,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2547,11 +2587,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*> method expects custom partitioners to support dynamic partitioning. For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each thread returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2572,7 +2612,6 @@
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.OperationCanceledException">The <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> argument is canceled.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2593,6 +2632,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2610,7 +2651,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2618,7 +2659,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2646,11 +2687,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach%2A> method expects custom partitioners to support dynamic partitioning. This overload is provided for scenarios with small loop bodies that might benefit from static range partitioning. Partitioners must support dynamic partitions.  For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
+ This overload is provided for scenarios where you want to override the default partitioning scheme. For example, small loop bodies might benefit from partitioning the range. The <xref:System.Threading.Tasks.Parallel.ForEach*> method expects custom partitioners to support dynamic partitioning. This overload is provided for scenarios with small loop bodies that might benefit from static range partitioning. Partitioners must support dynamic partitions.  For more information, see [Custom Partitioners for PLINQ and TPL](/dotnet/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl) and [How to: Implement Dynamic Partitions](/dotnet/standard/parallel-programming/how-to-implement-dynamic-partitions).
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per task to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2675,7 +2716,6 @@
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
         <exception cref="T:System.OperationCanceledException">The <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> argument is canceled.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2696,6 +2736,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2713,7 +2755,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2721,7 +2763,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2753,7 +2795,7 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per thread to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2777,7 +2819,6 @@
         <exception cref="T:System.OperationCanceledException">The <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> argument is canceled.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEach&lt;TSource,TLocal&gt;">
@@ -2798,6 +2839,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2815,7 +2858,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2823,7 +2866,7 @@
         </TypeParameter>
         <TypeParameter Name="TLocal">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2855,7 +2898,7 @@
 
  The `localInit` delegate is invoked once for each task that participates in the loop's execution and returns the initial local state for each of those tasks. These initial states are passed to the first `body` invocations on each task. Then, every subsequent body invocation returns a possibly modified state value that is passed to the next body invocation. Finally, the last body invocation on each task returns a state value that is passed to the `localFinally` delegate. The `localFinally` delegate is invoked once per thread to perform a final action on each task's local state. This delegate might be invoked concurrently on multiple tasks; therefore, you must synchronize access to any shared variables.
 
- The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
+ The <xref:System.Threading.Tasks.Parallel.ForEach*?displayProperty=nameWithType> method may use more tasks than threads over the lifetime of its execution, as existing tasks complete and are replaced by new tasks. This gives the underlying <xref:System.Threading.Tasks.TaskScheduler> object the chance to add, change, or remove threads that service the loop.
 
  ]]></format>
         </remarks>
@@ -2879,7 +2922,6 @@
         <exception cref="T:System.OperationCanceledException">The <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> argument is canceled.</exception>
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Threading.CancellationTokenSource" /> associated with the <see cref="T:System.Threading.CancellationToken" /> in the <paramref name="parallelOptions" /> has been disposed.</exception>
         <exception cref="T:System.AggregateException">The exception that contains all the individual exceptions thrown on all threads.</exception>
-        <related type="Article" href="https://learn.microsoft.com/previous-versions/msp-n-p/ff963552(v=pandp.10)">Parallel Loops</related>
       </Docs>
     </Member>
     <Member MemberName="ForEachAsync&lt;TSource&gt;">
@@ -2896,6 +2938,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2909,7 +2953,7 @@
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2917,8 +2961,8 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Collections.Generic.IAsyncEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Collections.Generic.IAsyncEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="TSource">The type of the data in the source.</typeparam>
@@ -2953,6 +2997,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -2966,7 +3012,7 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -2974,8 +3020,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="TSource">The type of the data in the source.</typeparam>
@@ -3010,6 +3056,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -3023,7 +3071,7 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -3031,9 +3079,9 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Collections.Generic.IAsyncEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Collections.Generic.IAsyncEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="TSource">The type of the data in the source.</typeparam>
@@ -3070,6 +3118,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -3083,7 +3133,7 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -3091,9 +3141,9 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Collections.Generic.IAsyncEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Collections.Generic.IAsyncEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="TSource">The type of the data in the source.</typeparam>
@@ -3121,6 +3171,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -3134,7 +3186,7 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -3142,9 +3194,9 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="TSource">The type of the data in the source.</typeparam>
@@ -3181,6 +3233,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -3194,7 +3248,7 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
       <TypeParameters>
         <TypeParameter Name="TSource">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -3202,9 +3256,9 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
-        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0" />
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" Index="0" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="parallelOptions" Type="System.Threading.Tasks.ParallelOptions" Index="1" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
+        <Parameter Name="body" Type="System.Func&lt;TSource,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask&gt;" Index="2" FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0;net-10.0;net-11.0" />
       </Parameters>
       <Docs>
         <typeparam name="TSource">The type of the data in the source.</typeparam>
@@ -3246,6 +3300,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -3286,10 +3342,10 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
 
 
 ## Examples
- This example demonstrates how to use the <xref:System.Threading.Tasks.Parallel.Invoke%2A> method with other methods, anonymous delegates, and lambda expressions.
+ This example demonstrates how to use the <xref:System.Threading.Tasks.Parallel.Invoke*> method with other methods, anonymous delegates, and lambda expressions.
 
  :::code language="csharp" source="~/snippets/csharp/System.Threading.Tasks/Parallel/Overview/parallelinvoke.cs" id="Snippet01":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelinvoke.vb" id="Snippet01":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Threading.Tasks/Parallel/Overview/parallelinvoke.vb" id="Snippet01":::
 
  ]]></format>
         </remarks>
@@ -3316,6 +3372,8 @@ The operation will execute at most <xref:System.Environment.ProcessorCount> oper
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>

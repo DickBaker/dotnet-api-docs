@@ -25,13 +25,18 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
-    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="6.0.0.0" To="System.ServiceModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-6.0-pp;net-7.0-pp;net-8.0-pp;net-9.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.IdentityModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.IdentityModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+    <TypeForwarding From="System.ServiceModel.Security" FromVersion="10.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="netstandard-2.0-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.IdentityModel.Tokens.SecurityToken</BaseTypeName>
@@ -72,7 +77,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -100,7 +105,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the `internalTokenReference` parameter is `null`, a <xref:System.IdentityModel.Tokens.LocalIdKeyIdentifierClause> key identifier clause is created for this security token and set to the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A> property.
+ When the `internalTokenReference` parameter is `null`, a <xref:System.IdentityModel.Tokens.LocalIdKeyIdentifierClause> key identifier clause is created for this security token and set to the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference> property.
 
  When the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> is obtained in a federation scenario, the proof token contains the key that is encrypted for the client.
 
@@ -136,7 +141,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -173,7 +178,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -199,7 +204,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause%60%601> method to determine if a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause%60%601> method.
+ Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause``1> method to determine if a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause``1> method.
 
  ]]></format>
         </remarks>
@@ -227,7 +232,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -252,9 +257,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The value of the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A> property or the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference%2A> property is returned by the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause%2A> method depending on the type that is passed into the `T` parameter.
+ The value of the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference> property or the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference> property is returned by the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause*> method depending on the type that is passed into the `T` parameter.
 
- Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause%60%601> method to determine if a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause%60%601> method.
+ Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause``1> method to determine if a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause``1> method.
 
  ]]></format>
         </remarks>
@@ -284,7 +289,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -320,7 +325,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -336,7 +341,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> security token is serialized into XML, the value of the `Id` attribute is set to the value of the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.Id%2A> property.
+ When the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> security token is serialized into XML, the value of the `Id` attribute is set to the value of the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.Id> property.
 
  ]]></format>
         </remarks>
@@ -364,7 +369,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -401,7 +406,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -422,7 +427,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The `keyIdentifierClause` parameter is matched against the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference%2A> property values using the <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Matches%2A> method on the key identifier clause that is returned by the property values.
+ The `keyIdentifierClause` parameter is matched against the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference> property values using the <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Matches*> method on the key identifier clause that is returned by the property values.
 
  ]]></format>
         </remarks>
@@ -450,7 +455,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -493,7 +498,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -509,7 +514,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The proof token can be obtained by getting the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ProofToken%2A> property.
+ The proof token can be obtained by getting the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ProofToken> property.
 
  ]]></format>
         </remarks>
@@ -537,7 +542,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -581,7 +586,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -598,7 +603,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ToString%2A> method returns the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A>, <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A>, <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A>, and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference%2A> properties.
+ The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ToString*> method returns the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom>, <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo>, <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference>, and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference> properties.
 
  ]]></format>
         </remarks>
@@ -625,7 +630,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -641,9 +646,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> properties represent the first and last instants in time in which the security token is valid, respectively.
+ Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo> properties represent the first and last instants in time in which the security token is valid, respectively.
 
- The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> property is specified using the `effectiveTime` parameter of the constructor. The value returned from this property is always in Coordinated Universal Time (UTC).
+ The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom> property is specified using the `effectiveTime` parameter of the constructor. The value returned from this property is always in Coordinated Universal Time (UTC).
 
  ]]></format>
         </remarks>
@@ -670,7 +675,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
         <AssemblyVersion>6.0.0.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -686,9 +691,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> properties represent the first and last instants in time in which the security token is valid, respectively.
+ Use the <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo> properties represent the first and last instants in time in which the security token is valid, respectively.
 
- The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> property is specified using the `expirationTime` parameter of the constructor. The value returned from this property is always in Coordinated Universal Time (UTC).
+ The <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo> property is specified using the `expirationTime` parameter of the constructor. The value returned from this property is always in Coordinated Universal Time (UTC).
 
  ]]></format>
         </remarks>

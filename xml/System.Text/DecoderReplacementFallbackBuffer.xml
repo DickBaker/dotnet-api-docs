@@ -26,8 +26,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -39,7 +43,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -47,13 +51,13 @@
   <Docs>
     <summary>Represents a substitute output string that is emitted when the original input byte sequence cannot be decoded. This class cannot be inherited.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- It might not be possible to convert an encoded byte sequence to an equivalent character if no suitable decoding exists. A common reason for a decoding to fail is that the conversion operation uses a code page that cannot represent the character to decode.  
-  
- If the input byte sequence cannot be converted to an output character, a <xref:System.Text.DecoderReplacementFallback?displayProperty=nameWithType> object provides a replacement string that is substituted for the output character. The replacement string initializes the value of the <xref:System.Text.DecoderReplacementFallback> object, and the value of the <xref:System.Text.DecoderReplacementFallback> object initializes the value of a <xref:System.Text.DecoderReplacementFallbackBuffer> object. The value of a <xref:System.Text.DecoderReplacementFallbackBuffer> object is called the replacement fallback buffer. The conversion operation uses the replacement fallback buffer to emit a replacement string instead of a decoded character, then continues to process the remainder of the input.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ It might not be possible to convert an encoded byte sequence to an equivalent character if no suitable decoding exists. A common reason for a decoding to fail is that the conversion operation uses a code page that cannot represent the character to decode.
+
+ If the input byte sequence cannot be converted to an output character, a <xref:System.Text.DecoderReplacementFallback?displayProperty=nameWithType> object provides a replacement string that is substituted for the output character. The replacement string initializes the value of the <xref:System.Text.DecoderReplacementFallback> object, and the value of the <xref:System.Text.DecoderReplacementFallback> object initializes the value of a <xref:System.Text.DecoderReplacementFallbackBuffer> object. The value of a <xref:System.Text.DecoderReplacementFallbackBuffer> object is called the replacement fallback buffer. The conversion operation uses the replacement fallback buffer to emit a replacement string instead of a decoded character, then continues to process the remainder of the input.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -87,6 +91,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fallback" Type="System.Text.DecoderReplacementFallback" />
@@ -126,6 +132,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -141,11 +149,11 @@
         <returns>
           <see langword="true" /> if the replacement string is not empty; <see langword="false" /> if the replacement string is empty.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Text.Encoding.GetBytes%2A> and <xref:System.Text.Encoder.Convert%2A> methods call <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback%2A> if they encounter an unknown input byte sequence that cannot be decoded. If the return value of <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback%2A> is `true`, the calling method can invoke the <xref:System.Text.DecoderReplacementFallbackBuffer.GetNextChar%2A> method to obtain each character of the fallback buffer.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Text.Encoding.GetBytes*> and <xref:System.Text.Encoder.Convert*> methods call <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback*> if they encounter an unknown input byte sequence that cannot be decoded. If the return value of <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback*> is `true`, the calling method can invoke the <xref:System.Text.DecoderReplacementFallbackBuffer.GetNextChar*> method to obtain each character of the fallback buffer.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">This method is called again before the <see cref="M:System.Text.DecoderReplacementFallbackBuffer.GetNextChar" /> method has read all the characters in the replacement fallback buffer.</exception>
@@ -180,6 +188,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Char</ReturnType>
@@ -189,11 +199,11 @@
         <summary>Retrieves the next character in the replacement fallback buffer.</summary>
         <returns>The next character in the replacement fallback buffer.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Text.Encoding.GetBytes%2A?displayProperty=nameWithType> and <xref:System.Text.Decoder.Convert%2A?displayProperty=nameWithType> methods call <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback%2A> if they encounter an unknown surrogate pair or character in their input. If the return value of <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback%2A> is `true`, the calling method can invoke <xref:System.Text.DecoderReplacementFallbackBuffer.GetNextChar%2A> to obtain each character of the replacement fallback buffer.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Text.Encoding.GetBytes*?displayProperty=nameWithType> and <xref:System.Text.Decoder.Convert*?displayProperty=nameWithType> methods call <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback*> if they encounter an unknown surrogate pair or character in their input. If the return value of <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback*> is `true`, the calling method can invoke <xref:System.Text.DecoderReplacementFallbackBuffer.GetNextChar*> to obtain each character of the replacement fallback buffer.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -227,6 +237,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -268,6 +280,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -276,11 +290,11 @@
         <summary>Gets the number of characters in the replacement fallback buffer that remain to be processed.</summary>
         <value>The number of characters in the replacement fallback buffer that have not yet been processed.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback%2A> method returns `true` if the <xref:System.Text.DecoderReplacementFallbackBuffer.Remaining%2A> property is nonzero.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Text.DecoderReplacementFallbackBuffer.Fallback*> method returns `true` if the <xref:System.Text.DecoderReplacementFallbackBuffer.Remaining> property is nonzero.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -314,6 +328,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netcore-2.0;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -328,11 +344,11 @@
       <Docs>
         <summary>Initializes all internal state information and data in the <see cref="T:System.Text.DecoderReplacementFallbackBuffer" /> object.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Text.DecoderReplacementFallbackBuffer.Reset%2A> method discards any persisted state information and data that govern the emitting of a replacement string. Unpredictable results occur if the decoding operation continues after the <xref:System.Text.DecoderReplacementFallbackBuffer.Reset%2A> method is invoked.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Text.DecoderReplacementFallbackBuffer.Reset*> method discards any persisted state information and data that govern the emitting of a replacement string. Unpredictable results occur if the decoding operation continues after the <xref:System.Text.DecoderReplacementFallbackBuffer.Reset*> method is invoked.
+
  ]]></format>
         </remarks>
       </Docs>

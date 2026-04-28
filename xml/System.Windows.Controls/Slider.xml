@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Class Slider&#xA;Inherits RangeBase" />
   <TypeSignature Language="F#" Value="type Slider = class&#xA;    inherit RangeBase" />
   <TypeSignature Language="C++ CLI" Value="public ref class Slider : System::Windows::Controls::Primitives::RangeBase" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Slider extends System.Windows.Controls.Primitives.RangeBase" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Slider extends System.Windows.Controls.Primitives.RangeBase" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -15,6 +15,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.Primitives.RangeBase</BaseTypeName>
@@ -56,38 +58,38 @@
 
  You can customize a <xref:System.Windows.Controls.Slider> control by setting its properties. The following list describes some of the attributes of a <xref:System.Windows.Controls.Slider> that you can customize:
 
--   The orientation of the <xref:System.Windows.Controls.Slider>, either horizontal or vertical.
+- The orientation of the <xref:System.Windows.Controls.Slider>, either horizontal or vertical.
 
--   The tick mark locations along the <xref:System.Windows.Controls.Slider> track.
+- The tick mark locations along the <xref:System.Windows.Controls.Slider> track.
 
--   The display of tooltips to show the current value of the <xref:System.Windows.Controls.Slider>.
+- The display of tooltips to show the current value of the <xref:System.Windows.Controls.Slider>.
 
--   The ability of the <xref:System.Windows.Controls.Primitives.Thumb> to either snap to tick marks or to be positioned at any point along the <xref:System.Windows.Controls.Slider>.
+- The ability of the <xref:System.Windows.Controls.Primitives.Thumb> to either snap to tick marks or to be positioned at any point along the <xref:System.Windows.Controls.Slider>.
 
--   The direction of increasing value along the <xref:System.Windows.Controls.Slider>.
+- The direction of increasing value along the <xref:System.Windows.Controls.Slider>.
 
  For more information about how to customize a <xref:System.Windows.Controls.Slider> control, see the individual member.
 
- <xref:System.Windows.Controls.Slider> overrides the metadata of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> property and sets its default to 10. For more information, see [Dependency Properties Overview](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+ <xref:System.Windows.Controls.Slider> overrides the metadata of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum> property and sets its default to 10. For more information, see [Dependency Properties Overview](/dotnet/desktop/wpf/properties/dependency-properties-overview).
 
 > [!NOTE]
->  If the value of the <xref:System.Windows.Controls.Slider> is animated, the user may no longer be able to interact with the <xref:System.Windows.Controls.Slider> control after the animation finishes. See [How to: Set a Property After Animating It with a Storyboard](/dotnet/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard) for options of how you can restore user control of a <xref:System.Windows.Controls.Slider> after it is animated.
+> If the value of the <xref:System.Windows.Controls.Slider> is animated, the user may no longer be able to interact with the <xref:System.Windows.Controls.Slider> control after the animation finishes. See [How to: Set a Property After Animating It with a Storyboard](/dotnet/desktop/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard) for options of how you can restore user control of a <xref:System.Windows.Controls.Slider> after it is animated.
 
 ## Customizing the Slider Control
- To apply the same property settings to multiple <xref:System.Windows.Controls.Slider> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](/dotnet/framework/wpf/controls/customizing-the-appearance-of-an-existing-control).  To see the parts and states that are specific to the <xref:System.Windows.Controls.Slider>, see [Slider Styles and Templates](/dotnet/framework/wpf/controls/slider-styles-and-templates).
+ To apply the same property settings to multiple <xref:System.Windows.Controls.Slider> controls, use the <xref:System.Windows.FrameworkElement.Style> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [How to create a template for a control](/dotnet/desktop/wpf/controls/how-to-create-apply-template).  To see the parts and states that are specific to the <xref:System.Windows.Controls.Slider>, see [Slider Styles and Templates](/dotnet/desktop/wpf/controls/slider#styles-and-templates).
 
  Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.
 
 [!INCLUDE[setting-a-visual-property](~/includes/visual-property-note.md)]
 
 ## Examples
- The following examples shows how to bind the <xref:System.Windows.FrameworkElement.Height%2A> property of a <xref:System.Windows.Shapes.Rectangle> to the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of a <xref:System.Windows.Controls.Slider> control.
+ The following examples shows how to bind the <xref:System.Windows.FrameworkElement.Height> property of a <xref:System.Windows.Shapes.Rectangle> to the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of a <xref:System.Windows.Controls.Slider> control.
 
- The following example defines a <xref:System.Windows.Controls.Slider> control that is named `RectangleHeight` that can have a <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> between 0 and 200.
+ The following example defines a <xref:System.Windows.Controls.Slider> control that is named `RectangleHeight` that can have a <xref:System.Windows.Controls.Primitives.RangeBase.Value*> between 0 and 200.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/Slider/Overview/Pane1.xaml" id="Snippetminimum":::
 
- The following example shows how to define a <xref:System.Windows.Shapes.Rectangle> that binds its <xref:System.Windows.FrameworkElement.Height%2A> property to the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> control. (In the complete sample, a similar binding is created for the <xref:System.Windows.FrameworkElement.Width%2A> property.)
+ The following example shows how to define a <xref:System.Windows.Shapes.Rectangle> that binds its <xref:System.Windows.FrameworkElement.Height> property to the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> control. (In the complete sample, a similar binding is created for the <xref:System.Windows.FrameworkElement.Width> property.)
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/Slider/Overview/Pane1.xaml" id="Snippetbindingrectangle":::
 
@@ -97,7 +99,6 @@
     <altmember cref="T:System.Windows.Controls.Primitives.Thumb" />
     <altmember cref="T:System.Windows.Controls.Primitives.TickBar" />
     <altmember cref="T:System.Windows.Controls.Primitives.TickPlacement" />
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746671(v=vs.90)">Slider How-to Topics</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -116,6 +117,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -146,6 +149,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Size</ReturnType>
@@ -177,6 +182,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -210,10 +217,10 @@
 
 
 ## Examples
- The following example demonstrates how to set the <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> property.
+ The following example demonstrates how to set the <xref:System.Windows.Controls.Slider.AutoToolTipPlacement> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetbasic":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetbasic":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetbasic":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetbasic":::
 
  ]]></format>
@@ -237,6 +244,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -247,7 +256,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.AutoToolTipPlacement*> dependency property.
 
  ]]></format>
         </remarks>
@@ -270,6 +279,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -304,10 +315,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.AutoToolTipPrecision%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.AutoToolTipPrecision> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -333,6 +344,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -343,7 +356,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.AutoToolTipPrecision%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.AutoToolTipPrecision*> dependency property.
 
  ]]></format>
         </remarks>
@@ -366,6 +379,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -383,9 +398,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property is set to `true`, the <xref:System.Windows.Input.InputGesture> for this command is <xref:System.Windows.Input.Key.PageUp>.
+ If the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property is set to `true`, the <xref:System.Windows.Input.InputGesture> for this command is <xref:System.Windows.Input.Key.PageUp>.
 
- The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> property is (0.1).
+ The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange> property is (0.1).
 
 <a name="xamlAttributeUsage_DecreaseLarge"></a>
 ## XAML Attribute Usage
@@ -412,6 +427,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -429,9 +446,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property is set to `true`, the <xref:System.Windows.Input.InputGesture> objects are <xref:System.Windows.Input.Key.Up> and <xref:System.Windows.Input.Key.Right>.
+ If the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property is set to `true`, the <xref:System.Windows.Input.InputGesture> objects are <xref:System.Windows.Input.Key.Up> and <xref:System.Windows.Input.Key.Right>.
 
- The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> property is (0.1).
+ The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange> property is (0.1).
 
 <a name="xamlAttributeUsage_DecreaseSmall"></a>
 ## XAML Attribute Usage
@@ -458,6 +475,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -479,7 +498,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property is used when a <xref:System.Windows.Controls.Primitives.RepeatButton> is included in the style for a <xref:System.Windows.Controls.Slider>. The default style for the <xref:System.Windows.Controls.Slider> includes two invisible <xref:System.Windows.Controls.Primitives.RepeatButton> controls that use the space between the <xref:System.Windows.Controls.Primitives.Thumb> and each end of the <xref:System.Windows.Controls.Primitives.Track>. When you press one of the invisible buttons, the <xref:System.Windows.Controls.Slider> responds by moving the <xref:System.Windows.Controls.Primitives.Thumb> in that direction after the <xref:System.Windows.Controls.Slider.Delay%2A> property is applied.
+ This property is used when a <xref:System.Windows.Controls.Primitives.RepeatButton> is included in the style for a <xref:System.Windows.Controls.Slider>. The default style for the <xref:System.Windows.Controls.Slider> includes two invisible <xref:System.Windows.Controls.Primitives.RepeatButton> controls that use the space between the <xref:System.Windows.Controls.Primitives.Thumb> and each end of the <xref:System.Windows.Controls.Primitives.Track>. When you press one of the invisible buttons, the <xref:System.Windows.Controls.Slider> responds by moving the <xref:System.Windows.Controls.Primitives.Thumb> in that direction after the <xref:System.Windows.Controls.Slider.Delay> property is applied.
 
 <a name="dependencyPropertyInfo_Delay"></a>
 ## Dependency Property Information
@@ -510,6 +529,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -520,7 +541,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.Delay%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.Delay*> dependency property.
 
  ]]></format>
         </remarks>
@@ -543,6 +564,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -560,9 +583,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property is set to `true`, the <xref:System.Windows.Input.InputGesture> for this command is <xref:System.Windows.Input.Key.PageDown>.
+ If the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property is set to `true`, the <xref:System.Windows.Input.InputGesture> for this command is <xref:System.Windows.Input.Key.PageDown>.
 
- The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> property is (1).
+ The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange> property is (1).
 
 <a name="xamlAttributeUsage_IncreaseLarge"></a>
 ## XAML Attribute Usage
@@ -589,6 +612,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -606,9 +631,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property is set to `true`, the <xref:System.Windows.Input.InputGesture> objects for this command are <xref:System.Windows.Input.Key.Down> and <xref:System.Windows.Input.Key.Left> and <xref:System.Windows.Controls.Slider>.
+ If the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property is set to `true`, the <xref:System.Windows.Input.InputGesture> objects for this command are <xref:System.Windows.Input.Key.Down> and <xref:System.Windows.Input.Key.Left> and <xref:System.Windows.Controls.Slider>.
 
- The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> property is (0.1).
+ The default value of the <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange> property is (0.1).
 
 <a name="xamlAttributeUsage_IncreaseSmall"></a>
 ## XAML Attribute Usage
@@ -635,6 +660,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -687,6 +714,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -697,7 +726,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.Interval%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.Interval*> dependency property.
 
  ]]></format>
         </remarks>
@@ -720,6 +749,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -742,9 +773,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The value of this property determines the direction of increasing value of a <xref:System.Windows.Controls.Slider>. For example, when you move the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> control up on a vertical <xref:System.Windows.Controls.Slider> when the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property is set to `false`, the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> increases. If the value of the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property is changed to `true`, the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> decreases as the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> moves up.
+ The value of this property determines the direction of increasing value of a <xref:System.Windows.Controls.Slider>. For example, when you move the <xref:System.Windows.Controls.Primitives.Track.Thumb*> control up on a vertical <xref:System.Windows.Controls.Slider> when the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property is set to `false`, the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> increases. If the value of the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property is changed to `true`, the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> decreases as the <xref:System.Windows.Controls.Primitives.Track.Thumb*> moves up.
 
- This property binds to the <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A> property for the <xref:System.Windows.Controls.Primitives.Track> control that it implements.
+ This property binds to the <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed> property for the <xref:System.Windows.Controls.Primitives.Track> control that it implements.
 
 <a name="dependencyPropertyInfo_IsDirectionReversed"></a>
 ## Dependency Property Information
@@ -757,10 +788,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.IsDirectionReversed> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -784,6 +815,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -794,7 +827,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.IsDirectionReversed*> dependency property.
 
  ]]></format>
         </remarks>
@@ -817,6 +850,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -839,9 +874,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When this property is set to `false` and a mouse click occurs along the <xref:System.Windows.Controls.Slider> away from the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A>, the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> moves in the direction of the mouse click. Instead of moving immediately to the mouse click location, the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> moves a distance that is defined by the <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> property for each mouse click.
+ When this property is set to `false` and a mouse click occurs along the <xref:System.Windows.Controls.Slider> away from the <xref:System.Windows.Controls.Primitives.Track.Thumb*>, the <xref:System.Windows.Controls.Primitives.Track.Thumb*> moves in the direction of the mouse click. Instead of moving immediately to the mouse click location, the <xref:System.Windows.Controls.Primitives.Track.Thumb*> moves a distance that is defined by the <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange> property for each mouse click.
 
- The effect of multiple mouse clicks can be emulated by pressing and holding the left mouse button until the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> is repositioned to the desired location.
+ The effect of multiple mouse clicks can be emulated by pressing and holding the left mouse button until the <xref:System.Windows.Controls.Primitives.Track.Thumb*> is repositioned to the desired location.
 
 <a name="dependencyPropertyInfo_IsMoveToPointEnabled"></a>
 ## Dependency Property Information
@@ -854,10 +889,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -881,6 +916,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -891,7 +928,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled*> dependency property.
 
  ]]></format>
         </remarks>
@@ -914,6 +951,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -936,7 +975,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.Slider.SelectionStart%2A> and <xref:System.Windows.Controls.Slider.SelectionEnd%2A> properties define a selection range and must be set for the selection range to appear when <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> is set to `true`.
+ The <xref:System.Windows.Controls.Slider.SelectionStart*> and <xref:System.Windows.Controls.Slider.SelectionEnd*> properties define a selection range and must be set for the selection range to appear when <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled*> is set to `true`.
 
  The following illustration shows a <xref:System.Windows.Controls.Slider> with a selection range defined.
 
@@ -944,7 +983,7 @@
 
  ![Slider selection range](~/add/media/sliderselectionrange.GIF "Slider selection range")
 
- This property is bound to the <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> property of the <xref:System.Windows.Controls.Primitives.TickBar> control that it implements.
+ This property is bound to the <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled> property of the <xref:System.Windows.Controls.Primitives.TickBar> control that it implements.
 
 <a name="dependencyPropertyInfo_IsSelectionRangeEnabled"></a>
 ## Dependency Property Information
@@ -957,10 +996,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -986,6 +1025,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -996,7 +1037,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1019,6 +1060,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1041,7 +1084,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the position of a <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> is changed and the <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> property is set to `true`, the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> is automatically moved to the closest tick mark.
+ When the position of a <xref:System.Windows.Controls.Primitives.Track.Thumb*> is changed and the <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled> property is set to `true`, the <xref:System.Windows.Controls.Primitives.Track.Thumb*> is automatically moved to the closest tick mark.
 
 <a name="dependencyPropertyInfo_IsSnapToTickEnabled"></a>
 ## Dependency Property Information
@@ -1054,10 +1097,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetbasic":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetbasic":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetbasic":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetbasic":::
 
  ]]></format>
@@ -1081,6 +1124,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1091,7 +1136,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1114,6 +1159,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1157,6 +1204,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1200,6 +1249,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1227,6 +1278,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
@@ -1255,6 +1308,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1266,7 +1321,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method decreases the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to reflect the change.
+ This method decreases the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange*> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to reflect the change.
 
  ]]></format>
         </remarks>
@@ -1289,6 +1344,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1300,7 +1357,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method decreases the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to reflect the change.
+ This method decreases the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange*> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to reflect the change.
 
  ]]></format>
         </remarks>
@@ -1323,6 +1380,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1334,7 +1393,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method increases the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to reflect the change.
+ This method increases the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange*> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to reflect the change.
 
  ]]></format>
         </remarks>
@@ -1357,6 +1416,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1368,7 +1429,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method increases the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to reflect the change.
+ This method increases the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> by <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange*> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to reflect the change.
 
  ]]></format>
         </remarks>
@@ -1391,6 +1452,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1402,7 +1465,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method changes the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> to <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to reflect the change.
+ This method changes the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> to <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to reflect the change.
 
  ]]></format>
         </remarks>
@@ -1425,6 +1488,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1441,7 +1506,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the new <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> value is less than the <xref:System.Windows.Controls.Slider.SelectionStart%2A> value, this implementation sets the <xref:System.Windows.Controls.Slider.SelectionStart%2A> value to the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> value. If the new <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> value is less than the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> value, the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> value is set to the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> value.
+ If the new <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> value is less than the <xref:System.Windows.Controls.Slider.SelectionStart*> value, this implementation sets the <xref:System.Windows.Controls.Slider.SelectionStart*> value to the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> value. If the new <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> value is less than the <xref:System.Windows.Controls.Slider.SelectionEnd*> value, the <xref:System.Windows.Controls.Slider.SelectionEnd*> value is set to the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> value.
 
  ]]></format>
         </remarks>
@@ -1464,6 +1529,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1475,7 +1542,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method changes the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> to <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to reflect the change.
+ This method changes the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> to <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> and moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to reflect the change.
 
  ]]></format>
         </remarks>
@@ -1498,6 +1565,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1514,7 +1583,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This implementation makes sure that the <xref:System.Windows.Controls.Slider.SelectionStart%2A> value is greater than or equal to the new <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> value. If the <xref:System.Windows.Controls.Slider.SelectionStart%2A> value is less than the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> value, the <xref:System.Windows.Controls.Slider.SelectionStart%2A> value is set to the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> value. The <xref:System.Windows.Controls.Slider.SelectionEnd%2A> value is also checked to make sure that it is greater than or equal to the <xref:System.Windows.Controls.Slider.SelectionStart%2A> value.
+ This implementation makes sure that the <xref:System.Windows.Controls.Slider.SelectionStart*> value is greater than or equal to the new <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> value. If the <xref:System.Windows.Controls.Slider.SelectionStart*> value is less than the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> value, the <xref:System.Windows.Controls.Slider.SelectionStart*> value is set to the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> value. The <xref:System.Windows.Controls.Slider.SelectionEnd*> value is also checked to make sure that it is greater than or equal to the <xref:System.Windows.Controls.Slider.SelectionStart*> value.
 
  ]]></format>
         </remarks>
@@ -1537,6 +1606,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1551,9 +1622,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- When the <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled%2A> property is `true`, this implementation moves the <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> to the location of the mouse click.
+ When the <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled> property is `true`, this implementation moves the <xref:System.Windows.Controls.Primitives.Track.Thumb*> to the location of the mouse click.
 
- This implementation marks the <xref:System.Windows.ContentElement.PreviewMouseLeftButtonDown> event as handled by setting the <xref:System.Windows.RoutedEventArgs.Handled%2A> property of the event data to `true`. The event is handled by this method so that the <xref:System.Windows.Controls.Primitives.RepeatButton> controls of the <xref:System.Windows.Controls.Slider> do not handle the event.
+ This implementation marks the <xref:System.Windows.ContentElement.PreviewMouseLeftButtonDown> event as handled by setting the <xref:System.Windows.RoutedEventArgs.Handled> property of the event data to `true`. The event is handled by this method so that the <xref:System.Windows.Controls.Primitives.RepeatButton> controls of the <xref:System.Windows.Controls.Slider> do not handle the event.
 
  ]]></format>
         </remarks>
@@ -1579,6 +1650,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1593,7 +1666,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This implementation does not change the handled state (the <xref:System.Windows.RoutedEventArgs.Handled%2A> property) of the <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> event data.
+ This implementation does not change the handled state (the <xref:System.Windows.RoutedEventArgs.Handled> property) of the <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> event data.
 
  ]]></format>
         </remarks>
@@ -1619,6 +1692,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1633,7 +1708,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This implementation does not change the handled state (the <xref:System.Windows.RoutedEventArgs.Handled%2A> property) of the <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> event data.
+ This implementation does not change the handled state (the <xref:System.Windows.RoutedEventArgs.Handled> property) of the <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> event data.
 
  ]]></format>
         </remarks>
@@ -1659,6 +1734,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1673,9 +1750,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- In addition to the default processing of the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event, this implementation displays a tooltip that shows the <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> of the <xref:System.Windows.Controls.Slider> when the <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> property is not set to <xref:System.Windows.Controls.Primitives.AutoToolTipPlacement.None>.
+ In addition to the default processing of the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event, this implementation displays a tooltip that shows the <xref:System.Windows.Controls.Primitives.RangeBase.Value*> of the <xref:System.Windows.Controls.Slider> when the <xref:System.Windows.Controls.Slider.AutoToolTipPlacement> property is not set to <xref:System.Windows.Controls.Primitives.AutoToolTipPlacement.None>.
 
- This implementation does not handle the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event. The value of the <xref:System.Windows.RoutedEventArgs.Handled%2A> property of the <xref:System.Windows.Controls.Primitives.DragCompletedEventArgs> is not changed.
+ This implementation does not handle the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event. The value of the <xref:System.Windows.RoutedEventArgs.Handled> property of the <xref:System.Windows.Controls.Primitives.DragCompletedEventArgs> is not changed.
 
  This method can be overridden to customize the way a <xref:System.Windows.Controls.Slider> processes <xref:System.Windows.Controls.Primitives.Thumb> movements.
 
@@ -1700,6 +1777,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1732,6 +1811,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.Orientation</ReturnType>
@@ -1743,7 +1824,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property binds to the <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> property for the <xref:System.Windows.Controls.Primitives.Track> control that the <xref:System.Windows.Controls.Slider> implements.
+ This property binds to the <xref:System.Windows.Controls.Primitives.Track.Orientation> property for the <xref:System.Windows.Controls.Primitives.Track> control that the <xref:System.Windows.Controls.Slider> implements.
 
 <a name="dependencyPropertyInfo_Orientation"></a>
 ## Dependency Property Information
@@ -1756,10 +1837,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.Orientation%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.Orientation> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetbasic":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetbasic":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetbasic":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetbasic":::
 
  ]]></format>
@@ -1783,6 +1864,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1793,7 +1876,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.Orientation%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.Orientation*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1816,6 +1899,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1837,7 +1922,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The value of the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> property cannot be greater than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> property and cannot be less than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> property. The value of the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> property must also be greater than or equal to the value of the <xref:System.Windows.Controls.Slider.SelectionStart%2A> property. If the value of the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> property is greater than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> property or less than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> property, the value is set to the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> or <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> property respectively.
+ The value of the <xref:System.Windows.Controls.Slider.SelectionEnd> property cannot be greater than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum> property and cannot be less than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum> property. The value of the <xref:System.Windows.Controls.Slider.SelectionEnd> property must also be greater than or equal to the value of the <xref:System.Windows.Controls.Slider.SelectionStart> property. If the value of the <xref:System.Windows.Controls.Slider.SelectionEnd> property is greater than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum> property or less than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum> property, the value is set to the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> or <xref:System.Windows.Controls.Primitives.RangeBase.Minimum> property respectively.
 
 <a name="dependencyPropertyInfo_SelectionEnd"></a>
 ## Dependency Property Information
@@ -1845,15 +1930,15 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier Field|<xref:System.Windows.Controls.Slider.SelectionEndProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.SelectionEnd> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -1879,6 +1964,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1889,7 +1976,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.SelectionEnd*> dependency property.
 
  ]]></format>
         </remarks>
@@ -1912,6 +1999,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1933,7 +2022,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The value of the <xref:System.Windows.Controls.Slider.SelectionStart%2A> property cannot be less than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> property and cannot be greater than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> property. The value of the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> property must also be greater than or equal to the value of the <xref:System.Windows.Controls.Slider.SelectionStart%2A> property. If <xref:System.Windows.Controls.Slider.SelectionStart%2A> is less than <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> or greater than <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A>, <xref:System.Windows.Controls.Slider.SelectionStart%2A> is set to the value of <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> or <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> respectively.
+ The value of the <xref:System.Windows.Controls.Slider.SelectionStart> property cannot be less than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum> property and cannot be greater than the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum> property. The value of the <xref:System.Windows.Controls.Slider.SelectionEnd> property must also be greater than or equal to the value of the <xref:System.Windows.Controls.Slider.SelectionStart> property. If <xref:System.Windows.Controls.Slider.SelectionStart*> is less than <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> or greater than <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*>, <xref:System.Windows.Controls.Slider.SelectionStart*> is set to the value of <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> or <xref:System.Windows.Controls.Primitives.RangeBase.Maximum*> respectively.
 
 <a name="dependencyPropertyInfo_SelectionStart"></a>
 ## Dependency Property Information
@@ -1941,15 +2030,15 @@
 | Item                              | Value                                                  |
 |-----------------------------------|--------------------------------------------------------|
 |Identifier Field|<xref:System.Windows.Controls.Slider.SelectionStartProperty>|
-|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|
+|Metadata properties set to `true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault*>|
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.SelectionEnd%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.SelectionEnd> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -1975,6 +2064,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -1985,7 +2076,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.SelectionStart%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.SelectionStart*> dependency property.
 
  ]]></format>
         </remarks>
@@ -2008,6 +2099,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2029,11 +2122,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.Slider.Ticks%2A> property is set to a value that is not `null`, the <xref:System.Windows.Controls.Slider.TickFrequency%2A> property is not used.
+ If the <xref:System.Windows.Controls.Slider.Ticks> property is set to a value that is not `null`, the <xref:System.Windows.Controls.Slider.TickFrequency> property is not used.
 
- The <xref:System.Windows.Controls.Slider.TickPlacement%2A> property must be set to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None> for tick marks to appear along the <xref:System.Windows.Controls.Slider>.
+ The <xref:System.Windows.Controls.Slider.TickPlacement> property must be set to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None> for tick marks to appear along the <xref:System.Windows.Controls.Slider>.
 
- Tick marks are drawn at an interval that is specified by the <xref:System.Windows.Controls.Slider.TickFrequency%2A> property. The tick marks start at the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> property and continue until the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> property is reached.
+ Tick marks are drawn at an interval that is specified by the <xref:System.Windows.Controls.Slider.TickFrequency> property. The tick marks start at the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum> property and continue until the value of the <xref:System.Windows.Controls.Primitives.RangeBase.Maximum> property is reached.
 
 <a name="dependencyPropertyInfo_TickFrequency"></a>
 ## Dependency Property Information
@@ -2046,10 +2139,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.TickFrequency%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.TickFrequency> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetbasic":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetbasic":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetbasic":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetbasic":::
 
  ]]></format>
@@ -2074,6 +2167,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -2084,7 +2179,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.TickFrequency%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.TickFrequency*> dependency property.
 
  ]]></format>
         </remarks>
@@ -2107,6 +2202,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2128,15 +2225,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.Slider.TickPlacement%2A> property must be set to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None> for tick marks to appear.
+ The <xref:System.Windows.Controls.Slider.TickPlacement> property must be set to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None> for tick marks to appear.
 
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.TickPlacement%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.TickPlacement> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetbasic":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetbasic":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetbasic":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetbasic":::
 
  ]]></format>
@@ -2161,6 +2258,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -2171,7 +2270,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.TickPlacement%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.TickPlacement*> dependency property.
 
  ]]></format>
         </remarks>
@@ -2194,6 +2293,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -2215,9 +2316,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Tick marks that are outside the range that is defined by the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> and <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> property values are ignored.
+ Tick marks that are outside the range that is defined by the <xref:System.Windows.Controls.Primitives.RangeBase.Minimum*> and <xref:System.Windows.Controls.Primitives.RangeBase.Maximum> property values are ignored.
 
- The <xref:System.Windows.Controls.Slider.TickPlacement%2A> property must be set to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None> for tick marks to appear.
+ The <xref:System.Windows.Controls.Slider.TickPlacement> property must be set to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None> for tick marks to appear.
 
 <a name="dependencyPropertyInfo_Ticks"></a>
 ## Dependency Property Information
@@ -2230,10 +2331,10 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.Slider.Ticks%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.Slider.Ticks> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.cs" id="Snippetselectionrange":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb" id="Snippetselectionrange":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/Slider/AutoToolTipPlacement/Pane1.xaml.vb" id="Snippetselectionrange":::
  :::code language="xaml" source="~/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml" id="Snippetselectionrange":::
 
  ]]></format>
@@ -2257,6 +2358,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -2267,7 +2370,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.Slider.Ticks%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.Slider.Ticks*> dependency property.
 
  ]]></format>
         </remarks>

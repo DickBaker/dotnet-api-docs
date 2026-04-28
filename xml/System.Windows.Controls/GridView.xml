@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Controls.ViewBase</BaseTypeName>
@@ -41,30 +43,30 @@
 ## Remarks
  The <xref:System.Windows.Controls.GridView> class and its supporting classes provide the infrastructure to display data items that are specified for a <xref:System.Windows.Controls.ListView> control in a series of columns. The columns have column headers, which are buttons that are derived from <xref:System.Windows.Controls.Primitives.ButtonBase>, and you can reorder the columns by using drag-and-drop operations. Note that the columns of a <xref:System.Windows.Controls.GridView> display data and do not provide direct access to the source of the data.
 
- To specify a <xref:System.Windows.Controls.GridView> as the view mode for a <xref:System.Windows.Controls.ListView>, set the <xref:System.Windows.Controls.ListView.View%2A> property to a <xref:System.Windows.Controls.GridView> object.
+ To specify a <xref:System.Windows.Controls.GridView> as the view mode for a <xref:System.Windows.Controls.ListView>, set the <xref:System.Windows.Controls.ListView.View> property to a <xref:System.Windows.Controls.GridView> object.
 
- The <xref:System.Windows.Controls.GridView> class is derived from <xref:System.Windows.Controls.ViewBase>. You can define custom views by inheriting from the <xref:System.Windows.Controls.ViewBase> class that provides the supporting elements for a view. For more information, see [How to: Create a Custom View Mode for a ListView](/dotnet/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview).
+ The <xref:System.Windows.Controls.GridView> class is derived from <xref:System.Windows.Controls.ViewBase>. You can define custom views by inheriting from the <xref:System.Windows.Controls.ViewBase> class that provides the supporting elements for a view. For more information, see [How to: Create a Custom View Mode for a ListView](/dotnet/desktop/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview).
 
  The following illustration shows an example of a <xref:System.Windows.Controls.ListView> that uses a <xref:System.Windows.Controls.GridView>.
 
  ![ListView with GridView output](~/add/media/listviewgridview.JPG "ListView with GridView output")
 
- The columns in a <xref:System.Windows.Controls.GridView> are defined as <xref:System.Windows.Controls.GridViewColumn> objects. In Extensible Application Markup Language (XAML), you can define <xref:System.Windows.Controls.GridViewColumn> objects as child elements of the <xref:System.Windows.Controls.GridView>. In code, you can add a <xref:System.Windows.Controls.GridViewColumn> to the <xref:System.Windows.Controls.GridView> by using the <xref:System.Windows.Controls.GridView.Columns%2A> property and the <xref:System.Collections.ObjectModel.Collection%601.Add%2A> method that is defined for the <xref:System.Collections.ObjectModel.Collection%601> class. Similarly, you can use other <xref:System.Collections.ObjectModel.Collection%601> methods such as <xref:System.Collections.ObjectModel.Collection%601.Remove%2A> and <xref:System.Collections.ObjectModel.Collection%601.Insert%2A> to modify the columns in a <xref:System.Windows.Controls.GridView>.
+ The columns in a <xref:System.Windows.Controls.GridView> are defined as <xref:System.Windows.Controls.GridViewColumn> objects. In Extensible Application Markup Language (XAML), you can define <xref:System.Windows.Controls.GridViewColumn> objects as child elements of the <xref:System.Windows.Controls.GridView>. In code, you can add a <xref:System.Windows.Controls.GridViewColumn> to the <xref:System.Windows.Controls.GridView> by using the <xref:System.Windows.Controls.GridView.Columns> property and the <xref:System.Collections.ObjectModel.Collection`1.Add*> method that is defined for the <xref:System.Collections.ObjectModel.Collection`1> class. Similarly, you can use other <xref:System.Collections.ObjectModel.Collection`1> methods such as <xref:System.Collections.ObjectModel.Collection`1.Remove*> and <xref:System.Collections.ObjectModel.Collection`1.Insert*> to modify the columns in a <xref:System.Windows.Controls.GridView>.
 
  The following example shows how to define the columns of a <xref:System.Windows.Controls.GridView>.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml.cs" id="Snippetgridviewcolumn":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb" id="Snippetgridviewcolumn":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/GridView/Overview/window1.xaml.vb" id="Snippetgridviewcolumn":::
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml" id="Snippetgridviewcolumn":::
 
  To style the rows in a <xref:System.Windows.Controls.GridView>, define a style for the <xref:System.Windows.Controls.ListViewItem> controls in the <xref:System.Windows.Controls.ListView>.
 
- To add visual elements, such as a <xref:System.Windows.Controls.CheckBox> or <xref:System.Windows.Controls.Button> control, to a <xref:System.Windows.Controls.GridView>, use templates or styles. For an example, see [How to: Create ListViewItems with a CheckBox](/dotnet/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox).
+ To add visual elements, such as a <xref:System.Windows.Controls.CheckBox> or <xref:System.Windows.Controls.Button> control, to a <xref:System.Windows.Controls.GridView>, use templates or styles. For an example, see [How to: Create ListViewItems with a CheckBox](/dotnet/desktop/wpf/controls/how-to-create-listviewitems-with-a-checkbox).
 
 
 
 ## Examples
- The following example shows how to define a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> as its <xref:System.Windows.Controls.ListView.View%2A>.
+ The following example shows how to define a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> as its <xref:System.Windows.Controls.ListView.View*>.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window11.xaml" id="Snippet1":::
 
@@ -94,6 +96,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -124,6 +128,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -154,6 +160,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -197,6 +205,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -221,13 +231,13 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.GridView.AllowsColumnReorder%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.GridView.AllowsColumnReorder> property.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml" id="Snippetgridviewallowscolumnreorderpart1":::
 :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml" id="Snippetgridviewallowscolumnreorderpart2":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml.cs" id="Snippetgridviewallowscolumnreorder":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb" id="Snippetgridviewallowscolumnreorder":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/GridView/Overview/window1.xaml.vb" id="Snippetgridviewallowscolumnreorder":::
 
  ]]></format>
         </remarks>
@@ -250,6 +260,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -260,7 +272,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.GridView.AllowsColumnReorder%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.GridView.AllowsColumnReorder*> dependency property.
 
  ]]></format>
         </remarks>
@@ -283,6 +295,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -297,7 +311,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method removes the <xref:System.Windows.Controls.GridView.ColumnCollection%2A> that is associated with a <xref:System.Windows.Controls.ListViewItem>, in addition to any styling that was applied to it by the <xref:System.Windows.Controls.GridView.PrepareItem%2A> method.
+ This method removes the <xref:System.Windows.Controls.GridView.ColumnCollection*> that is associated with a <xref:System.Windows.Controls.ListViewItem>, in addition to any styling that was applied to it by the <xref:System.Windows.Controls.GridView.PrepareItem*> method.
 
  ]]></format>
         </remarks>
@@ -319,6 +333,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
         <summary>Gets or sets the attached property that contains the <see cref="T:System.Windows.Controls.GridViewColumnCollection" />.</summary>
@@ -357,6 +373,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -390,6 +408,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Style</ReturnType>
@@ -401,17 +421,17 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A> property and the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property are both used to define the visual tree for the <xref:System.Windows.Controls.GridViewColumnHeader> objects that represent the column headers in a <xref:System.Windows.Controls.GridView>. The <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A> property can also define column header content when a <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> is not by specified by defining a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.GridViewColumnHeader> object.
+ The <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle> property and the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property are both used to define the visual tree for the <xref:System.Windows.Controls.GridViewColumnHeader> objects that represent the column headers in a <xref:System.Windows.Controls.GridView>. The <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle> property can also define column header content when a <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate*> is not by specified by defining a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.GridViewColumnHeader> object.
 
- This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/framework/wpf/controls/gridview-column-header-styles-and-templates-overview).
+ This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/desktop/wpf/controls/gridview).
 
- When you set styles, there are some restrictions. For more information, see [Styling and Templating](/dotnet/framework/wpf/controls/styling-and-templating).
+ When you set styles, there are some restrictions. For more information, see [Styling and Templating](/dotnet/desktop/wpf/controls/styles-templates-overview).
 
 <a name="xamlAttributeUsage_Style"></a>
 ## XAML Attribute Usage
 
-```
-<object ColumnHeaderContainerStyle="{ResourceExtension StyleResourceKey}"/>
+```xaml
+<object ColumnHeaderContainerStyle="{ResourceExtension StyleResourceKey}"/>
 ```
 
 <a name="xamlPropertyElementUsage_ColumnHeaderContainerStyle"></a>
@@ -420,13 +440,13 @@
 <a name="xamlValues_Style"></a>
 ## XAML Values
  `ResourceExtension`
- One of the following: `StaticResource`, or `DynamicResource`. See [XAML Resources](/dotnet/framework/wpf/advanced/xaml-resources).
+ One of the following: `StaticResource`, or `DynamicResource`. See [XAML Resources](/dotnet/desktop/wpf/systems/xaml-resources-how-to-define-and-reference).
 
  `StyleResourceKey`
  The key that identifies the style being requested. The key refers to an existing resource in a <xref:System.Windows.ResourceDictionary>.
 
 > [!NOTE]
->  Property element syntax is technically possible, but not recommended. See [Inline Styles and Templates](/dotnet/framework/wpf/advanced/inline-styles-and-templates). A binding reference using [TemplateBinding](/dotnet/framework/wpf/advanced/templatebinding-markup-extension) or  is also possible, but uncommon.
+> Property element syntax is technically possible, but not recommended. See [Inline Styles and Templates](/dotnet/desktop/wpf/advanced/inline-styles-and-templates). A binding reference using [TemplateBinding](/dotnet/desktop/wpf/advanced/templatebinding-markup-extension) or  is also possible, but uncommon.
 
 <a name="dependencyPropertyInfo_ColumnHeaderContainerStyle"></a>
 ## Dependency Property Information
@@ -439,7 +459,7 @@
 
 
 ## Examples
- The following example shows how to define the <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A> property.
+ The following example shows how to define the <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle> property.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/ColumnHeaderContainerStyle/window1.xaml" id="Snippetgridviewheaderstyle":::
 
@@ -466,6 +486,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -476,7 +498,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle*> dependency property.
 
  ]]></format>
         </remarks>
@@ -499,6 +521,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.ContextMenu</ReturnType>
@@ -510,7 +534,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/framework/wpf/controls/gridview-column-header-styles-and-templates-overview).
+ This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/desktop/wpf/controls/gridview).
 
 <a name="dependencyPropertyInfo_ColumnHeaderContextMenu"></a>
 ## Dependency Property Information
@@ -541,6 +565,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -551,7 +577,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu*> dependency property.
 
  ]]></format>
         </remarks>
@@ -574,6 +600,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -585,15 +613,15 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A?displayProperty=nameWithType>, or <xref:System.Windows.Controls.GridViewHeaderRowPresenter.ColumnHeaderTemplate%2A?displayProperty=nameWithType> property is set, this property is ignored.
+ If the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate*?displayProperty=nameWithType>, <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate*?displayProperty=nameWithType>, or <xref:System.Windows.Controls.GridViewHeaderRowPresenter.ColumnHeaderTemplate?displayProperty=nameWithType> property is set, this property is ignored.
 
  You can use several properties to specify the format of the column headers.  If more than one property is set, the column header is formatted with the value of the property that has the highest priority. The format for a column can be set on several types. The following list shows the properties that can be used to format the column headers, ordered from lowest to highest priority:
 
--   <xref:System.Windows.Controls.GridView.ColumnHeaderStringFormat%2A?displayProperty=nameWithType>
+-   <xref:System.Windows.Controls.GridView.ColumnHeaderStringFormat*?displayProperty=nameWithType>
 
--   <xref:System.Windows.Controls.GridViewHeaderRowPresenter.ColumnHeaderStringFormat%2A?displayProperty=nameWithType>
+-   <xref:System.Windows.Controls.GridViewHeaderRowPresenter.ColumnHeaderStringFormat*?displayProperty=nameWithType>
 
--   <xref:System.Windows.Controls.GridViewColumn.HeaderStringFormat%2A?displayProperty=nameWithType>
+-   <xref:System.Windows.Controls.GridViewColumn.HeaderStringFormat*?displayProperty=nameWithType>
 
 <a name="dependencyPropertyInfo_ColumnHeaderStringFormat"></a>
 ## Dependency Property Information
@@ -624,6 +652,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -650,6 +680,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DataTemplate</ReturnType>
@@ -661,27 +693,27 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property and the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A> property are both set, the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property takes precedence.
+ If the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property and the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector> property are both set, the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property takes precedence.
 
- This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/framework/wpf/controls/gridview-column-header-styles-and-templates-overview).
+ This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/desktop/wpf/controls/gridview).
 
 <a name="xamlAttributeUsage_ColumnHeaderTemplate"></a>
 ## XAML Attribute Usage
 
-```
-<object ColumnHeaderTemplate="{ResourceExtension TemplateResourceKey}"/>
+```xaml
+<object ColumnHeaderTemplate="{ResourceExtension TemplateResourceKey}"/>
 ```
 
 <a name="xamlValues_ColumnHeaderTemplate"></a>
 ## XAML Values
  `ResourceExtension`
- One of the following: `StaticResource`, or `DynamicResource`. See [XAML Resources](/dotnet/framework/wpf/advanced/xaml-resources).
+ One of the following: `StaticResource`, or `DynamicResource`. See [XAML Resources](/dotnet/desktop/wpf/systems/xaml-resources-how-to-define-and-reference).
 
  `TemplateResourceKey`
  The key that identifies the template being requested. The key refers to an existing resource in a <xref:System.Windows.ResourceDictionary>.
 
 > [!NOTE]
->  Property element syntax is technically possible, but not recommended. See [Inline Styles and Templates](/dotnet/framework/wpf/advanced/inline-styles-and-templates). A binding reference using [TemplateBinding](/dotnet/framework/wpf/advanced/templatebinding-markup-extension) or  is also possible, but uncommon.
+> Property element syntax is technically possible, but not recommended. See [Inline Styles and Templates](/dotnet/desktop/wpf/advanced/inline-styles-and-templates). A binding reference using [TemplateBinding](/dotnet/desktop/wpf/advanced/templatebinding-markup-extension) or  is also possible, but uncommon.
 
 <a name="dependencyPropertyInfo_ColumnHeaderTemplate"></a>
 ## Dependency Property Information
@@ -694,7 +726,7 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/ColumnHeaderContainerStyle/window1.xaml" id="Snippetgridviewheadertemplate":::
 
@@ -722,6 +754,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -732,7 +766,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate*> dependency property.
 
  ]]></format>
         </remarks>
@@ -755,15 +789,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -776,23 +808,23 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If you do not set this property, the default logic is to use the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property for all columns if it is defined.
+ If you do not set this property, the default logic is to use the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property for all columns if it is defined.
 
- If the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property and the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A> property are both set, the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> property takes precedence.
+ If the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property and the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector> property are both set, the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplate> property takes precedence.
 
- This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/framework/wpf/controls/gridview-column-header-styles-and-templates-overview).
+ This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/desktop/wpf/controls/gridview).
 
 <a name="xamlAttributeUsage_ColumnHeaderTemplateSelector"></a>
 ## XAML Attribute Usage
 
-```
-<object DataTemplateSelector="{ResourceExtension DataTemplateSelectorClassKey}"/>
+```xaml
+<object DataTemplateSelector="{ResourceExtension DataTemplateSelectorClassKey}"/>
 ```
 
 <a name="xamlPropertyElementUsage_ColumnHeaderTemplateSelector"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   <object.ColumnHeaderTemplateSelector>
     <MyDataTemplateSelectorImplementation .../>
@@ -803,13 +835,13 @@
 <a name="xamlValues_ColumnHeaderTemplateSelector"></a>
 ## XAML Values
  `ResourceExtension`
- One of the following: `StaticResource`, or `DynamicResource`. See [XAML Resources](/dotnet/framework/wpf/advanced/xaml-resources).
+ One of the following: `StaticResource`, or `DynamicResource`. See [XAML Resources](/dotnet/desktop/wpf/systems/xaml-resources-how-to-define-and-reference).
 
  `DataTemplateSelectorClassKey`
- The key that identifies the selector implementation being requested. The key refers to a derived class that implements a practical <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> override. For information about how to map your custom class, see [XAML Namespaces and Namespace Mapping for WPF XAML](/dotnet/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml). You can also programmatically add an instance of your <xref:System.Windows.Controls.DataTemplateSelector> class as a resource to the application resource dictionary.
+ The key that identifies the selector implementation being requested. The key refers to a derived class that implements a practical <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate*> override. For information about how to map your custom class, see [XAML Namespaces and Namespace Mapping for WPF XAML](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml). You can also programmatically add an instance of your <xref:System.Windows.Controls.DataTemplateSelector> class as a resource to the application resource dictionary.
 
  `MyDataTemplateSelectorImplementation`
- A class derived from <xref:System.Windows.Controls.DataTemplateSelector> that implements a practical <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> override. For information about how to map your custom class, see [XAML Namespaces and Namespace Mapping for WPF XAML](/dotnet/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml).
+ A class derived from <xref:System.Windows.Controls.DataTemplateSelector> that implements a practical <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate*> override. For information about how to map your custom class, see [XAML Namespaces and Namespace Mapping for WPF XAML](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml).
 
 <a name="dependencyPropertyInfo_ColumnHeaderTemplateSelector"></a>
 ## Dependency Property Information
@@ -841,6 +873,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -851,7 +885,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector*> dependency property.
 
  ]]></format>
         </remarks>
@@ -874,6 +908,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -885,19 +921,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/framework/wpf/controls/gridview-column-header-styles-and-templates-overview).
+ This property represents one of several ways to lay out and style column headers. For more information, see [GridView Column Header Styles and Templates Overview](/dotnet/desktop/wpf/controls/gridview).
 
 <a name="xamlAttributeUsage_ToolTip"></a>
 ## XAML Attribute Usage
 
-```
-<object ToolTip="toolTipContent"/>
+```xaml
+<object ToolTip="toolTipContent"/>
 ```
 
 <a name="xamlPropertyElementUsage_ToolTip"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   <object.ToolTip>
     <ToolTip .../>
@@ -914,10 +950,10 @@
 <a name="xamlValues_ToolTip"></a>
 ## XAML Values
  `toolTipContent`
- A string that becomes the display text for the <xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>.
+ A string that becomes the display text for the <xref:System.Windows.Controls.GridView.ColumnHeaderToolTip*>.
 
  `toolTipObjectContent`
- An object to use as the content for the tooltip. Typically, this object is a <xref:System.Windows.FrameworkElement> or some other element that defines a layout for the <xref:System.Windows.Controls.GridViewHeaderRowPresenter.ColumnHeaderToolTip%2A>, such as a text element. In this usage, a <xref:System.Windows.Controls.ToolTip> element is implicitly created from the parsed XAML, and the `toolTipObjectContent` content is set as its <xref:System.Windows.Controls.ContentControl.Content%2A?displayProperty=nameWithType> property.
+ An object to use as the content for the tooltip. Typically, this object is a <xref:System.Windows.FrameworkElement> or some other element that defines a layout for the <xref:System.Windows.Controls.GridViewHeaderRowPresenter.ColumnHeaderToolTip*>, such as a text element. In this usage, a <xref:System.Windows.Controls.ToolTip> element is implicitly created from the parsed XAML, and the `toolTipObjectContent` content is set as its <xref:System.Windows.Controls.ContentControl.Content?displayProperty=nameWithType> property.
 
  <`ToolTip` .../>
  See <xref:System.Windows.Controls.ToolTip>.
@@ -933,13 +969,13 @@
 
 
 ## Examples
- The following example shows how to set the <xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A> property.
+ The following example shows how to set the <xref:System.Windows.Controls.GridView.ColumnHeaderToolTip> property.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml" id="Snippetgridviewallowscolumnreorderpart1":::
 :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml" id="Snippetgridviewallowscolumnreorderpart2":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml.cs" id="Snippetgridviewallowscolumnreorder":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb" id="Snippetgridviewallowscolumnreorder":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/GridView/Overview/window1.xaml.vb" id="Snippetgridviewallowscolumnreorder":::
 
  ]]></format>
         </remarks>
@@ -962,6 +998,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -972,7 +1010,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A> dependency property.
+ The identifier for the <xref:System.Windows.Controls.GridView.ColumnHeaderToolTip*> dependency property.
 
  ]]></format>
         </remarks>
@@ -995,15 +1033,13 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute>
           <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)&gt;]</AttributeName>
-        </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-7.0">
-          <AttributeName Language="C#">[System.ComponentModel.DesignerSerializationVisibility]</AttributeName>
-          <AttributeName Language="F#">[&lt;System.ComponentModel.DesignerSerializationVisibility&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1016,12 +1052,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This property lets you modify the columns that are defined for a <xref:System.Windows.Controls.GridView>, by using methods that are inherited from the <xref:System.Collections.ObjectModel.Collection%601> class, such as the <xref:System.Collections.ObjectModel.Collection%601.Add%2A>, <xref:System.Collections.ObjectModel.Collection%601.Insert%2A>, and <xref:System.Collections.ObjectModel.Collection%601.Remove%2A> methods.
+ This property lets you modify the columns that are defined for a <xref:System.Windows.Controls.GridView>, by using methods that are inherited from the <xref:System.Collections.ObjectModel.Collection`1> class, such as the <xref:System.Collections.ObjectModel.Collection`1.Add*>, <xref:System.Collections.ObjectModel.Collection`1.Insert*>, and <xref:System.Collections.ObjectModel.Collection`1.Remove*> methods.
 
 <a name="xamlPropertyElementUsage_Columns"></a>
 ## XAML Property Element Usage
 
-```
+```xaml
 <object>
   OneOrMoreGridViewColumns
 </object>
@@ -1035,10 +1071,10 @@
 
 
 ## Examples
- The following example shows how to add a <xref:System.Windows.Controls.GridViewColumn> to the columns in a <xref:System.Windows.Controls.GridView> by using the <xref:System.Collections.ObjectModel.Collection%601.Add%2A> method on the <xref:System.Windows.Controls.GridView.Columns%2A> property.
+ The following example shows how to add a <xref:System.Windows.Controls.GridViewColumn> to the columns in a <xref:System.Windows.Controls.GridView> by using the <xref:System.Collections.ObjectModel.Collection`1.Add*> method on the <xref:System.Windows.Controls.GridView.Columns> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/GridView/Overview/Window1.xaml.cs" id="Snippetaddtocolumns":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb" id="Snippetaddtocolumns":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/GridView/Overview/window1.xaml.vb" id="Snippetaddtocolumns":::
 
  ]]></format>
         </remarks>
@@ -1061,6 +1097,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1094,6 +1132,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Automation.Peers.IViewAutomationPeer</ReturnType>
@@ -1125,6 +1165,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.GridViewColumnCollection</ReturnType>
@@ -1140,7 +1182,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Do not use this method to change the columns collection for a <xref:System.Windows.Controls.GridView> object. To get, set, or change the columns that are defined for a <xref:System.Windows.Controls.GridView> object, use the <xref:System.Windows.Controls.GridView.Columns%2A> property.
+ Do not use this method to change the columns collection for a <xref:System.Windows.Controls.GridView> object. To get, set, or change the columns that are defined for a <xref:System.Windows.Controls.GridView> object, use the <xref:System.Windows.Controls.GridView.Columns> property.
 
  ]]></format>
         </remarks>
@@ -1164,6 +1206,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.ResourceKey</ReturnType>
@@ -1191,6 +1235,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.ResourceKey</ReturnType>
@@ -1202,7 +1248,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can use this read-only static property in Extensible Application Markup Language (XAML) by assigning its static value to another property value. Specifically, this property's static value defines the resource key that is used to look up the default <xref:System.Windows.Controls.ScrollViewer> style of a <xref:System.Windows.Controls.GridView>. To redefine this style, reference the <xref:System.Windows.Controls.GridView.GridViewScrollViewerStyleKey%2A> by using the [x:Static Markup Extension](/dotnet/framework/xaml-services/x-static-markup-extension) and assign that value as the [x:Key Directive](/dotnet/framework/xaml-services/x-key-directive) of the new <xref:System.Windows.Style>.
+ You can use this read-only static property in Extensible Application Markup Language (XAML) by assigning its static value to another property value. Specifically, this property's static value defines the resource key that is used to look up the default <xref:System.Windows.Controls.ScrollViewer> style of a <xref:System.Windows.Controls.GridView>. To redefine this style, reference the <xref:System.Windows.Controls.GridView.GridViewScrollViewerStyleKey*> by using the [x:Static Markup Extension](/dotnet/framework/xaml-services/x-static-markup-extension) and assign that value as the [x:Key Directive](/dotnet/framework/xaml-services/x-key-directive) of the new <xref:System.Windows.Style>.
 
  ]]></format>
         </remarks>
@@ -1225,6 +1271,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.ResourceKey</ReturnType>
@@ -1236,7 +1284,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- You can use this read-only static property in Extensible Application Markup Language (XAML) by assigning its static value to another property value. Specifically, this property's static value defines the resource key that is used to look up the default <xref:System.Windows.Controls.ListView> style. To redefine this style, reference the <xref:System.Windows.Controls.GridView.GridViewStyleKey%2A> by using the [x:Static Markup Extension](/dotnet/framework/xaml-services/x-static-markup-extension) and assign that value as the [x:Key Directive](/dotnet/framework/xaml-services/x-key-directive) of the new <xref:System.Windows.Style>.
+ You can use this read-only static property in Extensible Application Markup Language (XAML) by assigning its static value to another property value. Specifically, this property's static value defines the resource key that is used to look up the default <xref:System.Windows.Controls.ListView> style. To redefine this style, reference the <xref:System.Windows.Controls.GridView.GridViewStyleKey*> by using the [x:Static Markup Extension](/dotnet/framework/xaml-services/x-static-markup-extension) and assign that value as the [x:Key Directive](/dotnet/framework/xaml-services/x-key-directive) of the new <xref:System.Windows.Style>.
 
  You can use this read-only property in Extensible Application Markup Language (XAML) as an [x:Key Directive](/dotnet/framework/xaml-services/x-key-directive) of a <xref:System.Windows.Style> that redefines the <xref:System.Windows.Style> for the <xref:System.Windows.Controls.ListView>.
 
@@ -1261,6 +1309,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1294,6 +1344,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1331,6 +1383,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1347,7 +1401,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Do not use this method to change the columns collection for a <xref:System.Windows.Controls.GridView> object. To get, set, or change the columns that are defined for a <xref:System.Windows.Controls.GridView> object, use the <xref:System.Windows.Controls.GridView.Columns%2A> property.
+ Do not use this method to change the columns collection for a <xref:System.Windows.Controls.GridView> object. To get, set, or change the columns that are defined for a <xref:System.Windows.Controls.GridView> object, use the <xref:System.Windows.Controls.GridView.Columns> property.
 
  ]]></format>
         </remarks>
@@ -1372,6 +1426,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1413,6 +1469,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1459,6 +1517,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -1502,6 +1562,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

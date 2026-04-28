@@ -5,8 +5,8 @@
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class Geometry&#xA;Inherits Animatable&#xA;Implements IFormattable" />
   <TypeSignature Language="F#" Value="type Geometry = class&#xA;    inherit Animatable&#xA;    interface IFormattable&#xA;    interface DUCE.IResource" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <TypeSignature Language="C++ CLI" Value="public ref class Geometry abstract : System::Windows::Media::Animation::Animatable, IFormattable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Geometry extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
-  <TypeSignature Language="F#" Value="type Geometry = class&#xA;    inherit Animatable&#xA;    interface IFormattable" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Geometry extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="F#" Value="type Geometry = class&#xA;    inherit Animatable&#xA;    interface IFormattable" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
@@ -47,11 +49,11 @@
 ## Remarks
 
 ## Geometry Compared to Shape
- The <xref:System.Windows.Shapes.Shape?displayProperty=nameWithType> class has a <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, and other rendering properties that <xref:System.Windows.Media.Geometry> and its derived classes lack. The <xref:System.Windows.Shapes.Shape> class is a <xref:System.Windows.FrameworkElement> and therefore participates in the layout system; its derived classes can be used as the content of any element that supports <xref:System.Windows.UIElement> children.
+ The <xref:System.Windows.Shapes.Shape?displayProperty=nameWithType> class has a <xref:System.Windows.Shapes.Shape.Fill*>, <xref:System.Windows.Shapes.Shape.Stroke*>, and other rendering properties that <xref:System.Windows.Media.Geometry> and its derived classes lack. The <xref:System.Windows.Shapes.Shape> class is a <xref:System.Windows.FrameworkElement> and therefore participates in the layout system; its derived classes can be used as the content of any element that supports <xref:System.Windows.UIElement> children.
 
  The <xref:System.Windows.Media.Geometry> class, on the other hand, simply defines the geometry of a shape, and cannot render itself. Because of its simplicity, it has a wider range of uses.
 
- **Freezable Features:** Because it inherits from the <xref:System.Windows.Freezable> class, the <xref:System.Windows.Media.Geometry> class provides several special features: <xref:System.Windows.Media.Geometry> objects can be declared as [resources](/dotnet/framework/wpf/advanced/xaml-resources), shared among multiple objects, made read-only to improve performance, cloned, and made thread-safe. For more information about the different features provided by <xref:System.Windows.Freezable> objects, see [Freezable Objects Overview](/dotnet/framework/wpf/advanced/freezable-objects-overview).
+ **Freezable Features:** Because it inherits from the <xref:System.Windows.Freezable> class, the <xref:System.Windows.Media.Geometry> class provides several special features: <xref:System.Windows.Media.Geometry> objects can be declared as [resources](/dotnet/desktop/wpf/systems/xaml-resources-how-to-define-and-reference), shared among multiple objects, made read-only to improve performance, cloned, and made thread-safe. For more information about the different features provided by <xref:System.Windows.Freezable> objects, see [Freezable Objects Overview](/dotnet/desktop/wpf/advanced/freezable-objects-overview).
 
  ]]></format>
     </remarks>
@@ -59,7 +61,7 @@
       <para>Although this class is abstract, it is not publicly extensible.</para>
     </block>
     <altmember cref="T:System.Windows.Shapes.Path" />
-    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=159989">Geometries Sample</related>
+    <related type="ExternalDocumentation" href="https://github.com/Microsoft/WPF-Samples/tree/main/Graphics/Geometry">Geometries Sample</related>
   </Docs>
   <Members>
     <Member MemberName="Bounds">
@@ -79,6 +81,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Rect</ReturnType>
@@ -113,6 +117,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Geometry</ReturnType>
@@ -127,7 +133,7 @@
 ## Remarks
  This method is used to produce modifiable copies of frozen <xref:System.Windows.Freezable> objects (or any <xref:System.Windows.Freezable> object). For convenience, this method shadows the inherited version with a strongly typed implementation.
 
- For more information, see <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.
+ For more information, see <xref:System.Windows.Freezable.Clone*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -150,6 +156,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Geometry</ReturnType>
@@ -164,7 +172,7 @@
 ## Remarks
  This method is used to produce modifiable copies of frozen <xref:System.Windows.Freezable> objects (or any <xref:System.Windows.Freezable> object). For convenience, this method shadows the inherited version with a strongly typed implementation.
 
- For more information, see <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.
+ For more information, see <xref:System.Windows.Freezable.CloneCurrentValue*?displayProperty=nameWithType>.
 
  ]]></format>
         </remarks>
@@ -196,6 +204,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
@@ -217,21 +227,21 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) when combining geometries. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.Combine%2A> method.
+ This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) when combining geometries. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.Combine*> method.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.Combine%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.Combine*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
- Careful thought should be involved when using <xref:System.Windows.Media.Geometry.Combine%2A> to perform a union as it can be very CPU-expensive. In most cases, a <xref:System.Windows.Media.GeometryGroup> or <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> will work better.
+ Careful thought should be involved when using <xref:System.Windows.Media.Geometry.Combine*> to perform a union as it can be very CPU-expensive. In most cases, a <xref:System.Windows.Media.GeometryGroup> or <xref:System.Windows.Media.PathGeometry.AddGeometry*> will work better.
 
- Use <xref:System.Windows.Media.Geometry.Combine%2A> only when any of the following apply:
+ Use <xref:System.Windows.Media.Geometry.Combine*> only when any of the following apply:
 
--   The geometric operation is not a union.
+- The geometric operation is not a union.
 
--   Either of the geometries has a <xref:System.Windows.Media.FillRule> value of <xref:System.Windows.Media.FillRule.EvenOdd> and the geometries are self-intersecting (i.e. the <xref:System.Windows.Media.FillRule> actually matters).
+- Either of the geometries has a <xref:System.Windows.Media.FillRule> value of <xref:System.Windows.Media.FillRule.EvenOdd> and the geometries are self-intersecting (i.e. the <xref:System.Windows.Media.FillRule> actually matters).
 
--   Time is not a concern, but space is (for instance, if the geometry is created once and then cached). Typically, <xref:System.Windows.Media.Geometry.Combine%2A> produces smaller output than <xref:System.Windows.Media.PathGeometry.AddGeometry%2A>.
+- Time is not a concern, but space is (for instance, if the geometry is created once and then cached). Typically, <xref:System.Windows.Media.Geometry.Combine*> produces smaller output than <xref:System.Windows.Media.PathGeometry.AddGeometry*>.
 
--   The resulting geometry will be stroked or used in a path animation and <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> does not provide the desired outline.
+- The resulting geometry will be stroked or used in a path animation and <xref:System.Windows.Media.PathGeometry.AddGeometry*> does not provide the desired outline.
 
  ]]></format>
         </remarks>
@@ -254,6 +264,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
@@ -279,19 +291,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.Combine%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.Combine*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
- Careful thought should be involved when using <xref:System.Windows.Media.Geometry.Combine%2A> to perform a union as it can be very CPU-expensive. In most cases, a <xref:System.Windows.Media.GeometryGroup> or <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> will work better.
+ Careful thought should be involved when using <xref:System.Windows.Media.Geometry.Combine*> to perform a union as it can be very CPU-expensive. In most cases, a <xref:System.Windows.Media.GeometryGroup> or <xref:System.Windows.Media.PathGeometry.AddGeometry*> will work better.
 
- Use <xref:System.Windows.Media.Geometry.Combine%2A> only when any of the following apply:
+ Use <xref:System.Windows.Media.Geometry.Combine*> only when any of the following apply:
 
--   The geometric operation is not a union.
+- The geometric operation is not a union.
 
--   Either of the geometries has a <xref:System.Windows.Media.FillRule> value of <xref:System.Windows.Media.FillRule.EvenOdd> and the geometries are self-intersecting (i.e. the <xref:System.Windows.Media.FillRule> actually matters).
+- Either of the geometries has a <xref:System.Windows.Media.FillRule> value of <xref:System.Windows.Media.FillRule.EvenOdd> and the geometries are self-intersecting (i.e. the <xref:System.Windows.Media.FillRule> actually matters).
 
--   Time is not a concern, but space is (for instance, if the geometry is created once and then cached). Typically, <xref:System.Windows.Media.Geometry.Combine%2A> produces smaller output than <xref:System.Windows.Media.PathGeometry.AddGeometry%2A>.
+- Time is not a concern, but space is (for instance, if the geometry is created once and then cached). Typically, <xref:System.Windows.Media.Geometry.Combine*> produces smaller output than <xref:System.Windows.Media.PathGeometry.AddGeometry*>.
 
--   The resulting geometry will be stroked or used in a path animation and <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> does not provide the desired outline.
+- The resulting geometry will be stroked or used in a path animation and <xref:System.Windows.Media.PathGeometry.AddGeometry*> does not provide the desired outline.
 
  ]]></format>
         </remarks>
@@ -314,6 +326,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -356,6 +370,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -372,7 +388,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default margin of error (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) is used when determining whether the current geometry contains the specified geometry. To specify your own margin of error, use the <xref:System.Windows.Media.Geometry.FillContains%2A> method.
+ The default margin of error (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) is used when determining whether the current geometry contains the specified geometry. To specify your own margin of error, use the <xref:System.Windows.Media.Geometry.FillContains*> method.
 
  ]]></format>
         </remarks>
@@ -395,6 +411,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -411,7 +429,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) is used when determining whether the geometry contains the specified point. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.FillContains%2A> method.
+ The default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) is used when determining whether the geometry contains the specified point. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.FillContains*> method.
 
  ]]></format>
         </remarks>
@@ -434,6 +452,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -454,7 +474,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContains%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContains*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -477,6 +497,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -503,7 +525,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContains%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContains*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -535,6 +557,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
@@ -550,9 +574,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default tolerance factor (defined by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) is used when determining whether the current geometry contains the specified geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A> method.
+ The default tolerance factor (defined by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) is used when determining whether the current geometry contains the specified geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.FillContainsWithDetail*> method.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContainsWithDetail*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -575,6 +599,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
@@ -594,7 +620,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.FillContainsWithDetail*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -626,6 +652,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -638,7 +666,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetArea%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetArea*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -661,6 +689,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -684,7 +714,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetArea%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetArea*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -716,6 +746,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
@@ -728,9 +760,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) when processing the geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A> method.
+ This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) when processing the geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry*> method.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -753,6 +785,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -776,7 +810,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -808,6 +842,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
@@ -820,9 +856,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) when processing the geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A> method.
+ This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) when processing the geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry*> method.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -845,6 +881,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -868,7 +906,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -900,6 +938,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Rect</ReturnType>
@@ -915,9 +955,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) when processing the geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.GetRenderBounds%2A> method.
+ This method uses the default tolerance factor (described by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) when processing the geometry. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.GetRenderBounds*> method.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetRenderBounds%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetRenderBounds*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -940,6 +980,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Rect</ReturnType>
@@ -959,7 +1001,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetRenderBounds%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetRenderBounds*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -991,6 +1033,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
@@ -1006,7 +1050,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -1029,6 +1073,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -1054,7 +1100,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -1077,6 +1123,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1106,6 +1154,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1135,6 +1185,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Geometry</ReturnType>
@@ -1150,7 +1202,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- See [Path Markup Syntax](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) for information about how this string is formatted
+ See [Path Markup Syntax](/dotnet/desktop/wpf/graphics-multimedia/path-markup-syntax) for information about how this string is formatted
 
  ]]></format>
         </remarks>
@@ -1173,6 +1225,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
@@ -1208,6 +1262,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
@@ -1244,6 +1300,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1262,9 +1320,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default tolerance factor (specified by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) is used when determining whether the specified point is located in the geometry's stroke. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.StrokeContains%2A> overload.
+ The default tolerance factor (specified by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) is used when determining whether the specified point is located in the geometry's stroke. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.StrokeContains*> overload.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContains%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContains*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -1287,6 +1345,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1309,7 +1369,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContains%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContains*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -1341,6 +1401,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
@@ -1358,9 +1420,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default tolerance factor (defined by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> property) is used when determining whether the specified geometry is located in the current geometry's stroke. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A> method.
+ The default tolerance factor (defined by the <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance> property) is used when determining whether the specified geometry is located in the current geometry's stroke. To specify your own tolerance factor, use the <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail*> method.
 
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -1383,6 +1445,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
@@ -1404,7 +1468,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
+ Some <xref:System.Windows.Media.Geometry> methods (such as <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail*>) produce or use a polygonal approximation of the geometry. The tolerance factor specifies the maximum distance between points in this polygonal approximation. Smaller tolerance values produce better approximations, but require more processing than an approximation with a large tolerance factor.
 
  ]]></format>
         </remarks>
@@ -1430,6 +1494,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1480,6 +1546,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1508,6 +1576,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -1539,6 +1609,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Media.Transform</ReturnType>
@@ -1563,9 +1635,9 @@
 
 
 ## Examples
- The following example shows how to use the <xref:System.Windows.Media.Geometry.Transform%2A> property to apply a <xref:System.Windows.Media.RotateTransform> to a <xref:System.Windows.Media.Geometry> object.
+ The following example shows how to use the <xref:System.Windows.Media.Geometry.Transform> property to apply a <xref:System.Windows.Media.RotateTransform> to a <xref:System.Windows.Media.Geometry> object.
 
- The example uses a <xref:System.Windows.Media.GeometryGroup> to create a composite shape from three <xref:System.Windows.Media.Geometry> objects and then rotates the geometry 45 degrees by using the <xref:System.Windows.Media.Geometry.Transform%2A> property.
+ The example uses a <xref:System.Windows.Media.GeometryGroup> to create a composite shape from three <xref:System.Windows.Media.Geometry> objects and then rotates the geometry 45 degrees by using the <xref:System.Windows.Media.Geometry.Transform> property.
 
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Media/Geometry/Transform/GeometryTransformExample.xaml" id="Snippetgeometrytransformexamplewholepage":::
 
@@ -1590,6 +1662,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

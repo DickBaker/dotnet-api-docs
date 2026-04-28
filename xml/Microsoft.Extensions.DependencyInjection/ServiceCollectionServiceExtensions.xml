@@ -19,13 +19,17 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -47,7 +51,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -56,7 +60,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -64,7 +68,7 @@
         </Parameter>
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -80,7 +84,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -94,7 +102,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -104,7 +112,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -112,7 +120,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,System.Object&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -130,7 +138,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -144,7 +156,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -154,7 +166,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -162,7 +174,7 @@
         </Parameter>
         <Parameter Name="implementationType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -180,7 +192,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -194,7 +210,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -202,7 +218,7 @@
       <TypeParameters>
         <TypeParameter Name="TService">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -216,7 +232,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -232,7 +248,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -246,7 +266,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -262,7 +282,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -270,7 +290,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,TService&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -288,7 +308,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -302,7 +326,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -315,7 +339,7 @@
         </TypeParameter>
         <TypeParameter Name="TImplementation">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -330,7 +354,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -348,7 +372,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -362,7 +390,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -384,7 +412,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -392,7 +420,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,TImplementation&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -412,7 +440,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -426,7 +458,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -435,7 +467,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -443,7 +475,7 @@
         </Parameter>
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -459,7 +491,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -473,7 +509,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -483,7 +519,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -491,7 +527,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,System.Object&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -509,7 +545,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -523,7 +563,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -533,7 +573,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -552,7 +592,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -566,7 +610,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -576,7 +620,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -584,7 +628,7 @@
         </Parameter>
         <Parameter Name="implementationType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -602,7 +646,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -616,7 +664,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -624,7 +672,7 @@
       <TypeParameters>
         <TypeParameter Name="TService">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -638,7 +686,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -654,7 +702,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -668,7 +720,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -684,7 +736,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -692,7 +744,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,TService&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -710,7 +762,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -724,7 +780,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -740,7 +796,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -759,7 +815,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -773,7 +833,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -786,7 +846,7 @@
         </TypeParameter>
         <TypeParameter Name="TImplementation">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -801,7 +861,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -819,7 +879,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -833,7 +897,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -855,7 +919,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -863,7 +927,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,TImplementation&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -883,7 +947,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -897,7 +965,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -906,7 +974,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -914,7 +982,7 @@
         </Parameter>
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -930,7 +998,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -944,7 +1016,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -954,7 +1026,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -962,7 +1034,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,System.Object&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -980,7 +1052,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -994,7 +1070,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1004,7 +1080,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1012,7 +1088,7 @@
         </Parameter>
         <Parameter Name="implementationType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1030,7 +1106,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -1044,7 +1124,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1052,7 +1132,7 @@
       <TypeParameters>
         <TypeParameter Name="TService">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1066,7 +1146,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1082,7 +1162,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -1096,7 +1180,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1112,7 +1196,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1120,7 +1204,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,TService&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -1138,7 +1222,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -1152,7 +1240,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1165,7 +1253,7 @@
         </TypeParameter>
         <TypeParameter Name="TImplementation">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1180,7 +1268,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1198,7 +1286,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -1212,7 +1304,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1234,7 +1326,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -1242,7 +1334,7 @@
         </Parameter>
         <Parameter Name="implementationFactory" Type="System.Func&lt;System.IServiceProvider,System.Object,TImplementation&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -1262,7 +1354,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type and key has already been registered.
+            When multiple registrations exist for the same type and key, <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedService``1(System.IServiceProvider,System.Object)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderKeyedServiceExtensions.GetKeyedServices``1(System.IServiceProvider,System.Object)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -1276,7 +1372,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1285,7 +1381,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1300,7 +1396,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1314,7 +1414,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1334,7 +1434,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1348,7 +1452,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1358,7 +1462,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="implementationType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1375,7 +1479,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1389,7 +1497,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1397,7 +1505,7 @@
       <TypeParameters>
         <TypeParameter Name="TService">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1418,7 +1526,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1432,7 +1544,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1458,7 +1570,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1472,7 +1588,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1485,7 +1601,7 @@
         </TypeParameter>
         <TypeParameter Name="TImplementation">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1509,7 +1625,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1523,7 +1643,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1557,7 +1677,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />
       </Docs>
     </Member>
@@ -1571,7 +1695,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1580,7 +1704,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1595,7 +1719,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1609,7 +1737,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1629,7 +1757,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1643,7 +1775,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1663,7 +1795,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1677,7 +1813,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1687,7 +1823,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="implementationType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1704,7 +1840,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1718,7 +1858,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1726,7 +1866,7 @@
       <TypeParameters>
         <TypeParameter Name="TService">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1747,7 +1887,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1761,7 +1905,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1787,7 +1931,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1801,7 +1949,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1827,7 +1975,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1841,7 +1993,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1854,7 +2006,7 @@
         </TypeParameter>
         <TypeParameter Name="TImplementation">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1878,7 +2030,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1892,7 +2048,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1926,7 +2082,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />
       </Docs>
     </Member>
@@ -1940,7 +2100,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1949,7 +2109,7 @@
         <Parameter Name="services" Type="Microsoft.Extensions.DependencyInjection.IServiceCollection" RefType="this" />
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -1964,7 +2124,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -1978,7 +2142,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -1998,7 +2162,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -2012,7 +2180,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -2022,7 +2190,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="implementationType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -2039,7 +2207,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -2053,7 +2225,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -2061,7 +2233,7 @@
       <TypeParameters>
         <TypeParameter Name="TService">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -2082,7 +2254,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -2096,7 +2272,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -2122,7 +2298,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -2136,7 +2316,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -2149,7 +2329,7 @@
         </TypeParameter>
         <TypeParameter Name="TImplementation">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicConstructors)&gt;]</AttributeName>
             </Attribute>
@@ -2173,7 +2353,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>
@@ -2187,7 +2371,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection.Abstractions</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.DependencyInjection.IServiceCollection</ReturnType>
@@ -2221,7 +2405,11 @@
             specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
         <returns>A reference to this instance after the operation has completed.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            This method always adds a new registration to the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />, even if a service of the same type has already been registered.
+            When multiple registrations exist, <see cref="M:System.IServiceProvider.GetService(System.Type)" /> returns the last registered service.
+            Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices``1(System.IServiceProvider)" /> to retrieve all registered services.
+            </remarks>
         <altmember cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Transient" />
       </Docs>
     </Member>

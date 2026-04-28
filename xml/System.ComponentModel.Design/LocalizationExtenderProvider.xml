@@ -52,21 +52,6 @@
 
  The default serializers that ship with Visual Studio are already capable of localizing components and controls, but they only do so if they locate support for the .NET Framework localization architecture. To detect the presence of localization support, the serialization system must locate a public <xref:System.Boolean> property named "Localizable" on the root designer component. If a serializer finds this property, it searches for a property of type <xref:System.Globalization.CultureInfo> named "Language" to determine the current resource configuration. Default serializers use these properties to determine if it should localize any localizable resources of the component, and if so, what <xref:System.Globalization.CultureInfo> format the resource information should be saved in.
 
-
-
-## Examples
- The following code example adds a <xref:System.ComponentModel.Design.LocalizationExtenderProvider> to a component.
-
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp" id="Snippet2":::
- :::code language="csharp" source="~/snippets/csharp/System.ComponentModel.Design/LocalizationExtenderProvider/Overview/class1.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb" id="Snippet2":::
-
- The following code example includes an example component and designer. The designer uses a <xref:System.ComponentModel.Design.LocalizationExtenderProvider> to add localization support properties for the component.
-
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp" id="Snippet1":::
- :::code language="csharp" source="~/snippets/csharp/System.ComponentModel.Design/LocalizationExtenderProvider/Overview/class1.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb" id="Snippet1":::
-
  ]]></format>
     </remarks>
   </Docs>
@@ -97,16 +82,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- By default, a new <xref:System.ComponentModel.Design.LocalizationExtenderProvider> sets the current language to <xref:System.Globalization.CultureInfo.InvariantCulture%2A>, which is the generic and default language resource setting. This setting causes a designer to generate code that references the generic language resource. You can create other <xref:System.Globalization.CultureInfo> objects to represent and identify other localized resource data that a program can use at run time.
-
-
-
-## Examples
- The following code example creates a new <xref:System.ComponentModel.Design.LocalizationExtenderProvider> object.
-
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/LocalizationExtenderProviderExample/CPP/class1.cpp" id="Snippet2":::
- :::code language="csharp" source="~/snippets/csharp/System.ComponentModel.Design/LocalizationExtenderProvider/Overview/class1.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/LocalizationExtenderProviderExample/VB/class1.vb" id="Snippet2":::
+ By default, a new <xref:System.ComponentModel.Design.LocalizationExtenderProvider> sets the current language to <xref:System.Globalization.CultureInfo.InvariantCulture*>, which is the generic and default language resource setting. This setting causes a designer to generate code that references the generic language resource. You can create other <xref:System.Globalization.CultureInfo> objects to represent and identify other localized resource data that a program can use at run time.
 
  ]]></format>
         </remarks>
@@ -185,10 +161,10 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Call <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A> when you are finished using the <xref:System.ComponentModel.Design.LocalizationExtenderProvider>. The <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A> method leaves the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> in an unusable state. After calling <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A>, you must release all references to the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> so the garbage collector can reclaim the memory that the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> was occupying. For more information, see [Cleaning Up Unmanaged Resources](/dotnet/standard/garbage-collection/unmanaged) and [Implementing a Dispose Method](/dotnet/standard/garbage-collection/implementing-dispose).
+ Call <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose*> when you are finished using the <xref:System.ComponentModel.Design.LocalizationExtenderProvider>. The <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose*> method leaves the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> in an unusable state. After calling <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose*>, you must release all references to the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> so the garbage collector can reclaim the memory that the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> was occupying. For more information, see [Cleaning Up Unmanaged Resources](/dotnet/standard/garbage-collection/unmanaged) and [Implementing a Dispose Method](/dotnet/standard/garbage-collection/implementing-dispose).
 
 > [!NOTE]
->  Always call <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose%2A> before you release your last reference to the <xref:System.ComponentModel.Design.LocalizationExtenderProvider>. Otherwise, the resources it is using will not be freed until the garbage collector calls the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> object's `Finalize` method.
+>  Always call <xref:System.ComponentModel.Design.LocalizationExtenderProvider.Dispose*> before you release your last reference to the <xref:System.ComponentModel.Design.LocalizationExtenderProvider>. Otherwise, the resources it is using will not be freed until the garbage collector calls the <xref:System.ComponentModel.Design.LocalizationExtenderProvider> object's `Finalize` method.
 
  ]]></format>
         </remarks>
@@ -231,7 +207,7 @@
           <para>
             <see langword="Dispose" /> can be called multiple times by other objects. When overriding <see langword="Dispose(Boolean)" /> be careful not to reference objects that have been previously disposed of in an earlier call to <see langword="Dispose" />. For more information about how to implement <see langword="Dispose(Boolean)" />, see <see href="/dotnet/standard/garbage-collection/implementing-dispose">Implementing a Dispose Method</see>.
 
- For more information about <see langword="Dispose" /> and <see cref="M:System.Object.Finalize" />, see <see href="/dotnet/standard/garbage-collection/unmanaged">Cleaning Up Unmanaged Resources</see> and <see href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/ddae83kx(v=vs.100)">Overriding the Finalize Method</see>.</para>
+ For more information about <see langword="Dispose" /> and <see cref="M:System.Object.Finalize" />, see <see href="/dotnet/standard/garbage-collection/unmanaged">Cleaning Up Unmanaged Resources</see>.</para>
         </block>
       </Docs>
     </Member>
@@ -385,7 +361,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- If the specified object was initialized with localized resources when the designer loaded, this method sets the resource culture for the specified object to the resource culture used to initialize the values of the specified object when the designer loaded. If the specified object had no previous resource culture setting, the current resource culture is set to <xref:System.Globalization.CultureInfo.InvariantCulture%2A>.
+ If the specified object was initialized with localized resources when the designer loaded, this method sets the resource culture for the specified object to the resource culture used to initialize the values of the specified object when the designer loaded. If the specified object had no previous resource culture setting, the current resource culture is set to <xref:System.Globalization.CultureInfo.InvariantCulture*>.
 
  ]]></format>
         </remarks>

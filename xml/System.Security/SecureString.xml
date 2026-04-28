@@ -1,6 +1,6 @@
 <Type Name="SecureString" FullName="System.Security.SecureString">
   <TypeSignature Language="C#" Value="public sealed class SecureString : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecureString extends System.Object implements class System.IDisposable" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecureString extends System.Object implements class System.IDisposable" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Security.SecureString" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SecureString&#xA;Implements IDisposable" />
   <TypeSignature Language="F#" Value="type SecureString = class&#xA;    interface IDisposable" />
@@ -31,8 +31,14 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Security.SecureString" FromVersion="10.0.0.0" To="System.Runtime.InteropServices" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Security.SecureString" FromVersion="11.0.0.0" To="System.Runtime.InteropServices" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="System.Security.SecureString" FromVersion="5.0.0.0" To="System.Runtime.InteropServices" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime.InteropServices" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
@@ -63,7 +69,7 @@
 The following example demonstrates how to use a <xref:System.Security.SecureString> to secure a user's password for use as a credential to start a new process.
 
 :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/Overview/ctor4.cs" id="Snippet4":::
-:::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecureString.Ctor/vb/ctor4.vb" id="Snippet4":::
+:::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/Overview/ctor4.vb" id="Snippet4":::
       ]]></format>
     </example>
     <altmember cref="T:System.Runtime.InteropServices.ComVisibleAttribute" />
@@ -113,6 +119,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -127,17 +135,15 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
           <format type="text/markdown"><![CDATA[
 
 ## Examples
- The following example uses the default (or parameterless) constructor to instantiate a new <xref:System.Security.SecureString> object. It then calls the <xref:System.Security.SecureString.AppendChar%2A> method to add an array of characters to it.
+ The following example uses the default (or parameterless) constructor to instantiate a new <xref:System.Security.SecureString> object. It then calls the <xref:System.Security.SecureString.AppendChar*> method to add an array of characters to it.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Security.SecureString.Ctor/cpp/Ctor2.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/Overview/Ctor2.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecureString.Ctor/vb/ctor2.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/Overview/ctor2.vb" id="Snippet2":::
 
  The following example creates a <xref:System.Security.SecureString> object from the value of a <xref:System.String> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.Security.SecureString.Ctor/cpp/Ctor3.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/Overview/Ctor3.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecureString.Ctor/vb/Ctor3.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/Overview/Ctor3.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -177,11 +183,17 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName Language="C#">[System.CLSCompliant(false)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.CLSCompliant(false)&gt;]</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="net-11.0">
+          <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.RequiresUnsafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.RequiresUnsafe&gt;]</AttributeName>
         </Attribute>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
           <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
@@ -211,7 +223,6 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
 ## Examples
  The following example instantiates a new <xref:System.Security.SecureString> object by passing its constructor a pointer to a character array.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR_System/system.security.securestring.ctor2/cpp/ctor1.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/.ctor/ctor1.cs" id="Snippet1":::
 
  ]]></format>
@@ -257,6 +268,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1">
@@ -286,17 +299,15 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
 
 
 ## Examples
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A>, <xref:System.Security.SecureString.InsertAt%2A>, <xref:System.Security.SecureString.RemoveAt%2A>, <xref:System.Security.SecureString.SetAt%2A>, and <xref:System.Security.SecureString.Clear%2A> methods affect the value of a <xref:System.Security.SecureString> object.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*>, <xref:System.Security.SecureString.InsertAt*>, <xref:System.Security.SecureString.RemoveAt*>, <xref:System.Security.SecureString.SetAt*>, and <xref:System.Security.SecureString.Clear*> methods affect the value of a <xref:System.Security.SecureString> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xAt/CPP/SecureString.xAt.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xat.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xAt/VB/xat.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xat.vb" id="Snippet1":::
 
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A> and <xref:System.Security.SecureString.RemoveAt%2A> methods can be used to collect the characters in a password.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*> and <xref:System.Security.SecureString.RemoveAt*> methods can be used to collect the characters in a password.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xChar/CPP/SecureString.xChar.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xchar.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xChar/VB/xchar.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xchar.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -339,6 +350,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -361,11 +374,10 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
 
 
 ## Examples
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A>, <xref:System.Security.SecureString.InsertAt%2A>, <xref:System.Security.SecureString.RemoveAt%2A>, <xref:System.Security.SecureString.SetAt%2A>, and <xref:System.Security.SecureString.Clear%2A> methods affect the value of a <xref:System.Security.SecureString> object.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*>, <xref:System.Security.SecureString.InsertAt*>, <xref:System.Security.SecureString.RemoveAt*>, <xref:System.Security.SecureString.SetAt*>, and <xref:System.Security.SecureString.Clear*> methods affect the value of a <xref:System.Security.SecureString> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xAt/CPP/SecureString.xAt.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xat.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xAt/VB/xat.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xat.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -407,6 +419,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -471,6 +485,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -488,7 +504,7 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Security.SecureString.Dispose%2A> method writes binary zeroes to the allocated memory that contains the value of this <xref:System.Security.SecureString> object, then frees the allocated memory.
+ The <xref:System.Security.SecureString.Dispose*> method writes binary zeroes to the allocated memory that contains the value of this <xref:System.Security.SecureString> object, then frees the allocated memory.
 
  For more information, see [Garbage Collection](/dotnet/standard/garbage-collection/).
 
@@ -529,6 +545,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1">
@@ -557,16 +575,15 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
 ## Remarks
  The index is zero-based; the first character in this secure string is at index position zero.
 
- If the implementation uses a protection mechanism, such as encryption, the value of the secure string, if any, is unprotected; `c` is inserted at the specified index position; then the new value is re-protected. The <xref:System.Security.SecureString.InsertAt%2A> method yields the same results as the <xref:System.Security.SecureString.AppendChar%2A> method, which inserts a character at the end of a secure string, if the `index` parameter of <xref:System.Security.SecureString.InsertAt%2A> is set to the length of this instance.
+ If the implementation uses a protection mechanism, such as encryption, the value of the secure string, if any, is unprotected; `c` is inserted at the specified index position; then the new value is re-protected. The <xref:System.Security.SecureString.InsertAt*> method yields the same results as the <xref:System.Security.SecureString.AppendChar*> method, which inserts a character at the end of a secure string, if the `index` parameter of <xref:System.Security.SecureString.InsertAt*> is set to the length of this instance.
 
 
 
 ## Examples
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A>, <xref:System.Security.SecureString.InsertAt%2A>, <xref:System.Security.SecureString.RemoveAt%2A>, <xref:System.Security.SecureString.SetAt%2A>, and <xref:System.Security.SecureString.Clear%2A> methods affect the value of a <xref:System.Security.SecureString> object.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*>, <xref:System.Security.SecureString.InsertAt*>, <xref:System.Security.SecureString.RemoveAt*>, <xref:System.Security.SecureString.SetAt*>, and <xref:System.Security.SecureString.Clear*> methods affect the value of a <xref:System.Security.SecureString> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xAt/CPP/SecureString.xAt.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xat.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xAt/VB/xat.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xat.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -614,6 +631,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -633,7 +652,7 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- After an instance of <xref:System.Security.SecureString> is marked read-only by the <xref:System.Security.SecureString.MakeReadOnly%2A> method, any attempt to modify the value of the instance throws an <xref:System.InvalidOperationException>. Use the <xref:System.Security.SecureString.IsReadOnly%2A> method to test whether a <xref:System.Security.SecureString> is read-only before attempting to modify it.
+ After an instance of <xref:System.Security.SecureString> is marked read-only by the <xref:System.Security.SecureString.MakeReadOnly*> method, any attempt to modify the value of the instance throws an <xref:System.InvalidOperationException>. Use the <xref:System.Security.SecureString.IsReadOnly*> method to test whether a <xref:System.Security.SecureString> is read-only before attempting to modify it.
 
  ]]></format>
         </remarks>
@@ -674,6 +693,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -691,7 +712,7 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Security.SecureString.Length%2A> property returns the number of <xref:System.Char> objects in this instance, not the number of Unicode characters. A Unicode character might be represented by more than one <xref:System.Char> object.
+ The <xref:System.Security.SecureString.Length> property returns the number of <xref:System.Char> objects in this instance, not the number of Unicode characters. A Unicode character might be represented by more than one <xref:System.Char> object.
 
  The maximum length of a <xref:System.Security.SecureString> instance is 65,536 characters.
 
@@ -733,6 +754,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
@@ -750,20 +773,19 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Initialize the text value of an instance of the <xref:System.Security.SecureString> class with the <xref:System.Security.SecureString.%23ctor%2A> constructors, and modify the value with the <xref:System.Security.SecureString.Clear%2A>, <xref:System.Security.SecureString.RemoveAt%2A>, <xref:System.Security.SecureString.SetAt%2A>, <xref:System.Security.SecureString.InsertAt%2A>, and <xref:System.Security.SecureString.AppendChar%2A> methods.
+ Initialize the text value of an instance of the <xref:System.Security.SecureString> class with the <xref:System.Security.SecureString.%23ctor*> constructors, and modify the value with the <xref:System.Security.SecureString.Clear*>, <xref:System.Security.SecureString.RemoveAt*>, <xref:System.Security.SecureString.SetAt*>, <xref:System.Security.SecureString.InsertAt*>, and <xref:System.Security.SecureString.AppendChar*> methods.
 
- After you have made your final modifications, use the <xref:System.Security.SecureString.MakeReadOnly%2A> method to make the value of the instance immutable (read-only). After the value is marked as read-only, any further attempt to modify it throws an <xref:System.InvalidOperationException>.
+ After you have made your final modifications, use the <xref:System.Security.SecureString.MakeReadOnly*> method to make the value of the instance immutable (read-only). After the value is marked as read-only, any further attempt to modify it throws an <xref:System.InvalidOperationException>.
 
- The effect of invoking <xref:System.Security.SecureString.MakeReadOnly%2A> is permanent because the <xref:System.Security.SecureString> class provides no means to make the secure string modifiable again. Use the <xref:System.Security.SecureString.IsReadOnly%2A> method to test whether an instance of <xref:System.Security.SecureString> is read-only.
+ The effect of invoking <xref:System.Security.SecureString.MakeReadOnly*> is permanent because the <xref:System.Security.SecureString> class provides no means to make the secure string modifiable again. Use the <xref:System.Security.SecureString.IsReadOnly*> method to test whether an instance of <xref:System.Security.SecureString> is read-only.
 
 
 
 ## Examples
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A> and <xref:System.Security.SecureString.RemoveAt%2A> methods can be used to collect the characters in a password. After the password is collected, it is made read-only.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*> and <xref:System.Security.SecureString.RemoveAt*> methods can be used to collect the characters in a password. After the password is collected, it is made read-only.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xChar/CPP/SecureString.xChar.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xchar.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xChar/VB/xchar.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xchar.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -804,6 +826,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1">
@@ -835,17 +859,15 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
 
 
 ## Examples
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A>, <xref:System.Security.SecureString.InsertAt%2A>, <xref:System.Security.SecureString.RemoveAt%2A>, <xref:System.Security.SecureString.SetAt%2A>, and <xref:System.Security.SecureString.Clear%2A> methods affect the value of a <xref:System.Security.SecureString> object.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*>, <xref:System.Security.SecureString.InsertAt*>, <xref:System.Security.SecureString.RemoveAt*>, <xref:System.Security.SecureString.SetAt*>, and <xref:System.Security.SecureString.Clear*> methods affect the value of a <xref:System.Security.SecureString> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xAt/CPP/SecureString.xAt.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xat.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xAt/VB/xat.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xat.vb" id="Snippet1":::
 
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A> and <xref:System.Security.SecureString.RemoveAt%2A> methods can be used to collect the characters in a password.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*> and <xref:System.Security.SecureString.RemoveAt*> methods can be used to collect the characters in a password.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xChar/CPP/SecureString.xChar.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xchar.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xChar/VB/xchar.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xchar.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>
@@ -889,6 +911,8 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1">
@@ -922,11 +946,10 @@ The following example demonstrates how to use a <xref:System.Security.SecureStri
 
 
 ## Examples
- The following example demonstrates how the <xref:System.Security.SecureString.AppendChar%2A>, <xref:System.Security.SecureString.InsertAt%2A>, <xref:System.Security.SecureString.RemoveAt%2A>, <xref:System.Security.SecureString.SetAt%2A>, and <xref:System.Security.SecureString.Clear%2A> methods affect the value of a <xref:System.Security.SecureString> object.
+ The following example demonstrates how the <xref:System.Security.SecureString.AppendChar*>, <xref:System.Security.SecureString.InsertAt*>, <xref:System.Security.SecureString.RemoveAt*>, <xref:System.Security.SecureString.SetAt*>, and <xref:System.Security.SecureString.Clear*> methods affect the value of a <xref:System.Security.SecureString> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_CLR/SecureString.xAt/CPP/SecureString.xAt.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Security/SecureString/AppendChar/xat.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR/SecureString.xAt/VB/xat.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Security/SecureString/AppendChar/xat.vb" id="Snippet1":::
 
  ]]></format>
         </remarks>

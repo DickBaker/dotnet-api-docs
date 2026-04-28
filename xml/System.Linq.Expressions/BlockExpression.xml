@@ -18,6 +18,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
@@ -31,6 +33,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.Core" FromVersion="4.0.0.0" To="System.Linq.Expressions" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Linq.Expressions" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Linq.Expressions" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Linq.Expressions" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Linq.Expressions" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Linq.Expressions" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -42,7 +46,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -54,19 +58,19 @@
   <Docs>
     <summary>Represents a block that contains a sequence of expressions where variables can be defined.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Linq.Expressions.Expression.Block%2A> methods can be used to create a <xref:System.Linq.Expressions.BlockExpression>.  
-  
-   
-  
-## Examples  
- The following code example shows how to create a block expression. The block expression consists of two <xref:System.Linq.Expressions.MethodCallExpression> objects and one <xref:System.Linq.Expressions.ConstantExpression> object.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Linq.Expressions.Expression.Block*> methods can be used to create a <xref:System.Linq.Expressions.BlockExpression>.
+
+
+
+## Examples
+ The following code example shows how to create a block expression. The block expression consists of two <xref:System.Linq.Expressions.MethodCallExpression> objects and one <xref:System.Linq.Expressions.ConstantExpression> object.
+
  :::code language="csharp" source="~/snippets/csharp/System.Linq.Expressions/BlockExpression/Overview/program.cs" id="Snippet13":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_CLR_System/system.linq.expressions.expressiondev10/vb/module1.vb" id="Snippet13":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.Linq.Expressions/BlockExpression/Overview/module1.vb" id="Snippet13":::
+
  ]]></format>
     </remarks>
   </Docs>
@@ -92,6 +96,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -114,11 +120,11 @@
         <summary>Dispatches to the specific visit method for this node type. For example, <see cref="T:System.Linq.Expressions.MethodCallExpression" /> calls the <see cref="M:System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)" />.</summary>
         <returns>The result of visiting this node.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This default implementation for <xref:System.Linq.Expressions.ExpressionType.Extension> nodes calls <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>. Override this method to call into a more specific method on a derived visitor class of the <xref:System.Linq.Expressions.ExpressionVisitor> class. However, it should still support unknown visitors by calling <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This default implementation for <xref:System.Linq.Expressions.ExpressionType.Extension> nodes calls <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension*>. Override this method to call into a more specific method on a derived visitor class of the <xref:System.Linq.Expressions.ExpressionVisitor> class. However, it should still support unknown visitors by calling <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension*>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -144,6 +150,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -191,6 +199,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -232,6 +242,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -273,6 +285,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -300,7 +314,7 @@
       <MemberSignature Language="VB.NET" Value="Public Function Update (variables As IEnumerable(Of ParameterExpression), expressions As IEnumerable(Of Expression)) As BlockExpression" />
       <MemberSignature Language="F#" Value="member this.Update : seq&lt;System.Linq.Expressions.ParameterExpression&gt; * seq&lt;System.Linq.Expressions.Expression&gt; -&gt; System.Linq.Expressions.BlockExpression" Usage="blockExpression.Update (variables, expressions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Linq::Expressions::BlockExpression ^ Update(System::Collections::Generic::IEnumerable&lt;System::Linq::Expressions::ParameterExpression ^&gt; ^ variables, System::Collections::Generic::IEnumerable&lt;System::Linq::Expressions::Expression ^&gt; ^ expressions);" />
-      <MemberSignature Language="C#" Value="public System.Linq.Expressions.BlockExpression Update (System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.ParameterExpression&gt;? variables, System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.Expression&gt; expressions);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.BlockExpression Update (System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.ParameterExpression&gt;? variables, System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.Expression&gt; expressions);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Linq.Expressions</AssemblyName>
@@ -315,6 +329,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
@@ -332,7 +348,7 @@
       <Parameters>
         <Parameter Name="variables" Type="System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.ParameterExpression&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1 })&gt;]</AttributeName>
             </Attribute>
@@ -369,6 +385,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>

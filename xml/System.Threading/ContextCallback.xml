@@ -5,7 +5,7 @@
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub ContextCallback(state As Object)" />
   <TypeSignature Language="F#" Value="type ContextCallback = delegate of obj -&gt; unit" />
   <TypeSignature Language="C++ CLI" Value="public delegate void ContextCallback(System::Object ^ state);" />
-  <TypeSignature Language="C#" Value="public delegate void ContextCallback(object? state);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
+  <TypeSignature Language="C#" Value="public delegate void ContextCallback(object? state);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1" />
   <AssemblyInfo>
     <AssemblyName>System.Threading</AssemblyName>
     <AssemblyVersion>4.0.10.0</AssemblyVersion>
@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -30,6 +32,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -55,13 +59,13 @@
     <param name="state">An object containing information to be used by the callback method each time it executes.</param>
     <summary>Represents a method to be called within a new context.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- <xref:System.Threading.ContextCallback> is used by the <xref:System.Threading.ExecutionContext.Run%2A?displayProperty=nameWithType> and the <xref:System.Security.SecurityContext.Run%2A?displayProperty=nameWithType> methods. <xref:System.Threading.ContextCallback> represents the method to be run in the provided context. Upon completion of the method execution, the context is restored to its previous state.  
-  
- Create the delegate by passing your callback method to the <xref:System.Threading.ContextCallback> constructor. Your method must have the signature shown here.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ <xref:System.Threading.ContextCallback> is used by the <xref:System.Threading.ExecutionContext.Run*?displayProperty=nameWithType> and the <xref:System.Security.SecurityContext.Run*?displayProperty=nameWithType> methods. <xref:System.Threading.ContextCallback> represents the method to be run in the provided context. Upon completion of the method execution, the context is restored to its previous state.
+
+ Create the delegate by passing your callback method to the <xref:System.Threading.ContextCallback> constructor. Your method must have the signature shown here.
+
  ]]></format>
     </remarks>
   </Docs>

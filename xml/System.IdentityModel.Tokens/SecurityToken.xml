@@ -22,11 +22,16 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
     <AssemblyVersion>4.10.3.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.IdentityModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -41,7 +46,7 @@
 
  A security token can be used to provide authentication credentials, cryptographic key material, or, in the case of a security token issued by a security token service (STS), a collection of claims about a subject. All security tokens derive from the <xref:System.IdentityModel.Tokens.SecurityToken> class.
 
- Beginning with .NET 4.5, Windows Identity Foundation (WIF) has been fully integrated into the .NET Framework and the classes exposed by WIF are the preferred method of handling security tokens in your code. In WIF, security tokens are serialized and deserialized to and from their XML representation and are validated by using classes derived from the <xref:System.IdentityModel.Tokens.SecurityTokenHandler> base class. Validating a token involves not just ensuring that the token is valid, but also returning a <xref:System.Security.Claims.ClaimsIdentity> instance from the token that can be used in making authentication and authorization decisions. The <xref:System.Security.Claims.ClaimsIdentity> is constructed by the token handler's implementation of the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method from the claims contained in the token as well as from claims that are intrinsic to the token type itself.
+ Beginning with .NET 4.5, Windows Identity Foundation (WIF) has been fully integrated into the .NET Framework and the classes exposed by WIF are the preferred method of handling security tokens in your code. In WIF, security tokens are serialized and deserialized to and from their XML representation and are validated by using classes derived from the <xref:System.IdentityModel.Tokens.SecurityTokenHandler> base class. Validating a token involves not just ensuring that the token is valid, but also returning a <xref:System.Security.Claims.ClaimsIdentity> instance from the token that can be used in making authentication and authorization decisions. The <xref:System.Security.Claims.ClaimsIdentity> is constructed by the token handler's implementation of the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken*> method from the claims contained in the token as well as from claims that are intrinsic to the token type itself.
 
  WIF ships with support for the following types of security tokens:
 
@@ -67,11 +72,11 @@
 
  Broadly speaking security tokens fall into three major categories:
 
--   Tokens that carry or reference cryptographic key material. For example the <xref:System.IdentityModel.Tokens.RsaSecurityToken> and <xref:System.IdentityModel.Tokens.X509SecurityToken> types are often used for this purpose.
+- Tokens that carry or reference cryptographic key material. For example the <xref:System.IdentityModel.Tokens.RsaSecurityToken> and <xref:System.IdentityModel.Tokens.X509SecurityToken> types are often used for this purpose.
 
--   Tokens that represent credentials for users that have already been authenticated. For example, the <xref:System.IdentityModel.Tokens.UserNameSecurityToken>, <xref:System.IdentityModel.Tokens.WindowsSecurityToken>, and, in the case of a user authenticated using a certificate, the <xref:System.IdentityModel.Tokens.X509SecurityToken> types.
+- Tokens that represent credentials for users that have already been authenticated. For example, the <xref:System.IdentityModel.Tokens.UserNameSecurityToken>, <xref:System.IdentityModel.Tokens.WindowsSecurityToken>, and, in the case of a user authenticated using a certificate, the <xref:System.IdentityModel.Tokens.X509SecurityToken> types.
 
--   Tokens that are issued by a security token service (STS) in response to a security token request using either the WS-Trust or WS-Federation protocol. These are typically returned in a `wst:RequestSecurityTokenResponse` XML fragment. The <xref:System.IdentityModel.Tokens.Saml2SecurityToken> and <xref:System.IdentityModel.Tokens.SamlSecurityToken> types are most often used to represent these tokens.
+- Tokens that are issued by a security token service (STS) in response to a security token request using either the WS-Trust or WS-Federation protocol. These are typically returned in a `wst:RequestSecurityTokenResponse` XML fragment. The <xref:System.IdentityModel.Tokens.Saml2SecurityToken> and <xref:System.IdentityModel.Tokens.SamlSecurityToken> types are most often used to represent these tokens.
 
  A special token type, the <xref:System.IdentityModel.Tokens.SessionSecurityToken>, contains information necessary to recreate a principal when using sessions in active or passive scenarios.
 
@@ -110,7 +115,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -137,7 +142,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -163,7 +168,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.SecurityToken.CanCreateKeyIdentifierClause%2A> method to determine whether a security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause%2A> method.
+ Use the <xref:System.IdentityModel.Tokens.SecurityToken.CanCreateKeyIdentifierClause*> method to determine whether a security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause*> method.
 
  The default implementation supports key identifier clauses of type <xref:System.IdentityModel.Tokens.LocalIdKeyIdentifierClause>.
 
@@ -188,7 +193,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -213,7 +218,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.SecurityToken.CanCreateKeyIdentifierClause%2A> method to determine whether a security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause%2A> method.
+ Use the <xref:System.IdentityModel.Tokens.SecurityToken.CanCreateKeyIdentifierClause*> method to determine whether a security token can create a specific key identifier. To create the key identifier call the <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause*> method.
 
  The default implementation supports key identifier clauses of type <xref:System.IdentityModel.Tokens.LocalIdKeyIdentifierClause>. If a key identifier clause of type <xref:System.IdentityModel.Tokens.LocalIdKeyIdentifierClause> cannot be created, a <xref:System.NotSupportedException> is thrown.
 
@@ -238,7 +243,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -254,12 +259,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Typically, when a security token is serialized into XML, the `Id` attribute for the security token is set to the value of the <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> property.
+ Typically, when a security token is serialized into XML, the `Id` attribute for the security token is set to the value of the <xref:System.IdentityModel.Tokens.SecurityToken.Id> property.
 
 
 
 ## Examples
- The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> property.
+ The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.Id> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtokenconstants.cs" id="Snippet1":::
 :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtoken.cs" id="Snippet3":::
@@ -287,7 +292,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -330,7 +335,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -350,9 +355,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.IdentityModel.Tokens.SecurityToken.ResolveKeyIdentifierClause%2A> method calls the <xref:System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause%2A> to first determine whether the specified key identifier clause is the same as this instance.
+ The <xref:System.IdentityModel.Tokens.SecurityToken.ResolveKeyIdentifierClause*> method calls the <xref:System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause*> to first determine whether the specified key identifier clause is the same as this instance.
 
- The default implementation returns the first element of the <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> collection if the collection is not empty and if <xref:System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause%2A> returns `true`; otherwise, it returns `null`.
+ The default implementation returns the first element of the <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys> collection if the collection is not empty and if <xref:System.IdentityModel.Tokens.SecurityToken.MatchesKeyIdentifierClause*> returns `true`; otherwise, it returns `null`.
 
  ]]></format>
         </remarks>
@@ -378,7 +383,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -394,12 +399,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.SamlSecurityToken.SecurityKeys%2A> property to set the cryptographic keys for this security token to protect tokens or a SOAP message. The keys can be used, among other things, to digitally sign or encrypt either tokens or SOAP messages.
+ Use the <xref:System.IdentityModel.Tokens.SamlSecurityToken.SecurityKeys> property to set the cryptographic keys for this security token to protect tokens or a SOAP message. The keys can be used, among other things, to digitally sign or encrypt either tokens or SOAP messages.
 
 
 
 ## Examples
- The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> property.
+ The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtokenconstants.cs" id="Snippet1":::
 :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtoken.cs" id="Snippet3":::
@@ -427,7 +432,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -443,12 +448,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.SecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> properties represent the first and last instants in time in which the security token is valid, respectively.
+ Use the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.SecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo> properties represent the first and last instants in time in which the security token is valid, respectively.
 
 
 
 ## Examples
- The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> property.
+ The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtokenconstants.cs" id="Snippet1":::
 :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtoken.cs" id="Snippet3":::
@@ -477,7 +482,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -493,12 +498,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.SecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> properties represent the first and last instants in time in which the security token is valid, respectively.
+ Use the <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo> properties to determine the time period in which a <xref:System.IdentityModel.Tokens.SecurityToken> token is valid. The <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom> and <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo> properties represent the first and last instants in time in which the security token is valid, respectively.
 
 
 
 ## Examples
- The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> property.
+ The code examples that are used in the <xref:System.IdentityModel.Tokens.SecurityToken> topics are taken from the `Custom Token` sample. This sample provides custom classes that enable processing of Simple Web Tokens (SWT). It includes an implementation of a `SimpleWebToken` class and a `SimpleWebTokenHandler` class, as well as other classes that support SWT tokens. For information about this sample and other samples available for WIF and about where to download them, see [WIF Code Sample Index](/previous-versions/dotnet/framework/windows-identity-foundation/wif-code-sample-index). The following code shows the override of the <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo> property.
 
  :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtokenconstants.cs" id="Snippet1":::
 :::code language="csharp" source="~/snippets/csharp/System.IdentityModel.Tokens/SecurityToken/Overview/simplewebtoken.cs" id="Snippet3":::

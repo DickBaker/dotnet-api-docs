@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -25,11 +27,11 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To enable the spelling checker, set the <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A?displayProperty=nameWithType> property to `true` on a text-editing control. When this spelling checker is enabled, misspelled words are underlined by using a red wavy line, as shown in the following illustration. Spelling checker is supported only when WPF provides a default dictionary. In .NET Framework 4, WPF provides dictionaries for English, French, German, and Spanish.
+ To enable the spelling checker, set the <xref:System.Windows.Controls.SpellCheck.IsEnabled?displayProperty=nameWithType> property to `true` on a text-editing control. When this spelling checker is enabled, misspelled words are underlined by using a red wavy line, as shown in the following illustration. Spelling checker is supported only when WPF provides a default dictionary. In .NET Framework 4, WPF provides dictionaries for English, French, German, and Spanish.
 
  ![Textbox with spell&#45;checking](~/add/media/editing-textbox-with-spellchecking.png "Textbox with spell-checking")
 
- To add a custom dictionary, add the location of the lexicon file to the <xref:System.Windows.Controls.SpellCheck.CustomDictionaries%2A> collection.
+ To add a custom dictionary, add the location of the lexicon file to the <xref:System.Windows.Controls.SpellCheck.CustomDictionaries*> collection.
 
  ]]></format>
     </remarks>
@@ -51,6 +53,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IList</ReturnType>
@@ -62,23 +66,23 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Custom dictionaries use lexicon files, which are text files that have a .lex extension. Each line of a lexicon file contains a single word that is accepted as a legitimate spelling. The first line of the file can specify a locale identifier (LCID) that the dictionary applies to. If the locale is not specified, the dictionary applies to all languages. For more information, see [Locale IDs](https://go.microsoft.com/fwlink/?LinkId=165561). The following example shows the first few lines of a lexicon file for the English language.
+ Custom dictionaries use lexicon files, which are text files that have a .lex extension. Each line of a lexicon file contains a single word that is accepted as a legitimate spelling. The first line of the file can specify a locale identifier (LCID) that the dictionary applies to. If the locale is not specified, the dictionary applies to all languages. For more information, see [Locale IDs](https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). The following example shows the first few lines of a lexicon file for the English language.
 
-```
+```txt
 #LID 1033
 TextBlock
 TextBox
 ListBox
 ```
 
- To specify one or more custom dictionaries for a <xref:System.Windows.Controls.TextBox> or for any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, specify the location of the lexicon file by adding the URI for the file to the <xref:System.Windows.Controls.SpellCheck.CustomDictionaries%2A> collection.
+ To specify one or more custom dictionaries for a <xref:System.Windows.Controls.TextBox> or for any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, specify the location of the lexicon file by adding the URI for the file to the <xref:System.Windows.Controls.SpellCheck.CustomDictionaries*> collection.
 
 > [!NOTE]
->  Using <xref:System.Collections.IList.Insert%2A> to add a file to the <xref:System.Windows.Controls.SpellCheck.CustomDictionaries%2A> collection causes an exception. Instead, use <xref:System.Collections.IList.Add%2A> and <xref:System.Collections.IList.Remove%2A> to update the collection.
+> Using <xref:System.Collections.IList.Insert*> to add a file to the <xref:System.Windows.Controls.SpellCheck.CustomDictionaries*> collection causes an exception. Instead, use <xref:System.Collections.IList.Add*> and <xref:System.Collections.IList.Remove*> to update the collection.
 
- The lexicon files can be included in the application as content files installed on the local computer or as resource files compiled into a local referenced assembly. You can reference the file by using pack URIs. For more information, see [Pack URIs in WPF](/dotnet/framework/wpf/app-development/pack-uris-in-wpf).
+ The lexicon files can be included in the application as content files installed on the local computer or as resource files compiled into a local referenced assembly. You can reference the file by using pack URIs. For more information, see [Pack URIs in WPF](/dotnet/desktop/wpf/app-development/pack-uris-in-wpf).
 
- To enable the spelling checker, set the <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A?displayProperty=nameWithType> property to `true` on a <xref:System.Windows.Controls.TextBox> or on any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>. All custom dictionaries for that <xref:System.Windows.Controls.TextBox> are used in addition to the default spelling checker. For more information about the spelling checker, see <xref:System.Windows.Controls.SpellCheck>.
+ To enable the spelling checker, set the <xref:System.Windows.Controls.SpellCheck.IsEnabled?displayProperty=nameWithType> property to `true` on a <xref:System.Windows.Controls.TextBox> or on any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>. All custom dictionaries for that <xref:System.Windows.Controls.TextBox> are used in addition to the default spelling checker. For more information about the spelling checker, see <xref:System.Windows.Controls.SpellCheck>.
 
 
 
@@ -92,7 +96,7 @@ ListBox
  :::code language="xaml" source="~/snippets/csharp/System.Windows.Controls/SpellCheck/CustomDictionaries/window1.xaml" id="Snippet1":::
 
  :::code language="csharp" source="~/snippets/csharp/System.Windows.Controls/SpellCheck/CustomDictionaries/window1.xaml.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/wpfcustomdictionary/vb/mainwindow.xaml.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Windows.Controls/SpellCheck/CustomDictionaries/mainwindow.xaml.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -118,6 +122,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -143,12 +149,14 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IList</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="textBoxBase">The text-editing control whose collection of lexicon files is retrieved.</param>
@@ -158,18 +166,18 @@ ListBox
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Custom dictionaries use lexicon files, which are simple text files that have a .lex extension. Each line of a lexicon file contains a single word that is accepted as a legitimate spelling. The first line of the file can specify a locale identifier (LCID) that the dictionary applies to. If the locale is not specified, the dictionary applies to all languages. For more information, see [Locale IDs](https://go.microsoft.com/fwlink/?LinkId=165561). The following example shows the first few lines of a lexicon file for the English language.
+ Custom dictionaries use lexicon files, which are simple text files that have a .lex extension. Each line of a lexicon file contains a single word that is accepted as a legitimate spelling. The first line of the file can specify a locale identifier (LCID) that the dictionary applies to. If the locale is not specified, the dictionary applies to all languages. For more information, see [Locale IDs](https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). The following example shows the first few lines of a lexicon file for the English language.
 
-```
+```txt
 #LID 1033
 TextBlock
 TextBox
 ListBox
 ```
 
- To specify one or more custom dictionaries for a <xref:System.Windows.Controls.TextBox> or any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, specify the location of the lexicon file by adding the URI for the file to the <xref:System.Collections.IList> returned by the <xref:System.Windows.Controls.SpellCheck.GetCustomDictionaries%2A> method.
+ To specify one or more custom dictionaries for a <xref:System.Windows.Controls.TextBox> or any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, specify the location of the lexicon file by adding the URI for the file to the <xref:System.Collections.IList> returned by the <xref:System.Windows.Controls.SpellCheck.GetCustomDictionaries*> method.
 
- To enable the spelling checker, set the <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A?displayProperty=nameWithType> property to `true` on a <xref:System.Windows.Controls.TextBox> or on any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>. All custom dictionaries for that <xref:System.Windows.Controls.TextBox> are used in addition to the default spelling checker. For more information about the spelling checker, see <xref:System.Windows.Controls.SpellCheck>.
+ To enable the spelling checker, set the <xref:System.Windows.Controls.SpellCheck.IsEnabled?displayProperty=nameWithType> property to `true` on a <xref:System.Windows.Controls.TextBox> or on any class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>. All custom dictionaries for that <xref:System.Windows.Controls.TextBox> are used in addition to the default spelling checker. For more information about the spelling checker, see <xref:System.Windows.Controls.SpellCheck>.
 
  ]]></format>
         </remarks>
@@ -196,12 +204,14 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="textBoxBase" Type="System.Windows.Controls.Primitives.TextBoxBase" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="textBoxBase">The text-editing control to check. Example controls include <see cref="T:System.Windows.Controls.TextBox" /> and <see cref="T:System.Windows.Controls.RichTextBox" />.</param>
@@ -229,6 +239,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -241,7 +253,7 @@ ListBox
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This dependency property also has a specialized write-only attached property usage. The XAML syntax for setting the property is `<`*textBoxBaseClass* **SpellCheck.IsEnabled**`="`*boolValue*`" .../>`, where *textBoxBaseClass* is an object element for a class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, and *boolValue* is either `true` or `false` (case insensitive). To set the property as an attached property in code, see the <xref:System.Windows.Controls.SpellCheck.SetIsEnabled%2A> method. There is no matching `GetIsEnabled` accessor. To get the value, get the current <xref:System.Windows.Controls.SpellCheck> object from the <xref:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck%2A?displayProperty=nameWithType> property, and then get the value of the <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> property from that <xref:System.Windows.Controls.SpellCheck>.
+ This dependency property also has a specialized write-only attached property usage. The XAML syntax for setting the property is `<`*textBoxBaseClass* **SpellCheck.IsEnabled**`="`*boolValue*`" .../>`, where *textBoxBaseClass* is an object element for a class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, and *boolValue* is either `true` or `false` (case insensitive). To set the property as an attached property in code, see the <xref:System.Windows.Controls.SpellCheck.SetIsEnabled*> method. There is no matching `GetIsEnabled` accessor. To get the value, get the current <xref:System.Windows.Controls.SpellCheck> object from the <xref:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck?displayProperty=nameWithType> property, and then get the value of the <xref:System.Windows.Controls.SpellCheck.IsEnabled> property from that <xref:System.Windows.Controls.SpellCheck>.
 
 <a name="dependencyPropertyInfo_IsEnabled"></a>
 ## Dependency Property Information
@@ -272,6 +284,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>
@@ -298,6 +312,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -314,7 +330,7 @@ ListBox
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- This method enables an attached property usage for the <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> property in XAML. The following example shows the XAML usage.
+ This method enables an attached property usage for the <xref:System.Windows.Controls.SpellCheck.IsEnabled> property in XAML. The following example shows the XAML usage.
 
  ]]></format>
         </remarks>
@@ -337,6 +353,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -355,7 +373,7 @@ ListBox
 ## Remarks
  The spelling reform rules that are accessed by this method refer to the French and German spelling reforms of the 1990's. This method has no effect when it is used with any other language.
 
- This method enables an attached property usage for the <xref:System.Windows.Controls.SpellCheck.SpellingReform%2A> property in XAML.
+ This method enables an attached property usage for the <xref:System.Windows.Controls.SpellCheck.SpellingReform> property in XAML.
 
  ]]></format>
         </remarks>
@@ -378,6 +396,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Controls.SpellingReform</ReturnType>
@@ -391,7 +411,7 @@ ListBox
 ## Remarks
  The spelling reform rules that are determined by this property refer to the French and German spelling reforms. This property has no effect when it is used with any other language.
 
- This dependency property also has a specialized write-only attached property usage. The XAML syntax for setting the property is `<`*textBoxBaseClass* **SpellCheck.SpellingReform**`="`*enumValue*`" .../>`, where *textBoxBaseClass* is an object element for a class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, and *enumValue* is a string name for a value of the <xref:System.Windows.Controls.SpellingReform> enumeration. To set the property as an attached property in code, see the <xref:System.Windows.Controls.SpellCheck.SetSpellingReform%2A> method. There is no matching `GetSpellingReform` accessor. To get the value, get the current <xref:System.Windows.Controls.SpellCheck> object from the <xref:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck%2A?displayProperty=nameWithType> property, and then get the value of the <xref:System.Windows.Controls.SpellCheck.SpellingReform%2A> property from that <xref:System.Windows.Controls.SpellCheck>.
+ This dependency property also has a specialized write-only attached property usage. The XAML syntax for setting the property is `<`*textBoxBaseClass* **SpellCheck.SpellingReform**`="`*enumValue*`" .../>`, where *textBoxBaseClass* is an object element for a class that derives from <xref:System.Windows.Controls.Primitives.TextBoxBase>, and *enumValue* is a string name for a value of the <xref:System.Windows.Controls.SpellingReform> enumeration. To set the property as an attached property in code, see the <xref:System.Windows.Controls.SpellCheck.SetSpellingReform*> method. There is no matching `GetSpellingReform` accessor. To get the value, get the current <xref:System.Windows.Controls.SpellCheck> object from the <xref:System.Windows.Controls.Primitives.TextBoxBase.SpellCheck?displayProperty=nameWithType> property, and then get the value of the <xref:System.Windows.Controls.SpellCheck.SpellingReform> property from that <xref:System.Windows.Controls.SpellCheck>.
 
 <a name="dependencyPropertyInfo_SpellingReform"></a>
 ## Dependency Property Information
@@ -422,6 +442,8 @@ ListBox
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.DependencyProperty</ReturnType>

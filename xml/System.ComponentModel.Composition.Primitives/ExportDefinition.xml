@@ -12,13 +12,18 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -48,23 +53,23 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Derived types that call this constructor must override the <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.ContractName%2A> property and optionally, the <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.Metadata%2A> property. By default, <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.Metadata%2A> returns an empty, read-only dictionary.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Derived types that call this constructor must override the <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.ContractName> property and optionally, the <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.Metadata> property. By default, <xref:System.ComponentModel.Composition.Primitives.ExportDefinition.Metadata*> returns an empty, read-only dictionary.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public ExportDefinition (string contractName, System.Collections.Generic.IDictionary&lt;string,object?&gt;? metadata);" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public ExportDefinition (string contractName, System.Collections.Generic.IDictionary&lt;string,object?&gt;? metadata);" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; metadata) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ExportDefinition.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (contractName As String, metadata As IDictionary(Of String, Object))" />
@@ -75,13 +80,13 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="contractName" Type="System.String" />
         <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 2 })&gt;]</AttributeName>
             </Attribute>
@@ -110,7 +115,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -119,18 +124,18 @@
         <summary>Gets the contract name.</summary>
         <value>The contract name of the <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" /> object.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Overrides of this property should never return `null` or an empty string ("").  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Overrides of this property should never return `null` or an empty string ("").
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotImplementedException">The property was not overridden by a derived class.</exception>
       </Docs>
     </Member>
     <Member MemberName="Metadata">
-      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object?&gt; Metadata { get; }" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object?&gt; Metadata { get; }" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netstandard-2.0-pp" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Metadata" />
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ExportDefinition.Metadata" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Metadata As IDictionary(Of String, Object)" />
@@ -141,10 +146,10 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 1, 1, 2 })&gt;]</AttributeName>
         </Attribute>
@@ -160,13 +165,13 @@
         <summary>Gets the contract metadata.</summary>
         <value>The metadata of the <see cref="T:System.ComponentModel.Composition.Primitives.ExportDefinition" />. The default is an empty, read-only <see cref="T:System.Collections.Generic.IDictionary`2" /> object.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Overrides of this property should return a read-only <xref:System.Collections.Generic.IDictionary%602> object with a case-sensitive, non-linguistic comparer, such as <xref:System.StringComparer.Ordinal%2A>, and should never return `null`.  
-  
- If the <xref:System.ComponentModel.Composition.Primitives.ExportDefinition> does not contain metadata, return an empty <xref:System.Collections.Generic.IDictionary%602> instead.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Overrides of this property should return a read-only <xref:System.Collections.Generic.IDictionary`2> object with a case-sensitive, non-linguistic comparer, such as <xref:System.StringComparer.Ordinal*>, and should never return `null`.
+
+ If the <xref:System.ComponentModel.Composition.Primitives.ExportDefinition> does not contain metadata, return an empty <xref:System.Collections.Generic.IDictionary`2> instead.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -182,7 +187,7 @@
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">

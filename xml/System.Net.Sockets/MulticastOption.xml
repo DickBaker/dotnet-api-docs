@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -30,6 +32,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Net.Sockets" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -41,7 +45,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -52,7 +56,7 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Use a <xref:System.Net.Sockets.MulticastOption> to store the <xref:System.Net.IPAddress> of a multicast group you want to join or drop. Use the <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> method with the following parameters to join a multicast group.
+ Use a <xref:System.Net.Sockets.MulticastOption> to store the <xref:System.Net.IPAddress> of a multicast group you want to join or drop. Use the <xref:System.Net.Sockets.Socket.SetSocketOption*?displayProperty=nameWithType> method with the following parameters to join a multicast group.
 
 |Parameter|Value|
 |---------------|-----------|
@@ -65,13 +69,11 @@
 ## Examples
  The following examples join the default IP interface to an IP multicast group. They assume the IP multicast group address in the range 224.0.0.0 to 239.255.255.255.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.Sockets/MulticastOption/Overview/listener.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net.Sockets/MulticastOption/Overview/listener.vb" id="Snippet1":::
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionSender/CPP/sender.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.Sockets/MulticastOption/Overview/sender.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionSender/VB/sender.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net.Sockets/MulticastOption/Overview/sender.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
@@ -106,6 +108,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -156,6 +160,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -169,8 +175,8 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="group" Type="System.Net.IPAddress" Index="0" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
-        <Parameter Name="interfaceIndex" Type="System.Int32" Index="1" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="group" Type="System.Net.IPAddress" Index="0" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
+        <Parameter Name="interfaceIndex" Type="System.Int32" Index="1" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-1.3;netstandard-1.4;netstandard-1.6;netstandard-2.0;netstandard-2.1" />
       </Parameters>
       <Docs>
         <param name="group">The IP address of the multicast group.</param>
@@ -198,6 +204,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -228,9 +236,8 @@
 ## Examples
  The following example creates a <xref:System.Net.Sockets.MulticastOption> object.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.Sockets/MulticastOption/Overview/listener.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb" id="Snippet2":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net.Sockets/MulticastOption/Overview/listener.vb" id="Snippet2":::
 
  ]]></format>
         </remarks>
@@ -261,6 +268,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -299,9 +308,8 @@
 ## Examples
  The following example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.Sockets/MulticastOption/Overview/listener.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net.Sockets/MulticastOption/Overview/listener.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>
@@ -328,6 +336,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -356,7 +366,7 @@
       </Docs>
     </Member>
     <Member MemberName="LocalAddress">
-      <MemberSignature Language="C#" Value="public System.Net.IPAddress? LocalAddress { get; set; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress? LocalAddress { get; set; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress LocalAddress" />
       <MemberSignature Language="DocId" Value="P:System.Net.Sockets.MulticastOption.LocalAddress" />
       <MemberSignature Language="VB.NET" Value="Public Property LocalAddress As IPAddress" />
@@ -375,6 +385,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -389,7 +401,7 @@
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -408,14 +420,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Net.Sockets.MulticastOption.LocalAddress%2A> property contains the IP address of the interface associated with the multicast group membership. If <xref:System.Net.Sockets.MulticastOption.LocalAddress%2A> is set to <xref:System.Net.IPAddress.Any>, the default interface is used.
+ The <xref:System.Net.Sockets.MulticastOption.LocalAddress> property contains the IP address of the interface associated with the multicast group membership. If <xref:System.Net.Sockets.MulticastOption.LocalAddress*> is set to <xref:System.Net.IPAddress.Any>, the default interface is used.
 
 ## Examples
  The following example displays the value of this property.
 
- :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/CPP/listener.cpp" id="Snippet3":::
  :::code language="csharp" source="~/snippets/csharp/System.Net.Sockets/MulticastOption/Overview/listener.cs" id="Snippet3":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Sockets.MulticastOptionListener/VB/listener.vb" id="Snippet3":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Net.Sockets/MulticastOption/Overview/listener.vb" id="Snippet3":::
 
  ]]></format>
         </remarks>

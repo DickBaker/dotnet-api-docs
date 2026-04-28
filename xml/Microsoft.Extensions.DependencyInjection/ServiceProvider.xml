@@ -17,6 +17,10 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -44,7 +48,7 @@
       <AttributeName Language="C#">[System.Diagnostics.DebuggerTypeProxy(typeof(Microsoft.Extensions.DependencyInjection.ServiceProvider+ServiceProviderDebugView))]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerTypeProxy(typeof(Microsoft.Extensions.DependencyInjection.ServiceProvider+ServiceProviderDebugView))&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -69,15 +73,23 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+            Disposes the service provider and all resolved services that implement <see cref="T:System.IDisposable" />.
+            </summary>
+        <remarks>
+            Prefer calling <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.DisposeAsync" /> over this method. If any resolved service implements
+            <see cref="T:System.IAsyncDisposable" /> but not <see cref="T:System.IDisposable" />, this method throws an
+            <see cref="T:System.InvalidOperationException" />. Use <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.DisposeAsync" /> to properly handle all
+            disposable services, or explicitly perform sync-over-async on the caller side if synchronous
+            disposal is required.
+            </remarks>
         <inheritdoc />
       </Docs>
     </Member>
@@ -94,16 +106,22 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources asynchronously.</summary>
-        <returns>A task that represents the asynchronous dispose operation.</returns>
-        <remarks>This method stores in the task it returns all non-usage exceptions that the method's synchronous counterpart can throw. If an exception is stored into the returned task, that exception will be thrown when the task is awaited. Usage exceptions, such as <see cref="T:System.ArgumentException" />, are still thrown synchronously. For the stored exceptions, see the exceptions thrown by <see cref="M:Microsoft.Extensions.DependencyInjection.ServiceProvider.Dispose" />.</remarks>
+        <summary>
+            Asynchronously disposes the service provider and all resolved services that implement <see cref="T:System.IDisposable" /> or <see cref="T:System.IAsyncDisposable" />.
+            </summary>
+        <returns>A value task that represents the asynchronous operation.</returns>
+        <remarks>
+            Awaiting individual <see cref="M:System.IAsyncDisposable.DisposeAsync" /> calls uses <c>ConfigureAwait(false)</c>,
+            so when an asynchronous dispose operation yields, its continuations do not attempt to resume on the original
+            synchronization context. Services should not rely on disposal continuations running on any particular context.
+            </remarks>
         <inheritdoc />
       </Docs>
     </Member>
@@ -120,7 +138,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -128,7 +146,7 @@
       <Parameters>
         <Parameter Name="serviceType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(1)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(1)&gt;]</AttributeName>
             </Attribute>
@@ -144,6 +162,9 @@
             </summary>
         <returns>The keyed service.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The <see cref="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey" /> value is used for <paramref name="serviceKey" />
+            when <paramref name="serviceType" /> is not an enumerable based on <see cref="T:System.Collections.Generic.IEnumerable`1" />.
+            </exception>
       </Docs>
     </Member>
     <Member MemberName="GetRequiredKeyedService">
@@ -159,7 +180,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -168,7 +189,7 @@
         <Parameter Name="serviceType" Type="System.Type" />
         <Parameter Name="serviceKey" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -183,7 +204,9 @@
             </summary>
         <returns>The keyed service.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.InvalidOperationException">The service wasn't found.</exception>
+        <exception cref="T:System.InvalidOperationException">The service wasn't found or the <see cref="P:Microsoft.Extensions.DependencyInjection.KeyedService.AnyKey" /> value is used
+            for <paramref name="serviceKey" /> when <paramref name="serviceType" /> is not an enumerable based on <see cref="T:System.Collections.Generic.IEnumerable`1" />.
+            </exception>
       </Docs>
     </Member>
     <Member MemberName="GetService">
@@ -199,12 +222,12 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.DependencyInjection</AssemblyName>
-        <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
         <Attributes>
-          <Attribute FrameworkAlternate="net-8.0-pp">
+          <Attribute FrameworkAlternate="net-10.0-pp">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
           </Attribute>

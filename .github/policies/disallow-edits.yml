@@ -10,6 +10,8 @@ configuration:
           - payloadType: Pull_Request
           - isAction:
               action: Opened
+          - targetsBranch:
+              branch: main
           - or:
               - filesMatchPattern:
                   pattern: xml/Microsoft.Extensions*/*
@@ -19,10 +21,13 @@ configuration:
                     - xml/Microsoft.Extensions.FileSystemGlobbing.*/*
               - filesMatchPattern:
                   matchAny: true
-                  pattern: xml/System.Composition/*
+                  pattern: xml/System.CommandLine*/*
               - filesMatchPattern:
                   matchAny: true
-                  pattern: xml/System.Diagnostics.EventLog.Messages/*
+                  pattern: xml/System.Composition*/*
+              - filesMatchPattern:
+                  matchAny: true
+                  pattern: xml/System.Diagnostics/FileVersionInfo.xml
               - filesMatchPattern:
                   matchAny: true
                   pattern: xml/System.Formats.Asn1/*
@@ -34,13 +39,25 @@ configuration:
                   pattern: xml/System.Formats.Nrbf/*
               - filesMatchPattern:
                   matchAny: true
+                  pattern: xml/System.Linq/AsyncEnumerable.xml
+              - filesMatchPattern:
+                  matchAny: true
+                  pattern: xml/System.Linq/IOrderedAsyncEnumerable`1.xml
+              - filesMatchPattern:
+                  matchAny: true
                   pattern: xml/System.Net.ServerSentEvents/*
+              - filesMatchPattern:
+                  matchAny: true
+                  pattern: xml/System.Net/WebProxy.xml
               - filesMatchPattern:
                   matchAny: true
                   pattern: xml/System.Numerics.Tensors/*
               - filesMatchPattern:
                   matchAny: true
-                  pattern: xml/System.Runtime.Serialization.Schema/*
+                  pattern: xml/System.Reflection.Context/*
+              - filesMatchPattern:
+                  matchAny: true
+                  pattern: xml/System.Reflection/DispatchProxy.xml
               - filesMatchPattern:
                   matchAny: true
                   pattern: xml/System.Runtime.Serialization/ISerializationCodeDomSurrogateProvider.xml
@@ -50,10 +67,13 @@ configuration:
               - filesMatchPattern:
                   matchAny: true
                   pattern: xml/System.Runtime.Serialization/XsdDataContractExporter.xml
+              - filesMatchPattern:
+                  matchAny: true
+                  pattern: xml/System.Text.RegularExpressions/*
         then:
             - addReply:
                 reply: >-
-                  @${issueAuthor} - This PR edits one or more files whose 'source of truth' for documentation is not in this repo. Please make documentation updates in the /// comments in the dotnet/runtime repo (or dotnet/extensions repo) instead.
+                  ${issueAuthor} - This PR edits one or more files whose 'source of truth' for documentation is not in this repo. Please make documentation updates in the /// comments in the dotnet/runtime repo (or dotnet/extensions repo) instead.
             - if:
                 - or:
                     - activitySenderHasPermission:

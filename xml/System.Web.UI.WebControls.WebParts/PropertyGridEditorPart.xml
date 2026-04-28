@@ -24,14 +24,14 @@
 
  Just as there are tool-oriented zones in the Web Parts control set (for details, see the <xref:System.Web.UI.WebControls.WebParts.ToolZone> class overview), there are tool-oriented part controls, and each of these must reside in a corresponding type of tool zone. These kind of controls in the Web Parts control set have two distinguishing characteristics:
 
--   They are helper controls that enable end users to personalize the controls that form the primary UI of a page in a Web Parts application.
+- They are helper controls that enable end users to personalize the controls that form the primary UI of a page in a Web Parts application.
 
--   They are visible only in certain page display modes.
+- They are visible only in certain page display modes.
 
  The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control is a special control, and it becomes visible only when a Web page is in edit mode, and when a specific <xref:System.Web.UI.WebControls.WebParts.WebPart> or server control has been selected by a user for editing. The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, like all other <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls, must reside in an <xref:System.Web.UI.WebControls.WebParts.EditorZone> zone on the page.
 
 > [!IMPORTANT]
->  An <xref:System.Web.UI.WebControls.WebParts.EditorZone> zone can contain only <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls, and <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls cannot be placed in any other type of zone.
+> An <xref:System.Web.UI.WebControls.WebParts.EditorZone> zone can contain only <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls, and <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls cannot be placed in any other type of zone.
 
  The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control provides an editing UI for properties that are marked in the source code with the `WebBrowsable` attribute (from the <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> class). When a property is marked with this attribute, a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control creates the editing UI based on the type of the property, and uses a <xref:System.ComponentModel.PropertyDescriptor> object if needed to convert the value in each editing control to the type of the property. You can also add other attributes that help the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control to display the editing UI. The `WebDisplayName` attribute (from the <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute> class) allows you to specify the text for the label that appears with each control in the editing UI. The `WebDescription` attribute (from the <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute> class) allows you to specify a string that appears as a ToolTip for each control in the editing UI.
 
@@ -45,14 +45,14 @@
 |<xref:System.Enum>|<xref:System.Web.UI.WebControls.DropDownList> (contains the list of enumerated values)|
 |<xref:System.DateTime>|<xref:System.Web.UI.WebControls.TextBox>|
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class has a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> property, which is used to get or set the visible title text for the control. There is also a protected <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> property, which determines whether the control is displayed when the page enters edit mode.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class has a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title> property, which is used to get or set the visible title text for the control. There is also a protected <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display> property, which determines whether the control is displayed when the page enters edit mode.
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class also has two important methods, <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.ApplyChanges%2A> and <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.SyncChanges%2A>, which it inherits from the <xref:System.Web.UI.WebControls.WebParts.EditorPart> class and overrides. The methods are critical because they enable getting and setting the property values between the field values of the editor control and the properties on the <xref:System.Web.UI.WebControls.WebParts.WebPart> control being edited.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class also has two important methods, <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.ApplyChanges*> and <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.SyncChanges*>, which it inherits from the <xref:System.Web.UI.WebControls.WebParts.EditorPart> class and overrides. The methods are critical because they enable getting and setting the property values between the field values of the editor control and the properties on the <xref:System.Web.UI.WebControls.WebParts.WebPart> control being edited.
 
  Because the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control allows you to edit only custom properties, you will need the other <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls in the Web Parts control set to edit the appearance, layout, and behavior of <xref:System.Web.UI.WebControls.WebParts.WebPart> controls. The other controls include the <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart>, the <xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart>, and the <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controls. These <xref:System.Web.UI.WebControls.WebParts.EditorPart> controls should provide most editing features required to edit <xref:System.Web.UI.WebControls.WebParts.WebPart> controls, but if necessary, you can also create a custom editor control by inheriting from the <xref:System.Web.UI.WebControls.WebParts.EditorPart> class. For a code example, see the <xref:System.Web.UI.WebControls.WebParts.EditorPart> class overview topic.
 
 > [!NOTE]
->  To improve accessibility, the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control is rendered within a `<fieldset>` element. The `<fieldset>` element groups the related set of controls used for editing in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, and it facilitates tabbed navigation among those controls for both visual user agents (such as ordinary Web browsers) and speech-oriented user agents (such as screen-reading software).
+> To improve accessibility, the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control is rendered within a `<fieldset>` element. The `<fieldset>` element groups the related set of controls used for editing in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, and it facilitates tabbed navigation among those controls for both visual user agents (such as ordinary Web browsers) and speech-oriented user agents (such as screen-reading software).
 
 ## Accessibility
  The markup rendered by default for this control might not conform to accessibility standards such as the Web Content Accessibility Guidelines 1.0 (WCAG) priority 1 guidelines. For details about accessibility support for this control, see [ASP.NET Controls and Accessibility](https://learn.microsoft.com/previous-versions/ms227996(v=vs.140)).
@@ -62,13 +62,13 @@
 ## Examples
  The following code example demonstrates how to declare a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control on a Web page, and enable it to edit several UI properties of a <xref:System.Web.UI.WebControls.WebParts.WebPart> control. The code example has four parts:
 
--   A user control that enables you to change display modes on a Web Parts page.
+- A user control that enables you to change display modes on a Web Parts page.
 
--   A Web page that contains an <xref:System.Web.UI.WebControls.WebParts.EditorZone> control and a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, along with a reference to a custom <xref:System.Web.UI.WebControls.WebParts.WebPart> control.
+- A Web page that contains an <xref:System.Web.UI.WebControls.WebParts.EditorZone> control and a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, along with a reference to a custom <xref:System.Web.UI.WebControls.WebParts.WebPart> control.
 
--   A class that contains the custom <xref:System.Web.UI.WebControls.WebParts.WebPart> control.
+- A class that contains the custom <xref:System.Web.UI.WebControls.WebParts.WebPart> control.
 
--   An explanation of how the example works when you load the page in a browser.
+- An explanation of how the example works when you load the page in a browser.
 
  The source code for the user control comes from another topic. For this code example to work, you need to obtain the .ascx file for the user control from the [Walkthrough: Changing Display Modes on a Web Parts Page](https://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) topic, and place the file in the same folder as the .aspx page in this code example.
 
@@ -82,7 +82,7 @@
  For the code example to run, you must compile this source code. You can compile it explicitly and put the resulting assembly in your Web site's Bin folder or the global assembly cache. Alternatively, you can put the source code in your site's App_Code folder, where it will be dynamically compiled at run time. For a walkthrough that demonstrates how to compile, see [Walkthrough: Developing and Using a Custom Web Server Control](https://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).
 
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://learn.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100)).
+> This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://learn.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100)).
 
  [!code-csharp[WebParts_PropertyGridEditorPart_Overview#5](~/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#5)]
  [!code-vb[WebParts_PropertyGridEditorPart_Overview#5](~/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#5)]
@@ -122,7 +122,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.%23ctor%2A> constructor is a default; no constructor is declared in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class and hence no special tasks are carried out when a new instance of the class is created.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.%23ctor*> constructor is a default; no constructor is declared in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class and hence no special tasks are carried out when a new instance of the class is created.
 
  ]]></format>
         </remarks>
@@ -154,14 +154,14 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> method is a critical method on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control. The method saves the values a user has set on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control to the corresponding properties in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control. The associated control is referenced in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control's inherited <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> property.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges*> method is a critical method on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control. The method saves the values a user has set on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control to the corresponding properties in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control. The associated control is referenced in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control's inherited <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit> property.
 
 > [!IMPORTANT]
->  You cannot override the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> method because the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> type is sealed to prevent inheriting from it. However, if you need more programmatic control over the process of editing various <xref:System.Web.UI.WebControls.WebParts.WebPart> control properties than the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control provides, you can create a custom <xref:System.Web.UI.WebControls.WebParts.EditorPart> control and provide your own implementation of this method. For a code example, see the <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> method.
+> You cannot override the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges*> method because the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> type is sealed to prevent inheriting from it. However, if you need more programmatic control over the process of editing various <xref:System.Web.UI.WebControls.WebParts.WebPart> control properties than the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control provides, you can create a custom <xref:System.Web.UI.WebControls.WebParts.EditorPart> control and provide your own implementation of this method. For a code example, see the <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges*> method.
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> method attempts to set the values on public custom properties in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control, provided that those properties each have a `[WebBrowsable(true)]` attribute.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges*> method attempts to set the values on public custom properties in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control, provided that those properties each have a `[WebBrowsable(true)]` attribute.
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> method is called when the user clicks a button representing an OK or an apply verb in the editing user interface (UI). You can also call it directly from your own code if there is a need to save the edited values apart from user actions.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges*> method is called when the user clicks a button representing an OK or an apply verb in the editing user interface (UI). You can also call it directly from your own code if there is a need to save the edited values apart from user actions.
 
  ]]></format>
         </remarks>
@@ -263,9 +263,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> property returns `false` if the value on the base property is also `false`. Otherwise, if the control to be edited is not `null`, then the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control is displayed.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display> property returns `false` if the value on the base property is also `false`. Otherwise, if the control to be edited is not `null`, then the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control is displayed.
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> property applies only when a page is in edit mode, and a <xref:System.Web.UI.WebControls.WebParts.WebPart> control has been selected for editing.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display> property applies only when a page is in edit mode, and a <xref:System.Web.UI.WebControls.WebParts.WebPart> control has been selected for editing.
 
  ]]></format>
         </remarks>
@@ -346,9 +346,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> method is a critical method on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control. It implements the <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A?displayProperty=nameWithType> method from the base class, retrieves the current values from the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control, and updates the controls in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control with those values so a user can edit them.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges*> method is a critical method on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control. It implements the <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges*?displayProperty=nameWithType> method from the base class, retrieves the current values from the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control, and updates the controls in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control with those values so a user can edit them.
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> method is called whenever the values in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control might have changed. For a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, the <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zone that contains the control calls the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> method immediately after calling the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> method, so that the values in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control are always synchronized with the values in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control. Another case where the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> method is called is when a <xref:System.Web.UI.WebControls.WebParts.WebPart> control is entering edit mode.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges*> method is called whenever the values in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control might have changed. For a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control, the <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zone that contains the control calls the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges*> method immediately after calling the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges*> method, so that the values in the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control are always synchronized with the values in the associated <xref:System.Web.UI.WebControls.WebParts.WebPart> control. Another case where the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges*> method is called is when a <xref:System.Web.UI.WebControls.WebParts.WebPart> control is entering edit mode.
 
  ]]></format>
         </remarks>
@@ -378,21 +378,21 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> property value is displayed in the title bar of a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control when the control is visible in edit mode. When the control is declared in a page, you can set a value for the `Title` attribute. If you do not supply a value for the title, a culture-specific default value is supplied.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title> property value is displayed in the title bar of a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control when the control is visible in edit mode. When the control is declared in a page, you can set a value for the `Title` attribute. If you do not supply a value for the title, a culture-specific default value is supplied.
 
- The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> property overrides the base property so that, if no title value is supplied, a default title appropriate to a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control can be supplied by the Web Parts control set.
+ The <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title> property overrides the base property so that, if no title value is supplied, a default title appropriate to a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control can be supplied by the Web Parts control set.
 
 
 
 ## Examples
- This code example demonstrates how to use the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> property of a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control. For the full code required to run the example, see the Example section of the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class overview topic.
+ This code example demonstrates how to use the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title> property of a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control. For the full code required to run the example, see the Example section of the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> class overview topic.
 
  The following code example shows how to set the title on a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control declaratively in a Web page.
 
  [!code-aspx-csharp[WebParts_PropertyGridEditorPart_Overview#2](~/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#2)]
  [!code-aspx-vb[WebParts_PropertyGridEditorPart_Overview#2](~/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#2)]
 
- The next part of the code example shows how to set the value of the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> property programmatically. In order to persist the programmatically assigned value, a static variable named `editControlTitle` is used, and this value is assigned to the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> property each time the control is initialized, so that the value is persisted between postback events.
+ The next part of the code example shows how to set the value of the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title> property programmatically. In order to persist the programmatically assigned value, a static variable named `editControlTitle` is used, and this value is assigned to the <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title> property each time the control is initialized, so that the value is persisted between postback events.
 
  [!code-csharp[WebParts_PropertyGridEditorPart_Overview#3](~/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#3)]
  [!code-vb[WebParts_PropertyGridEditorPart_Overview#3](~/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#3)]

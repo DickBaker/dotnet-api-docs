@@ -16,6 +16,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
@@ -30,6 +32,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.Primitives" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.Primitives" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.Primitives" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.ComponentModel.Primitives" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -41,11 +45,11 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-3.0;netcore-3.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1">
       <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.All)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.All)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -53,30 +57,30 @@
   <Docs>
     <summary>Specifies a description for a property or event.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- A visual designer can display the specified description when referencing the component member, such as in a Properties window. Call <xref:System.ComponentModel.DescriptionAttribute.Description%2A> to access the value of this attribute.  
-  
- For more information, see [Attributes](/dotnet/standard/attributes/).  
-  
-   
-  
-## Examples  
- The following example creates the `MyImage` property. The property has two attributes, a <xref:System.ComponentModel.DescriptionAttribute> and a <xref:System.ComponentModel.CategoryAttribute>.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ A visual designer can display the specified description when referencing the component member, such as in a Properties window. Call <xref:System.ComponentModel.DescriptionAttribute.Description*> to access the value of this attribute.
+
+ For more information, see [Attributes](/dotnet/standard/attributes/).
+
+
+
+## Examples
+ The following example creates the `MyImage` property. The property has two attributes, a <xref:System.ComponentModel.DescriptionAttribute> and a <xref:System.ComponentModel.CategoryAttribute>.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic DescriptionAttribute Example/CPP/source.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/DescriptionAttribute/Overview/source.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic DescriptionAttribute Example/VB/source.vb" id="Snippet1":::  
-  
- The next example gets the description of `MyImage`. First the code gets a <xref:System.ComponentModel.PropertyDescriptorCollection> with all the properties for the object. Next it indexes into the <xref:System.ComponentModel.PropertyDescriptorCollection> to get `MyImage`. Then it returns the attributes for this property and saves them in the attributes variable.  
-  
- The example then prints the description by retrieving <xref:System.ComponentModel.DescriptionAttribute> from the <xref:System.ComponentModel.AttributeCollection>, and writing it to the console screen.  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/DescriptionAttribute/Overview/source.vb" id="Snippet1":::
+
+ The next example gets the description of `MyImage`. First the code gets a <xref:System.ComponentModel.PropertyDescriptorCollection> with all the properties for the object. Next it indexes into the <xref:System.ComponentModel.PropertyDescriptorCollection> to get `MyImage`. Then it returns the attributes for this property and saves them in the attributes variable.
+
+ The example then prints the description by retrieving <xref:System.ComponentModel.DescriptionAttribute> from the <xref:System.ComponentModel.AttributeCollection>, and writing it to the console screen.
+
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/Classic DescriptionAttribute Example/CPP/source.cpp" id="Snippet2":::
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel/DescriptionAttribute/Overview/source.cs" id="Snippet2":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/Classic DescriptionAttribute Example/VB/source.vb" id="Snippet2":::  
-  
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel/DescriptionAttribute/Overview/source.vb" id="Snippet2":::
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Attribute" />
@@ -112,6 +116,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -150,6 +156,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -197,6 +205,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -237,6 +247,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -285,6 +297,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -315,19 +329,19 @@
         <summary>Gets or sets the string stored as the description.</summary>
         <value>The string stored as the description. The default value is an empty string ("").</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default implementation of the <xref:System.ComponentModel.DescriptionAttribute.Description%2A> property simply returns this value.  
-  
- This extra property exists so that you can derive from <xref:System.ComponentModel.DescriptionAttribute> and provide a localized version. The derived localizable <xref:System.ComponentModel.DescriptionAttribute> will maintain a private Boolean field to indicate if it has been localized. On the first access to the <xref:System.ComponentModel.DescriptionAttribute.Description%2A> property, it will look up the localized string and store it back in the <xref:System.ComponentModel.DescriptionAttribute.DescriptionValue%2A> property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default implementation of the <xref:System.ComponentModel.DescriptionAttribute.Description> property simply returns this value.
+
+ This extra property exists so that you can derive from <xref:System.ComponentModel.DescriptionAttribute> and provide a localized version. The derived localizable <xref:System.ComponentModel.DescriptionAttribute> will maintain a private Boolean field to indicate if it has been localized. On the first access to the <xref:System.ComponentModel.DescriptionAttribute.Description> property, it will look up the localized string and store it back in the <xref:System.ComponentModel.DescriptionAttribute.DescriptionValue> property.
+
  ]]></format>
         </remarks>
       </Docs>
     </Member>
     <Member MemberName="Equals">
-      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DescriptionAttribute.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
@@ -346,6 +360,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -365,7 +381,7 @@
       <Parameters>
         <Parameter Name="obj" Type="System.Object">
           <Attributes>
-            <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Diagnostics.CodeAnalysis.NotNullWhen(true)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Diagnostics.CodeAnalysis.NotNullWhen(true)&gt;]</AttributeName>
             </Attribute>
@@ -399,6 +415,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -452,6 +470,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -462,11 +482,11 @@
         <returns>
           <see langword="true" />, if this is the default <see cref="T:System.ComponentModel.DescriptionAttribute" /> instance; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The default value is an empty string ("").  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The default value is an empty string ("").
+
  ]]></format>
         </remarks>
       </Docs>

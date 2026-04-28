@@ -3,7 +3,7 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProviderCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:System.Configuration.Provider.ProviderCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class ProviderCollection&#xA;Implements ICollection" />
-  <TypeSignature Language="F#" Value="type ProviderCollection = class&#xA;    interface ICollection&#xA;    interface IEnumerable" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="F#" Value="type ProviderCollection = class&#xA;    interface ICollection&#xA;    interface IEnumerable" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProviderCollection : System::Collections::ICollection" />
   <TypeSignature Language="F#" Value="type ProviderCollection = class&#xA;    interface IEnumerable&#xA;    interface ICollection" FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
   <AssemblyInfo>
@@ -21,7 +21,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Configuration.ConfigurationManager" FromVersion="11.0.0.0" To="System.Configuration" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -36,11 +41,11 @@
   <Docs>
     <summary>Represents a collection of provider objects that inherit from <see cref="T:System.Configuration.Provider.ProviderBase" />.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.Provider.ProviderCollection> class utilizes an underlying <xref:System.Collections.Hashtable> object to store the provider name/value pairs.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.Provider.ProviderCollection> class utilizes an underlying <xref:System.Collections.Hashtable> object to store the provider name/value pairs.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -66,16 +71,18 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Configuration.Provider.ProviderCollection" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.Provider.ProviderCollection.%23ctor%2A> constructor initializes the underlying <xref:System.Collections.Hashtable> object used to store the items of the collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.Provider.ProviderCollection.%23ctor*> constructor initializes the underlying <xref:System.Collections.Hashtable> object used to store the items of the collection.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -102,6 +109,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -113,20 +122,20 @@
         <param name="provider">The provider to be added.</param>
         <summary>Adds a provider to the collection.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.Provider.ProviderCollection.Add%2A> method first checks for any exceptions (as listed in the Exceptions section), and then calls the <xref:System.Collections.Hashtable.Add%2A?displayProperty=nameWithType> method. It passes in the object referenced by the `provider` parameter as well as the <xref:System.Configuration.Provider.ProviderBase.Name%2A> property of the provider to be used as the key in the <xref:System.Collections.Hashtable> object.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.Provider.ProviderCollection.Add*> method first checks for any exceptions (as listed in the Exceptions section), and then calls the <xref:System.Collections.Hashtable.Add*?displayProperty=nameWithType> method. It passes in the object referenced by the `provider` parameter as well as the <xref:System.Configuration.Provider.ProviderBase.Name> property of the provider to be used as the key in the <xref:System.Collections.Hashtable> object.
+
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="provider" /> is <see langword="null" />.</exception>
-        <exception cref="T:System.ArgumentException">The <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> of <paramref name="provider" /> is <see langword="null" />.  
-  
+        <exception cref="T:System.ArgumentException">The <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> of <paramref name="provider" /> is <see langword="null" />.
+
 -or-
-  
+
  The length of the <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> of <paramref name="provider" /> is less than 1.</exception>
       </Docs>
     </Member>
@@ -152,6 +161,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -186,6 +197,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -199,11 +212,11 @@
         <param name="index">The index of the collection item at which to start the copying process.</param>
         <summary>Copies the contents of the collection to the given array starting at the specified index.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The array into which the items are copied must have zero-based indexing.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The array into which the items are copied must have zero-based indexing.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -233,6 +246,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -268,6 +283,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -277,11 +294,11 @@
         <summary>Returns an object that implements the <see cref="T:System.Collections.IEnumerator" /> interface to iterate through the collection.</summary>
         <returns>An object that implements <see cref="T:System.Collections.IEnumerator" /> to iterate through the collection.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.Provider.ProviderCollection> class stores its collection in a <xref:System.Collections.Hashtable> object. The <xref:System.Configuration.Provider.ProviderCollection.GetEnumerator%2A?displayProperty=nameWithType> method calls the <xref:System.Collections.Hashtable.GetEnumerator%2A?displayProperty=nameWithType> method.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.Provider.ProviderCollection> class stores its collection in a <xref:System.Collections.Hashtable> object. The <xref:System.Configuration.Provider.ProviderCollection.GetEnumerator*?displayProperty=nameWithType> method calls the <xref:System.Collections.Hashtable.GetEnumerator*?displayProperty=nameWithType> method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -311,6 +328,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -320,11 +339,11 @@
         <value>
           <see langword="false" /> in all cases.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property is included to fulfill the <xref:System.Collections.ICollection> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property is included to fulfill the <xref:System.Collections.ICollection> interface.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Collections.ICollection.IsSynchronized" />
@@ -352,6 +371,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.Provider.ProviderBase</ReturnType>
@@ -388,6 +409,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -424,6 +447,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -432,13 +457,13 @@
       <Docs>
         <summary>Sets the collection to be read-only.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The <xref:System.Configuration.Provider.ProviderCollection> class is read/write by default. The <xref:System.Configuration.Provider.ProviderCollection.SetReadOnly%2A> method makes the collection read-only. After a collection is set to read-only, some method calls (such as <xref:System.Configuration.Provider.ProviderCollection.Remove%2A> and <xref:System.Configuration.Provider.ProviderCollection.Add%2A> will result in an exception.  
-  
- Note that most provider-based features will set their <xref:System.Configuration.Provider.ProviderCollection> object to read-only after creating instances of all of the configured providers.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The <xref:System.Configuration.Provider.ProviderCollection> class is read/write by default. The <xref:System.Configuration.Provider.ProviderCollection.SetReadOnly*> method makes the collection read-only. After a collection is set to read-only, some method calls (such as <xref:System.Configuration.Provider.ProviderCollection.Remove*> and <xref:System.Configuration.Provider.ProviderCollection.Add*> will result in an exception.
+
+ Note that most provider-based features will set their <xref:System.Configuration.Provider.ProviderCollection> object to read-only after creating instances of all of the configured providers.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -468,6 +493,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -476,11 +503,11 @@
         <summary>Gets the current object.</summary>
         <value>The current object.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property is included to fulfill the <xref:System.Collections.ICollection> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property is included to fulfill the <xref:System.Collections.ICollection> interface.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Collections.ICollection.SyncRoot" />
@@ -511,6 +538,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -524,11 +553,11 @@
         <param name="index">The index of the array at which to start copying provider instances from the collection.</param>
         <summary>Copies the elements of the <see cref="T:System.Configuration.Provider.ProviderCollection" /> to an array, starting at a particular array index.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Configuration.Provider.ProviderCollection.System%23Collections%23ICollection%23CopyTo%2A> instance is cast to an <xref:System.Collections.ICollection> interface.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Configuration.Provider.ProviderCollection.System%23Collections%23ICollection%23CopyTo*> instance is cast to an <xref:System.Collections.ICollection> interface.
+
  ]]></format>
         </remarks>
       </Docs>

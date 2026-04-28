@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ComponentModel.PropertyDescriptor</BaseTypeName>
@@ -22,13 +24,13 @@
   <Docs>
     <summary>Provides an extension of <see cref="T:System.ComponentModel.PropertyDescriptor" /> that accounts for the additional property characteristics of a dependency property.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This class is primarily used by designer applications. These applications may need to report the dependency property characteristics through property windows or other tools used for editing property values.  
-  
- In order to check a specific property to determine whether it has <xref:System.ComponentModel.DependencyPropertyDescriptor> available to serve as a <xref:System.ComponentModel.PropertyDescriptor>, call either <xref:System.ComponentModel.DependencyPropertyDescriptor.FromProperty%28System.ComponentModel.PropertyDescriptor%29?displayProperty=nameWithType>, or <xref:System.ComponentModel.DependencyPropertyDescriptor.FromName%2A?displayProperty=nameWithType>. If either method returns `null`, then the property is not a dependency property. If the method returns a valid <xref:System.ComponentModel.DependencyPropertyDescriptor> , then the property is a dependency property.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This class is primarily used by designer applications. These applications may need to report the dependency property characteristics through property windows or other tools used for editing property values.
+
+ In order to check a specific property to determine whether it has <xref:System.ComponentModel.DependencyPropertyDescriptor> available to serve as a <xref:System.ComponentModel.PropertyDescriptor>, call either <xref:System.ComponentModel.DependencyPropertyDescriptor.FromProperty(System.ComponentModel.PropertyDescriptor)?displayProperty=nameWithType>, or <xref:System.ComponentModel.DependencyPropertyDescriptor.FromName*?displayProperty=nameWithType>. If either method returns `null`, then the property is not a dependency property. If the method returns a valid <xref:System.ComponentModel.DependencyPropertyDescriptor> , then the property is a dependency property.
+
  ]]></format>
     </remarks>
   </Docs>
@@ -38,9 +40,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddValueChanged(object component, class System.EventHandler handler) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.AddValueChanged(System.Object,System.EventHandler)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub AddValueChanged (component As Object, handler As EventHandler)" />
-      <MemberSignature Language="F#" Value="override this.AddValueChanged : obj * EventHandler -&gt; unit" Usage="dependencyPropertyDescriptor.AddValueChanged (component, handler)" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.AddValueChanged : obj * EventHandler -&gt; unit" Usage="dependencyPropertyDescriptor.AddValueChanged (component, handler)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void AddValueChanged(System::Object ^ component, EventHandler ^ handler);" />
-      <MemberSignature Language="F#" Value="abstract member AddValueChanged : obj * EventHandler -&gt; unit&#xA;override this.AddValueChanged : obj * EventHandler -&gt; unit" Usage="dependencyPropertyDescriptor.AddValueChanged (component, handler)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -51,6 +52,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -83,6 +86,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
@@ -98,9 +103,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanResetValue(object component) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.CanResetValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function CanResetValue (component As Object) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.CanResetValue : obj -&gt; bool" Usage="dependencyPropertyDescriptor.CanResetValue component" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.CanResetValue : obj -&gt; bool" Usage="dependencyPropertyDescriptor.CanResetValue component" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool CanResetValue(System::Object ^ component);" />
-      <MemberSignature Language="F#" Value="abstract member CanResetValue : obj -&gt; bool&#xA;override this.CanResetValue : obj -&gt; bool" Usage="dependencyPropertyDescriptor.CanResetValue component" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -111,6 +115,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -124,11 +130,11 @@
         <returns>
           <see langword="true" /> if resetting the component changes its value; otherwise, <see langword="false" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
         <altmember cref="M:System.ComponentModel.PropertyDescriptor.CanResetValue(System.Object)" />
@@ -151,6 +157,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -159,11 +167,11 @@
         <summary>Gets the name of the category that the member belongs to, as specified in the <see cref="T:System.ComponentModel.CategoryAttribute" />.</summary>
         <value>The name of the category to which the member belongs. If there is no <see cref="T:System.ComponentModel.CategoryAttribute" />, the category name is set to the default category, <see langword="Misc" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -185,6 +193,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -199,11 +209,11 @@
         <summary>Gets the type of the component this property is bound to.</summary>
         <value>A <see cref="T:System.Type" /> that represents the type of component this property is bound to. When <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.GetValue(System.Object)" /> or <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" /> are invoked, the object specified might be an instance of this type.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -225,6 +235,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
@@ -233,11 +245,11 @@
         <summary>Gets the type converter for this property.</summary>
         <value>A <see cref="T:System.ComponentModel.TypeConverter" /> that is used to convert the <see cref="T:System.Type" /> of this property.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property may be `null` in cases where the attributed <xref:System.ComponentModel.TypeConverter> is not a public class.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property may be `null` in cases where the attributed <xref:System.ComponentModel.TypeConverter> is not a public class.
+
  ]]></format>
         </remarks>
         <altmember cref="T:System.ComponentModel.TypeConverterAttribute" />
@@ -260,6 +272,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -274,11 +288,11 @@
         <summary>Returns the dependency property identifier.</summary>
         <value>The dependency property identifier.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property may be `null` if a <xref:System.ComponentModel.DependencyPropertyDescriptor> instance was created for a property that is not a dependency property.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property may be `null` if a <xref:System.ComponentModel.DependencyPropertyDescriptor> instance was created for a property that is not a dependency property.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -300,6 +314,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -308,11 +324,11 @@
         <summary>Gets the description of the member, as specified in the <see cref="T:System.ComponentModel.DescriptionAttribute" />.</summary>
         <value>The description of the member. If there is no <see cref="T:System.ComponentModel.DescriptionAttribute" />, the property value is set to the default, which is an empty string ("").</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -334,6 +350,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.CoerceValueCallback</ReturnType>
@@ -361,6 +379,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -370,11 +390,11 @@
         <value>
           <see langword="true" /> if this member should be set only at design time; <see langword="false" /> if the member can be set during run time. If there is no <see cref="T:System.ComponentModel.DesignOnlyAttribute" />, the return value is the default, which is <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -396,6 +416,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -404,11 +426,11 @@
         <summary>Gets the name that can be displayed in a window, such as a Properties window.</summary>
         <value>The name to display for the property.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
         <altmember cref="P:System.Windows.DependencyProperty.Name" />
@@ -419,9 +441,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="dependencyPropertyDescriptor.Equals obj" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="dependencyPropertyDescriptor.Equals obj" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
-      <MemberSignature Language="F#" Value="abstract member Equals : obj -&gt; bool&#xA;override this.Equals : obj -&gt; bool" Usage="dependencyPropertyDescriptor.Equals obj" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -432,6 +453,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -473,6 +496,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
@@ -489,11 +514,11 @@
         <summary>Returns a <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> for a provided property name.</summary>
         <returns>The requested <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `name` may refer to a dependency property or an attached property, and is the `name` parameter as passed to the <xref:System.Windows.DependencyProperty.Register%2A> or <xref:System.Windows.DependencyProperty.RegisterAttached%2A> call that defined the property in question. `ownerType` is the type of object that owns the property, again as passed to <xref:System.Windows.DependencyProperty.Register%2A> or <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. `targetType` is the type of object you want to set the property for. For dependency properties, `ownerType` and `targetType` are the same type. For attached properties they usually differ.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `name` may refer to a dependency property or an attached property, and is the `name` parameter as passed to the <xref:System.Windows.DependencyProperty.Register*> or <xref:System.Windows.DependencyProperty.RegisterAttached*> call that defined the property in question. `ownerType` is the type of object that owns the property, again as passed to <xref:System.Windows.DependencyProperty.Register*> or <xref:System.Windows.DependencyProperty.RegisterAttached*>. `targetType` is the type of object you want to set the property for. For dependency properties, `ownerType` and `targetType` are the same type. For attached properties they usually differ.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -514,15 +539,17 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="ownerType" Type="System.Type" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="targetType" Type="System.Type" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="ignorePropertyType" Type="System.Boolean" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="ownerType" Type="System.Type" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="targetType" Type="System.Type" Index="2" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="ignorePropertyType" Type="System.Boolean" Index="3" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="name">The registered name of a dependency property or an attached property.</param>
@@ -532,11 +559,11 @@
         <summary>Returns a <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> for a provided property name.</summary>
         <returns>The requested <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `name` may refer to a dependency property or an attached property, and is the `name` parameter as passed to the <xref:System.Windows.DependencyProperty.Register%2A> or <xref:System.Windows.DependencyProperty.RegisterAttached%2A> call that defined the property in question. `ownerType` is the type of object that owns the property, again as passed to <xref:System.Windows.DependencyProperty.Register%2A> or <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. `targetType` is the type of object you want to set the property for. For dependency properties, `ownerType` and `targetType` are the same type. For attached properties they usually differ.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `name` may refer to a dependency property or an attached property, and is the `name` parameter as passed to the <xref:System.Windows.DependencyProperty.Register*> or <xref:System.Windows.DependencyProperty.RegisterAttached*> call that defined the property in question. `ownerType` is the type of object that owns the property, again as passed to <xref:System.Windows.DependencyProperty.Register*> or <xref:System.Windows.DependencyProperty.RegisterAttached*>. `targetType` is the type of object you want to set the property for. For dependency properties, `ownerType` and `targetType` are the same type. For attached properties they usually differ.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -567,6 +594,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
@@ -579,11 +608,11 @@
         <summary>Returns a <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> for a provided <see cref="T:System.ComponentModel.PropertyDescriptor" />.</summary>
         <returns>If the property described by <paramref name="property" /> is a dependency property, returns a valid <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />. Otherwise, returns a <see langword="null" /><see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method is the primary method used by designer applications to obtain a <xref:System.ComponentModel.DependencyPropertyDescriptor> on basis of checking all properties for a <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method is the primary method used by designer applications to obtain a <xref:System.ComponentModel.DependencyPropertyDescriptor> on basis of checking all properties for a <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -605,6 +634,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.DependencyPropertyDescriptor</ReturnType>
@@ -619,11 +650,11 @@
         <summary>Returns a <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> for a provided dependency property and target type.</summary>
         <returns>A <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" /> for the provided dependency property.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The `dependencyProperty` may refer to a dependency property or an attached property. `targetType` is the type of object you want to set the property for. For dependency properties, that type is equivalent to the <xref:System.Windows.DependencyProperty.OwnerType%2A> for the `dependencyProperty`. For attached properties the `targetType` is typically some other <xref:System.Windows.DependencyObject> type.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The `dependencyProperty` may refer to a dependency property or an attached property. `targetType` is the type of object you want to set the property for. For dependency properties, that type is equivalent to the <xref:System.Windows.DependencyProperty.OwnerType*> for the `dependencyProperty`. For attached properties the `targetType` is typically some other <xref:System.Windows.DependencyObject> type.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -633,9 +664,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.PropertyDescriptorCollection GetChildProperties(object instance, class System.Attribute[] filter) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetChildProperties(System.Object,System.Attribute[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetChildProperties (instance As Object, filter As Attribute()) As PropertyDescriptorCollection" />
-      <MemberSignature Language="F#" Value="override this.GetChildProperties : obj * Attribute[] -&gt; System.ComponentModel.PropertyDescriptorCollection" Usage="dependencyPropertyDescriptor.GetChildProperties (instance, filter)" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.GetChildProperties : obj * Attribute[] -&gt; System.ComponentModel.PropertyDescriptorCollection" Usage="dependencyPropertyDescriptor.GetChildProperties (instance, filter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::ComponentModel::PropertyDescriptorCollection ^ GetChildProperties(System::Object ^ instance, cli::array &lt;Attribute ^&gt; ^ filter);" />
-      <MemberSignature Language="F#" Value="abstract member GetChildProperties : obj * Attribute[] -&gt; System.ComponentModel.PropertyDescriptorCollection&#xA;override this.GetChildProperties : obj * Attribute[] -&gt; System.ComponentModel.PropertyDescriptorCollection" Usage="dependencyPropertyDescriptor.GetChildProperties (instance, filter)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -646,6 +676,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
@@ -660,11 +692,11 @@
         <summary>Returns a <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />.</summary>
         <returns>A <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> with the properties that match the specified attributes for the specified component.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -674,9 +706,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetEditor(class System.Type editorBaseType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetEditor(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetEditor (editorBaseType As Type) As Object" />
-      <MemberSignature Language="F#" Value="override this.GetEditor : Type -&gt; obj" Usage="dependencyPropertyDescriptor.GetEditor editorBaseType" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.GetEditor : Type -&gt; obj" Usage="dependencyPropertyDescriptor.GetEditor editorBaseType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ GetEditor(Type ^ editorBaseType);" />
-      <MemberSignature Language="F#" Value="abstract member GetEditor : Type -&gt; obj&#xA;override this.GetEditor : Type -&gt; obj" Usage="dependencyPropertyDescriptor.GetEditor editorBaseType" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -687,6 +718,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -699,11 +732,11 @@
         <summary>Gets an editor of the specified type.</summary>
         <returns>An instance of the requested editor type, or <see langword="null" /> if an editor cannot be found.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -713,9 +746,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
-      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="dependencyPropertyDescriptor.GetHashCode " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="dependencyPropertyDescriptor.GetHashCode " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
-      <MemberSignature Language="F#" Value="abstract member GetHashCode : unit -&gt; int&#xA;override this.GetHashCode : unit -&gt; int" Usage="dependencyPropertyDescriptor.GetHashCode " FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -726,6 +758,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -735,11 +769,11 @@
         <summary>Returns the hash code for this <see cref="T:System.ComponentModel.DependencyPropertyDescriptor" />.</summary>
         <returns>A 32-bit signed integer hash code.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The hash code for <xref:System.ComponentModel.DependencyPropertyDescriptor> is based both on the identifier for a dependency property and on the type on which it is set. This implementation assures that a <xref:System.ComponentModel.DependencyPropertyDescriptor> does not improperly return the same hash code for properties that are inherited by the many possible derived classes, or for properties that are otherwise re-assigned through the property system.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The hash code for <xref:System.ComponentModel.DependencyPropertyDescriptor> is based both on the identifier for a dependency property and on the type on which it is set. This implementation assures that a <xref:System.ComponentModel.DependencyPropertyDescriptor> does not improperly return the same hash code for properties that are inherited by the many possible derived classes, or for properties that are otherwise re-assigned through the property system.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -749,9 +783,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(object component) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.GetValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetValue (component As Object) As Object" />
-      <MemberSignature Language="F#" Value="override this.GetValue : obj -&gt; obj" Usage="dependencyPropertyDescriptor.GetValue component" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.GetValue : obj -&gt; obj" Usage="dependencyPropertyDescriptor.GetValue component" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ GetValue(System::Object ^ component);" />
-      <MemberSignature Language="F#" Value="abstract member GetValue : obj -&gt; obj&#xA;override this.GetValue : obj -&gt; obj" Usage="dependencyPropertyDescriptor.GetValue component" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -762,6 +795,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -774,11 +809,11 @@
         <summary>Returns the current value of the property on a component.</summary>
         <returns>The requested value.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -800,6 +835,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -834,6 +871,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -843,11 +882,11 @@
         <value>
           <see langword="true" /> if the <see cref="T:System.ComponentModel.BrowsableAttribute" /> was specified on the property; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -869,6 +908,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -878,11 +919,11 @@
         <value>
           <see langword="true" /> if the member is marked with the <see cref="T:System.ComponentModel.LocalizableAttribute" /> constructor of the value true; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -904,6 +945,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -913,13 +956,13 @@
         <value>
           <see langword="true" /> if the property is read-only; otherwise, <see langword="false" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
- Dependency properties are registered as read-only using particular method calls, and by convention the CLR wrapper properties that are the properties viewed by reflection and the descriptors must also be read-only. However, since this is a convention and not a requirement to compile, you might want to double check the dependency property identifier read-only state. To do this, get the identifier (<xref:System.Windows.DependencyProperty>) value for this <xref:System.ComponentModel.DependencyPropertyDescriptor> and then check the value of <xref:System.Windows.DependencyProperty.ReadOnly%2A>. Note that the <xref:System.Windows.DependencyProperty.ReadOnly%2A> is on the identifier itself, not metadata.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
+ Dependency properties are registered as read-only using particular method calls, and by convention the CLR wrapper properties that are the properties viewed by reflection and the descriptors must also be read-only. However, since this is a convention and not a requirement to compile, you might want to double check the dependency property identifier read-only state. To do this, get the identifier (<xref:System.Windows.DependencyProperty>) value for this <xref:System.ComponentModel.DependencyPropertyDescriptor> and then check the value of <xref:System.Windows.DependencyProperty.ReadOnly*>. Note that the <xref:System.Windows.DependencyProperty.ReadOnly*> is on the identifier itself, not metadata.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -941,6 +984,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -955,13 +1000,13 @@
         <summary>Gets the metadata associated with the dependency property.</summary>
         <value>The dependency property metadata.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The value can be `null` if there is  no metadata or if the property is not a dependency property.  
-  
- Metadata that has matching concepts in CLR attributes is re-exposed as attributes in the <xref:System.ComponentModel.DependencyPropertyDescriptor.Attributes%2A> collection.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The value can be `null` if there is  no metadata or if the property is not a dependency property.
+
+ Metadata that has matching concepts in CLR attributes is re-exposed as attributes in the <xref:System.ComponentModel.DependencyPropertyDescriptor.Attributes*> collection.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -983,6 +1028,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -991,11 +1038,11 @@
         <summary>Gets the represented <see cref="T:System.Type" /> of the dependency property.</summary>
         <value>The <see cref="T:System.Type" /> of the dependency property.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property returns the <xref:System.Type> that the dependency property was registered with.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property returns the <xref:System.Type> that the dependency property was registered with.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1005,9 +1052,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveValueChanged(object component, class System.EventHandler handler) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.RemoveValueChanged(System.Object,System.EventHandler)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub RemoveValueChanged (component As Object, handler As EventHandler)" />
-      <MemberSignature Language="F#" Value="override this.RemoveValueChanged : obj * EventHandler -&gt; unit" Usage="dependencyPropertyDescriptor.RemoveValueChanged (component, handler)" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.RemoveValueChanged : obj * EventHandler -&gt; unit" Usage="dependencyPropertyDescriptor.RemoveValueChanged (component, handler)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void RemoveValueChanged(System::Object ^ component, EventHandler ^ handler);" />
-      <MemberSignature Language="F#" Value="abstract member RemoveValueChanged : obj * EventHandler -&gt; unit&#xA;override this.RemoveValueChanged : obj * EventHandler -&gt; unit" Usage="dependencyPropertyDescriptor.RemoveValueChanged (component, handler)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -1018,6 +1064,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1031,11 +1079,11 @@
         <param name="handler">The delegate to add as a listener.</param>
         <summary>Enables other objects to be notified when this property changes.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1045,9 +1093,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetValue(object component) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.ResetValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub ResetValue (component As Object)" />
-      <MemberSignature Language="F#" Value="override this.ResetValue : obj -&gt; unit" Usage="dependencyPropertyDescriptor.ResetValue component" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.ResetValue : obj -&gt; unit" Usage="dependencyPropertyDescriptor.ResetValue component" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void ResetValue(System::Object ^ component);" />
-      <MemberSignature Language="F#" Value="abstract member ResetValue : obj -&gt; unit&#xA;override this.ResetValue : obj -&gt; unit" Usage="dependencyPropertyDescriptor.ResetValue component" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -1058,6 +1105,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1069,11 +1118,11 @@
         <param name="component">The component with the property value that is to be reset to the default value.</param>
         <summary>Resets the value for this property of the component to the default value.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1083,9 +1132,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetValue(object component, object value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub SetValue (component As Object, value As Object)" />
-      <MemberSignature Language="F#" Value="override this.SetValue : obj * obj -&gt; unit" Usage="dependencyPropertyDescriptor.SetValue (component, value)" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.SetValue : obj * obj -&gt; unit" Usage="dependencyPropertyDescriptor.SetValue (component, value)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void SetValue(System::Object ^ component, System::Object ^ value);" />
-      <MemberSignature Language="F#" Value="abstract member SetValue : obj * obj -&gt; unit&#xA;override this.SetValue : obj * obj -&gt; unit" Usage="dependencyPropertyDescriptor.SetValue (component, value)" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -1096,6 +1144,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1109,11 +1159,11 @@
         <param name="value">The new value.</param>
         <summary>Sets the value of the component to a different value.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This method relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1123,9 +1173,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldSerializeValue(object component) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.ShouldSerializeValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ShouldSerializeValue (component As Object) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.ShouldSerializeValue : obj -&gt; bool" Usage="dependencyPropertyDescriptor.ShouldSerializeValue component" FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.ShouldSerializeValue : obj -&gt; bool" Usage="dependencyPropertyDescriptor.ShouldSerializeValue component" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool ShouldSerializeValue(System::Object ^ component);" />
-      <MemberSignature Language="F#" Value="abstract member ShouldSerializeValue : obj -&gt; bool&#xA;override this.ShouldSerializeValue : obj -&gt; bool" Usage="dependencyPropertyDescriptor.ShouldSerializeValue component" FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -1136,6 +1185,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1168,6 +1219,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1177,13 +1230,13 @@
         <value>
           <see langword="true" /> if notifications for this property may originate from outside the property descriptor, such as from the component itself. <see langword="false" /> if notifications will only originate from direct calls made to <see cref="M:System.ComponentModel.DependencyPropertyDescriptor.SetValue(System.Object,System.Object)" />.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- For example, for the `true` case, the component may implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface, or may have an explicit `propertyName.Changed` event for this property.  
-  
- This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ For example, for the `true` case, the component may implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface, or may have an explicit `propertyName.Changed` event for this property.
+
+ This property relies on the underlying <xref:System.ComponentModel.PropertyDescriptor>.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -1193,9 +1246,8 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.DependencyPropertyDescriptor.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
-      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="dependencyPropertyDescriptor.ToString " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="dependencyPropertyDescriptor.ToString " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
-      <MemberSignature Language="F#" Value="abstract member ToString : unit -&gt; string&#xA;override this.ToString : unit -&gt; string" Usage="dependencyPropertyDescriptor.ToString " FrameworkAlternate="windowsdesktop-7.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
@@ -1206,6 +1258,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

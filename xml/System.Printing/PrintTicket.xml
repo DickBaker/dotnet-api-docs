@@ -14,6 +14,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,13 +31,11 @@
       <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A <xref:System.Printing.PrintTicket> object is an easy-to-work-with representation of a certain type of XML document called a *PrintTicket document*. The latter is a set of instructions telling a printer how to set its various features (such as duplexing, collating, and stapling). For example, to instruct the printer to turn on its stapler and staple print jobs in the upper left corner, the document would have a `<JobStapleAllDocuments … >` element that specifies **StapleTopLeft**. The element is, in turn, represented by the <xref:System.Printing.PrintTicket.Stapling%2A> property of the <xref:System.Printing.PrintTicket> object. The PrintTicket document must conform to the [Print Schema](/windows/win32/printdocs/printschema).
+ A <xref:System.Printing.PrintTicket> object is an easy-to-work-with representation of a certain type of XML document called a *PrintTicket document*. The latter is a set of instructions telling a printer how to set its various features (such as duplexing, collating, and stapling). For example, to instruct the printer to turn on its stapler and staple print jobs in the upper left corner, the document would have a `<JobStapleAllDocuments … >` element that specifies **StapleTopLeft**. The element is, in turn, represented by the <xref:System.Printing.PrintTicket.Stapling> property of the <xref:System.Printing.PrintTicket> object. The PrintTicket document must conform to the [Print Schema](/windows/win32/printdocs/printschema).
 
  The <xref:System.Printing.PrintTicket> class enables your application to configure the printer's features without having to engage in any direct writing of XML <xref:System.IO.Stream> objects.
 
- All of the most popular features of home and business file and photo printers are represented by properties of <xref:System.Printing.PrintTicket> the class. But the [Print Schema](/windows/win32/printdocs/printschema) defines many more, less common, features and it can be extended to handle features of specialty printing devices. So, although the <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintCapabilities> classes cannot be inherited, you can extend the [Print Schema](/windows/win32/printdocs/printschema) to recognize print device features that are not accounted for in the <xref:System.Printing.PrintTicket> or <xref:System.Printing.PrintCapabilities> classes. For more information see [How to: Extend the Print Schema and Create New Print System Classes](https://learn.microsoft.com/previous-versions/aa970573(v=vs.100)).
-
- **Note** When the <xref:System.Printing.PrintTicket> object is created with the constructor that takes a PrintTicket document (as a <xref:System.IO.Stream>) parameter, that entire document is stored in a non-public field in the object, including the XML elements within it that express less common features that are not represented by any of the public properties of the <xref:System.Printing.PrintTicket> class. In fact, if the driver that produced the PrintTicket document is using a private extension of the [Print Schema](/windows/win32/printdocs/printschema), that privately defined markup is also stored as part of the non-public PrintTicket document.
+ All of the most popular features of home and business file and photo printers are represented by properties of <xref:System.Printing.PrintTicket> the class. But the [Print Schema](/windows/win32/printdocs/printschema) defines many more, less common, features and it can be extended to handle features of specialty printing devices. So, although the <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintCapabilities> classes cannot be inherited, you can extend the [Print Schema](/windows/win32/printdocs/printschema) to recognize print device features that are not accounted for in the <xref:System.Printing.PrintTicket> or <xref:System.Printing.PrintCapabilities> classes. **Note** When the <xref:System.Printing.PrintTicket> object is created with the constructor that takes a PrintTicket document (as a <xref:System.IO.Stream>) parameter, that entire document is stored in a non-public field in the object, including the XML elements within it that express less common features that are not represented by any of the public properties of the <xref:System.Printing.PrintTicket> class. In fact, if the driver that produced the PrintTicket document is using a private extension of the [Print Schema](/windows/win32/printdocs/printschema), that privately defined markup is also stored as part of the non-public PrintTicket document.
 
 > [!CAUTION]
 >  Classes within the <xref:System.Printing> namespace are not supported for use within a Windows service or ASP.NET application or service. Attempting to use these classes from within one of these application types may produce unexpected problems, such as diminished service performance and run-time exceptions.
@@ -80,6 +80,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -114,6 +116,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="xmlStream" Type="System.IO.Stream" />
@@ -133,7 +137,7 @@
 
  When any of the properties of the <xref:System.Printing.PrintTicket> are written to, this non-public PrintTicket document is changed as well.
 
- It is this non-public PrintTicket document that is returned by the <xref:System.Printing.PrintTicket.GetXmlStream%2A> and <xref:System.Printing.PrintTicket.SaveTo%2A> methods.
+ It is this non-public PrintTicket document that is returned by the <xref:System.Printing.PrintTicket.GetXmlStream*> and <xref:System.Printing.PrintTicket.SaveTo*> methods.
 
  ]]></format>
         </remarks>
@@ -161,6 +165,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Printing.PrintTicket</ReturnType>
@@ -189,6 +195,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.Collation&gt;</ReturnType>
@@ -200,11 +208,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `DocumentCollate` keyword, not the `JobCollateAllDocuments` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.CollationCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.CollationCapability> property.
 
 
 
@@ -237,6 +245,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -248,11 +258,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `JobCopiesAllDocuments` keyword, not the `DocumentCopiesAllPages` keyword, or the `PageCopies` keyword.
 
- You can test for the printer's maximum by using the <xref:System.Printing.PrintCapabilities.MaxCopyCount%2A> property.
+ You can test for the printer's maximum by using the <xref:System.Printing.PrintCapabilities.MaxCopyCount> property.
 
  ]]></format>
         </remarks>
@@ -276,6 +286,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.DeviceFontSubstitution&gt;</ReturnType>
@@ -287,11 +299,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageDeviceFontSubstitution` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability> property.
 
  ]]></format>
         </remarks>
@@ -315,6 +327,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.Duplexing&gt;</ReturnType>
@@ -326,11 +340,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `JobDuplexAllDocumentsContiguously` keyword, not the `DocumentDuplex` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.DuplexingCapability> property.
 
 
 
@@ -362,6 +376,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.MemoryStream</ReturnType>
@@ -400,6 +416,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.InputBin&gt;</ReturnType>
@@ -411,19 +429,19 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature. That is, there will be no markup for the [Print Schema](/windows/win32/printdocs/printschema)'s features `JobInputBin`, `DocumentInputBin`, or `PageInputBin`.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature. That is, there will be no markup for the [Print Schema](/windows/win32/printdocs/printschema)'s features `JobInputBin`, `DocumentInputBin`, or `PageInputBin`.
 
  When this property is not `null`, it will have the following relationships to the features defined in the [Print Schema](/windows/win32/printdocs/printschema).
 
--   If the XML form of the <xref:System.Printing.PrintTicket> contains `JobInputBin`, then this property has the same value as `JobInputBin` (regardless of whether or not there is also `DocumentInputBin` or `PageInputBin`. markup in the XML version of the <xref:System.Printing.PrintTicket>).
+- If the XML form of the <xref:System.Printing.PrintTicket> contains `JobInputBin`, then this property has the same value as `JobInputBin` (regardless of whether or not there is also `DocumentInputBin` or `PageInputBin`. markup in the XML version of the <xref:System.Printing.PrintTicket>).
 
--   If there is no `JobInputBin` markup, but there is `DocumentInputBin`, then this property has the same value as `DocumentInputBin` (regardless of whether or not there is also `PageInputBin` markup) present.
+- If there is no `JobInputBin` markup, but there is `DocumentInputBin`, then this property has the same value as `DocumentInputBin` (regardless of whether or not there is also `PageInputBin` markup) present.
 
--   If there is neither `JobInputBin` nor `DocumentInputBin` markup, but there is `PageInputBin` markup, then this property has the same value as `PageInputBin`.
+- If there is neither `JobInputBin` nor `DocumentInputBin` markup, but there is `PageInputBin` markup, then this property has the same value as `PageInputBin`.
 
  When this property is set to any <xref:System.Printing.InputBin> value, then matching `JobInputBin` markup will be added to the XML print ticket and any `DocumentInputBin` and `PageInputBin` markup that is already there will be removed.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.InputBinCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.InputBinCapability> property.
 
  ]]></format>
         </remarks>
@@ -447,6 +465,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.OutputColor&gt;</ReturnType>
@@ -458,11 +478,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageOutputColor` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.OutputColorCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.OutputColorCapability> property.
 
 
 
@@ -470,7 +490,7 @@
  The following example shows how to use this property to configure a print job.
 
  :::code language="csharp" source="~/snippets/csharp/System.Printing/LocalPrintServer/Overview/XpsPrintHelper.cs" id="Snippetoutputcolorandpageorientation":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb" id="Snippetoutputcolorandpageorientation":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Printing/LocalPrintServer/Overview/xpsprinthelper.vb" id="Snippetoutputcolorandpageorientation":::
 
  ]]></format>
         </remarks>
@@ -494,6 +514,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.OutputQuality&gt;</ReturnType>
@@ -505,11 +527,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageOutputQuality` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.OutputQualityCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.OutputQualityCapability> property.
 
  ]]></format>
         </remarks>
@@ -533,6 +555,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.PageBorderless&gt;</ReturnType>
@@ -544,11 +568,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageBorderless` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageBorderlessCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageBorderlessCapability> property.
 
  ]]></format>
         </remarks>
@@ -572,6 +596,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Printing.PageMediaSize</ReturnType>
@@ -585,7 +611,7 @@
 ## Remarks
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageMediaSize` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageMediaSizeCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageMediaSizeCapability> property.
 
 
 
@@ -593,7 +619,7 @@
  The following example shows how to use this property to scale a visual element to fit within the margins of the paper on which it is to print.
 
  :::code language="csharp" source="~/snippets/csharp/System.Printing/LocalPrintServer/Overview/XpsPrintHelper.cs" id="Snippetpagemediasize":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb" id="Snippetpagemediasize":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Printing/LocalPrintServer/Overview/xpsprinthelper.vb" id="Snippetpagemediasize":::
 
  ]]></format>
         </remarks>
@@ -625,6 +651,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.PageMediaType&gt;</ReturnType>
@@ -636,11 +664,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageMediaType` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageMediaTypeCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageMediaTypeCapability> property.
 
  ]]></format>
         </remarks>
@@ -664,6 +692,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.PageOrder&gt;</ReturnType>
@@ -675,11 +705,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `JobPageOrder` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageOrderCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageOrderCapability> property.
 
  ]]></format>
         </remarks>
@@ -703,6 +733,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.PageOrientation&gt;</ReturnType>
@@ -714,11 +746,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageOrientation` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageOrientationCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageOrientationCapability> property.
 
 
 
@@ -726,7 +758,7 @@
  The following example shows how to use this property to configure a print job.
 
  :::code language="csharp" source="~/snippets/csharp/System.Printing/LocalPrintServer/Overview/XpsPrintHelper.cs" id="Snippetoutputcolorandpageorientation":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb" id="Snippetoutputcolorandpageorientation":::
+ :::code language="vb" source="~/snippets/visualbasic/System.Printing/LocalPrintServer/Overview/xpsprinthelper.vb" id="Snippetoutputcolorandpageorientation":::
 
  ]]></format>
         </remarks>
@@ -750,6 +782,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Printing.PageResolution</ReturnType>
@@ -765,7 +799,7 @@
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageResolution` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageResolutionCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PageResolutionCapability> property.
 
  ]]></format>
         </remarks>
@@ -798,6 +832,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -809,25 +845,25 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The printer can have maximum and minimum limits for scaling. You can test for scale limits by using <xref:System.Printing.PrintCapabilities.PageScalingFactorRange%2A>.
+ The printer can have maximum and minimum limits for scaling. You can test for scale limits by using <xref:System.Printing.PrintCapabilities.PageScalingFactorRange*>.
 
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
- This <xref:System.Printing.PrintTicket.PageScalingFactor%2A> property generally represents the **Scale** `ScoredProperty` of the [Print Schema](/windows/win32/printdocs/printschema)'s `PageScaling` keyword. But there are some complexities as follows.
+ This <xref:System.Printing.PrintTicket.PageScalingFactor> property generally represents the **Scale** `ScoredProperty` of the [Print Schema](/windows/win32/printdocs/printschema)'s `PageScaling` keyword. But there are some complexities as follows.
 
- When reading the <xref:System.Printing.PrintTicket.PageScalingFactor%2A> property, the property behaves as follows.
+ When reading the <xref:System.Printing.PrintTicket.PageScalingFactor> property, the property behaves as follows.
 
--   If the PrintTicket XML document has the `PageScaling` feature set to the **CustomSquare** option, and the **CustomSquare** option's **Scale** value is positive value, then that is the value that is returned.
+- If the PrintTicket XML document has the `PageScaling` feature set to the **CustomSquare** option, and the **CustomSquare** option's **Scale** value is positive value, then that is the value that is returned.
 
--   If the PrintTicket XML document has the `PageScaling` feature set to the **Custom** option, and the **Custom** option's **ScaleWidth** value is positive value, then that is the value that is returned.
+- If the PrintTicket XML document has the `PageScaling` feature set to the **Custom** option, and the **Custom** option's **ScaleWidth** value is positive value, then that is the value that is returned.
 
--   In all other cases, `null` is returned.
+- In all other cases, `null` is returned.
 
- When setting the <xref:System.Printing.PrintTicket.PageScalingFactor%2A> property, the property behaves as follows.
+ When setting the <xref:System.Printing.PrintTicket.PageScalingFactor> property, the property behaves as follows.
 
--   If it's set to `null`, then the `PageScaling` markup is removed from the PrintTicket XML document.
+- If it's set to `null`, then the `PageScaling` markup is removed from the PrintTicket XML document.
 
--   Otherwise, the `PageScaling` feature in the PrintTicket XML document is set to **CustomSquare** and the **CustomSquare** option's **Scale** value is set to the passed value. (See **Exceptions** for what happens if the property is set to a value less than 1.)
+- Otherwise, the `PageScaling` feature in the PrintTicket XML document is set to **CustomSquare** and the **CustomSquare** option's **Scale** value is set to the passed value. (See **Exceptions** for what happens if the property is set to a value less than 1.)
 
  ]]></format>
         </remarks>
@@ -851,6 +887,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -862,13 +900,13 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Most printers support only a limited range of specific possibilities, such as 1, 2, 4, 6, 8, and 16 pages per side. You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PagesPerSheetCapability%2A> property.
+ Most printers support only a limited range of specific possibilities, such as 1, 2, 4, 6, 8, and 16 pages per side. You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PagesPerSheetCapability> property.
 
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the **PagesPerSheet**`ScoredProperty` of the [Print Schema](/windows/win32/printdocs/printschema)'s `JobNUpAllDocumentsContiguously` keyword, not the `DocumentNUp` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PagesPerSheetCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PagesPerSheetCapability> property.
 
  ]]></format>
         </remarks>
@@ -892,6 +930,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.PagesPerSheetDirection&gt;</ReturnType>
@@ -905,11 +945,11 @@
 ## Remarks
  For example, a printer can present pages in left-to-right rows with rows stacked top-to-bottom.
 
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the **PresentationDirection** subfeature of the [Print Schema](/windows/win32/printdocs/printschema)'s `JobNUpAllDocumentsContiguously` keyword, not the `DocumentNUp` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PagesPerSheetDirectionCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PagesPerSheetDirectionCapability> property.
 
  ]]></format>
         </remarks>
@@ -933,6 +973,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.PhotoPrintingIntent&gt;</ReturnType>
@@ -946,11 +988,11 @@
 ## Remarks
  The photographic printer driver translates the qualitative expression in this property into specific quantitative values for resolution and other factors.
 
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PagePhotoPrintingIntent` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PhotoPrintingIntentCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.PhotoPrintingIntentCapability> property.
 
  ]]></format>
         </remarks>
@@ -961,13 +1003,13 @@
       <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
       <MemberSignature Language="DocId" Value="E:System.Printing.PrintTicket.PropertyChanged" />
-      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertyChanged As PropertyChangedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertyChanged As PropertyChangedEventHandler " FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
       <MemberSignature Language="F#" Value="member this.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler " Usage="member this.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::ComponentModel::PropertyChangedEventHandler ^ PropertyChanged;" />
       <MemberSignature Language="VB.NET" Value="Public Event PropertyChanged As PropertyChangedEventHandler " FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
       <MemberType>Event</MemberType>
       <Implements>
-        <InterfaceMember FrameworkAlternate="netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-8.0;windowsdesktop-9.0">E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged</InterfaceMember>
+        <InterfaceMember>E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
@@ -978,6 +1020,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
@@ -1004,6 +1048,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1046,6 +1092,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.Stapling&gt;</ReturnType>
@@ -1059,11 +1107,11 @@
 ## Remarks
  For example, a printer can place two staples on the left edge of a sheet of paper, or one staple in the upper left corner.
 
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `JobStapleAllDocuments` keyword, not the `DocumentStaple` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.StaplingCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.StaplingCapability> property.
 
 
 
@@ -1096,6 +1144,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Printing.TrueTypeFontMode&gt;</ReturnType>
@@ -1107,11 +1157,11 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo%2A> and <xref:System.Printing.PrintTicket.GetXmlStream%2A>) will not contain any markup for this feature.
+ A `null` value for this property means that this feature setting is not specified. Also, when the value is `null`, the XML versions of the <xref:System.Printing.PrintTicket> (see <xref:System.Printing.PrintTicket.SaveTo*> and <xref:System.Printing.PrintTicket.GetXmlStream*>) will not contain any markup for this feature.
 
  This property corresponds to the [Print Schema](/windows/win32/printdocs/printschema)'s `PageTrueTypeFontMode` keyword.
 
- You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.TrueTypeFontModeCapability%2A> property.
+ You can test for the options that the printer supports by using the <xref:System.Printing.PrintCapabilities.TrueTypeFontModeCapability> property.
 
  ]]></format>
         </remarks>

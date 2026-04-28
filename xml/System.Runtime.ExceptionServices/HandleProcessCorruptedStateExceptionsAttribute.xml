@@ -25,8 +25,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Runtime" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -42,7 +46,7 @@
       <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)&gt;]</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="net-6.0;net-7.0;net-8.0;net-9.0">
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-6.0;net-7.0;net-8.0;net-9.0">
       <AttributeName Language="C#">[System.Obsolete("Recovery from corrupted process state exceptions is not supported; HandleProcessCorruptedStateExceptionsAttribute is ignored.", DiagnosticId="SYSLIB0032", UrlFormat="https://aka.ms/dotnet-warnings/{0}")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Obsolete("Recovery from corrupted process state exceptions is not supported; HandleProcessCorruptedStateExceptionsAttribute is ignored.", DiagnosticId="SYSLIB0032", UrlFormat="https://aka.ms/dotnet-warnings/{0}")&gt;]</AttributeName>
     </Attribute>
@@ -59,7 +63,7 @@
   
  You can also add the [\<legacyCorruptedStateExceptionsPolicy>](/dotnet/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element) element to your application's configuration file. This will ensure that corrupted state exceptions are delivered to your exception handlers without the <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> or <xref:System.Security.SecurityCriticalAttribute> attribute. This configuration element has no effect on applications that were compiled in versions previous to the .NET Framework 4 but are running in the .NET Framework 4 or later; corrupted state exceptions will continue to be delivered for those applications. The <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> attribute is ignored when it is encountered in partially trusted or transparent code, because a trusted host should not allow an untrusted add-in to catch and ignore these serious exceptions.  
   
- For more information about corrupted process state exceptions, see the entry [Handling Corrupted State Exceptions](https://go.microsoft.com/fwlink/?LinkID=179681) in the CLR Inside Out blog.  
+ For more information about corrupted process state exceptions, see the entry [Handling Corrupted State Exceptions](https://learn.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions) in the CLR Inside Out blog.  
  
  **.NET Core only:** Even though this attribute exists in .NET Core, since the recovery from corrupted process state exceptions is not supported, this attribute is ignored. The CLR doesn't deliver corrupted process state exceptions to the managed code. 
 
@@ -94,6 +98,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>

@@ -9,11 +9,23 @@
     <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.1.0.0</AssemblyVersion>
+    <AssemblyVersion>9.3.0.0</AssemblyVersion>
+    <AssemblyVersion>9.4.0.0</AssemblyVersion>
+    <AssemblyVersion>9.5.0.0</AssemblyVersion>
+    <AssemblyVersion>9.6.0.0</AssemblyVersion>
+    <AssemblyVersion>9.7.0.0</AssemblyVersion>
+    <AssemblyVersion>9.9.0.0</AssemblyVersion>
+    <AssemblyVersion>9.10.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.1.0.0</AssemblyVersion>
+    <AssemblyVersion>10.2.0.0</AssemblyVersion>
+    <AssemblyVersion>10.3.0.0</AssemblyVersion>
+    <AssemblyVersion>10.4.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TInput">
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -21,7 +33,7 @@
     </TypeParameter>
     <TypeParameter Name="TEmbedding">
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+        <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
         </Attribute>
@@ -36,7 +48,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -58,7 +70,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="innerGenerator" Type="Microsoft.Extensions.AI.IEmbeddingGenerator&lt;TInput,TEmbedding&gt;" />
@@ -67,6 +79,8 @@
         <param name="innerGenerator">The inner <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> that represents the underlying backend.</param>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> class.</summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="innerGenerator" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -79,7 +93,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="innerGeneratorFactory" Type="System.Func&lt;System.IServiceProvider,Microsoft.Extensions.AI.IEmbeddingGenerator&lt;TInput,TEmbedding&gt;&gt;" />
@@ -99,7 +113,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.IEmbeddingGenerator&lt;TInput,TEmbedding&gt;</ReturnType>
@@ -107,7 +121,7 @@
       <Parameters>
         <Parameter Name="services" Type="System.IServiceProvider">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -117,7 +131,7 @@
       <Docs>
         <param name="services">
             The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> instances.
-            If null, an empty <see cref="T:System.IServiceProvider" /> will be used.
+            If <see langword="null" />, an empty <see cref="T:System.IServiceProvider" /> will be used.
             </param>
         <summary>
             Builds an <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> that represents the entire pipeline. Calls to this instance will pass through each of the pipeline stages in turn.
@@ -136,7 +150,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.EmbeddingGeneratorBuilder&lt;TInput,TEmbedding&gt;</ReturnType>
@@ -149,6 +163,8 @@
         <summary>Adds a factory for an intermediate embedding generator to the embedding generator pipeline.</summary>
         <returns>The updated <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> instance.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="generatorFactory" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="Use">
@@ -161,7 +177,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.EmbeddingGeneratorBuilder&lt;TInput,TEmbedding&gt;</ReturnType>
@@ -174,6 +190,8 @@
         <summary>Adds a factory for an intermediate embedding generator to the embedding generator pipeline.</summary>
         <returns>The updated <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> instance.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="generatorFactory" /> is <see langword="null" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="Use">
@@ -186,7 +204,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Extensions.AI</AssemblyName>
-        <AssemblyVersion>9.1.0.0</AssemblyVersion>
+        <AssemblyVersion>10.4.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.AI.EmbeddingGeneratorBuilder&lt;TInput,TEmbedding&gt;</ReturnType>
@@ -194,7 +212,7 @@
       <Parameters>
         <Parameter Name="generateFunc" Type="System.Func&lt;System.Collections.Generic.IEnumerable&lt;TInput&gt;,Microsoft.Extensions.AI.EmbeddingGenerationOptions,Microsoft.Extensions.AI.IEmbeddingGenerator&lt;TInput,TEmbedding&gt;,System.Threading.CancellationToken,System.Threading.Tasks.Task&lt;Microsoft.Extensions.AI.GeneratedEmbeddings&lt;TEmbedding&gt;&gt;&gt;">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0-pp;net-11.0-pp;net-8.0-pp;net-9.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1, 2, 1, 1, 1, 1, 1, 1 })]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1, 2, 1, 1, 1, 1, 1, 1 })&gt;]</AttributeName>
             </Attribute>

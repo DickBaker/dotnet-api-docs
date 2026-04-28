@@ -1,6 +1,6 @@
 <Type Name="ThreadState" FullName="System.Threading.ThreadState">
   <TypeSignature Language="C#" Value="public enum ThreadState" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ThreadState extends System.Enum" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ThreadState extends System.Enum" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netstandard-2.0;netstandard-2.1" />
   <TypeSignature Language="DocId" Value="T:System.Threading.ThreadState" />
   <TypeSignature Language="VB.NET" Value="Public Enum ThreadState" />
   <TypeSignature Language="F#" Value="type ThreadState = " />
@@ -17,6 +17,8 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
@@ -31,6 +33,8 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Thread" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Thread" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Thread" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Thread" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Threading.Thread" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -57,40 +61,40 @@
   <Docs>
     <summary>Specifies the execution states of a <see cref="T:System.Threading.Thread" />.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  The `ThreadState` enumeration defines a set of all possible execution states for threads. It's of interest only in a few debugging scenarios. Your code should never use the thread state to synchronize the activities of threads.  
-  
-  Once a thread is created, it's in at least one of the states until it terminates. Threads created within the common language runtime are initially in the <xref:System.Threading.ThreadState.Unstarted> state, while external, or unmanaged, threads that come into the runtime are already in the <xref:System.Threading.ThreadState.Running> state. A thread is transitioned from the <xref:System.Threading.ThreadState.Unstarted> state into the <xref:System.Threading.ThreadState.Running> state by calling <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Once a thread leaves the <xref:System.Threading.ThreadState.Unstarted> state as the result of a call to <xref:System.Threading.Thread.Start%2A>, it can never return to the <xref:System.Threading.ThreadState.Unstarted> state.  
+      <format type="text/markdown"><![CDATA[
 
-  A thread can be in more than one state at a given time. For example, if a thread is blocked on a call to <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>, and another thread calls <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> on the blocked thread, the blocked thread will be in both the <xref:System.Threading.ThreadState.WaitSleepJoin> and <xref:System.Threading.ThreadState.AbortRequested> states at the same time. In this case, as soon as the thread returns from the call to <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> or is interrupted, it will receive the <xref:System.Threading.ThreadAbortException> to begin aborting. Not all combinations of `ThreadState` values are valid; for example, a thread cannot be in both the <xref:System.Threading.ThreadState.Aborted> and <xref:System.Threading.ThreadState.Unstarted> states.  
+## Remarks
+  The `ThreadState` enumeration defines a set of all possible execution states for threads. It's of interest only in a few debugging scenarios. Your code should never use the thread state to synchronize the activities of threads.
 
-  A thread can never leave the <xref:System.Threading.ThreadState.Stopped> state.  
-  
+  Once a thread is created, it's in at least one of the states until it terminates. Threads created within the common language runtime are initially in the <xref:System.Threading.ThreadState.Unstarted> state, while external, or unmanaged, threads that come into the runtime are already in the <xref:System.Threading.ThreadState.Running> state. A thread is transitioned from the <xref:System.Threading.ThreadState.Unstarted> state into the <xref:System.Threading.ThreadState.Running> state by calling <xref:System.Threading.Thread.Start*?displayProperty=nameWithType>. Once a thread leaves the <xref:System.Threading.ThreadState.Unstarted> state as the result of a call to <xref:System.Threading.Thread.Start*>, it can never return to the <xref:System.Threading.ThreadState.Unstarted> state.
+
+  A thread can be in more than one state at a given time. For example, if a thread is blocked on a call to <xref:System.Threading.Monitor.Wait*?displayProperty=nameWithType>, and another thread calls <xref:System.Threading.Thread.Abort*?displayProperty=nameWithType> on the blocked thread, the blocked thread will be in both the <xref:System.Threading.ThreadState.WaitSleepJoin> and <xref:System.Threading.ThreadState.AbortRequested> states at the same time. In this case, as soon as the thread returns from the call to <xref:System.Threading.Monitor.Wait*?displayProperty=nameWithType> or is interrupted, it will receive the <xref:System.Threading.ThreadAbortException> to begin aborting. Not all combinations of `ThreadState` values are valid; for example, a thread cannot be in both the <xref:System.Threading.ThreadState.Aborted> and <xref:System.Threading.ThreadState.Unstarted> states.
+
+  A thread can never leave the <xref:System.Threading.ThreadState.Stopped> state.
+
 > [!IMPORTANT]
-> There are two thread state enumerations: <xref:System.Threading.ThreadState?displayProperty=nameWithType> and <xref:System.Diagnostics.ThreadState?displayProperty=nameWithType>.  
-  
- The following table shows the actions that cause a change of state.  
-  
-|Action|ThreadState|  
-|------------|-----------------|  
-|A thread is created within the common language runtime.|<xref:System.Threading.ThreadState.Unstarted>|  
-|Another thread calls the <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> method on the new thread, and the call returns.<br /><br /> The <xref:System.Threading.Thread.Start%2A> method does not return until the new thread has started running. There is no way to know at what point the new thread will start running, during the call to <xref:System.Threading.Thread.Start%2A>.|<xref:System.Threading.ThreadState.Running>|  
-|The thread calls <xref:System.Threading.Thread.Sleep%2A>|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
-|The thread calls <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> on another object.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
-|The thread calls <xref:System.Threading.Thread.Join%2A> on another thread.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
-|Another thread calls <xref:System.Threading.Thread.Interrupt%2A>|<xref:System.Threading.ThreadState.Running>|  
-|Another thread calls <xref:System.Threading.Thread.Suspend%2A>|<xref:System.Threading.ThreadState.SuspendRequested>|  
-|The thread responds to a <xref:System.Threading.Thread.Suspend%2A> request.|<xref:System.Threading.ThreadState.Suspended>|  
-|Another thread calls <xref:System.Threading.Thread.Resume%2A>|<xref:System.Threading.ThreadState.Running>|  
-|Another thread calls <xref:System.Threading.Thread.Abort%2A>|<xref:System.Threading.ThreadState.AbortRequested>|  
-|The thread responds to an <xref:System.Threading.Thread.Abort%2A> request.|<xref:System.Threading.ThreadState.Stopped>|  
-|A thread is terminated.|<xref:System.Threading.ThreadState.Stopped>|  
-  
- In addition to the states noted above, there is also the <xref:System.Threading.ThreadState.Background> state, which indicates whether the thread is running in the background or foreground. For more information, see [Foreground and Background Threads](/dotnet/standard/threading/foreground-and-background-threads).  
-   
- The <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> property of a thread provides the current state of a thread. Applications must use a bit mask to determine whether a thread is running. Since the value for <xref:System.Threading.ThreadState.Running> is zero (0), test whether a thread is running by the following code:
+> There are two thread state enumerations: <xref:System.Threading.ThreadState?displayProperty=nameWithType> and <xref:System.Diagnostics.ThreadState?displayProperty=nameWithType>.
+
+ The following table shows the actions that cause a change of state.
+
+|Action|ThreadState|
+|------------|-----------------|
+|A thread is created within the common language runtime.|<xref:System.Threading.ThreadState.Unstarted>|
+|Another thread calls the <xref:System.Threading.Thread.Start*?displayProperty=nameWithType> method on the new thread, and the call returns.<br /><br /> The <xref:System.Threading.Thread.Start*> method does not return until the new thread has started running. There is no way to know at what point the new thread will start running, during the call to <xref:System.Threading.Thread.Start*>.|<xref:System.Threading.ThreadState.Running>|
+|The thread calls <xref:System.Threading.Thread.Sleep*>|<xref:System.Threading.ThreadState.WaitSleepJoin>|
+|The thread calls <xref:System.Threading.Monitor.Wait*?displayProperty=nameWithType> on another object.|<xref:System.Threading.ThreadState.WaitSleepJoin>|
+|The thread calls <xref:System.Threading.Thread.Join*> on another thread.|<xref:System.Threading.ThreadState.WaitSleepJoin>|
+|Another thread calls <xref:System.Threading.Thread.Interrupt*>|<xref:System.Threading.ThreadState.Running>|
+|Another thread calls <xref:System.Threading.Thread.Suspend*>|<xref:System.Threading.ThreadState.SuspendRequested>|
+|The thread responds to a <xref:System.Threading.Thread.Suspend*> request.|<xref:System.Threading.ThreadState.Suspended>|
+|Another thread calls <xref:System.Threading.Thread.Resume*>|<xref:System.Threading.ThreadState.Running>|
+|Another thread calls <xref:System.Threading.Thread.Abort*>|<xref:System.Threading.ThreadState.AbortRequested>|
+|The thread responds to an <xref:System.Threading.Thread.Abort*> request.|<xref:System.Threading.ThreadState.Stopped>|
+|A thread is terminated.|<xref:System.Threading.ThreadState.Stopped>|
+
+ In addition to the states noted above, there is also the <xref:System.Threading.ThreadState.Background> state, which indicates whether the thread is running in the background or foreground. For more information, see [Foreground and Background Threads](/dotnet/standard/threading/foreground-and-background-threads).
+
+ The <xref:System.Threading.Thread.ThreadState?displayProperty=nameWithType> property of a thread provides the current state of a thread. Applications must use a bit mask to determine whether a thread is running. Since the value for <xref:System.Threading.ThreadState.Running> is zero (0), test whether a thread is running by the following code:
 
 ```csharp
 (myThread.ThreadState & (ThreadState.Stopped | ThreadState.Unstarted)) == 0
@@ -99,7 +103,7 @@
 ```vb
 (myThread.ThreadState And (ThreadState.Stopped Or ThreadState.Unstarted)) = 0
 ```
-  
+
  ]]></format>
     </remarks>
     <altmember cref="T:System.Threading.Thread" />
@@ -124,6 +128,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -164,6 +170,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -204,6 +212,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -244,6 +254,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -284,6 +296,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -324,6 +338,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -364,6 +380,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -404,6 +422,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -444,6 +464,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -484,6 +506,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>

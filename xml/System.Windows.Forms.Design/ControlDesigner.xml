@@ -19,8 +19,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="System.Design" FromVersion="10.0.0.0" To="System.Windows.Forms.Design" ToVersion="10.0.0.0" FrameworkAlternate="windowsdesktop-10.0" />
+    <TypeForwarding From="System.Design" FromVersion="11.0.0.0" To="System.Windows.Forms.Design" ToVersion="11.0.0.0" FrameworkAlternate="windowsdesktop-11.0" />
     <TypeForwarding From="System.Design" FromVersion="4.0.0.0" To="System.Windows.Forms.Design" ToVersion="4.0.0.0" FrameworkAlternate="windowsdesktop-3.0;windowsdesktop-3.1" />
     <TypeForwarding From="System.Design" FromVersion="5.0.0.0" To="System.Windows.Forms.Design" ToVersion="5.0.0.0" FrameworkAlternate="windowsdesktop-5.0" />
     <TypeForwarding From="System.Design" FromVersion="6.0.0.0" To="System.Windows.Forms.Design" ToVersion="6.0.0.0" FrameworkAlternate="windowsdesktop-6.0" />
@@ -33,7 +37,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="windowsdesktop-9.0">
+    <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -46,9 +50,7 @@
 ## Remarks
  <xref:System.Windows.Forms.Design.ControlDesigner> provides a base class for designers of components that derive from <xref:System.Windows.Forms.Control>. In addition to the methods and functionality inherited from the <xref:System.ComponentModel.Design.ComponentDesigner> class, <xref:System.Windows.Forms.Design.ControlDesigner> provides additional methods to support extending and altering the behavior of an associated <xref:System.Windows.Forms.Control> at design time.
 
- You can associate a designer with a type using a <xref:System.ComponentModel.DesignerAttribute>. For an overview of customizing design time behavior, see [Extending Design-Time Support](https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37899azc(v=vs.100)).
-
-
+ You can associate a designer with a type using a <xref:System.ComponentModel.DesignerAttribute>.
 
 ## Examples
  The following example <xref:System.Windows.Forms.Design.ControlDesigner> implementation demonstrates handling `MouseEnter` and `MouseLeave` events, drawing on a control from designer code, and using part of the <xref:System.ComponentModel.Design.IDesignerFilter> interface to add a property for the control at design time. The following sample code contains a designer and a sample user control associated with the designer. To build this sample, compile the sample into a class library, add a reference to the library to a Windows Forms project, add the control to the Toolbox, and add an instance of the control to your form. When you point to the control, the inner outline of the perimeter of the control is highlighted, and the color used to draw the outline corresponds to the `OutlineColor` property that the designer has added to the properties listed for the control.
@@ -57,14 +59,13 @@
 
  :::code language="cpp" source="~/snippets/cpp/VS_Snippets_Winforms/ControlDesignerExample/CPP/controldesignerexample.cpp" id="Snippet1":::
  :::code language="csharp" source="~/snippets/csharp/System.ComponentModel.Design/IDesignerFilter/Overview/controldesignerexample.cs" id="Snippet1":::
- :::code language="vb" source="~/snippets/visualbasic/VS_Snippets_Winforms/ControlDesignerExample/VB/controldesignerexample.vb" id="Snippet1":::
+ :::code language="vb" source="~/snippets/visualbasic/System.ComponentModel.Design/IDesignerFilter/Overview/controldesignerexample.vb" id="Snippet1":::
 
  ]]></format>
     </remarks>
     <altmember cref="T:System.ComponentModel.Design.ComponentDesigner" />
     <altmember cref="T:System.ComponentModel.Design.IDesigner" />
     <altmember cref="T:System.ComponentModel.DesignerAttribute" />
-    <related type="Article" href="https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37899azc(v=vs.100)">Extending Design-Time Support</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -88,6 +89,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -102,7 +105,7 @@
       <MemberSignature Language="VB.NET" Value="Protected accessibilityObj As AccessibleObject " />
       <MemberSignature Language="F#" Value="val mutable accessibilityObj : System.Windows.Forms.AccessibleObject" Usage="System.Windows.Forms.Design.ControlDesigner.accessibilityObj" />
       <MemberSignature Language="C++ CLI" Value="protected: System::Windows::Forms::AccessibleObject ^ accessibilityObj;" />
-      <MemberSignature Language="C#" Value="protected System.Windows.Forms.AccessibleObject? accessibilityObj;" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.AccessibleObject? accessibilityObj;" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -118,9 +121,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -163,6 +168,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
@@ -203,6 +210,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ICollection</ReturnType>
@@ -245,6 +254,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -288,6 +299,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -315,7 +328,7 @@
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property BehaviorService As BehaviorService" />
       <MemberSignature Language="F#" Value="member this.BehaviorService : System.Windows.Forms.Design.Behavior.BehaviorService" Usage="System.Windows.Forms.Design.ControlDesigner.BehaviorService" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Windows::Forms::Design::Behavior::BehaviorService ^ BehaviorService { System::Windows::Forms::Design::Behavior::BehaviorService ^ get(); };" />
-      <MemberSignature Language="C#" Value="protected System.Windows.Forms.Design.Behavior.BehaviorService? BehaviorService { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.Design.Behavior.BehaviorService? BehaviorService { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -330,9 +343,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -368,6 +383,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -387,7 +404,7 @@
  This method is useful for testing whether a control can be parented by a particular type of parent. For example, <xref:System.Windows.Forms.TabPage> controls can only be parented by <xref:System.Windows.Forms.TabControl> controls.
 
 > [!NOTE]
->  This method is not called when an item is dragged from the **Toolbox** onto the design surface.
+> This method is not called when an item is dragged from the **Toolbox** onto the design surface.
 
  ]]></format>
         </remarks>
@@ -415,6 +432,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Control</ReturnType>
@@ -447,6 +466,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -492,6 +513,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -527,6 +550,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -552,7 +577,7 @@
           <para>
             <see langword="Dispose" /> can be called multiple times by other objects. When overriding <see langword="Dispose(Boolean)" />, be careful not to reference objects that have been previously disposed in an earlier call to <see langword="Dispose" />. For more information about how to implement <see langword="Dispose(Boolean)" />, see <see href="/dotnet/standard/garbage-collection/implementing-dispose">Implementing a Dispose Method</see>.
 
- For more information about <see langword="Dispose" /> and <see cref="M:System.Object.Finalize" />, see <see href="/dotnet/standard/garbage-collection/unmanaged">Cleaning Up Unmanaged Resources</see> and <see href="https://learn.microsoft.com/previous-versions/dotnet/netframework-4.0/ddae83kx(v=vs.100)">Overriding the Finalize Method</see>.</para>
+ For more information about <see langword="Dispose" /> and <see cref="M:System.Object.Finalize" />, see <see href="/dotnet/standard/garbage-collection/unmanaged">Cleaning Up Unmanaged Resources</see>.</para>
         </block>
         <altmember cref="T:System.ComponentModel.Design.IDesigner" />
       </Docs>
@@ -578,13 +603,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="child" Type="System.Windows.Forms.Control" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
-        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="child" Type="System.Windows.Forms.Control" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
+        <Parameter Name="name" Type="System.String" Index="1" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="child">The child control for which design mode will be enabled.</param>
@@ -596,7 +623,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The child control specified by `child` is a child of this control designer's control. The child does not directly participate in persistence, but it will if it is exposed as a property of the main control. Consider a control like the <xref:System.Windows.Forms.SplitContainer>: it has two panels, `Panel1` and `Panel2`. These panels are exposed through read only <xref:System.Windows.Forms.SplitContainer.Panel1%2A> and <xref:System.Windows.Forms.SplitContainer.Panel2%2A> properties on the <xref:System.Windows.Forms.SplitContainer> control. The <xref:System.Windows.Forms.SplitContainer> control's designer calls <xref:System.Windows.Forms.Design.ControlDesigner.EnableDesignMode%2A> for each panel, which allows other components to be dropped on them. But, in order for the contents of <xref:System.Windows.Forms.SplitContainer.Panel1%2A> and <xref:System.Windows.Forms.SplitContainer.Panel2%2A> to be saved, the <xref:System.Windows.Forms.SplitContainer> control itself must expose the panels as public properties.
+ The child control specified by `child` is a child of this control designer's control. The child does not directly participate in persistence, but it will if it is exposed as a property of the main control. Consider a control like the <xref:System.Windows.Forms.SplitContainer>: it has two panels, `Panel1` and `Panel2`. These panels are exposed through read only <xref:System.Windows.Forms.SplitContainer.Panel1*> and <xref:System.Windows.Forms.SplitContainer.Panel2*> properties on the <xref:System.Windows.Forms.SplitContainer> control. The <xref:System.Windows.Forms.SplitContainer> control's designer calls <xref:System.Windows.Forms.Design.ControlDesigner.EnableDesignMode*> for each panel, which allows other components to be dropped on them. But, in order for the contents of <xref:System.Windows.Forms.SplitContainer.Panel1*> and <xref:System.Windows.Forms.SplitContainer.Panel2*> to be saved, the <xref:System.Windows.Forms.SplitContainer> control itself must expose the panels as public properties.
 
  Control names must be unique within a control designer, but they are not required to be unique with respect to the children of other control designers.
 
@@ -630,6 +657,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -673,6 +702,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -705,12 +736,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Design.Behavior.ControlBodyGlyph</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="selectionType">A <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> value that specifies the selection state.</param>
@@ -740,12 +773,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Design.Behavior.GlyphCollection</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="selectionType" Type="System.Windows.Forms.Design.Behavior.GlyphSelectionType" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="selectionType">A <see cref="T:System.Windows.Forms.Design.Behavior.GlyphSelectionType" /> value that specifies the selection state.</param>
@@ -757,11 +792,11 @@
 ## Remarks
  Note that based on `selectionType`, the <xref:System.Windows.Forms.Design.Behavior.Glyph> objects returned will represent one of these selection states:
 
--   A fully resizable selection border with grab handles;
+- A fully resizable selection border with grab handles;
 
--   A locked selection border;
+- A locked selection border;
 
--   A single 'hidden' selection <xref:System.Windows.Forms.Design.Behavior.Glyph>.
+- A single 'hidden' selection <xref:System.Windows.Forms.Design.Behavior.Glyph>.
 
  ]]></format>
         </remarks>
@@ -789,6 +824,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -805,12 +842,12 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Windows.Forms.Design.ControlDesigner.GetHitTest%2A> method determines whether a click at the specified point should be passed to the control, while the control is in design mode. You can override and implement this method to enable your control to receive clicks in the design-time environment.
+ The <xref:System.Windows.Forms.Design.ControlDesigner.GetHitTest*> method determines whether a click at the specified point should be passed to the control, while the control is in design mode. You can override and implement this method to enable your control to receive clicks in the design-time environment.
 
 > [!NOTE]
->  You can pass a point in screen coordinates to the <xref:System.Windows.Forms.Control.PointToClient%2A> method of the <xref:System.Windows.Forms.Control> class to obtain the coordinates of the point relative to the upper-left corner of the control.
+> You can pass a point in screen coordinates to the <xref:System.Windows.Forms.Control.PointToClient*> method of the <xref:System.Windows.Forms.Control> class to obtain the coordinates of the point relative to the upper-left corner of the control.
 
- The <xref:System.Windows.Forms.Design.ControlDesigner.GetHitTest%2A> method is called in response to the WM_NCHITTEST message, so it is called on each mouse move.
+ The <xref:System.Windows.Forms.Design.ControlDesigner.GetHitTest*> method is called in response to the WM_NCHITTEST message, so it is called on each mouse move.
 
  ]]></format>
         </remarks>
@@ -838,6 +875,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -858,7 +897,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property InheritanceAttribute As InheritanceAttribute" />
       <MemberSignature Language="F#" Value="member this.InheritanceAttribute : System.ComponentModel.InheritanceAttribute" Usage="System.Windows.Forms.Design.ControlDesigner.InheritanceAttribute" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::ComponentModel::InheritanceAttribute ^ InheritanceAttribute { System::ComponentModel::InheritanceAttribute ^ get(); };" />
-      <MemberSignature Language="C#" Value="protected override System.ComponentModel.InheritanceAttribute? InheritanceAttribute { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.InheritanceAttribute? InheritanceAttribute { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -873,9 +912,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -912,6 +953,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -940,7 +983,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub InitializeExistingComponent (defaultValues As IDictionary)" />
       <MemberSignature Language="F#" Value="override this.InitializeExistingComponent : System.Collections.IDictionary -&gt; unit" Usage="controlDesigner.InitializeExistingComponent defaultValues" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void InitializeExistingComponent(System::Collections::IDictionary ^ defaultValues);" />
-      <MemberSignature Language="C#" Value="public override void InitializeExistingComponent (System.Collections.IDictionary? defaultValues);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public override void InitializeExistingComponent (System.Collections.IDictionary? defaultValues);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -955,12 +998,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="defaultValues">A name/value dictionary of default values to apply to properties. May be <see langword="null" /> if no default values are specified.</param>
@@ -983,7 +1028,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub InitializeNewComponent (defaultValues As IDictionary)" />
       <MemberSignature Language="F#" Value="override this.InitializeNewComponent : System.Collections.IDictionary -&gt; unit" Usage="controlDesigner.InitializeNewComponent defaultValues" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void InitializeNewComponent(System::Collections::IDictionary ^ defaultValues);" />
-      <MemberSignature Language="C#" Value="public override void InitializeNewComponent (System.Collections.IDictionary? defaultValues);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public override void InitializeNewComponent (System.Collections.IDictionary? defaultValues);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -998,12 +1043,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="defaultValues">A name/value dictionary of default values to apply to properties. May be <see langword="null" /> if no default values are specified.</param>
@@ -1050,7 +1097,7 @@
       <MemberSignature Language="VB.NET" Value="Public Overridable Function InternalControlDesigner (internalControlIndex As Integer) As ControlDesigner" />
       <MemberSignature Language="F#" Value="abstract member InternalControlDesigner : int -&gt; System.Windows.Forms.Design.ControlDesigner&#xA;override this.InternalControlDesigner : int -&gt; System.Windows.Forms.Design.ControlDesigner" Usage="controlDesigner.InternalControlDesigner internalControlIndex" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::Design::ControlDesigner ^ InternalControlDesigner(int internalControlIndex);" />
-      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.ControlDesigner? InternalControlDesigner (int internalControlIndex);" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.ControlDesigner? InternalControlDesigner (int internalControlIndex);" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -1065,12 +1112,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Design.ControlDesigner</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="internalControlIndex" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="internalControlIndex" Type="System.Int32" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="internalControlIndex">A specified index to select the internal control designer. This index is zero-based.</param>
@@ -1080,7 +1129,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An internal control is a control that is not in the <xref:System.ComponentModel.IContainer.Components%2A> collection of the <xref:System.ComponentModel.Design.IDesignerHost.Container%2A>. <xref:System.Windows.Forms.SplitterPanel> is an example of one such control.
+ An internal control is a control that is not in the <xref:System.ComponentModel.IContainer.Components*> collection of the <xref:System.ComponentModel.Design.IDesignerHost.Container*>. <xref:System.Windows.Forms.SplitterPanel> is an example of one such control.
 
  ]]></format>
         </remarks>
@@ -1108,6 +1157,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Point</ReturnType>
@@ -1118,7 +1169,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- <xref:System.Windows.Forms.Design.ControlDesigner.InvalidPoint> has an <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> property set to the minimum value for the integer data type.
+ <xref:System.Windows.Forms.Design.ControlDesigner.InvalidPoint> has an <xref:System.Drawing.Point.X*> and <xref:System.Drawing.Point.Y> property set to the minimum value for the integer data type.
 
  ]]></format>
         </remarks>
@@ -1145,6 +1196,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1157,7 +1210,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- An internal control is a control that is not in the <xref:System.ComponentModel.IContainer.Components%2A> collection of the <xref:System.ComponentModel.Design.IDesignerHost.Container%2A>. <xref:System.Windows.Forms.SplitterPanel> is an example of one such control.
+ An internal control is a control that is not in the <xref:System.ComponentModel.IContainer.Components*> collection of the <xref:System.ComponentModel.Design.IDesignerHost.Container*>. <xref:System.Windows.Forms.SplitterPanel> is an example of one such control.
 
  ]]></format>
         </remarks>
@@ -1185,6 +1238,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1222,6 +1277,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1253,12 +1310,14 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0" />
+        <Parameter Name="de" Type="System.Windows.Forms.DragEventArgs" Index="0" FrameworkAlternate="net-5.0;net-6.0;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;netframework-4.8.1;windowsdesktop-8.0;windowsdesktop-9.0;windowsdesktop-10.0;windowsdesktop-11.0" />
       </Parameters>
       <Docs>
         <param name="de">A <see cref="T:System.Windows.Forms.DragEventArgs" /> that provides data for the event.</param>
@@ -1288,6 +1347,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1323,6 +1384,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1358,6 +1421,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1393,6 +1458,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1428,6 +1495,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1470,6 +1539,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1489,7 +1560,7 @@
  This method is called at the start of a drag-and-drop operation.
 
 > [!NOTE]
->  You can pass a point in screen coordinates to the <xref:System.Windows.Forms.Control.PointToClient%2A> method of the <xref:System.Windows.Forms.Control> class to obtain the coordinates of the point relative to the upper-left corner of the control.
+> You can pass a point in screen coordinates to the <xref:System.Windows.Forms.Control.PointToClient*> method of the <xref:System.Windows.Forms.Control> class to obtain the coordinates of the point relative to the upper-left corner of the control.
 
  ]]></format>
         </remarks>
@@ -1517,6 +1588,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1553,6 +1626,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1571,7 +1646,7 @@
 ## Remarks
 
 > [!NOTE]
->  You can pass a point in screen coordinates to the <xref:System.Windows.Forms.Control.PointToClient%2A> method of the <xref:System.Windows.Forms.Control> class to obtain the coordinates of the point relative to the upper-left corner of the control.
+> You can pass a point in screen coordinates to the <xref:System.Windows.Forms.Control.PointToClient*> method of the <xref:System.Windows.Forms.Control> class to obtain the coordinates of the point relative to the upper-left corner of the control.
 
  ]]></format>
         </remarks>
@@ -1599,6 +1674,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1631,6 +1708,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1663,6 +1742,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1695,6 +1776,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1730,13 +1813,15 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0">
           <AttributeName Language="C#">[System.Obsolete("This method has been deprecated. Use InitializeNewComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("This method has been deprecated. Use InitializeNewComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202")&gt;]</AttributeName>
         </Attribute>
-        <Attribute FrameworkAlternate="windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Obsolete("This method has been deprecated. Use InitializeNewComponent instead.  https://go.microsoft.com/fwlink/?linkid=14202")]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Obsolete("This method has been deprecated. Use InitializeNewComponent instead.  https://go.microsoft.com/fwlink/?linkid=14202")&gt;]</AttributeName>
         </Attribute>
@@ -1772,6 +1857,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1796,7 +1883,7 @@
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ParentComponent As IComponent" />
       <MemberSignature Language="F#" Value="member this.ParentComponent : System.ComponentModel.IComponent" Usage="System.Windows.Forms.Design.ControlDesigner.ParentComponent" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::ComponentModel::IComponent ^ ParentComponent { System::ComponentModel::IComponent ^ get(); };" />
-      <MemberSignature Language="C#" Value="protected override System.ComponentModel.IComponent? ParentComponent { get; }" FrameworkAlternate="windowsdesktop-9.0" />
+      <MemberSignature Language="C#" Value="protected override System.ComponentModel.IComponent? ParentComponent { get; }" FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
@@ -1811,9 +1898,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="windowsdesktop-9.0">
+        <Attribute FrameworkAlternate="windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -1828,7 +1917,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The default implementation simply checks to see if the component being designed is a control and if it is, <xref:System.Windows.Forms.Design.ControlDesigner.ParentComponent%2A> returns its parent.
+ The default implementation simply checks to see if the component being designed is a control and if it is, <xref:System.Windows.Forms.Design.ControlDesigner.ParentComponent*> returns its parent.
 
  ]]></format>
         </remarks>
@@ -1855,6 +1944,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1891,6 +1982,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1934,6 +2027,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
@@ -1973,6 +2068,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="netframework-4.0">
@@ -2018,6 +2115,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2053,6 +2152,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -2069,10 +2170,10 @@
 ## Remarks
  This method is called for each message the control would usually receive. This allows the designer to preprocess messages before optionally routing them to the control.
 
- To send the message to the control's <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType> method, call <xref:System.Windows.Forms.Design.ControlDesigner.WndProc%2A> on the control's designer.
+ To send the message to the control's <xref:System.Windows.Forms.Control.WndProc*?displayProperty=nameWithType> method, call <xref:System.Windows.Forms.Design.ControlDesigner.WndProc*> on the control's designer.
 
 > [!NOTE]
->  The designer filters messages, so some messages will not be sent to the control. For example, mouse messages are intercepted by the designer. If this is not the behavior you want, call <xref:System.Windows.Forms.Design.ControlDesigner.DefWndProc%2A> instead.
+> The designer filters messages, so some messages will not be sent to the control. For example, mouse messages are intercepted by the designer. If this is not the behavior you want, call <xref:System.Windows.Forms.Design.ControlDesigner.DefWndProc*> instead.
 
  Pass `m` as a parameter. Optionally, you can alter or create a new <xref:System.Windows.Forms.Message?displayProperty=nameWithType> to pass to the control's method.
 
@@ -2080,9 +2181,9 @@
 
 |Without a designer|With a designer|
 |------------------------|---------------------|
-|USER32<br /><br /> <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Forms.Control.DefWndProc%2A?displayProperty=nameWithType><br /><br /> USER32|USER32<br /><br /> `Control.Designer.` <xref:System.Windows.Forms.Design.ControlDesigner.WndProc%2A><br /><br /> <xref:System.Windows.Forms.Design.ControlDesigner.DefWndProc%2A><br /><br /> <xref:System.Windows.Forms.Control.WndProc%2A?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Forms.Control.DefWndProc%2A?displayProperty=nameWithType><br /><br /> USER32|
+|USER32<br /><br /> <xref:System.Windows.Forms.Control.WndProc*?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Forms.Control.DefWndProc*?displayProperty=nameWithType><br /><br /> USER32|USER32<br /><br /> `Control.Designer.` <xref:System.Windows.Forms.Design.ControlDesigner.WndProc*><br /><br /> <xref:System.Windows.Forms.Design.ControlDesigner.DefWndProc*><br /><br /> <xref:System.Windows.Forms.Control.WndProc*?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Forms.Control.DefWndProc*?displayProperty=nameWithType><br /><br /> USER32|
 
- The designer intercepts messages by replacing the <xref:System.Windows.Forms.Control.WindowTarget%2A?displayProperty=nameWithType> property on the control. Usually, <xref:System.Windows.Forms.Control.WindowTarget%2A> points to the <xref:System.Windows.Forms.NativeWindow> contained within the control. During design time, the designer replaces this with its own window target, and caches the original value.
+ The designer intercepts messages by replacing the <xref:System.Windows.Forms.Control.WindowTarget?displayProperty=nameWithType> property on the control. Usually, <xref:System.Windows.Forms.Control.WindowTarget*> points to the <xref:System.Windows.Forms.NativeWindow> contained within the control. During design time, the designer replaces this with its own window target, and caches the original value.
 
  ]]></format>
         </remarks>

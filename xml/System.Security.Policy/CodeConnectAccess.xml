@@ -1,6 +1,6 @@
 <Type Name="CodeConnectAccess" FullName="System.Security.Policy.CodeConnectAccess">
   <TypeSignature Language="C#" Value="public class CodeConnectAccess" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeConnectAccess extends System.Object" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeConnectAccess extends System.Object" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp;windowsdesktop-10.0;windowsdesktop-11.0;windowsdesktop-3.0;windowsdesktop-3.1;windowsdesktop-5.0;windowsdesktop-6.0;windowsdesktop-7.0;windowsdesktop-8.0;windowsdesktop-9.0" />
   <TypeSignature Language="DocId" Value="T:System.Security.Policy.CodeConnectAccess" />
   <TypeSignature Language="VB.NET" Value="Public Class CodeConnectAccess" />
   <TypeSignature Language="F#" Value="type CodeConnectAccess = class" />
@@ -22,7 +22,12 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
+  <TypeForwardingChain>
+    <TypeForwarding From="System.Security.Permissions" FromVersion="11.0.0.0" To="mscorlib" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
+  </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
@@ -45,9 +50,9 @@
 ## Remarks
  This class is used in conjunction with the <xref:System.Security.Policy.NetCodeGroup> class to control how executing code can connect back to the site it was downloaded from. These classes provide programmatic control of the <xref:System.Net.WebPermission> granted to executing code that controls what schemes and ports the code can use access its origin site. You can specify scheme and port pairs that are permitted based on the scheme in the URL where the code originates.
 
- To create a <xref:System.Security.Policy.CodeConnectAccess> object based on the code's origin scheme, use the <xref:System.Security.Policy.CodeConnectAccess.CreateOriginSchemeAccess%2A> method.
+ To create a <xref:System.Security.Policy.CodeConnectAccess> object based on the code's origin scheme, use the <xref:System.Security.Policy.CodeConnectAccess.CreateOriginSchemeAccess*> method.
 
- To create a <xref:System.Security.Policy.CodeConnectAccess> object that can use any scheme but is restricted by port, use the <xref:System.Security.Policy.CodeConnectAccess.CreateAnySchemeAccess%2A> method.
+ To create a <xref:System.Security.Policy.CodeConnectAccess> object that can use any scheme but is restricted by port, use the <xref:System.Security.Policy.CodeConnectAccess.CreateAnySchemeAccess*> method.
 
 
 
@@ -84,6 +89,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="allowScheme" Type="System.String" />
@@ -97,9 +104,9 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- The <xref:System.Security.Policy.CodeConnectAccess.Scheme%2A> property is set using the `allowScheme` parameter. The scheme is converted to lowercase. The value of <xref:System.Security.Policy.CodeConnectAccess.Scheme%2A> controls the scheme that executing code can use to connect to a network resource.
+ The <xref:System.Security.Policy.CodeConnectAccess.Scheme> property is set using the `allowScheme` parameter. The scheme is converted to lowercase. The value of <xref:System.Security.Policy.CodeConnectAccess.Scheme*> controls the scheme that executing code can use to connect to a network resource.
 
- The <xref:System.Security.Policy.CodeConnectAccess.Port%2A> property is set using the `allowPort` parameter. The value of <xref:System.Security.Policy.CodeConnectAccess.Port%2A> controls the port that executing code can use to connect to a network resource.
+ The <xref:System.Security.Policy.CodeConnectAccess.Port> property is set using the `allowPort` parameter. The value of <xref:System.Security.Policy.CodeConnectAccess.Port*> controls the port that executing code can use to connect to a network resource.
 
 
 
@@ -154,6 +161,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -164,7 +173,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- As an alternative to constructing a <xref:System.Security.Policy.CodeConnectAccess> object using this value, you can call the <xref:System.Security.Policy.CodeConnectAccess.CreateAnySchemeAccess%2A> method to obtain a <xref:System.Security.Policy.CodeConnectAccess> object that represents a specified port and any scheme.
+ As an alternative to constructing a <xref:System.Security.Policy.CodeConnectAccess> object using this value, you can call the <xref:System.Security.Policy.CodeConnectAccess.CreateAnySchemeAccess*> method to obtain a <xref:System.Security.Policy.CodeConnectAccess> object that represents a specified port and any scheme.
 
  The value of this field is "*".
 
@@ -203,6 +212,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Policy.CodeConnectAccess</ReturnType>
@@ -261,6 +272,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Policy.CodeConnectAccess</ReturnType>
@@ -319,6 +332,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -329,7 +344,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To create a <xref:System.Security.Policy.CodeConnectAccess> object that has the default port for a specified scheme, use this field as the `allowPort` parameter of the <xref:System.Security.Policy.CodeConnectAccess.%23ctor%2A> constructor.
+ To create a <xref:System.Security.Policy.CodeConnectAccess> object that has the default port for a specified scheme, use this field as the `allowPort` parameter of the <xref:System.Security.Policy.CodeConnectAccess.%23ctor*> constructor.
 
  The value of this field is -3.
 
@@ -368,6 +383,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -384,7 +401,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Two <xref:System.Security.Policy.CodeConnectAccess> objects are equal if their <xref:System.Security.Policy.CodeConnectAccess.Scheme%2A> and <xref:System.Security.Policy.CodeConnectAccess.Port%2A> property values are equal.
+ Two <xref:System.Security.Policy.CodeConnectAccess> objects are equal if their <xref:System.Security.Policy.CodeConnectAccess.Scheme*> and <xref:System.Security.Policy.CodeConnectAccess.Port> property values are equal.
 
  ]]></format>
         </remarks>
@@ -413,6 +430,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -448,6 +467,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -458,7 +479,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- To create a <xref:System.Security.Policy.CodeConnectAccess> object that has the same port as the port in the executing code's URL evidence, use this field as the `allowPort` parameter of the <xref:System.Security.Policy.CodeConnectAccess.%23ctor%2A> constructor.
+ To create a <xref:System.Security.Policy.CodeConnectAccess> object that has the same port as the port in the executing code's URL evidence, use this field as the `allowPort` parameter of the <xref:System.Security.Policy.CodeConnectAccess.%23ctor*> constructor.
 
  The value of this field is -4.
 
@@ -497,6 +518,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -507,7 +530,7 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
- Do not use this field with the <xref:System.Security.Policy.CodeConnectAccess.%23ctor%2A> constructor. Instead, use the <xref:System.Security.Policy.CodeConnectAccess.CreateOriginSchemeAccess%2A> method.
+ Do not use this field with the <xref:System.Security.Policy.CodeConnectAccess.%23ctor*> constructor. Instead, use the <xref:System.Security.Policy.CodeConnectAccess.CreateOriginSchemeAccess*> method.
 
  The value of this field is "$origin".
 
@@ -544,6 +567,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -592,6 +617,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

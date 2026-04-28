@@ -3,9 +3,9 @@
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageProperties extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;string, object&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt;, class System.Collections.IEnumerable, class System.IDisposable" />
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageProperties" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MessageProperties&#xA;Implements ICollection(Of KeyValuePair(Of String, Object)), IDictionary(Of String, Object), IDisposable, IEnumerable(Of KeyValuePair(Of String, Object))" />
-  <TypeSignature Language="F#" Value="type MessageProperties = class&#xA;    interface IDictionary&lt;string, obj&gt;&#xA;    interface ICollection&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface seq&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface IEnumerable&#xA;    interface IDisposable" FrameworkAlternate="dotnet-uwp-10.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1" />
+  <TypeSignature Language="F#" Value="type MessageProperties = class&#xA;    interface IDictionary&lt;string, obj&gt;&#xA;    interface ICollection&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface seq&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface IEnumerable&#xA;    interface IDisposable" FrameworkAlternate="dotnet-uwp-10.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.6.2-pp;netframework-4.7;netframework-4.7.1;netframework-4.7.1-pp;netframework-4.7.2;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8;netframework-4.8.1;netframework-4.8.1-pp;netframework-4.8-pp" />
   <TypeSignature Language="C++ CLI" Value="public ref class MessageProperties sealed : IDisposable, System::Collections::Generic::ICollection&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::Object ^&gt;&gt;, System::Collections::Generic::IDictionary&lt;System::String ^, System::Object ^&gt;, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::Object ^&gt;&gt;" />
-  <TypeSignature Language="F#" Value="type MessageProperties = class&#xA;    interface ICollection&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface seq&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface IEnumerable&#xA;    interface IDictionary&lt;string, obj&gt;&#xA;    interface IDisposable" FrameworkAlternate="net-8.0-pp;net-9.0-pp;netcore-1.0;netcore-1.1;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp;netstandard-2.0-pp" />
+  <TypeSignature Language="F#" Value="type MessageProperties = class&#xA;    interface ICollection&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface seq&lt;KeyValuePair&lt;string, obj&gt;&gt;&#xA;    interface IEnumerable&#xA;    interface IDictionary&lt;string, obj&gt;&#xA;    interface IDisposable" FrameworkAlternate="net-10.0-pp;net-11.0-pp;netcore-1.0;netcore-1.1;netstandard-2.0-pp" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
@@ -28,6 +28,8 @@
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
     <AssemblyVersion>8.1.1.0</AssemblyVersion>
+    <AssemblyVersion>8.1.2.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -35,6 +37,8 @@
   </AssemblyInfo>
   <TypeForwardingChain>
     <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="0.0.0.0" FrameworkAlternate="dotnet-uwp-10.0" />
+    <TypeForwarding From="System.ServiceModel" FromVersion="4.0.0.0" To="System.ServiceModel.Primitives" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0-pp;net-11.0-pp" />
+    <TypeForwarding From="System.ServiceModel.Primitives" FromVersion="10.0.0.0" To="System.ServiceModel" ToVersion="4.0.0.0" FrameworkAlternate="netframework-4.6.2-pp;netframework-4.7.1-pp;netframework-4.7.2-pp;netframework-4.7-pp;netframework-4.8.1-pp;netframework-4.8-pp" />
   </TypeForwardingChain>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -68,16 +72,16 @@
   <Docs>
     <summary>Represents a set of properties for a message. This class cannot be inherited.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- As a message passes through the channel infrastructure, it passes through a number of logically separate processing entities. For instance, a message that is part of a reliable messaging stream can potentially pass through a <xref:System.ServiceModel.Channels.MessageEncoder>, a transport-level channel provider, the reliable-messaging channel provider, the streaming channel provider or any channel extensions. Sometimes these intermediaries annotate the message with the results of that processing by using the <xref:System.ServiceModel.Channels.MessageProperties> class. A <xref:System.ServiceModel.Channels.MessageProperties> instance is an annotation on a message and is stored as a set of name-to-object mappings in the <xref:System.ServiceModel.Channels.Message.Properties%2A> property of a <xref:System.ServiceModel.Channels.Message> instance.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ As a message passes through the channel infrastructure, it passes through a number of logically separate processing entities. For instance, a message that is part of a reliable messaging stream can potentially pass through a <xref:System.ServiceModel.Channels.MessageEncoder>, a transport-level channel provider, the reliable-messaging channel provider, the streaming channel provider or any channel extensions. Sometimes these intermediaries annotate the message with the results of that processing by using the <xref:System.ServiceModel.Channels.MessageProperties> class. A <xref:System.ServiceModel.Channels.MessageProperties> instance is an annotation on a message and is stored as a set of name-to-object mappings in the <xref:System.ServiceModel.Channels.Message.Properties> property of a <xref:System.ServiceModel.Channels.Message> instance.
+
 > [!NOTE]
->  The message properties should be cleared out when the user gets the following error:  
->   
->  **The server committed a protocol violation. Section=ResponseBody Detail=Response chunk format is invalid**  
-  
+>  The message properties should be cleared out when the user gets the following error:
+>
+>  **The server committed a protocol violation. Section=ResponseBody Detail=Response chunk format is invalid**
+
  ]]></format>
     </remarks>
   </Docs>
@@ -110,7 +114,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -147,7 +151,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -184,7 +188,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -223,7 +227,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -261,7 +265,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -298,7 +302,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -337,7 +341,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -377,7 +381,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -414,7 +418,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -427,14 +431,14 @@
       <Docs>
         <summary>Releases all resources used by the <see cref="T:System.ServiceModel.Channels.MessageProperties" /> class.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Call <xref:System.ServiceModel.Channels.MessageProperties.Dispose%2A> when you are finished using the <xref:System.ServiceModel.Channels.MessageProperties>. The <xref:System.ServiceModel.Channels.MessageProperties.Dispose%2A> method leaves the <xref:System.ServiceModel.Channels.MessageProperties> in an unusable state. After calling <xref:System.ServiceModel.Channels.MessageProperties.Dispose%2A>, you must release all references to the <xref:System.ServiceModel.Channels.MessageProperties> so the garbage collector can reclaim the memory that the <xref:System.ServiceModel.Channels.MessageProperties> occupied.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Call <xref:System.ServiceModel.Channels.MessageProperties.Dispose*> when you are finished using the <xref:System.ServiceModel.Channels.MessageProperties>. The <xref:System.ServiceModel.Channels.MessageProperties.Dispose*> method leaves the <xref:System.ServiceModel.Channels.MessageProperties> in an unusable state. After calling <xref:System.ServiceModel.Channels.MessageProperties.Dispose*>, you must release all references to the <xref:System.ServiceModel.Channels.MessageProperties> so the garbage collector can reclaim the memory that the <xref:System.ServiceModel.Channels.MessageProperties> occupied.
+
 > [!NOTE]
->  Always call <xref:System.ServiceModel.Channels.MessageProperties.Dispose%2A> before you release your last reference to the <xref:System.ServiceModel.Channels.MessageProperties>. Otherwise, the resources it is using are not freed until the garbage collector calls the <xref:System.ServiceModel.Channels.MessageProperties> object's `Finalize` method.  
-  
+>  Always call <xref:System.ServiceModel.Channels.MessageProperties.Dispose*> before you release your last reference to the <xref:System.ServiceModel.Channels.MessageProperties>. Otherwise, the resources it is using are not freed until the garbage collector calls the <xref:System.ServiceModel.Channels.MessageProperties> object's `Finalize` method.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -458,7 +462,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -471,11 +475,11 @@
         <summary>Gets the encoder that is used to write messages to a stream and to read messages from a stream.</summary>
         <value>A <see cref="T:System.ServiceModel.Channels.MessageEncoder" /> that is used to write messages to a stream and to read messages from a stream.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This property specifies a message encoder that can be used to serialize or deserialize the message instance this <xref:System.ServiceModel.Channels.MessageProperties> instance is attached to.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This property specifies a message encoder that can be used to serialize or deserialize the message instance this <xref:System.ServiceModel.Channels.MessageProperties> instance is attached to.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -499,7 +503,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -571,7 +575,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -612,7 +616,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -649,7 +653,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -684,7 +688,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -697,11 +701,11 @@
         <summary>Gets or sets the security-related property of a message.</summary>
         <value>A <see cref="T:System.ServiceModel.Security.SecurityMessageProperty" /> object.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- HTTP client authentication results are translated into an instance of <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecurityContext%2A>, which is attached to the message using a <xref:System.ServiceModel.Security.SecurityMessageProperty>. This property can be used by higher layers to implement arbitrary authorization logic.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ HTTP client authentication results are translated into an instance of <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.SecurityContext>, which is attached to the message using a <xref:System.ServiceModel.Security.SecurityMessageProperty>. This property can be used by higher layers to implement arbitrary authorization logic.
+
  ]]></format>
         </remarks>
       </Docs>
@@ -728,7 +732,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -768,7 +772,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -810,7 +814,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -846,7 +850,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
@@ -883,7 +887,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -925,7 +929,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -963,7 +967,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1006,7 +1010,7 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1050,7 +1054,7 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1084,7 +1088,7 @@ This member is an explicit interface member implementation. It can be used only 
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
-        <AssemblyVersion>8.1.1.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Private.ServiceModel</AssemblyName>
@@ -1097,11 +1101,11 @@ This member is an explicit interface member implementation. It can be used only 
         <summary>Gets or sets the transport address that is used to send messages.</summary>
         <value>A URI that contains the transport address that is used to send messages.</value>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- The transport channel owns the <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> property and it overwrites whatever value you set for the message headers. You do have one opportunity to set the channel's `Via`, which is during the creation of the channel from the channel factory, for example, with <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ The transport channel owns the <xref:System.ServiceModel.Channels.MessageProperties.Via> property and it overwrites whatever value you set for the message headers. You do have one opportunity to set the channel's `Via`, which is during the creation of the channel from the channel factory, for example, with <xref:System.ServiceModel.ChannelFactory`1.CreateChannel(System.ServiceModel.EndpointAddress,System.Uri)>.
+
  ]]></format>
         </remarks>
       </Docs>

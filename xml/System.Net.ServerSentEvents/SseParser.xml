@@ -9,13 +9,18 @@
     <AssemblyName>System.Net.ServerSentEvents</AssemblyName>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.1</AssemblyVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.1</AssemblyVersion>
+    <AssemblyVersion>10.0.0.2</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+    <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp">
       <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
@@ -35,7 +40,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.ServerSentEvents</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.ServerSentEvents.SseParser&lt;System.String&gt;</ReturnType>
@@ -47,7 +53,7 @@
         <param name="sseStream">The stream containing the data to parse.</param>
         <summary>Creates a parser for parsing a <paramref name="sseStream" /> of server-sent events into a sequence of <see cref="T:System.Net.ServerSentEvents.SseItem`1" /> values.</summary>
         <returns>
-            The enumerable of strings, which may be enumerated synchronously or asynchronously. The strings
+            The enumerable of strings, which can be enumerated synchronously or asynchronously. The strings
             are decoded from the UTF8-encoded bytes of the payload of each event.
             </returns>
         <remarks>
@@ -68,7 +74,8 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.ServerSentEvents</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Net.ServerSentEvents.SseParser&lt;T&gt;</ReturnType>
@@ -76,7 +83,7 @@
       <TypeParameters>
         <TypeParameter Name="T">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0-pp;net-9.0-pp">
+            <Attribute FrameworkAlternate="net-10.0;net-10.0-pp;net-11.0;net-11.0-pp">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -92,10 +99,10 @@
         <param name="sseStream">The stream containing the data to parse.</param>
         <param name="itemParser">The parser to use to transform each payload of bytes into a data element.</param>
         <summary>Creates a parser for parsing a <paramref name="sseStream" /> of server-sent events into a sequence of <see cref="T:System.Net.ServerSentEvents.SseItem`1" /> values.</summary>
-        <returns>The enumerable, which may be enumerated synchronously or asynchronously.</returns>
+        <returns>The enumerable, which can be enumerated synchronously or asynchronously.</returns>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="itemParser" /> is null.</exception>
+          <paramref name="sseStream" /> or <paramref name="itemParser" /> is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="EventTypeDefault">
@@ -108,7 +115,8 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.ServerSentEvents</AssemblyName>
-        <AssemblyVersion>9.0.0.1</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

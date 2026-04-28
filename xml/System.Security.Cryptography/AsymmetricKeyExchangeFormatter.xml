@@ -30,8 +30,14 @@
     <AssemblyVersion>7.0.0.0</AssemblyVersion>
     <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>9.0.0.0</AssemblyVersion>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeForwardingChain>
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="System.Security.Cryptography.Algorithms" FromVersion="10.0.0.0" To="System.Security.Cryptography" ToVersion="10.0.0.0" FrameworkAlternate="net-10.0" />
+    <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
+    <TypeForwarding From="System.Security.Cryptography.Algorithms" FromVersion="11.0.0.0" To="System.Security.Cryptography" ToVersion="11.0.0.0" FrameworkAlternate="net-11.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography.Algorithms" ToVersion="5.0.0.0" FrameworkAlternate="net-5.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography.Algorithms" ToVersion="6.0.0.0" FrameworkAlternate="net-6.0" />
     <TypeForwarding From="netstandard" FromVersion="2.1.0.0" To="System.Security.Cryptography" ToVersion="7.0.0.0" FrameworkAlternate="net-7.0" />
@@ -46,13 +52,13 @@
   </Base>
   <Interfaces />
   <Attributes>
+    <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
+      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
+    </Attribute>
     <Attribute FrameworkAlternate="net-5.0;net-6.0">
       <AttributeName Language="C#">[System.Runtime.Versioning.UnsupportedOSPlatform("browser")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Runtime.Versioning.UnsupportedOSPlatform("browser")&gt;]</AttributeName>
-    </Attribute>
-    <Attribute FrameworkAlternate="net-8.0;net-9.0">
-      <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(0)]</AttributeName>
-      <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(0)&gt;]</AttributeName>
     </Attribute>
     <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1">
       <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(true)]</AttributeName>
@@ -62,27 +68,27 @@
   <Docs>
     <summary>Represents the base class from which all asymmetric key exchange formatters derive.</summary>
     <remarks>
-      <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Asymmetric key exchange formatters encrypt key exchange data.  
-  
- Key exchange allows a sender to create secret information, such as random data that can be used as a key in a symmetric encryption algorithm, and use encryption to send it to the intended recipient.  
-  
+      <format type="text/markdown"><![CDATA[
+
+## Remarks
+ Asymmetric key exchange formatters encrypt key exchange data.
+
+ Key exchange allows a sender to create secret information, such as random data that can be used as a key in a symmetric encryption algorithm, and use encryption to send it to the intended recipient.
+
 > [!CAUTION]
->  It is highly recommended that you not attempt to create your own key exchange method from the basic functionality provided, because many details of the operation must be performed carefully in order for the key exchange to be successful.  
-  
+>  It is highly recommended that you not attempt to create your own key exchange method from the basic functionality provided, because many details of the operation must be performed carefully in order for the key exchange to be successful.
+
  ]]></format>
     </remarks>
     <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="protected AsymmetricKeyExchangeFormatter ();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C#" Value="protected AsymmetricKeyExchangeFormatter ();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.#ctor" />
-      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; AsymmetricKeyExchangeFormatter();" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; AsymmetricKeyExchangeFormatter();" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0;netcore-2.0;netcore-2.1;netcore-2.2;netcore-3.0;netcore-3.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netframework-4.8.1;netstandard-2.0;netstandard-2.1" />
       <MemberSignature Language="C#" Value="public AsymmetricKeyExchangeFormatter ();" FrameworkAlternate="netframework-1.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" FrameworkAlternate="netframework-1.1" />
       <MemberSignature Language="VB.NET" Value="Public Sub New ()" FrameworkAlternate="netframework-1.1" />
@@ -113,18 +119,20 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of <see cref="T:System.Security.Cryptography.AsymmetricKeyExchangeFormatter" />.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You cannot create an instance of an abstract class. Application code will create a new instance of a derived class.  
-  
- Use <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.SetKey%2A> to set the key before calling <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange%2A>.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You cannot create an instance of an abstract class. Application code will create a new instance of a derived class.
+
+ Use <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.SetKey*> to set the key before calling <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange*>.
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
@@ -173,6 +181,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -185,18 +195,18 @@
         <summary>When overridden in a derived class, creates the encrypted key exchange data from the specified input data.</summary>
         <returns>The encrypted key exchange data to be sent to the intended recipient.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This data can only be interpreted by the holder of the private key corresponding to the public key used to encrypt the data. This helps to ensure that only the intended recipient can access the secret information.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This data can only be interpreted by the holder of the private key corresponding to the public key used to encrypt the data. This helps to ensure that only the intended recipient can access the secret information.
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
       </Docs>
     </Member>
     <Member MemberName="CreateKeyExchange">
-      <MemberSignature Language="C#" Value="public abstract byte[] CreateKeyExchange (byte[] data, Type? symAlgType);" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public abstract byte[] CreateKeyExchange (byte[] data, Type? symAlgType);" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] CreateKeyExchange(unsigned int8[] data, class System.Type symAlgType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange(System.Byte[],System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateKeyExchange (data As Byte(), symAlgType As Type) As Byte()" />
@@ -229,6 +239,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -237,7 +249,7 @@
         <Parameter Name="data" Type="System.Byte[]" />
         <Parameter Name="symAlgType" Type="System.Type">
           <Attributes>
-            <Attribute FrameworkAlternate="net-8.0;net-9.0">
+            <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
               <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
               <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
             </Attribute>
@@ -250,18 +262,18 @@
         <summary>When overridden in a derived class, creates the encrypted key exchange data from the specified input data.</summary>
         <returns>The encrypted key exchange data to be sent to the intended recipient.</returns>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This data can only be interpreted by the holder of the private key corresponding to the public key used to encrypt the data. This helps to ensure that only the intended recipient can access the secret information.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ This data can only be interpreted by the holder of the private key corresponding to the public key used to encrypt the data. This helps to ensure that only the intended recipient can access the secret information.
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
       </Docs>
     </Member>
     <Member MemberName="Parameters">
-      <MemberSignature Language="C#" Value="public abstract string? Parameters { get; }" FrameworkAlternate="net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
+      <MemberSignature Language="C#" Value="public abstract string? Parameters { get; }" FrameworkAlternate="net-10.0;net-11.0;net-5.0;net-6.0;net-7.0;net-8.0;net-9.0" />
       <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.Parameters" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Parameters As String" />
@@ -294,9 +306,11 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="net-8.0;net-9.0">
+        <Attribute FrameworkAlternate="net-10.0;net-11.0;net-8.0;net-9.0">
           <AttributeName Language="C#">[System.Runtime.CompilerServices.Nullable(2)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.Nullable(2)&gt;]</AttributeName>
         </Attribute>
@@ -344,6 +358,8 @@
         <AssemblyVersion>7.0.0.0</AssemblyVersion>
         <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>9.0.0.0</AssemblyVersion>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+        <AssemblyVersion>11.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -355,11 +371,11 @@
         <param name="key">The instance of the implementation of <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> that holds the public key.</param>
         <summary>When overridden in a derived class, sets the public key to use for encrypting the secret information.</summary>
         <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- You must set a key before calling a <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange%2A> implementation.  
-  
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+ You must set a key before calling a <xref:System.Security.Cryptography.AsymmetricKeyExchangeFormatter.CreateKeyExchange*> implementation.
+
  ]]></format>
         </remarks>
         <related type="Article" href="/dotnet/standard/security/cryptographic-services">Cryptographic Services</related>
